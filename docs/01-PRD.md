@@ -1,11 +1,12 @@
 # PRD: Conversational Briefing Agent (MVP)
 
-**Status:** Draft v0.2, ready for review
+**Status:** Draft v0.3, ready for review
 **Owner:** Kate Wang
 **Source:** `proposal.pdf` ("Expanding the Aperture", CS329Z Fall 2026)
 **Next docs:** `02-technical-design.md` (after this PRD is approved), then the build
 
 **Changelog**
+- **v0.3:** Target users are now described broadly: anyone on the go who needs to stay current in a fast-moving field. The fixed persona table is removed; pilot users come from a variety of roles. The deliberate variety moved to the simulated-user panel, which now has explicit dimensions to cover (§7.7).
 - **v0.2:** The product is now **multi-user from day one**. Added accounts, onboarding, per-user data isolation, per-user scheduled processes, shared versus per-user pipeline stages, admin tools, per-user cost limits, and a small real-user pilot. Simulated users now run as accounts on the same infrastructure.
 - **v0.1:** Initial draft from the proposal.
 
@@ -27,7 +28,7 @@ The MVP is built as a **multi-user service**. Each user has an account, isolated
 
 The MVP has to do three jobs:
 
-- **A usable daily product** for a small invite-only group of real users: Kate first, then a pilot of friends and classmates.
+- **A usable daily product** for anyone on the go who needs to stay current in a fast-moving field. In the MVP that's a small invite-only group: Kate first, then pilot users from a variety of roles.
 - **A reproducible research system** that can be replayed over a frozen news corpus, driven by simulated users, and compared against baselines.
 - **A foundation that scales to more users** without re-architecting. Adding a user should be a matter of configuration, not new code.
 
@@ -47,20 +48,15 @@ Every product decision below is checked against all three jobs.
 
 ## 3. Target users
 
-The problem applies to anyone who has to stay current in a fast-moving field with little time, so the product is designed for many users. The MVP stays invite-only.
+**Anyone who wants to stay current in a fast-moving field and is on the go.** They have little time, the news is scattered across many sources, and the moments they do have (a commute, a walk, the gym) suit listening and talking better than reading and scrolling. The MVP covers AI news, but the need is the same in any field with a daily firehose.
 
-| Persona | Need | MVP role |
-|---|---|---|
-| **Kate**: a Stanford student with limited time who wants to stay current on AI | A 3–5 minute brief on the commute, deep dives on demand, and an agent that remembers what she cares about without over-indexing on it | **First real user.** Primary self-study user; also the admin. |
-| **Researcher** | Paper-heavy, technical, wants methods and numbers | Pilot users + simulated users |
-| **Operator or PM** | Products, launches, pricing, competitors | Pilot users + simulated users |
-| **Investor** | Funding, business and policy, market moves | Pilot users + simulated users |
-| **Policy follower** | Regulation and safety | Pilot users + simulated users |
-| **Admin** (Kate in the MVP) | Invite users, watch that daily jobs run, control cost, disable accounts | Internal |
+The product deliberately doesn't assume a fixed set of user types. People's interests and preferred formats vary, and the point of the agent is to learn them from conversation rather than slot people into categories.
 
-**Pilot scope:** about 5–15 real users (friends and classmates) who opt in, plus Kate. Pilot users are recruited after Kate's own use is stable (see §10).
+**Real users in the MVP:**
+- **Kate:** the first user, the primary self-study participant, and the admin.
+- **Pilot users:** about 5–15 people from a variety of roles, recruited by Kate after her own use is stable (see §10). The product needs no role-specific setup for them.
 
-**Simulated users** are created as accounts of type `synthetic` on the same infrastructure. They go through the same pipeline as real users and only differ in who answers the brief.
+**Simulated users** are where variety is designed in on purpose. They span a deliberate range of interests, delivery preferences, and conversational behaviour (see SIM-2), so evaluation covers more kinds of users than a small pilot can. They're created as accounts of type `synthetic` on the same infrastructure, go through the same pipeline as real users, and only differ in who answers the brief.
 
 ---
 
@@ -324,11 +320,25 @@ All of these run **per user**, using that user's memory and config, except where
 | ID | Requirement |
 |---|---|
 | SIM-1 | **Simulated user:** an LLM agent with a hidden interest profile, hidden delivery preferences, and a drift schedule. It reacts to briefs by picking dives, asking follow-ups, skipping, and stating preferences, sometimes noisily or implicitly. |
-| SIM-2 | 10–20 simulated users across the personas, including one calibrated to Kate, each provisioned as a **synthetic account** under a `run_id` (ADM-3). |
+| SIM-2 | **A deliberately varied panel** of 10–20 simulated users, including one calibrated to Kate, each provisioned as a **synthetic account** under a `run_id` (ADM-3). The panel must vary along every dimension in the table below, so no single kind of user dominates the results. |
 | SIM-3 | Simulated users also give per-story relevance ratings as a judge, kept separate from their in-conversation behaviour. |
 | SIM-4 | **Runner:** for each (synthetic account, agent config), replays every day of the window through the normal per-user jobs (PROC-8). |
 | SIM-5 | Runs are reproducible: fixed seeds, cached LLM calls, versioned configs. |
 | SIM-6 | Simulated results are cross-checked against real-user results. |
+
+**Dimensions the simulated-user panel varies along (SIM-2):**
+
+| Dimension | Range to cover | Example values |
+|---|---|---|
+| **Role and lens** | Several different reasons for following AI | ML researcher, engineer or builder, product manager, founder or investor, policy or safety person, journalist, student, curious generalist |
+| **Interest breadth** | Narrow specialist through broad generalist | 1–2 deep topics vs. 8+ shallow ones |
+| **Interest drift** | Stable through fast-changing | Fixed profile; one new interest per week; a sudden shift partway through the window |
+| **Delivery preferences** | Every option in MEM-4 | Short vs. long briefs; headline vs. deep; technical vs. plain language; numbers vs. narrative |
+| **Engagement style** | How much signal the user gives | Talkative and explicit ("more of X") vs. terse with implicit signals only; many follow-ups vs. few |
+| **Openness to exploration** | How they react to "outside your usual" stories | Curious (often dives in) vs. dismissive (always skips) |
+| **Consistency** | Clean through noisy | Always acts on stated interests vs. sometimes contradicts them |
+
+Each simulated user's profile, drift schedule, and behaviour settings are stored in a versioned file, so the panel can be regenerated and extended.
 
 ### 7.8 Real-user instrumentation
 
@@ -450,7 +460,7 @@ Dates are placeholders until they're lined up with the CS329Z deliverable dates.
 2. **LLM provider and models:** OpenRouter (course credits) as the default gateway? Course credits may not be meant for other users' usage, so do we need a separate budget for the pilot?
 3. **Hosting:** where should the service run? Options include a single small cloud VM with Postgres, or a managed platform (for example Fly.io, Render, or Supabase for the database and auth). This matters now because there will be real users outside Kate's laptop.
 4. **Auth:** passwordless email link, or Google login (simplest for Stanford and Gmail users)?
-5. **Pilot:** how many users, and who? Should pilot data go into the course report? If it does, check whether a human-subjects review is required.
+5. **Pilot:** how many users? Should pilot data go into the course report? If it does, check whether a human-subjects review is required.
 6. **Source list:** any must-have or must-exclude sources?
 7. **Brief size:** default of 6 stories, about 3 minutes, with at least 1 exploration slot. Is that the right default for every user, or should onboarding ask?
 8. **Course deadlines:** milestone, final report, and poster dates, to put real dates on §10.
