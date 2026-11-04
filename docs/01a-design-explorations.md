@@ -1,6 +1,8 @@
 # Design explorations: corpus, sources, voice, and mobile
 
-**Status:** Draft v0.1, for discussion alongside PRD v0.4
+**Status:** Draft v0.2, for discussion alongside PRD v0.5
+
+> **Decision (PRD v0.5):** the MVP uses a **fixed catalog of three curated channels**: AI; Energy, Grid & Data Centers; and Physical AI, Robotics & Simulation. Open topics are deferred. Sections 1–2 below now describe the **expansion path** (from more catalog channels, to a news-API provider, to a topic resolver and open topics), not the MVP build. Sections 3–4 (voice, iPhone) still apply to the MVP as written.
 **Purpose:** Work through the biggest open design questions before the technical design: how news gets into the system, whether a shared corpus still makes sense once users can follow any topic, whether to use audio-to-audio models, and how users reach the agent from an iPhone. Each section ends with a recommendation and its **effect on the research goals**.
 
 > Pricing and model details below come from web searches in November 2026. Sources often disagree, so treat the numbers as rough and check vendor pricing pages before committing.
@@ -163,7 +165,7 @@ There's now a solid set of options that avoid writing scrapers:
 
 | Question | Recommendation |
 |---|---|
-| Shared corpus with diverse interests | **Topic channels**, shared per topic, created on demand. Cost grows with distinct topics, not users. |
+| Shared corpus with diverse interests | **Topic channels**, shared per topic. **MVP: 3 fixed curated channels.** Later: channels created on demand. Cost grows with distinct topics, not users. |
 | Fixed source list? | Not for the product (use a source policy). **Yes for the AI research domain** (a curated, versioned registry). |
 | Where news comes from | Free structured feeds for AI; an event-clustered news API for other channels; an AI search API for live search and follow-up research; all behind a provider interface. |
 | Audio-to-audio | Cascade for the MVP; a hybrid speech-to-speech front end as a stretch experiment that measures faithfulness drift. |
