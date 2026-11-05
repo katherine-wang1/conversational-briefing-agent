@@ -1,6 +1,8 @@
 # Role -> model mapping (TDD §4.3). No default provider: TBD values are filled by the bake-off
 # (TDD §19.4) and then pinned. `dev_default` is used until then (cheap model for development).
-dev_default: {provider: openrouter, model: "TBD-cheap"}
+# dev_default chosen by the W-B spike (docs/spikes.md § Models, 2026-11-05): tool calling + strict JSON
+# schema OK, explicit prompt caching (90% off cached reads), cost field present, TTFT ~0.7 s.
+dev_default: {provider: openrouter, model: "anthropic/claude-haiku-5.5"}
 roles:
   newsroom.cluster_tiebreak: {provider: openrouter, model: TBD}
   newsroom.score: {provider: openrouter, model: TBD}

@@ -1,0 +1,1437 @@
+[
+ {
+  "provider": "openrouter",
+  "model": "anthropic/claude-haiku-5.5",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "toolu_01AS83zaTtPVthcNvpCoLe6H",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries"
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 414,
+    "tokens_out": 51,
+    "tokens_cached": 0,
+    "cost_usd": 6.69e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 51,
+    "total_tokens": 465,
+    "cost": 6.69e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 6.69e-05,
+     "upstream_inference_prompt_cost": 4.14e-05,
+     "upstream_inference_completions_cost": 2.55e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 803
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.93,
+    "reasons": [
+     "Tape-out of an inference accelerator is a direct AI chip development milestone.",
+     "A 3nm process node signals advanced semiconductor manufacturing relevant to AI hardware readers."
+    ]
+   },
+   "usage": {
+    "tokens_in": 374,
+    "tokens_out": 88,
+    "tokens_cached": 0,
+    "cost_usd": 8.14e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 88,
+    "total_tokens": 462,
+    "cost": 8.14e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 8.14e-05,
+     "upstream_inference_prompt_cost": 3.74e-05,
+     "upstream_inference_completions_cost": 4.4e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 1860
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 10915,
+     "tokens_out": 4,
+     "tokens_cached": 0,
+     "cost_usd": 0.001366
+    },
+    "raw_usage": {
+     "prompt_tokens": 10915,
+     "completion_tokens": 4,
+     "total_tokens": 10919,
+     "cost": 0.001366,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 10900,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.001366,
+      "upstream_inference_prompt_cost": 0.001364,
+      "upstream_inference_completions_cost": 2e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 929
+   },
+   {
+    "usage": {
+     "tokens_in": 10915,
+     "tokens_out": 4,
+     "tokens_cached": 10900,
+     "cost_usd": 0.0001125
+    },
+    "raw_usage": {
+     "prompt_tokens": 10915,
+     "completion_tokens": 4,
+     "total_tokens": 10919,
+     "cost": 0.0001125,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 10900,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.0001125,
+      "upstream_inference_prompt_cost": 0.0001105,
+      "upstream_inference_completions_cost": 2e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 782
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 593,
+     "total_ms": 865,
+     "usage": {
+      "tokens_in": 25,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 3.25e-05
+     }
+    },
+    {
+     "ttft_ms": 764,
+     "total_ms": 1026,
+     "usage": {
+      "tokens_in": 25,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 3.25e-05
+     }
+    }
+   ],
+   "ttft_median_ms": 678.5
+  },
+  "cutoff_self_reported": {
+   "answer": "January 2025",
+   "usage": {
+    "tokens_in": 33,
+    "tokens_out": 153,
+    "tokens_cached": 0,
+    "cost_usd": 7.98e-05
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "openai/gpt-6-luna",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "call_gGIH36P49hl6TbwEcUTr5GPW",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries recent news",
+      "max_results": 5
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 74,
+    "tokens_out": 26,
+    "tokens_cached": 0,
+    "cost_usd": 2.04e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 74,
+    "completion_tokens": 26,
+    "total_tokens": 100,
+    "cost": 2.04e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 2.04e-05,
+     "upstream_inference_prompt_cost": 7.4e-06,
+     "upstream_inference_completions_cost": 1.3e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 1165
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.99,
+    "reasons": [
+     "The headline describes a 3nm inference accelerator, an AI chip."
+    ]
+   },
+   "usage": {
+    "tokens_in": 102,
+    "tokens_out": 59,
+    "tokens_cached": 0,
+    "cost_usd": 3.97e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 102,
+    "completion_tokens": 59,
+    "total_tokens": 161,
+    "cost": 3.97e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 3.97e-05,
+     "upstream_inference_prompt_cost": 1.02e-05,
+     "upstream_inference_completions_cost": 2.95e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 18,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 2979
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 7797,
+     "tokens_out": 20,
+     "tokens_cached": 0,
+     "cost_usd": 0.00098455
+    },
+    "raw_usage": {
+     "prompt_tokens": 7797,
+     "completion_tokens": 20,
+     "total_tokens": 7817,
+     "cost": 0.00098455,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7794,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.00098455,
+      "upstream_inference_prompt_cost": 0.00097455,
+      "upstream_inference_completions_cost": 1e-05
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 20,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 1104
+   },
+   {
+    "usage": {
+     "tokens_in": 7797,
+     "tokens_out": 5,
+     "tokens_cached": 7794,
+     "cost_usd": 8.074e-05
+    },
+    "raw_usage": {
+     "prompt_tokens": 7797,
+     "completion_tokens": 5,
+     "total_tokens": 7802,
+     "cost": 8.074e-05,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 7794,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 8.074e-05,
+      "upstream_inference_prompt_cost": 7.824e-05,
+      "upstream_inference_completions_cost": 2.5e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 678
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 854,
+     "total_ms": 1158,
+     "usage": {
+      "tokens_in": 17,
+      "tokens_out": 47,
+      "tokens_cached": 0,
+      "cost_usd": 2.52e-05
+     }
+    },
+    {
+     "ttft_ms": 1236,
+     "total_ms": 1525,
+     "usage": {
+      "tokens_in": 17,
+      "tokens_out": 48,
+      "tokens_cached": 0,
+      "cost_usd": 2.57e-05
+     }
+    }
+   ],
+   "ttft_median_ms": 1045.0
+  },
+  "cutoff_self_reported": {
+   "answer": "June 2024",
+   "usage": {
+    "tokens_in": 26,
+    "tokens_out": 67,
+    "tokens_cached": 0,
+    "cost_usd": 3.61e-05
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "google/gemini-3.5-flash-lite",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "call_1608598",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries news 2026 OR 2025 OR recent breakthroughs"
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 51,
+    "tokens_out": 32,
+    "tokens_cached": 0,
+    "cost_usd": 9.53e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 51,
+    "completion_tokens": 32,
+    "total_tokens": 83,
+    "cost": 9.53e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 9.53e-05,
+     "upstream_inference_prompt_cost": 1.53e-05,
+     "upstream_inference_completions_cost": 8e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 556
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.99,
+    "reasons": [
+     "The headline discusses a startup taping out an inference accelerator, which directly relates to AI chips and hardware design.",
+     "The mention of '3nm' indicates advanced semiconductor manufacturing specifically targeted at AI workloads like inference."
+    ]
+   },
+   "usage": {
+    "tokens_in": 147,
+    "tokens_out": 78,
+    "tokens_cached": 0,
+    "cost_usd": 0.0002391
+   },
+   "raw_usage": {
+    "prompt_tokens": 147,
+    "completion_tokens": 78,
+    "total_tokens": 225,
+    "cost": 0.0002391,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0002391,
+     "upstream_inference_prompt_cost": 4.41e-05,
+     "upstream_inference_completions_cost": 0.000195
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 795
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 9955,
+     "tokens_out": 2,
+     "tokens_cached": 9950,
+     "cost_usd": 0.0011341666666666666
+    },
+    "raw_usage": {
+     "prompt_tokens": 9955,
+     "completion_tokens": 2,
+     "total_tokens": 9957,
+     "cost": 0.0011341666666666666,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 9950,
+      "cache_write_tokens": 9950,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.0011341666666666666,
+      "upstream_inference_prompt_cost": 0.0011291666666666668,
+      "upstream_inference_completions_cost": 5e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 1696
+   },
+   {
+    "usage": {
+     "tokens_in": 9955,
+     "tokens_out": 2,
+     "tokens_cached": 9950,
+     "cost_usd": 0.000305
+    },
+    "raw_usage": {
+     "prompt_tokens": 9955,
+     "completion_tokens": 2,
+     "total_tokens": 9957,
+     "cost": 0.000305,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 9950,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.000305,
+      "upstream_inference_prompt_cost": 0.0003,
+      "upstream_inference_completions_cost": 5e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 692
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 394,
+     "total_ms": 582,
+     "usage": {
+      "tokens_in": 11,
+      "tokens_out": 38,
+      "tokens_cached": 0,
+      "cost_usd": 9.83e-05
+     }
+    },
+    {
+     "ttft_ms": 691,
+     "total_ms": 928,
+     "usage": {
+      "tokens_in": 11,
+      "tokens_out": 43,
+      "tokens_cached": 0,
+      "cost_usd": 0.0001108
+     }
+    }
+   ],
+   "ttft_median_ms": 542.5
+  },
+  "cutoff_self_reported": {
+   "answer": "March 2026",
+   "usage": {
+    "tokens_in": 20,
+    "tokens_out": 6,
+    "tokens_cached": 0,
+    "cost_usd": 2.1e-05
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "call_843eccb893764ffdabcf53d9a4f998a0",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries news",
+      "max_results": 10
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 325,
+    "tokens_out": 71,
+    "tokens_cached": 0,
+    "cost_usd": 0.0001079
+   },
+   "raw_usage": {
+    "prompt_tokens": 325,
+    "completion_tokens": 71,
+    "total_tokens": 396,
+    "cost": 0.0001079,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.0001079,
+     "upstream_inference_prompt_cost": 6.175e-05,
+     "upstream_inference_completions_cost": 4.615e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 17,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 444
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.98,
+    "reasons": [
+     "Headline directly concerns an AI inference accelerator, a core AI chip category.",
+     "3nm indicates advanced semiconductor process technology, highly relevant to AI chip readers.",
+     "'Tapes out' signals a key chip design milestone and potential future product/competitor."
+    ]
+   },
+   "usage": {
+    "tokens_in": 55,
+    "tokens_out": 330,
+    "tokens_cached": 0,
+    "cost_usd": 0.000203665
+   },
+   "raw_usage": {
+    "prompt_tokens": 55,
+    "completion_tokens": 330,
+    "total_tokens": 385,
+    "cost": 0.000203665,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.000203665,
+     "upstream_inference_prompt_cost": 5.665e-06,
+     "upstream_inference_completions_cost": 0.000198
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 261,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 4084
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 7818,
+     "tokens_out": 20,
+     "tokens_cached": 0,
+     "cost_usd": 0.00036181
+    },
+    "raw_usage": {
+     "prompt_tokens": 7818,
+     "completion_tokens": 20,
+     "total_tokens": 7838,
+     "cost": 0.00036181,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.00036181,
+      "upstream_inference_prompt_cost": 0.00035181,
+      "upstream_inference_completions_cost": 1e-05
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 20,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 491
+   },
+   {
+    "usage": {
+     "tokens_in": 7818,
+     "tokens_out": 20,
+     "tokens_cached": 0,
+     "cost_usd": 0.000817254
+    },
+    "raw_usage": {
+     "prompt_tokens": 7818,
+     "completion_tokens": 20,
+     "total_tokens": 7838,
+     "cost": 0.000817254,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.000817254,
+      "upstream_inference_prompt_cost": 0.000805254,
+      "upstream_inference_completions_cost": 1.2e-05
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 20,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 767
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": null,
+     "total_ms": 728,
+     "usage": {
+      "tokens_in": 41,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 4.679e-05
+     }
+    },
+    {
+     "ttft_ms": 1174,
+     "total_ms": 1175,
+     "usage": {
+      "tokens_in": 41,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 4.0223e-05
+     }
+    }
+   ],
+   "ttft_median_ms": 1174
+  },
+  "cutoff_self_reported": {
+   "answer": "",
+   "usage": {
+    "tokens_in": 50,
+    "tokens_out": 300,
+    "tokens_cached": 0,
+    "cost_usd": 0.00015225
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "qwen/qwen3.8-flash",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "call_7f3cf59fb66d42a1adb2ff53",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries news",
+      "max_results": 10
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 339,
+    "tokens_out": 83,
+    "tokens_cached": 0,
+    "cost_usd": 8.986e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 339,
+    "completion_tokens": 83,
+    "total_tokens": 422,
+    "cost": 8.986e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 8.986e-05,
+     "upstream_inference_prompt_cost": 5.085e-05,
+     "upstream_inference_completions_cost": 3.901e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 41,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 2656
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.98,
+    "reasons": [
+     "inference accelerator is directly related to AI chips",
+     "3nm tape-out signals a new AI chip design milestone"
+    ]
+   },
+   "usage": {
+    "tokens_in": 79,
+    "tokens_out": 133,
+    "tokens_cached": 0,
+    "cost_usd": 7.436e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 79,
+    "completion_tokens": 133,
+    "total_tokens": 212,
+    "cost": 7.436e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 7.436e-05,
+     "upstream_inference_prompt_cost": 1.185e-05,
+     "upstream_inference_completions_cost": 6.251e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 78,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 3655
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 10008,
+     "tokens_out": 20,
+     "tokens_cached": 0,
+     "cost_usd": 0.0015106
+    },
+    "raw_usage": {
+     "prompt_tokens": 10008,
+     "completion_tokens": 20,
+     "total_tokens": 10028,
+     "cost": 0.0015106,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.0015106,
+      "upstream_inference_prompt_cost": 0.0015012,
+      "upstream_inference_completions_cost": 9.4e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 20,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 5807
+   },
+   {
+    "usage": {
+     "tokens_in": 10008,
+     "tokens_out": 20,
+     "tokens_cached": 9984,
+     "cost_usd": 0.000172744
+    },
+    "raw_usage": {
+     "prompt_tokens": 10008,
+     "completion_tokens": 20,
+     "total_tokens": 10028,
+     "cost": 0.000172744,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 9984,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.000172744,
+      "upstream_inference_prompt_cost": 0.000163344,
+      "upstream_inference_completions_cost": 9.4e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 20,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 6862
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 2084,
+     "total_ms": 2092,
+     "usage": {
+      "tokens_in": 72,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 3.9e-05
+     }
+    },
+    {
+     "ttft_ms": 1586,
+     "total_ms": 2218,
+     "usage": {
+      "tokens_in": 72,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 3.9e-05
+     }
+    }
+   ],
+   "ttft_median_ms": 1835.0
+  },
+  "cutoff_self_reported": {
+   "answer": "",
+   "usage": {
+    "tokens_in": 81,
+    "tokens_out": 300,
+    "tokens_cached": 0,
+    "cost_usd": 0.00015315
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "mistralai/mistral-small-2603",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "dySkqvHtm",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries",
+      "max_results": 5
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 109,
+    "tokens_out": 19,
+    "tokens_cached": 0,
+    "cost_usd": 2.775e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 109,
+    "completion_tokens": 19,
+    "total_tokens": 128,
+    "cost": 2.775e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 2.775e-05,
+     "upstream_inference_prompt_cost": 1.635e-05,
+     "upstream_inference_completions_cost": 1.14e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 509
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.98,
+    "reasons": [
+     "The headline explicitly mentions '3nm inference accelerator', which directly relates to AI chips (specifically inference accelerators, a type of AI chip).",
+     "The term '3nm' refers to the advanced semiconductor manufacturing process, indicating cutting-edge technology relevant to AI hardware.",
+     "'Startup' suggests innovation or new developments in the field, which is of interest to readers focused on AI chips.",
+     "The term 'tapes out' is industry jargon for completing the design of a chip, implying the headline is about a significant milestone in AI chip development."
+    ]
+   },
+   "usage": {
+    "tokens_in": 29,
+    "tokens_out": 134,
+    "tokens_cached": 0,
+    "cost_usd": 9.3225e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 29,
+    "completion_tokens": 134,
+    "total_tokens": 163,
+    "cost": 9.3225e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 9.3225e-05,
+     "upstream_inference_prompt_cost": 4.785e-06,
+     "upstream_inference_completions_cost": 8.844e-05
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 930
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 9713,
+     "tokens_out": 2,
+     "tokens_cached": 0,
+     "cost_usd": 0.00145815
+    },
+    "raw_usage": {
+     "prompt_tokens": 9713,
+     "completion_tokens": 2,
+     "total_tokens": 9715,
+     "cost": 0.00145815,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.00145815,
+      "upstream_inference_prompt_cost": 0.00145695,
+      "upstream_inference_completions_cost": 1.2e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 656
+   },
+   {
+    "usage": {
+     "tokens_in": 9713,
+     "tokens_out": 2,
+     "tokens_cached": 0,
+     "cost_usd": 0.001603965
+    },
+    "raw_usage": {
+     "prompt_tokens": 9713,
+     "completion_tokens": 2,
+     "total_tokens": 9715,
+     "cost": 0.001603965,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.001603965,
+      "upstream_inference_prompt_cost": 0.001602645,
+      "upstream_inference_completions_cost": 1.32e-06
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 442
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 380,
+     "total_ms": 740,
+     "usage": {
+      "tokens_in": 26,
+      "tokens_out": 52,
+      "tokens_cached": 0,
+      "cost_usd": 3.51e-05
+     }
+    },
+    {
+     "ttft_ms": 494,
+     "total_ms": 748,
+     "usage": {
+      "tokens_in": 26,
+      "tokens_out": 49,
+      "tokens_cached": 0,
+      "cost_usd": 3.663e-05
+     }
+    }
+   ],
+   "ttft_median_ms": 437.0
+  },
+  "cutoff_self_reported": {
+   "answer": "June 2024",
+   "usage": {
+    "tokens_in": 35,
+    "tokens_out": 7,
+    "tokens_cached": 0,
+    "cost_usd": 1.0395e-05
+   }
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "anthropic/claude-sonnet-5.5",
+  "tools": {
+   "ok": true,
+   "tool_calls": [
+    {
+     "id": "toolu_014MfTPsMseYkaayYaXcdSpD",
+     "name": "search",
+     "arguments": {
+      "query": "solid-state batteries",
+      "max_results": 10
+     }
+    }
+   ],
+   "finish": "tool_calls",
+   "usage": {
+    "tokens_in": 414,
+    "tokens_out": 74,
+    "tokens_cached": 0,
+    "cost_usd": 0.001568
+   },
+   "raw_usage": {
+    "prompt_tokens": 414,
+    "completion_tokens": 74,
+    "total_tokens": 488,
+    "cost": 0.001568,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.001568,
+     "upstream_inference_prompt_cost": 0.000828,
+     "upstream_inference_completions_cost": 0.00074
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 863
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.97,
+    "reasons": [
+     "The headline is about a startup taping out an inference accelerator, which is a dedicated AI chip.",
+     "The 3nm process node signals leading-edge semiconductor manufacturing, a key concern for AI hardware readers.",
+     "A tape-out is a major milestone in chip development, so the news is directly useful to someone following AI chips."
+    ]
+   },
+   "usage": {
+    "tokens_in": 374,
+    "tokens_out": 131,
+    "tokens_cached": 0,
+    "cost_usd": 0.002058
+   },
+   "raw_usage": {
+    "prompt_tokens": 374,
+    "completion_tokens": 131,
+    "total_tokens": 505,
+    "cost": 0.002058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 0,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0.002058,
+     "upstream_inference_prompt_cost": 0.000748,
+     "upstream_inference_completions_cost": 0.00131
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "latency_ms": 2443
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 10915,
+     "tokens_out": 4,
+     "tokens_cached": 0,
+     "cost_usd": 0.02732
+    },
+    "raw_usage": {
+     "prompt_tokens": 10915,
+     "completion_tokens": 4,
+     "total_tokens": 10919,
+     "cost": 0.02732,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 10900,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.02732,
+      "upstream_inference_prompt_cost": 0.02728,
+      "upstream_inference_completions_cost": 4e-05
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 1020
+   },
+   {
+    "usage": {
+     "tokens_in": 10915,
+     "tokens_out": 4,
+     "tokens_cached": 10900,
+     "cost_usd": 0.00116
+    },
+    "raw_usage": {
+     "prompt_tokens": 10915,
+     "completion_tokens": 4,
+     "total_tokens": 10919,
+     "cost": 0.00116,
+     "is_byok": false,
+     "prompt_tokens_details": {
+      "cached_tokens": 10900,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+     },
+     "cost_details": {
+      "upstream_inference_cost": 0.00116,
+      "upstream_inference_prompt_cost": 0.00112,
+      "upstream_inference_completions_cost": 4e-05
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+     }
+    },
+    "latency_ms": 794
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 484,
+     "total_ms": 896,
+     "usage": {
+      "tokens_in": 25,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 0.00065
+     }
+    },
+    {
+     "ttft_ms": 695,
+     "total_ms": 1120,
+     "usage": {
+      "tokens_in": 25,
+      "tokens_out": 60,
+      "tokens_cached": 0,
+      "cost_usd": 0.00065
+     }
+    }
+   ],
+   "ttft_median_ms": 589.5
+  },
+  "cutoff_self_reported": {
+   "answer": "I don't know exactly, but my best guess is around early 2025.",
+   "usage": {
+    "tokens_in": 33,
+    "tokens_out": 190,
+    "tokens_cached": 0,
+    "cost_usd": 0.001966
+   }
+  }
+ },
+ {
+  "provider": "tinker",
+  "model": "inkling-small",
+  "tools": {
+   "skipped": "no tool calling on Tinker OAI endpoint"
+  },
+  "json_schema": {
+   "ok": true,
+   "calls": 1,
+   "parsed": {
+    "label": "relevant",
+    "confidence": 0.99,
+    "reasons": [
+     "Headline mentions a 3nm inference accelerator, which is an AI chip",
+     "Tape-out indicates silicon manufacturing relevant to semiconductor/AI hardware readers"
+    ]
+   },
+   "usage": {
+    "tokens_in": 132,
+    "tokens_out": 48,
+    "tokens_cached": 0,
+    "cost_usd": 9.719999999999999e-05
+   },
+   "raw_usage": {
+    "prompt_tokens": 132,
+    "completion_tokens": 48,
+    "total_tokens": 180,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "latency_ms": 1285
+  },
+  "caching": [
+   {
+    "usage": {
+     "tokens_in": 7802,
+     "tokens_out": 5,
+     "tokens_cached": 0,
+     "cost_usd": 0.0023466
+    },
+    "raw_usage": {
+     "prompt_tokens": 7802,
+     "completion_tokens": 5,
+     "total_tokens": 7807,
+     "prompt_tokens_details": {
+      "cached_tokens": 0
+     }
+    },
+    "latency_ms": 964
+   },
+   {
+    "usage": {
+     "tokens_in": 7802,
+     "tokens_out": 5,
+     "tokens_cached": 7680,
+     "cost_usd": 0.0005034
+    },
+    "raw_usage": {
+     "prompt_tokens": 7802,
+     "completion_tokens": 5,
+     "total_tokens": 7807,
+     "prompt_tokens_details": {
+      "cached_tokens": 7680
+     }
+    },
+    "latency_ms": 709
+   }
+  ],
+  "ttft": {
+   "runs": [
+    {
+     "ttft_ms": 994,
+     "total_ms": 995,
+     "usage": {
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "tokens_cached": 0,
+      "cost_usd": 0.0
+     }
+    },
+    {
+     "ttft_ms": 866,
+     "total_ms": 866,
+     "usage": {
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "tokens_cached": 0,
+      "cost_usd": 0.0
+     }
+    }
+   ],
+   "ttft_median_ms": 930.0
+  },
+  "cutoff_self_reported": {
+   "answer": "January 2026",
+   "usage": {
+    "tokens_in": 32,
+    "tokens_out": 8,
+    "tokens_cached": 0,
+    "cost_usd": 1.92e-05
+   }
+  }
+ }
+]

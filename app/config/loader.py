@@ -57,6 +57,7 @@ class BeatCfg(_M):
 class ModelRole(_M):
     provider: Literal["openrouter", "tinker"]
     model: str
+    params: dict[str, Any] = {}  # extra request-body fields (e.g. OpenRouter `reasoning`, `provider`)
 
 
 class ModelsCfg(_M):
