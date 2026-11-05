@@ -59,12 +59,13 @@ def build_deps(db: Database, settings: Settings | None = None) -> Deps:
     from app.tools import build_tools
 
     s = settings or get_settings()
+    client = load_model_client(db)
     return Deps(
         db=db,
-        ports=load_ports(s.agent_ports),
+        ports=load_ports(s.agent_ports, model_available=client is not None),
         tools=build_tools(s, db=db),
         storage=build_storage(s),
         settings=s,
-        model_client=load_model_client(),
+        model_client=client,
         tts=build_tts(s),
     )

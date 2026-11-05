@@ -65,7 +65,8 @@ class CoreTool:
         if backend is None:
             return self.err("unavailable", f"no {ctx.mode} backend configured for {self.name}")
         try:
-            self.charge(ctx)
+            if not ctx.budget_precharged:
+                self.charge(ctx)
             return self.ok(await backend.run(ctx, args))
         except BudgetExceeded as e:
             return self.err("budget_exceeded", str(e))

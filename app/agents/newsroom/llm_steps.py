@@ -119,6 +119,7 @@ class RunCtx:
             user_id=None,
             budget=self.budget,
             trace=self.trace_ctx("tool.fetch", step),
+            budget_precharged=True,  # _fetch charges budget.charge_fetch() before calling the tool
         )
 
 

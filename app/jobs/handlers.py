@@ -18,10 +18,17 @@ import httpx
 from app.config import loader
 from app.contracts.brief import BriefScript
 from app.contracts.digest import Digest, DigestEntry, StoryFeatures
-from app.contracts.memory import SessionContext
 from app.contracts.sources import HeadlineObservation
 from app.db.ids import new_id
-from app.db.memory_io import load_memory, row_to_signal, save_memory
+from app.db.memory_io import load_memory, save_memory
+from app.jobs.agent_inputs import (
+    newsroom_history,
+    open_question_from_row,
+    prior_outcomes,
+    save_stories,
+    session_record,
+    shown_history,
+)
 from app.jobs.deps import Deps
 from app.jobs.ports import UserCtx
 from app.jobs.queue import ON_DEMAND_PRIORITY, Job
@@ -147,11 +154,22 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
     async with deps.db.system_scope() as s:
         for o in observations:
             await s.headline_observations.insert(id=new_id("ob"), **o.model_dump())
-    digest, _trace = await deps.ports.run_newsroom(
-        beat_id, at, observations, deps.model_client, deps.tools, flags_for("full")
+        history = await newsroom_history(s, beat_id, at)
+        prev = await s.digests.latest(beat_id, at)
+    digest, trace = await deps.ports.run_newsroom(
+        beat_id,
+        at,
+        observations,
+        deps.model_client,
+        deps.tools,
+        flags_for("full"),
+        history=history,
+        previous_run_at=prev["at"] if prev and prev["at"] < at else None,
+        job_id=str(job.id),
     )
     async with deps.db.system_scope() as s:
         await save_digest(s, digest)
+        await save_stories(s, getattr(trace, "stories", None) or [])
         await s.newsroom_runs.update(run_row_id, status="done")
 
 
@@ -186,25 +204,18 @@ async def cos_daily(deps: Deps, job: Job) -> None:
         if existing and existing["status"] in ("ready", "rendering"):
             return
         memory = await load_memory(s, local_date)
-        past = await s.briefs.list(order_by="local_date", desc=True, limit=15)
-        history = [
-            {
-                "brief_id": b["id"],
-                "local_date": b["local_date"].isoformat(),
-                "stories": (b["script"] or {}).get("stories", []),
-            }
-            for b in past
-            if b["local_date"] < local_date
-        ]
+        history = await shown_history(s, local_date)
         questions = await s.open_questions.list(status=["answered", "unanswerable"])
     brief_id = existing["id"] if existing else new_id("br")
     user_ctx = UserCtx(
         user_id=str(uid),
         run_id="live",
         local_date=local_date,
+        now=now,
         timezone=prof["timezone"],
         brief_id=brief_id,
         arm=arm,
+        job_id=job.id,
         settings=prof["settings"],
     )
     script, packs, _trace = await deps.ports.run_cos_daily(
@@ -212,7 +223,7 @@ async def cos_daily(deps: Deps, job: Job) -> None:
         await latest_digests(deps, now),
         memory,
         history,
-        questions,
+        [open_question_from_row(q) for q in questions],
         flags_for(arm),
         deps.model_client,
         deps.tools,
@@ -261,33 +272,31 @@ async def memory_update(deps: Deps, job: Job) -> None:
     uid = _need_user(job)
     sid = job.payload["session_id"]
     async with deps.db.user_scope(uid) as s:
-        sess = await s.sessions.get(sid)
-        if sess is None:
+        got = await session_record(s, sid)
+        if got is None:
             raise PermanentJobError("session not found")
-        turns = await s.turns.list(session_id=sid)
-        signals = [row_to_signal(r) for r in await s.memory_signals.list(session_id=sid)]
-        brief = await s.briefs.get(sess["brief_id"]) if sess["brief_id"] else None
+        record, brief = got
         memory = await load_memory(s, deps.clock().date())
-    shown = [st["story_ref"] for st in ((brief or {}).get("script") or {}).get("stories", [])]
-    transcript = [
-        {k: t[k] for k in ("id", "role", "text", "story_ref", "action", "citations")} for t in turns
-    ]
-    ctx = SessionContext(
-        time_available_s=sess["time_available_s"],
-        end_reason=sess["end_reason"],
-        brief_length_s=((brief or {}).get("script") or {}).get("est_duration_s"),
-    )
-    new_memory = await deps.ports.memory_update(
+        prior = await prior_outcomes(s, sid)
+    new_memory, report = await deps.ports.memory_update(
         memory,
-        transcript,
-        signals,
-        shown,
-        ctx,
+        record,
         flags_for((brief or {}).get("arm", "full")),
         deps.model_client,
+        prior_sessions=prior,
+        now=deps.clock(),
+        job_id=str(job.id),
     )
     async with deps.db.user_scope(uid) as s:
         await save_memory(s, new_memory)
+        if report is not None:
+            await s.sessions.update(
+                sid,
+                memory_outcome={
+                    "outcome": report.outcome,
+                    "report": report.model_dump(mode="json", exclude={"outcome"}),
+                },
+            )
 
 
 @handler("followup_research")
@@ -299,7 +308,12 @@ async def followup_research(deps: Deps, job: Job) -> None:
     if q is None:
         raise PermanentJobError("question not found")
     result = await deps.ports.run_followup(
-        {k: q[k] for k in ("id", "question", "context", "story_ref", "created_at")},
+        {
+            **{k: q[k] for k in ("id", "question", "context", "story_ref", "created_at")},
+            "user_id": q["user_id"],
+            "run_id": q["run_id"],
+            "job_id": job.id,
+        },
         deps.model_client,
         deps.tools,
     )

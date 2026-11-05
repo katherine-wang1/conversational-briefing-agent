@@ -232,7 +232,7 @@ class SourcePacksRepo(UserRepo):
 
 class SessionsRepo(UserRepo):
     table = "sessions"
-    json_cols = frozenset({"client", "position"})
+    json_cols = frozenset({"client", "position", "memory_outcome"})
     default_order = "started_at"
 
 
@@ -334,6 +334,7 @@ class PassagesRepo(Repo):
 
 class StoriesRepo(Repo):
     table = "stories"
+    json_cols = frozenset({"item_urls", "features"})
 
 
 class StoryItemsRepo(Repo):

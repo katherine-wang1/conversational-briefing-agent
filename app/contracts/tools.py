@@ -27,6 +27,9 @@ class ToolContext(Strict):
     user_id: UUID | None = None  # None for newsroom
     budget: TokenBudget
     trace: TraceCtx
+    # True when the caller already charged `budget` for this call (e.g. the newsroom charges
+    # `charge_fetch()` itself before invoking `fetch`); the tool then does not charge again.
+    budget_precharged: bool = False
 
 
 class ToolResult(Strict):

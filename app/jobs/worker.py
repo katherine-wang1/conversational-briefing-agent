@@ -141,10 +141,16 @@ async def main() -> None:
     loop = asyncio.get_running_loop()
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, stop.set)
+    deps = None
     try:
-        worker = Worker(build_deps(db, s), concurrency=s.worker_concurrency, poll_s=s.worker_poll_s)
+        deps = build_deps(db, s)
+        worker = Worker(deps, concurrency=s.worker_concurrency, poll_s=s.worker_poll_s)
         await worker.run_forever(stop)
     finally:
+        if deps is not None:
+            from app.llm.factory import flush_ledger
+
+            await flush_ledger(deps.model_client)
         await db.close()
 
 

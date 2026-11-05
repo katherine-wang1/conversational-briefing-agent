@@ -73,9 +73,14 @@ def create_app(
         st.queue = JobQueue(st.db)
         if st.tools is None:
             st.tools = build_tools(s, db=st.db)
+        from app.llm.factory import attach_db_ledger, flush_ledger
+
+        if attach_db_ledger(st.voice_model, st.db):  # voice.turn calls -> llm_calls too
+            log.info("voice model ledger: JSONL + llm_calls")
         try:
             yield
         finally:
+            await flush_ledger(st.voice_model)
             if owns_admin and st.admin_db is not None:
                 await st.admin_db.close()
             if owns_db:
