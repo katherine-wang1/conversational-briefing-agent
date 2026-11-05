@@ -11,15 +11,17 @@ subtopics: [solar-wind, storage-batteries, nuclear-fusion, grid-transmission, po
 digest_size: 25
 refresh_live_utc: ["06:00", "18:00"]
 headline_sources:
-  - {id: utility_dive, type: rss, tier: 1, weight: 0.8, url: "https://www.utilitydive.com/feeds/news/", verified: false}
-  - {id: canary_media, type: frontpage, tier: 1, weight: 0.8, url: "https://www.canarymedia.com/", verified: false}
-  - {id: latitude_media, type: frontpage, tier: 1, weight: 0.7, url: "https://www.latitudemedia.com/", verified: false}
-  - {id: heatmap, type: frontpage, tier: 1, weight: 0.7, url: "https://heatmap.news/", verified: false}
-  - {id: dcd, type: rss, tier: 1, weight: 0.8, url: "https://www.datacenterdynamics.com/en/rss/", verified: false}
-  - {id: dc_frontier, type: rss, tier: 2, weight: 0.6, url: "https://www.datacenterfrontier.com/rss", verified: false}
-  - {id: electrek_energy, type: rss, tier: 2, weight: 0.4, url: "https://electrek.co/feed/", verified: false}
-  - {id: carbon_brief, type: rss, tier: 2, weight: 0.5, url: "https://www.carbonbrief.org/feed/", verified: false}
-  - {id: pv_magazine, type: rss, tier: 2, weight: 0.4, url: "https://www.pv-magazine.com/feed/", verified: false}
-  - {id: energy_storage_news, type: rss, tier: 2, weight: 0.5, url: "https://www.energy-storage.news/feed/", verified: false}
+  - {id: utility_dive, type: rss, tier: 1, weight: 0.8, url: "https://www.utilitydive.com/feeds/news/", verified: true}
+  - {id: canary_media, type: frontpage, tier: 1, weight: 0.8, url: "https://www.canarymedia.com/", verified: true}
+  - {id: latitude_media, type: frontpage, tier: 1, weight: 0.7, url: "https://www.latitudemedia.com/", verified: true}
+  - {id: heatmap, type: frontpage, tier: 1, weight: 0.7, url: "https://heatmap.news/", verified: true}
+  - {id: dcd, type: rss, tier: 1, weight: 0.8, url: "https://www.datacenterdynamics.com/en/rss/", verified: true}
+  # fixed 2026-11-05: /rss is 404; this is the feed the home page advertises
+  - {id: dc_frontier, type: rss, tier: 2, weight: 0.6, url: "https://www.datacenterfrontier.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22%3A%22home%22%7D", verified: true}
+  - {id: electrek_energy, type: rss, tier: 2, weight: 0.4, url: "https://electrek.co/feed/", verified: true}
+  - {id: carbon_brief, type: rss, tier: 2, weight: 0.5, url: "https://www.carbonbrief.org/feed/", verified: true}
+  - {id: pv_magazine, type: rss, tier: 2, weight: 0.4, url: "https://www.pv-magazine.com/feed/", verified: true}
+  - {id: energy_storage_news, type: rss, tier: 2, weight: 0.5, url: "https://www.energy-storage.news/feed/", verified: true}
+  # not verified: eia.gov robots.txt disallows /rss for all agents; Wayback copies only
   - {id: eia_today, type: rss, tier: 1, weight: 0.5, url: "https://www.eia.gov/rss/todayinenergy.xml", verified: false}
-  - {id: hn_front, type: hn_front, tier: 2, weight: 0.3, url: "https://news.ycombinator.com/", params: {keyword_filter: energy}, verified: false}
+  - {id: hn_front, type: hn_front, tier: 2, weight: 0.3, url: "https://news.ycombinator.com/", params: {keyword_filter: energy}, verified: true}

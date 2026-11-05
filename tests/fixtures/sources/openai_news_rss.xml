@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[OpenAI News]]></title>
+        <description><![CDATA[The OpenAI blog]]></description>
+        <link>https://openai.com/news</link>
+        <image>
+            <url>https://openai.com/apple-icon.png</url>
+            <title>OpenAI News</title>
+            <link>https://openai.com/news</link>
+        </image>
+        <generator>OpenAI</generator>
+        <lastBuildDate>Thu, 05 Nov 2026 06:41:37 GMT</lastBuildDate>
+        <atom:link href="https://openai.com/news/rss.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[en-US]]></language>
+        <item>
+            <title><![CDATA[OpenAI to acquire Pierre Computer Company, Inc.]]></title>
+            <description><![CDATA[OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.]]></description>
+            <link>https://openai.com/index/openai-to-acquire-pierre</link>
+            <guid isPermaLink="true">https://openai.com/index/openai-to-acquire-pierre</guid>
+            <category><![CDATA[Company]]></category>
+            <pubDate>Wed, 04 Nov 2026 14:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Daybreak Red is now available in AWS GovCloud (US-East)]]></title>
+            <description><![CDATA[Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.]]></description>
+            <link>https://openai.com/index/daybreak-red-aws-govcloud</link>
+            <guid isPermaLink="true">https://openai.com/index/daybreak-red-aws-govcloud</guid>
+            <category><![CDATA[Product]]></category>
+            <pubDate>Wed, 04 Nov 2026 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A thousand fewer paths to root]]></title>
+            <description><![CDATA[OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.]]></description>
+            <link>https://openai.com/index/a-thousand-fewer-paths-to-root</link>
+            <guid isPermaLink="true">https://openai.com/index/a-thousand-fewer-paths-to-root</guid>
+            <category><![CDATA[Security]]></category>
+            <pubDate>Wed, 04 Nov 2026 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Introducing Images 2.6]]></title>
+            <description><![CDATA[Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.]]></description>
+            <link>https://openai.com/index/introducing-images-2-6</link>
+            <guid isPermaLink="true">https://openai.com/index/introducing-images-2-6</guid>
+            <category><![CDATA[Product]]></category>
+            <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DevRev delivers autonomous self-service with GPT-6.1 Sol]]></title>
+            <description><![CDATA[DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.]]></description>
+            <link>https://openai.com/index/devrev-enterprise-self-service</link>
+            <guid isPermaLink="true">https://openai.com/index/devrev-enterprise-self-service</guid>
+            <category><![CDATA[Startup]]></category>
+            <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Accelerating engineering for the physical world]]></title>
+            <description><![CDATA[Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.]]></description>
+            <link>https://openai.com/index/accelerating-engineering-for-the-physical-world</link>
+            <guid isPermaLink="true">https://openai.com/index/accelerating-engineering-for-the-physical-world</guid>
+            <category><![CDATA[Research]]></category>
+            <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How Cisco defends at machine speed with OpenAI]]></title>
+            <description><![CDATA[Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.]]></description>
+            <link>https://openai.com/index/cisco-cyber</link>
+            <guid isPermaLink="true">https://openai.com/index/cisco-cyber</guid>
+            <pubDate>Tue, 03 Nov 2026 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Heimstaden is changing residential real estate management with AI]]></title>
+            <description><![CDATA[Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.]]></description>
+            <link>https://openai.com/index/heimstaden</link>
+            <guid isPermaLink="true">https://openai.com/index/heimstaden</guid>
+            <pubDate>Tue, 03 Nov 2026 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer]]></title>
+            <description><![CDATA[Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.]]></description>
+            <link>https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer</link>
+            <guid isPermaLink="true">https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer</guid>
+            <category><![CDATA[Company]]></category>
+            <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Scaling Git at OpenAI]]></title>
+            <description><![CDATA[How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.]]></description>
+            <link>https://openai.com/index/scaling-git-at-openai</link>
+            <guid isPermaLink="true">https://openai.com/index/scaling-git-at-openai</guid>
+            <category><![CDATA[Engineering]]></category>
+            <pubDate>Mon, 02 Nov 2026 15:30:00 GMT</pubDate>
+        </item>
+</channel>
+</rss>

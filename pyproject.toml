@@ -13,6 +13,10 @@ dependencies = [
   "psycopg[binary,pool]>=3.2",
   "python-ulid>=2.7",
   "tenacity>=8.5",
+  # source parsers + archive collectors (W-A); needed by a plain `pip install -e .` for the laptop run
+  "feedparser>=6.0",
+  "trafilatura>=1.12",
+  "lxml>=5.0",
 ]
 
 [project.optional-dependencies]

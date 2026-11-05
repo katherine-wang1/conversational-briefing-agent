@@ -1,0 +1,783 @@
+[
+ {
+  "paper": {
+   "id": "2609.39102",
+   "authors": [
+    {
+     "_id": "6abdf718e72b9347146b2a4d",
+     "name": "Meijia Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a4e",
+     "name": "Hao Li",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a4f",
+     "name": "Zheng Lu",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a50",
+     "name": "Hongshan Lin",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a51",
+     "name": "Junbai Tian",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a52",
+     "name": "Yichen Liu",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a53",
+     "name": "Zijun Tian",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a54",
+     "name": "Yufan Zou",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a55",
+     "user": {
+      "_id": "65592971c68499a1b94fc18a",
+      "avatarUrl": "/avatars/e8d2ac54ab972084022fc3bc92477186.svg",
+      "isPro": false,
+      "fullname": "Shuhan Sun",
+      "user": "bookcool",
+      "type": "user",
+      "name": "bookcool"
+     },
+     "name": "Shuhan Sun",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-16T08:34:33.439Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a56",
+     "name": "Hanxin Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a57",
+     "name": "Zeyu Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a58",
+     "name": "Weizhi Du",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a59",
+     "name": "Yueting Li",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a5a",
+     "name": "Tianyu Shi",
+     "hidden": false
+    },
+    {
+     "_id": "6abdf718e72b9347146b2a5b",
+     "name": "Alaa Khamis",
+     "hidden": false
+    }
+   ],
+   "mediaUrls": [
+    "https://cdn-uploads.huggingface.co/production/uploads/6a401f3dc0f1edc69347e4b6/4vTS3cIA38Qp74k2jfOjs.png"
+   ],
+   "publishedAt": "2026-09-30T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-01T00:00:00.000Z",
+   "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
+   "submittedOnDailyBy": {
+    "_id": "6a401f3dc0f1edc69347e4b6",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6a401f3dc0f1edc69347e4b6/0cy3l4EOjm03viV-DU-ts.png",
+    "isPro": false,
+    "fullname": "MEIJIA CHEN",
+    "user": "chenmeijia30",
+    "type": "user",
+    "name": "chenmeijia30"
+   },
+   "summary": "Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: the proposer and solver increasingly agree on shared errors, so internal reward improves without a matching gain in external correctness. A post-hoc audit against source evidence shows co-cheating growing more severe over successive rounds of self-evolution, with pseudo-label correctness stagnating or declining even as the in-loop training signal improves. The most direct mitigation is to verify proposals before training: we introduce multi-sample verification (MSV), which queries the same model three times with the source and three times without it to decide task admission and replace unreliable pseudo-labels. MSV partially reduces false agreement but leaves substantial residual co-cheating and costs six extra labeler generations per candidate. These limitations motivate CrossFit, our main method: it partitions the proposer's source documents into groups A and B; questions generated from A are scored by an auxiliary solver trained only on B, and vice versa. The cross-fitted agreement determines proposer reward, so a same-source pseudo-label cannot be reproduced through the feedback solver, while the original solver's update rule is unchanged. Rerunning the loop with Qwen3.5-4B and Qwen3.5-9B, MSV reduces false-agreement mass from 6.1% to 5.7% and from 8.8% to 7.2%, whereas CrossFit reduces it to 3.0% and 3.7%. Replaying identical proposals with source-excluded feedback further reduces false agreement to 0.4% and 0.1%, isolating feedback ancestry from curriculum changes. Across seven downstream search benchmarks, CrossFit improves average performance over standard coupled self-evolution by 8.8 and 8.4 points and over Search-R1 by 8.7 and 7.8 points at 4B and 9B.",
+   "upvotes": 149,
+   "discussionId": "6abdf718e72b9347146b2a5c",
+   "ai_summary": "CrossFit mitigates co-cheating in self-evolving search agents by cross-fitting proposal scoring across partitioned sources, substantially reducing false agreement and improving benchmark performance.",
+   "ai_keywords": [
+    "self-evolving search agents",
+    "co-cheating",
+    "multi-sample verification",
+    "CrossFit",
+    "cross-fitted agreement",
+    "pseudo-labels",
+    "proposer",
+    "solver"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "organization": {
+    "_id": "69cb3e878aafeb00b1e64143",
+    "name": "RutgersU",
+    "fullname": "Rutgers University",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/69cb3e2fa6964a91fe8c2c97/1SJLGjmcRZ5xHSjK_K6dW.png"
+   }
+  },
+  "publishedAt": "2026-09-29T20:00:00.000Z",
+  "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
+  "summary": "Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: the proposer and solver increasingly agree on shared errors, so internal reward improves without a matching gain in external correctness. A post-hoc audit against source evidence shows co-cheating growing more severe over successive rounds of self-evolution, with pseudo-label correctness stagnating or declining even as the in-loop training signal improves. The most direct mitigation is to verify proposals before training: we introduce multi-sample verification (MSV), which queries the same model three times with the source and three times without it to decide task admission and replace unreliable pseudo-labels. MSV partially reduces false agreement but leaves substantial residual co-cheating and costs six extra labeler generations per candidate. These limitations motivate CrossFit, our main method: it partitions the proposer's source documents into groups A and B; questions generated from A are scored by an auxiliary solver trained only on B, and vice versa. The cross-fitted agreement determines proposer reward, so a same-source pseudo-label cannot be reproduced through the feedback solver, while the original solver's update rule is unchanged. Rerunning the loop with Qwen3.5-4B and Qwen3.5-9B, MSV reduces false-agreement mass from 6.1% to 5.7% and from 8.8% to 7.2%, whereas CrossFit reduces it to 3.0% and 3.7%. Replaying identical proposals with source-excluded feedback further reduces false agreement to 0.4% and 0.1%, isolating feedback ancestry from curriculum changes. Across seven downstream search benchmarks, CrossFit improves average performance over standard coupled self-evolution by 8.8 and 8.4 points and over Search-R1 by 8.7 and 7.8 points at 4B and 9B.",
+  "mediaUrls": [
+   "https://cdn-uploads.huggingface.co/production/uploads/6a401f3dc0f1edc69347e4b6/4vTS3cIA38Qp74k2jfOjs.png"
+  ],
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.39102.png",
+  "numComments": 4,
+  "submittedBy": {
+   "_id": "6a401f3dc0f1edc69347e4b6",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6a401f3dc0f1edc69347e4b6/0cy3l4EOjm03viV-DU-ts.png",
+   "fullname": "MEIJIA CHEN",
+   "name": "chenmeijia30",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "69cb3e878aafeb00b1e64143",
+   "name": "RutgersU",
+   "fullname": "Rutgers University",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/69cb3e2fa6964a91fe8c2c97/1SJLGjmcRZ5xHSjK_K6dW.png"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2609.36484",
+   "authors": [
+    {
+     "_id": "6abc779ed51a189976e02575",
+     "user": {
+      "_id": "673556db2769638944cf5e50",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/viqtM3lwIRZ9CzpcF5bI8.png",
+      "isPro": false,
+      "fullname": "L.H",
+      "user": "LH2101",
+      "type": "user",
+      "name": "LH2101"
+     },
+     "name": "Hao Li",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-09-30T13:50:48.011Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e02576",
+     "user": {
+      "_id": "6a401f3dc0f1edc69347e4b6",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6a401f3dc0f1edc69347e4b6/0cy3l4EOjm03viV-DU-ts.png",
+      "isPro": false,
+      "fullname": "MEIJIA CHEN",
+      "user": "chenmeijia30",
+      "type": "user",
+      "name": "chenmeijia30"
+     },
+     "name": "MeiJia Chen",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-09-30T08:45:05.738Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e02577",
+     "user": {
+      "_id": "68940eeaf705bff008911f3d",
+      "avatarUrl": "/avatars/c62d846493f55fb0ae0e06e2eefca1d6.svg",
+      "isPro": false,
+      "fullname": "renweijie",
+      "user": "renweijie",
+      "type": "user",
+      "name": "renweijie"
+     },
+     "name": "Weijie Ren",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-09-30T15:12:18.224Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e02578",
+     "user": {
+      "_id": "6abb56094dd9588763150ab7",
+      "avatarUrl": "/avatars/d01d72680352e61e48d7e679dfed1d8c.svg",
+      "isPro": false,
+      "fullname": "Simmons Lee",
+      "user": "Donghanark",
+      "type": "user",
+      "name": "Donghanark"
+     },
+     "name": "Donghan Li",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-09-30T08:45:05.727Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e02579",
+     "user": {
+      "_id": "6abc1abbbbd89e479b9090a5",
+      "avatarUrl": "/avatars/e9010b20f47ed9b28e27143e46d45d39.svg",
+      "isPro": false,
+      "fullname": "Zijun Tian",
+      "user": "vaynetian",
+      "type": "user",
+      "name": "vaynetian"
+     },
+     "name": "Zijun Tian",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-09-30T08:45:05.717Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e0257a",
+     "user": {
+      "_id": "6abdeffb8fddea8782153b1e",
+      "avatarUrl": "/avatars/943c3dbe0b4add135fdba7dba3376c1a.svg",
+      "isPro": false,
+      "fullname": "Jingchun Huang",
+      "user": "aquaiceh",
+      "type": "user",
+      "name": "aquaiceh"
+     },
+     "name": "Jingchun Huang",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-01T08:45:05.398Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abc779ed51a189976e0257b",
+     "name": "Naibo Wang",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-09-29T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-01T00:00:00.000Z",
+   "title": "The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation",
+   "submittedOnDailyBy": {
+    "_id": "673556db2769638944cf5e50",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/viqtM3lwIRZ9CzpcF5bI8.png",
+    "isPro": false,
+    "fullname": "L.H",
+    "user": "LH2101",
+    "type": "user",
+    "name": "LH2101"
+   },
+   "summary": "On-policy distillation (OPD) trains a student to match the teacher's next-token distributions on the student's own trajectories and has yielded substantial empirical gains. Generalized variants allow the student to surpass the teacher by extrapolating an implicit reward in output space. The language-model head, however, attenuates this change anisotropically: much of the change encoded in the teacher's hidden states reaches the logits at a small fraction of its weight, and the sampled-token log-probability ratios on which output-space extrapolation relies inject noise that the extrapolation amplifies, making training unstable. We observe that reinforcement learning (RL) shifts a model's internal representations relative to its base checkpoint, and that the direction of this shift can be measured at every layer. Motivated by this observation, we propose RIDE (RL-Induced Direction Extrapolation), which extrapolates the RL-induced change directly in representation space: at every layer and token position, RIDE computes the residual between the teacher and its pre-RL checkpoint and regresses the student's hidden states toward targets displaced beyond the teacher along this residual. Conditioned on a sampled trajectory, this regression is equivalent to maximizing a linear directional reward defined by the residual under a quadratic penalty centered at the teacher, which makes explicit how the objective moves the student along the RL-induced direction while limiting its deviation from the teacher. Across four base/RL-teacher pairs spanning different scales, architectures, and pre-training lineages, RIDE approaches or exceeds the RL-trained teacher on every pair and is the only method whose mean does so, and it consistently outperforms output-space extrapolation, which degrades the student whenever the teacher is close to its base. Project page: https://github.com/xixixixixxxx/RIDE.",
+   "upvotes": 149,
+   "discussionId": "6abc779ed51a189976e0257c",
+   "githubRepo": "https://github.com/xixixixixxxx/RIDE",
+   "githubRepoAddedBy": "user",
+   "ai_summary": "RIDE improves on-policy distillation by extrapolating reinforcement-learning-induced representation shifts directly in hidden states, yielding stable gains over RL-trained teachers.",
+   "ai_keywords": [
+    "on-policy distillation",
+    "next-token distributions",
+    "generalized variants",
+    "implicit reward",
+    "language-model head",
+    "hidden states",
+    "logits",
+    "output-space extrapolation",
+    "reinforcement learning",
+    "internal representations",
+    "RIDE",
+    "RL-Induced Direction Extrapolation",
+    "residual",
+    "linear directional reward"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "githubStars": 10
+  },
+  "publishedAt": "2026-09-28T20:00:00.000Z",
+  "title": "The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation",
+  "summary": "On-policy distillation (OPD) trains a student to match the teacher's next-token distributions on the student's own trajectories and has yielded substantial empirical gains. Generalized variants allow the student to surpass the teacher by extrapolating an implicit reward in output space. The language-model head, however, attenuates this change anisotropically: much of the change encoded in the teacher's hidden states reaches the logits at a small fraction of its weight, and the sampled-token log-probability ratios on which output-space extrapolation relies inject noise that the extrapolation amplifies, making training unstable. We observe that reinforcement learning (RL) shifts a model's internal representations relative to its base checkpoint, and that the direction of this shift can be measured at every layer. Motivated by this observation, we propose RIDE (RL-Induced Direction Extrapolation), which extrapolates the RL-induced change directly in representation space: at every layer and token position, RIDE computes the residual between the teacher and its pre-RL checkpoint and regresses the student's hidden states toward targets displaced beyond the teacher along this residual. Conditioned on a sampled trajectory, this regression is equivalent to maximizing a linear directional reward defined by the residual under a quadratic penalty centered at the teacher, which makes explicit how the objective moves the student along the RL-induced direction while limiting its deviation from the teacher. Across four base/RL-teacher pairs spanning different scales, architectures, and pre-training lineages, RIDE approaches or exceeds the RL-trained teacher on every pair and is the only method whose mean does so, and it consistently outperforms output-space extrapolation, which degrades the student whenever the teacher is close to its base. Project page: https://github.com/xixixixixxxx/RIDE.",
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.36484.png",
+  "numComments": 5,
+  "submittedBy": {
+   "_id": "673556db2769638944cf5e50",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/viqtM3lwIRZ9CzpcF5bI8.png",
+   "fullname": "L.H",
+   "name": "LH2101",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 0,
+   "isUserFollowing": false
+  },
+  "isAuthorParticipating": true
+ },
+ {
+  "paper": {
+   "id": "2609.38721",
+   "authors": [
+    {
+     "_id": "6abddf77e72b9347146b29a9",
+     "name": "Fang Wu",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29aa",
+     "user": {
+      "_id": "67468d3305afcd8837ace47c",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/67468d3305afcd8837ace47c/OX0jpVYSURijwBYh_FQNH.jpeg",
+      "isPro": false,
+      "fullname": "Danny Xing",
+      "user": "Ruasynnad",
+      "type": "user",
+      "name": "Ruasynnad"
+     },
+     "name": "Da Xing",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-01T13:44:51.253Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29ab",
+     "name": "Yanjie Huang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29ac",
+     "name": "Junxi Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29ad",
+     "name": "Ji Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29ae",
+     "name": "Hejia Geng",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29af",
+     "name": "Guancheng Wan",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b0",
+     "user": {
+      "_id": "6700cf8890e1fe6f74009263",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6700cf8890e1fe6f74009263/4O1Rs8Pyack_Nr-nmHCO5.png",
+      "isPro": false,
+      "fullname": "Bowen Zuo",
+      "user": "bowen-zuo",
+      "type": "user",
+      "name": "bowen-zuo"
+     },
+     "name": "Bowen Zuo",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-13T08:45:05.459Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b1",
+     "name": "Xiaomin Li",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b2",
+     "name": "Shixiang Tang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b3",
+     "name": "Xinyu Xiang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b4",
+     "name": "Zehong Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b5",
+     "name": "Shiyi Du",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b6",
+     "name": "Peng Xia",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b7",
+     "name": "Shuangjia Zheng",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b8",
+     "name": "Yining Hong",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29b9",
+     "name": "Li Erran Li",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29ba",
+     "name": "Jure Leskovec",
+     "hidden": false
+    },
+    {
+     "_id": "6abddf77e72b9347146b29bb",
+     "name": "Yejin Choi",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-09-30T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-01T00:00:00.000Z",
+   "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+   "submittedOnDailyBy": {
+    "_id": "675e0d5cdd3e9eeed6954f5a",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/7oMEoBmaFiCR9K2q9Z_7q.png",
+    "isPro": false,
+    "fullname": "Fang Wu",
+    "user": "fangwu97",
+    "type": "user",
+    "name": "fangwu97"
+   },
+   "summary": "Modern multimodal models bring generation and understanding into a single unified system, which enables them to provide and learn from their own feedback. Motivated by this unified capacity, we introduce UniEvo-VL, a self-evolving framework for multimodal models to learn from this constructive self-correction feedback during test-time compute. Instead of relying on a separate, often larger, teacher, we leverage their self-critiques as privileged information and ask a single multimodal model to act as both teacher and student with different contexts. The student only sees the vanilla question, while the teacher conditions on the privileged critique. Then training minimizes the per-state divergence between their denoising diffusion distributions over the student's own sampling trajectories. Experiments demonstrate that UniEvo-VL improves the image generation capabilities of multimodal models, while maintaining their sensitivity to additional reflection information. Specifically, we build on top of the open-source Qwen-image-2512 and observe a significant performance gain from 0.747 to 0.808 on GenEval and from 32.97 to 35.53 on GenEval2 Soft-TIFA. Moreover, attempts with more powerful external critics (e.g., GPT5.6-Luna) show that multimodal models with strong judge capabilities can anticipate a higher self-evolving ceiling. Last but not least, mixed text-rendering outcomes show that our self-improvements may not be uniform across different tasks. Our study aims to shed light on the current hot recursive self-improvement research line to enhance the user experience when using multimodal models without external supervision or guidance.",
+   "upvotes": 133,
+   "discussionId": "6abddf77e72b9347146b29bc",
+   "ai_summary": "UniEvo-VL enables multimodal models to self-improve during inference by using internal critiques to guide diffusion-based generation without external teachers.",
+   "ai_keywords": [
+    "multimodal models",
+    "self-evolving framework",
+    "self-correction feedback",
+    "test-time compute",
+    "privileged information",
+    "denoising diffusion distributions",
+    "sampling trajectories",
+    "GenEval",
+    "recursive self-improvement"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "organization": {
+    "_id": "6112d84f8c2e1f4060908c9e",
+    "name": "stanfordnlp",
+    "fullname": "Stanford NLP",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1628624969199-6032802e1f993496bc14d9e3.png"
+   }
+  },
+  "publishedAt": "2026-09-29T20:00:00.000Z",
+  "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+  "summary": "Modern multimodal models bring generation and understanding into a single unified system, which enables them to provide and learn from their own feedback. Motivated by this unified capacity, we introduce UniEvo-VL, a self-evolving framework for multimodal models to learn from this constructive self-correction feedback during test-time compute. Instead of relying on a separate, often larger, teacher, we leverage their self-critiques as privileged information and ask a single multimodal model to act as both teacher and student with different contexts. The student only sees the vanilla question, while the teacher conditions on the privileged critique. Then training minimizes the per-state divergence between their denoising diffusion distributions over the student's own sampling trajectories. Experiments demonstrate that UniEvo-VL improves the image generation capabilities of multimodal models, while maintaining their sensitivity to additional reflection information. Specifically, we build on top of the open-source Qwen-image-2512 and observe a significant performance gain from 0.747 to 0.808 on GenEval and from 32.97 to 35.53 on GenEval2 Soft-TIFA. Moreover, attempts with more powerful external critics (e.g., GPT5.6-Luna) show that multimodal models with strong judge capabilities can anticipate a higher self-evolving ceiling. Last but not least, mixed text-rendering outcomes show that our self-improvements may not be uniform across different tasks. Our study aims to shed light on the current hot recursive self-improvement research line to enhance the user experience when using multimodal models without external supervision or guidance.",
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.38721.png",
+  "numComments": 3,
+  "submittedBy": {
+   "_id": "675e0d5cdd3e9eeed6954f5a",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/7oMEoBmaFiCR9K2q9Z_7q.png",
+   "fullname": "Fang Wu",
+   "name": "fangwu97",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 15,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "6112d84f8c2e1f4060908c9e",
+   "name": "stanfordnlp",
+   "fullname": "Stanford NLP",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1628624969199-6032802e1f993496bc14d9e3.png"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2609.39982",
+   "authors": [
+    {
+     "_id": "6abdea36e72b9347146b29d5",
+     "name": "Minki Kang",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29d6",
+     "name": "Ryo Hachiuma",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29d7",
+     "user": {
+      "_id": "6801df6171a387d10b3ba93c",
+      "avatarUrl": "/avatars/447da8c1ce50261f93a5b1c3fe617cf5.svg",
+      "isPro": false,
+      "fullname": "Shaokun zhang",
+      "user": "SeanZhang1",
+      "type": "user",
+      "name": "SeanZhang1"
+     },
+     "name": "Shaokun Zhang",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-07T08:08:30.958Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29d8",
+     "name": "Subhashree Radhakrishnan",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29d9",
+     "name": "Yonggan Fu",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29da",
+     "name": "Jindong Jiang",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29db",
+     "name": "Mingjie Liu",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29dc",
+     "name": "Ehsan Hosseini-Asl",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29dd",
+     "name": "Yi Dong",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29de",
+     "name": "Yu-Chiang Frank Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6abdea36e72b9347146b29df",
+     "user": {
+      "_id": "657152eb12f162153b50ec9d",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/657152eb12f162153b50ec9d/qnldHP35PclV0pDz_05q8.jpeg",
+      "isPro": false,
+      "fullname": "Byung-Kwan Lee",
+      "user": "BK-Lee",
+      "type": "user",
+      "name": "BK-Lee"
+     },
+     "name": "Byung-Kwan Lee",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-01T08:45:05.795Z",
+     "hidden": false
+    }
+   ],
+   "mediaUrls": [
+    "https://cdn-uploads.huggingface.co/production/uploads/64b74920fe6a108d03fed767/KHD9Oj9EN3DLpzq3nTc1s.mp4"
+   ],
+   "publishedAt": "2026-09-30T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-01T00:00:00.000Z",
+   "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+   "submittedOnDailyBy": {
+    "_id": "64b74920fe6a108d03fed767",
+    "avatarUrl": "/avatars/41e5f8cd6f650549d3402f9b9067b67d.svg",
+    "isPro": false,
+    "fullname": "Minki Kang",
+    "user": "Nardien",
+    "type": "user",
+    "name": "Nardien"
+   },
+   "summary": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+   "upvotes": 95,
+   "discussionId": "6abdea36e72b9347146b29e0",
+   "projectPage": "https://byungkwanlee.github.io/MidHarness-page/",
+   "ai_summary": "Mid-Harness improves terminal agent reliability by sampling and verifying actions at the model-harness boundary, showing that stronger verification and action scaling boost success more efficiently than trajectory scaling alone.",
+   "ai_keywords": [
+    "Mid-Harness",
+    "test-time compute",
+    "action sampling",
+    "verification",
+    "pairwise verification",
+    "distillation",
+    "action scaling",
+    "trajectory scaling",
+    "terminal agents"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "organization": {
+    "_id": "60262b67268c201cdc8b7d43",
+    "name": "nvidia",
+    "fullname": "NVIDIA",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/65df9200dc3292a8983e5017/Vs5FPVCH-VZBipV3qKTuy.png"
+   }
+  },
+  "publishedAt": "2026-09-29T20:00:00.000Z",
+  "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+  "summary": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+  "mediaUrls": [
+   "https://cdn-uploads.huggingface.co/production/uploads/64b74920fe6a108d03fed767/KHD9Oj9EN3DLpzq3nTc1s.mp4"
+  ],
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.39982.png",
+  "numComments": 5,
+  "submittedBy": {
+   "_id": "64b74920fe6a108d03fed767",
+   "avatarUrl": "/avatars/41e5f8cd6f650549d3402f9b9067b67d.svg",
+   "fullname": "Minki Kang",
+   "name": "Nardien",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 13,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "60262b67268c201cdc8b7d43",
+   "name": "nvidia",
+   "fullname": "NVIDIA",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/65df9200dc3292a8983e5017/Vs5FPVCH-VZBipV3qKTuy.png"
+  },
+  "isAuthorParticipating": true
+ },
+ {
+  "paper": {
+   "id": "2609.40340",
+   "authors": [
+    {
+     "_id": "6abdc38be72b9347146b24af",
+     "user": {
+      "_id": "6434b6619bd5a84b5dcfa4de",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6434b6619bd5a84b5dcfa4de/h8Q6kPNjFNc03wmdboHzq.jpeg",
+      "isPro": true,
+      "fullname": "Young-Jun Lee",
+      "user": "passing2961",
+      "type": "user",
+      "name": "passing2961"
+     },
+     "name": "Young-Jun Lee",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-01T08:45:05.547Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b0",
+     "name": "Jinheon Baek",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b1",
+     "name": "Soyeong Jeong",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b2",
+     "name": "Minki Kang",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b3",
+     "user": {
+      "_id": "65b744d605c25412bb7f08b8",
+      "avatarUrl": "/avatars/de491ceccc4d1e5839ddf9a3a33d845b.svg",
+      "isPro": false,
+      "fullname": "Seungyeon Jwa",
+      "user": "syhuggingface",
+      "type": "user",
+      "name": "syhuggingface"
+     },
+     "name": "Seungyeon Jwa",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-01T08:45:05.556Z",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b4",
+     "name": "Jonghyun Choi",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b5",
+     "name": "Seungho Han",
+     "hidden": false
+    },
+    {
+     "_id": "6abdc38be72b9347146b24b6",
+     "name": "Dongyeop Kang",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-09-30T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-01T00:00:00.000Z",
+   "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+   "submittedOnDailyBy": {
+    "_id": "6434b6619bd5a84b5dcfa4de",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6434b6619bd5a84b5dcfa4de/h8Q6kPNjFNc03wmdboHzq.jpeg",
+    "isPro": true,
+    "fullname": "Young-Jun Lee",
+    "user": "passing2961",
+    "type": "user",
+    "name": "passing2961"
+   },
+   "summary": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+   "upvotes": 90,
+   "discussionId": "6abdc38ce72b9347146b24b7",
+   "projectPage": "https://open-galapagos.github.io/evoduet_project_page/",
+   "githubRepo": "https://github.com/Open-Galapagos/EvoDuet",
+   "githubRepoAddedBy": "user",
+   "ai_summary": "EvoDuet improves evolutionary search with large language models by co-evolving solutions and retrieval queries to overcome knowledge gaps, boosting discovery gains across multiple optimization tasks.",
+   "ai_keywords": [
+    "bi-level optimization",
+    "retrieval gate",
+    "evolutionary search",
+    "large language models",
+    "query co-evolution",
+    "document ranking"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "githubStars": 7,
+   "organization": {
+    "_id": "643536750b30bd434ea1f1c3",
+    "name": "minnesotanlp",
+    "fullname": "Minnesota NLP",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/61e0c5053a1781f66b4e9aed/YHpZgv9x3v9lLYnXyOWi_.png"
+   }
+  },
+  "publishedAt": "2026-09-29T20:00:00.000Z",
+  "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+  "summary": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.40340.png",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "6434b6619bd5a84b5dcfa4de",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6434b6619bd5a84b5dcfa4de/h8Q6kPNjFNc03wmdboHzq.jpeg",
+   "fullname": "Young-Jun Lee",
+   "name": "passing2961",
+   "type": "user",
+   "isPro": true,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 26,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "643536750b30bd434ea1f1c3",
+   "name": "minnesotanlp",
+   "fullname": "Minnesota NLP",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/61e0c5053a1781f66b4e9aed/YHpZgv9x3v9lLYnXyOWi_.png"
+  },
+  "isAuthorParticipating": true
+ }
+]

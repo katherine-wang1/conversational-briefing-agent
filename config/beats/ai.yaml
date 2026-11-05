@@ -1,5 +1,7 @@
 # Beat: AI (research domain). Source URLs are drafts: `verified: false` until the archive/source
 # spike confirms the endpoint and its historical availability (TDD §27 spike 4).
+# 2026-11-05 (W-A): `verified: true` = endpoint fetched and parsed live with an honest UA. Historical
+# (Aug-Oct 2026) availability via Wayback is NOT yet measured for feeds: see docs/spikes.md § Archive.
 id: ai
 name: "AI: models, research & industry"
 scope: >
@@ -14,26 +16,27 @@ digest_size: 30
 refresh_live_utc: ["06:00", "12:00", "18:00"]
 headline_sources:
   # editorial front pages
-  - {id: techmeme, type: techmeme, tier: 1, weight: 1.0, url: "https://www.techmeme.com/", verified: false}
+  - {id: techmeme, type: techmeme, tier: 1, weight: 1.0, url: "https://www.techmeme.com/", verified: true}
   # crowd rankings
-  - {id: hn_front, type: hn_front, tier: 1, weight: 0.8, url: "https://news.ycombinator.com/", verified: false}
-  - {id: hf_papers, type: hf_papers, tier: 2, weight: 0.6, url: "https://huggingface.co/papers", verified: false}
+  - {id: hn_front, type: hn_front, tier: 1, weight: 0.8, url: "https://news.ycombinator.com/", verified: true}
+  - {id: hf_papers, type: hf_papers, tier: 2, weight: 0.6, url: "https://huggingface.co/papers", verified: true}
+  # not verified: reddit.com robots.txt disallows generic crawlers (incl. this UA); Wayback copies only
   - {id: reddit_ml, type: reddit_top, tier: 3, weight: 0.3, url: "https://www.reddit.com/r/MachineLearning/top/.rss?t=day", verified: false}
   # papers
-  - {id: arxiv_cs_cl, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.CL}, verified: false}
-  - {id: arxiv_cs_lg, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.LG}, verified: false}
-  - {id: arxiv_cs_ai, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.AI}, verified: false}
+  - {id: arxiv_cs_cl, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.CL}, verified: true}
+  - {id: arxiv_cs_lg, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.LG}, verified: true}
+  - {id: arxiv_cs_ai, type: arxiv, tier: 2, weight: 0.3, params: {cat: cs.AI}, verified: true}
   # primary sources (labs / companies)
-  - {id: openai_news, type: rss, tier: 1, weight: 0.7, url: "https://openai.com/news/rss.xml", verified: false}
-  - {id: anthropic_news, type: frontpage, tier: 1, weight: 0.7, url: "https://www.anthropic.com/news", verified: false}
-  - {id: deepmind_blog, type: rss, tier: 1, weight: 0.7, url: "https://deepmind.google/blog/rss.xml", verified: false}
-  - {id: meta_ai_blog, type: frontpage, tier: 1, weight: 0.6, url: "https://ai.meta.com/blog/", verified: false}
-  - {id: hf_blog, type: rss, tier: 2, weight: 0.5, url: "https://huggingface.co/blog/feed.xml", verified: false}
-  - {id: nvidia_blog, type: rss, tier: 2, weight: 0.5, url: "https://blogs.nvidia.com/feed/", verified: false}
+  - {id: openai_news, type: rss, tier: 1, weight: 0.7, url: "https://openai.com/news/rss.xml", verified: true}
+  - {id: anthropic_news, type: frontpage, tier: 1, weight: 0.7, url: "https://www.anthropic.com/news", verified: true}
+  - {id: deepmind_blog, type: rss, tier: 1, weight: 0.7, url: "https://deepmind.google/blog/rss.xml", verified: true}
+  - {id: meta_ai_blog, type: frontpage, tier: 1, weight: 0.6, url: "https://ai.meta.com/blog/", verified: true}
+  - {id: hf_blog, type: rss, tier: 2, weight: 0.5, url: "https://huggingface.co/blog/feed.xml", verified: true}
+  - {id: nvidia_blog, type: rss, tier: 2, weight: 0.5, url: "https://blogs.nvidia.com/feed/", verified: true}
   # press
-  - {id: techcrunch_ai, type: rss, tier: 2, weight: 0.6, url: "https://techcrunch.com/category/artificial-intelligence/feed/", verified: false}
-  - {id: verge_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", verified: false}
-  - {id: ars_ai, type: rss, tier: 2, weight: 0.5, url: "https://arstechnica.com/ai/feed/", verified: false}
-  - {id: mit_tr_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", verified: false}
+  - {id: techcrunch_ai, type: rss, tier: 2, weight: 0.6, url: "https://techcrunch.com/category/artificial-intelligence/feed/", verified: true}
+  - {id: verge_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", verified: true}
+  - {id: ars_ai, type: rss, tier: 2, weight: 0.5, url: "https://arstechnica.com/ai/feed/", verified: true}
+  - {id: mit_tr_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", verified: true}
   # expert curation
-  - {id: import_ai, type: rss, tier: 2, weight: 0.4, url: "https://importai.substack.com/feed", verified: false}
+  - {id: import_ai, type: rss, tier: 2, weight: 0.4, url: "https://importai.substack.com/feed", verified: true}
