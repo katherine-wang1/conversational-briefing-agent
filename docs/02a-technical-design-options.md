@@ -57,7 +57,26 @@ The two biggest consequences:
 | B. All cheap, open models | Qwen / DeepSeek | Same | Same | Same or Tinker | Cheapest | Weaker tool use and faithfulness are likely; more prompt tuning |
 | C. Sonnet everywhere | Sonnet | Sonnet | Haiku | Haiku | Best quality | **Evaluation unaffordable** (about 20× the cost of option A) |
 
-**Research-integrity note:** the research config and the product must use the **same models per role** (PRD RG-5). Whatever model the chief of staff uses in evaluation is what Kate uses daily.
+| **D. Model-agnostic, chosen per role by a bake-off** (recommended, superseding A as the decision process) | Best of the candidates | Best of the candidates | Best of the candidates | A different family from the agent | Picks the cheapest model that clears quality bars per role; the orchestrator is provider-agnostic anyway | Needs a small dev-slice bake-off (about $5–10) |
+
+**Claude isn't required.** Any model on OpenRouter that handles tool calling and structured output reliably can fill a role. Candidates per role for the bake-off:
+
+| Role | What matters most | Candidates |
+|---|---|---|
+| Newsroom | Judgement, tool use over many pages, faithfulness | Sonnet 5.5, Haiku 5.5, a Gemini Flash/Pro tier, DeepSeek, Qwen |
+| Chief of staff | Tool use, structured scores, faithful writing, cost (runs per user per day) | Haiku 5.5, Gemini Flash, DeepSeek, Qwen, GPT-mini tier |
+| Voice agent | **Latency**, faithfulness, prompt caching | Haiku 5.5, Gemini Flash, GPT-mini tier |
+| Simulated users and judges | A **different family** from the agent; cost | Tinker Inkling-Small, or whichever cheap family the agent doesn't use |
+
+Bake-off metrics on about 5 dev days: tool-call success rate, schema validity, claim faithfulness (judged), importance recall (newsroom), time to first token (voice), and cost per run. Free models on OpenRouter are fine for development but not for evaluation: they're rate-limited and can change without notice.
+
+**Research-integrity note:** the research config and the product must use the **same models per role** (PRD RG-5). Whatever model the chief of staff uses in evaluation is what Kate uses daily. Once the bake-off picks them, models are pinned.
+
+**OpenRouter vs. Tinker costs:** they're **separate credit pools with separate price lists**.
+- **OpenRouter** passes through each provider's own price (it charges its fee when you buy credits, not per token), so a model costs roughly what its provider charges.
+- **Tinker** prices its own models: Inkling-Small at about $0.30 / $1.20 is actually **more expensive per token than Haiku 5.5** ($0.10 / $0.50).
+
+So Tinker is useful because it's **extra money and a different model family**, not because it's cheaper.
 
 ### 1.4 Budget model (option A, with the leaner evaluation in §8)
 
