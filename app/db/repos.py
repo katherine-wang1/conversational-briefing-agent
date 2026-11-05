@@ -196,7 +196,9 @@ class DeliveryPrefsRepo(UserRepo):
     json_cols = frozenset({"value"})
 
     async def set(self, key: str, value: Any, confidence: float) -> dict[str, Any]:
-        return await self.upsert(key=key, value=value, confidence=confidence, updated_at=datetime.now().astimezone())
+        return await self.upsert(
+            key=key, value=value, confidence=confidence, updated_at=datetime.now().astimezone()
+        )
 
 
 class MemorySnapshotsRepo(UserRepo):

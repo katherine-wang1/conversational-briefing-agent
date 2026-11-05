@@ -75,7 +75,8 @@ class Database:
     async def _check_role(self) -> None:
         async with self.pool.connection() as conn:
             cur = await conn.execute(
-                "select current_user as role, rolsuper, rolbypassrls from pg_roles where rolname = current_user"
+                "select current_user as role, rolsuper, rolbypassrls from pg_roles"
+                " where rolname = current_user"
             )
             row = await cur.fetchone()
             await conn.rollback()
@@ -91,9 +92,7 @@ class Database:
         uid = _as_uuid(user_id)
         async with self.pool.connection() as conn:
             async with conn.transaction():
-                await conn.execute(
-                    "select set_config('app.user_id', %s, true)", [str(uid) if uid else ""]
-                )
+                await conn.execute("select set_config('app.user_id', %s, true)", [str(uid) if uid else ""])
                 yield Scope(conn, uid, run_id=run_id, admin=self.admin)
 
     def system_scope(self, *, run_id: str = "live"):  # noqa: ANN201 - async context manager

@@ -36,8 +36,9 @@ async def seed_user_rows(db: Database, uid: uuid.UUID) -> dict[str, dict[str, An
         out["briefs"] = brief
         sess = await s.sessions.insert(id="s" + _ids(), brief_id=brief["id"])
         out["sessions"] = sess
-        out["interests"] = await s.interests.insert(label="agent memory", subtopic="agents-and-tools",
-                                                    weight=0.4, confidence=0.3, source="onboarding")
+        out["interests"] = await s.interests.insert(
+            label="agent memory", subtopic="agents-and-tools", weight=0.4, confidence=0.3, source="onboarding"
+        )
         out["delivery_prefs"] = await s.delivery_prefs.set("length_s", 300, 0.5)
         out["memory_snapshots"] = await s.memory_snapshots.insert(as_of_date=date(2026, 11, 5), payload={})
         out["memory_signals"] = await s.memory_signals.insert(session_id=sess["id"], type="dive")
@@ -119,7 +120,9 @@ async def test_user_cannot_update_or_delete_other_users_rows(db: Database, two_u
             sql.SQL("update {} set run_id = run_id where user_id = %s").format(sql.Identifier(table)), [b]
         )
         assert upd == 0
-        dele = await s.execute(sql.SQL("delete from {} where user_id = %s").format(sql.Identifier(table)), [b])
+        dele = await s.execute(
+            sql.SQL("delete from {} where user_id = %s").format(sql.Identifier(table)), [b]
+        )
         assert dele == 0
     async with db.user_scope(b) as s:
         n = await s.fetch_one(sql.SQL("select count(*) as n from {}").format(sql.Identifier(table)))

@@ -59,7 +59,9 @@ def main() -> None:
     args = ap.parse_args()
     if not args.dsn:
         raise SystemExit("set MIGRATIONS_DATABASE_URL (an owner role such as postgres) or pass --dsn")
-    applied = asyncio.run(apply_migrations(args.dsn, dev_role_passwords=args.dev_role_passwords, verbose=True))
+    applied = asyncio.run(
+        apply_migrations(args.dsn, dev_role_passwords=args.dev_role_passwords, verbose=True)
+    )
     print(f"{len(applied)} migration(s) applied")
 
 

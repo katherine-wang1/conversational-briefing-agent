@@ -35,7 +35,8 @@ class TestDatabase:
     def drop(self) -> None:
         with psycopg.connect(self.server_dsn, autocommit=True) as c:
             c.execute(
-                "select pg_terminate_backend(pid) from pg_stat_activity where datname = %s and pid <> pg_backend_pid()",
+                "select pg_terminate_backend(pid) from pg_stat_activity"
+                " where datname = %s and pid <> pg_backend_pid()",
                 [self.name],
             )
             c.execute(f'drop database if exists "{self.name}"')
