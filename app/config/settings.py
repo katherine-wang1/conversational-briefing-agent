@@ -55,6 +55,7 @@ class Settings(BaseSettings):
     worker_concurrency: int = 4
     worker_poll_s: float = 1.0
     agent_ports: Literal["auto", "real", "stub"] = "auto"
+    voice_model: Literal["auto", "fake"] = "auto"  # fake = rule-based CorpusEchoModel (dev only)
     credit_openrouter_usd: float = 200.0
     credit_tinker_usd: float = 100.0
 

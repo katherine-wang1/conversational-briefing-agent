@@ -10,10 +10,21 @@ from app.speech.http import OpenAICompatibleTTS, WhisperSTT
 from app.speech.storage import AudioStorage, LocalDiskStorage, SupabaseStorage
 
 __all__ = [
-    "AudioStorage", "FakeSTT", "FakeTTS", "LocalDiskStorage", "OpenAICompatibleTTS", "STTProvider",
-    "SpeechUnavailable", "SupabaseStorage", "TTSProvider", "TtsAudio", "WhisperSTT", "build_storage",
-    "build_stt", "build_tts",
-]  # fmt: skip
+    "AudioStorage",
+    "FakeSTT",
+    "FakeTTS",
+    "LocalDiskStorage",
+    "OpenAICompatibleTTS",
+    "STTProvider",
+    "SpeechUnavailable",
+    "SupabaseStorage",
+    "TTSProvider",
+    "TtsAudio",
+    "WhisperSTT",
+    "build_storage",
+    "build_stt",
+    "build_tts",
+]
 
 
 def build_tts(s: Settings) -> TTSProvider | None:

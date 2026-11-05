@@ -26,6 +26,7 @@ class Playback(Strict):
     type: Literal["playback"] = "playback"
     segment_id: str
     offset_ms: int
+    completed: bool = False  # additive (W-E): this segment finished playing; on the last one, the brief ended
 
 
 class Interrupt(Strict):

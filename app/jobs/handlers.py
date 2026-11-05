@@ -75,18 +75,28 @@ def _need_user(job: Job) -> UUID:
 
 def digest_from_rows(d: dict[str, Any], entries: list[dict[str, Any]]) -> Digest:
     return Digest(
-        digest_id=d["id"], run_id=d["run_id"], beat=d["beat"], at=d["at"], version=d["version"],
+        digest_id=d["id"],
+        run_id=d["run_id"],
+        beat=d["beat"],
+        at=d["at"],
+        version=d["version"],
         entries=[
             DigestEntry(
-                story_id=e["story_id"], headline=e["headline"], summary=e["summary"],
-                subtopics=list(e["subtopics"] or []), entities=list(e["entities"] or []),
-                importance=e["importance"], evidence=[str(x) for x in e["evidence"] or []],
-                is_update_of=e["is_update_of"], importance_rules=e["importance_rules"],
-                features=StoryFeatures.model_validate(e["features"] or {}), urls=list(e["urls"] or []),
+                story_id=e["story_id"],
+                headline=e["headline"],
+                summary=e["summary"],
+                subtopics=list(e["subtopics"] or []),
+                entities=list(e["entities"] or []),
+                importance=e["importance"],
+                evidence=[str(x) for x in e["evidence"] or []],
+                is_update_of=e["is_update_of"],
+                importance_rules=e["importance_rules"],
+                features=StoryFeatures.model_validate(e["features"] or {}),
+                urls=list(e["urls"] or []),
             )
             for e in entries
         ],
-    )  # fmt: skip
+    )
 
 
 async def save_digest(s: Any, digest: Digest) -> None:
@@ -95,11 +105,19 @@ async def save_digest(s: Any, digest: Digest) -> None:
     )
     for e in digest.entries:
         await s.digest_entries.upsert(
-            digest_id=digest.digest_id, story_id=e.story_id, headline=e.headline, summary=e.summary,
-            subtopics=e.subtopics, entities=e.entities, importance=e.importance,
-            importance_rules=e.importance_rules, evidence=e.evidence, is_update_of=e.is_update_of,
-            features=e.features, urls=e.urls,
-        )  # fmt: skip
+            digest_id=digest.digest_id,
+            story_id=e.story_id,
+            headline=e.headline,
+            summary=e.summary,
+            subtopics=e.subtopics,
+            entities=e.entities,
+            importance=e.importance,
+            importance_rules=e.importance_rules,
+            evidence=e.evidence,
+            is_update_of=e.is_update_of,
+            features=e.features,
+            urls=e.urls,
+        )
 
 
 @handler("newsroom_run")

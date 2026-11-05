@@ -9,11 +9,46 @@ from __future__ import annotations
 import re
 
 _ABBREV = {
-    "mr", "mrs", "ms", "dr", "prof", "sr", "jr", "st", "vs", "etc", "inc", "ltd", "co", "corp",
-    "e.g", "i.e", "u.s", "u.k", "u.n", "e.u", "no", "approx", "jan", "feb", "mar", "apr", "jun",
-    "jul", "aug", "sep", "sept", "oct", "nov", "dec", "fig", "al",
-}  # fmt: skip
-_END = re.compile(r"[.!?…]+[\"')\]]*(?:\s*\[p:[^\]]+\])*(?=\s)")
+    "mr",
+    "mrs",
+    "ms",
+    "dr",
+    "prof",
+    "sr",
+    "jr",
+    "st",
+    "vs",
+    "etc",
+    "inc",
+    "ltd",
+    "co",
+    "corp",
+    "e.g",
+    "i.e",
+    "u.s",
+    "u.k",
+    "u.n",
+    "e.u",
+    "no",
+    "approx",
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "sept",
+    "oct",
+    "nov",
+    "dec",
+    "fig",
+    "al",
+}
+# A sentence ends at terminal punctuation (plus any trailing citation markers) once the next
+# non-space character has arrived and isn't "[" (a citation placed after the period).
+_END = re.compile(r"[.!?…]+[\"')\]]*(?:\s*\[p:[^\]]+\])*(?=\s+[^\s\[])")
 
 
 class SentenceSplitter:

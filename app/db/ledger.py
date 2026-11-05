@@ -19,9 +19,19 @@ from app.db.pool import Database
 log = logging.getLogger(__name__)
 
 FIELDS = (
-    "run_id", "user_id", "job_id", "role", "provider", "model", "tokens_in", "tokens_out",
-    "tokens_cached", "cost_usd", "latency_ms", "cached",
-)  # fmt: skip
+    "run_id",
+    "user_id",
+    "job_id",
+    "role",
+    "provider",
+    "model",
+    "tokens_in",
+    "tokens_out",
+    "tokens_cached",
+    "cost_usd",
+    "latency_ms",
+    "cached",
+)
 
 
 def _record_dict(record: Any) -> dict[str, Any]:

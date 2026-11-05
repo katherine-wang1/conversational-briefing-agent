@@ -35,9 +35,13 @@ from app.tools.search import LiveSearch, ReplaySearch, SearchTool, build_provide
 from app.tools.untrusted import render_for_model, sanitize_text, wrap_untrusted
 
 __all__ = [
-    "ArchiveReader", "build_tools", "register_source_adapter", "render_for_model", "sanitize_text",
+    "ArchiveReader",
+    "build_tools",
+    "register_source_adapter",
+    "render_for_model",
+    "sanitize_text",
     "wrap_untrusted",
-]  # fmt: skip
+]
 
 
 def build_tools(

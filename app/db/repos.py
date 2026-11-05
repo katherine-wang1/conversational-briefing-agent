@@ -294,10 +294,22 @@ class LlmCallsRepo(Repo):
 
 
 USER_TABLES: tuple[str, ...] = (
-    "profiles", "interests", "delivery_prefs", "memory_snapshots", "memory_signals", "briefs",
-    "candidates", "source_packs", "sessions", "turns", "open_questions", "saved_items", "ratings",
-    "experiment_assignments", "topic_requests",
-)  # fmt: skip
+    "profiles",
+    "interests",
+    "delivery_prefs",
+    "memory_snapshots",
+    "memory_signals",
+    "briefs",
+    "candidates",
+    "source_packs",
+    "sessions",
+    "turns",
+    "open_questions",
+    "saved_items",
+    "ratings",
+    "experiment_assignments",
+    "topic_requests",
+)
 
 
 # ---- shared tables ------------------------------------------------------------------------------------
@@ -393,11 +405,34 @@ class AdminAlertsRepo(SystemRepo):
 REPOS: dict[str, type[Repo]] = {
     cls.table: cls
     for cls in (
-        ProfilesRepo, InterestsRepo, DeliveryPrefsRepo, MemorySnapshotsRepo, MemorySignalsRepo,
-        BriefsRepo, CandidatesRepo, SourcePacksRepo, SessionsRepo, TurnsRepo, OpenQuestionsRepo,
-        SavedItemsRepo, RatingsRepo, ExperimentAssignmentsRepo, TopicRequestsRepo, LlmCallsRepo,
-        HeadlineObservationsRepo, DocumentsRepo, PassagesRepo, StoriesRepo, StoryItemsRepo,
-        NewsroomRunsRepo, DigestsRepo, DigestEntriesRepo, JobsRepo, InvitesRepo, AdminAuditRepo,
-        WorkerHeartbeatsRepo, AdminAlertsRepo,
+        ProfilesRepo,
+        InterestsRepo,
+        DeliveryPrefsRepo,
+        MemorySnapshotsRepo,
+        MemorySignalsRepo,
+        BriefsRepo,
+        CandidatesRepo,
+        SourcePacksRepo,
+        SessionsRepo,
+        TurnsRepo,
+        OpenQuestionsRepo,
+        SavedItemsRepo,
+        RatingsRepo,
+        ExperimentAssignmentsRepo,
+        TopicRequestsRepo,
+        LlmCallsRepo,
+        HeadlineObservationsRepo,
+        DocumentsRepo,
+        PassagesRepo,
+        StoriesRepo,
+        StoryItemsRepo,
+        NewsroomRunsRepo,
+        DigestsRepo,
+        DigestEntriesRepo,
+        JobsRepo,
+        InvitesRepo,
+        AdminAuditRepo,
+        WorkerHeartbeatsRepo,
+        AdminAlertsRepo,
     )
-}  # fmt: skip
+}
