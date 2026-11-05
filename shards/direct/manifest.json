@@ -1,0 +1,30 @@
+{
+ "comments": {
+  "files": 10,
+  "rows": 12883
+ },
+ "coverage": {
+  "files": 92,
+  "rows": 783
+ },
+ "documents": {
+  "files": 8,
+  "rows": 830
+ },
+ "hn_items": {
+  "files": 2,
+  "rows": 1706
+ },
+ "meta": {
+  "files": 1,
+  "rows": 5
+ },
+ "observations": {
+  "files": 4,
+  "rows": 2796
+ },
+ "units": {
+  "files": 93,
+  "rows": 1055
+ }
+}
