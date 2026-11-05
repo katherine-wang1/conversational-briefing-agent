@@ -1077,6 +1077,35 @@ Today is Thursday, November 5. That leaves **27 days**, including Thanksgiving (
 2. **Labelling starts early, on historical news** (§18.3), not at the end.
 3. **The test runs launch by Tuesday, November 24** and run over Thanksgiving, so week 4 is for analysis and writing.
 
+### 25.0 Two tracks that meet at interfaces
+
+The agent build doesn't need the archive, the labels, or the evaluation harness. It runs in **live mode against the real web from day one**. The evaluation track builds the data and machinery to test it. The two meet only at a few contracts, which are fixed on day 1–2:
+
+| Contract | Defined in | Used by the agent track | Used by the evaluation track |
+|---|---|---|---|
+| `Tool` / `ToolContext` interfaces + result schemas | §5.1–5.2 | Live backends | Replay backends over `archive.sqlite` |
+| `HeadlineObservation` + document schema | §6.3, §15.3 | Live source adapters | Archive collectors (they share the parsing code) |
+| Taxonomy | `config/taxonomy.yaml` | Scoring, memory | Topic labels, hidden profiles |
+| Output schemas: `DigestEntryLLM`, `BriefScript`, `SourcePack`, `turns`, `memory_snapshots` | §7–9, §10 | Produced | Graded |
+| Session protocol (text) | §12.5 | Voice agent | Simulated users talk to it |
+
+| Track | Owns | Doesn't need |
+|---|---|---|
+| **A: Agent (product)** | Model layer, live tools, newsroom, chief of staff, memory, voice, PWA, jobs | The archive, labels, simulator, judges |
+| **B: Evaluation (data + harness)** | Archive collectors, hindsight labels, simulated users, graders and judges, runner, labelling app | A finished agent (only the contracts above) |
+
+**The few real dependencies:**
+- **Labels use the newsroom's clustering code (N3).** Collect raw data now; compute labels once clustering is stable (recomputing is cheap).
+- **The replay window depends on the models' training cutoffs.** Choose it from the cutoffs of the bake-off *shortlist*, so the bake-off can't invalidate it.
+- **Judges and simulators need agent outputs to be validated (L3)**, but only dev-slice outputs, in W3.
+
+**How the agent improves before labels exist:**
+- Kate's daily use and ratings.
+- Automatic checks on every run, which need no labels: schema validity, claim-check pass rate (C8), citation coverage, specificity (entity in headline), cost, and latency.
+- A few **dev replay days** as soon as part of the archive exists, for fast, repeatable iteration.
+
+Labels gate only the final numbers and the judge validation.
+
 ### W1: Thu Nov 5 – Wed Nov 11 · Foundations, newsroom, archive
 
 | Day(s) | Work | Done when |
