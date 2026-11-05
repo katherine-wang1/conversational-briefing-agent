@@ -44,3 +44,29 @@ voice:
 schedule:
   cos_lead_min: 60
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
+# Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
+newsroom:
+  window_hours: 24              # observations in (at - window, at] feed one run
+  update_gap_hours: 12          # new items >= this long after a prior story's first_seen = new facts -> update_of
+  score_candidates: 80          # top clusters by importance_rules sent to newsroom.score (lean rule L1)
+  score_batch_size: 20
+  score_max_output_tokens: 6000
+  score_floor: 20               # N6: minimum importance (0-100) to enter the digest
+  tiebreak_batch_size: 20
+  tiebreak_max_pairs: 40        # cap on ambiguous pairs sent to newsroom.cluster_tiebreak per run
+  tiebreak_max_output_tokens: 1500
+  fetch_max_tokens: 800         # text returned to the model per verification fetch
+  embedder: {name: fastembed, model: "BAAI/bge-small-en-v1.5"}
+  primary_sources:              # source ids that are primary sources (labs, companies, agencies); arxiv always is
+    ai: [openai_news, anthropic_news, deepmind_blog, meta_ai_blog, hf_blog, nvidia_blog]
+    energy: [eia_today]
+    physical_ai: [nvidia_blog]
+  rules_weights:                # importance_rules = 100 * weighted mean of normalised features
+    coverage: 0.30              # n_independent_domains (cap 8)
+    frontpage: 0.20             # frontpage_hits (cap 6)
+    tier: 0.15                  # best_tier: 1 -> 1.0, 2 -> 0.6, 3 -> 0.3
+    rank: 0.10                  # best_rank: 1 / (1 + (rank - 1) / 5)
+    hn_points: 0.10             # log-scaled, 500 points -> 1.0 (dropped when hn_signal=false)
+    hn_comments: 0.05           # log-scaled, 300 comments -> 1.0 (dropped when hn_signal=false)
+    velocity: 0.05              # new items since the last run (cap 5)
+    primary: 0.05               # has_primary_source
