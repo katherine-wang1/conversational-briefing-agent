@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 from collections.abc import Awaitable, Callable
 from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
 from typing import Any
 from uuid import UUID
 from zoneinfo import ZoneInfo
@@ -69,6 +70,20 @@ def local_today(tz: str, now: datetime) -> date:
         return now.astimezone(ZoneInfo(tz)).date()
     except (KeyError, ValueError):
         return now.astimezone(UTC).date()
+
+
+def save_trace(deps: Deps, kind: str, name: str, trace: Any) -> str | None:
+    """Write an agent trace to $TRACE_DIR/<kind>/<name>.json (optional; for debugging and smoke runs)."""
+    if not deps.settings.trace_dir or trace is None or not hasattr(trace, "model_dump_json"):
+        return None
+    path = Path(deps.settings.trace_dir) / kind / f"{name}.json"
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(trace.model_dump_json(indent=1))
+    except OSError:
+        log.exception("could not write trace %s", path)
+        return None
+    return str(path)
 
 
 def _need_user(job: Job) -> UUID:
@@ -170,7 +185,9 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
     async with deps.db.system_scope() as s:
         await save_digest(s, digest)
         await save_stories(s, getattr(trace, "stories", None) or [])
-        await s.newsroom_runs.update(run_row_id, status="done")
+        await s.newsroom_runs.update(
+            run_row_id, status="done", trace_uri=save_trace(deps, "newsroom", digest.digest_id, trace)
+        )
 
 
 # ---- chief of staff -------------------------------------------------------------------------------------
@@ -218,7 +235,7 @@ async def cos_daily(deps: Deps, job: Job) -> None:
         job_id=job.id,
         settings=prof["settings"],
     )
-    script, packs, _trace = await deps.ports.run_cos_daily(
+    script, packs, trace = await deps.ports.run_cos_daily(
         user_ctx,
         await latest_digests(deps, now),
         memory,
@@ -237,6 +254,7 @@ async def cos_daily(deps: Deps, job: Job) -> None:
             arm=arm,
             status="rendering",
             script=script,
+            trace_uri=save_trace(deps, "cos", brief_id, trace),
         )
         for p in packs:
             await s.source_packs.upsert(brief_id=brief_id, story_id=p.story_ref, pack=p)

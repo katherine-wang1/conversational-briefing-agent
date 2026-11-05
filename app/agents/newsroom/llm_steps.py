@@ -25,7 +25,14 @@ from app.agents.newsroom.stories import StoryDraft
 from app.agents.newsroom.trace import LlmCallRecord, NewsroomTrace, ToolCallRecord
 from app.contracts.common import BudgetExceeded, Mode, Strict, TokenBudget, TraceCtx
 from app.contracts.digest import DigestEntryLLM, StoryFeatures
-from app.contracts.llm import ChatRequest, ChatResponse, Message, ModelClient, ToolCall
+from app.contracts.llm import (
+    ChatRequest,
+    ChatResponse,
+    Message,
+    ModelClient,
+    StructuredOutputInvalid,
+    ToolCall,
+)
 from app.contracts.sources import Document
 from app.contracts.tools import FetchResult, Tool, ToolContext, ToolResult, ToolSpec
 
@@ -200,6 +207,10 @@ class LlmTiebreaker:
             except BudgetExceeded as e:
                 self.ctx.trace.add_llm(_record("N3", self.prompt, None, ok=False, error=f"budget: {e}"))
                 self.ctx.trace.degraded.append(f"N3 tiebreak: {len(batch)} pairs unresolved (budget)")
+                continue
+            except StructuredOutputInvalid as e:
+                self.ctx.trace.add_llm(_record("N3", self.prompt, None, ok=False, error=str(e)[:300]))
+                self.ctx.trace.degraded.append(f"N3 tiebreak: {len(batch)} pairs unresolved (invalid output)")
                 continue
             raw, err = _parse(resp, TiebreakOut)
             ok_ids = {p.pair_id for p in batch}
@@ -433,6 +444,11 @@ class Scorer:
                 self.ctx.trace.add_llm(_record("N5", self.prompt, None, ok=False, error=f"budget: {e}"))
                 self.ctx.trace.degraded.append(f"N5 batch {batch_no}: budget exceeded")
                 reason = "token budget"
+                break
+            except StructuredOutputInvalid as e:
+                self.ctx.trace.add_llm(_record("N5", self.prompt, None, ok=False, error=str(e)[:300]))
+                self.ctx.trace.degraded.append(f"N5 batch {batch_no}: invalid structured output")
+                reason = "invalid structured output"
                 break
             if resp.tool_calls and offer_tools:
                 self.ctx.trace.add_llm(

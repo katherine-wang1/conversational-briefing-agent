@@ -209,3 +209,31 @@ async def test_memory_update_handler_with_real_agents(db: Database, tmp_path):
     assert i1["weight"] > 0.4
     assert sess["memory_outcome"]["outcome"]["session_id"] == "sessR"
     assert any(c["action"] == "reinforce" for c in sess["memory_outcome"]["report"]["changes"])
+
+
+# ---- router structured-output failures degrade inside the agents --------------------------------------
+
+
+async def test_cos_call_structured_maps_router_structured_error():
+    import pytest
+
+    from app.agents.cos.llm import CallCtx, StructuredOutputFailure, call_structured
+    from app.agents.cos.packs import Extraction
+    from app.agents.cos.prompts import load_prompt
+    from app.agents.cos.trace import RunTrace
+    from app.contracts.llm import StructuredOutputInvalid
+    from app.llm.errors import StructuredOutputError
+
+    assert issubclass(StructuredOutputError, StructuredOutputInvalid)
+    fake = FakeModelClient()
+    fake.script("cos.extract_passages", text="")  # empty (e.g. reasoning ate the budget) -> invalid
+    cc = CallCtx(
+        client=fake,
+        budget=TokenBudget(input_tokens=10_000),
+        trace=RunTrace(run_id="t", user_id=None, job="cos_daily", arm="full"),
+        run_id="t",
+        user_id=None,
+        cache_namespace="t",
+    )
+    with pytest.raises(StructuredOutputFailure):
+        await call_structured(cc, load_prompt("cos.extract_passages"), "doc", Extraction, step="C6")

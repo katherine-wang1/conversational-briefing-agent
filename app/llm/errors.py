@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from app.contracts.llm import StructuredOutputInvalid
+
 
 class LLMError(Exception):
     """Base class for model-layer errors."""
@@ -20,7 +22,7 @@ class RetryableProviderError(ProviderError):
     """429 / 5xx / transport failure. Retried with backoff; raised once retries are exhausted."""
 
 
-class StructuredOutputError(LLMError):
+class StructuredOutputError(LLMError, StructuredOutputInvalid):
     """The model failed to return valid structured output after one repair attempt (TDD §4.4)."""
 
     def __init__(self, message: str, *, raw: str = "", errors: str = ""):

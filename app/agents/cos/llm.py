@@ -18,7 +18,7 @@ from pydantic import BaseModel, ValidationError
 from app.agents.cos.prompts import Prompt
 from app.agents.cos.trace import RunTrace
 from app.contracts.common import TokenBudget, TraceCtx
-from app.contracts.llm import ChatRequest, ChatResponse, Message, ModelClient
+from app.contracts.llm import ChatRequest, ChatResponse, Message, ModelClient, StructuredOutputInvalid
 from app.contracts.tools import ToolSpec
 
 
@@ -86,7 +86,11 @@ async def chat(
         cache_namespace=cc.cache_namespace,
     )
     cc.trace.prompts[prompt.name] = prompt.sha
-    resp = await client.chat(req)
+    try:
+        resp = await client.chat(req)
+    except StructuredOutputInvalid as e:  # the client's own repair attempt failed too
+        cc.trace.add(step, "llm", role=prompt.role, ok=False, error=f"structured output: {e}"[:300])
+        raise StructuredOutputFailure(f"{schema.__name__ if schema else 'output'}: {e}") from e
     cc.trace.add(
         step,
         "llm",

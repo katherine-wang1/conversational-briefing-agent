@@ -5,15 +5,16 @@ the live newsroom run against a few real sources: RSS/Atom feeds (types `rss`, `
 front page (Firebase API, true front-page rank), and Techmeme's RSS feed (type `techmeme`; the article
 URL is taken from the item body). `frontpage`, `arxiv` and `hf_papers` have no interim adapter.
 
-`app.tools.headlines` only falls back to these when `app.sources` provides no adapter for a type, so
-W-A's adapters win automatically. Honest User-Agent, one GET per feed, short timeouts.
+Feed entries published more than 3 days before `at` are dropped. `app.tools.headlines` only falls back
+to these when `app.sources` provides no adapter for a type, so W-A's adapters win automatically.
+Honest User-Agent, one GET per feed, short timeouts.
 """
 
 from __future__ import annotations
 
 import asyncio
 import re
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 import httpx
 
@@ -23,6 +24,8 @@ from app.tools.fetch import USER_AGENT
 
 TIMEOUT_S = 15.0
 MAX_ITEMS = 30
+MAX_AGE = timedelta(days=3)  # feeds list old posts too; older entries are not "visible news" at `at`
+TECHMEME_FEED = "https://www.techmeme.com/feed.xml"
 HN_API = "https://hacker-news.firebaseio.com/v0"
 _HREF = re.compile(r'href="(https?://[^"]+)"', re.I)
 _TAG = re.compile(r"<[^>]+>")
@@ -46,12 +49,18 @@ def _snippet(html: str | None) -> str | None:
 async def rss(cfg: HeadlineSourceCfg, beat: str, at: datetime) -> list[HeadlineObservation]:
     import feedparser
 
+    url = cfg.url or ""
+    if cfg.type == "techmeme" and not url.endswith(".xml"):
+        url = TECHMEME_FEED  # the configured URL is the HTML front page; W-A parses that
     async with _client() as c:
-        r = await c.get(cfg.url or "")
+        r = await c.get(url)
         r.raise_for_status()
     feed = feedparser.parse(r.content)
     out = []
     for i, e in enumerate(feed.entries[:MAX_ITEMS]):
+        published = _dt(e.get("published_parsed") or e.get("updated_parsed"))
+        if published and published < at - MAX_AGE:
+            continue
         url, title = e.get("link"), (e.get("title") or "").strip()
         summary = e.get("summary")
         if cfg.type == "techmeme":  # item link is the Techmeme permalink; the body links the article
@@ -67,7 +76,7 @@ async def rss(cfg: HeadlineSourceCfg, beat: str, at: datetime) -> list[HeadlineO
                 title=title,
                 rank=i + 1,
                 snippet=None if cfg.type == "techmeme" else _snippet(summary),
-                published_at=_dt(e.get("published_parsed") or e.get("updated_parsed")),
+                published_at=published,
             )
         )
     return out

@@ -11,6 +11,12 @@ from app.contracts.common import Strict, TokenBudget, TraceCtx
 from app.contracts.tools import ToolSpec
 
 
+class StructuredOutputInvalid(Exception):
+    """A `ModelClient` could not produce output valid against `ChatRequest.response_schema` (after its
+    own repair attempt). Agents catch this to degrade (fallbacks, rules-only scoring) instead of
+    failing the run. The model layer's `StructuredOutputError` subclasses it."""
+
+
 class ToolCall(Strict):
     id: str
     name: str
