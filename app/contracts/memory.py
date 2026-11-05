@@ -100,3 +100,4 @@ class MemorySnapshot(Strict):
     as_of: date
     interests: list[Interest]
     delivery: list[DeliveryPref]
+    profile_text: str | None = None  # B5 naive arm only: free-text profile (explicit statements appended)
