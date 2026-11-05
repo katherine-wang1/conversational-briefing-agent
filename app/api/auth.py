@@ -2,7 +2,8 @@
 
 - Production: `Authorization: Bearer <Supabase access token>`; verified against the project's JWKS
   (ES256/RS256), or the legacy HS256 secret if SUPABASE_JWT_SECRET is set. `sub` → user_id.
-- Dev: DEV_AUTH_BYPASS=1 (ignored when APP_ENV=prod) accepts `Bearer dev:<uuid>[:<email>]`.
+- Dev: DEV_AUTH_BYPASS=1 (ignored when APP_ENV=prod) accepts `Bearer dev:<uuid>[:<email>]`, or
+  plain `Bearer dev` for a fixed, auto-invited local dev user (dev@localhost, admin).
 - First login: a profile is created only if the email is on the invite list; otherwise 403.
 """
 
@@ -19,6 +20,9 @@ import jwt
 from fastapi import HTTPException, Request, WebSocket
 
 from app.config.settings import Settings
+
+DEV_USER_ID = UUID("00000000-0000-4000-8000-000000000001")
+DEV_EMAIL = "dev@localhost"
 
 
 class AuthError(Exception):
@@ -107,6 +111,8 @@ class JwtVerifier:
 async def identity_from_token(
     token: str, settings: Settings, verifier: JwtVerifier
 ) -> tuple[UUID, str | None]:
+    if token == "dev":  # W-F dev shortcut: a fixed local dev user (dev bypass only)
+        token = f"dev:{DEV_USER_ID}:{DEV_EMAIL}"
     if token.startswith("dev:"):
         if not settings.dev_bypass_enabled:
             raise AuthError(401, "invalid_token")
@@ -135,6 +141,8 @@ async def resolve_user(app_state: Any, token: str | None) -> CurrentUser:
         if not email:
             raise AuthError(403, "not_invited")
         async with db.system_scope() as s:
+            if email == DEV_EMAIL and app_state.settings.dev_bypass_enabled:
+                await s.invites.upsert(email=email, role="admin")  # local dev user is pre-invited
             inv = await s.invites.get(email)
             if inv is None:
                 raise AuthError(403, "not_invited")

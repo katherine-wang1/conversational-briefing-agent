@@ -61,8 +61,14 @@ class Onboarding(BaseModel):
     timezone: str | None = None
     research_consent: bool = False
     display_name: str | None = Field(default=None, max_length=100)
+    # W-F OnboardingRequest aliases
+    length_pref: Literal["short", "medium", "long"] | None = None
+    depth_pref: Literal["light", "standard", "deep"] | None = None
 
     check_tz = field_validator("timezone")(_validate_tz)
+
+
+LENGTH_PREF_S = {"short": 180, "medium": 300, "long": 600}
 
 
 class SessionCreate(BaseModel):
@@ -85,7 +91,7 @@ class RatingIn(BaseModel):
     usefulness: int | None = Field(default=None, ge=1, le=5)
     per_story: dict[str, Any] = {}
     learned_new: bool | None = None
-    length_fit: Literal["too_short", "right", "too_long"] | None = None
+    length_fit: Literal["too_short", "right", "about_right", "too_long"] | None = None
     followup_useful: int | None = Field(default=None, ge=1, le=5)
 
 
@@ -98,7 +104,30 @@ async def get_me(request: Request, user: CurrentUser = User) -> dict[str, Any]:
         prof = await s.profiles.me()
         prefs = await s.delivery_prefs.list(run_id="live")
         open_q = await s.open_questions.count(status=["open", "researching", "answered"])
-    return {"profile": prof, "delivery": {p["key"]: p["value"] for p in prefs}, "open_questions": open_q}
+    delivery = {p["key"]: p["value"] for p in prefs}
+    assert prof is not None
+    st = prof.get("settings") or {}
+    return {
+        # W-F `Me` shape (flat)
+        "user_id": prof["user_id"],
+        "email": prof["email"],
+        "display_name": prof["display_name"],
+        "onboarded": prof["status"] != "onboarding",
+        "research_consent": prof["research_consent"],
+        "settings": {
+            "brief_time": prof["brief_time"].strftime("%H:%M"),
+            "timezone": prof["timezone"],
+            "voice": st.get("voice", "alloy"),
+            "stt_mode": st.get("stt_mode", "browser"),
+            "auto_resume": st.get("auto_resume", True),
+            "headphones_mode": st.get("headphones_mode", False),
+            "depth_pref": delivery.get("depth"),
+        },
+        # full detail
+        "profile": prof,
+        "delivery": delivery,
+        "open_questions": open_q,
+    }
 
 
 async def _set_prefs(s: Any, values: dict[str, Any], confidence: float) -> None:
@@ -149,9 +178,9 @@ async def onboarding(body: Onboarding, request: Request, user: CurrentUser = Use
             if getattr(body, k) is not None:
                 fields[k] = getattr(body, k)
         await s.profiles.update(user.user_id, **fields)
-        await _set_prefs(
-            s, {"length_s": body.length_s, "depth": body.depth, "technicality": body.technicality}, 0.5
-        )
+        length_s = body.length_s or LENGTH_PREF_S.get(body.length_pref or "")
+        depth = body.depth or body.depth_pref
+        await _set_prefs(s, {"length_s": length_s, "depth": depth, "technicality": body.technicality}, 0.5)
         await s.topic_requests.insert(text=body.interests_text)
     await _queue(request).enqueue(
         "onboarding_seed",
@@ -178,11 +207,13 @@ async def brief_view(request: Request, b: dict[str, Any]) -> dict[str, Any]:
         }
     return {
         "id": b["id"],
+        "brief_id": b["id"],  # W-F TodayBrief shape
         "local_date": b["local_date"],
         "status": b["status"],
         "arm": b["arm"],
         "script": b["script"],
         "audio_manifest": manifest,
+        "manifest": manifest,  # W-F TodayBrief shape
         "ready_at": b.get("ready_at"),
     }
 
@@ -207,8 +238,12 @@ async def brief_today(request: Request, response: Response, user: CurrentUser = 
     )
     response.status_code = 202
     # TODO(TDD §20): after 3 min, serve the importance-only quick brief from the digest (B1 logic).
+    failed = (pending or {}).get("status") == "failed"
     return {
-        "status": (pending or {}).get("status", "preparing"),
+        "brief_id": (pending or {}).get("id"),
+        "status": "failed" if failed else "pending",  # W-F: pending | ready | failed
+        "script": None,
+        "manifest": None,
         "local_date": d,
         "message": "Preparing your brief (about 1–2 min)",
     }

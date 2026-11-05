@@ -46,7 +46,7 @@ def test_full_flow_onboarding_brief_session_over_websocket(client, pgdb, tmp_pat
     assert u.get("/api/briefs/today").status_code == 409  # must onboard first
     u.onboard()
     r = u.get("/api/briefs/today")
-    assert r.status_code == 202 and r.json()["status"] == "preparing"
+    assert r.status_code == 202 and r.json()["status"] == "pending"
     ran = run_jobs(pgdb, tmp_path)
     assert {"onboarding_seed", "cos_daily", "tts_render"} <= set(ran)
 
