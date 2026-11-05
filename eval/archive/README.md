@@ -98,10 +98,34 @@ All Wayback requests go to one host, so they run one at a time at about 1 reques
 | `rss_wayback` (22 feeds) | 22 x 92 x (1 CDX + up to 4 captures) = **<= 10,100** (most feeds are captured far less often; expect ~4,000-6,000) |
 | `frontpage_wayback` (6 pages) | 6 x 92 x 5 = **<= 2,760** |
 | `bodies_wayback` | 2 per article URL (CDX + capture); ~150-250 article URLs/day -> **~28,000-46,000** |
-| **total** | **~40,000-64,000 requests: roughly 12-18 hours at 1 req/s, likely 1-1.5 days wall clock with Wayback latency** |
+| **total** | **~40,000-64,000 requests: roughly 12-18 hours at a sustained 1 req/s** |
 
-Headline sources alone (without bodies) are ~11,000-17,000 requests: about 3-6 hours. Disk: the raw cache
-is roughly 1-2 GB (gzip); shards are much smaller.
+Headline sources alone (without bodies) are ~11,000-17,000 requests: about 3-6 hours at 1 req/s. Disk:
+the raw cache is roughly 1-2 GB (gzip); shards are much smaller.
+
+**Throttling caveat (observed 2026-11-05 on `archive.org/wayback/available`):** the Internet Archive
+answered HTTP 429 after ~300 requests at 1 req/s and then allowed bursts of ~30 requests per minute
+separated by multi-minute 429 periods: about **15-20 requests/minute sustained**. If web.archive.org
+throttles the same way from your network, the full run takes **~35-70 hours**. The fetcher honours
+`Retry-After`, slows the host down on every 429 and speeds up again slowly, so just leave it running. To
+cut the work, start with the high-value parts:
+
+```bash
+# ~3,300 requests (~1-3 h): HN + Techmeme front pages, one capture per 3 hours
+.venv/bin/python -m eval.archive.collect --start 2026-08-01 --end 2026-10-31 \
+    --sources hn_front_wayback,techmeme_wayback --wayback-slot-hours 3 \
+    --export-shards-every 30 --push-shards --offline-patience-minutes 240
+# then the AI-beat feeds and front pages, one capture per 12 hours (~3,300 requests)
+.venv/bin/python -m eval.archive.collect --start 2026-08-01 --end 2026-10-31 \
+    --sources rss_wayback,frontpage_wayback --beats ai --feed-slot-hours 12 \
+    --export-shards-every 30 --push-shards --offline-patience-minutes 240
+# then bodies only for links seen on Techmeme / HN (~2 requests per article)
+.venv/bin/python -m eval.archive.collect --start 2026-08-01 --end 2026-10-31 \
+    --sources bodies_wayback --body-from techmeme,hn_front \
+    --export-shards-every 30 --push-shards --offline-patience-minutes 240
+```
+
+Everything is resumable, so later runs with wider settings only fetch what is still missing.
 
 ### Commit attribution
 

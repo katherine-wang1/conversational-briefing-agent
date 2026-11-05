@@ -139,6 +139,7 @@ class Options:
     feed_slot_hours: int = 6  # feed / outlet front-page snapshots
     body_workers: int = 6
     bodies_max: int | None = None
+    body_from: tuple[str, ...] = ()  # headline source_ids whose links get bodies (empty = all)
     redo: bool = False
     beats: tuple[str, ...] = ("ai", "energy", "physical_ai")
     techmeme_archive_times: tuple[str, ...] = ("0600", "1200", "1800")  # US Eastern, page-local
@@ -632,7 +633,7 @@ def _wayback_pages(
             log.info("[%s] %s: %d snapshots, %d observations", src, d, len(rows), n)
             return n
 
-        if not _guard(ctx, src, f"{src}:{page_url}:{d}", d, unit):
+        if not _guard(ctx, src, f"{src}:{page_url}:{d}:slot{slot_hours}h", d, unit):
             return
 
 
@@ -711,6 +712,8 @@ class BodyCandidate:
 def body_candidates(ctx: Ctx) -> list[BodyCandidate]:
     feed_ids = [sid for sid, (_, cfg) in headline_sources().items() if cfg.type in ("rss", "frontpage")]
     ids = list(BODY_SOURCES) + feed_ids
+    if ctx.opts.body_from:
+        ids = [i for i in ids if i in ctx.opts.body_from]
     ph = ",".join("?" for _ in ids)
     rows = ctx.store.query(
         "SELECT url, min(CASE WHEN provenance = 'hindsight_listing' "

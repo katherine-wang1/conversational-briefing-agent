@@ -350,3 +350,26 @@ def test_host_unavailable_raised_directly(tmp_path):
     )
     with pytest.raises(HostUnavailable):
         f.get("https://web.archive.org/cdx/search/cdx?url=a")
+
+
+def test_429_backs_off_and_slows_host(tmp_path):
+    state = {"n": 0}
+
+    def handler(request):
+        state["n"] += 1
+        if state["n"] == 1:
+            return httpx.Response(429, headers={"retry-after": "7"})
+        return httpx.Response(200, content=b"{}")
+
+    slept = []
+    f = Fetcher(
+        tmp_path / "c",
+        transport=httpx.MockTransport(handler),
+        sleep=slept.append,
+        default_interval=1.0,
+        respect_robots=False,
+    )
+    assert f.get("https://archive.org/wayback/available?url=x").ok
+    assert 7.0 in slept
+    # slowed to 1.5 s by the 429, then recovering by 3% per successful request
+    assert f._host("archive.org").min_interval == pytest.approx(1.5 * 0.97)

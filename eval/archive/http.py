@@ -47,6 +47,7 @@ HOST_MIN_INTERVAL = {
     "export.arxiv.org": 3.0,
     "news.ycombinator.com": 30.0,  # robots.txt Crawl-delay: 30 (also read dynamically)
 }
+MAX_INTERVAL = 10.0  # adaptive slow-down cap after HTTP 429
 FINAL_STATUSES = {200, 203, 204, 301, 302, 303, 307, 308, 400, 401, 403, 404, 410, 451}
 
 
@@ -89,6 +90,7 @@ class _HostState:
     def __init__(self, min_interval: float) -> None:
         self.lock = threading.Lock()
         self.min_interval = min_interval
+        self.base_interval = min_interval
         self.next_ok = 0.0
         self.consecutive_failures = 0
         self.failing_since: float | None = None
@@ -221,6 +223,7 @@ class Fetcher:
             if cd:
                 st = self._host(p.netloc)
                 st.min_interval = max(st.min_interval, float(cd))
+                st.base_interval = max(st.base_interval, float(cd))
         return rp
 
     def allowed(self, url: str) -> bool:
@@ -292,6 +295,8 @@ class Fetcher:
                 continue
             st.consecutive_failures = 0
             st.failing_since = None
+            if st.min_interval > st.base_interval and resp.status_code != 429:
+                st.min_interval = max(st.base_interval, st.min_interval * 0.97)  # recover slowly after 429s
             r = Response(
                 url=url,
                 status=resp.status_code,
@@ -307,6 +312,9 @@ class Fetcher:
                 self._blocked_prefixes.setdefault(prefix, "bot challenge (not circumvented)")
                 raise BotChallenge(f"{url}: bot challenge HTTP {r.status} (not circumvented)")
             if r.status == 429 or r.status >= 500:
+                if r.status == 429:  # the server says we are too fast: slow this host down for the run
+                    st.min_interval = min(MAX_INTERVAL, max(st.min_interval, 0.5) * 1.5)
+                    log.warning("HTTP 429 from %s: per-host interval now %.1fs", host, st.min_interval)
                 self.stats["errors"] += 1
                 if attempt >= self.max_retries:
                     raise FetchError(f"{url}: HTTP {r.status} after {attempt} attempts")

@@ -90,6 +90,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--body-workers", type=int, default=6)
     p.add_argument("--bodies-max", type=int, default=None)
     p.add_argument(
+        "--body-from",
+        default="",
+        help="comma list of headline source_ids whose links get article bodies (default: all), "
+        "e.g. techmeme,hn_front to keep the Wayback body pass small",
+    )
+    p.add_argument(
         "--offline-patience-minutes",
         type=float,
         default=0.0,
@@ -170,6 +176,7 @@ def main(argv: list[str] | None = None) -> int:
             feed_slot_hours=a.feed_slot_hours,
             body_workers=a.body_workers,
             bodies_max=a.bodies_max,
+            body_from=tuple(s.strip() for s in a.body_from.split(",") if s.strip()),
             redo=a.redo,
             beats=tuple(b.strip() for b in a.beats.split(",") if b.strip()),
         ),

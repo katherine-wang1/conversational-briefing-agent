@@ -177,6 +177,8 @@ def _md(ds: dict[str, Any]) -> str:
         "collection run (also stored in `meta['datasheet']`). Interpretation and caveats: "
         "`docs/spikes.md` § Archive.\n"
     )
+    if ds.get("note"):
+        L.append(f"> **Note:** {ds['note']}\n")
     L.append("## Tables\n")
     L.append("| table | rows |\n|---|---|")
     for t, n in ds["tables"].items():
@@ -289,9 +291,11 @@ def _md(ds: dict[str, Any]) -> str:
 
 
 def write_datasheet(
-    store: ArchiveStore, start: date, end: date, doc_path: Path | None = DOC
+    store: ArchiveStore, start: date, end: date, doc_path: Path | None = DOC, note: str | None = None
 ) -> dict[str, Any]:
     ds = compute(store, start, end)
+    if note:
+        ds["note"] = note
     store.set_meta("datasheet", ds)
     if doc_path:
         doc_path.write_text(_md(ds))
@@ -304,9 +308,10 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--end", type=date.fromisoformat, default=date(2026, 10, 31))
     p.add_argument("--db", type=Path, default=REPO / "eval" / "data" / "archive.sqlite")
     p.add_argument("--out", type=Path, default=DOC)
+    p.add_argument("--note", default=None, help="a sentence shown at the top (e.g. which run this is)")
     a = p.parse_args(argv)
     store = ArchiveStore(a.db)
-    write_datasheet(store, a.start, a.end, a.out)
+    write_datasheet(store, a.start, a.end, a.out, note=a.note)
     print(f"wrote {a.out}")
     return 0
 
