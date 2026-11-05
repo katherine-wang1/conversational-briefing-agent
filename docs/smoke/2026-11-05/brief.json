@@ -1,0 +1,232 @@
+{
+ "id": "br_01m6ndxnsgcert0max2e3m48nj",
+ "user_id": "5a0e0000-0000-4000-8000-000000000001",
+ "run_id": "live",
+ "local_date": "2026-11-05",
+ "arm": "full",
+ "status": "ready",
+ "script": {
+  "arm": "full",
+  "stories": [
+   {
+    "slot": "big_news",
+    "aliases": [
+     "OpenAI",
+     "Images 2.6",
+     "ChatGPT",
+     "Codex",
+     "The Verge"
+    ],
+    "why_tag": "big news",
+    "headline": "OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls",
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "slot": "for_you",
+    "aliases": [
+     "Moonshot AI",
+     "Kimi K3.1 Pro",
+     "Hugging Face"
+    ],
+    "why_tag": "for you",
+    "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "slot": "for_you",
+    "aliases": [
+     "Ricursive",
+     "Ripple-65B"
+    ],
+    "why_tag": "for you",
+    "headline": "Ricursive publishes Ripple-65B preview claiming top US open-weight agentic coding results",
+    "story_ref": "ai-5449d0bd4d43"
+   },
+   {
+    "slot": "for_you",
+    "aliases": [
+     "Nikkei Asia",
+     "China",
+     "tungsten carbide"
+    ],
+    "why_tag": "for you",
+    "headline": "Sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply for PCBs and chip substrates",
+    "story_ref": "ai-96c4a5c335fd"
+   }
+  ],
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "brief_id": "br_01m6ndxnsgcert0max2e3m48nj",
+  "sentences": [
+   {
+    "sid": "s000",
+    "kind": "intro",
+    "text": "Good morning. Here are your AI stories for today, four of them in total.",
+    "cites": [],
+    "story_ref": null
+   },
+   {
+    "sid": "s001",
+    "kind": "intro",
+    "text": "Let's begin with the big news.",
+    "cites": [],
+    "story_ref": null
+   },
+   {
+    "sid": "s002",
+    "kind": "story",
+    "text": "OpenAI has released Images 2.6, and ChatGPT can now create animated GIFs from a text prompt or an uploaded photo.",
+    "cites": [
+     "c1e68860d6535a2fe558042d22023122:0-253"
+    ],
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "sid": "s003",
+    "kind": "story",
+    "text": "Before this update, ChatGPT could not make a GIF in a single step.",
+    "cites": [
+     "c1e68860d6535a2fe558042d22023122:369-680"
+    ],
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "sid": "s004",
+    "kind": "story",
+    "text": "You can adjust a GIF's animation speed and edit individual frames.",
+    "cites": [
+     "c1e68860d6535a2fe558042d22023122:0-253",
+     "c1e68860d6535a2fe558042d22023122:369-680"
+    ],
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "sid": "s005",
+    "kind": "story",
+    "text": "OpenAI says users now generate over 4 billion images per week, up from 3 billion in September.",
+    "cites": [
+     "c1e68860d6535a2fe558042d22023122:681-955"
+    ],
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "sid": "s006",
+    "kind": "story",
+    "text": "Images 2.6 is rolling out to all ChatGPT and Codex users on web, desktop, and mobile.",
+    "cites": [
+     "c1e68860d6535a2fe558042d22023122:956-1167"
+    ],
+    "story_ref": "ai-4acfda106313"
+   },
+   {
+    "sid": "s007",
+    "kind": "transition",
+    "text": "Now, a story picked for you.",
+    "cites": [],
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "sid": "s008",
+    "kind": "story",
+    "text": "Moonshot AI has released the weights for Kimi K3.1 Pro on Hugging Face.",
+    "cites": [
+     "f4a904d03d800a16a7770eb45e6294e1:31-143"
+    ],
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "sid": "s009",
+    "kind": "story",
+    "text": "It is an open-weight, natively multimodal agentic model, and the company calls it its most capable 3T-class model to date.",
+    "cites": [
+     "f4a904d03d800a16a7770eb45e6294e1:31-143"
+    ],
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "sid": "s010",
+    "kind": "story",
+    "text": "It has a 1-million-token context window.",
+    "cites": [
+     "f4a904d03d800a16a7770eb45e6294e1:297-477"
+    ],
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "sid": "s011",
+    "kind": "story",
+    "text": "Compared with Kimi K3, it swaps full-attention layers for Gated DeepSeek Sparse Attention layers, for more efficient long-context work.",
+    "cites": [
+     "f4a904d03d800a16a7770eb45e6294e1:478-647"
+    ],
+    "story_ref": "ai-d1753883dbd0"
+   },
+   {
+    "sid": "s012",
+    "kind": "transition",
+    "text": "Another story picked for you.",
+    "cites": [],
+    "story_ref": "ai-5449d0bd4d43"
+   },
+   {
+    "sid": "s013",
+    "kind": "story",
+    "text": "Ricursive Intelligence has published a preview of Ripple-65B, a general-purpose model.",
+    "cites": [
+     "24ed9ebcee3dd33c584ac388a8b4bb15:455-672"
+    ],
+    "story_ref": "ai-5449d0bd4d43"
+   },
+   {
+    "sid": "s014",
+    "kind": "story",
+    "text": "The company says it scores 80.52 on TerminalBench 2.1, which it reports as the top result for U.S. open-weight models.",
+    "cites": [
+     "24ed9ebcee3dd33c584ac388a8b4bb15:673-1016"
+    ],
+    "story_ref": "ai-5449d0bd4d43"
+   },
+   {
+    "sid": "s015",
+    "kind": "story",
+    "text": "Ricursive estimates development cost was 32 million dollars, about one-tenth of the previous open-weight leader on agentic coding.",
+    "cites": [
+     "24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263"
+    ],
+    "story_ref": "ai-5449d0bd4d43"
+   },
+   {
+    "sid": "s016",
+    "kind": "story",
+    "text": "Sources say China's metal export curbs are disrupting supplies of micro drill bits used in the AI chip supply chain.",
+    "cites": [
+     "9e77dcebd729cf1cd42bcf2e121a2a03:344-595"
+    ],
+    "story_ref": "ai-96c4a5c335fd"
+   },
+   {
+    "sid": "s017",
+    "kind": "story",
+    "text": "The disruption is one example of geopolitical tensions rippling through the global tech industry.",
+    "cites": [
+     "9e77dcebd729cf1cd42bcf2e121a2a03:344-595"
+    ],
+    "story_ref": "ai-96c4a5c335fd"
+   },
+   {
+    "sid": "s018",
+    "kind": "outro",
+    "text": "What would you like to dig into?",
+    "cites": [],
+    "story_ref": null
+   }
+  ],
+  "local_date": "2026-11-05",
+  "est_duration_s": 102
+ },
+ "selection": null,
+ "cost": null,
+ "trace_uri": "/tmp/claude-0/-home-user-conversational-briefing-agent/a0061b83-7461-5a16-ba2b-a08a546d9a97/scratchpad/traces/cos/br_01m6ndxnsgcert0max2e3m48nj.json",
+ "created_at": "2026-11-05 08:42:23.457441+00:00",
+ "ready_at": "2026-11-05 08:42:24.477882+00:00",
+ "audio_manifest_segments": 19
+}

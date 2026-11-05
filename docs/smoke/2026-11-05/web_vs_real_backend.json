@@ -1,0 +1,68 @@
+{
+ "results": [
+  {
+   "name": "Today screen loads the real brief (phase=ready)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "brief headline from the real backend is rendered",
+   "ok": true,
+   "detail": "\n    2026-11-054 stories · ~2 min?OpenAI releases Images 2.6 with faster generation, GIF creation and new API controlsSkip storyNext▶Play today's briefType inst"
+  },
+  {
+   "name": "talk -> WebSocket session + playback phase",
+   "ok": false,
+   "detail": "{\"phase\":\"open_floor\",\"seg\":18,\"err\":null,\"paused\":false,\"src\":\"blob:http://127.0.0.1:5198/94801bed-3281-4f31-bb31-fda751efbd55\",\"mediaErr\":4}"
+  },
+  {
+   "name": "brief audio actually plays (fake TTS)",
+   "ok": false,
+   "detail": "{\"phase\":\"open_floor\",\"seg\":18,\"err\":null,\"paused\":false,\"src\":\"blob:http://127.0.0.1:5198/94801bed-3281-4f31-bb31-fda751efbd55\",\"mediaErr\":4}"
+  },
+  {
+   "name": "hello sent and server state received over /ws",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "log": [
+  "[http 200] http://127.0.0.1:5198/src/audio/browserStt.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/mediaSession.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/answerQueue.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/briefPlayer.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/output.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/mic.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/endpointer.ts",
+  "[http 200] http://127.0.0.1:5198/src/audio/vad.ts",
+  "[http 200] http://127.0.0.1:5198/api/briefs/today",
+  "[http 200] http://127.0.0.1:5198/api/me",
+  "[http 200] http://127.0.0.1:5198/api/questions",
+  "[http 200] http://127.0.0.1:5198/api/briefs/today",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s000.mp3",
+  "[http 201] http://127.0.0.1:5198/api/sessions",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s001.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s002.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s003.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s004.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s005.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s006.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s007.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s008.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s009.mp3",
+  "[http 206] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s009.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s010.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s011.mp3",
+  "[http 206] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s010.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s012.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s013.mp3",
+  "[http 206] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s012.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s014.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s015.mp3",
+  "[http 206] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s014.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s016.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s017.mp3",
+  "[http 200] http://127.0.0.1:5198/media/5a0e0000-0000-4000-8000-000000000001/br_01m6ndxnsgcert0max2e3m48nj/s018.mp3",
+  "[frames] [{\"dir\":\"out\",\"type\":\"control\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"hello\"},{\"dir\":\"in\",\"type\":\"state\",\"state\":\"READY\"},{\"dir\":\"in\",\"type\":\"state\",\"state\":\"PLAYING_BRIEF\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"},{\"dir\":\"out\",\"type\":\"playback\"}]"
+ ]
+}

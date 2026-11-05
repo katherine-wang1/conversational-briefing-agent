@@ -1,0 +1,1130 @@
+{
+ "digest": {
+  "id": "ai-20261105T0839Z-bb9e1a2f",
+  "run_id": "live",
+  "beat": "ai",
+  "at": "2026-11-05 08:39:39+00:00",
+  "version": "de16d79714ee3e35",
+  "created_at": "2026-11-05 08:41:22.893185+00:00"
+ },
+ "entries": [
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-4acfda106313",
+   "headline": "OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls",
+   "summary": "OpenAI introduced Images 2.6, adding faster image generation, GIF creation and finer editing across ChatGPT, Codex and the API. The Verge reports ChatGPT can now make animated GIFs from prompts or uploaded photos, rolling out with the model.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "OpenAI",
+    "Images 2.6",
+    "ChatGPT",
+    "Codex",
+    "The Verge"
+   ],
+   "importance": 68,
+   "importance_rules": 53.45,
+   "evidence": [
+    "hn_front rank 3 with 265 points",
+    "2 independent domains (openai_news tier 1, verge_ai tier 2)",
+    "primary source present (openai.com)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": 3,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 2,
+    "comments_at_observation": 167,
+    "hn_points_at_observation": 265
+   },
+   "urls": [
+    "https://openai.com/index/introducing-images-2-6",
+    "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-87895a94bb57",
+   "headline": "Greg Brockman says OpenAI's H1 2026 was rough before agentic coding drove Q3 revenue inflection",
+   "summary": "Per a WSJ report summarized by Techmeme, OpenAI president Greg Brockman described H1 2026 as 'pretty rough' and credited agentic coding tools, GPT-5.6 Sol and ChatGPT Work with a 'revenue inflection' in Q3.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "OpenAI",
+    "Greg Brockman",
+    "GPT-5.6 Sol",
+    "ChatGPT Work",
+    "Wall Street Journal"
+   ],
+   "importance": 68,
+   "importance_rules": 33.08,
+   "evidence": [
+    "techmeme rank 1",
+    "single source (techmeme, WSJ report)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 1,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://wsj.com/tech/openai-had-rough-first-half-of-year-before-coding-takeoff-brockman-says-6c97d9e5?amp%3Breflink=desktopwebshare_permalink&st=hL3kyT"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-606f53bcc3c6",
+   "headline": "OpenAI details pipeline using an upcoming cyber model to find and patch 948 Linux privilege-escalation bugs for $1.2M",
+   "summary": "OpenAI describes an autonomous pipeline that found, validated and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel, at $1.2M in API costs. Coverage is from the OpenAI post only so far.",
+   "subtopics": [
+    "evals-and-safety",
+    "agents-and-tools"
+   ],
+   "entities": [
+    "OpenAI",
+    "Linux kernel"
+   ],
+   "importance": 66,
+   "importance_rules": 51.55,
+   "evidence": [
+    "hn_front rank 4 with 306 points",
+    "primary source present (openai_news)",
+    "single domain; techmeme rank 13 is the only other listing"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 4,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 2,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 206,
+    "hn_points_at_observation": 306
+   },
+   "urls": [
+    "https://openai.com/index/a-thousand-fewer-paths-to-root"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-d1753883dbd0",
+   "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+   "summary": "The Kimi K3.1 Pro model weights are published on Hugging Face under the moonshotai organization. Only the title is available, so licence and benchmark details are unknown.",
+   "subtopics": [
+    "open-models",
+    "frontier-models"
+   ],
+   "entities": [
+    "Moonshot AI",
+    "Kimi K3.1 Pro",
+    "Hugging Face"
+   ],
+   "importance": 66,
+   "importance_rules": 46.98,
+   "evidence": [
+    "hn_front rank 7 with 511 points",
+    "primary source present (huggingface.co)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 7,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 142,
+    "hn_points_at_observation": 511
+   },
+   "urls": [
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-86e0d936ccae",
+   "headline": "OpenAI to acquire Pierre Computer Company to expand Codex code tools",
+   "summary": "OpenAI announced it will acquire Pierre Computer Company, which it says will expand Codex's tools for building, understanding and reviewing code.",
+   "subtopics": [
+    "business-and-funding",
+    "agents-and-tools"
+   ],
+   "entities": [
+    "OpenAI",
+    "Pierre Computer Company",
+    "Codex"
+   ],
+   "importance": 62,
+   "importance_rules": 42.28,
+   "evidence": [
+    "hn_front rank 26 with 234 points",
+    "primary source present (openai_news tier 1)",
+    "single domain"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 26,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 71,
+    "hn_points_at_observation": 234
+   },
+   "urls": [
+    "https://openai.com/index/openai-to-acquire-pierre"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-33555fd13343",
+   "headline": "Cat Wu leaves Anthropic and joins OpenAI to lead core product management",
+   "summary": "Business Insider reports Cat Wu, former product lead for Claude Code at Anthropic, is joining OpenAI to lead product management for core products.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Cat Wu",
+    "Anthropic",
+    "OpenAI",
+    "Claude Code",
+    "Business Insider"
+   ],
+   "importance": 55,
+   "importance_rules": 25.71,
+   "evidence": [
+    "techmeme rank 15",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 15,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://businessinsider.com/cat-wu-joins-openai-from-anthropic-product-lead-coup-2026-11"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-68957d2b1fde",
+   "headline": "Anthropic publishes research on provable inference for LLMs; AI2 releases StateBench for state tracking in long documents",
+   "summary": "Anthropic posted progress on provable inference for large language models, and Hugging Face hosts an AllenAI blog introducing StateBench, a benchmark for tracking state changes over long documents. The snippets are titles only, so technical content is not verifiable here.",
+   "subtopics": [
+    "research-methods",
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Anthropic",
+    "AllenAI",
+    "StateBench"
+   ],
+   "importance": 52,
+   "importance_rules": 47.35,
+   "evidence": [
+    "hn_front rank 23 with 213 points",
+    "2 independent domains (anthropic.com, huggingface.co)",
+    "primary source present (anthropic.com)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": 23,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 2,
+    "comments_at_observation": 99,
+    "hn_points_at_observation": 213
+   },
+   "urls": [
+    "https://anthropic.com/research/provable-inference",
+    "https://huggingface.co/blog/allenai/statebench"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-138ac0697a0b",
+   "headline": "Meta acquires AI coding startup Conductor, which runs teams of agents on software projects",
+   "summary": "TechCrunch reports Meta has acquired Conductor, a startup that lets software engineers deploy teams of agents to work on parts of a project in parallel.",
+   "subtopics": [
+    "business-and-funding",
+    "agents-and-tools"
+   ],
+   "entities": [
+    "Meta",
+    "Conductor",
+    "TechCrunch"
+   ],
+   "importance": 50,
+   "importance_rules": 13.75,
+   "evidence": [
+    "single source (techcrunch_ai)",
+    "no primary source present",
+    "frontpage_hits 0"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-5449d0bd4d43",
+   "headline": "Ricursive publishes Ripple-65B preview claiming top US open-weight agentic coding results",
+   "summary": "Ricursive previews Ripple-65B, which it describes as state-of-the-art among US open-weight models for agentic coding. The claim is self-reported and the snippet has no benchmark detail.",
+   "subtopics": [
+    "open-models",
+    "agents-and-tools"
+   ],
+   "entities": [
+    "Ricursive",
+    "Ripple-65B"
+   ],
+   "importance": 50,
+   "importance_rules": 39.82,
+   "evidence": [
+    "hn_front rank 10 with 284 points",
+    "single source, no primary source, 1 domain"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 10,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 103,
+    "hn_points_at_observation": 284
+   },
+   "urls": [
+    "https://ricursive.com/ripple"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-ad638ebb8212",
+   "headline": "China tells SoftBank it will block $5.4B ABB robotics acquisition",
+   "summary": "The FT reports, citing sources, that China has told SoftBank it will not allow its $5.4B acquisition of ABB's robotics division to proceed; China is the division's largest market.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "China",
+    "SoftBank",
+    "ABB",
+    "Financial Times"
+   ],
+   "importance": 50,
+   "importance_rules": 26.65,
+   "evidence": [
+    "techmeme rank 10",
+    "single source (techmeme, Financial Times)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 10,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://ft.com/content/f10c3e24-45e4-47ff-bde2-24a8de90aec4"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-2ab8ca37e4c5",
+   "headline": "Leading the Future pro-AI super PAC ends midterms with over $20M, down from about $100M",
+   "summary": "Wired reports that the pro-AI PAC Leading the Future finished the midterms with more than $20M left from about $100M, after focusing on safe bipartisan candidates while its riskier bets failed.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Leading the Future",
+    "Wired",
+    "Tess Owen"
+   ],
+   "importance": 48,
+   "importance_rules": 30.23,
+   "evidence": [
+    "techmeme rank 3",
+    "single source (techmeme, Wired)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 3,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-78a50dbb4925",
+   "headline": "Midterm results show voters backing AI and data center restrictions, Texas buildout faces uncertainty",
+   "summary": "Ars Technica argues Big Tech is framing the voter AI backlash as anti-Trump rather than anti-tech, while MIT Technology Review reports Texas, the fastest-growing US data center market, may lose ground after Democratic wins in the state's midterm races.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Ars Technica",
+    "MIT Technology Review",
+    "Texas",
+    "James Talarico",
+    "Ken Paxton",
+    "Gina Hinojosa"
+   ],
+   "importance": 48,
+   "importance_rules": 18.5,
+   "evidence": [
+    "2 independent domains (ars_ai, mit_tr_ai)",
+    "velocity 2",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 2,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://arstechnica.com/tech-policy/2026/11/big-tech-claims-voters-ai-backlash-is-anti-trump-not-anti-tech",
+    "https://technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-99e5545fc6d7",
+   "headline": "Data center opposition wins in midterms, setting up tougher building environment for AI developers",
+   "summary": "TechCrunch and The Verge report that data center opposition crossed party lines in the midterms, with voters electing candidates who favor moratoriums and ballot measures restricting expansion. The Verge says developers face a more restrictive environment.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "TechCrunch",
+    "The Verge",
+    "data center developers"
+   ],
+   "importance": 47,
+   "importance_rules": 18.5,
+   "evidence": [
+    "2 independent domains (techcrunch_ai, verge_ai)",
+    "velocity 2",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 2,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
+    "https://theverge.com/policy/1026365/data-centers-midterms-results"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-baa5e064d8b2",
+   "headline": "Palo Alto Networks in talks to acquire Israeli startup Clutch Security for about $500M",
+   "summary": "The Information reports, citing sources, that Palo Alto Networks is negotiating to buy Clutch Security, which develops software for tracking passwords used by AI agents, for roughly $500 million.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Palo Alto Networks",
+    "Clutch Security",
+    "The Information"
+   ],
+   "importance": 45,
+   "importance_rules": 26.42,
+   "evidence": [
+    "techmeme rank 11",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 11,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://theinformation.com/articles/palo-alto-networks-talks-pay-500-million-ai-security-startup"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-5b293c6056c7",
+   "headline": "Conductor announces it is joining Meta",
+   "summary": "Conductor says it is joining Meta, per its own announcement. The snippet gives no deal terms or product details.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Conductor",
+    "Meta"
+   ],
+   "importance": 45,
+   "importance_rules": 38.41,
+   "evidence": [
+    "hn_front rank 16 with 171 points",
+    "single source, no primary source"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 16,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 179,
+    "hn_points_at_observation": 171
+   },
+   "urls": [
+    "https://conductor.build/announcement"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-1620c0c049de",
+   "headline": "Microsoft rejects option to double Texas data center contract with Nscale",
+   "summary": "The FT reports, citing sources, that Microsoft declined an option to more than double its Texas data center contract with Nscale, a setback for Nscale's plans for a $35B IPO.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Microsoft",
+    "Nscale",
+    "Financial Times"
+   ],
+   "importance": 45,
+   "importance_rules": 27.63,
+   "evidence": [
+    "techmeme rank 7",
+    "single source (techmeme, Financial Times)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 7,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://ft.com/content/668e6ef8-88a1-4bef-8664-8f495baf09f8"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-11f79f74d833",
+   "headline": "Uber reports only four rides booked by third-party AI agents in Q3 2026 earnings call",
+   "summary": "Uber executives said on an earnings call that only four rides were arranged by third-party AI agents during Q3 2026, with Uber Eats agent-fulfilled orders slightly higher. TechCrunch and The Verge both report the figure.",
+   "subtopics": [
+    "agents-and-tools",
+    "business-and-funding"
+   ],
+   "entities": [
+    "Uber",
+    "Uber Eats",
+    "TechCrunch",
+    "The Verge"
+   ],
+   "importance": 45,
+   "importance_rules": 18.5,
+   "evidence": [
+    "2 independent domains (techcrunch_ai, verge_ai)",
+    "velocity 2",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 2,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says",
+    "https://theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-20e612672c68",
+   "headline": "Qualcomm pivots toward AI data centers as smartphone sales fall about 20%, per Q4 2026 earnings call",
+   "summary": "The Verge reports that during Qualcomm's Q4 2026 earnings call the company outlined plans to enter AI data center business through partnerships including with Amazon, as smartphone sales dropped roughly 20% versus 2025.",
+   "subtopics": [
+    "chips-and-compute",
+    "business-and-funding"
+   ],
+   "entities": [
+    "Qualcomm",
+    "Amazon",
+    "The Verge"
+   ],
+   "importance": 45,
+   "importance_rules": 13.75,
+   "evidence": [
+    "single source (verge_ai)",
+    "no primary source present",
+    "velocity 1"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-50d5544389f9",
+   "headline": "Google offers schools AI-free option only if they give up Google Search; DuckDuckGo courts schools in response",
+   "summary": "Ars Technica reports Google will let schools skip its AI tools but requires them to give up search as well. TechCrunch reports DuckDuckGo is pitching itself to schools frustrated by Google's AI policy.",
+   "subtopics": [
+    "products-and-apps",
+    "business-and-funding"
+   ],
+   "entities": [
+    "Google",
+    "DuckDuckGo",
+    "Ars Technica",
+    "TechCrunch"
+   ],
+   "importance": 42,
+   "importance_rules": 18.5,
+   "evidence": [
+    "2 independent domains (ars_ai, techcrunch_ai)",
+    "velocity 2",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 2,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too",
+    "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-6239ab812316",
+   "headline": "Ars Technica reports DoorDash says outside AI agents have led to only hundreds of orders",
+   "summary": "Ars Technica reports that DoorDash says outside AI agents have produced only hundreds of orders so far. The item is a usage observation about AI agents in commerce.",
+   "subtopics": [
+    "agents-and-tools",
+    "business-and-funding"
+   ],
+   "entities": [
+    "DoorDash",
+    "Ars Technica"
+   ],
+   "importance": 42,
+   "importance_rules": 37.18,
+   "evidence": [
+    "hn_front rank 30 with 131 points and 231 comments",
+    "single domain, no primary source"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 30,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 231,
+    "hn_points_at_observation": 131
+   },
+   "urls": [
+    "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-96c4a5c335fd",
+   "headline": "Sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply for PCBs and chip substrates",
+   "summary": "Nikkei Asia reports, citing sources, that China's export curbs on critical metals have disrupted supplies of tungsten-carbide micro drill bits used in PCBs and chip substrates.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "Nikkei Asia",
+    "China",
+    "tungsten carbide"
+   ],
+   "importance": 42,
+   "importance_rules": 28.64,
+   "evidence": [
+    "techmeme rank 5",
+    "single source (techmeme, Nikkei Asia)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 5,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://asia.nikkei.com/spotlight/supply-chain/china-s-curbs-on-tungsten-used-in-drill-bits-squeeze-ai-supply-chain"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-1a574871891c",
+   "headline": "Ars Technica reports Apple's roaming home robot coming in 2027 at about $1,000 for FaceTime and light switching",
+   "summary": "Ars Technica reports Apple is developing a roaming home robot, backed by CEO John Ternus, expected in 2027 at a hefty price with limited uses such as FaceTime and switching lights.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Apple",
+    "John Ternus",
+    "Ars Technica"
+   ],
+   "importance": 40,
+   "importance_rules": 13.75,
+   "evidence": [
+    "single source (ars_ai)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://arstechnica.com/apple/2026/11/apples-roaming-home-robot-may-do-facetime-switch-lights-on-and-yell-at-your-cat"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-7dba9afaf10b",
+   "headline": "Tencent publishes Hy4 model research page",
+   "summary": "Tencent has a research page for a model called Hy4. The title is the only text, so capabilities and licence are unknown.",
+   "subtopics": [
+    "frontier-models"
+   ],
+   "entities": [
+    "Tencent",
+    "Hy4"
+   ],
+   "importance": 40,
+   "importance_rules": 37.34,
+   "evidence": [
+    "hn_front rank 28 with 235 points",
+    "single source, no primary source in feature set"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 28,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 85,
+    "hn_points_at_observation": 235
+   },
+   "urls": [
+    "https://hy.tencent.ai/research/hy4"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-63f43386a21f",
+   "headline": "Chinese chipmakers' hiring of Taiwan and Korean engineers clashes with trade-secret protections",
+   "summary": "CNBC reports that aggressive hiring of experienced engineers by Chinese chipmakers conflicts with efforts in Taiwan and South Korea to protect trade secrets.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "CNBC",
+    "Taiwan",
+    "South Korea",
+    "China"
+   ],
+   "importance": 40,
+   "importance_rules": 29.33,
+   "evidence": [
+    "techmeme rank 4",
+    "single source (techmeme, CNBC)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 4,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://cnbc.com/2026/11/05/semiconductor-china-korea-talents-rivalry.html"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-16d269b224d4",
+   "headline": "Anthropic is developing FlashProve, a system to let anyone verify an AI response came from the claimed model",
+   "summary": "TechCrunch reports Anthropic is working on a system called FlashProve that would allow anyone to check that an AI response really came from the model it claims to be from.",
+   "subtopics": [
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Anthropic",
+    "FlashProve",
+    "TechCrunch"
+   ],
+   "importance": 40,
+   "importance_rules": 13.75,
+   "evidence": [
+    "single source (techcrunch_ai)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-61746f7d650a",
+   "headline": "YMTC puts Shanghai IPO on hold as China tightens share-sale approvals",
+   "summary": "Reuters reports, citing sources and a company memo, that Chinese NAND maker YMTC has paused its Shanghai IPO seeking about $4.9B as China tightens approvals.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "YMTC",
+    "Reuters",
+    "Shanghai Stock Exchange"
+   ],
+   "importance": 38,
+   "importance_rules": 28.08,
+   "evidence": [
+    "techmeme rank 6",
+    "single source (techmeme, Reuters)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 6,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://reuters.com/world/china/chinese-chipmaker-ymtc-puts-ipo-hold-weaker-markets-weigh-sources-say-2026-11-04"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-913b123e2cce",
+   "headline": "Berlin-based Pliant raises $80M Series C to open B2B payments to AI agents",
+   "summary": "The Next Web reports Pliant raised an $80M Series C led by Seaya Nova and Speedinvest as it opens its B2B payments infrastructure to AI agents.",
+   "subtopics": [
+    "business-and-funding",
+    "products-and-apps"
+   ],
+   "entities": [
+    "Pliant",
+    "Seaya Nova",
+    "Speedinvest",
+    "The Next Web"
+   ],
+   "importance": 38,
+   "importance_rules": 26.21,
+   "evidence": [
+    "techmeme rank 12",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 12,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://thenextweb.com/news/pliant-80m-series-c-ai-agents-b2b-payments-seaya-speedinvest"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-5378b4155531",
+   "headline": "Nothing CEO Carl Pei says company's first AI-first device launches in December",
+   "summary": "Nothing CEO Carl Pei said on X that the company's first AI device launches in December; he did not reveal the product category beyond saying it is screen-free and AI-leveraged for productivity. TechCrunch and The Verge both cover the teaser.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Nothing",
+    "Carl Pei",
+    "TechCrunch",
+    "The Verge"
+   ],
+   "importance": 38,
+   "importance_rules": 18.5,
+   "evidence": [
+    "2 independent domains (techcrunch_ai, verge_ai)",
+    "velocity 2",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 2,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month",
+    "https://theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-2bf97e5fcb4b",
+   "headline": "OpenAI's Chris Lehane proposes AI-centered social contract for the 2028 election",
+   "summary": "TechCrunch reports OpenAI's Chris Lehane is pushing a new social contract in which AI would help define the 2028 election, a proposal the report says also serves OpenAI's business interests.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "OpenAI",
+    "Chris Lehane",
+    "TechCrunch"
+   ],
+   "importance": 38,
+   "importance_rules": 13.75,
+   "evidence": [
+    "single source (techcrunch_ai)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 2,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 0,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0839Z-bb9e1a2f",
+   "story_id": "ai-d529cf90b317",
+   "headline": "Layer3 Intel reports residential proxies detected on White House network",
+   "summary": "A single blog post claims residential proxies were found on the White House network. The title is the only text available, with no details or corroboration.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Layer3 Intel",
+    "White House"
+   ],
+   "importance": 35,
+   "importance_rules": 48.08,
+   "evidence": [
+    "hn_front rank 1 with 982 points",
+    "single source (hn_front), no primary source, 1 domain"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 1,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:39:39Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 299,
+    "hn_points_at_observation": 982
+   },
+   "urls": [
+    "https://layer3intel.com/blog/residential-proxies-white-house-network"
+   ]
+  }
+ ]
+}

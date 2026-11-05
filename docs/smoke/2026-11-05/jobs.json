@@ -1,0 +1,150 @@
+[
+ {
+  "id": 1,
+  "type": "newsroom_run",
+  "status": "cancelled",
+  "attempts": 0,
+  "user_id": null,
+  "payload": {},
+  "last_error": "smoke: scheduler slot suppressed to cap spend (newsroom run enqueued manually at now)",
+  "created_at": "2026-11-05 08:22:32.017854+00:00",
+  "finished_at": null
+ },
+ {
+  "id": 2,
+  "type": "newsroom_run",
+  "status": "cancelled",
+  "attempts": 0,
+  "user_id": null,
+  "payload": {},
+  "last_error": "smoke: scheduler slot suppressed to cap spend (newsroom run enqueued manually at now)",
+  "created_at": "2026-11-05 08:22:32.017854+00:00",
+  "finished_at": null
+ },
+ {
+  "id": 3,
+  "type": "newsroom_run",
+  "status": "cancelled",
+  "attempts": 0,
+  "user_id": null,
+  "payload": {},
+  "last_error": "smoke: scheduler slot suppressed to cap spend (newsroom run enqueued manually at now)",
+  "created_at": "2026-11-05 08:22:32.017854+00:00",
+  "finished_at": null
+ },
+ {
+  "id": 4,
+  "type": "newsroom_run",
+  "status": "done",
+  "attempts": 1,
+  "user_id": null,
+  "payload": {
+   "at": "2026-11-05T08:22:44+00:00",
+   "beat": "ai"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:22:44.818049+00:00",
+  "finished_at": "2026-11-05 08:25:22.069684+00:00"
+ },
+ {
+  "id": 8,
+  "type": "spend_guard",
+  "status": "done",
+  "attempts": 1,
+  "user_id": null,
+  "payload": {},
+  "last_error": null,
+  "created_at": "2026-11-05 08:23:05.980579+00:00",
+  "finished_at": "2026-11-05 08:23:06.004504+00:00"
+ },
+ {
+  "id": 9,
+  "type": "cleanup",
+  "status": "done",
+  "attempts": 1,
+  "user_id": null,
+  "payload": {},
+  "last_error": null,
+  "created_at": "2026-11-05 08:23:05.982605+00:00",
+  "finished_at": "2026-11-05 08:23:07.006195+00:00"
+ },
+ {
+  "id": 25,
+  "type": "onboarding_seed",
+  "status": "done",
+  "attempts": 1,
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "payload": {
+   "text": "AI agents and developer tools (coding agents especially), open-weight model releases, AI chip export controls and the GPU supply chain. Less interested in consumer gadgets."
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:26:11.181140+00:00",
+  "finished_at": "2026-11-05 08:26:14.358299+00:00"
+ },
+ {
+  "id": 26,
+  "type": "cos_daily",
+  "status": "done",
+  "attempts": 1,
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "payload": {
+   "local_date": "2026-11-05"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:26:14.355969+00:00",
+  "finished_at": "2026-11-05 08:42:23.475568+00:00"
+ },
+ {
+  "id": 92,
+  "type": "newsroom_run",
+  "status": "done",
+  "attempts": 1,
+  "user_id": null,
+  "payload": {
+   "at": "2026-11-05T08:39:39+00:00",
+   "beat": "ai"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:39:39.499066+00:00",
+  "finished_at": "2026-11-05 08:41:23.012719+00:00"
+ },
+ {
+  "id": 108,
+  "type": "tts_render",
+  "status": "done",
+  "attempts": 1,
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "payload": {
+   "brief_id": "br_01m6ndxnsgcert0max2e3m48nj"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:42:23.473252+00:00",
+  "finished_at": "2026-11-05 08:42:24.481024+00:00"
+ },
+ {
+  "id": 114,
+  "type": "memory_update",
+  "status": "done",
+  "attempts": 1,
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "payload": {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:43:04.787465+00:00",
+  "finished_at": "2026-11-05 08:43:08.608638+00:00"
+ },
+ {
+  "id": 120,
+  "type": "memory_update",
+  "status": "done",
+  "attempts": 1,
+  "user_id": "5a0e0000-0000-4000-8000-000000000001",
+  "payload": {
+   "session_id": "se_01m6ne2e3hmnsq9hsxdf74tfqp"
+  },
+  "last_error": null,
+  "created_at": "2026-11-05 08:44:15.295064+00:00",
+  "finished_at": "2026-11-05 08:44:18.237800+00:00"
+ }
+]

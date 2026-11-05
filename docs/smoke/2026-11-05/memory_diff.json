@@ -1,0 +1,333 @@
+{
+ "note": "interests before vs after the scripted text-mode session's memory_update job (and the later web-run session, whose memory_update applied no changes if none are listed for it)",
+ "before": [
+  {
+   "id": "i_e6dc4a7eca",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "AI agents",
+   "subtopic": "agents-and-tools",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_1372fa4647",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "coding agents",
+   "subtopic": "agents-and-tools",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_a2ea1daf64",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "developer tools",
+   "subtopic": "products-and-apps",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_8b84c0f56f",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "open-weight model releases",
+   "subtopic": "open-models",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_9b3046f27a",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "AI chip export controls",
+   "subtopic": "chips-and-compute",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_5659d8b2bc",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "GPU supply chain",
+   "subtopic": "chips-and-compute",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  }
+ ],
+ "after": [
+  {
+   "id": "i_8b84c0f56f",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "open-weight model releases",
+   "subtopic": "open-models",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.7749999999999999,
+   "confidence": 0.8,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:43:05.692853Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding",
+    "se_01m6ne0dae3576nfky8x4dke7v",
+    "t_01m6ne0dc7knpbx2n5exjwv5kd"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_e6dc4a7eca",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "AI agents",
+   "subtopic": "agents-and-tools",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_1372fa4647",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "coding agents",
+   "subtopic": "agents-and-tools",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_a2ea1daf64",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "developer tools",
+   "subtopic": "products-and-apps",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_9b3046f27a",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "AI chip export controls",
+   "subtopic": "chips-and-compute",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  },
+  {
+   "id": "i_5659d8b2bc",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "label": "GPU supply chain",
+   "subtopic": "chips-and-compute",
+   "entity": null,
+   "kind": "topic",
+   "weight": 0.4,
+   "confidence": 0.3,
+   "explicit_pin": false,
+   "shown_n": 0,
+   "engaged_n": 0,
+   "last_reinforced_at": "2026-11-05T08:26:11.861788Z",
+   "source": "onboarding",
+   "evidence": [
+    "onboarding"
+   ],
+   "created_at": "2026-11-05T08:26:14.341335Z",
+   "updated_at": "2026-11-05T08:26:14.341335Z"
+  }
+ ],
+ "diff": [
+  {
+   "id": "i_8b84c0f56f",
+   "label": "open-weight model releases",
+   "change": {
+    "weight": [
+     0.4,
+     0.7749999999999999
+    ],
+    "confidence": [
+     0.3,
+     0.8
+    ],
+    "evidence": [
+     [
+      "onboarding"
+     ],
+     [
+      "onboarding",
+      "se_01m6ne0dae3576nfky8x4dke7v",
+      "t_01m6ne0dc7knpbx2n5exjwv5kd"
+     ]
+    ]
+   }
+  }
+ ],
+ "memory_outcome_per_session": {
+  "se_01m6ne0dae3576nfky8x4dke7v": {
+   "report": {
+    "mode": "learn",
+    "changes": [
+     {
+      "delta": 0.3,
+      "label": "open-weight model releases",
+      "action": "reinforce",
+      "reason": "explicit",
+      "interest_id": "i_8b84c0f56f"
+     },
+     {
+      "delta": 0.075,
+      "label": "open-weight model releases",
+      "action": "reinforce",
+      "reason": "implicit dive s=0.5",
+      "interest_id": "i_8b84c0f56f"
+     }
+    ],
+    "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+    "opportunity": 0.3
+   },
+   "outcome": {
+    "at": "2026-11-05T08:43:02.860714Z",
+    "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+    "opportunity": 0.3,
+    "skipped_interest_ids": []
+   }
+  },
+  "se_01m6ne2e3hmnsq9hsxdf74tfqp": {
+   "report": {
+    "mode": "learn",
+    "changes": [],
+    "session_id": "se_01m6ne2e3hmnsq9hsxdf74tfqp",
+    "opportunity": 0.3
+   },
+   "outcome": {
+    "at": "2026-11-05T08:44:09.199199Z",
+    "session_id": "se_01m6ne2e3hmnsq9hsxdf74tfqp",
+    "opportunity": 0.3,
+    "skipped_interest_ids": []
+   }
+  }
+ },
+ "scripted_session_id": "se_01m6ne0dae3576nfky8x4dke7v"
+}

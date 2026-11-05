@@ -13,6 +13,7 @@ Honest User-Agent, one GET per feed, short timeouts.
 from __future__ import annotations
 
 import asyncio
+import html
 import re
 from datetime import UTC, datetime, timedelta
 
@@ -64,7 +65,8 @@ async def rss(cfg: HeadlineSourceCfg, beat: str, at: datetime) -> list[HeadlineO
         url, title = e.get("link"), (e.get("title") or "").strip()
         summary = e.get("summary")
         if cfg.type == "techmeme":  # item link is the Techmeme permalink; the body links the article
-            url = next((u for u in _HREF.findall(summary or "") if "techmeme.com" not in u), url)
+            hrefs = [html.unescape(u) for u in _HREF.findall(summary or "")]
+            url = next((u for u in hrefs if "techmeme.com" not in u), url)
         if not url or not title:
             continue
         out.append(

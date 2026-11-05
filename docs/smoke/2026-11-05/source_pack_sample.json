@@ -1,0 +1,63 @@
+{
+ "story_id": "ai-d1753883dbd0",
+ "pack": {
+  "depth": "deep",
+  "facts": [
+   {
+    "text": "Kimi K3.1 Pro is an open-weight, natively multimodal agentic model.",
+    "passage_ids": [
+     "f4a904d03d800a16a7770eb45e6294e1:31-143"
+    ]
+   },
+   {
+    "text": "Kimi K3.1 Pro has a 1-million-token context window.",
+    "passage_ids": [
+     "f4a904d03d800a16a7770eb45e6294e1:297-477"
+    ]
+   },
+   {
+    "text": "Compared with Kimi K3, Kimi K3.1 Pro replaces full-attention Gated MLA layers with Gated DSA layers for more efficient long-context modeling.",
+    "passage_ids": [
+     "f4a904d03d800a16a7770eb45e6294e1:478-647"
+    ]
+   }
+  ],
+  "related": [],
+  "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+  "passages": [
+   {
+    "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "text": "Kimi K3.1 Pro is an open-weight, natively multimodal agentic model, and our most capable 3T-class model to date.",
+    "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+    "source": "huggingface.co",
+    "char_end": 143,
+    "char_start": 31,
+    "passage_id": "f4a904d03d800a16a7770eb45e6294e1:31-143",
+    "published_at": "2026-11-02T00:00:00Z"
+   },
+   {
+    "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "text": "With a 1-million-token context window, Kimi K3.1 Pro delivers substantial improvements in coding, 3D creation, financial research, factual accuracy, and other agentic capabilities.",
+    "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+    "source": "huggingface.co",
+    "char_end": 477,
+    "char_start": 297,
+    "passage_id": "f4a904d03d800a16a7770eb45e6294e1:297-477",
+    "published_at": "2026-11-02T00:00:00Z"
+   },
+   {
+    "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "text": "* Compared with Kimi K3, we replace the full-attention Gated MLA layers with Gated DeepSeek Sparse Attention (Gated DSA) layers for more efficient long-context modeling.",
+    "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+    "source": "huggingface.co",
+    "char_end": 647,
+    "char_start": 478,
+    "passage_id": "f4a904d03d800a16a7770eb45e6294e1:478-647",
+    "published_at": "2026-11-02T00:00:00Z"
+   }
+  ],
+  "reaction": null,
+  "story_ref": "ai-d1753883dbd0",
+  "reaction_passage_ids": []
+ }
+}

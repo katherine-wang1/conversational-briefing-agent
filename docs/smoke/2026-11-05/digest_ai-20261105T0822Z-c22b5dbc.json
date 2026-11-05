@@ -1,0 +1,1108 @@
+{
+ "digest": {
+  "id": "ai-20261105T0822Z-c22b5dbc",
+  "run_id": "live",
+  "beat": "ai",
+  "at": "2026-11-05 08:22:44+00:00",
+  "version": "de16d79714ee3e35",
+  "created_at": "2026-11-05 08:25:21.851807+00:00"
+ },
+ "entries": [
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-87895a94bb57",
+   "headline": "OpenAI's Greg Brockman says H1 2026 was rough but agentic coding drove Q3 revenue inflection",
+   "summary": "Per a WSJ report by Maxwell Zeff, Brockman says the first half of 2026 was difficult before agentic coding tools, GPT-5.6 Sol, and ChatGPT Work drove a revenue inflection in Q3. No company financials are given in the snippet.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "OpenAI",
+    "Greg Brockman",
+    "GPT-5.6 Sol",
+    "ChatGPT Work",
+    "Wall Street Journal",
+    "Maxwell Zeff"
+   ],
+   "importance": 80,
+   "importance_rules": 33.08,
+   "evidence": [
+    "techmeme rank 1",
+    "single source (techmeme, WSJ article)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 1,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://wsj.com/tech/openai-had-rough-first-half-of-year-before-coding-takeoff-brockman-says-6c97d9e5?amp%3Breflink=desktopwebshare_permalink&st=hL3kyT"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-4acfda106313",
+   "headline": "OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls",
+   "summary": "OpenAI's Images 2.6 brings faster image generation, GIF creation, more precise editing and new API controls across ChatGPT, Codex and the API. The Verge reports ChatGPT can now make animated GIFs from prompts or uploaded photos alongside the model.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "OpenAI",
+    "ChatGPT",
+    "Codex",
+    "Images 2.6",
+    "The Verge"
+   ],
+   "importance": 70,
+   "importance_rules": 53.38,
+   "evidence": [
+    "hn_front rank 3 with 257 points at observation",
+    "primary source present (openai_news)",
+    "2 independent domains (openai.com, theverge.com)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": 3,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 2,
+    "comments_at_observation": 164,
+    "hn_points_at_observation": 257
+   },
+   "urls": [
+    "https://openai.com/index/introducing-images-2-6",
+    "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-606f53bcc3c6",
+   "headline": "OpenAI details pipeline using an upcoming cyber model to find and patch 948 Linux privilege-escalation bugs for $1.2M",
+   "summary": "OpenAI describes an autonomous pipeline that found, validated and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel, at a stated $1.2M in API costs. The headline calls the model upcoming, so its release status is unconfirmed.",
+   "subtopics": [
+    "evals-and-safety"
+   ],
+   "entities": [
+    "OpenAI",
+    "Linux kernel"
+   ],
+   "importance": 66,
+   "importance_rules": 51.5,
+   "evidence": [
+    "hn_front rank 4 with 300 points at observation",
+    "techmeme rank 13",
+    "primary source present (openai_news)",
+    "single independent domain"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 4,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 2,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 201,
+    "hn_points_at_observation": 300
+   },
+   "urls": [
+    "https://openai.com/index/a-thousand-fewer-paths-to-root"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-d1753883dbd0",
+   "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+   "summary": "The Kimi K3.1 Pro model weights are listed as out on the Hugging Face moonshotai page. The item has no snippet beyond the title.",
+   "subtopics": [
+    "open-models"
+   ],
+   "entities": [
+    "Moonshot AI",
+    "Kimi K3.1 Pro",
+    "Hugging Face"
+   ],
+   "importance": 64,
+   "importance_rules": 46.98,
+   "evidence": [
+    "hn_front rank 7 with 508 points at observation",
+    "primary source present (huggingface.co)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 7,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 142,
+    "hn_points_at_observation": 508
+   },
+   "urls": [
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-86e0d936ccae",
+   "headline": "OpenAI agrees to acquire Pierre Computer Company to expand Codex code tools",
+   "summary": "OpenAI will acquire Pierre Computer Company, a move the post says expands Codex's tools for building, understanding and reviewing code. Deal terms are not in the snippet.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "OpenAI",
+    "Pierre Computer Company",
+    "Codex"
+   ],
+   "importance": 58,
+   "importance_rules": 42.32,
+   "evidence": [
+    "hn_front rank 25 with 232 points at observation",
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 25,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": 71,
+    "hn_points_at_observation": 232
+   },
+   "urls": [
+    "https://openai.com/index/openai-to-acquire-pierre"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-68957d2b1fde",
+   "headline": "Anthropic posts provable-inference progress for LLMs; allenai releases StateBench for state tracking in long documents",
+   "summary": "Anthropic published a research post titled 'Progress on provable inference for large language models'. A Hugging Face blog from allenai introduces StateBench, a benchmark testing how language models track state changes over long documents. The snippets give no results.",
+   "subtopics": [
+    "research-methods",
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Anthropic",
+    "allenai",
+    "StateBench"
+   ],
+   "importance": 52,
+   "importance_rules": 47.41,
+   "evidence": [
+    "hn_front rank 22 with 212 points at observation",
+    "primary source present (anthropic.com)",
+    "hf_blog tier 2 source (allenai)",
+    "2 independent domains"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 2,
+    "velocity": 2,
+    "best_rank": 22,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": true,
+    "n_independent_domains": 2,
+    "comments_at_observation": 98,
+    "hn_points_at_observation": 212
+   },
+   "urls": [
+    "https://anthropic.com/research/provable-inference",
+    "https://huggingface.co/blog/allenai/statebench"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-2ab8ca37e4c5",
+   "headline": "Pro-AI super PAC Leading the Future ends midterms with over $20M after spending about $100M",
+   "summary": "Wired reports that Leading the Future ended the midterms with more than $20M, down from about $100M, after backing safe bipartisan candidates while its riskier bets failed.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Leading the Future",
+    "Wired",
+    "Tess Owen"
+   ],
+   "importance": 50,
+   "importance_rules": 30.23,
+   "evidence": [
+    "techmeme rank 3",
+    "single source (techmeme, Wired article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 3,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-baa5e064d8b2",
+   "headline": "Palo Alto Networks in talks to acquire Israeli startup Clutch Security for about $500M, per The Information",
+   "summary": "According to sources cited by The Information, Palo Alto Networks is in talks to buy Clutch Security, which makes software for tracking passwords used by AI agents, for roughly $500M. The deal is not confirmed.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Palo Alto Networks",
+    "Clutch Security",
+    "The Information"
+   ],
+   "importance": 50,
+   "importance_rules": 26.42,
+   "evidence": [
+    "techmeme rank 11",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 11,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://theinformation.com/articles/palo-alto-networks-talks-pay-500-million-ai-security-startup"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-5b293c6056c7",
+   "headline": "Conductor announces it is joining Meta",
+   "summary": "Conductor's announcement page says Conductor is joining Meta. The snippet does not describe the product or deal terms.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Conductor",
+    "Meta"
+   ],
+   "importance": 48,
+   "importance_rules": 38.52,
+   "evidence": [
+    "hn_front rank 15 with 169 points at observation",
+    "178 comments at observation",
+    "single source (hn_front), no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 15,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 178,
+    "hn_points_at_observation": 169
+   },
+   "urls": [
+    "https://conductor.build/announcement"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-96c4a5c335fd",
+   "headline": "Nikkei Asia sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply",
+   "summary": "Nikkei Asia sources report that Chinese export curbs on critical metals have disrupted supplies of tungsten carbide micro drill bits used in PCBs and chip substrates. The snippet names no volumes or companies.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "Nikkei Asia",
+    "Cheng Ting-Fang",
+    "China"
+   ],
+   "importance": 45,
+   "importance_rules": 28.64,
+   "evidence": [
+    "techmeme rank 5",
+    "single source (techmeme, Nikkei Asia article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 5,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://asia.nikkei.com/spotlight/supply-chain/china-s-curbs-on-tungsten-used-in-drill-bits-squeeze-ai-supply-chain"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-1620c0c049de",
+   "headline": "FT: Microsoft rejects option to double Nscale Texas data center contract, hitting Nscale's $35B IPO plans",
+   "summary": "Financial Times sources say Microsoft declined an option to more than double its Texas data center contract with Nscale. The report calls this a setback for Nscale's ambitions for a $35B IPO.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Microsoft",
+    "Nscale",
+    "Financial Times"
+   ],
+   "importance": 45,
+   "importance_rules": 27.63,
+   "evidence": [
+    "techmeme rank 7",
+    "single source (techmeme, FT article)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 7,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://ft.com/content/668e6ef8-88a1-4bef-8664-8f495baf09f8"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-33555fd13343",
+   "headline": "Cat Wu leaves Anthropic and joins OpenAI to lead core product management",
+   "summary": "Cat Wu, former product lead for Claude Code at Anthropic, says she is joining OpenAI to lead product management for core products. She left Anthropic the previous week, per Business Insider.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Cat Wu",
+    "Anthropic",
+    "OpenAI",
+    "Claude Code",
+    "Business Insider"
+   ],
+   "importance": 45,
+   "importance_rules": 25.71,
+   "evidence": [
+    "techmeme rank 15",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 15,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://businessinsider.com/cat-wu-joins-openai-from-anthropic-product-lead-coup-2026-11"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-5449d0bd4d43",
+   "headline": "Ricursive previews Ripple-65B as open-weight model claiming state of the art on agentic coding",
+   "summary": "Ricursive's preview page claims Ripple-65B is a U.S. open-weight model with state-of-the-art results on agentic coding. The snippet gives no benchmark figures.",
+   "subtopics": [
+    "open-models"
+   ],
+   "entities": [
+    "Ricursive",
+    "Ripple-65B"
+   ],
+   "importance": 44,
+   "importance_rules": 40.38,
+   "evidence": [
+    "hn_front rank 8 with 282 points at observation",
+    "single source (hn_front), no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 8,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 101,
+    "hn_points_at_observation": 282
+   },
+   "urls": [
+    "https://ricursive.com/ripple"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-fcc32c401cfa",
+   "headline": "IEEE Spectrum argues AI is forcing organizations to pay off 40 years of technical debt",
+   "summary": "An IEEE Spectrum piece argues AI is pushing organizations to address decades of technical debt, linked to a PHP vulnerability headline. The snippet gives only the title.",
+   "subtopics": [
+    "evals-and-safety"
+   ],
+   "entities": [
+    "IEEE Spectrum",
+    "php2shell"
+   ],
+   "importance": 42,
+   "importance_rules": 40.26,
+   "evidence": [
+    "hn_front rank 19 with 1167 points at observation",
+    "673 comments at observation",
+    "single independent domain, no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 19,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 673,
+    "hn_points_at_observation": 1167
+   },
+   "urls": [
+    "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-63f43386a21f",
+   "headline": "CNBC reports Chinese chipmakers' engineer hiring clashes with Taiwan and South Korea trade-secret protections",
+   "summary": "CNBC reports that aggressive hiring of experienced engineers by Chinese chipmakers conflicts with efforts in Taiwan and South Korea to protect trade secrets. The snippet names no specific cases.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "CNBC",
+    "Jenny Lee",
+    "China",
+    "Taiwan",
+    "South Korea"
+   ],
+   "importance": 42,
+   "importance_rules": 29.33,
+   "evidence": [
+    "techmeme rank 4",
+    "single source (techmeme, CNBC article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 4,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://cnbc.com/2026/11/05/semiconductor-china-korea-talents-rivalry.html"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-6239ab812316",
+   "headline": "Ars Technica reports DoorDash says outside AI agents have only produced hundreds of orders",
+   "summary": "Ars Technica reports DoorDash says outside AI agents have led to only hundreds of orders so far. The snippet gives no further figures.",
+   "subtopics": [
+    "agents-and-tools"
+   ],
+   "entities": [
+    "DoorDash",
+    "Ars Technica"
+   ],
+   "importance": 40,
+   "importance_rules": 37.14,
+   "evidence": [
+    "hn_front rank 29 with 125 points at observation",
+    "228 comments at observation",
+    "single independent domain"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 29,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 228,
+    "hn_points_at_observation": 125
+   },
+   "urls": [
+    "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-88dc12c4d984",
+   "headline": "Hacker News thread asks readers about their current AI agentic setups",
+   "summary": "A Hacker News discussion thread asks users to describe their current AI agent setups. It is a community discussion, not a reported news event.",
+   "subtopics": [
+    "agents-and-tools"
+   ],
+   "entities": [
+    "Hacker News"
+   ],
+   "importance": 40,
+   "importance_rules": 35.58,
+   "evidence": [
+    "hn_front tier 1, best rank 20",
+    "297 HN points, 301 comments at observation",
+    "n_independent_domains 0"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 20,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 0,
+    "comments_at_observation": 301,
+    "hn_points_at_observation": 297
+   },
+   "urls": [
+    "https://news.ycombinator.com/item?id=50366117"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-2c2ce141cc54",
+   "headline": "Bloomberg reports UK entry-level job postings mentioning AI up about 3x since early 2025",
+   "summary": "Adzuna data shows UK entry-level postings mentioning AI are up roughly 3x since early 2025, and Indeed says one in six vacancies in AI-exposed fields now mentions AI, up 2x year on year.",
+   "subtopics": [
+    "other"
+   ],
+   "entities": [
+    "Adzuna",
+    "Indeed",
+    "Bloomberg",
+    "Irina Anghel"
+   ],
+   "importance": 40,
+   "importance_rules": 31.42,
+   "evidence": [
+    "techmeme rank 2",
+    "single source (techmeme, Bloomberg article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 2,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-05/ai-skills-are-make-or-break-in-uk-s-brutal-youth-jobs-market"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-61746f7d650a",
+   "headline": "Reuters: YMTC puts Shanghai IPO on hold, seeking about $4.9B, as China tightens share sale approvals",
+   "summary": "Reuters, citing sources and a company memo, reports that NAND flash maker YMTC has put its Shanghai IPO on hold as China tightens share sale approvals. The company sought to raise about $4.9B.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "YMTC",
+    "Reuters",
+    "Shanghai Stock Exchange"
+   ],
+   "importance": 40,
+   "importance_rules": 28.08,
+   "evidence": [
+    "techmeme rank 6",
+    "single source (techmeme, Reuters article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 6,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://reuters.com/world/china/chinese-chipmaker-ymtc-puts-ipo-hold-weaker-markets-weigh-sources-say-2026-11-04"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-ad638ebb8212",
+   "headline": "FT: China tells SoftBank it will block $5.4B acquisition of ABB's robotics division",
+   "summary": "Financial Times sources say China has told SoftBank it will not allow its $5.4B acquisition of ABB's robotics division to proceed. The snippet notes China is the division's biggest market.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "China",
+    "SoftBank",
+    "ABB",
+    "Financial Times",
+    "David Keohane"
+   ],
+   "importance": 40,
+   "importance_rules": 26.65,
+   "evidence": [
+    "techmeme rank 10",
+    "single source (techmeme, FT article)",
+    "no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 10,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://ft.com/content/f10c3e24-45e4-47ff-bde2-24a8de90aec4"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-913b123e2cce",
+   "headline": "Pliant raises $80M Series C led by Seaya Nova and Speedinvest to open B2B payments to AI agents",
+   "summary": "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Speedinvest. The company is opening its B2B payments infrastructure to AI agents.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Pliant",
+    "Seaya Nova",
+    "Speedinvest",
+    "The Next Web"
+   ],
+   "importance": 40,
+   "importance_rules": 26.21,
+   "evidence": [
+    "techmeme rank 12",
+    "single source (techmeme, tier 1)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 12,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://thenextweb.com/news/pliant-80m-series-c-ai-agents-b2b-payments-seaya-speedinvest"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-7dba9afaf10b",
+   "headline": "Tencent publishes Hy4 research page",
+   "summary": "A Tencent AI research page titled 'Tencent Hy4' appeared on Hacker News. The inputs give no description of the model or results.",
+   "subtopics": [
+    "frontier-models"
+   ],
+   "entities": [
+    "Tencent",
+    "Hy4"
+   ],
+   "importance": 38,
+   "importance_rules": 37.34,
+   "evidence": [
+    "hn_front rank 27 with 234 points at observation",
+    "single source (hn_front), no primary source present"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 27,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 81,
+    "hn_points_at_observation": 234
+   },
+   "urls": [
+    "https://hy.tencent.ai/research/hy4"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-932b39aa4b2f",
+   "headline": "Business Insider source says Meta drops fruit codenames for AI models after latest model Watermelon",
+   "summary": "A Business Insider source report says Meta has stopped using fruit names for its AI model codenames because they did not suit its ambitions. The latest model was codenamed Watermelon.",
+   "subtopics": [
+    "frontier-models"
+   ],
+   "entities": [
+    "Meta",
+    "Business Insider",
+    "Charles Rollet",
+    "Watermelon"
+   ],
+   "importance": 35,
+   "importance_rules": 26.93,
+   "evidence": [
+    "techmeme rank 9",
+    "single source (techmeme, Business Insider article)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 9,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://businessinsider.com/meta-will-stop-naming-its-ai-models-after-fruit-2026-11"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-02d39c49cc93",
+   "headline": "OpenAI describes Pando, a Git-compatible backend built for Codex-scale development",
+   "summary": "OpenAI published a post on how it built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "OpenAI",
+    "Pando",
+    "Codex",
+    "Git"
+   ],
+   "importance": 35,
+   "importance_rules": 24.75,
+   "evidence": [
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 0,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://openai.com/index/scaling-git-at-openai"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-3e2ef3d2b640",
+   "headline": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+   "summary": "OpenAI said Jill Hazelbaker will join as Chief Corporate Affairs Officer, leading global communications and corporate positioning.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "OpenAI",
+    "Jill Hazelbaker"
+   ],
+   "importance": 35,
+   "importance_rules": 24.75,
+   "evidence": [
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 0,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-5261cb6d7c9a",
+   "headline": "OpenAI's Daybreak Red, running GPT-5.6 Cyber, becomes available in AWS GovCloud (US-East)",
+   "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) via Amazon Bedrock for authorized cybersecurity work.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "OpenAI",
+    "Daybreak Red",
+    "GPT-5.6 Cyber",
+    "AWS GovCloud",
+    "Amazon Bedrock"
+   ],
+   "importance": 35,
+   "importance_rules": 24.75,
+   "evidence": [
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 0,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://openai.com/index/daybreak-red-aws-govcloud"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-b67346122cb8",
+   "headline": "Qualcomm launches Cloud AI 100 Ultra, a 150W AI accelerator card with 128GB memory",
+   "summary": "Qualcomm's product page describes the Cloud AI 100 Ultra as a 150W AI accelerator card with 128GB at 548GB/s. The snippet gives no pricing or customer details.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "Qualcomm",
+    "Cloud AI 100 Ultra"
+   ],
+   "importance": 34,
+   "importance_rules": 36.57,
+   "evidence": [
+    "hn_front rank 21 with 141 points at observation",
+    "single source (hn_front), vendor product page only"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 21,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 1,
+    "comments_at_observation": 54,
+    "hn_points_at_observation": 141
+   },
+   "urls": [
+    "https://qualcomm.com/data-center/products/cloud-ai-100-ultra"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-aed21eb37e09",
+   "headline": "Kino AI, a YC S23 company, launches AI media manager and video editor",
+   "summary": "Kino AI, described as a Y Combinator S23 company, is presented as an AI media manager and video editor. The snippet gives no product details or traction figures.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Kino AI",
+    "Y Combinator"
+   ],
+   "importance": 30,
+   "importance_rules": 31.48,
+   "evidence": [
+    "hn_front tier 1, best rank 23",
+    "87 HN points, 33 comments at observation",
+    "n_independent_domains 0"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": 23,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 1,
+    "has_primary_source": false,
+    "n_independent_domains": 0,
+    "comments_at_observation": 33,
+    "hn_points_at_observation": 87
+   },
+   "urls": [
+    "https://news.ycombinator.com/item?id=50368804"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-1afdb3ac7e86",
+   "headline": "DevRev uses OpenAI GPT-6.1 Sol to power autonomous enterprise self-service",
+   "summary": "An OpenAI customer post says DevRev uses GPT-6.1 Sol to power its Computer and Operator products for enterprise service, balancing reasoning, speed and cost.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "DevRev",
+    "OpenAI",
+    "GPT-6.1 Sol"
+   ],
+   "importance": 30,
+   "importance_rules": 24.75,
+   "evidence": [
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 0,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://openai.com/index/devrev-enterprise-self-service"
+   ]
+  },
+  {
+   "digest_id": "ai-20261105T0822Z-c22b5dbc",
+   "story_id": "ai-bb8d1cc11336",
+   "headline": "OpenAI launches Grid Protectors Program with utilities for future compute campuses",
+   "summary": "OpenAI's Grid Protectors Program will work with utilities so future compute campuses support grid reliability and protect consumer electricity costs.",
+   "subtopics": [
+    "other"
+   ],
+   "entities": [
+    "OpenAI",
+    "Grid Protectors Program"
+   ],
+   "importance": 30,
+   "importance_rules": 24.75,
+   "evidence": [
+    "primary source present (openai_news)"
+   ],
+   "is_update_of": null,
+   "features": {
+    "n_items": 1,
+    "velocity": 1,
+    "best_rank": null,
+    "best_tier": 1,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "frontpage_hits": 0,
+    "has_primary_source": true,
+    "n_independent_domains": 1,
+    "comments_at_observation": null,
+    "hn_points_at_observation": null
+   },
+   "urls": [
+    "https://openai.com/index/grid-protectors-program"
+   ]
+  }
+ ]
+}

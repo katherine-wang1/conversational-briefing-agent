@@ -1,0 +1,315 @@
+[
+ {
+  "story_id": "ai-4acfda106313",
+  "pack": {
+   "depth": "standard",
+   "facts": [
+    {
+     "text": "ChatGPT can now create animated GIFs from a text prompt or an uploaded photo.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:0-253"
+     ]
+    },
+    {
+     "text": "The GIF update rolls out alongside OpenAI's Images 2.6 model.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:0-253",
+      "c1e68860d6535a2fe558042d22023122:956-1167"
+     ]
+    },
+    {
+     "text": "Users can adjust a GIF's animation speed and edit individual frames.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:0-253",
+      "c1e68860d6535a2fe558042d22023122:369-680"
+     ]
+    },
+    {
+     "text": "Before this update, ChatGPT could not natively generate GIFs in a single step.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:369-680"
+     ]
+    },
+    {
+     "text": "OpenAI says users now generate over 4 billion images per week, up from 3 billion per week reported in September.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:681-955"
+     ]
+    },
+    {
+     "text": "Images 2.6 is rolling out to all ChatGPT and Codex users across web, desktop, and mobile apps.",
+     "passage_ids": [
+      "c1e68860d6535a2fe558042d22023122:956-1167"
+     ]
+    }
+   ],
+   "related": [],
+   "headline": "OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls",
+   "passages": [
+    {
+     "url": "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+     "text": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI’s new Images 2.6 model, allows you to adjust the GIF’s animation speed, edit individual frames, and share it with others.",
+     "doc_id": "c1e68860d6535a2fe558042d22023122",
+     "source": "theverge.com",
+     "char_end": 253,
+     "char_start": 0,
+     "passage_id": "c1e68860d6535a2fe558042d22023122:0-253",
+     "published_at": "2026-11-04T00:00:00Z"
+    },
+    {
+     "url": "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+     "text": "Before this change, ChatGPT couldn’t natively generate GIFs in a single step. An example shared by the company shows how ChatGPT can generate a GIF in response to the prompt, “can you make a gif of a cat dancing?” while also providing you with the option to change the playback speed and view it frame by frame.",
+     "doc_id": "c1e68860d6535a2fe558042d22023122",
+     "source": "theverge.com",
+     "char_end": 680,
+     "char_start": 369,
+     "passage_id": "c1e68860d6535a2fe558042d22023122:369-680",
+     "published_at": "2026-11-04T00:00:00Z"
+    },
+    {
+     "url": "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+     "text": "Along with support for GIF-making, the Images 2.6 update also enables faster image generation in ChatGPT, OpenAI says. The company says users now generate over 4 billion images per week across ChatGPT and its API, a jump from the 3 billion per week it reported in September.",
+     "doc_id": "c1e68860d6535a2fe558042d22023122",
+     "source": "theverge.com",
+     "char_end": 955,
+     "char_start": 681,
+     "passage_id": "c1e68860d6535a2fe558042d22023122:681-955",
+     "published_at": "2026-11-04T00:00:00Z"
+    },
+    {
+     "url": "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+     "text": "Images 2.6 is rolling out to all ChatGPT and Codex users across web, desktop, and mobile apps. OpenAI is also launching GPT-Image-2.6 Flare and Sunburst in its API for faster and higher-quality image generation.",
+     "doc_id": "c1e68860d6535a2fe558042d22023122",
+     "source": "theverge.com",
+     "char_end": 1167,
+     "char_start": 956,
+     "passage_id": "c1e68860d6535a2fe558042d22023122:956-1167",
+     "published_at": "2026-11-04T00:00:00Z"
+    }
+   ],
+   "reaction": null,
+   "story_ref": "ai-4acfda106313",
+   "reaction_passage_ids": []
+  }
+ },
+ {
+  "story_id": "ai-87895a94bb57",
+  "pack": {
+   "depth": "standard",
+   "facts": [],
+   "related": [],
+   "headline": "Greg Brockman says OpenAI's H1 2026 was rough before agentic coding drove Q3 revenue inflection",
+   "passages": [],
+   "reaction": null,
+   "story_ref": "ai-87895a94bb57",
+   "reaction_passage_ids": []
+  }
+ },
+ {
+  "story_id": "ai-d1753883dbd0",
+  "pack": {
+   "depth": "deep",
+   "facts": [
+    {
+     "text": "Kimi K3.1 Pro is an open-weight, natively multimodal agentic model.",
+     "passage_ids": [
+      "f4a904d03d800a16a7770eb45e6294e1:31-143"
+     ]
+    },
+    {
+     "text": "Kimi K3.1 Pro has a 1-million-token context window.",
+     "passage_ids": [
+      "f4a904d03d800a16a7770eb45e6294e1:297-477"
+     ]
+    },
+    {
+     "text": "Compared with Kimi K3, Kimi K3.1 Pro replaces full-attention Gated MLA layers with Gated DSA layers for more efficient long-context modeling.",
+     "passage_ids": [
+      "f4a904d03d800a16a7770eb45e6294e1:478-647"
+     ]
+    }
+   ],
+   "related": [],
+   "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+   "passages": [
+    {
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "text": "Kimi K3.1 Pro is an open-weight, natively multimodal agentic model, and our most capable 3T-class model to date.",
+     "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+     "source": "huggingface.co",
+     "char_end": 143,
+     "char_start": 31,
+     "passage_id": "f4a904d03d800a16a7770eb45e6294e1:31-143",
+     "published_at": "2026-11-02T00:00:00Z"
+    },
+    {
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "text": "With a 1-million-token context window, Kimi K3.1 Pro delivers substantial improvements in coding, 3D creation, financial research, factual accuracy, and other agentic capabilities.",
+     "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+     "source": "huggingface.co",
+     "char_end": 477,
+     "char_start": 297,
+     "passage_id": "f4a904d03d800a16a7770eb45e6294e1:297-477",
+     "published_at": "2026-11-02T00:00:00Z"
+    },
+    {
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "text": "* Compared with Kimi K3, we replace the full-attention Gated MLA layers with Gated DeepSeek Sparse Attention (Gated DSA) layers for more efficient long-context modeling.",
+     "doc_id": "f4a904d03d800a16a7770eb45e6294e1",
+     "source": "huggingface.co",
+     "char_end": 647,
+     "char_start": 478,
+     "passage_id": "f4a904d03d800a16a7770eb45e6294e1:478-647",
+     "published_at": "2026-11-02T00:00:00Z"
+    }
+   ],
+   "reaction": null,
+   "story_ref": "ai-d1753883dbd0",
+   "reaction_passage_ids": []
+  }
+ },
+ {
+  "story_id": "ai-5449d0bd4d43",
+  "pack": {
+   "depth": "standard",
+   "facts": [
+    {
+     "text": "Ricursive Intelligence is a full-stack AI lab that co-optimizes hardware, software, and model to build self-improving systems.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:61-207"
+     ]
+    },
+    {
+     "text": "Ripple-65B Preview is a general-purpose variant of the proprietary model powering Ricursive's AI chip design platform.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:455-672"
+     ]
+    },
+    {
+     "text": "Ripple-65B Preview is pretrained on 12 trillion tokens and supports up to 1M context length.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:455-672"
+     ]
+    },
+    {
+     "text": "Ripple-65B Preview scores 80.52 on TerminalBench 2.1, reported as U.S. open-weight state-of-the-art.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:673-1016"
+     ]
+    },
+    {
+     "text": "Ripple-65B Preview's development cost was $32M, about one-tenth the cost of the previous open-weight agentic coding SOTA, by Ricursive's estimate.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263"
+     ]
+    },
+    {
+     "text": "The $32M figure covers full R&D from scratch, including pretraining, data, evals, synthetic data, and posttraining.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263"
+     ]
+    },
+    {
+     "text": "Ricursive reached a TerminalBench 2.1 score of 80.5 using only 1.4M rollouts in RL.",
+     "passage_ids": [
+      "24ed9ebcee3dd33c584ac388a8b4bb15:2909-3000"
+     ]
+    }
+   ],
+   "related": [],
+   "headline": "Ricursive publishes Ripple-65B preview claiming top US open-weight agentic coding results",
+   "passages": [
+    {
+     "url": "https://ricursive.com/ripple",
+     "text": "Ricursive Intelligence is a full-stack artificial intelligence lab building self-improving systems by co-optimizing hardware, software, and model.",
+     "doc_id": "24ed9ebcee3dd33c584ac388a8b4bb15",
+     "source": "ricursive.com",
+     "char_end": 207,
+     "char_start": 61,
+     "passage_id": "24ed9ebcee3dd33c584ac388a8b4bb15:61-207",
+     "published_at": "2026-11-03T00:00:00Z"
+    },
+    {
+     "url": "https://ricursive.com/ripple",
+     "text": "Today, we release Ripple-65B Preview, a general-purpose variant of the proprietary model that powers our AI chip design platform. The model is pretrained on 12 trillion tokens with support for up to 1M context length.",
+     "doc_id": "24ed9ebcee3dd33c584ac388a8b4bb15",
+     "source": "ricursive.com",
+     "char_end": 672,
+     "char_start": 455,
+     "passage_id": "24ed9ebcee3dd33c584ac388a8b4bb15:455-672",
+     "published_at": "2026-11-03T00:00:00Z"
+    },
+    {
+     "url": "https://ricursive.com/ripple",
+     "text": "Ripple-65B Preview delivers strong results on agentic coding, achieving U.S. open-weight state-of-the-art (80.52) on TerminalBench 2.1 and surpassing significantly larger US open-weight models such as Reflection Beam 501B (80.1), Meta Muse Spark Open 816B (76.4), Thinking Machines Inkling 975B (63.8), and NVIDIA Nemotron 3 Ultra 550B (56.4).",
+     "doc_id": "24ed9ebcee3dd33c584ac388a8b4bb15",
+     "source": "ricursive.com",
+     "char_end": 1016,
+     "char_start": 673,
+     "passage_id": "24ed9ebcee3dd33c584ac388a8b4bb15:673-1016",
+     "published_at": "2026-11-03T00:00:00Z"
+    },
+    {
+     "url": "https://ricursive.com/ripple",
+     "text": "In contrast, we developed and trained Ripple-65B Preview for only $32M, which is one-tenth the cost of the previous open-weight SOTA on agentic coding, as estimated to the best of our knowledge.¹ Note that $32M is our full R&D cost starting from scratch, including pretraining ladder development, data mixing, evals, debugging, synthetic data generation, posttraining recipe development, and the final hero pretraining and posttraining run.",
+     "doc_id": "24ed9ebcee3dd33c584ac388a8b4bb15",
+     "source": "ricursive.com",
+     "char_end": 2263,
+     "char_start": 1823,
+     "passage_id": "24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263",
+     "published_at": "2026-11-03T00:00:00Z"
+    },
+    {
+     "url": "https://ricursive.com/ripple",
+     "text": "We reached a TerminalBench 2.1 score of 80.5 with only 1.4M rollouts, roughly 70x fewer rol",
+     "doc_id": "24ed9ebcee3dd33c584ac388a8b4bb15",
+     "source": "ricursive.com",
+     "char_end": 3000,
+     "char_start": 2909,
+     "passage_id": "24ed9ebcee3dd33c584ac388a8b4bb15:2909-3000",
+     "published_at": "2026-11-03T00:00:00Z"
+    }
+   ],
+   "reaction": null,
+   "story_ref": "ai-5449d0bd4d43",
+   "reaction_passage_ids": []
+  }
+ },
+ {
+  "story_id": "ai-96c4a5c335fd",
+  "pack": {
+   "depth": "standard",
+   "facts": [],
+   "related": [],
+   "headline": "Sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply for PCBs and chip substrates",
+   "passages": [
+    {
+     "url": "https://asia.nikkei.com/spotlight/supply-chain/china-s-curbs-on-tungsten-used-in-drill-bits-squeeze-ai-supply-chain",
+     "text": "China's export controls on critical metals have disrupted supplies of micro drill bits, little-known but critical components in the AI chip supply chain, in the latest example of how geopolitical tensions are rippling through the global tech industry.",
+     "doc_id": "9e77dcebd729cf1cd42bcf2e121a2a03",
+     "source": "asia.nikkei.com",
+     "char_end": 595,
+     "char_start": 344,
+     "passage_id": "9e77dcebd729cf1cd42bcf2e121a2a03:344-595",
+     "published_at": "2026-11-05T00:00:00Z"
+    }
+   ],
+   "reaction": null,
+   "story_ref": "ai-96c4a5c335fd",
+   "reaction_passage_ids": []
+  }
+ },
+ {
+  "story_id": "ai-606f53bcc3c6",
+  "pack": {
+   "depth": "standard",
+   "facts": [],
+   "related": [],
+   "headline": "OpenAI details pipeline using an upcoming cyber model to find and patch 948 Linux privilege-escalation bugs for $1.2M",
+   "passages": [],
+   "reaction": null,
+   "story_ref": "ai-606f53bcc3c6",
+   "reaction_passage_ids": []
+  }
+ }
+]

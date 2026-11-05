@@ -1,0 +1,166 @@
+{
+ "sessions": [
+  {
+   "id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "brief_id": "br_01m6ndxnsgcert0max2e3m48nj",
+   "started_at": "2026-11-05 08:43:02.860714+00:00",
+   "ended_at": "2026-11-05 08:43:04.784996+00:00",
+   "end_reason": "cut_short",
+   "time_available_s": 600,
+   "client": {
+    "stt": "browser",
+    "tts": "server",
+    "mode": "text"
+   },
+   "state": "ENDED",
+   "position": {
+    "offset_ms": 0,
+    "segment_id": "s010"
+   },
+   "created_at": "2026-11-05 08:43:02.860714+00:00",
+   "memory_outcome": {
+    "report": {
+     "mode": "learn",
+     "changes": [
+      {
+       "delta": 0.3,
+       "label": "open-weight model releases",
+       "action": "reinforce",
+       "reason": "explicit",
+       "interest_id": "i_8b84c0f56f"
+      },
+      {
+       "delta": 0.075,
+       "label": "open-weight model releases",
+       "action": "reinforce",
+       "reason": "implicit dive s=0.5",
+       "interest_id": "i_8b84c0f56f"
+      }
+     ],
+     "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+     "opportunity": 0.3
+    },
+    "outcome": {
+     "at": "2026-11-05T08:43:02.860714Z",
+     "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+     "opportunity": 0.3,
+     "skipped_interest_ids": []
+    }
+   }
+  },
+  {
+   "id": "se_01m6ne2e3hmnsq9hsxdf74tfqp",
+   "user_id": "5a0e0000-0000-4000-8000-000000000001",
+   "run_id": "live",
+   "brief_id": "br_01m6ndxnsgcert0max2e3m48nj",
+   "started_at": "2026-11-05 08:44:09.199199+00:00",
+   "ended_at": "2026-11-05 08:44:15.279229+00:00",
+   "end_reason": "cut_short",
+   "time_available_s": null,
+   "client": {
+    "stt": "browser",
+    "tts": "server",
+    "mode": "voice"
+   },
+   "state": "ENDED",
+   "position": {
+    "offset_ms": 0,
+    "segment_id": "s018"
+   },
+   "created_at": "2026-11-05 08:44:09.199199+00:00",
+   "memory_outcome": {
+    "report": {
+     "mode": "learn",
+     "changes": [],
+     "session_id": "se_01m6ne2e3hmnsq9hsxdf74tfqp",
+     "opportunity": 0.3
+    },
+    "outcome": {
+     "at": "2026-11-05T08:44:09.199199Z",
+     "session_id": "se_01m6ne2e3hmnsq9hsxdf74tfqp",
+     "opportunity": 0.3,
+     "skipped_interest_ids": []
+    }
+   }
+  }
+ ],
+ "turns": [
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "seq": 1,
+   "role": "system",
+   "text": "",
+   "action": "interrupt",
+   "story_ref": "ai-d1753883dbd0",
+   "citations": [],
+   "created_at": "2026-11-05 08:43:02.916606+00:00"
+  },
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "seq": 2,
+   "role": "user",
+   "text": "Wait, who exactly released Kimi K3.1 Pro, and how long is its context window? I'd like more stories like this about open-weight models.",
+   "action": null,
+   "story_ref": "ai-d1753883dbd0",
+   "citations": [],
+   "created_at": "2026-11-05 08:43:02.919982+00:00"
+  },
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "seq": 3,
+   "role": "agent",
+   "text": "Moonshot AI released Kimi K3.1 Pro's weights on Hugging Face. Its context window is 1 million tokens. I'll also note your interest in more open-weight model stories.",
+   "action": "answer",
+   "story_ref": "ai-d1753883dbd0",
+   "citations": [
+    "f4a904d03d800a16a7770eb45e6294e1:31-143",
+    "f4a904d03d800a16a7770eb45e6294e1:297-477"
+   ],
+   "created_at": "2026-11-05 08:43:04.769498+00:00"
+  }
+ ],
+ "memory_signals": [
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "type": "more_like",
+   "story_ref": "ai-d1753883dbd0",
+   "interest_hint": null,
+   "explicit": true,
+   "strength": 1.0,
+   "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kd",
+   "created_at": "2026-11-05 08:43:04.762066+00:00"
+  },
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "type": "dive",
+   "story_ref": "ai-d1753883dbd0",
+   "interest_hint": null,
+   "explicit": false,
+   "strength": 1.0,
+   "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kd",
+   "created_at": "2026-11-05 08:43:04.773948+00:00"
+  },
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "type": "not_reached",
+   "story_ref": "ai-5449d0bd4d43",
+   "interest_hint": null,
+   "explicit": false,
+   "strength": 0.0,
+   "turn_id": null,
+   "created_at": "2026-11-05 08:43:04.777810+00:00"
+  },
+  {
+   "session_id": "se_01m6ne0dae3576nfky8x4dke7v",
+   "type": "not_reached",
+   "story_ref": "ai-96c4a5c335fd",
+   "interest_hint": null,
+   "explicit": false,
+   "strength": 0.0,
+   "turn_id": null,
+   "created_at": "2026-11-05 08:43:04.782931+00:00"
+  }
+ ]
+}

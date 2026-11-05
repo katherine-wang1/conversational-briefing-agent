@@ -1,0 +1,4134 @@
+{
+ "run_id": "live",
+ "beat": "ai",
+ "at": "2026-11-05T08:22:44Z",
+ "version": "de16d79714ee3e35",
+ "flags": {
+  "personalization": true,
+  "memory": "learn",
+  "pipeline": "standard",
+  "prefetch": true,
+  "newsroom_separation": true,
+  "hn_signal": true,
+  "session_ctx_weighting": true,
+  "claim_check": true
+ },
+ "settings": {
+  "newsroom": {
+   "window_hours": 24.0,
+   "update_gap_hours": 12.0,
+   "score_candidates": 80,
+   "score_batch_size": 20,
+   "score_max_output_tokens": 6000,
+   "score_floor": 20,
+   "tiebreak_batch_size": 20,
+   "tiebreak_max_pairs": 40,
+   "tiebreak_max_output_tokens": 1500,
+   "fetch_max_tokens": 800,
+   "embedder": {
+    "name": "fastembed",
+    "model": "BAAI/bge-small-en-v1.5"
+   },
+   "primary_sources": {
+    "ai": [
+     "openai_news",
+     "anthropic_news",
+     "deepmind_blog",
+     "meta_ai_blog",
+     "hf_blog",
+     "nvidia_blog"
+    ],
+    "energy": [
+     "eia_today"
+    ],
+    "physical_ai": [
+     "nvidia_blog"
+    ]
+   },
+   "rules_weights": {
+    "coverage": 0.3,
+    "frontpage": 0.2,
+    "tier": 0.15,
+    "rank": 0.1,
+    "hn_points": 0.1,
+    "hn_comments": 0.05,
+    "velocity": 0.05,
+    "primary": 0.05
+   }
+  },
+  "clustering": {
+   "tau": 0.78,
+   "tiebreak_band": 0.08,
+   "identity_lookback_days": 7
+  },
+  "budget": {
+   "input_tokens": 80000,
+   "fetches": 5
+  }
+ },
+ "prompt_hashes": {
+  "newsroom.score": "837c1c90f5edd249cdca5152a1e418739c4ef003626e040e3fde83d6d28540cf",
+  "newsroom.cluster_tiebreak": "085a0b1216164989c4bf03296b4d98201a58ab89effea6a580203e18ee4d5161"
+ },
+ "embedder": "fastembed:BAAI/bge-small-en-v1.5",
+ "steps": [
+  {
+   "step": "N2",
+   "name": "normalise",
+   "detail": {
+    "observations_in": 119,
+    "observations_kept": 119,
+    "dropped": {
+     "other_beat": 0,
+     "out_of_window": 0,
+     "future": 0,
+     "hn_ablation": 0
+    },
+    "items": 115,
+    "unresolved_aggregator_links": 11
+   }
+  },
+  {
+   "step": "N3",
+   "name": "cluster",
+   "detail": {
+    "stories": 106,
+    "multi_item_stories": 9,
+    "tiebreak_pairs": 40,
+    "tiebreak_merged": 0,
+    "prior_matches": [],
+    "continued": 0,
+    "updates": 0
+   }
+  },
+  {
+   "step": "N4",
+   "name": "features",
+   "detail": {
+    "candidates_for_scoring": [
+     "ai-4acfda106313",
+     "ai-606f53bcc3c6",
+     "ai-d529cf90b317",
+     "ai-68957d2b1fde",
+     "ai-d1753883dbd0",
+     "ai-86e0d936ccae",
+     "ai-4be9a69dfee7",
+     "ai-5449d0bd4d43",
+     "ai-fcc32c401cfa",
+     "ai-3965d71aa58e",
+     "ai-555f2f517bde",
+     "ai-291d887a1d18",
+     "ai-71e67466f92a",
+     "ai-44b0b943975a",
+     "ai-5b293c6056c7",
+     "ai-7dba9afaf10b",
+     "ai-6239ab812316",
+     "ai-75d87fd90c5f",
+     "ai-b67346122cb8",
+     "ai-e8288f8bffa6",
+     "ai-24fcc1dc2b9c",
+     "ai-b429123ff83e",
+     "ai-88dc12c4d984",
+     "ai-691ffdf51520",
+     "ai-9b90758c0018",
+     "ai-71924ff268c1",
+     "ai-2f439238fa87",
+     "ai-fbca2de2220d",
+     "ai-87895a94bb57",
+     "ai-aed21eb37e09",
+     "ai-2c2ce141cc54",
+     "ai-2ab8ca37e4c5",
+     "ai-63f43386a21f",
+     "ai-7f2e3faadab5",
+     "ai-96c4a5c335fd",
+     "ai-61746f7d650a",
+     "ai-1620c0c049de",
+     "ai-e7142d324de2",
+     "ai-932b39aa4b2f",
+     "ai-ad638ebb8212",
+     "ai-baa5e064d8b2",
+     "ai-913b123e2cce",
+     "ai-1fc1004e2a2c",
+     "ai-33555fd13343",
+     "ai-02d39c49cc93",
+     "ai-1afdb3ac7e86",
+     "ai-270f8b8359f8",
+     "ai-3e2ef3d2b640",
+     "ai-5261cb6d7c9a",
+     "ai-642565cc6bb3",
+     "ai-6840c8cee87c",
+     "ai-a3302afb1816",
+     "ai-bb8d1cc11336",
+     "ai-e5dc0def27ac",
+     "ai-f712a9ba1e54",
+     "ai-fb91b5b54631",
+     "ai-ee40d5704f3c",
+     "ai-0a3246aa6d6f",
+     "ai-0c45fb14ec89",
+     "ai-29b2c37298b2",
+     "ai-6f08541ce868",
+     "ai-c299f1c25b80",
+     "ai-e425d3a949f7",
+     "ai-11f79f74d833",
+     "ai-50d5544389f9",
+     "ai-5378b4155531",
+     "ai-78a50dbb4925",
+     "ai-99e5545fc6d7",
+     "ai-fdd77a870e0e",
+     "ai-826c53dd9e2d",
+     "ai-fd3dd1a202b1",
+     "ai-122927540b41",
+     "ai-e15802b29bfb",
+     "ai-03987dd9a690",
+     "ai-138ac0697a0b",
+     "ai-16d269b224d4",
+     "ai-1a574871891c",
+     "ai-20e612672c68",
+     "ai-2bf97e5fcb4b",
+     "ai-2c8a0f2a1b6f"
+    ],
+    "importance_rules": {
+     "ai-4acfda106313": 53.38,
+     "ai-606f53bcc3c6": 51.5,
+     "ai-d529cf90b317": 48.06,
+     "ai-68957d2b1fde": 47.41,
+     "ai-d1753883dbd0": 46.98,
+     "ai-86e0d936ccae": 42.32,
+     "ai-4be9a69dfee7": 41.76,
+     "ai-5449d0bd4d43": 40.38,
+     "ai-fcc32c401cfa": 40.26,
+     "ai-3965d71aa58e": 39.68,
+     "ai-555f2f517bde": 39.46,
+     "ai-291d887a1d18": 39.18,
+     "ai-71e67466f92a": 38.75,
+     "ai-44b0b943975a": 38.74,
+     "ai-5b293c6056c7": 38.52,
+     "ai-7dba9afaf10b": 37.34,
+     "ai-6239ab812316": 37.14,
+     "ai-75d87fd90c5f": 37.13,
+     "ai-b67346122cb8": 36.57,
+     "ai-e8288f8bffa6": 36.38,
+     "ai-24fcc1dc2b9c": 35.99,
+     "ai-b429123ff83e": 35.96,
+     "ai-88dc12c4d984": 35.58,
+     "ai-691ffdf51520": 35.5,
+     "ai-9b90758c0018": 35.16,
+     "ai-71924ff268c1": 34.72,
+     "ai-2f439238fa87": 34.7,
+     "ai-fbca2de2220d": 33.23,
+     "ai-87895a94bb57": 33.08,
+     "ai-aed21eb37e09": 31.48,
+     "ai-2c2ce141cc54": 31.42,
+     "ai-2ab8ca37e4c5": 30.23,
+     "ai-63f43386a21f": 29.33,
+     "ai-7f2e3faadab5": 29.32,
+     "ai-96c4a5c335fd": 28.64,
+     "ai-61746f7d650a": 28.08,
+     "ai-1620c0c049de": 27.63,
+     "ai-e7142d324de2": 27.25,
+     "ai-932b39aa4b2f": 26.93,
+     "ai-ad638ebb8212": 26.65,
+     "ai-baa5e064d8b2": 26.42,
+     "ai-913b123e2cce": 26.21,
+     "ai-1fc1004e2a2c": 25.86,
+     "ai-33555fd13343": 25.71,
+     "ai-02d39c49cc93": 24.75,
+     "ai-1afdb3ac7e86": 24.75,
+     "ai-270f8b8359f8": 24.75,
+     "ai-3e2ef3d2b640": 24.75,
+     "ai-5261cb6d7c9a": 24.75,
+     "ai-642565cc6bb3": 24.75,
+     "ai-6840c8cee87c": 24.75,
+     "ai-a3302afb1816": 24.75,
+     "ai-bb8d1cc11336": 24.75,
+     "ai-e5dc0def27ac": 24.75,
+     "ai-f712a9ba1e54": 24.75,
+     "ai-fb91b5b54631": 24.75,
+     "ai-ee40d5704f3c": 18.83,
+     "ai-0a3246aa6d6f": 18.75,
+     "ai-0c45fb14ec89": 18.75,
+     "ai-29b2c37298b2": 18.75,
+     "ai-6f08541ce868": 18.75,
+     "ai-c299f1c25b80": 18.75,
+     "ai-e425d3a949f7": 18.75,
+     "ai-11f79f74d833": 18.5,
+     "ai-50d5544389f9": 18.5,
+     "ai-5378b4155531": 18.5,
+     "ai-78a50dbb4925": 18.5,
+     "ai-99e5545fc6d7": 18.5,
+     "ai-fdd77a870e0e": 17.17,
+     "ai-826c53dd9e2d": 16.98,
+     "ai-fd3dd1a202b1": 15.08,
+     "ai-122927540b41": 14.75,
+     "ai-e15802b29bfb": 14.39,
+     "ai-03987dd9a690": 13.75,
+     "ai-138ac0697a0b": 13.75,
+     "ai-16d269b224d4": 13.75,
+     "ai-1a574871891c": 13.75,
+     "ai-20e612672c68": 13.75,
+     "ai-2bf97e5fcb4b": 13.75,
+     "ai-2c8a0f2a1b6f": 13.75
+    }
+   }
+  },
+  {
+   "step": "N5",
+   "name": "score",
+   "detail": {
+    "batches": 4,
+    "scored": 80,
+    "rules_only": 20,
+    "fetches_used": 0,
+    "input_tokens_used": 81706
+   }
+  },
+  {
+   "step": "N6",
+   "name": "digest",
+   "detail": {
+    "digest_id": "ai-20261105T0822Z-c22b5dbc",
+    "entries": 30,
+    "below_floor": 38,
+    "floor": 20,
+    "digest_size": 30
+   }
+  }
+ ],
+ "llm_calls": [
+  {
+   "step": "N3",
+   "role": "newsroom.cluster_tiebreak",
+   "prompt_id": "newsroom.cluster_tiebreak",
+   "prompt_version": "1",
+   "prompt_hash": "085a0b1216164989c4bf03296b4d98201a58ab89effea6a580203e18ee4d5161",
+   "model": "anthropic/claude-haiku-5.5",
+   "provider": "openrouter",
+   "tokens_in": 6943,
+   "tokens_out": 1221,
+   "tokens_cached": 0,
+   "cost_usd": 0.00132295,
+   "cached": false,
+   "latency_ms": 5687,
+   "ok": true,
+   "error": null,
+   "output": {
+    "decisions": [
+     {
+      "pair_id": "a535c518cb2e",
+      "same_event": false,
+      "reason": "Trend overview of AI PACs versus a specific report on Leading the Future's finances; different coverage focus."
+     },
+     {
+      "pair_id": "d3d850324883",
+      "same_event": false,
+      "reason": "Linux vulnerability pipeline announcement versus a separate Git backend engineering post."
+     },
+     {
+      "pair_id": "72cdf4aec84e",
+      "same_event": false,
+      "reason": "Krebs article on renting a White House IP address versus a layer3 report on residential proxies; likely different sources on possibly related topic but not clearly the same announcement."
+     },
+     {
+      "pair_id": "bada54e994ae",
+      "same_event": false,
+      "reason": "Two different MIT Technology Review articles on separate topics: analytics quality versus data lineage security."
+     },
+     {
+      "pair_id": "a39f3d7d27f0",
+      "same_event": false,
+      "reason": "Anthropic compute economics story versus FlashProve model identity system; different developments."
+     },
+     {
+      "pair_id": "260b8f1cc740",
+      "same_event": false,
+      "reason": "Big Tech spin on AI backlash versus post-midterm data center clash outlook; different articles and subjects."
+     },
+     {
+      "pair_id": "ea3857ea3fe4",
+      "same_event": false,
+      "reason": "Two unrelated Reddit posts about conferences and agent evaluation costs."
+     },
+     {
+      "pair_id": "e52de547084b",
+      "same_event": false,
+      "reason": "OpenAI Linux vulnerability pipeline versus a separate bug bounty program announcement."
+     },
+     {
+      "pair_id": "b6cf8030a757",
+      "same_event": false,
+      "reason": "Claude game-cloning rules commentary versus a Reddit post about paper desk rejections."
+     },
+     {
+      "pair_id": "737ee9878a0d",
+      "same_event": false,
+      "reason": "OpenAI Linux vulnerability pipeline versus a Cisco and OpenAI security partnership post."
+     },
+     {
+      "pair_id": "4c9976d81c10",
+      "same_event": false,
+      "reason": "Two unrelated Reddit posts on conferences and PhD publication rates."
+     },
+     {
+      "pair_id": "f7205aaa8ef7",
+      "same_event": false,
+      "reason": "DoorDash AI agent usage versus Uber AI agent booking usage; different companies."
+     },
+     {
+      "pair_id": "a62358ecd96f",
+      "same_event": false,
+      "reason": "Russian underground data centers versus US data centers using jet engines; different actors and developments."
+     },
+     {
+      "pair_id": "6a78c1180ec6",
+      "same_event": false,
+      "reason": "Game-cloning commentary versus a Hugging Face policy podcast; unrelated."
+     },
+     {
+      "pair_id": "416bdf03b6a5",
+      "same_event": false,
+      "reason": "Game-cloning commentary versus a reverse game theory AI alignment article; unrelated."
+     },
+     {
+      "pair_id": "66fc30e7f668",
+      "same_event": false,
+      "reason": "IBM Palette deck-building model versus Ripple-65B model preview; different releases."
+     },
+     {
+      "pair_id": "5486790108f2",
+      "same_event": false,
+      "reason": "Ripple-65B model preview versus an essay on the agentic web; different items."
+     },
+     {
+      "pair_id": "a27f938ebb6a",
+      "same_event": false,
+      "reason": "Game-cloning commentary versus Anthropic FlashProve identity system; unrelated."
+     },
+     {
+      "pair_id": "9225d8c175fe",
+      "same_event": false,
+      "reason": "AI PAC midterm results versus OpenAI's 2028 election proposal; different developments."
+     },
+     {
+      "pair_id": "963b69897d68",
+      "same_event": false,
+      "reason": "Google's school AI and search offer versus backlash coverage of the same plan; different outlets focus on reaction, but same plan may match."
+     }
+    ]
+   }
+  },
+  {
+   "step": "N3",
+   "role": "newsroom.cluster_tiebreak",
+   "prompt_id": "newsroom.cluster_tiebreak",
+   "prompt_version": "1",
+   "prompt_hash": "085a0b1216164989c4bf03296b4d98201a58ab89effea6a580203e18ee4d5161",
+   "model": "anthropic/claude-haiku-5.5",
+   "provider": "openrouter",
+   "tokens_in": 7061,
+   "tokens_out": 1083,
+   "tokens_cached": 0,
+   "cost_usd": 0.00126575,
+   "cached": false,
+   "latency_ms": 4740,
+   "ok": true,
+   "error": null,
+   "output": {
+    "decisions": [
+     {
+      "pair_id": "ab9d5f012772",
+      "same_event": false,
+      "reason": "Different items: a benchmark update versus a model preview."
+     },
+     {
+      "pair_id": "7edb5666e576",
+      "same_event": false,
+      "reason": "Cisco partnership versus OpenAI's internal security sprint; different actors and developments."
+     },
+     {
+      "pair_id": "085106a8ee6a",
+      "same_event": false,
+      "reason": "Opinion on voter backlash versus a report on PAC spending; different stories."
+     },
+     {
+      "pair_id": "066f2b15f45f",
+      "same_event": false,
+      "reason": "Different companies' topics: NVIDIA city AI services versus agentic analytics article."
+     },
+     {
+      "pair_id": "82e27dbf7832",
+      "same_event": false,
+      "reason": "Russian underground data centers versus post-midterm data center clash; different events."
+     },
+     {
+      "pair_id": "a4d5abc5d465",
+      "same_event": false,
+      "reason": "NVIDIA fab article versus Anthropic compute economics; unrelated."
+     },
+     {
+      "pair_id": "6eea7cfe11b6",
+      "same_event": false,
+      "reason": "Semiconductor fab article versus Reddit conference post; unrelated."
+     },
+     {
+      "pair_id": "e51579804a37",
+      "same_event": false,
+      "reason": "Semiconductor fab article versus Hugging Face podcast; unrelated."
+     },
+     {
+      "pair_id": "49f458c7e4ac",
+      "same_event": false,
+      "reason": "Claude game cloning rules versus NVIDIA fab article; unrelated."
+     },
+     {
+      "pair_id": "d16b835a1a85",
+      "same_event": false,
+      "reason": "Jet engines for data centers versus midterm clash; different developments."
+     },
+     {
+      "pair_id": "bf924d0812e6",
+      "same_event": false,
+      "reason": "ICLR reviews discussion versus PhD publication rate question; different posts."
+     },
+     {
+      "pair_id": "4f88fd217cb3",
+      "same_event": false,
+      "reason": "Token counting opinion versus data lineage article; different pieces."
+     },
+     {
+      "pair_id": "8f155e6baf99",
+      "same_event": false,
+      "reason": "Anthropic provable inference research versus CWE-bench; different papers."
+     },
+     {
+      "pair_id": "b41647229c3d",
+      "same_event": false,
+      "reason": "AI backlash opinion versus Reddit conference post; unrelated."
+     },
+     {
+      "pair_id": "96b92fa15f54",
+      "same_event": false,
+      "reason": "Voter backlash opinion versus OpenAI 2028 election piece; different actors and events."
+     },
+     {
+      "pair_id": "c193a4963930",
+      "same_event": false,
+      "reason": "Import AI newsletter versus Ripple-65B preview; different items."
+     },
+     {
+      "pair_id": "78a15e9a935d",
+      "same_event": false,
+      "reason": "Cat Wu joining OpenAI versus Jill Hazelbaker appointment; different hires."
+     },
+     {
+      "pair_id": "349b5610231a",
+      "same_event": false,
+      "reason": "Agent evaluation cost discussion versus data lineage article; unrelated."
+     },
+     {
+      "pair_id": "9127beb95830",
+      "same_event": false,
+      "reason": "Voter backlash opinion versus Google school search backlash; different events."
+     },
+     {
+      "pair_id": "8184c9b89d7d",
+      "same_event": false,
+      "reason": "Cisco security partnership versus Scaling Git at OpenAI; different topics."
+     }
+    ]
+   }
+  },
+  {
+   "step": "N5",
+   "role": "newsroom.score",
+   "prompt_id": "newsroom.score",
+   "prompt_version": "1",
+   "prompt_hash": "837c1c90f5edd249cdca5152a1e418739c4ef003626e040e3fde83d6d28540cf",
+   "model": "anthropic/claude-haiku-5.5",
+   "provider": "openrouter",
+   "tokens_in": 22347,
+   "tokens_out": 10864,
+   "tokens_cached": 2640,
+   "cost_usd": 0.007495099999999999,
+   "cached": false,
+   "latency_ms": 38899,
+   "ok": true,
+   "error": null,
+   "output": {
+    "entries": [
+     {
+      "story_id": "ai-4acfda106313",
+      "headline": "OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls",
+      "summary": "OpenAI's Images 2.6 brings faster image generation, GIF creation, more precise editing and new API controls across ChatGPT, Codex and the API. The Verge reports ChatGPT can now make animated GIFs from prompts or uploaded photos alongside the model.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "OpenAI",
+       "ChatGPT",
+       "Codex",
+       "Images 2.6",
+       "The Verge"
+      ],
+      "importance": 70,
+      "evidence": [
+       "hn_front rank 3 with 257 points at observation",
+       "primary source present (openai_news)",
+       "2 independent domains (openai.com, theverge.com)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-606f53bcc3c6",
+      "headline": "OpenAI details pipeline using an upcoming cyber model to find and patch 948 Linux privilege-escalation bugs for $1.2M",
+      "summary": "OpenAI describes an autonomous pipeline that found, validated and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel, at a stated $1.2M in API costs. The headline calls the model upcoming, so its release status is unconfirmed.",
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "OpenAI",
+       "Linux kernel"
+      ],
+      "importance": 66,
+      "evidence": [
+       "hn_front rank 4 with 300 points at observation",
+       "techmeme rank 13",
+       "primary source present (openai_news)",
+       "single independent domain"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Cost and vulnerability counts come from the headline only; not checked against the primary post."
+     },
+     {
+      "story_id": "ai-d529cf90b317",
+      "headline": "Layer3 Intel reports residential proxies detected on White House network",
+      "summary": "A Layer3 Intel blog post titled 'Residential proxies detected on White House network' reached the top of Hacker News. The title gives no detail and does not mention AI.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Layer3 Intel",
+       "White House"
+      ],
+      "importance": 28,
+      "evidence": [
+       "hn_front rank 1 with 970 points at observation",
+       "single source (hn_front), no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Weak AI fit; title only. Single-source claim, unverified. Consider routing to security desk."
+     },
+     {
+      "story_id": "ai-68957d2b1fde",
+      "headline": "Anthropic posts provable-inference progress for LLMs; allenai releases StateBench for state tracking in long documents",
+      "summary": "Anthropic published a research post titled 'Progress on provable inference for large language models'. A Hugging Face blog from allenai introduces StateBench, a benchmark testing how language models track state changes over long documents. The snippets give no results.",
+      "subtopics": [
+       "research-methods",
+       "evals-and-safety"
+      ],
+      "entities": [
+       "Anthropic",
+       "allenai",
+       "StateBench"
+      ],
+      "importance": 52,
+      "evidence": [
+       "hn_front rank 22 with 212 points at observation",
+       "primary source present (anthropic.com)",
+       "hf_blog tier 2 source (allenai)",
+       "2 independent domains"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Two distinct research items bundled under one story_id. Snippets are titles only."
+     },
+     {
+      "story_id": "ai-d1753883dbd0",
+      "headline": "Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face",
+      "summary": "The Kimi K3.1 Pro model weights are listed as out on the Hugging Face moonshotai page. The item has no snippet beyond the title.",
+      "subtopics": [
+       "open-models"
+      ],
+      "entities": [
+       "Moonshot AI",
+       "Kimi K3.1 Pro",
+       "Hugging Face"
+      ],
+      "importance": 64,
+      "evidence": [
+       "hn_front rank 7 with 508 points at observation",
+       "primary source present (huggingface.co)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Title only; licence and benchmarks not verified. Single domain."
+     },
+     {
+      "story_id": "ai-86e0d936ccae",
+      "headline": "OpenAI agrees to acquire Pierre Computer Company to expand Codex code tools",
+      "summary": "OpenAI will acquire Pierre Computer Company, a move the post says expands Codex's tools for building, understanding and reviewing code. Deal terms are not in the snippet.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "OpenAI",
+       "Pierre Computer Company",
+       "Codex"
+      ],
+      "importance": 58,
+      "evidence": [
+       "hn_front rank 25 with 232 points at observation",
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-4be9a69dfee7",
+      "headline": "Lemmings CSS animation shared on Hacker News front page",
+      "summary": "A personal GitHub Pages project recreates Lemmings using CSS animation. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [],
+      "importance": 4,
+      "evidence": [
+       "hn_front rank 2 with 114 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     },
+     {
+      "story_id": "ai-5449d0bd4d43",
+      "headline": "Ricursive previews Ripple-65B as open-weight model claiming state of the art on agentic coding",
+      "summary": "Ricursive's preview page claims Ripple-65B is a U.S. open-weight model with state-of-the-art results on agentic coding. The snippet gives no benchmark figures.",
+      "subtopics": [
+       "open-models"
+      ],
+      "entities": [
+       "Ricursive",
+       "Ripple-65B"
+      ],
+      "importance": 44,
+      "evidence": [
+       "hn_front rank 8 with 282 points at observation",
+       "single source (hn_front), no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Vendor SOTA claim, unverified; single domain. Check weights and licence before use."
+     },
+     {
+      "story_id": "ai-fcc32c401cfa",
+      "headline": "IEEE Spectrum argues AI is forcing organizations to pay off 40 years of technical debt",
+      "summary": "An IEEE Spectrum piece argues AI is pushing organizations to address decades of technical debt, linked to a PHP vulnerability headline. The snippet gives only the title.",
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "IEEE Spectrum",
+       "php2shell"
+      ],
+      "importance": 42,
+      "evidence": [
+       "hn_front rank 19 with 1167 points at observation",
+       "673 comments at observation",
+       "single independent domain, no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Opinion or feature; high HN engagement but AI relevance is only in the framing. Title only."
+     },
+     {
+      "story_id": "ai-3965d71aa58e",
+      "headline": "Go team publishes a new JSON API for the Go language",
+      "summary": "The Go blog announces a new API for JSON in Go. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Go"
+      ],
+      "importance": 8,
+      "evidence": [
+       "hn_front rank 12 with 298 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     },
+     {
+      "story_id": "ai-555f2f517bde",
+      "headline": "Birds Outside My Window post says insects don't swarm at LED lights",
+      "summary": "A blog post argues insects do not swarm at LED lights. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [],
+      "importance": 4,
+      "evidence": [
+       "hn_front rank 11 with 236 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     },
+     {
+      "story_id": "ai-291d887a1d18",
+      "headline": "AMD expects to outsell Intel in Q4 for the first time, with guidance above Intel's projections",
+      "summary": "Tom's Hardware reports AMD expects to outsell Intel in Q4 for the first time, with about $17B in guidance. The snippet does not separate AI accelerator revenue from CPU sales.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "AMD",
+       "Intel",
+       "Tom's Hardware"
+      ],
+      "importance": 22,
+      "evidence": [
+       "hn_front rank 30 with 536 points at observation",
+       "single independent domain"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Chip-market item with weak AI-specific content; boundary with general tech business coverage."
+     },
+     {
+      "story_id": "ai-71e67466f92a",
+      "headline": "SpaceX unveils Starfall for routine access to microgravity",
+      "summary": "A SpaceX page describes Starfall as affordable, routine access to microgravity. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "SpaceX",
+       "Starfall"
+      ],
+      "importance": 4,
+      "evidence": [
+       "hn_front rank 14 with 206 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     },
+     {
+      "story_id": "ai-44b0b943975a",
+      "headline": "99% Invisible republishes 2016 article on San Francisco making guerrilla bike lanes permanent",
+      "summary": "A 2016 99% Invisible article covers San Francisco making illicit bike lanes permanent. It is not an AI story and is old.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "99% Invisible",
+       "San Francisco"
+      ],
+      "importance": 3,
+      "evidence": [
+       "hn_front rank 24 with 294 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat and dated (2016); no AI content."
+     },
+     {
+      "story_id": "ai-5b293c6056c7",
+      "headline": "Conductor announces it is joining Meta",
+      "summary": "Conductor's announcement page says Conductor is joining Meta. The snippet does not describe the product or deal terms.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Conductor",
+       "Meta"
+      ],
+      "importance": 48,
+      "evidence": [
+       "hn_front rank 15 with 169 points at observation",
+       "178 comments at observation",
+       "single source (hn_front), no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Acquisition claim from title only; AI relevance not stated in the inputs. Verify before publishing."
+     },
+     {
+      "story_id": "ai-7dba9afaf10b",
+      "headline": "Tencent publishes Hy4 research page",
+      "summary": "A Tencent AI research page titled 'Tencent Hy4' appeared on Hacker News. The inputs give no description of the model or results.",
+      "subtopics": [
+       "frontier-models"
+      ],
+      "entities": [
+       "Tencent",
+       "Hy4"
+      ],
+      "importance": 38,
+      "evidence": [
+       "hn_front rank 27 with 234 points at observation",
+       "single source (hn_front), no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Thin inputs: title only. Model type, size and licence unknown."
+     },
+     {
+      "story_id": "ai-6239ab812316",
+      "headline": "Ars Technica reports DoorDash says outside AI agents have only produced hundreds of orders",
+      "summary": "Ars Technica reports DoorDash says outside AI agents have led to only hundreds of orders so far. The snippet gives no further figures.",
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "DoorDash",
+       "Ars Technica"
+      ],
+      "importance": 40,
+      "evidence": [
+       "hn_front rank 29 with 125 points at observation",
+       "228 comments at observation",
+       "single independent domain"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Single-source report of a company statement; title only."
+     },
+     {
+      "story_id": "ai-75d87fd90c5f",
+      "headline": "Guardian asks whether anything can save the UK high street",
+      "summary": "A Guardian feature asks whether anything can save the UK high street, citing Rotherham. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "The Guardian",
+       "Rotherham"
+      ],
+      "importance": 3,
+      "evidence": [
+       "hn_front rank 28 with 112 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     },
+     {
+      "story_id": "ai-b67346122cb8",
+      "headline": "Qualcomm launches Cloud AI 100 Ultra, a 150W AI accelerator card with 128GB memory",
+      "summary": "Qualcomm's product page describes the Cloud AI 100 Ultra as a 150W AI accelerator card with 128GB at 548GB/s. The snippet gives no pricing or customer details.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Qualcomm",
+       "Cloud AI 100 Ultra"
+      ],
+      "importance": 34,
+      "evidence": [
+       "hn_front rank 21 with 141 points at observation",
+       "single source (hn_front), vendor product page only"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Vendor spec page; specs taken from title only, not independently verified."
+     },
+     {
+      "story_id": "ai-e8288f8bffa6",
+      "headline": "Developer gets co-op working in DOS Wing Commander after a decade of reversing",
+      "summary": "A personal project page describes getting co-operative multiplayer working in DOS Wing Commander through reverse engineering. It is not an AI story.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Wing Commander"
+      ],
+      "importance": 3,
+      "evidence": [
+       "hn_front rank 18 with 171 points at observation"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat; no AI content."
+     }
+    ]
+   }
+  },
+  {
+   "step": "N5",
+   "role": "newsroom.score",
+   "prompt_id": "newsroom.score",
+   "prompt_version": "1",
+   "prompt_hash": "837c1c90f5edd249cdca5152a1e418739c4ef003626e040e3fde83d6d28540cf",
+   "model": "anthropic/claude-haiku-5.5",
+   "provider": "openrouter",
+   "tokens_in": 22824,
+   "tokens_out": 11234,
+   "tokens_cached": 5280,
+   "cost_usd": 0.007424200000000001,
+   "cached": false,
+   "latency_ms": 37264,
+   "ok": true,
+   "error": null,
+   "output": {
+    "entries": [
+     {
+      "story_id": "ai-24fcc1dc2b9c",
+      "headline": "Mofu-dev blog post covers spreading liquid with Three.js",
+      "summary": "A personal dev blog post on Three.js liquid rendering reached the Hacker News front page. It is not about AI models, labs, or the AI industry.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "mofu-dev",
+       "Three.js"
+      ],
+      "importance": 5,
+      "evidence": [
+       "hn_front tier 1, best rank 9",
+       "68 HN points at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-b429123ff83e",
+      "headline": "CNN reports a wave of plastic-free coffee pods and machines",
+      "summary": "A CNN food article on plastic-free coffee pods and machines drew Hacker News attention. It is not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "CNN"
+      ],
+      "importance": 4,
+      "evidence": [
+       "hn_front tier 1, best rank 26",
+       "87 HN points, 96 comments at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-88dc12c4d984",
+      "headline": "Hacker News thread asks readers about their current AI agentic setups",
+      "summary": "A Hacker News discussion thread asks users to describe their current AI agent setups. It is a community discussion, not a reported news event.",
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Hacker News"
+      ],
+      "importance": 40,
+      "evidence": [
+       "hn_front tier 1, best rank 20",
+       "297 HN points, 301 comments at observation",
+       "n_independent_domains 0"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Discussion thread only; no primary source or reporting. Treat as community interest signal."
+     },
+     {
+      "story_id": "ai-691ffdf51520",
+      "headline": "Blog post reports an ISP hijacking DNS traffic for a developer",
+      "summary": "A personal blog post describes DNS tampering by an ISP. It is a networking story and not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "karthihegde.dev"
+      ],
+      "importance": 5,
+      "evidence": [
+       "hn_front tier 1, best rank 13",
+       "53 HN points at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-9b90758c0018",
+      "headline": "Blog series part 3 covers hacking the Xbox 360 hypervisor",
+      "summary": "A security write-up on Xbox 360 hypervisor exploitation reached the Hacker News front page. It is not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "icode4.coffee",
+       "Xbox 360"
+      ],
+      "importance": 5,
+      "evidence": [
+       "hn_front tier 1, best rank 16",
+       "109 HN points at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-71924ff268c1",
+      "headline": "Altera announces Agilex 2X FPGA and SoC portfolio",
+      "summary": "Altera has announced the Agilex 2X, described as a complete FPGA and SoC portfolio. The snippet gives no performance or availability details.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Altera",
+       "Agilex 2X"
+      ],
+      "importance": 15,
+      "evidence": [
+       "hn_front tier 1, best rank 6",
+       "19 HN points at observation",
+       "single source (hn_front); no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Hardware product, only loosely AI-related; boundary item for chips-and-compute."
+     },
+     {
+      "story_id": "ai-2f439238fa87",
+      "headline": "Zig devlog post covers partial operator precedence",
+      "summary": "A Zig language devlog post on partial operator precedence reached the Hacker News front page. It is not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Zig"
+      ],
+      "importance": 4,
+      "evidence": [
+       "hn_front tier 1, best rank 5",
+       "17 HN points at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-fbca2de2220d",
+      "headline": "Trusted Firmware posts notice on future maintenance of Mbed TLS",
+      "summary": "A mailing-list post announces future maintenance plans for the Mbed TLS cryptography library. It is not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Mbed TLS",
+       "Trusted Firmware"
+      ],
+      "importance": 5,
+      "evidence": [
+       "hn_front tier 1, best rank 10",
+       "27 HN points, 3 comments at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-87895a94bb57",
+      "headline": "OpenAI's Greg Brockman says H1 2026 was rough but agentic coding drove Q3 revenue inflection",
+      "summary": "Per a WSJ report by Maxwell Zeff, Brockman says the first half of 2026 was difficult before agentic coding tools, GPT-5.6 Sol, and ChatGPT Work drove a revenue inflection in Q3. No company financials are given in the snippet.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "OpenAI",
+       "Greg Brockman",
+       "GPT-5.6 Sol",
+       "ChatGPT Work",
+       "Wall Street Journal",
+       "Maxwell Zeff"
+      ],
+      "importance": 80,
+      "evidence": [
+       "techmeme rank 1",
+       "single source (techmeme, WSJ article)",
+       "no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Revenue claims are executive characterizations; no figures in snippet. Verify before publishing numbers."
+     },
+     {
+      "story_id": "ai-aed21eb37e09",
+      "headline": "Kino AI, a YC S23 company, launches AI media manager and video editor",
+      "summary": "Kino AI, described as a Y Combinator S23 company, is presented as an AI media manager and video editor. The snippet gives no product details or traction figures.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "Kino AI",
+       "Y Combinator"
+      ],
+      "importance": 30,
+      "evidence": [
+       "hn_front tier 1, best rank 23",
+       "87 HN points, 33 comments at observation",
+       "n_independent_domains 0"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Only the HN Show-style post is available; no independent coverage."
+     },
+     {
+      "story_id": "ai-2c2ce141cc54",
+      "headline": "Bloomberg reports UK entry-level job postings mentioning AI up about 3x since early 2025",
+      "summary": "Adzuna data shows UK entry-level postings mentioning AI are up roughly 3x since early 2025, and Indeed says one in six vacancies in AI-exposed fields now mentions AI, up 2x year on year.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Adzuna",
+       "Indeed",
+       "Bloomberg",
+       "Irina Anghel"
+      ],
+      "importance": 40,
+      "evidence": [
+       "techmeme rank 2",
+       "single source (techmeme, Bloomberg article)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Labor-market story; figures are from cited data providers, not independently verified here."
+     },
+     {
+      "story_id": "ai-2ab8ca37e4c5",
+      "headline": "Pro-AI super PAC Leading the Future ends midterms with over $20M after spending about $100M",
+      "summary": "Wired reports that Leading the Future ended the midterms with more than $20M, down from about $100M, after backing safe bipartisan candidates while its riskier bets failed.",
+      "subtopics": [
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Leading the Future",
+       "Wired",
+       "Tess Owen"
+      ],
+      "importance": 50,
+      "evidence": [
+       "techmeme rank 3",
+       "single source (techmeme, Wired article)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Single-source financial figures; unverified."
+     },
+     {
+      "story_id": "ai-63f43386a21f",
+      "headline": "CNBC reports Chinese chipmakers' engineer hiring clashes with Taiwan and South Korea trade-secret protections",
+      "summary": "CNBC reports that aggressive hiring of experienced engineers by Chinese chipmakers conflicts with efforts in Taiwan and South Korea to protect trade secrets. The snippet names no specific cases.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "CNBC",
+       "Jenny Lee",
+       "China",
+       "Taiwan",
+       "South Korea"
+      ],
+      "importance": 42,
+      "evidence": [
+       "techmeme rank 4",
+       "single source (techmeme, CNBC article)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Talent-and-trade-secret story; could fit business-and-funding instead."
+     },
+     {
+      "story_id": "ai-7f2e3faadab5",
+      "headline": "Krebs on Security asks whether one can rent an internet address at the White House",
+      "summary": "A Krebs on Security post asks whether one can rent an internet address at the White House. It is not AI-related.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Krebs on Security",
+       "White House"
+      ],
+      "importance": 5,
+      "evidence": [
+       "hn_front tier 1, best rank 17",
+       "10 HN points, 0 comments at observation",
+       "single source (hn_front)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Off-beat for the AI desk; low score."
+     },
+     {
+      "story_id": "ai-96c4a5c335fd",
+      "headline": "Nikkei Asia sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply",
+      "summary": "Nikkei Asia sources report that Chinese export curbs on critical metals have disrupted supplies of tungsten carbide micro drill bits used in PCBs and chip substrates. The snippet names no volumes or companies.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Nikkei Asia",
+       "Cheng Ting-Fang",
+       "China"
+      ],
+      "importance": 45,
+      "evidence": [
+       "techmeme rank 5",
+       "single source (techmeme, Nikkei Asia article)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Anonymous sourcing; single-source claim, unverified."
+     },
+     {
+      "story_id": "ai-61746f7d650a",
+      "headline": "Reuters: YMTC puts Shanghai IPO on hold, seeking about $4.9B, as China tightens share sale approvals",
+      "summary": "Reuters, citing sources and a company memo, reports that NAND flash maker YMTC has put its Shanghai IPO on hold as China tightens share sale approvals. The company sought to raise about $4.9B.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "YMTC",
+       "Reuters",
+       "Shanghai Stock Exchange"
+      ],
+      "importance": 40,
+      "evidence": [
+       "techmeme rank 6",
+       "single source (techmeme, Reuters article)",
+       "company memo cited in snippet"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Memory-chip maker IPO; relevance to AI compute is indirect. Could fit business-and-funding."
+     },
+     {
+      "story_id": "ai-1620c0c049de",
+      "headline": "FT: Microsoft rejects option to double Nscale Texas data center contract, hitting Nscale's $35B IPO plans",
+      "summary": "Financial Times sources say Microsoft declined an option to more than double its Texas data center contract with Nscale. The report calls this a setback for Nscale's ambitions for a $35B IPO.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Microsoft",
+       "Nscale",
+       "Financial Times"
+      ],
+      "importance": 45,
+      "evidence": [
+       "techmeme rank 7",
+       "single source (techmeme, FT article)",
+       "no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Physical data-center site contract is a boundary item for energy/data-center-buildout; filed here for the IPO angle. Single-source report."
+     },
+     {
+      "story_id": "ai-e7142d324de2",
+      "headline": "Microsoft previews smartphone controllers for Xbox Cloud Gaming on smart TVs",
+      "summary": "Xbox Wire previews using smartphones as controllers for Xbox Cloud Gaming on supported smart TVs and adds direct Wi-Fi cloud gaming for the Nano Controller. This is a gaming product update.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Microsoft",
+       "Xbox Cloud Gaming",
+       "Nano Controller",
+       "XBOX Wire"
+      ],
+      "importance": 8,
+      "evidence": [
+       "techmeme rank 8",
+       "single source (techmeme, Xbox Wire)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Gaming story, not AI; low score."
+     },
+     {
+      "story_id": "ai-932b39aa4b2f",
+      "headline": "Business Insider source says Meta drops fruit codenames for AI models after latest model Watermelon",
+      "summary": "A Business Insider source report says Meta has stopped using fruit names for its AI model codenames because they did not suit its ambitions. The latest model was codenamed Watermelon.",
+      "subtopics": [
+       "frontier-models"
+      ],
+      "entities": [
+       "Meta",
+       "Business Insider",
+       "Charles Rollet",
+       "Watermelon"
+      ],
+      "importance": 35,
+      "evidence": [
+       "techmeme rank 9",
+       "single source (techmeme, Business Insider article)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Single-source report on internal naming; unverified."
+     },
+     {
+      "story_id": "ai-ad638ebb8212",
+      "headline": "FT: China tells SoftBank it will block $5.4B acquisition of ABB's robotics division",
+      "summary": "Financial Times sources say China has told SoftBank it will not allow its $5.4B acquisition of ABB's robotics division to proceed. The snippet notes China is the division's biggest market.",
+      "subtopics": [
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "China",
+       "SoftBank",
+       "ABB",
+       "Financial Times",
+       "David Keohane"
+      ],
+      "importance": 40,
+      "evidence": [
+       "techmeme rank 10",
+       "single source (techmeme, FT article)",
+       "no primary source present"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Single-source report of a government position; unverified. Robotics angle may fall under physical_ai."
+     }
+    ]
+   }
+  },
+  {
+   "step": "N5",
+   "role": "newsroom.score",
+   "prompt_id": "newsroom.score",
+   "prompt_version": "1",
+   "prompt_hash": "837c1c90f5edd249cdca5152a1e418739c4ef003626e040e3fde83d6d28540cf",
+   "model": "anthropic/claude-haiku-5.5",
+   "provider": "openrouter",
+   "tokens_in": 22531,
+   "tokens_out": 10634,
+   "tokens_cached": 2640,
+   "cost_usd": 0.0073985000000000006,
+   "cached": false,
+   "latency_ms": 36666,
+   "ok": true,
+   "error": null,
+   "output": {
+    "entries": [
+     {
+      "story_id": "ai-baa5e064d8b2",
+      "headline": "Palo Alto Networks in talks to acquire Israeli startup Clutch Security for about $500M, per The Information",
+      "summary": "According to sources cited by The Information, Palo Alto Networks is in talks to buy Clutch Security, which makes software for tracking passwords used by AI agents, for roughly $500M. The deal is not confirmed.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Palo Alto Networks",
+       "Clutch Security",
+       "The Information"
+      ],
+      "importance": 50,
+      "evidence": [
+       "techmeme rank 11",
+       "single source (techmeme, tier 1)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Unconfirmed talks reported via anonymous sources; single-source claim."
+     },
+     {
+      "story_id": "ai-913b123e2cce",
+      "headline": "Pliant raises $80M Series C led by Seaya Nova and Speedinvest to open B2B payments to AI agents",
+      "summary": "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Speedinvest. The company is opening its B2B payments infrastructure to AI agents.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Pliant",
+       "Seaya Nova",
+       "Speedinvest",
+       "The Next Web"
+      ],
+      "importance": 40,
+      "evidence": [
+       "techmeme rank 12",
+       "single source (techmeme, tier 1)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-1fc1004e2a2c",
+      "headline": "AppLovin reports Q3 revenue up 55% to $2.18B and forecasts Q4 above estimates",
+      "summary": "AppLovin reported Q3 revenue of $2.18B, up 55% year over year and above the $2.07B estimate, and guided Q4 above estimates. Shares rose more than 20% after hours, per MarketWatch.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "AppLovin",
+       "MarketWatch"
+      ],
+      "importance": 25,
+      "evidence": [
+       "techmeme rank 14",
+       "single source (techmeme, tier 1)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Ad-tech earnings with weak AI fit; the linked URL is a generic djnewswires page, not the article."
+     },
+     {
+      "story_id": "ai-33555fd13343",
+      "headline": "Cat Wu leaves Anthropic and joins OpenAI to lead core product management",
+      "summary": "Cat Wu, former product lead for Claude Code at Anthropic, says she is joining OpenAI to lead product management for core products. She left Anthropic the previous week, per Business Insider.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Cat Wu",
+       "Anthropic",
+       "OpenAI",
+       "Claude Code",
+       "Business Insider"
+      ],
+      "importance": 45,
+      "evidence": [
+       "techmeme rank 15",
+       "single source (techmeme, tier 1)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-02d39c49cc93",
+      "headline": "OpenAI describes Pando, a Git-compatible backend built for Codex-scale development",
+      "summary": "OpenAI published a post on how it built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "OpenAI",
+       "Pando",
+       "Codex",
+       "Git"
+      ],
+      "importance": 35,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-1afdb3ac7e86",
+      "headline": "DevRev uses OpenAI GPT-6.1 Sol to power autonomous enterprise self-service",
+      "summary": "An OpenAI customer post says DevRev uses GPT-6.1 Sol to power its Computer and Operator products for enterprise service, balancing reasoning, speed and cost.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "DevRev",
+       "OpenAI",
+       "GPT-6.1 Sol"
+      ],
+      "importance": 30,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Model name appears only in the snippet; customer case study, not an independent report."
+     },
+     {
+      "story_id": "ai-270f8b8359f8",
+      "headline": "Heimstaden uses ChatGPT Enterprise and Codex to run residential property management",
+      "summary": "An OpenAI customer story says Heimstaden is using ChatGPT Enterprise and Codex to change property management, cut costs and empower staff across Europe.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "Heimstaden",
+       "OpenAI",
+       "ChatGPT Enterprise",
+       "Codex"
+      ],
+      "importance": 22,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Customer marketing story; cost-cut claims are the company's own."
+     },
+     {
+      "story_id": "ai-3e2ef3d2b640",
+      "headline": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+      "summary": "OpenAI said Jill Hazelbaker will join as Chief Corporate Affairs Officer, leading global communications and corporate positioning.",
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "OpenAI",
+       "Jill Hazelbaker"
+      ],
+      "importance": 35,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-5261cb6d7c9a",
+      "headline": "OpenAI's Daybreak Red, running GPT-5.6 Cyber, becomes available in AWS GovCloud (US-East)",
+      "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) via Amazon Bedrock for authorized cybersecurity work.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "OpenAI",
+       "Daybreak Red",
+       "GPT-5.6 Cyber",
+       "AWS GovCloud",
+       "Amazon Bedrock"
+      ],
+      "importance": 35,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Access limited to approved customers; model name appears only in snippet."
+     },
+     {
+      "story_id": "ai-642565cc6bb3",
+      "headline": "OpenAI shows ChatGPT and Codex helping engineers with CAD, PCB design and simulation",
+      "summary": "An OpenAI post describes how ChatGPT and Codex are speeding up CAD, PCB design, simulation and other engineering workflows.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "OpenAI",
+       "ChatGPT",
+       "Codex"
+      ],
+      "importance": 25,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-6840c8cee87c",
+      "headline": "Cisco and OpenAI partner on AI-driven enterprise security defenses",
+      "summary": "An OpenAI post says Cisco combines network intelligence with OpenAI models to strengthen enterprise security and build more adaptive defenses.",
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "Cisco",
+       "OpenAI"
+      ],
+      "importance": 25,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Customer case study; no independent coverage."
+     },
+     {
+      "story_id": "ai-a3302afb1816",
+      "headline": "OpenAI prepares next internal security sprint with Cathedral Systems to test its defenses",
+      "summary": "OpenAI says it is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "OpenAI",
+       "Cathedral Systems"
+      ],
+      "importance": 25,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Cathedral Systems appears only in the snippet; no details on scope."
+     },
+     {
+      "story_id": "ai-bb8d1cc11336",
+      "headline": "OpenAI launches Grid Protectors Program with utilities for future compute campuses",
+      "summary": "OpenAI's Grid Protectors Program will work with utilities so future compute campuses support grid reliability and protect consumer electricity costs.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "OpenAI",
+       "Grid Protectors Program"
+      ],
+      "importance": 30,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Boundary item: physical data-center power and grid belongs to energy/data-center-buildout; consider routing there."
+     },
+     {
+      "story_id": "ai-e5dc0def27ac",
+      "headline": "OpenAI introduces LifeVal, a benchmark for how well AI helps with everyday tasks",
+      "summary": "OpenAI introduced LifeVal, a benchmark measuring how well AI helps people with tasks such as finding childcare, managing finances and handling government paperwork.",
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "OpenAI",
+       "LifeVal"
+      ],
+      "importance": 30,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-f712a9ba1e54",
+      "headline": "OpenAI raises Security Bug Bounty rewards and adds quality, loyalty and priority bonuses",
+      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty and priority campaign bonuses for independent security researchers.",
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "OpenAI"
+      ],
+      "importance": 28,
+      "evidence": [
+       "primary source present (openai_news)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-fb91b5b54631",
+      "headline": "Google DeepMind shows Google Antigravity with Cheminformatics Skills speeding drug discovery workflows",
+      "summary": "A DeepMind post says Google Antigravity and its Cheminformatics Skills accelerate drug discovery, searching compounds and proposing novel rigidified macrocycles.",
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Google DeepMind",
+       "Google Antigravity",
+       "Cheminformatics Skills"
+      ],
+      "importance": 28,
+      "evidence": [
+       "primary source present (deepmind_blog)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null
+     },
+     {
+      "story_id": "ai-ee40d5704f3c",
+      "headline": "r/MachineLearning post urges top AI conferences to desk-reject AI-generated papers",
+      "summary": "A Reddit post in r/MachineLearning argues conferences should desk-reject AI-generated papers, citing presenters who could not explain their own work. It is an opinion post built on anecdotes.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "r/MachineLearning",
+       "Reddit"
+      ],
+      "importance": 22,
+      "evidence": [
+       "reddit_ml rank 1 (tier 3)",
+       "0 independent domains"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Community opinion with anecdotal claims; no primary source or independent coverage."
+     },
+     {
+      "story_id": "ai-0a3246aa6d6f",
+      "headline": "IBM Research publishes Palette, a method for teaching a small model to build decks in a design language",
+      "summary": "A Hugging Face blog post from IBM Research describes Palette, which trains a small model to build presentation decks matching a given design language.",
+      "subtopics": [
+       "research-methods"
+      ],
+      "entities": [
+       "IBM Research",
+       "Hugging Face",
+       "Palette"
+      ],
+      "importance": 18,
+      "evidence": [
+       "hf_blog tier 2",
+       "primary source present (hf_blog)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Snippet is title only; details unverified."
+     },
+     {
+      "story_id": "ai-0c45fb14ec89",
+      "headline": "NVIDIA blog says AI is changing semiconductor fab work for engineers",
+      "summary": "An NVIDIA blog post argues that rising chip demand and more complex fab processes make AI useful for engineers diagnosing process changes and defects.",
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "NVIDIA"
+      ],
+      "importance": 22,
+      "evidence": [
+       "nvidia_blog tier 2",
+       "primary source present (nvidia_blog)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Vendor marketing post; no independent coverage."
+     },
+     {
+      "story_id": "ai-29b2c37298b2",
+      "headline": "Hugging Face blog post titled Transformers Model Integration Contracts appears with no visible content",
+      "summary": "A Hugging Face blog post titled Transformers Model Integration Contracts is listed, but no snippet describes its content.",
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "Hugging Face",
+       "Transformers"
+      ],
+      "importance": 12,
+      "evidence": [
+       "hf_blog tier 2",
+       "primary source present (hf_blog)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": "Title only; content unknown, so scored low."
+     }
+    ]
+   }
+  }
+ ],
+ "tool_calls": [],
+ "usage": {
+  "tokens_in": 81706,
+  "tokens_out": 35036,
+  "tokens_cached": 10560,
+  "cost_usd": 0.024906500000000005,
+  "llm_calls": 5,
+  "fetches": 0
+ },
+ "degraded": [
+  "N5 batch 4: skipped (token budget)",
+  "N5 batch 4: 20 stories rules-only (token budget)"
+ ],
+ "stories": [
+  {
+   "story_id": "ai-02d39c49cc93",
+   "beat": "ai",
+   "title": "Scaling Git at OpenAI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/scaling-git-at-openai"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-03987dd9a690",
+   "beat": "ai",
+   "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-0a3246aa6d6f",
+   "beat": "ai",
+   "title": "Palette: teaching a small model to build decks in your design language",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://huggingface.co/blog/ibm-research/palette-deck-building"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-0c45fb14ec89",
+   "beat": "ai",
+   "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://blogs.nvidia.com/blog/ai-semiconductor-fabs"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-11f79f74d833",
+   "beat": "ai",
+   "title": "Almost no one uses AI agents to book their Uber, company says",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says",
+    "https://theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-122927540b41",
+   "beat": "ai",
+   "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs",
+    "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-138ac0697a0b",
+   "beat": "ai",
+   "title": "Meta acquires AI coding startup Conductor",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-1620c0c049de",
+   "beat": "ai",
+   "title": "Sources: Microsoft rejects an option to more than double its Texas data center contract with Nscale, dealing a fresh blow to Nscale's ambitions for a $35B IPO (Financial Times)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://ft.com/content/668e6ef8-88a1-4bef-8664-8f495baf09f8"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 7,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-16d269b224d4",
+   "beat": "ai",
+   "title": "Anthropic is working on a system to prove AI models’ identity",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-1a574871891c",
+   "beat": "ai",
+   "title": "Coming in 2027: Apple’s $1,000 home robot for FaceTime and switching on lights",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/apple/2026/11/apples-roaming-home-robot-may-do-facetime-switch-lights-on-and-yell-at-your-cat"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-1afdb3ac7e86",
+   "beat": "ai",
+   "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/devrev-enterprise-self-service"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-1fc1004e2a2c",
+   "beat": "ai",
+   "title": "AppLovin reports Q3 revenue up 55% YoY to $2.18B, above $2.07B est., and forecasts Q4 revenue above estimates; APP surges 20%+ after hours (William Gavin/MarketWatch)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://djnewswires.com/"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 14,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-20e612672c68",
+   "beat": "ai",
+   "title": "Qualcomm is betting big on data centers as smartphone sales sink",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-24fcc1dc2b9c",
+   "beat": "ai",
+   "title": "Spreading Liquid with Three.js",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://mofu-dev.com/en/blog/fluid-foundation"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 9,
+    "hn_points_at_observation": 68,
+    "comments_at_observation": 12,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-270f8b8359f8",
+   "beat": "ai",
+   "title": "Heimstaden is changing residential real estate management with AI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/heimstaden"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-291d887a1d18",
+   "beat": "ai",
+   "title": "AMD expects to outsell Intel in Q4 for the first time in history",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 30,
+    "hn_points_at_observation": 536,
+    "comments_at_observation": 195,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-29b2c37298b2",
+   "beat": "ai",
+   "title": "Transformers Model Integration Contracts",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://huggingface.co/blog/transformers-mic"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2aa6c642b50f",
+   "beat": "ai",
+   "title": "Do looped transformers save HBM traffic? Profiling weight reuse in Huginn on a B200 [P]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xnskvt/do_looped_transformers_save_hbm_traffic_profiling"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 7,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2ab8ca37e4c5",
+   "beat": "ai",
+   "title": "Pro-AI PAC Leading the Future ended the midterms with $20M+ in its bank, from ~$100M, after focusing on safe bipartisan candidates; its riskier bets fell flat (Tess Owen/Wired)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 3,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2b04eaac1715",
+   "beat": "ai",
+   "title": "I submitted my AACL paper as a long paper, but it’s listed as a short paper. [R]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xo8vd3/i_submitted_my_aacl_paper_as_a_long_paper_but_its"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 8,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2bf97e5fcb4b",
+   "beat": "ai",
+   "title": "OpenAI is already trying to shape the 2028 election",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2c2ce141cc54",
+   "beat": "ai",
+   "title": "Adzuna: UK entry-level job postings mentioning AI are up ~3x since early 2025; Indeed says one in six vacancies in AI-exposed fields now mentions AI, up 2x YoY (Irina Anghel/Bloomberg)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://bloomberg.com/news/articles/2026-11-05/ai-skills-are-make-or-break-in-uk-s-brutal-youth-jobs-market"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 2,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2c8a0f2a1b6f",
+   "beat": "ai",
+   "title": "The agentic web is here",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-2f439238fa87",
+   "beat": "ai",
+   "title": "Partial Operator Precedence",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://ziglang.org/devlog/2026"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 5,
+    "hn_points_at_observation": 17,
+    "comments_at_observation": 4,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-33555fd13343",
+   "beat": "ai",
+   "title": "Cat Wu, who left Anthropic last week, says she is joining OpenAI to lead product manangement for core products; Wu was the product lead for Claude Code (Stephen Council/Business Insider)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://businessinsider.com/cat-wu-joins-openai-from-anthropic-product-lead-coup-2026-11"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 15,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-356752e68c73",
+   "beat": "ai",
+   "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-3965d71aa58e",
+   "beat": "ai",
+   "title": "A new Go API for JSON",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://go.dev/blog/jsonv2"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 12,
+    "hn_points_at_observation": 298,
+    "comments_at_observation": 134,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-3b17c9df1fa3",
+   "beat": "ai",
+   "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-3e2ef3d2b640",
+   "beat": "ai",
+   "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-43319811d5e5",
+   "beat": "ai",
+   "title": "Securing the agentic enterprise with data lineage",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-44b0b943975a",
+   "beat": "ai",
+   "title": "Guerrilla bike lanes: San Francisco makes illicit infrastructure permanent (2016)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 24,
+    "hn_points_at_observation": 294,
+    "comments_at_observation": 218,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-47eb6c857545",
+   "beat": "ai",
+   "title": "Data centers are turning to old jet engines as the wait for power grows",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-4acfda106313",
+   "beat": "ai",
+   "title": "Introducing Images 2.6",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/introducing-images-2-6",
+    "https://theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 3,
+    "hn_points_at_observation": 257,
+    "comments_at_observation": 164,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-4be9a69dfee7",
+   "beat": "ai",
+   "title": "Lemmings CSS Animation",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://markblah.github.io/lemmings"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 2,
+    "hn_points_at_observation": 114,
+    "comments_at_observation": 21,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-50d5544389f9",
+   "beat": "ai",
+   "title": "Google will let schools skip AI tools, but they have to give up search, too",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too",
+    "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-5261cb6d7c9a",
+   "beat": "ai",
+   "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/daybreak-red-aws-govcloud"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-5378b4155531",
+   "beat": "ai",
+   "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month",
+    "https://theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-5449d0bd4d43",
+   "beat": "ai",
+   "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://ricursive.com/ripple"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 8,
+    "hn_points_at_observation": 282,
+    "comments_at_observation": 101,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-555f2f517bde",
+   "beat": "ai",
+   "title": "Insects don't swarm at LED lights",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 11,
+    "hn_points_at_observation": 236,
+    "comments_at_observation": 126,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-5980b0de3a2a",
+   "beat": "ai",
+   "title": "Hiding inside Palantir’s skyrocketing quarter is a foreboding signal",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-5b293c6056c7",
+   "beat": "ai",
+   "title": "Conductor is joining Meta",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://conductor.build/announcement"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 15,
+    "hn_points_at_observation": 169,
+    "comments_at_observation": 178,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-606f53bcc3c6",
+   "beat": "ai",
+   "title": "OpenAI details a pipeline that used an upcoming cyber model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2M in API costs (OpenAI)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/a-thousand-fewer-paths-to-root"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 2,
+    "best_rank": 4,
+    "hn_points_at_observation": 300,
+    "comments_at_observation": 201,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-61746f7d650a",
+   "beat": "ai",
+   "title": "Sources and company memo: Chinese NAND flash maker YMTC has put its Shanghai IPO on hold as China tightens share sale approvals; YMTC sought to raise ~$4.9B (Reuters)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reuters.com/world/china/chinese-chipmaker-ymtc-puts-ipo-hold-weaker-markets-weigh-sources-say-2026-11-04"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 6,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-6239ab812316",
+   "beat": "ai",
+   "title": "Basically no one is using AI agents for their DoorDash orders",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 29,
+    "hn_points_at_observation": 125,
+    "comments_at_observation": 228,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-63449dc8b994",
+   "beat": "ai",
+   "title": "Sam Altman addresses RAM comments: People should &#8216;put as much as they want in their computers&#8217;",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-63f43386a21f",
+   "beat": "ai",
+   "title": "Chinese chipmakers' aggressive hiring of experienced engineers is increasingly at odds with efforts to protect trade secrets in Taiwan and South Korea (Jenny Lee/CNBC)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://cnbc.com/2026/11/05/semiconductor-china-korea-talents-rivalry.html"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 4,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-642565cc6bb3",
+   "beat": "ai",
+   "title": "Accelerating engineering for the physical world",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/accelerating-engineering-for-the-physical-world"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-6471c7f1942f",
+   "beat": "ai",
+   "title": "17 better ways Elon Musk could have wasted $446 million",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-64d41c056a53",
+   "beat": "ai",
+   "title": "Stop counting tokens, start counting what ships",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-6840c8cee87c",
+   "beat": "ai",
+   "title": "How Cisco defends at machine speed with OpenAI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/cisco-cyber"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-68957d2b1fde",
+   "beat": "ai",
+   "title": "Progress on provable inference for large language models",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://anthropic.com/research/provable-inference",
+    "https://huggingface.co/blog/allenai/statebench"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 22,
+    "hn_points_at_observation": 212,
+    "comments_at_observation": 98,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-691ffdf51520",
+   "beat": "ai",
+   "title": "So my ISP was hijacking my DNS",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://karthihegde.dev/posts/dns_tampering"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 13,
+    "hn_points_at_observation": 53,
+    "comments_at_observation": 32,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-6ec3003b5e40",
+   "beat": "ai",
+   "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-6f08541ce868",
+   "beat": "ai",
+   "title": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-71924ff268c1",
+   "beat": "ai",
+   "title": "Altera Announces Agilex 2X, a Complete FPGA and SoC Portfolio",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://altera.com/newsroom/agilex-2x"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 6,
+    "hn_points_at_observation": 19,
+    "comments_at_observation": 7,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-71e67466f92a",
+   "beat": "ai",
+   "title": "Starfall – Affordable, routine access to microgravity",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://spacex.com/starfall"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 14,
+    "hn_points_at_observation": 206,
+    "comments_at_observation": 136,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-75d87fd90c5f",
+   "beat": "ai",
+   "title": "'It's just vape, nail, charity shops': Can anything save UK high street?",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 28,
+    "hn_points_at_observation": 112,
+    "comments_at_observation": 260,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-77a12239bc4d",
+   "beat": "ai",
+   "title": "Apple is reportedly cutting budgets for its internal AI usage",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-78a50dbb4925",
+   "beat": "ai",
+   "title": "Big Tech claims voters’ AI backlash is “anti-Trump” not “anti-tech”",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/tech-policy/2026/11/big-tech-claims-voters-ai-backlash-is-anti-trump-not-anti-tech",
+    "https://technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-7dba9afaf10b",
+   "beat": "ai",
+   "title": "Tencent Hy4",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://hy.tencent.ai/research/hy4"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 27,
+    "hn_points_at_observation": 234,
+    "comments_at_observation": 81,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-7f2e3faadab5",
+   "beat": "ai",
+   "title": "Want to Rent an Internet Address at the White House?",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 17,
+    "hn_points_at_observation": 10,
+    "comments_at_observation": 0,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-7fb5190ccae2",
+   "beat": "ai",
+   "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-826c53dd9e2d",
+   "beat": "ai",
+   "title": "What is now considered a “reasonable” publication rate (papers/year) for a PhD student to be considered “productive”? [D]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xo7q89/what_is_now_considered_a_reasonable_publication",
+    "https://reddit.com/r/MachineLearning/comments/1xoc358/publication_expectations_for_ml_phds_at_top10_us"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 3,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-86e0d936ccae",
+   "beat": "ai",
+   "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/openai-to-acquire-pierre"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 25,
+    "hn_points_at_observation": 232,
+    "comments_at_observation": 71,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-87895a94bb57",
+   "beat": "ai",
+   "title": "OpenAI President Greg Brockman says H1 2026 was \"pretty rough\", but agentic coding tools, GPT-5.6 Sol, and ChatGPT Work drove a \"revenue inflection\" in Q3 (Maxwell Zeff/Wall Street Journal)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://wsj.com/tech/openai-had-rough-first-half-of-year-before-coding-takeoff-brockman-says-6c97d9e5?amp%3Breflink=desktopwebshare_permalink&st=hL3kyT"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 1,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-88dc12c4d984",
+   "beat": "ai",
+   "title": "What's your current AI agentic setup?",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://news.ycombinator.com/item?id=50366117"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 20,
+    "hn_points_at_observation": 297,
+    "comments_at_observation": 301,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-913b123e2cce",
+   "beat": "ai",
+   "title": "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Speedinvest, as it opens its B2B payments infrastructure to AI agents (Cristian Dina/The Next Web)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://thenextweb.com/news/pliant-80m-series-c-ai-agents-b2b-payments-seaya-speedinvest"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 12,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-932b39aa4b2f",
+   "beat": "ai",
+   "title": "Source: Meta has decided to stop using fruit for its AI model codenames, as they didn't suit its lofty AI ambitions; its latest model was named \"Watermelon\" (Charles Rollet/Business Insider)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://businessinsider.com/meta-will-stop-naming-its-ai-models-after-fruit-2026-11"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 9,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-96c4a5c335fd",
+   "beat": "ai",
+   "title": "Sources: China's export curbs on critical metals have disrupted supplies of micro drill bits made mainly from tungsten carbide, used in PCBs and chip substrates (Cheng Ting-Fang/Nikkei Asia)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://asia.nikkei.com/spotlight/supply-chain/china-s-curbs-on-tungsten-used-in-drill-bits-squeeze-ai-supply-chain"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 5,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-99d07f0c8e36",
+   "beat": "ai",
+   "title": "Anthropic is still grappling with the economics of compute",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-99e5545fc6d7",
+   "beat": "ai",
+   "title": "After the midterms, a bigger clash over data centers could be coming",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
+    "https://theverge.com/policy/1026365/data-centers-midterms-results"
+   ],
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-9b90758c0018",
+   "beat": "ai",
+   "title": "Hacking the Xbox 360 Hypervisor Part 3: Bad Update Improvements",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://icode4.coffee/?p=1746"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 16,
+    "hn_points_at_observation": 109,
+    "comments_at_observation": 9,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-a1b8ef2e55aa",
+   "beat": "ai",
+   "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-a236bef46336",
+   "beat": "ai",
+   "title": "Claude’s new rules against game cloning won’t stop the AI copying boom",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-a3302afb1816",
+   "beat": "ai",
+   "title": "Preparing our next security sprint to harden OpenAI",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-a8a18ced4eb7",
+   "beat": "ai",
+   "title": "Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://importai.substack.com/p/import-ai-479-spacewar-low-latency"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-ab07731f8c3b",
+   "beat": "ai",
+   "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-ad638ebb8212",
+   "beat": "ai",
+   "title": "Sources: China has told SoftBank it will not allow the $5.4B acquisition of ABB's robotics division to go ahead; China is the division's biggest market (David Keohane/Financial Times)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://ft.com/content/f10c3e24-45e4-47ff-bde2-24a8de90aec4"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 10,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-aed21eb37e09",
+   "beat": "ai",
+   "title": "Kino AI (YC S23) – AI media manager and video editor",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://news.ycombinator.com/item?id=50368804"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 23,
+    "hn_points_at_observation": 87,
+    "comments_at_observation": 33,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-b429123ff83e",
+   "beat": "ai",
+   "title": "A wave of plastic-free coffee pods and machines",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://cnn.com/2026/11/02/food/coffee-machine-plastic-free"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 26,
+    "hn_points_at_observation": 87,
+    "comments_at_observation": 96,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-b64c08f47b1a",
+   "beat": "ai",
+   "title": "I tried Apple’s Siri Recaps. They’re surprisingly useful — and a little unsettling",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-b67346122cb8",
+   "beat": "ai",
+   "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://qualcomm.com/data-center/products/cloud-ai-100-ultra"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 21,
+    "hn_points_at_observation": 141,
+    "comments_at_observation": 54,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-baa5e064d8b2",
+   "beat": "ai",
+   "title": "Sources: Palo Alto Networks is in talks to acquire Israeli startup Clutch Security, which develops software for tracking passwords used by AI agents, for ~$500M (Valida Pau/The Information)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theinformation.com/articles/palo-alto-networks-talks-pay-500-million-ai-security-startup"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 11,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-bb8d1cc11336",
+   "beat": "ai",
+   "title": "Introducing the Grid Protectors Program",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/grid-protectors-program"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-c2921337838f",
+   "beat": "ai",
+   "title": "Netflix’s new AI Discover tab helps you find something to watch based on your mood",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-c299f1c25b80",
+   "beat": "ai",
+   "title": "CWE-bench v2: More coverage, quality, and transparency",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://huggingface.co/blog/cwe-bench"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-c3ac2a35f132",
+   "beat": "ai",
+   "title": "Raising the quality of insights in agentic analytics",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-d1753883dbd0",
+   "beat": "ai",
+   "title": "Kimi K3.1 Pro model weights are out",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 7,
+    "hn_points_at_observation": 508,
+    "comments_at_observation": 142,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-d529cf90b317",
+   "beat": "ai",
+   "title": "Residential proxies detected on White House network",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://layer3intel.com/blog/residential-proxies-white-house-network"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 1,
+    "hn_points_at_observation": 970,
+    "comments_at_observation": 292,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-d9410d6ee9b6",
+   "beat": "ai",
+   "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-de5a266ceb7f",
+   "beat": "ai",
+   "title": "How “reverse game theory” could keep AI agents in check",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-de8a23b25b51",
+   "beat": "ai",
+   "title": "Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e15802b29bfb",
+   "beat": "ai",
+   "title": "Hydrogen-1.0: open-weight scientific model beats GPT-6 Astra on FSR with 72% lower estimated output cost [P]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xnjhdd/hydrogen10_openweight_scientific_model_beats_gpt6"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 5,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e41b84660ece",
+   "beat": "ai",
+   "title": "Anyone else tired of how expensive agent evaluations are? [D]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xo8hlk/anyone_else_tired_of_how_expensive_agent"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 9,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e425d3a949f7",
+   "beat": "ai",
+   "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e5dc0def27ac",
+   "beat": "ai",
+   "title": "LifeVal",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/lifeval"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e7142d324de2",
+   "beat": "ai",
+   "title": "Microsoft previews using smartphones as controllers for Xbox Cloud Gaming on supported smart TVs and direct Wi-Fi cloud gaming support for the Nano Controller (XBOX Wire)",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 8,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-e8288f8bffa6",
+   "beat": "ai",
+   "title": "After a decade of reversing, I got co-op working in DOS Wing Commander",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://fireflyk64.github.io/wcmulti"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 18,
+    "hn_points_at_observation": 171,
+    "comments_at_observation": 22,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-ec3d71ccad45",
+   "beat": "ai",
+   "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-ee40d5704f3c",
+   "beat": "ai",
+   "title": "A message to top tier conferences [D]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xnkbeu/a_message_to_top_tier_conferences_d"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 1,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-f712a9ba1e54",
+   "beat": "ai",
+   "title": "Rewarding defenders with bigger bug bounties",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-fb91b5b54631",
+   "beat": "ai",
+   "title": "Agentic cheminformatics with Google Antigravity",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": true
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-fbca2de2220d",
+   "beat": "ai",
+   "title": "Future Maintenance of Mbed TLS",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://lists.trustedfirmware.org/archives/list/mbed-tls@lists.trustedfirmware.org/thread/YPIGCB7WN6GCHOGEGKOJXUYAP7OK527W"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 10,
+    "hn_points_at_observation": 27,
+    "comments_at_observation": 3,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-fcc32c401cfa",
+   "beat": "ai",
+   "title": "AI is forcing us to pay off 40 years of technical debt",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 19,
+    "hn_points_at_observation": 1167,
+    "comments_at_observation": 673,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-fd3dd1a202b1",
+   "beat": "ai",
+   "title": "ICLR 2027 Reviews Discussion [D]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xo6yzo/iclr_2027_reviews_discussion_d"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 4,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  },
+  {
+   "story_id": "ai-fdd77a870e0e",
+   "beat": "ai",
+   "title": "Why can't conferences just reasonably reduce the cap on number of submissions? [D]",
+   "first_seen": "2026-11-05T08:22:44Z",
+   "item_urls": [
+    "https://reddit.com/r/MachineLearning/comments/1xnscvr/why_cant_conferences_just_reasonably_reduce_the"
+   ],
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 0,
+    "best_tier": 3,
+    "frontpage_hits": 1,
+    "best_rank": 2,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-05T08:22:44Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "update_of": null
+  }
+ ]
+}

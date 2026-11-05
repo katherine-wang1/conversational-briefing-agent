@@ -1,0 +1,26 @@
+# Brief br_01m6ndxnsgcert0max2e3m48nj (2026-11-05, arm full, status ready)
+
+- [big_news] OpenAI releases Images 2.6 with faster generation, GIF creation and new API controls
+- [for_you] Moonshot AI releases Kimi K3.1 Pro model weights on Hugging Face
+- [for_you] Ricursive publishes Ripple-65B preview claiming top US open-weight agentic coding results
+- [for_you] Sources say China's metal export curbs disrupt tungsten carbide micro drill bit supply for PCBs and chip substrates
+
+s000 (intro): Good morning. Here are your AI stories for today, four of them in total.  []
+s001 (intro): Let's begin with the big news.  []
+s002 (story): OpenAI has released Images 2.6, and ChatGPT can now create animated GIFs from a text prompt or an uploaded photo.  ['c1e68860d6535a2fe558042d22023122:0-253']
+s003 (story): Before this update, ChatGPT could not make a GIF in a single step.  ['c1e68860d6535a2fe558042d22023122:369-680']
+s004 (story): You can adjust a GIF's animation speed and edit individual frames.  ['c1e68860d6535a2fe558042d22023122:0-253', 'c1e68860d6535a2fe558042d22023122:369-680']
+s005 (story): OpenAI says users now generate over 4 billion images per week, up from 3 billion in September.  ['c1e68860d6535a2fe558042d22023122:681-955']
+s006 (story): Images 2.6 is rolling out to all ChatGPT and Codex users on web, desktop, and mobile.  ['c1e68860d6535a2fe558042d22023122:956-1167']
+s007 (transition): Now, a story picked for you.  []
+s008 (story): Moonshot AI has released the weights for Kimi K3.1 Pro on Hugging Face.  ['f4a904d03d800a16a7770eb45e6294e1:31-143']
+s009 (story): It is an open-weight, natively multimodal agentic model, and the company calls it its most capable 3T-class model to date.  ['f4a904d03d800a16a7770eb45e6294e1:31-143']
+s010 (story): It has a 1-million-token context window.  ['f4a904d03d800a16a7770eb45e6294e1:297-477']
+s011 (story): Compared with Kimi K3, it swaps full-attention layers for Gated DeepSeek Sparse Attention layers, for more efficient long-context work.  ['f4a904d03d800a16a7770eb45e6294e1:478-647']
+s012 (transition): Another story picked for you.  []
+s013 (story): Ricursive Intelligence has published a preview of Ripple-65B, a general-purpose model.  ['24ed9ebcee3dd33c584ac388a8b4bb15:455-672']
+s014 (story): The company says it scores 80.52 on TerminalBench 2.1, which it reports as the top result for U.S. open-weight models.  ['24ed9ebcee3dd33c584ac388a8b4bb15:673-1016']
+s015 (story): Ricursive estimates development cost was 32 million dollars, about one-tenth of the previous open-weight leader on agentic coding.  ['24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263']
+s016 (story): Sources say China's metal export curbs are disrupting supplies of micro drill bits used in the AI chip supply chain.  ['9e77dcebd729cf1cd42bcf2e121a2a03:344-595']
+s017 (story): The disruption is one example of geopolitical tensions rippling through the global tech industry.  ['9e77dcebd729cf1cd42bcf2e121a2a03:344-595']
+s018 (outro): What would you like to dig into?  []

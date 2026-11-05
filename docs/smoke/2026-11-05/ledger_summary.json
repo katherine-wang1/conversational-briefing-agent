@@ -1,0 +1,124 @@
+{
+ "model": "openrouter anthropic/claude-haiku-5.5 (dev_default) for every role",
+ "jsonl_ledger": {
+  "calls": 46,
+  "cost_usd": 0.070533495,
+  "by_role": {
+   "newsroom.cluster_tiebreak": {
+    "calls": 4,
+    "repairs": 0,
+    "cost_usd": 0.00518855,
+    "tokens_in": 27280,
+    "tokens_out": 4776,
+    "errors": 0
+   },
+   "newsroom.score": {
+    "calls": 10,
+    "repairs": 3,
+    "cost_usd": 0.035113914999999996,
+    "tokens_in": 104899,
+    "tokens_out": 50964,
+    "errors": 0
+   },
+   "memory.onboarding_extract": {
+    "calls": 1,
+    "repairs": 0,
+    "cost_usd": 0.000450225,
+    "tokens_in": 2936,
+    "tokens_out": 249,
+    "errors": 0
+   },
+   "cos.plan": {
+    "calls": 4,
+    "repairs": 0,
+    "cost_usd": 0.002223285,
+    "tokens_in": 7095,
+    "tokens_out": 3062,
+    "errors": 0
+   },
+   "cos.search_loop": {
+    "calls": 4,
+    "repairs": 0,
+    "cost_usd": 0.001748195,
+    "tokens_in": 11184,
+    "tokens_out": 1490,
+    "errors": 0
+   },
+   "cos.score": {
+    "calls": 8,
+    "repairs": 0,
+    "cost_usd": 0.01434295,
+    "tokens_in": 48715,
+    "tokens_out": 19697,
+    "errors": 0
+   },
+   "cos.extract_passages": {
+    "calls": 10,
+    "repairs": 3,
+    "cost_usd": 0.00759195,
+    "tokens_in": 24588,
+    "tokens_out": 11205,
+    "errors": 0
+   },
+   "cos.write_brief": {
+    "calls": 1,
+    "repairs": 0,
+    "cost_usd": 0.001317425,
+    "tokens_in": 4824,
+    "tokens_out": 1607,
+    "errors": 0
+   },
+   "cos.claim_check": {
+    "calls": 1,
+    "repairs": 0,
+    "cost_usd": 0.000530175,
+    "tokens_in": 3760,
+    "tokens_out": 261,
+    "errors": 0
+   },
+   "voice.turn": {
+    "calls": 1,
+    "repairs": 0,
+    "cost_usd": 0.001041975,
+    "tokens_in": 7265,
+    "tokens_out": 278,
+    "errors": 0
+   },
+   "memory.reflect": {
+    "calls": 2,
+    "repairs": 0,
+    "cost_usd": 0.00098485,
+    "tokens_in": 7407,
+    "tokens_out": 268,
+    "errors": 0
+   }
+  }
+ },
+ "llm_calls_table": {
+  "rows": 46,
+  "cost_usd": 0.070538
+ },
+ "not_in_ledger": "0 smoke-debug JSONL rows; plus 3 raw provider calls (debug_extract.py, diagnosing the empty cos.extract_passages output) that bypassed the Router ledger (~$0.0011, $0.0011, $0.0006 by provider-reported usage)",
+ "openrouter_key_usage_usd": {
+  "start": 1.894428602,
+  "end": 1.967427622,
+  "delta": 0.07299901999999991
+ },
+ "stories_rows": 107,
+ "newsroom_runs": [
+  {
+   "id": "nr_01m6ncvwgd6mnsfh10tgv77s5s",
+   "beat": "ai",
+   "at": "2026-11-05 08:22:44+00:00",
+   "status": "done",
+   "created_at": "2026-11-05 08:23:06.002737+00:00"
+  },
+  {
+   "id": "nr_01m6ndt738qzh4qy42x0qazgnp",
+   "beat": "ai",
+   "at": "2026-11-05 08:39:39+00:00",
+   "status": "done",
+   "created_at": "2026-11-05 08:39:39.882895+00:00"
+  }
+ ]
+}

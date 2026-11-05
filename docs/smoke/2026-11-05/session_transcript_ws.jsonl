@@ -1,0 +1,46 @@
+{"t": 0.09, "dir": "info", "session_id": "se_01m6ne0dae3576nfky8x4dke7v", "brief_id": "br_01m6ndxnsgcert0max2e3m48nj"}
+{"t": 0.12, "dir": "client", "type": "hello", "session_id": "se_01m6ne0dae3576nfky8x4dke7v", "client": {"mode": "text", "stt": "browser", "tts": "server"}}
+{"t": 0.12, "dir": "client", "type": "control", "action": "play"}
+{"t": 0.14, "dir": "server", "type": "state", "state": "READY"}
+{"t": 0.14, "dir": "server", "type": "state", "state": "PLAYING_BRIEF"}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Good morning. Here are your AI stories for today, four of them in total.", "turn_id": "s000", "citations": []}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Let's begin with the big news.", "turn_id": "s001", "citations": []}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "OpenAI has released Images 2.6, and ChatGPT can now create animated GIFs from a text prompt or an uploaded photo.", "turn_id": "s002", "citations": ["c1e68860d6535a2fe558042d22023122:0-253"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Before this update, ChatGPT could not make a GIF in a single step.", "turn_id": "s003", "citations": ["c1e68860d6535a2fe558042d22023122:369-680"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "You can adjust a GIF's animation speed and edit individual frames.", "turn_id": "s004", "citations": ["c1e68860d6535a2fe558042d22023122:0-253", "c1e68860d6535a2fe558042d22023122:369-680"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "OpenAI says users now generate over 4 billion images per week, up from 3 billion in September.", "turn_id": "s005", "citations": ["c1e68860d6535a2fe558042d22023122:681-955"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Images 2.6 is rolling out to all ChatGPT and Codex users on web, desktop, and mobile.", "turn_id": "s006", "citations": ["c1e68860d6535a2fe558042d22023122:956-1167"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Now, a story picked for you.", "turn_id": "s007", "citations": []}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Moonshot AI has released the weights for Kimi K3.1 Pro on Hugging Face.", "turn_id": "s008", "citations": ["f4a904d03d800a16a7770eb45e6294e1:31-143"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "It is an open-weight, natively multimodal agentic model, and the company calls it its most capable 3T-class model to date.", "turn_id": "s009", "citations": ["f4a904d03d800a16a7770eb45e6294e1:31-143"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "It has a 1-million-token context window.", "turn_id": "s010", "citations": ["f4a904d03d800a16a7770eb45e6294e1:297-477"]}
+{"t": 0.14, "dir": "client", "type": "interrupt", "segment_id": "s010", "offset_ms": 1200}
+{"t": 0.14, "dir": "client", "type": "utterance", "text": "Wait, who exactly released Kimi K3.1 Pro, and how long is its context window? I'd like more stories like this about open-weight models.", "stt": "sim", "end_of_speech_ts": 1793868182.9134295}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Compared with Kimi K3, it swaps full-attention layers for Gated DeepSeek Sparse Attention layers, for more efficient long-context work.", "turn_id": "s011", "citations": ["f4a904d03d800a16a7770eb45e6294e1:478-647"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Another story picked for you.", "turn_id": "s012", "citations": []}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Ricursive Intelligence has published a preview of Ripple-65B, a general-purpose model.", "turn_id": "s013", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:455-672"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "The company says it scores 80.52 on TerminalBench 2.1, which it reports as the top result for U.S. open-weight models.", "turn_id": "s014", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:673-1016"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Ricursive estimates development cost was 32 million dollars, about one-tenth of the previous open-weight leader on agentic coding.", "turn_id": "s015", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "Sources say China's metal export curbs are disrupting supplies of micro drill bits used in the AI chip supply chain.", "turn_id": "s016", "citations": ["9e77dcebd729cf1cd42bcf2e121a2a03:344-595"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "The disruption is one example of geopolitical tensions rippling through the global tech industry.", "turn_id": "s017", "citations": ["9e77dcebd729cf1cd42bcf2e121a2a03:344-595"]}
+{"t": 0.14, "dir": "server", "type": "transcript", "role": "agent", "text": "What would you like to dig into?", "turn_id": "s018", "citations": []}
+{"t": 0.15, "dir": "server", "type": "state", "state": "LISTENING"}
+{"t": 0.15, "dir": "server", "type": "state", "state": "THINKING"}
+{"t": 0.15, "dir": "server", "type": "transcript", "role": "user", "text": "Wait, who exactly released Kimi K3.1 Pro, and how long is its context window? I'd like more stories like this about open-weight models.", "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kdu", "citations": []}
+{"t": 1.45, "dir": "server", "type": "state", "state": "SPEAKING_ANSWER"}
+{"t": 1.45, "dir": "server", "type": "transcript", "role": "agent", "text": "Moonshot AI released Kimi K3.1 Pro's weights on Hugging Face.", "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kd", "citations": ["f4a904d03d800a16a7770eb45e6294e1:31-143"]}
+{"t": 1.45, "dir": "server", "type": "transcript", "role": "agent", "text": "Its context window is 1 million tokens.", "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kd", "citations": ["f4a904d03d800a16a7770eb45e6294e1:297-477"]}
+{"t": 1.99, "dir": "server", "type": "transcript", "role": "agent", "text": "I'll also note your interest in more open-weight model stories.", "turn_id": "t_01m6ne0dc7knpbx2n5exjwv5kd", "citations": []}
+{"t": 2.0, "dir": "server", "type": "resume_brief", "segment_id": "s010"}
+{"t": 2.0, "dir": "server", "type": "state", "state": "PLAYING_BRIEF"}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "It has a 1-million-token context window.", "turn_id": "s010", "citations": ["f4a904d03d800a16a7770eb45e6294e1:297-477"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "Compared with Kimi K3, it swaps full-attention layers for Gated DeepSeek Sparse Attention layers, for more efficient long-context work.", "turn_id": "s011", "citations": ["f4a904d03d800a16a7770eb45e6294e1:478-647"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "Another story picked for you.", "turn_id": "s012", "citations": []}
+{"t": 2.0, "dir": "client", "type": "control", "action": "end"}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "Ricursive Intelligence has published a preview of Ripple-65B, a general-purpose model.", "turn_id": "s013", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:455-672"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "The company says it scores 80.52 on TerminalBench 2.1, which it reports as the top result for U.S. open-weight models.", "turn_id": "s014", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:673-1016"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "Ricursive estimates development cost was 32 million dollars, about one-tenth of the previous open-weight leader on agentic coding.", "turn_id": "s015", "citations": ["24ed9ebcee3dd33c584ac388a8b4bb15:1823-2263"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "Sources say China's metal export curbs are disrupting supplies of micro drill bits used in the AI chip supply chain.", "turn_id": "s016", "citations": ["9e77dcebd729cf1cd42bcf2e121a2a03:344-595"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "The disruption is one example of geopolitical tensions rippling through the global tech industry.", "turn_id": "s017", "citations": ["9e77dcebd729cf1cd42bcf2e121a2a03:344-595"]}
+{"t": 2.0, "dir": "server", "type": "transcript", "role": "agent", "text": "What would you like to dig into?", "turn_id": "s018", "citations": []}
+{"t": 2.02, "dir": "server", "type": "state", "state": "ENDED"}

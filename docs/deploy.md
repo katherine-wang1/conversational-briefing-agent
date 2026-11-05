@@ -25,8 +25,17 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
 - `VOICE_MODEL=fake` uses a rule-based stand-in for the voice model (no LLM calls). Leave it as `auto`
   once the model layer is wired and `OPENROUTER_API_KEY` is set.
 - `TTS_PROVIDER=fake` writes placeholder "audio" so the pipeline runs end to end without a TTS key.
-- `AGENT_PORTS=auto` uses the real newsroom / chief-of-staff agents when their code is present and a
-  clearly marked placeholder (`arm="stub"`) otherwise.
+- `AGENT_PORTS=auto` uses the real newsroom / chief-of-staff agents when their code is present **and**
+  `OPENROUTER_API_KEY` is set, and a clearly marked placeholder (`arm="stub"`) otherwise.
+- Model calls go through W-B's Router (`app.llm.get_client`). Every call is logged to the JSONL ledger
+  (`LLM_LEDGER_PATH`, default `eval/runs/llm_ledger.jsonl`) and to the `llm_calls` table.
+  `LLM_SPEND_CAP_USD` sets a hard per-process spend fence; it is unset (no fence) by default.
+  `TRACE_DIR` (optional) writes newsroom / chief-of-staff run traces as JSON.
+- FakeTTS audio can't be decoded by a browser, so the web app skips every segment. Use a real
+  `TTS_PROVIDER` to hear the brief.
+- Until W-A's parsers merge, live headlines come from the interim adapters in `app/sources/_interim.py`
+  (RSS, HN front page, Techmeme feed). Sources of type `arxiv`, `hf_papers` and `frontpage` are skipped.
+  A worked live run: `docs/smoke/2026-11-05/`.
 - Tests: `.venv/bin/python -m pytest` (DB tests create and drop their own database on the local server;
   set `TEST_DATABASE_ADMIN_URL` to point them elsewhere).
 
