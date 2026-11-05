@@ -23,7 +23,7 @@ This doc lays out the key technical decisions, the options for each, and a recom
 | 9 | **Tinker** | (a) Simulated users and judges on Inkling-Small. (b) Optional "optimization" stretch: fine-tune a small scorer or judge and compare it to the prompted model. |
 
 The two biggest consequences:
-- **Evaluation must be redesigned to fit the budget.** The PRD's evaluation at full scale with mid-tier models would cost well over $1,000. With Haiku-tier models, computation reuse, and Tinker for simulators and judges, it fits (§1.4).
+- **Design for a lean budget, not the ceiling.** Naive agent loops with mid-tier models would blow through the credits. Lean design rules (code does deterministic work, snippets before pages, small calls, caching, reuse) target **about $100–130 total**, with roughly half the credits as buffer (§1.4).
 - **Replay forces client-side tools.** Server-side web search can't be pointed at a frozen archive, so tools must be ours. That conveniently makes us provider-agnostic.
 
 ---
@@ -78,33 +78,61 @@ Bake-off metrics on about 5 dev days: tool-call success rate, schema validity, c
 
 So Tinker is useful because it's **extra money and a different model family**, not because it's cheaper.
 
-### 1.4 Budget model (option A, with the leaner evaluation in §8)
+### 1.4 Budget: where the tokens go, and a lean target
 
-Assumptions:
-- **Per run:** a newsroom run is about 300K tokens in and 15K out. A chief-of-staff run is about 150K in and 8K out. A session is about 4 turns over a cached context of about 20K.
-- **Evaluation size:** the test set is 12 simulated users × 30 days = 360 user-days. The dev set is 6 users × 10 days.
-- **Seeds:** 3 seeds for the main comparisons and 2 for the rest.
+**The credits ($200 OpenRouter + $100 Tinker) are a ceiling, not a target.** The plan aims for **about $100–130 total**, leaving roughly half as a buffer.
 
-| Item | Calculation | OpenRouter | Tinker |
-|---|---|---|---|
-| Development and debugging | Prompt iteration, smoke runs | **$30–40** | $5 |
-| Newsroom, replay (40 days, one digest per day shared by all configs and seeds) | 40 × about $0.75 (Sonnet) | $30 (or $2 on Haiku) | |
-| Chief of staff, replay (Full, B2, A1 need their own runs; B1, B3, B4 reuse scores) | about 3 × 360 × 3 × about $0.02 | **about $65** | |
-| Naive baseline B5 | 360 × 3 × about $0.02 + search | about $25 | |
-| Voice agent in simulated sessions (6 configs, 2–3 seeds, mostly cached) | about 5,500 sessions × about $0.005–0.01 | **about $30–50** | |
-| Simulated users in those sessions | about 5,500 × about $0.01 | | **about $55** |
-| Judges (faithfulness sample, relevance, packaging, QA, injection) | about 50–80M tokens | | **about $25** |
-| Live product (Kate 35 days + pilot about 10 users × 20 days) | Newsroom 1×/day on Sonnet + Haiku per user | about $30 | |
-| **Total** | | **about $210–265** ⚠️ | **about $85** ✅ |
+#### Why naive agents get expensive
 
-The OpenRouter side is **over budget by up to about 30%**. Levers, in order:
-1. **Run the newsroom on Haiku if the dev test shows similar importance recall.** Saves about $50 across replay and live.
-2. **Use 2 seeds instead of 3 for B1, B3, and B4.** Saves about $15.
-3. **Trim the panel to 10 users.** Saves about $20–30.
-4. **Get prompt caching working** on the cached voice and chief-of-staff contexts (verify 🔬). Could save 30–50% of voice cost.
-5. **Ask about the AWS course credits** for headroom.
+Cost is driven by **input tokens**, and agents pile them up in three ways:
 
-**The cost model must be measured, not assumed:** M2 includes a cost probe (one replayed day, every role) before the evaluation is sized.
+1. **Reading pages.** An extracted article is about 2–5K tokens. An agent that reads 40 pages has read 100–200K tokens before it writes anything.
+2. **The loop re-sends everything.** In a tool loop, every model call re-sends the whole conversation so far: the system prompt plus every earlier tool result. Ten steps whose context grows 10K → 100K cost about 550K input tokens in total, not 100K. This is the biggest hidden multiplier.
+3. **Evaluation multiplies everything.** About 360 user-days × 6 configs × 2–3 seeds is about 5,000–6,500 simulated days. Each one has a chief-of-staff run and a conversation where two models talk, and each turn re-sends the history on both sides.
+
+The first estimate (about $210–265 on OpenRouter) assumed **naive loops** like that, with mid-tier models. That's the ceiling case, not the plan.
+
+#### Design rules that cut tokens (5–10×)
+
+| # | Rule | Effect |
+|---|---|---|
+| L1 | **Code does the deterministic work; the model does the judgement.** Fetching front pages and feeds, extracting text, deduplicating headlines, and counting coverage are code. The model sees compact, structured inputs. | The newsroom sees about 50K tokens of headlines and metadata instead of 300K+ of pages |
+| L2 | **Headlines and snippets first, full pages only for selected stories.** Full text is fetched only for the stories that make a brief (source packs). | Most candidates cost about 100 tokens, not 3K |
+| L3 | **Small calls instead of long loops.** Map-reduce: one cheap call per page returns a short passage summary. The main call sees the summaries. Tool results are compacted before they're added to a loop. | No growing context |
+| L4 | **Hard token budgets per run**, enforced by the orchestrator, with logging when they're hit | No runaway runs |
+| L5 | **Prompt caching** for stable prefixes (system prompts, digest, brief + source packs in the voice context), where the chosen model supports it | Cached tokens cost about 10–25% of normal |
+| L6 | **Share and reuse:** one digest for everyone; content-hashed source packs shared across users; evaluation configs reuse scored candidates (§8) | Pay once, use many times |
+| L7 | **LLM-call cache:** never pay twice for an identical call (re-runs, analysis, debugging) | Re-runs are free |
+| L8 | **Short simulated sessions** (brief + 1–3 turns on average) and **sample-based judging** | Evaluation scales gently |
+| L9 | **Cheapest model per role that passes the bake-off** (§1.3) | 5–20× cheaper than mid-tier everywhere |
+
+These rules are also good engineering: smaller, cleaner contexts tend to improve faithfulness. The cost and quality trade-off is reportable under the course's *optimization* topic.
+
+#### Lean estimate
+
+Assumes a cheap-tier model at about $0.10–0.30 per M input tokens for most roles, and a mid-tier model (about $2 per M) for the newsroom only if the bake-off says it's needed.
+
+| Unit | Lean token budget | Cost per unit |
+|---|---|---|
+| Newsroom run | About 60K in / 8K out | About $0.01–0.02 (cheap tier) · about $0.20 (mid tier) |
+| Chief-of-staff run | About 70K in / 8K out (snippets + digest + memory → scores; passage extraction for 6 stories; brief writing) | About $0.01–0.03 |
+| Voice session (live or simulated) | About 4 turns over a cached 15K context | About $0.003–0.01 |
+| Simulated user, per session | About 3K context per turn | About $0.003–0.01 (Tinker) |
+
+| Item | OpenRouter | Tinker |
+|---|---|---|
+| Development, prompt iteration, bake-off | $25–35 | $5 |
+| Newsroom: 40 replay days + about 35 live days | $2–15 | |
+| Chief of staff: evaluation (about 2,700 runs, after reuse) + live (about 250 user-days) | $30–45 | |
+| Voice sessions: evaluation (about 5,400) + live | $15–30 | |
+| Simulated users | | $20–35 |
+| Judges (sampled) | | $10–20 |
+| **Total** | **about $70–125** | **about $35–60** |
+
+**Guardrails:**
+- **Cost probe in M2:** one replayed day through every role. Re-estimate from real numbers before sizing the evaluation.
+- **Stop-loss:** pause evaluation runs if spend passes 60% of either credit before M5. Then cut seeds or the panel.
+- **A dashboard** of spend by role, run, and config (PRD COST-1).
 
 ---
 
@@ -313,7 +341,7 @@ Each is about 1–3 hours:
 | D3 | Models | No default provider; a per-role bake-off on OpenRouter; simulated users and judges from a different family (Tinker) |
 | D4 | Client | **Web app (PWA)**, mobile-first, push-to-talk |
 | D5 | Voice pipeline | §5.2 recommendations: browser speech-to-text and text-to-speech first, server fallback if flaky on iOS, sentence-streamed text-to-speech |
-| D6 | Hosting and backend | Streamlined: **Supabase** (Postgres + Auth + row-level security) + **one Railway service** running FastAPI (API + worker + scheduler) that also serves the built web app. Vercel isn't used (see 12.2). |
+| D6 | Hosting and backend | Goal: **easy and cheap, good enough for daily use.** **Supabase free tier** (Postgres + Auth + row-level security) + **one Railway service** (about $5 a month on the Hobby plan; FastAPI runs the API, the worker, the scheduler, and serves the web app). One `git push` deploys. Cheaper but more hands-on: Fly.io (about $2–5 a month) or a small VM (Hetzner about €4 a month, with Docker + Caddy for HTTPS). |
 
 ### 12.2 Why not Vercel
 
