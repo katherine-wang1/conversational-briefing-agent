@@ -12,8 +12,8 @@ This doc lays out the key technical decisions, the options for each, and a recom
 
 | # | Decision | Recommendation |
 |---|---|---|
-| 1 | **Model strategy under $300** | Cheap models do the bulk: **Claude Haiku 5.5** for the chief of staff and the voice agent (via OpenRouter); **Sonnet 5.5 only for the newsroom**, if a dev-slice test shows it's worth it. Simulated users and judges on **Tinker** (a different model family, paid from separate credit). |
-| 2 | **Agent harness** | **Our own thin orchestrator in Python** using an OpenAI-compatible client pointed at OpenRouter, with **our own (client-side) tools**. Managed Agents and Claude's built-in web tools are out: they aren't covered by these credits and can't be replayed. |
+| 1 | **Model strategy under $300** | **No default provider.** Pick the cheapest model per role that clears quality bars in a small bake-off on OpenRouter (§1.3). Simulated users and judges come from a **different family** than the agent (Tinker credit is a good fit). |
+| 2 | **Agent harness** | **We build it:** our own orchestrator in Python, our own tools, memory, and selection (PRD §6.0). Models are called through a thin, provider-agnostic interface. No hosted agent platforms or provider-side tools. |
 | 3 | **Tools and replay** | Every tool is an interface with a live and a replay backend. Replay search uses **SQLite FTS5**; live search uses a free tier (Tavily or Exa); live fetch uses Jina Reader or trafilatura. |
 | 4 | **Replay archive** | Build it from date-addressable sources: Techmeme archives, arXiv listings, HN Algolia, the **Wayback Machine** (for front pages and blogs as of a date). ⚠️ Historical **HN points at brief time** aren't directly available (§4). |
 | 5 | **Mobile + voice** | A **PWA** (installable web app) over HTTPS, with push-to-talk. Speech-to-text and text-to-speech start with **free browser APIs**, then a server fallback if they're flaky on iOS. Expo app or a phone number as plan B. |
@@ -53,7 +53,7 @@ The two biggest consequences:
 
 | Option | Newsroom | Chief of staff | Voice | Sim users + judges | Pros | Cons |
 |---|---|---|---|---|---|---|
-| **A. Claude-tiered + Tinker** (recommended) | Sonnet 5.5 (or Haiku if the dev test shows parity) | Haiku 5.5 | Haiku 5.5 | Inkling-Small on Tinker | Strong agent quality at low cost; judges from a **different family**, which reduces self-preference bias; uses both credits | Two providers to integrate |
+| A. Claude-tiered + Tinker (example of one outcome of D) | Sonnet 5.5 (or Haiku if the dev test shows parity) | Haiku 5.5 | Haiku 5.5 | Inkling-Small on Tinker | Strong agent quality at low cost; judges from a **different family**, which reduces self-preference bias; uses both credits | Two providers to integrate |
 | B. All cheap, open models | Qwen / DeepSeek | Same | Same | Same or Tinker | Cheapest | Weaker tool use and faithfulness are likely; more prompt tuning |
 | C. Sonnet everywhere | Sonnet | Sonnet | Haiku | Haiku | Best quality | **Evaluation unaffordable** (about 20× the cost of option A) |
 
@@ -154,7 +154,7 @@ Live search volume (Kate plus pilot, about 20 searches per user-day) is about 5,
 | **Newsletters** | Public web archives (many have them) | Optional |
 | **Hindsight labels** | Coverage count (primary): independent archive sources mentioning a story within 14 days. HN final points (secondary). | Computed after collection; never shown to agents |
 
-**Window choice:** pick a window **after the training cutoffs of the agent models** (Haiku and Sonnet 5.5; check the published cutoffs 🔬) and with good Wayback coverage. If August–September 2026 is before a model's cutoff, move the window later (for example October 2026), or note the leakage risk.
+**Window choice:** pick a window **after the training cutoffs of the agent models** (whichever models the bake-off picks; check their published cutoffs 🔬) and with good Wayback coverage. If August–September 2026 is before a model's cutoff, move the window later (for example October 2026), or note the leakage risk.
 
 **Size estimate:** about 30–60K items for a 40-day window for the AI beat, which is a few GB at most. SQLite handles it easily.
 
@@ -178,7 +178,7 @@ Live search volume (Kate plus pilot, about 20 searches per user-day) is about 5,
 | **Speech-to-text** | (1) Browser **Web Speech API** (free; supported in Safari, quality varies); (2) record with MediaRecorder, then server speech-to-text: **Groq Whisper** (cheap, free tier), Deepgram (free starter credit), OpenAI transcription | Start with (1); add (2) as a fallback switch if accuracy or reliability is poor on iOS 🔬 |
 | **Text-to-speech** | (1) Browser **speechSynthesis** (free, robotic); (2) hosted: OpenAI TTS, ElevenLabs (free tier), Cartesia (free tier) | Start with (1) for development; switch the self-study to (2) if the voice quality hurts the experience (about $0–10 total) |
 | **Latency path** | Stream LLM tokens → split into sentences → text-to-speech per sentence → play while generating | Required to hit about 1 s to first audio |
-| **Turn model** | Haiku 5.5 with a cached brief and source packs | Measure time to first token through OpenRouter (it adds a small hop) 🔬 |
+| **Turn model** | The fastest bake-off model that stays faithful, with a cached brief and source packs | Measure time to first token through OpenRouter (it adds a small hop) 🔬 |
 
 **Frontend stack:** React (Vite) PWA, or Next.js. A single-page app served by the backend keeps deployment to one service. Next.js on Vercel's free tier plus a separate API is also fine.
 
@@ -250,7 +250,7 @@ This is still a meaningful scale for the course, and it fits the budget.
 | Option | What | Value | Effort |
 |---|---|---|---|
 | **A. Simulated users + judges on Inkling-Small** (recommended) | Serverless sampling (beta) | Uses the separate credit; **different model family from the agent**, which reduces self-preference in judging and simulation | Low, if the API is straightforward 🔬 |
-| B. **"Optimization" stretch:** distil a small scorer or judge | LoRA fine-tune Inkling-Small on Claude-labelled relevance scores (or on Kate's ratings), then compare cost and quality with the prompted Haiku scorer | Hits the course's *optimization* topic; a nice extra results table | Medium. Optional, M5◇. Would revise the PRD non-goal on fine-tuning to "optional". |
+| B. **"Optimization" stretch:** distil a small scorer or judge | LoRA fine-tune Inkling-Small on relevance scores labelled by a stronger model (or on Kate's ratings), then compare cost and quality with the prompted scorer | Hits the course's *optimization* topic; a nice extra results table | Medium. Optional, M5◇. Would revise the PRD non-goal on fine-tuning to "optional". |
 | C. RL on the chief of staff's query generation with a simulator reward | Tinker RL | Research-y, interesting | High. Not for this quarter. |
 
 ---
@@ -259,7 +259,7 @@ This is still a meaningful scale for the course, and it fits the budget.
 
 Each is about 1–3 hours:
 
-1. **OpenRouter + Claude:** check that prompt caching works (look at the cache fields in usage), check structured-output support, and measure time to first token for Haiku 5.5.
+1. **OpenRouter models:** for each bake-off candidate, check prompt-caching support (look at the cache fields in usage), tool-calling and structured-output support, and time to first token.
 2. **Tinker:** check that serverless sampling of Inkling-Small works (API shape, rate limits, real cost per 1M tokens).
 3. **iPhone:** a minimal HTTPS PWA with push-to-talk. Test Web Speech recognition and speechSynthesis in Safari and in home-screen mode.
 4. **Archive feasibility:** pull one day of Techmeme, the HN front page from Wayback, arXiv, and 3 trade-press front pages for a candidate window. Confirm the granularity and the HN-points workaround.
@@ -270,8 +270,8 @@ Each is about 1–3 hours:
 
 ## 11. Decisions needed from Kate
 
-1. **Model strategy:** option A (Claude-tiered via OpenRouter + Tinker for simulators and judges)?
-2. **Newsroom model:** decide by a dev-slice test (Sonnet vs. Haiku on importance recall)?
+1. **Model strategy:** option D: a per-role bake-off across OpenRouter models (no default provider), with simulated users and judges from a different family?
+2. **Bake-off budget:** about $5–10 on about 5 dev days, before any evaluation runs?
 3. **Evaluation resizing** (§8): OK to shrink to 12 users × 30 days with mixed seeds?
 4. **Mobile:** PWA first, with Expo or a phone number only if the self-study shows pain?
 5. **Hosting stack:** Supabase + Fly.io/Railway (about $5–10 a month out of pocket)?

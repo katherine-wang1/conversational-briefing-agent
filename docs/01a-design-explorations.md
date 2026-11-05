@@ -206,6 +206,8 @@ The agent code is identical in both modes, which keeps the evaluation honest. Ev
 
 ### 6.4 Rough cost (planning only; measure in M4)
 
+Model names below are price reference points only. Models are chosen per role by a bake-off (see `02a-technical-design-options.md` §1.3).
+
 | Role | Per run | Frequency | Rough cost |
 |---|---|---|---|
 | Newsroom | About 30–60 fetches and searches, about 200–400K input tokens | 2–4× a day, shared | About $1–6 a day on Opus 5.5 ($4 / $20 per M tokens), shared by all users |

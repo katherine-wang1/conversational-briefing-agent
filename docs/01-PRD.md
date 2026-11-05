@@ -1,12 +1,13 @@
 # PRD: Conversational Briefing Agent (MVP)
 
-**Status:** Draft v0.6, ready for review
+**Status:** Draft v0.6.1, ready for review
 **Owner:** Kate Wang
 **Source:** `proposal.pdf` ("Expanding the Aperture", CS329Z Fall 2026)
 **Companion doc:** `01a-design-explorations.md` (alternatives considered: shared corpus, topic channels, news sources, voice, mobile)
 **Next docs:** `02-technical-design.md` (after this PRD is approved), then the build
 
 **Changelog**
+- **v0.6.1:** Added the build principle (§6.0): we build the agent loop, tools, memory, selection, and evaluation ourselves; models are interchangeable API calls with no default provider; no hosted agent platforms or provider-side tools.
 - **v0.6:** **Agent-native architecture.**
   - No news-ingestion pipeline and no user-facing channels.
   - Three agent roles, each run in its own context:
@@ -221,6 +222,25 @@ Memory written to **this user's** store:
 
 ## 6. System design: agents, signals, and tools
 
+### 6.0 Build principle: we build the agent
+
+This is a course project in building agents, so **the agentic system is our own code**. LLMs are interchangeable components we call through plain APIs.
+
+| We build | We use off the shelf |
+|---|---|
+| The agent loop and orchestration (role contexts, tool calling, retries, budgets) | LLM inference APIs (any provider via OpenRouter or Tinker), chosen per role by a bake-off |
+| The tools (search, fetch, headline sources, memory, bookmarks) and their live and replay backends | Search APIs and web pages as *data sources* behind our tools |
+| Newsroom importance judgement, candidate scoring, and selection (slots + MMR) | Speech-to-text and text-to-speech engines |
+| Memory: schema, signal extraction, weighting, decay, guards | Standard infrastructure (database, auth, hosting) |
+| Pre-fetch and source packs, follow-up research | |
+| Simulated users, the replay archive and labels, graders, the evaluation harness | |
+
+| ID | Requirement |
+|---|---|
+| BUILD-1 | **No hosted agent platforms or agent frameworks that own the loop** (for example vendor-managed agents, provider-side "server tools" like built-in web search). These would hide the parts we're meant to build and can't be replayed (RG-5). |
+| BUILD-2 | **Provider-agnostic model layer:** every role calls models through one thin interface. Swapping a role's model is a config change. |
+| BUILD-3 | Thin libraries are fine where they don't own the agent's logic (an HTTP client, a schema validator, an article-text extractor, a BM25 index). |
+
 ### 6.1 📰 Newsroom agent (shared)
 
 | ID | Requirement |
@@ -274,8 +294,8 @@ Memory written to **this user's** store:
 
 | Tool | Live backend | Replay backend |
 |---|---|---|
-| `search` | Claude's built-in web search (or Exa / Tavily) | Date-filtered search index over the frozen archive |
-| `fetch` | Claude's built-in web fetch | Archived copy of the page as of the replay date |
+| `search` | Our tool, calling a search API (for example Tavily, Exa, Brave) | Our date-filtered search index over the frozen archive |
+| `fetch` | Our tool: HTTP fetch + article-text extraction | Archived copy of the page as of the replay date |
 | `headline_source(name, date)` | The source's current front page or feed | The source's **date archive** (for example Techmeme daily pages, HN Algolia by date, arXiv listings by date, archived RSS) |
 
 | ID | Requirement |
@@ -658,14 +678,8 @@ Dates are placeholders until they're lined up with the course deadlines. Milesto
 1. **Team of one:** confirmed with course staff?
 2. **Course deadlines** (milestone, final report, poster), to put dates on §14. The course site was blocked from this session.
 3. **Replay window:** August–September 2026, or adjust after checking the models' training cutoff and archive availability?
-4. **Models:** Claude for all three roles? A suggested starting point:
-   - Opus 5.5 for the newsroom (shared, quality-critical);
-   - Sonnet 5.5 for the chief of staff;
-   - Haiku 5.5 for the voice agent and simulated users;
-   - a different model or prompt family for judges.
-
-   Budget source: course credits (OpenRouter), or an Anthropic API key?
-5. **Agent harness:** the Claude API with our own orchestrator, or Managed Agents (scheduled deployments, memory stores)? To be decided in the technical design.
+4. **Models:** no default provider. Models are picked per role by a small bake-off across OpenRouter models, with simulated users and judges from a different family than the agent (see `02a-technical-design-options.md` §1). Budget: $200 OpenRouter + $100 Tinker.
+5. ~~Agent harness~~ **Decided:** we build the agent ourselves (§6.0). No hosted agent platforms.
 6. **Headline sources per beat:** any must-haves (newsletters, sites)?
 7. **Hosting** and **auth** (email link vs. Google).
 8. **Pilot size**, and whether a human-subjects review is needed.
