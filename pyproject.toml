@@ -14,6 +14,8 @@ dependencies = [
   "python-ulid>=2.7",
   "tenacity>=8.5",
   "pyjwt[crypto]>=2.8",
+  # source parsers + archive collectors (W-A); needed by a plain `pip install -e .` for the laptop run
+  "feedparser>=6.0",
   "trafilatura>=1.12",
   "lxml>=5.0",
 ]

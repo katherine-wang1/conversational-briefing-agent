@@ -11,11 +11,13 @@ subtopics: [robot-foundation-models, humanoids, industrial-logistics, autonomous
 digest_size: 25
 refresh_live_utc: ["06:00", "18:00"]
 headline_sources:
-  - {id: robot_report, type: rss, tier: 1, weight: 0.8, url: "https://www.therobotreport.com/feed/", verified: false}
-  - {id: ieee_robotics, type: rss, tier: 1, weight: 0.7, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss", verified: false}
-  - {id: robotics247, type: rss, tier: 2, weight: 0.5, url: "https://www.robotics247.com/rss", verified: false}
-  - {id: techcrunch_robotics, type: rss, tier: 2, weight: 0.6, url: "https://techcrunch.com/category/robotics/feed/", verified: false}
-  - {id: arxiv_cs_ro, type: arxiv, tier: 2, weight: 0.4, params: {cat: cs.RO}, verified: false}
-  - {id: nvidia_blog, type: rss, tier: 2, weight: 0.4, url: "https://blogs.nvidia.com/feed/", verified: false}
-  - {id: hn_front, type: hn_front, tier: 2, weight: 0.4, url: "https://news.ycombinator.com/", params: {keyword_filter: robotics}, verified: false}
+  - {id: robot_report, type: rss, tier: 1, weight: 0.8, url: "https://www.therobotreport.com/feed/", verified: true}
+  - {id: ieee_robotics, type: rss, tier: 1, weight: 0.7, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss", verified: true}
+  # fixed 2026-11-05: /rss serves the HTML home page (no feed); parsed as a front page instead
+  - {id: robotics247, type: frontpage, tier: 2, weight: 0.5, url: "https://www.robotics247.com/", verified: true}
+  - {id: techcrunch_robotics, type: rss, tier: 2, weight: 0.6, url: "https://techcrunch.com/category/robotics/feed/", verified: true}
+  - {id: arxiv_cs_ro, type: arxiv, tier: 2, weight: 0.4, params: {cat: cs.RO}, verified: true}
+  - {id: nvidia_blog, type: rss, tier: 2, weight: 0.4, url: "https://blogs.nvidia.com/feed/", verified: true}
+  - {id: hn_front, type: hn_front, tier: 2, weight: 0.4, url: "https://news.ycombinator.com/", params: {keyword_filter: robotics}, verified: true}
+  # not verified: reddit.com robots.txt disallows generic crawlers (incl. this UA); Wayback copies only
   - {id: reddit_robotics, type: reddit_top, tier: 3, weight: 0.3, url: "https://www.reddit.com/r/robotics/top/.rss?t=day", verified: false}

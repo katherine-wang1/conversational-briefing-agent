@@ -8,6 +8,7 @@ the simulated "now" (TDD §5.2, RG-3).
 from __future__ import annotations
 
 from datetime import datetime
+from typing import Any
 
 from pydantic import Field
 
@@ -33,6 +34,11 @@ class HeadlineObservation(Strict):
     engagement: Engagement | None = None
     published_at: datetime | None = None
     external_id: str | None = None  # e.g. HN item id, arXiv id
+    # Additive (W-A). How this observation was obtained, e.g. "wayback" (as-of snapshot), "live"
+    # (fetched now), "hindsight_listing" (a past-day listing fetched later: rank / engagement are NOT
+    # as-of and live in `extra["hindsight"]`, never in `engagement`). None = unspecified (live adapters).
+    provenance: str | None = None
+    extra: dict[str, Any] | None = None  # source-specific extras (e.g. techmeme cluster size)
 
 
 class Document(Strict):
@@ -48,6 +54,9 @@ class Document(Strict):
     fetched_at: datetime
     text: str = ""
     extractor_ver: str = "v0"
+    # Additive (W-A). Where the body text came from: "wayback" (snapshot nearest after publish),
+    # "origin_live" (fetched from the origin later; may be a later revision), "api" (arXiv / HF abstract).
+    body_source: str | None = None
 
 
 class SearchHit(Strict):

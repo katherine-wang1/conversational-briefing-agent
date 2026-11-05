@@ -51,15 +51,8 @@ def _discover() -> None:
     for k, fn in (getattr(mod, "ADAPTERS", None) or {}).items():
         _ADAPTERS.setdefault(k, fn)
     hook = getattr(mod, "register_adapters", None)
-    if callable(hook):
-        hook(register_source_adapter)
-    # INTERIM (integration smoke): minimal adapters until W-A's parsers merge; never override W-A's.
-    try:
-        interim = importlib.import_module("app.sources._interim")
-    except ImportError:
-        return
-    for k, fn in interim.ADAPTERS.items():
-        _ADAPTERS.setdefault(k, fn)
+    if callable(hook):  # never override adapters registered explicitly (e.g. by tests)
+        hook(lambda source_type, fn: _ADAPTERS.setdefault(source_type, fn))
 
 
 def source_config(source_id: str) -> tuple[str, HeadlineSourceCfg]:
