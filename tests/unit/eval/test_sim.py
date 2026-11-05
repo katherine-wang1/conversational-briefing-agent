@@ -60,7 +60,9 @@ def test_drift_add_fade_shift():
 def test_latent_leak_guard():
     p = next(p for p in load_panel() if p.id == "sim_t09")
     assert latent_leak("What about speculative decoding?", p, heard_lower="") == ["speculative decoding"]
-    assert latent_leak("What about speculative decoding?", p, heard_lower="... speculative decoding ...") == []
+    assert (
+        latent_leak("What about speculative decoding?", p, heard_lower="... speculative decoding ...") == []
+    )
 
 
 async def _run(profile_id: str, prefer: list[str], text="Who funded that?", brief=None, seed=1, day=0):
@@ -80,6 +82,7 @@ def _resp(prefer, text):
             if a in allowed:
                 return {"action": a, "text": text}
         return {"action": allowed[0], "text": ""}
+
     return fn
 
 
@@ -126,13 +129,16 @@ async def test_unanswerable_share_is_about_fifteen_percent():
 
 
 async def test_unanswerable_question_is_bookmarked_by_fake_agent():
-    log, _, _ = await _run("sim_t10", ["interrupt", "let_play", "end"], text="That is unknowable: what's the margin?")
+    log, _, _ = await _run(
+        "sim_t10", ["interrupt", "let_play", "end"], text="That is unknowable: what's the margin?"
+    )
     assert log.questions and all(q.bookmarked for q in log.questions)
 
 
 async def test_latent_term_never_spoken_unless_heard():
-    log, client, _ = await _run("sim_t09", ["interrupt", "ask", "let_play", "end"],
-                                text="Anything on speculative decoding?")
+    log, client, _ = await _run(
+        "sim_t09", ["interrupt", "ask", "let_play", "end"], text="Anything on speculative decoding?"
+    )
     assert log.latent_leaks_blocked > 0
     assert not any("speculative decoding" in t.text.lower() for t in log.turns if t.actor == "user")
 

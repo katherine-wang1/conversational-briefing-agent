@@ -1,15 +1,15 @@
 """CLI for the replay runner.
 
-  python -m eval.runner validate --manifest m.yaml [--manifest m2.yaml ...]
-      Load manifests, experiments and panels; check cache namespaces. No model calls.
+python -m eval.runner validate --manifest m.yaml [--manifest m2.yaml ...]
+    Load manifests, experiments and panels; check cache namespaces. No model calls.
 
-  python -m eval.runner run --manifest m.yaml --agent pkg.mod:factory --sim-client pkg.mod:factory
-      Run for real. `--agent` names a zero-argument factory returning an AgentEntryPoints adapter over
-      the real newsroom / chief of staff / voice / memory / follow-up components; `--sim-client` a
-      factory returning the ModelClient used for `sim.user` / `sim.rate` (W-B's client).
+python -m eval.runner run --manifest m.yaml --agent pkg.mod:factory --sim-client pkg.mod:factory
+    Run for real. `--agent` names a zero-argument factory returning an AgentEntryPoints adapter over
+    the real newsroom / chief of staff / voice / memory / follow-up components; `--sim-client` a
+    factory returning the ModelClient used for `sim.user` / `sim.rate` (W-B's client).
 
-  python -m eval.runner run --manifest m.yaml --fake --runs-dir /tmp/x
-      Smoke-run the whole loop with fakes only (synthetic stories, scripted simulator). No network.
+python -m eval.runner run --manifest m.yaml --fake --runs-dir /tmp/x
+    Smoke-run the whole loop with fakes only (synthetic stories, scripted simulator). No network.
 """
 
 from __future__ import annotations
@@ -50,8 +50,11 @@ def main(argv: list[str] | None = None) -> int:
         ms = [load_manifest(p) for p in a.manifest]
         for m in ms:
             ps = m.profiles()
-            print(f"{m.run_id}: experiment={m.experiment} seed={m.seed} window={m.window.start}+{m.window.days}d "
-                  f"users={len(ps)} namespace={m.namespace} digests={m.digests_run_id} reuse={m.reuse.model_dump()}")
+            print(
+                f"{m.run_id}: experiment={m.experiment} seed={m.seed} "
+                f"window={m.window.start}+{m.window.days}d users={len(ps)} namespace={m.namespace} "
+                f"digests={m.digests_run_id} reuse={m.reuse.model_dump()}"
+            )
         problems = check_namespaces(ms)
         for pr in problems:
             print("PROBLEM:", pr)
@@ -66,8 +69,10 @@ def main(argv: list[str] | None = None) -> int:
         agent, sim_client = FakeAgent(), scripted_sim_client()
     else:
         if not (a.agent and a.sim_client):
-            print("run needs --agent and --sim-client (or --fake). No real agent adapter is wired yet.",
-                  file=sys.stderr)
+            print(
+                "run needs --agent and --sim-client (or --fake). No real agent adapter is wired yet.",
+                file=sys.stderr,
+            )
             return 2
         agent, sim_client = _factory(a.agent), _factory(a.sim_client)
     summary = asyncio.run(run_manifest(m, agent, sim_client, a.runs_dir))

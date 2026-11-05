@@ -73,11 +73,13 @@ class AgentEntryPoints(Protocol):
         Onboarding goes through the normal onboarding path (TDD §9.4)."""
         ...
 
-    async def cos_daily(self, user_id: str, local_date: date, digests: list[Digest], ctx: RunContext) -> DailyBrief:
-        ...
+    async def cos_daily(
+        self, user_id: str, local_date: date, digests: list[Digest], ctx: RunContext
+    ) -> DailyBrief: ...
 
-    async def open_session(self, user_id: str, daily: DailyBrief,
-                           ctx: RunContext) -> tuple[str, SessionTransport]:
+    async def open_session(
+        self, user_id: str, daily: DailyBrief, ctx: RunContext
+    ) -> tuple[str, SessionTransport]:
         """Start a text-mode session (no TTS) against the voice agent for `daily.brief`; returns
         (session_id, transport). With `briefs_from` reuse the brief comes from another run, so the
         adapter must not assume it produced it. Under B4 the adapter withholds `daily.packs`."""

@@ -21,7 +21,9 @@ from app.config import loader
 
 PROFILES_DIR = Path(__file__).resolve().parent / "profiles"
 
-Role = Literal["researcher", "builder", "pm", "investor", "policy_safety", "journalist", "student", "generalist"]
+Role = Literal[
+    "researcher", "builder", "pm", "investor", "policy_safety", "journalist", "student", "generalist"
+]
 Split = Literal["test", "dev", "scenario", "kate"]
 
 

@@ -54,7 +54,7 @@ def assert_blind(text: str) -> None:
         raise JudgeLeakError("judge prompt carries an arm/experiment/config field")
 
 
-class JudgeResult(BaseModel, Generic[O]):
+class JudgeResult(BaseModel, Generic[O]):  # noqa: UP046
     judge: str
     role: str
     prompt_version: str
@@ -66,7 +66,7 @@ class JudgeResult(BaseModel, Generic[O]):
 
 
 @dataclass(frozen=True)
-class JudgeSpec(Generic[I, O]):
+class JudgeSpec(Generic[I, O]):  # noqa: UP046
     name: str  # e.g. "faithfulness"
     input_model: type[I]
     output_model: type[O]
@@ -99,7 +99,7 @@ def _prompt(name: str) -> Prompt:
     return p
 
 
-async def run_judge(
+async def run_judge(  # noqa: UP047
     client: ModelClient,
     spec: JudgeSpec[I, O],
     item: I,
@@ -109,17 +109,28 @@ async def run_judge(
 ) -> JudgeResult[O]:
     system, user = spec.build(item)
     out, resp = await call_structured(
-        client, role=spec.role, system=system, user=user, schema=spec.output_model,
+        client,
+        role=spec.role,
+        system=system,
+        user=user,
+        schema=spec.output_model,
         trace=TraceCtx(run_id="judge", role=spec.role, step=spec.name),
-        cache_namespace=f"{cache_namespace}:{spec.name}:{spec.prompt.sha}", temperature=0.0,
+        cache_namespace=f"{cache_namespace}:{spec.name}:{spec.prompt.sha}",
+        temperature=0.0,
     )
     return JudgeResult[spec.output_model](  # type: ignore[name-defined]
-        judge=spec.name, role=spec.role, prompt_version=spec.prompt.version, prompt_sha=spec.prompt.sha,
-        item_id=item_id, output=out, model=resp.model, cached=resp.cached,
+        judge=spec.name,
+        role=spec.role,
+        prompt_version=spec.prompt.version,
+        prompt_sha=spec.prompt.sha,
+        item_id=item_id,
+        output=out,
+        model=resp.model,
+        cached=resp.cached,
     )
 
 
-async def run_many(
+async def run_many(  # noqa: UP047
     client: ModelClient,
     spec: JudgeSpec[I, O],
     items: Iterable[tuple[str, I]],

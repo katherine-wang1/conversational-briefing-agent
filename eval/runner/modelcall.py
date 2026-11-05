@@ -68,7 +68,7 @@ class StructuredCallError(RuntimeError):
     pass
 
 
-def _parse(resp: ChatResponse, schema: type[T]) -> T:
+def _parse(resp: ChatResponse, schema: type[T]) -> T:  # noqa: UP047
     if resp.parsed is not None:
         return schema.model_validate(resp.parsed)
     text = resp.content.strip()
@@ -81,7 +81,7 @@ def _parse(resp: ChatResponse, schema: type[T]) -> T:
     return schema.model_validate(json.loads(text[start : end + 1]))
 
 
-async def call_structured(
+async def call_structured(  # noqa: UP047
     client: ModelClient,
     *,
     role: str,
@@ -97,7 +97,10 @@ async def call_structured(
 ) -> tuple[T, ChatResponse]:
     """One structured call with a single repair retry on schema failure."""
     budget = budget or TokenBudget(input_tokens=200_000)
-    messages = [Message(role="system", content=system, cache_breakpoint=True), Message(role="user", content=user)]
+    messages = [
+        Message(role="system", content=system, cache_breakpoint=True),
+        Message(role="user", content=user),
+    ]
     last_err: Exception | None = None
     for _ in range(retries + 1):
         req = ChatRequest(
@@ -118,7 +121,10 @@ async def call_structured(
             messages = [
                 *messages,
                 Message(role="assistant", content=resp.content),
-                Message(role="user", content=f"That did not match the required JSON schema ({e}). "
-                        "Reply with only the corrected JSON object."),
+                Message(
+                    role="user",
+                    content=f"That did not match the required JSON schema ({e}). "
+                    "Reply with only the corrected JSON object.",
+                ),
             ]
     raise StructuredCallError(f"{role}: structured output failed after retries: {last_err}")

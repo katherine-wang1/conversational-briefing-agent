@@ -25,7 +25,9 @@ def term_in(term: str, text: str) -> bool:
 
 
 def story_has_term(story: ShownStory, term: str) -> bool:
-    return any(term.lower() == e.lower() for e in story.entities) or term_in(term, story.text or story.headline)
+    return any(term.lower() == e.lower() for e in story.entities) or term_in(
+        term, story.text or story.headline
+    )
 
 
 # ---- importance recall -------------------------------------------------------------------------
@@ -55,8 +57,7 @@ def importance_recall(
     `window`: only stories first seen in [start, end] count. `k`: only the first k stories of each
     brief count (recall@K). Users with no briefs still count (recall 0) - pass them in `users`.
     """
-    imp = {s: fs for s, fs in important_first_seen.items()
-           if window is None or window[0] <= fs <= window[1]}
+    imp = {s: fs for s, fs in important_first_seen.items() if window is None or window[0] <= fs <= window[1]}
     hits: dict[str, set[str]] = defaultdict(set)
     for s in shown:
         sid = s.label_story_id or s.story_ref
@@ -66,8 +67,9 @@ def importance_recall(
         if 0 <= lag <= d:
             hits[s.user_id].add(sid)
     per_user = {u: (len(hits[u]) / len(imp) if imp else 0.0) for u in users}
-    return RecallResult(per_user=per_user, mean=mean(per_user.values()) if imp else None,
-                        n_important=len(imp), d=d, k=k)
+    return RecallResult(
+        per_user=per_user, mean=mean(per_user.values()) if imp else None, n_important=len(imp), d=d, k=k
+    )
 
 
 def relative_to_baseline(value: float | None, baseline: float | None) -> float | None:
@@ -93,7 +95,9 @@ def relevance(story: ShownStory, interests: Sequence[HiddenInterest]) -> float:
     return sum(i.weight * match_strength(story, i) for i in interests)
 
 
-def mean_relevance(shown: Iterable[ShownStory], profiles: Mapping[str, SimProfile]) -> dict[str, float | None]:
+def mean_relevance(
+    shown: Iterable[ShownStory], profiles: Mapping[str, SimProfile]
+) -> dict[str, float | None]:
     """Mean relevance over shown stories, per user."""
     per: dict[str, list[float]] = defaultdict(list)
     for s in shown:
@@ -123,10 +127,20 @@ def topic_coverage(shown: Iterable[ShownStory], window_start: date, window_days:
         for s in stories:
             for sub in s.subtopics:
                 mass[sub] += 1 / len(s.subtopics)
-        rows.append({"user": u, "start": (window_start + timedelta(days=w * window_days)).isoformat(),
-                     "distinct": len(mass), "entropy": entropy(mass), "n_stories": len(stories)})
-    return CoverageResult(windows=rows, mean_distinct=mean(r["distinct"] for r in rows),
-                          mean_entropy=mean(r["entropy"] for r in rows))
+        rows.append(
+            {
+                "user": u,
+                "start": (window_start + timedelta(days=w * window_days)).isoformat(),
+                "distinct": len(mass),
+                "entropy": entropy(mass),
+                "n_stories": len(stories),
+            }
+        )
+    return CoverageResult(
+        windows=rows,
+        mean_distinct=mean(r["distinct"] for r in rows),
+        mean_entropy=mean(r["entropy"] for r in rows),
+    )
 
 
 # ---- latent discovery --------------------------------------------------------------------------
@@ -171,6 +185,11 @@ def latent_discovery(shown: Iterable[ShownStory], profiles: Mapping[str, SimProf
                 heard += 1
                 engaged += int(s.engaged)
         share[u] = len(hit) / len(lat)
-    return LatentResult(per_user_surfaced_share=share, mean_surfaced_share=mean(share.values()),
-                        surfaced_events=surfaced, heard_events=heard, engaged_events=engaged,
-                        engagement_rate=engaged / heard if heard else None)
+    return LatentResult(
+        per_user_surfaced_share=share,
+        mean_surfaced_share=mean(share.values()),
+        surfaced_events=surfaced,
+        heard_events=heard,
+        engaged_events=engaged,
+        engagement_rate=engaged / heard if heard else None,
+    )

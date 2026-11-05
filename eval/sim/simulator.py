@@ -167,7 +167,9 @@ def render_interests(profile: SimProfile, day: int) -> str:
     lines = []
     for i in sorted(profile.interests_at(day), key=lambda x: -x.weight):
         extra = ", ".join([*i.entities, *i.keywords])
-        lines.append(f"- {_desc(i.subtopic)} ({_level(i.weight)})" + (f"; especially: {extra}" if extra else ""))
+        lines.append(
+            f"- {_desc(i.subtopic)} ({_level(i.weight)})" + (f"; especially: {extra}" if extra else "")
+        )
     return "\n".join(lines)
 
 
@@ -183,15 +185,21 @@ def render_latent(profile: SimProfile) -> str:
 
 def render_delivery(profile: SimProfile) -> str:
     d = profile.delivery
-    return (f"About {d.length_s} seconds of brief; {d.depth} depth; {d.technicality} technicality; "
-            f"prefers {d.style}.")
+    return (
+        f"About {d.length_s} seconds of brief; {d.depth} depth; {d.technicality} technicality; "
+        f"prefers {d.style}."
+    )
 
 
 def latent_leak(text: str, profile: SimProfile, heard_lower: str) -> list[str]:
     """Latent terms said by the user that the agent has not mentioned first."""
     t = text.lower()
-    return [term for li in profile.latent_interests for term in li.terms
-            if term.lower() in t and term.lower() not in heard_lower]
+    return [
+        term
+        for li in profile.latent_interests
+        for term in li.terms
+        if term.lower() in t and term.lower() not in heard_lower
+    ]
 
 
 # ---- simulator ---------------------------------------------------------------------------------
@@ -241,9 +249,17 @@ class Simulator:
 
     # -- main loop --
 
-    async def run_session(self, brief: BriefScript, transport: SessionTransport, session_id: str) -> SessionLog:
-        log = SessionLog(session_id=session_id, profile_id=self.p.id, day=self.day, seed=self.seed,
-                         time_budget_s=round(self.sample_time_budget(), 1), prompt_sha=self.user_prompt.sha)
+    async def run_session(
+        self, brief: BriefScript, transport: SessionTransport, session_id: str
+    ) -> SessionLog:
+        log = SessionLog(
+            session_id=session_id,
+            profile_id=self.p.id,
+            day=self.day,
+            seed=self.seed,
+            time_budget_s=round(self.sample_time_budget(), 1),
+            prompt_sha=self.user_prompt.sha,
+        )
         log.max_questions = self.sample_max_questions()
         self._log = log
         self._clock = 0.0
@@ -281,8 +297,9 @@ class Simulator:
             if ended:
                 break
             out.heard = "full" if k == len(sents) else "partial"
-            act = await self._decide(phase="brief", story_ref=story_ref, segment=sents[k - 1].sid,
-                                     allowed=self._allowed_brief())
+            act = await self._decide(
+                phase="brief", story_ref=story_ref, segment=sents[k - 1].sid, allowed=self._allowed_brief()
+            )
             if act.action == "end":
                 await transport.send(Control(action="end"))
                 ended = True
@@ -294,8 +311,9 @@ class Simulator:
                 continue
             resume_from = k
             if act.action in SPEAKING_ACTIONS:
-                await transport.send(Interrupt(segment_id=sents[k - 1].sid,
-                                               offset_ms=int(self._dur(sents[k - 1].text) * 1000)))
+                await transport.send(
+                    Interrupt(segment_id=sents[k - 1].sid, offset_ms=int(self._dur(sents[k - 1].text) * 1000))
+                )
                 cont = await self._speak(transport, act, story_ref, sents[k - 1].sid, "brief", out)
                 if cont == "end":
                     ended = True
@@ -321,8 +339,9 @@ class Simulator:
                 if act.action not in SPEAKING_ACTIONS:
                     break
                 tgt = act.target_story_id if act.target_story_id in outcomes else None
-                cont = await self._speak(transport, act, tgt, None, "open_floor",
-                                         outcomes.get(tgt) if tgt else None)
+                cont = await self._speak(
+                    transport, act, tgt, None, "open_floor", outcomes.get(tgt) if tgt else None
+                )
                 if cont == "end":
                     break
             await transport.send(Control(action="end"))
@@ -345,8 +364,13 @@ class Simulator:
     def _allowed_brief(self) -> list[str]:
         return [a for a in ("let_play", "interrupt", "say_pref", "save", "skip", "end") if self._allow(a)]
 
-    async def _play(self, transport: SessionTransport, s: BriefSentence, story_ref: str | None,
-                    outcomes: dict[str, StoryOutcome]) -> bool:
+    async def _play(
+        self,
+        transport: SessionTransport,
+        s: BriefSentence,
+        story_ref: str | None,
+        outcomes: dict[str, StoryOutcome],
+    ) -> bool:
         d = self._dur(s.text)
         if self._remaining() < d:
             self._log.end_reason = "cut_short"
@@ -361,8 +385,15 @@ class Simulator:
             outcomes[story_ref].heard = "partial"
         return True
 
-    async def _speak(self, transport: SessionTransport, act: SimAction, story_ref: str | None,
-                     segment: str | None, phase: str, out: StoryOutcome | None) -> str:
+    async def _speak(
+        self,
+        transport: SessionTransport,
+        act: SimAction,
+        story_ref: str | None,
+        segment: str | None,
+        phase: str,
+        out: StoryOutcome | None,
+    ) -> str:
         """Say something, get the reply, then run the follow-up loop. Returns 'resume' or 'end'."""
         current: SimAction | None = act
         cur_phase = phase
@@ -374,25 +405,49 @@ class Simulator:
             allowed = [a for a in ("ask", "say_pref", "let_play", "end") if self._allow(a)]
             if phase == "open_floor":
                 allowed = [a for a in allowed if a != "let_play"] + ["let_play"]
-            current = await self._decide(phase="followup", story_ref=story_ref, segment=segment, allowed=allowed)
+            current = await self._decide(
+                phase="followup", story_ref=story_ref, segment=segment, allowed=allowed
+            )
             if current.action == "end":
                 return "end"
         return "resume"
 
-    async def _utter(self, transport: SessionTransport, act: SimAction, story_ref: str | None,
-                     segment: str | None, phase: str, out: StoryOutcome | None) -> None:
-        text = act.text.strip() or {"save": "Save that one for later.", "say_pref": "More like this, please."}.get(
-            act.action, "Can you tell me more about that?")
+    async def _utter(
+        self,
+        transport: SessionTransport,
+        act: SimAction,
+        story_ref: str | None,
+        segment: str | None,
+        phase: str,
+        out: StoryOutcome | None,
+    ) -> None:
+        text = act.text.strip() or {
+            "save": "Save that one for later.",
+            "say_pref": "More like this, please.",
+        }.get(act.action, "Can you tell me more about that?")
         self._clock += self.p.behavior.think_s + self._dur(text)
-        self._log.turns.append(SimTurn(t_s=round(self._clock, 1), actor="user", action=act.action, text=text,
-                                       target_story_id=story_ref, at_segment=segment))
+        self._log.turns.append(
+            SimTurn(
+                t_s=round(self._clock, 1),
+                actor="user",
+                action=act.action,
+                text=text,
+                target_story_id=story_ref,
+                at_segment=segment,
+            )
+        )
         self._conv.append(f"YOU: {text}")
         q: QuestionRecord | None = None
         if act.action in QUESTION_ACTIONS:
             self._qn += 1
-            q = QuestionRecord(qid=f"{self._log.session_id}-q{self._qn}", text=text, target_story_id=story_ref,
-                               at_segment=segment, intended_unanswerable=self._pending_unanswerable,
-                               phase=phase)  # type: ignore[arg-type]
+            q = QuestionRecord(
+                qid=f"{self._log.session_id}-q{self._qn}",
+                text=text,
+                target_story_id=story_ref,
+                at_segment=segment,
+                intended_unanswerable=self._pending_unanswerable,
+                phase=phase,
+            )  # type: ignore[arg-type]
             self._log.questions.append(q)
         if out is not None:
             if act.action in QUESTION_ACTIONS:
@@ -405,8 +460,15 @@ class Simulator:
         await transport.send(Utterance(text=text, stt="sim"))
         reply = await self._exchange(transport)
         self._clock += self._dur(reply.text) if reply.text else 0.0
-        self._log.turns.append(SimTurn(t_s=round(self._clock, 1), actor="agent", action="reply", text=reply.text,
-                                       citations=reply.citations))
+        self._log.turns.append(
+            SimTurn(
+                t_s=round(self._clock, 1),
+                actor="agent",
+                action="reply",
+                text=reply.text,
+                citations=reply.citations,
+            )
+        )
         self._conv.append(f"ASSISTANT: {reply.text}")
         self._heard.append(reply.text)
         if q is not None:
@@ -439,8 +501,9 @@ class Simulator:
         reply.text = " ".join(texts)
         return reply
 
-    async def _decide(self, *, phase: str, story_ref: str | None, segment: str | None,
-                      allowed: list[str]) -> SimAction:
+    async def _decide(
+        self, *, phase: str, story_ref: str | None, segment: str | None, allowed: list[str]
+    ) -> SimAction:
         if self._remaining() <= 0:
             return SimAction(action="end")
         b = self.p.behavior
@@ -450,19 +513,29 @@ class Simulator:
             allowed = [a for a in allowed if a != "say_pref"] or ["let_play"]
             guidance.append("Do not state preferences out loud right now; just act.")
         else:
-            guidance.append("If you have a clear preference about this story, you may say it out loud (say_pref).")
-        self._pending_unanswerable = any(a in QUESTION_ACTIONS for a in allowed) and \
-            self.rng.random() < b.unanswerable_rate
+            guidance.append(
+                "If you have a clear preference about this story, you may say it out loud (say_pref)."
+            )
+        self._pending_unanswerable = (
+            any(a in QUESTION_ACTIONS for a in allowed) and self.rng.random() < b.unanswerable_rate
+        )
         if self._pending_unanswerable:
-            guidance.append("If you ask a question now, make it one the brief and its sources likely cannot "
-                            "answer (a specific detail no article would contain).")
+            guidance.append(
+                "If you ask a question now, make it one the brief and its sources likely cannot "
+                "answer (a specific detail no article would contain)."
+            )
         if self.rng.random() < b.noise:
-            guidance.append("This time, act against your usual preferences (for example, skip something you "
-                            "would normally like, or ask about something you would normally ignore).")
-        openness = ("curious and happy to dig into stories outside your usual interests"
-                    if b.exploration_openness >= 0.7 else
-                    "uninterested in stories outside your usual interests" if b.exploration_openness <= 0.2
-                    else "occasionally interested in stories outside your usual interests")
+            guidance.append(
+                "This time, act against your usual preferences (for example, skip something you "
+                "would normally like, or ask about something you would normally ignore)."
+            )
+        openness = (
+            "curious and happy to dig into stories outside your usual interests"
+            if b.exploration_openness >= 0.7
+            else "uninterested in stories outside your usual interests"
+            if b.exploration_openness <= 0.2
+            else "occasionally interested in stories outside your usual interests"
+        )
         guidance.append(f"You are {openness}.")
         if phase == "brief":
             position = f"The brief is playing; you just heard part of story {story_ref}."
@@ -473,23 +546,40 @@ class Simulator:
 
         stories = "\n".join(f"{ref}: {txt}" for ref, txt in self._first_sentence.items()) or "(none yet)"
         _, user = self.user_prompt.render(
-            persona=self.p.persona, stated=self.p.onboarding, interests=render_interests(self.p, self.day),
-            latent=render_latent(self.p), delivery=render_delivery(self.p), stories=stories,
+            persona=self.p.persona,
+            stated=self.p.onboarding,
+            interests=render_interests(self.p, self.day),
+            latent=render_latent(self.p),
+            delivery=render_delivery(self.p),
+            stories=stories,
             heard="\n".join(self._heard[-12:]) or "(nothing yet)",
-            conversation="\n".join(self._conv[-8:]) or "(nothing yet)", position=position,
-            remaining=str(max(0, int(self._remaining()))), guidance="\n".join(guidance),
+            conversation="\n".join(self._conv[-8:]) or "(nothing yet)",
+            position=position,
+            remaining=str(max(0, int(self._remaining()))),
+            guidance="\n".join(guidance),
             allowed=", ".join(allowed),
         )
         trace = TraceCtx(run_id=self.run_id, role="sim.user", step=f"{self.p.id}:d{self.day}:{phase}")
         heard_lower = " ".join(self._heard).lower()
         act: SimAction | None = None
         for attempt in range(2):
-            extra = "" if attempt == 0 else ("\nIMPORTANT: you mentioned one of your private interests that the "
-                                             "assistant has not brought up. Do not mention it.")
+            extra = (
+                ""
+                if attempt == 0
+                else (
+                    "\nIMPORTANT: you mentioned one of your private interests that the "
+                    "assistant has not brought up. Do not mention it."
+                )
+            )
             self._log.model_calls += 1
             act, _ = await call_structured(
-                self.client, role="sim.user", system=self.user_prompt.system, user=user + extra, schema=SimAction,
-                trace=trace, cache_namespace=f"{self.cache_namespace}:{self.p.id}:{self.day}",
+                self.client,
+                role="sim.user",
+                system=self.user_prompt.system,
+                user=user + extra,
+                schema=SimAction,
+                trace=trace,
+                cache_namespace=f"{self.cache_namespace}:{self.p.id}:{self.day}",
             )
             if act.action in SPEAKING_ACTIONS and latent_leak(act.text, self.p, heard_lower):
                 self._log.latent_leaks_blocked += 1
@@ -515,12 +605,22 @@ class Simulator:
         for s in brief.sentences:
             if s.story_ref:
                 by_story.setdefault(s.story_ref, []).append(s.text)
-        stories = "\n".join(f"{st.story_ref}: {st.headline}. {' '.join(by_story.get(st.story_ref, []))}"
-                            for st in brief.stories)
-        _, user = self.rate_prompt.render(persona=self.p.persona, interests=render_interests(self.p, self.day),
-                                          latent=render_latent(self.p), stories=stories)
+        stories = "\n".join(
+            f"{st.story_ref}: {st.headline}. {' '.join(by_story.get(st.story_ref, []))}"
+            for st in brief.stories
+        )
+        _, user = self.rate_prompt.render(
+            persona=self.p.persona,
+            interests=render_interests(self.p, self.day),
+            latent=render_latent(self.p),
+            stories=stories,
+        )
         out, _ = await call_structured(
-            self.client, role="sim.rate", system=self.rate_prompt.system, user=user, schema=SimRatings,
+            self.client,
+            role="sim.rate",
+            system=self.rate_prompt.system,
+            user=user,
+            schema=SimRatings,
             trace=TraceCtx(run_id=self.run_id, role="sim.rate", step=f"{self.p.id}:d{self.day}"),
             cache_namespace=f"{self.cache_namespace}:{self.p.id}:{self.day}:rate",
         )

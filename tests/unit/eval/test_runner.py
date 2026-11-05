@@ -18,9 +18,14 @@ MANIFESTS = Path(__file__).resolve().parents[3] / "eval" / "runner" / "manifests
 
 
 def M(**kw) -> RunManifest:
-    base = dict(run_id="t-full-s1", experiment="full", seed=1,
-                window={"start": "2026-10-01", "days": 3, "slice": "test"}, users=["sim_t01", "sim_t09"],
-                concurrency=2)
+    base = dict(
+        run_id="t-full-s1",
+        experiment="full",
+        seed=1,
+        window={"start": "2026-10-01", "days": 3, "slice": "test"},
+        users=["sim_t01", "sim_t09"],
+        concurrency=2,
+    )
     base.update(kw)
     return RunManifest(**base)
 
@@ -55,8 +60,12 @@ async def test_run_writes_traces_and_reuses_digests(tmp_path):
     # newsroom ran once per day; a second run with digests_from reuses them
     assert sum(1 for c in agent.calls if c[0] == "newsroom_run") == 3
     agent2 = FakeAgent()
-    await Runner(M(run_id="t-b1-s1", experiment="b1_importance_only", reuse={"digests_from": "t-full-s1-digests"}),
-                 agent2, scripted_sim_client(), runs_dir=tmp_path).run()
+    await Runner(
+        M(run_id="t-b1-s1", experiment="b1_importance_only", reuse={"digests_from": "t-full-s1-digests"}),
+        agent2,
+        scripted_sim_client(),
+        runs_dir=tmp_path,
+    ).run()
     assert not any(c[0] == "newsroom_run" for c in agent2.calls)
 
 
@@ -75,9 +84,15 @@ async def test_days_are_sequential_per_user_and_clock_is_simulated(tmp_path):
 async def test_briefs_from_and_counterfactual_reuse(tmp_path):
     await Runner(M(), FakeAgent(), scripted_sim_client(), runs_dir=tmp_path).run()
     agent = FakeAgent()
-    m = M(run_id="t-b4-s1", experiment="b4_no_prefetch",
-          reuse={"digests_from": "t-full-s1-digests", "briefs_from": "t-full-s1",
-                 "day_wise_counterfactual_from": "t-full-s1"})
+    m = M(
+        run_id="t-b4-s1",
+        experiment="b4_no_prefetch",
+        reuse={
+            "digests_from": "t-full-s1-digests",
+            "briefs_from": "t-full-s1",
+            "day_wise_counterfactual_from": "t-full-s1",
+        },
+    )
     runner = Runner(m, agent, scripted_sim_client(), runs_dir=tmp_path)
     s = await runner.run()
     fails = tmp_path / "t-b4-s1" / "failures.jsonl"
@@ -134,8 +149,9 @@ async def test_grade_run_over_fake_traces(tmp_path):
 def test_cli_validate_and_fake_run(tmp_path, capsys):
     assert cli(["validate", "--manifest", str(MANIFESTS / "test-full-s1.yaml")]) == 0
     mf = tmp_path / "m.yaml"
-    mf.write_text("run_id: smoke\nexperiment: full\nseed: 3\nwindow: {start: 2026-10-01, days: 2}\n"
-                  "users: [sim_t02]\n")
+    mf.write_text(
+        "run_id: smoke\nexperiment: full\nseed: 3\nwindow: {start: 2026-10-01, days: 2}\nusers: [sim_t02]\n"
+    )
     assert cli(["run", "--manifest", str(mf), "--runs-dir", str(tmp_path)]) == 2  # refuses without an agent
     assert cli(["run", "--manifest", str(mf), "--fake", "--runs-dir", str(tmp_path)]) == 0
     assert (tmp_path / "smoke" / "summary.json").exists()

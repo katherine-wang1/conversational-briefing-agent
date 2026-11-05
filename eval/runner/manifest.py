@@ -112,6 +112,7 @@ def check_namespaces(manifests: Iterable[RunManifest]) -> list[str]:
         key = (m.seed, m.experiment, m.run_id)
         prev = seen.setdefault(m.namespace, key)
         if prev[:2] != key[:2]:
-            problems.append(f"cache namespace {m.namespace!r} shared by {prev[2]} and {m.run_id} "
-                            f"(seed/experiment differ)")
+            problems.append(
+                f"cache namespace {m.namespace!r} shared by {prev[2]} and {m.run_id} (seed/experiment differ)"
+            )
     return problems

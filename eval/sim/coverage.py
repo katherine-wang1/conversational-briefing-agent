@@ -16,7 +16,16 @@ from eval.sim.profile import SimProfile, load_panel, validate_taxonomy
 
 # dimension -> categories that the test panel must cover
 REQUIRED: dict[str, set[str]] = {
-    "role": {"researcher", "builder", "pm", "investor", "policy_safety", "journalist", "student", "generalist"},
+    "role": {
+        "researcher",
+        "builder",
+        "pm",
+        "investor",
+        "policy_safety",
+        "journalist",
+        "student",
+        "generalist",
+    },
     "breadth": {"specialist", "medium", "generalist"},
     "drift": {"stable", "periodic", "sudden", "occasional"},
     "length": {"short", "long"},

@@ -28,7 +28,6 @@ from app.contracts.session import (
     Control,
     Interrupt,
     Playback,
-    ResumeBrief,
     ServerMessage,
     StateMsg,
     TranscriptMsg,
@@ -57,8 +56,12 @@ class FakeModelClient:
         if isinstance(out, BaseModel):
             out = out.model_dump()
         if isinstance(out, dict):
-            return ChatResponse(model="fake", provider="fake", parsed=out, usage=Usage(tokens_in=10, tokens_out=5))
-        return ChatResponse(model="fake", provider="fake", content=str(out), usage=Usage(tokens_in=10, tokens_out=5))
+            return ChatResponse(
+                model="fake", provider="fake", parsed=out, usage=Usage(tokens_in=10, tokens_out=5)
+            )
+        return ChatResponse(
+            model="fake", provider="fake", content=str(out), usage=Usage(tokens_in=10, tokens_out=5)
+        )
 
     async def stream(self, req: ChatRequest) -> AsyncIterator[StreamEvent]:  # pragma: no cover - unused
         resp = await self.chat(req)
@@ -78,9 +81,12 @@ def scripted_sim_client(seed: int = 0) -> FakeModelClient:
         m = re.search(r"Allowed actions now: (.*)", prompt)
         allowed = [a.strip() for a in m.group(1).split(",")] if m else ["let_play"]
         h = _h(seed, prompt) % 3
-        for a in (("interrupt", "ask") if h == 0 else ("let_play", "end")):
+        for a in ("interrupt", "ask") if h == 0 else ("let_play", "end"):
             if a in allowed:
-                return {"action": a, "text": "What exactly was announced?" if a in ("interrupt", "ask") else ""}
+                return {
+                    "action": a,
+                    "text": "What exactly was announced?" if a in ("interrupt", "ask") else "",
+                }
         return {"action": allowed[-1], "text": ""}
 
     def rate(req: ChatRequest) -> dict[str, Any]:
@@ -97,8 +103,12 @@ class FakeVoiceAgent:
     """Answers each utterance with one canned sentence. Questions containing 'unknowable' are
     bookmarked. Supports the client→server messages the simulator sends."""
 
-    def __init__(self, brief: BriefScript, answer: str = "Here is what the sources say [p:p1].",
-                 bookmark_trigger: str = "unknowable"):
+    def __init__(
+        self,
+        brief: BriefScript,
+        answer: str = "Here is what the sources say [p:p1].",
+        bookmark_trigger: str = "unknowable",
+    ):
         self.brief = brief
         self.answer = answer
         self.bookmark_trigger = bookmark_trigger
@@ -169,13 +179,23 @@ def fake_digest(day: date, beat: str = "ai", run_id: str = "fake") -> Digest:
     rng = random.Random(_h(day, beat))
     for i, (sub, ent, title) in enumerate(_FAKE_STORIES):
         sid = f"st-{day.isoformat()}-{i}"
-        entries.append(DigestEntry(
-            story_id=sid, headline=f"[synthetic] {title}", summary="Synthetic test story.",
-            subtopics=[sub], entities=[ent], importance=rng.randint(20, 95), evidence=["synthetic"],
-            features=Features(n_items=1), urls=[f"https://example.invalid/{sid}"],
-        ))
+        entries.append(
+            DigestEntry(
+                story_id=sid,
+                headline=f"[synthetic] {title}",
+                summary="Synthetic test story.",
+                subtopics=[sub],
+                entities=[ent],
+                importance=rng.randint(20, 95),
+                evidence=["synthetic"],
+                features=Features(n_items=1),
+                urls=[f"https://example.invalid/{sid}"],
+            )
+        )
     at = datetime(day.year, day.month, day.day, 6, tzinfo=UTC)
-    return Digest(digest_id=f"dg-{day.isoformat()}", run_id=run_id, beat=beat, at=at, version="fake", entries=entries)
+    return Digest(
+        digest_id=f"dg-{day.isoformat()}", run_id=run_id, beat=beat, at=at, version="fake", entries=entries
+    )
 
 
 class FakeAgent:
@@ -204,18 +224,61 @@ class FakeAgent:
         stories, sentences, packs = [], [BriefSentence(sid="s0", text="Good morning.", kind="intro")], []
         for i, e in enumerate(picked):
             slot = "big_news" if i < 2 else "for_you"
-            stories.append(BriefStory(story_ref=e.story_id, slot=slot, headline=e.headline,
-                                      why_tag="big news" if i < 2 else "for you", aliases=e.entities))
-            sentences.append(BriefSentence(sid=f"s{i + 1}a", text=e.headline + ".", story_ref=e.story_id,
-                                           cites=[f"p-{e.story_id}"], kind="story"))
-            sentences.append(BriefSentence(sid=f"s{i + 1}b", text=f"More detail about {e.entities[0]} follows.",
-                                           story_ref=e.story_id, cites=[f"p-{e.story_id}"], kind="story"))
-            packs.append(SourcePack(story_ref=e.story_id, headline=e.headline, facts=[], depth="standard",
-                                    passages=[Passage(passage_id=f"p-{e.story_id}", doc_id="d", url=e.urls[0],
-                                                      text=e.summary, char_start=0, char_end=len(e.summary))]))
+            stories.append(
+                BriefStory(
+                    story_ref=e.story_id,
+                    slot=slot,
+                    headline=e.headline,
+                    why_tag="big news" if i < 2 else "for you",
+                    aliases=e.entities,
+                )
+            )
+            sentences.append(
+                BriefSentence(
+                    sid=f"s{i + 1}a",
+                    text=e.headline + ".",
+                    story_ref=e.story_id,
+                    cites=[f"p-{e.story_id}"],
+                    kind="story",
+                )
+            )
+            sentences.append(
+                BriefSentence(
+                    sid=f"s{i + 1}b",
+                    text=f"More detail about {e.entities[0]} follows.",
+                    story_ref=e.story_id,
+                    cites=[f"p-{e.story_id}"],
+                    kind="story",
+                )
+            )
+            packs.append(
+                SourcePack(
+                    story_ref=e.story_id,
+                    headline=e.headline,
+                    facts=[],
+                    depth="standard",
+                    passages=[
+                        Passage(
+                            passage_id=f"p-{e.story_id}",
+                            doc_id="d",
+                            url=e.urls[0],
+                            text=e.summary,
+                            char_start=0,
+                            char_end=len(e.summary),
+                        )
+                    ],
+                )
+            )
         sentences.append(BriefSentence(sid="s9", text="That's the brief.", kind="outro"))
-        brief = BriefScript(brief_id=f"b-{user_id}-{local_date}", user_id=user_id, local_date=local_date,
-                            arm=ctx.experiment.id, stories=stories, sentences=sentences, est_duration_s=60)
+        brief = BriefScript(
+            brief_id=f"b-{user_id}-{local_date}",
+            user_id=user_id,
+            local_date=local_date,
+            arm=ctx.experiment.id,
+            stories=stories,
+            sentences=sentences,
+            est_duration_s=60,
+        )
         return DailyBrief(brief=brief, packs=packs, candidates=[])
 
     async def open_session(self, user_id: str, daily: Any, ctx: Any) -> tuple[str, FakeVoiceAgent]:
@@ -229,14 +292,30 @@ class FakeAgent:
 
     async def memory_update(self, user_id: str, session_id: str, ctx: Any) -> MemorySnapshot:
         self.calls.append(("memory_update", session_id))
-        ints = self._snap.setdefault(user_id, [
-            Interest(id="i1", label="open models", subtopic="open-models", weight=0.5, confidence=0.3,
-                     source="onboarding"),
-            Interest(id="i2", label="chips", subtopic="chips-and-compute", weight=0.5, confidence=0.3,
-                     source="onboarding"),
-        ])
-        return MemorySnapshot(user_id=user_id, run_id=ctx.run_id, as_of=ctx.clock.now().date(),
-                              interests=ints, delivery=[])
+        ints = self._snap.setdefault(
+            user_id,
+            [
+                Interest(
+                    id="i1",
+                    label="open models",
+                    subtopic="open-models",
+                    weight=0.5,
+                    confidence=0.3,
+                    source="onboarding",
+                ),
+                Interest(
+                    id="i2",
+                    label="chips",
+                    subtopic="chips-and-compute",
+                    weight=0.5,
+                    confidence=0.3,
+                    source="onboarding",
+                ),
+            ],
+        )
+        return MemorySnapshot(
+            user_id=user_id, run_id=ctx.run_id, as_of=ctx.clock.now().date(), interests=ints, delivery=[]
+        )
 
     async def followup_research(self, user_id: str, ctx: Any) -> list[dict[str, Any]]:
         self.calls.append(("followup_research", user_id))

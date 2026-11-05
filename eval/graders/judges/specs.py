@@ -36,12 +36,15 @@ class FaithfulnessOutput(BaseModel):
     rationale: str = Field(default="", max_length=400)
 
 
-def faithfulness_input(sentence: BriefSentence | str, cites: Iterable[str],
-                       passages: Mapping[str, Passage]) -> FaithfulnessInput:
+def faithfulness_input(
+    sentence: BriefSentence | str, cites: Iterable[str], passages: Mapping[str, Passage]
+) -> FaithfulnessInput:
     """Only passages the sentence cites are shown. Unknown passage ids are dropped (and will make
     the claims unsupported, which is the correct grade for a citation to nothing)."""
     text = sentence.text if isinstance(sentence, BriefSentence) else sentence
-    return FaithfulnessInput(sentence=text, passages=[(pid, passages[pid].text) for pid in cites if pid in passages])
+    return FaithfulnessInput(
+        sentence=text, passages=[(pid, passages[pid].text) for pid in cites if pid in passages]
+    )
 
 
 def passages_by_id(packs: Iterable[SourcePack]) -> dict[str, Passage]:
@@ -59,10 +62,13 @@ FAITHFULNESS = JudgeSpec("faithfulness", FaithfulnessInput, FaithfulnessOutput, 
 def faithfulness_rate(results: Iterable[JudgeResult[FaithfulnessOutput]]) -> dict[str, float | int | None]:
     labels = [c.label for r in results for c in r.output.claims]
     n = len(labels)
-    return {"claims": n,
-            "supported": labels.count("supported"), "partial": labels.count("partial"),
-            "unsupported": labels.count("unsupported"),
-            "supported_rate": labels.count("supported") / n if n else None}
+    return {
+        "claims": n,
+        "supported": labels.count("supported"),
+        "partial": labels.count("partial"),
+        "unsupported": labels.count("unsupported"),
+        "supported_rate": labels.count("supported") / n if n else None,
+    }
 
 
 # ---- relevance ---------------------------------------------------------------------------------
@@ -80,13 +86,19 @@ class RelevanceOutput(BaseModel):
 
 
 def relevance_input(profile: SimProfile, day_index: int, headline: str, summary: str) -> RelevanceInput:
-    text = (f"{profile.persona}\n\nInterests (most important first):\n{render_interests(profile, day_index)}\n\n"
-            f"Also interested in, if it comes up:\n{render_latent(profile)}")
+    text = (
+        f"{profile.persona}\n\nInterests (most important first):\n{render_interests(profile, day_index)}\n\n"
+        f"Also interested in, if it comes up:\n{render_latent(profile)}"
+    )
     return RelevanceInput(profile=text, headline=headline, summary=summary)
 
 
-RELEVANCE = JudgeSpec("relevance", RelevanceInput, RelevanceOutput,
-                      lambda x: {"profile": x.profile, "headline": x.headline, "summary": x.summary})
+RELEVANCE = JudgeSpec(
+    "relevance",
+    RelevanceInput,
+    RelevanceOutput,
+    lambda x: {"profile": x.profile, "headline": x.headline, "summary": x.summary},
+)
 
 
 # ---- packaging ---------------------------------------------------------------------------------
@@ -105,12 +117,19 @@ class PackagingOutput(BaseModel):
 
 
 def packaging_input(brief: BriefScript, profile: SimProfile) -> PackagingInput:
-    return PackagingInput(brief_text="\n".join(s.text for s in brief.sentences),
-                          target_depth=profile.delivery.depth, target_technicality=profile.delivery.technicality)
+    return PackagingInput(
+        brief_text="\n".join(s.text for s in brief.sentences),
+        target_depth=profile.delivery.depth,
+        target_technicality=profile.delivery.technicality,
+    )
 
 
-PACKAGING = JudgeSpec("packaging", PackagingInput, PackagingOutput,
-                      lambda x: {"brief": x.brief_text, "depth": x.target_depth, "technicality": x.target_technicality})
+PACKAGING = JudgeSpec(
+    "packaging",
+    PackagingInput,
+    PackagingOutput,
+    lambda x: {"brief": x.brief_text, "depth": x.target_depth, "technicality": x.target_technicality},
+)
 
 
 # ---- QA ----------------------------------------------------------------------------------------
@@ -149,7 +168,11 @@ class InjectionOutput(BaseModel):
     rationale: str = Field(default="", max_length=400)
 
 
-INJECTION = JudgeSpec("injection", InjectionInput, InjectionOutput,
-                      lambda x: {"instruction": x.planted_instruction, "output": x.output_text})
+INJECTION = JudgeSpec(
+    "injection",
+    InjectionInput,
+    InjectionOutput,
+    lambda x: {"instruction": x.planted_instruction, "output": x.output_text},
+)
 
 ALL_JUDGES = {j.name: j for j in (FAITHFULNESS, RELEVANCE, PACKAGING, QA, INJECTION)}

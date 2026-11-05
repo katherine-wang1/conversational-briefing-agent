@@ -23,8 +23,9 @@ from eval.sim.profile import SimProfile
 from eval.sim.simulator import QUESTION_ACTIONS
 
 
-def shown_stories(rec: DayRecord, digest_entries: Mapping[str, DigestEntry],
-                  label_map: Mapping[str, str] | None = None) -> list[ShownStory]:
+def shown_stories(
+    rec: DayRecord, digest_entries: Mapping[str, DigestEntry], label_map: Mapping[str, str] | None = None
+) -> list[ShownStory]:
     outcomes = {o.story_ref: o for o in rec.session.stories}
     cand = {c.story_ref: c for c in rec.candidates}
     said: dict[str, list[str]] = {}
@@ -39,19 +40,32 @@ def shown_stories(rec: DayRecord, digest_entries: Mapping[str, DigestEntry],
         ents = de.entities if de else (c.scores.entities if c and c.scores else [])
         summary = de.summary if de else (c.summary if c else "")
         o = outcomes.get(st.story_ref)
-        out.append(ShownStory(
-            user_id=rec.profile_id, day=rec.day, day_index=rec.day_index, story_ref=st.story_ref,
-            label_story_id=(label_map or {}).get(st.story_ref, st.story_ref if de else None),
-            rank=rank, slot=st.slot, headline=st.headline,
-            text=" ".join([st.headline, summary, *said.get(st.story_ref, [])]),
-            subtopics=list(subs), entities=list(ents),
-            heard=o.heard if o else "none", engaged=bool(o and o.engaged),
-        ))
+        out.append(
+            ShownStory(
+                user_id=rec.profile_id,
+                day=rec.day,
+                day_index=rec.day_index,
+                story_ref=st.story_ref,
+                label_story_id=(label_map or {}).get(st.story_ref, st.story_ref if de else None),
+                rank=rank,
+                slot=st.slot,
+                headline=st.headline,
+                text=" ".join([st.headline, summary, *said.get(st.story_ref, [])]),
+                subtopics=list(subs),
+                entities=list(ents),
+                heard=o.heard if o else "none",
+                engaged=bool(o and o.engaged),
+            )
+        )
     return out
 
 
-def question_turns(rec: DayRecord, answerability: Mapping[str, str] | None = None,
-                   qa_labels: Mapping[str, str] | None = None, use_sim_intent: bool = False) -> list[QuestionTurn]:
+def question_turns(
+    rec: DayRecord,
+    answerability: Mapping[str, str] | None = None,
+    qa_labels: Mapping[str, str] | None = None,
+    use_sim_intent: bool = False,
+) -> list[QuestionTurn]:
     """Join simulator questions with the agent's per-turn tool log (aligned by utterance order).
 
     `answerability`: qid -> label from the T3 labelling. `use_sim_intent=True` falls back to the
@@ -71,19 +85,41 @@ def question_turns(rec: DayRecord, answerability: Mapping[str, str] | None = Non
         if label is None and use_sim_intent:
             label = "unanswerable" if q.intended_unanswerable else "unknown"
         jl = (qa_labels or {}).get(q.qid)
-        outcome = "bookmarked" if (q.bookmarked or "bookmark_question" in tools) else \
-            "abstained" if jl == "abstained" else "answered"
-        out.append(QuestionTurn(qid=q.qid, user_id=rec.profile_id, day=rec.day, text=q.text,
-                                answerability=label or "unknown", tools=tools, outcome=outcome, judge_label=jl,
-                                ttft_ms=meta.get("ttft_ms")))
+        outcome = (
+            "bookmarked"
+            if (q.bookmarked or "bookmark_question" in tools)
+            else "abstained"
+            if jl == "abstained"
+            else "answered"
+        )
+        out.append(
+            QuestionTurn(
+                qid=q.qid,
+                user_id=rec.profile_id,
+                day=rec.day,
+                text=q.text,
+                answerability=label or "unknown",
+                tools=tools,
+                outcome=outcome,
+                judge_label=jl,
+                ttft_ms=meta.get("ttft_ms"),
+            )
+        )
     return out
 
 
-def grade_run(run_id: str, profiles: Mapping[str, SimProfile], *, runs_dir: Path = RUNS_DIR,
-              digests_run_id: str | None = None, beat: str = "ai",
-              important_first_seen: Mapping[str, date] | None = None,
-              label_map: Mapping[str, str] | None = None, window: tuple[date, date] | None = None,
-              use_sim_intent: bool = True) -> dict[str, Any]:
+def grade_run(
+    run_id: str,
+    profiles: Mapping[str, SimProfile],
+    *,
+    runs_dir: Path = RUNS_DIR,
+    digests_run_id: str | None = None,
+    beat: str = "ai",
+    important_first_seen: Mapping[str, date] | None = None,
+    label_map: Mapping[str, str] | None = None,
+    window: tuple[date, date] | None = None,
+    use_sim_intent: bool = True,
+) -> dict[str, Any]:
     """All code metrics for one run (no LLM calls). Importance recall needs hindsight labels."""
     recs = load_day_records(runs_dir, run_id)
     if not recs:
@@ -109,13 +145,18 @@ def grade_run(run_id: str, profiles: Mapping[str, SimProfile], *, runs_dir: Path
     start = min(d for _, d in recs)
     out: dict[str, Any] = {"run_id": run_id, "users": users, "user_days": len(recs)}
     if important_first_seen is not None:
-        out["importance_recall"] = gsel.importance_recall(important_first_seen, shown, users, window=window).model_dump()
+        out["importance_recall"] = gsel.importance_recall(
+            important_first_seen, shown, users, window=window
+        ).model_dump()
     out["relevance"] = gsel.mean_relevance(shown, profiles)
     out["topic_coverage"] = gsel.topic_coverage(shown, start).model_dump()
     out["latent_discovery"] = gsel.latent_discovery(shown, profiles).model_dump()
-    out["interest_recovery"] = {u: [r.model_dump() for r in gmem.recovery_trajectory(s, profiles[u])]
-                                for u, s in snaps.items()}
-    out["drift_lag"] = {u: [x.model_dump() for x in gmem.drift_lags(s, profiles[u])] for u, s in snaps.items()}
+    out["interest_recovery"] = {
+        u: [r.model_dump() for r in gmem.recovery_trajectory(s, profiles[u])] for u, s in snaps.items()
+    }
+    out["drift_lag"] = {
+        u: [x.model_dump() for x in gmem.drift_lags(s, profiles[u])] for u, s in snaps.items()
+    }
     out["over_narrowing"] = gmem.over_narrowing_by_user(snaps, profiles)
     out["length_adherence"] = gbrief.length_adherence(lengths).model_dump()
     out["specificity"] = gbrief.specificity(heads).model_dump()

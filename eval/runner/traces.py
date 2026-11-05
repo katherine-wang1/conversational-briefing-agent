@@ -21,10 +21,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
-from app.contracts.brief import Candidate, SourcePack
+from app.contracts.brief import BriefScript, Candidate, SourcePack
 from app.contracts.digest import Digest
 from app.contracts.memory import MemorySnapshot
-from app.contracts.brief import BriefScript
 from eval.sim.simulator import SessionLog
 
 RUNS_DIR = Path(__file__).resolve().parents[1] / "runs"

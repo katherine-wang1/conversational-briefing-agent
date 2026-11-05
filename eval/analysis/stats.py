@@ -59,8 +59,14 @@ def cluster_bootstrap(
         s = _estimate([clusters[rng.randrange(k)] for _ in range(k)], estimator)
         if s is not None:
             stats.append(s)
-    return CI(estimate=est, lo=percentile(stats, 100 * alpha / 2), hi=percentile(stats, 100 * (1 - alpha / 2)),
-              n_clusters=k, n_units=sum(len(c) for c in clusters), n_resamples=n_resamples)
+    return CI(
+        estimate=est,
+        lo=percentile(stats, 100 * alpha / 2),
+        hi=percentile(stats, 100 * (1 - alpha / 2)),
+        n_clusters=k,
+        n_units=sum(len(c) for c in clusters),
+        n_resamples=n_resamples,
+    )
 
 
 class PairedResult(BaseModel):
@@ -93,8 +99,15 @@ def paired_comparison(
     p = _sign_flip_p(diffs, n_permutations, estimator, seed) if diffs else None
     ma = sum(a[k] for k in keys) / len(keys) if keys else None
     mb = sum(b[k] for k in keys) / len(keys) if keys else None
-    return PairedResult(diff=ci, mean_a=ma, mean_b=mb, n_pairs=len(keys),
-                        unmatched_a=len(set(a) - set(b)), unmatched_b=len(set(b) - set(a)), p_value=p)
+    return PairedResult(
+        diff=ci,
+        mean_a=ma,
+        mean_b=mb,
+        n_pairs=len(keys),
+        unmatched_a=len(set(a) - set(b)),
+        unmatched_b=len(set(b) - set(a)),
+        p_value=p,
+    )
 
 
 def _sign_flip_p(diffs: Mapping[str, Sequence[float]], n: int, how: Estimator, seed: int) -> float:
@@ -144,8 +157,11 @@ def seed_variance(by_seed: Mapping[int, float]) -> SeedSummary:
     return SeedSummary(seeds=sorted(by_seed), values=vals, mean=m, sd=sd)
 
 
-def by_user(rows: Sequence[Mapping[str, object]], value: Callable[[Mapping[str, object]], float | None],
-            user_key: str = "user") -> dict[str, list[float]]:
+def by_user(
+    rows: Sequence[Mapping[str, object]],
+    value: Callable[[Mapping[str, object]], float | None],
+    user_key: str = "user",
+) -> dict[str, list[float]]:
     """Group per-unit rows into {user: [values]} skipping None values."""
     out: dict[str, list[float]] = defaultdict(list)
     for r in rows:
@@ -157,5 +173,8 @@ def by_user(rows: Sequence[Mapping[str, object]], value: Callable[[Mapping[str, 
 
 def ci_row(name: str, ci: CI, digits: int = 3) -> str:
     """Markdown table row for report/tables/*.md."""
-    f = (lambda x: "-" if x is None else f"{x:.{digits}f}")
+
+    def f(x: float | None) -> str:
+        return "-" if x is None else f"{x:.{digits}f}"
+
     return f"| {name} | {f(ci.estimate)} | [{f(ci.lo)}, {f(ci.hi)}] | {ci.n_clusters} | {ci.n_units} |"

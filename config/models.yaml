@@ -21,3 +21,4 @@ roles:
   judge.packaging: {provider: tinker, model: inkling-small}
   judge.qa: {provider: tinker, model: inkling-small}
   judge.injection: {provider: tinker, model: inkling-small}
+  eval.qgen: {provider: tinker, model: inkling-small}   # T3 curated-question generation (W-G)

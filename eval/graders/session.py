@@ -53,9 +53,13 @@ def abstention(turns: Iterable[QuestionTurn]) -> AbstentionResult:
     unsup = sum(1 for t in ans if t.judge_label == "unsupported")
     over = sum(1 for t in turns if t.answerability == "answerable" and t.outcome != "answered")
     return AbstentionResult(
-        n_unanswerable=len(un), correct_abstentions=ok, abstention_rate=ok / len(un) if un else None,
-        n_answerable_answered=len(ans), unsupported_answers=unsup,
-        unsupported_rate=unsup / len(ans) if ans else None, over_abstentions=over,
+        n_unanswerable=len(un),
+        correct_abstentions=ok,
+        abstention_rate=ok / len(un) if un else None,
+        n_answerable_answered=len(ans),
+        unsupported_answers=unsup,
+        unsupported_rate=unsup / len(ans) if ans else None,
+        over_abstentions=over,
     )
 
 
@@ -88,13 +92,17 @@ class LatencyResult(BaseModel):
 
 def live_latency(turns: Iterable[QuestionTurn]) -> LatencyResult:
     """Live: end_of_speech_ts -> first tts_chunk sent (both epoch seconds)."""
-    vals = [(t.first_tts_chunk_ts - t.end_of_speech_ts) * 1000 for t in turns
-            if t.first_tts_chunk_ts is not None and t.end_of_speech_ts is not None]
+    vals = [
+        (t.first_tts_chunk_ts - t.end_of_speech_ts) * 1000
+        for t in turns
+        if t.first_tts_chunk_ts is not None and t.end_of_speech_ts is not None
+    ]
     return LatencyResult(n=len(vals), p50_ms=percentile(vals, 50), p95_ms=percentile(vals, 95))
 
 
 def replay_latency(turns: Iterable[QuestionTurn], tts_constant_ms: float | None = None) -> LatencyResult:
     """Replay: LLM time to first token; the measured TTS constant is reported alongside, separately."""
     vals = [t.ttft_ms for t in turns if t.ttft_ms is not None]
-    return LatencyResult(n=len(vals), p50_ms=percentile(vals, 50), p95_ms=percentile(vals, 95),
-                         tts_constant_ms=tts_constant_ms)
+    return LatencyResult(
+        n=len(vals), p50_ms=percentile(vals, 50), p95_ms=percentile(vals, 95), tts_constant_ms=tts_constant_ms
+    )

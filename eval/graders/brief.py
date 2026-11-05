@@ -51,5 +51,7 @@ def specificity(items: Iterable[tuple[str, Sequence[str]]]) -> SpecificityResult
     return SpecificityResult(n=len(rows), rate=(1 - len(fails) / len(rows)) if rows else None, failures=fails)
 
 
-def brief_headlines(brief: BriefScript, entities_by_story: dict[str, list[str]]) -> list[tuple[str, list[str]]]:
+def brief_headlines(
+    brief: BriefScript, entities_by_story: dict[str, list[str]]
+) -> list[tuple[str, list[str]]]:
     return [(s.headline, entities_by_story.get(s.story_ref, [])) for s in brief.stories]

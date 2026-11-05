@@ -28,14 +28,16 @@ def _vec(w: Mapping[str, float], keys: Sequence[str]) -> list[float]:
     return [w.get(k, 0.0) for k in keys]
 
 
-def spearman_recovery(learned: Mapping[str, float], hidden: Mapping[str, float],
-                      universe: set[str] | None = None) -> float | None:
+def spearman_recovery(
+    learned: Mapping[str, float], hidden: Mapping[str, float], universe: set[str] | None = None
+) -> float | None:
     keys = sorted(universe or ai_subtopic_ids())
     return spearman(_vec(learned, keys), _vec(hidden, keys))
 
 
-def ndcg_at_k(learned: Mapping[str, float], hidden: Mapping[str, float], k: int = 5,
-              universe: set[str] | None = None) -> float | None:
+def ndcg_at_k(
+    learned: Mapping[str, float], hidden: Mapping[str, float], k: int = 5, universe: set[str] | None = None
+) -> float | None:
     """NDCG@k of the learned ranking with hidden weights as graded relevance (linear gain).
     Ties in the learned ranking are broken by subtopic id for determinism."""
     keys = sorted(universe or ai_subtopic_ids())
@@ -93,7 +95,9 @@ def drift_lags(snapshots: Mapping[int, MemorySnapshot], profile: SimProfile) -> 
             if (up and v >= thr) or (not up and v <= thr):
                 lag = d - ev_day
                 break
-        out.append(DriftLag(event_day=ev_day, subtopic=sub, target=target, start=start, threshold=thr, lag_days=lag))
+        out.append(
+            DriftLag(event_day=ev_day, subtopic=sub, target=target, start=start, threshold=thr, lag_days=lag)
+        )
     return out
 
 
@@ -104,8 +108,9 @@ def over_narrowing(learned: Mapping[str, float], hidden: Mapping[str, float]) ->
     return entropy(learned) / h if h > 0 else None
 
 
-def over_narrowing_by_user(snapshots: Mapping[str, Mapping[int, MemorySnapshot]],
-                           profiles: Mapping[str, SimProfile]) -> dict[str, float | None]:
+def over_narrowing_by_user(
+    snapshots: Mapping[str, Mapping[int, MemorySnapshot]], profiles: Mapping[str, SimProfile]
+) -> dict[str, float | None]:
     """Over-narrowing at each user's last snapshot."""
     out: dict[str, float | None] = defaultdict(lambda: None)
     for u, snaps in snapshots.items():
