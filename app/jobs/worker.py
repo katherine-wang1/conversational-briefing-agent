@@ -14,8 +14,6 @@ import socket
 import time
 import traceback
 
-from psycopg.types.json import Jsonb
-
 from app.jobs import scheduler
 from app.jobs.deps import Deps
 from app.jobs.handlers import HANDLERS, Handler, PermanentJobError
@@ -84,7 +82,7 @@ class Worker:
             await s.worker_heartbeats.upsert(
                 worker_id=self.worker_id,
                 seen_at=self.deps.clock(),
-                info=Jsonb({"concurrency": self.concurrency}),
+                info={"concurrency": self.concurrency, "agents": self.deps.ports.name},
             )
 
     async def run_forever(self, stop: asyncio.Event) -> None:
@@ -100,12 +98,12 @@ class Worker:
             now = time.monotonic()
             try:
                 if self.run_scheduler and now - last_tick >= 60:
+                    last_tick = now  # set first: a failing tick must not block job claiming
                     await scheduler.tick(self.deps.db, self.queue, self.deps.clock())
                     await self.heartbeat()
-                    last_tick = now
                 if now - last_reap >= 300:
-                    await self.queue.reap_stale()
                     last_reap = now
+                    await self.queue.reap_stale()
                 claimed = False
                 while len(running) < self.concurrency and not stop.is_set():
                     job = await self.queue.claim(self.worker_id)

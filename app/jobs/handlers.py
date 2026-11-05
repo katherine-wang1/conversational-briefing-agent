@@ -138,6 +138,12 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
             observations.extend(r.data.observations)
         else:
             log.warning("newsroom %s: source %s skipped: %s", beat_id, src.id, r.error)
+    if not observations:
+        # Don't publish an empty digest over the last good one (e.g. source adapters not wired yet).
+        async with deps.db.system_scope() as s:
+            await s.newsroom_runs.update(run_row_id, status="no_observations")
+        log.warning("newsroom %s at %s: no observations from any source; digest not updated", beat_id, at)
+        return
     async with deps.db.system_scope() as s:
         for o in observations:
             await s.headline_observations.insert(id=new_id("ob"), **o.model_dump())
