@@ -51,16 +51,21 @@ class Router:
         ledger_path: str | Path | None = None,
         cache_path: str | Path | None = None,
         spend_cap_usd: float | None = None,
+        ledger: Ledger | None = None,
         **kw: Any,
     ) -> Router:
+        """Production wiring: keys from OPENROUTER_API_KEY / TINKER_API_KEY, JSONL ledger at
+        `ledger_path` (or $LLM_LEDGER_PATH), optional SQLite call cache."""
         from app.llm.openrouter import OpenRouterClient
         from app.llm.tinker import TinkerClient
 
-        path = ledger_path or os.environ.get("LLM_LEDGER_PATH", "eval/runs/llm_ledger.jsonl")
-        sinks: list[LedgerSink] = [JsonlLedgerSink(path)]
+        if ledger is None:
+            path = ledger_path or os.environ.get("LLM_LEDGER_PATH", "eval/runs/llm_ledger.jsonl")
+            sinks: list[LedgerSink] = [JsonlLedgerSink(path)]
+            ledger = Ledger(sinks, spend_cap_usd=spend_cap_usd)
         return cls(
             {"openrouter": OpenRouterClient(), "tinker": TinkerClient()},
-            ledger=Ledger(sinks, spend_cap_usd=spend_cap_usd),
+            ledger=ledger,
             cache=CallCache(cache_path) if cache_path else None,
             **kw,
         )
