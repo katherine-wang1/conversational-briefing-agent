@@ -4,8 +4,8 @@
   "rows": 0
  },
  "coverage": {
-  "files": 43,
-  "rows": 315
+  "files": 81,
+  "rows": 614
  },
  "documents": {
   "files": 79,
@@ -21,10 +21,10 @@
  },
  "observations": {
   "files": 94,
-  "rows": 146894
+  "rows": 148754
  },
  "units": {
   "files": 93,
-  "rows": 987
+  "rows": 1331
  }
 }
