@@ -14,6 +14,8 @@ The build is split into workstreams that can run at the same time. They meet onl
 5. **Build principle** (PRD §6.0): we write the agent loop, tools, memory, selection, and evaluation. Models are called only through `app/contracts/llm.ModelClient`. No hosted agent platforms or provider-side tools.
 6. **Don't fake missing results.** If a network host or API key is unavailable, say so. Build against fixtures and leave a clear TODO; never invent data and present it as collected.
 
+Full instructions for each workstream are in `docs/workstreams/W-*.md`. The orchestrator brief is `docs/workstreams/ORCHESTRATOR.md`.
+
 ## Workstreams
 
 | # | Workstream | Branch | Owns (directories) | Depends on | Needs network / keys |
