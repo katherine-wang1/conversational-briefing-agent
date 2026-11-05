@@ -675,6 +675,8 @@ Dates are placeholders until they're lined up with the course deadlines. Milesto
 
 ## 16. Open questions (decisions for Kate)
 
+> Decisions made so far, and the defaults adopted for the rest, are recorded in `02a-technical-design-options.md` §12. The list below is kept for history.
+
 1. **Team of one:** confirmed with course staff?
 2. **Course deadlines** (milestone, final report, poster), to put dates on §14. The course site was blocked from this session.
 3. **Replay window:** August–September 2026, or adjust after checking the models' training cutoff and archive availability?

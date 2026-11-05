@@ -299,3 +299,60 @@ Each is about 1–3 hours:
 - OpenRouter caching and pricing (third-party, verify): [aicostlab: Claude via OpenRouter](https://aicostlab.pages.dev/model/openrouter-anthropic-claude-opus-4-5) · [Finout: Claude pricing 2026](https://www.finout.io/blog/claude-pricing-in-2026-for-individuals-organizations-and-developers?hs_amp=true)
 - Search API pricing and PWA notes: see `01a-design-explorations.md` sources.
 - Claude model prices: Anthropic's published model table, as of October 2026.
+
+---
+
+## 12. Decision log
+
+### 12.1 Decided
+
+| # | Decision | Choice |
+|---|---|---|
+| D1 | Build principle | We build the agent loop, tools, memory, selection, and evaluation (PRD §6.0) |
+| D2 | Search | **Our own `search` tool** over a search API (Tavily or Exa free tier to start), with live and replay backends |
+| D3 | Models | No default provider; a per-role bake-off on OpenRouter; simulated users and judges from a different family (Tinker) |
+| D4 | Client | **Web app (PWA)**, mobile-first, push-to-talk |
+| D5 | Voice pipeline | §5.2 recommendations: browser speech-to-text and text-to-speech first, server fallback if flaky on iOS, sentence-streamed text-to-speech |
+| D6 | Hosting and backend | Streamlined: **Supabase** (Postgres + Auth + row-level security) + **one Railway service** running FastAPI (API + worker + scheduler) that also serves the built web app. Vercel isn't used (see 12.2). |
+
+### 12.2 Why not Vercel
+
+Vercel is excellent for hosting a frontend, but our backend needs things serverless functions handle poorly:
+- **agent runs that take minutes** (newsroom, chief of staff, follow-up research);
+- **per-user scheduled jobs** through the day;
+- an **always-on worker** and queue;
+- a **Python** evaluation and agent codebase.
+
+Vercel's function time limits and limited cron jobs on the free plan would force either a second backend host anyway, or a rewrite in TypeScript plus a third-party job service.
+
+| Option | Services to run | Verdict |
+|---|---|---|
+| **Supabase + one Railway service** (FastAPI serves the API and the built web app) | 2 | **Chosen:** fewest moving parts, one deploy, one backend language |
+| Vercel (frontend) + Railway (API and worker) + Supabase | 3 | Fine if we later want Vercel's preview deploys; the web app can move to Vercel with no backend changes |
+| All on Vercel (TypeScript) + a job service (for example Inngest or Trigger.dev) | 2–3 | Loses the Python ecosystem; long agent runs are awkward |
+
+Railway gives HTTPS (required for microphone access), environment secrets, and separate processes for web and worker in one project. Cost is about $5–10 a month. Fly.io is an equivalent alternative if Railway's pricing changes.
+
+### 12.3 Defaults adopted (change any time)
+
+| # | Question | Default |
+|---|---|---|
+| 1 | Replay window | Chosen in the week-1 spike: the latest window that's after the chosen models' training cutoffs and has good archive coverage (August–September 2026 if cutoffs allow, otherwise October 2026) |
+| 2 | Evaluation size | 12 simulated users × 30 test days + 6 × 10 dev; 3 seeds for Full / B2 / B5, 2 for the rest |
+| 3 | Bake-off budget | About $5–10 on about 5 dev days, before any evaluation run |
+| 4 | Brief default | 6 stories, about 3 minutes, at least 1 exploration slot |
+| 5 | Self-study AI share | At least 4 of 6 stories from the AI beat during the study |
+| 6 | Auth | Supabase magic link + Google login; invite allowlist |
+| 7 | Headline sources | The draft lists in PRD §6.4 and v0.5 §7.1; Kate adds favourites at any time (config) |
+| 8 | Memory transparency | The agent explains a "for you" pick briefly when asked, and through UX-5 tags; it doesn't volunteer memory details unprompted |
+| 9 | Tinker fine-tuning stretch | Included as optional (M5◇); the PRD fine-tuning non-goal becomes "optional stretch" |
+| 10 | Pilot | 5–8 users; pilot data stays out of the report unless the human-subjects question is cleared |
+| 11 | iPhone fallback | If the PWA microphone or audio is painful in the self-study, add an Expo app (plan B) |
+
+### 12.4 Only Kate can answer
+
+1. **Team of one:** confirmed with course staff?
+2. **Course deadlines:** milestone, final report, poster.
+3. **Human-subjects question** for the pilot: ask course staff whether a review is needed if pilot data appears in the report.
+4. **Labelling time:** about 4–6 hours for judge validation and label checks. OK?
+5. **AWS credits:** worth asking staff whether the $200 mentioned in lecture is available.
