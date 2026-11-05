@@ -142,7 +142,7 @@ create table if not exists profiles (
 );
 
 create table if not exists interests (
-  id                  text primary key default gen_random_uuid()::text,
+  id                  text not null default gen_random_uuid()::text,  -- unique per user + run
   user_id             uuid not null references profiles (user_id) on delete cascade,
   run_id              text not null default 'live',
   label               text not null,
@@ -158,7 +158,8 @@ create table if not exists interests (
   source              text not null check (source in ('onboarding', 'explicit', 'implicit', 'exploration')),
   evidence            jsonb not null default '[]',
   created_at          timestamptz not null default now(),
-  updated_at          timestamptz not null default now()
+  updated_at          timestamptz not null default now(),
+  primary key (user_id, run_id, id)
 );
 create index if not exists interests_user_idx on interests (user_id, run_id);
 
