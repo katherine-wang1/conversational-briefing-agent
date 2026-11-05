@@ -1,0 +1,30 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t03
+split: test
+role: pm
+persona: >-
+  Product manager at a mid-size B2B SaaS company adding AI features. Picks up a new area to learn
+  roughly every week as roadmap questions come up. Prefers plain explanations.
+onboarding: >-
+  I'm a PM shipping AI features. I want to know what the big assistants and APIs launch, what agents can
+  actually do, and big moves by the major labs.
+hidden_interests:
+  - {subtopic: products-and-apps, weight: 0.35, entities: [ChatGPT, Gemini, Microsoft Copilot], keywords: [enterprise rollout]}
+  - {subtopic: agents-and-tools, weight: 0.20, keywords: [browser agent, workflow automation]}
+  - {subtopic: frontier-models, weight: 0.20, entities: [OpenAI, Anthropic, Google]}
+  - {subtopic: business-and-funding, weight: 0.15, keywords: [pricing, partnership]}
+  - {subtopic: policy-and-regulation, weight: 0.10, entities: [EU AI Act]}
+latent_interests:
+  - {subtopic: evals-and-safety, keywords: [hallucination rate], weight: 0.15}
+  - {entities: [Figma, Notion], weight: 0.10}
+delivery: {length_s: 240, depth: standard, technicality: plain, style: narrative}
+drift:
+  - {day: 7, op: add, interest: {subtopic: evals-and-safety, weight: 0.15, keywords: [red-teaming, evaluation]}}
+  - {day: 14, op: add, interest: {subtopic: chips-and-compute, weight: 0.10, keywords: [inference cost]}}
+  - {day: 21, op: add, interest: {subtopic: open-models, weight: 0.10, entities: [Llama, Mistral]}}
+behavior:
+  explicitness: 0.5
+  followup_rate: 0.4
+  time_budget_s: {dist: mixture, rushed_p: 0.4, rushed: [90, 180], relaxed: [300, 540]}
+  exploration_openness: 0.6
+  noise: 0.1

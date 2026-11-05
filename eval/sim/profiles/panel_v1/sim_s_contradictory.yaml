@@ -1,0 +1,29 @@
+# Hand-authored test content (W-G). T4 scenario user: contradictory. Not collected data.
+# Onboarding and occasional explicit statements disagree with behaviour: says "no funding news" but
+# engages with funding stories; says they love open models but skips them.
+id: sim_s_contradictory
+split: scenario
+role: pm
+persona: >-
+  Startup operator who says one thing and does another: claims to dislike funding news and to love
+  open models, but in practice listens to every funding story and skips open-model releases.
+onboarding: >-
+  Open-source models and research please. No funding or business news at all.
+hidden_interests:
+  - {subtopic: business-and-funding, weight: 0.45, keywords: [valuation, Series]}
+  - {subtopic: products-and-apps, weight: 0.30}
+  - {subtopic: frontier-models, weight: 0.15}
+  - {subtopic: open-models, weight: 0.10}
+latent_interests:
+  - {subtopic: chips-and-compute, keywords: [GPU prices], weight: 0.15}
+delivery: {length_s: 240, depth: standard, technicality: medium, style: balanced}
+drift: []
+behavior:
+  explicitness: 0.6
+  followup_rate: 0.4
+  time_budget_s: {dist: mixture, rushed_p: 0.4, rushed: [90, 150], relaxed: [300, 480]}
+  exploration_openness: 0.5
+  noise: 0.45
+notes: >-
+  The simulator prompt uses `onboarding` as the user's *stated* preferences; with noise 0.45 the
+  simulator often repeats those stated (false) preferences explicitly while acting on hidden ones.

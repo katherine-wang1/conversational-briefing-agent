@@ -1,0 +1,27 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d05
+split: dev
+role: builder
+persona: >-
+  Backend engineer at an e-commerce company integrating LLM APIs; practical, asks how-to questions.
+onboarding: >-
+  LLM APIs, agent frameworks, and open models we could run ourselves.
+hidden_interests:
+  - {subtopic: agents-and-tools, weight: 0.40, entities: [LangChain, Model Context Protocol]}
+  - {subtopic: products-and-apps, weight: 0.30, keywords: [API, pricing]}
+  - {subtopic: open-models, weight: 0.30, entities: [Llama, Mistral]}
+latent_interests:
+  - {subtopic: research-methods, keywords: [structured outputs], weight: 0.15}
+delivery: {length_s: 180, depth: standard, technicality: high, style: numbers}
+drift:
+  - day: 5
+    op: shift
+    interests:
+      - {subtopic: chips-and-compute, weight: 0.5, keywords: [inference cost]}
+      - {subtopic: open-models, weight: 0.5, entities: [Llama, Mistral]}
+behavior:
+  explicitness: 0.5
+  followup_rate: 0.7
+  time_budget_s: {dist: mixture, rushed_p: 0.4, rushed: [60, 150], relaxed: [300, 480]}
+  exploration_openness: 0.4
+  noise: 0.1

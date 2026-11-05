@@ -1,0 +1,27 @@
+# Hand-authored test content (W-G). T4 scenario user: sudden drift. Not collected data.
+id: sim_s_drift
+split: scenario
+role: builder
+persona: >-
+  Engineer at a robotics-software startup who covered agents and coding tools, then on day 10 moves
+  to the company's hardware-procurement team and only cares about chips and compute from then on.
+onboarding: >-
+  Coding agents, agent frameworks and developer products.
+hidden_interests:
+  - {subtopic: agents-and-tools, weight: 0.60, keywords: [coding agent]}
+  - {subtopic: products-and-apps, weight: 0.40, keywords: [developer tools]}
+latent_interests:
+  - {subtopic: open-models, keywords: [small models], weight: 0.15}
+delivery: {length_s: 240, depth: standard, technicality: high, style: numbers}
+drift:
+  - day: 10
+    op: shift
+    interests:
+      - {subtopic: chips-and-compute, weight: 0.70, entities: [NVIDIA, AMD], keywords: [GPU supply]}
+      - {subtopic: business-and-funding, weight: 0.30, keywords: [compute deal]}
+behavior:
+  explicitness: 0.5
+  followup_rate: 0.5
+  time_budget_s: {dist: mixture, rushed_p: 0.3, rushed: [90, 150], relaxed: [300, 480]}
+  exploration_openness: 0.5
+  noise: 0.05

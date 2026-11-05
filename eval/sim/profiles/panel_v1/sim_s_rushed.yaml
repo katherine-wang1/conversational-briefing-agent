@@ -1,0 +1,25 @@
+# Hand-authored test content (W-G). T4 scenario user: always rushed. Not collected data.
+# Tests MEM-3..6: a user who never has time to reach the end of the brief must not have unheard
+# topics learned away (not_reached is not a skip).
+id: sim_s_rushed
+split: scenario
+role: generalist
+persona: >-
+  Emergency-room doctor who listens during a two-minute walk between shifts. Never finishes the brief.
+onboarding: >-
+  The main AI news, plus anything about AI in medicine and AI regulation.
+hidden_interests:
+  - {subtopic: frontier-models, weight: 0.25}
+  - {subtopic: products-and-apps, weight: 0.25, keywords: [health, medical]}
+  - {subtopic: policy-and-regulation, weight: 0.25, keywords: [FDA]}
+  - {subtopic: evals-and-safety, weight: 0.25, keywords: [medical errors]}
+latent_interests:
+  - {subtopic: research-methods, keywords: [medical imaging], weight: 0.15}
+delivery: {length_s: 300, depth: standard, technicality: plain, style: narrative}
+drift: []
+behavior:
+  explicitness: 0.4
+  followup_rate: 0.3
+  time_budget_s: {dist: uniform, rushed_p: 1.0, rushed: [45, 100], relaxed: [45, 100]}
+  exploration_openness: 0.5
+  noise: 0.05

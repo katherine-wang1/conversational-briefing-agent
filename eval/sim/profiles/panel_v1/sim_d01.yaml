@@ -1,0 +1,23 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d01
+split: dev
+role: researcher
+persona: >-
+  Computer-vision PhD student moving into multimodal language models; reads papers, wants specifics.
+onboarding: >-
+  Multimodal models, new training methods, and open releases I can reproduce.
+hidden_interests:
+  - {subtopic: research-methods, weight: 0.50, keywords: [multimodal, vision-language, diffusion]}
+  - {subtopic: open-models, weight: 0.30, entities: [Qwen, Hugging Face]}
+  - {subtopic: frontier-models, weight: 0.20, entities: [Google DeepMind]}
+latent_interests:
+  - {subtopic: evals-and-safety, keywords: [benchmark saturation], weight: 0.15}
+delivery: {length_s: 360, depth: deep, technicality: high, style: numbers}
+drift:
+  - {day: 5, op: add, interest: {subtopic: agents-and-tools, weight: 0.2, keywords: [computer use]}}
+behavior:
+  explicitness: 0.6
+  followup_rate: 0.6
+  time_budget_s: {dist: mixture, rushed_p: 0.2, rushed: [90, 150], relaxed: [360, 600]}
+  exploration_openness: 0.5
+  noise: 0.05

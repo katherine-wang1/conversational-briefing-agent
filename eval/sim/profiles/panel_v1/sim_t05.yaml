@@ -1,0 +1,26 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t05
+split: test
+role: policy_safety
+persona: >-
+  Policy analyst at a technology think tank writing about AI governance. Reads the full text of rules
+  and court filings; wants the story told carefully, without jargon.
+onboarding: >-
+  I work on AI policy. Regulation, lawsuits, copyright, government safety institutes and chip export
+  controls. Please give me depth.
+hidden_interests:
+  - {subtopic: policy-and-regulation, weight: 0.50, entities: [EU AI Act, FTC, US Copyright Office, European Commission], keywords: [lawsuit, executive order]}
+  - {subtopic: evals-and-safety, weight: 0.35, entities: [UK AI Security Institute, CAISI], keywords: [safety framework, incident]}
+  - {subtopic: chips-and-compute, weight: 0.15, keywords: [export controls]}
+latent_interests:
+  - {subtopic: open-models, keywords: [open weights], weight: 0.20}
+  - {subtopic: business-and-funding, keywords: [lobbying], weight: 0.10}
+delivery: {length_s: 480, depth: deep, technicality: plain, style: narrative}
+drift:
+  - {day: 18, op: fade, subtopic: chips-and-compute, over_days: 4}
+behavior:
+  explicitness: 0.6
+  followup_rate: 0.7
+  time_budget_s: {dist: mixture, rushed_p: 0.1, rushed: [120, 200], relaxed: [480, 900]}
+  exploration_openness: 0.3
+  noise: 0.05

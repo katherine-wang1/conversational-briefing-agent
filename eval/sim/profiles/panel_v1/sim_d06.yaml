@@ -1,0 +1,23 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d06
+split: dev
+role: student
+persona: >-
+  Undergraduate economics major curious about AI's effect on jobs and markets; plain language.
+onboarding: >-
+  How AI affects the economy and jobs, and the big headlines.
+hidden_interests:
+  - {subtopic: business-and-funding, weight: 0.35, keywords: [jobs, layoffs]}
+  - {subtopic: policy-and-regulation, weight: 0.25}
+  - {subtopic: frontier-models, weight: 0.20}
+  - {subtopic: products-and-apps, weight: 0.20}
+latent_interests:
+  - {subtopic: chips-and-compute, keywords: [energy use], weight: 0.15}
+delivery: {length_s: 200, depth: headline, technicality: plain, style: narrative}
+drift: []
+behavior:
+  explicitness: 0.3
+  followup_rate: 0.3
+  time_budget_s: {dist: mixture, rushed_p: 0.5, rushed: [60, 150], relaxed: [240, 420]}
+  exploration_openness: 0.6
+  noise: 0.15

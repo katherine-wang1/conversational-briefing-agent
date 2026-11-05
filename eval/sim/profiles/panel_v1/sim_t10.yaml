@@ -1,0 +1,22 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t10
+split: test
+role: researcher
+persona: >-
+  Alignment researcher at an AI lab. Narrow focus, very explicit about what they want, asks many
+  precise follow-ups, has no patience for stories outside their area.
+onboarding: >-
+  Interpretability, evals, red-teaming and safety research. Technical depth. Skip everything else.
+hidden_interests:
+  - {subtopic: evals-and-safety, weight: 0.80, entities: [METR, Apollo Research, Anthropic], keywords: [interpretability, scheming, dangerous capability evals]}
+  - {subtopic: research-methods, weight: 0.20, keywords: [RLHF, reward hacking]}
+latent_interests:
+  - {subtopic: policy-and-regulation, keywords: [frontier safety policy], weight: 0.15}
+delivery: {length_s: 360, depth: deep, technicality: high, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.9
+  followup_rate: 0.8
+  time_budget_s: {dist: mixture, rushed_p: 0.0, rushed: [90, 150], relaxed: [420, 900]}
+  exploration_openness: 0.1
+  noise: 0.0

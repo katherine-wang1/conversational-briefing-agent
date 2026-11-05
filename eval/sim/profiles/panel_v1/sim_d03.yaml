@@ -1,0 +1,24 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d03
+split: dev
+role: policy_safety
+persona: >-
+  Staff member at a state legislature drafting AI bills; curious, explicit, plain-language.
+onboarding: >-
+  AI legislation, court cases and safety incidents. Explain things simply.
+hidden_interests:
+  - {subtopic: policy-and-regulation, weight: 0.45, keywords: [state law, liability]}
+  - {subtopic: evals-and-safety, weight: 0.25, keywords: [deepfake, incident]}
+  - {subtopic: products-and-apps, weight: 0.15, keywords: [chatbot]}
+  - {subtopic: frontier-models, weight: 0.15}
+latent_interests:
+  - {subtopic: chips-and-compute, keywords: [data center power], weight: 0.15}
+delivery: {length_s: 300, depth: standard, technicality: plain, style: narrative}
+drift:
+  - {day: 6, op: fade, subtopic: products-and-apps, over_days: 2}
+behavior:
+  explicitness: 0.7
+  followup_rate: 0.5
+  time_budget_s: {dist: mixture, rushed_p: 0.3, rushed: [90, 180], relaxed: [300, 600]}
+  exploration_openness: 0.8
+  noise: 0.1

@@ -1,0 +1,31 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t06
+split: test
+role: journalist
+persona: >-
+  Tech reporter at a general news outlet who covers AI as one beat among several. Curious about
+  everything, picks up new threads weekly, sometimes contradicts what they said they wanted.
+onboarding: >-
+  I'm a reporter. Give me the biggest AI stories of the day across the board, plus anything surprising.
+hidden_interests:
+  - {subtopic: frontier-models, weight: 0.20, entities: [OpenAI, Google, Meta]}
+  - {subtopic: policy-and-regulation, weight: 0.20, keywords: [lawsuit, copyright]}
+  - {subtopic: business-and-funding, weight: 0.15, keywords: [layoffs, departure]}
+  - {subtopic: products-and-apps, weight: 0.15}
+  - {subtopic: evals-and-safety, weight: 0.10, keywords: [incident, deepfake]}
+  - {subtopic: chips-and-compute, weight: 0.10, entities: [NVIDIA, TSMC]}
+  - {subtopic: agents-and-tools, weight: 0.10}
+latent_interests:
+  - {subtopic: research-methods, keywords: [watermarking], weight: 0.15}
+  - {entities: [Hugging Face], weight: 0.10}
+delivery: {length_s: 300, depth: standard, technicality: plain, style: narrative}
+drift:
+  - {day: 6, op: add, interest: {subtopic: open-models, weight: 0.10, entities: [DeepSeek]}}
+  - {day: 13, op: add, interest: {subtopic: research-methods, weight: 0.10, keywords: [AI for science]}}
+  - {day: 20, op: fade, subtopic: chips-and-compute, over_days: 3}
+behavior:
+  explicitness: 0.4
+  followup_rate: 0.6
+  time_budget_s: {dist: mixture, rushed_p: 0.5, rushed: [90, 180], relaxed: [300, 600]}
+  exploration_openness: 0.9
+  noise: 0.2

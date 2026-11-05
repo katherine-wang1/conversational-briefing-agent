@@ -1,0 +1,26 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t01
+split: test
+role: researcher
+persona: >-
+  Postdoc in an academic NLP lab working on reasoning and reinforcement learning for language models.
+  Reads papers daily, distrusts press-release benchmarks, wants method details and numbers.
+onboarding: >-
+  I'm an ML researcher. Keep me up to date on reasoning and RL methods for LLMs, interpretability work,
+  and notable open-weight releases. I don't need product or funding news.
+hidden_interests:
+  - {subtopic: research-methods, weight: 0.45, keywords: [reinforcement learning, reasoning, long context, test-time compute]}
+  - {subtopic: evals-and-safety, weight: 0.25, keywords: [interpretability, sparse autoencoders, benchmark contamination]}
+  - {subtopic: open-models, weight: 0.20, entities: [DeepSeek, Qwen, Ai2, OLMo]}
+  - {subtopic: frontier-models, weight: 0.10, entities: [Google DeepMind, Anthropic, OpenAI]}
+latent_interests:
+  - {subtopic: chips-and-compute, keywords: [training cluster, FLOPs], weight: 0.15}
+  - {entities: [arXiv, OpenReview], keywords: [peer review], weight: 0.10}
+delivery: {length_s: 420, depth: deep, technicality: high, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.7
+  followup_rate: 0.7
+  time_budget_s: {dist: mixture, rushed_p: 0.1, rushed: [90, 180], relaxed: [420, 720]}
+  exploration_openness: 0.5
+  noise: 0.05

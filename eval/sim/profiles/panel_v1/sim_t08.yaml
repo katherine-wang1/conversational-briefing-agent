@@ -1,0 +1,27 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t08
+split: test
+role: generalist
+persona: >-
+  Operations manager at a hospital network, not technical, wants to keep a general sense of what is
+  happening in AI. Rarely asks questions, rarely says what they like; signal is mostly implicit.
+onboarding: >-
+  I just want to know what's going on in AI without the jargon.
+hidden_interests:
+  - {subtopic: products-and-apps, weight: 0.25, keywords: [health, assistant]}
+  - {subtopic: frontier-models, weight: 0.20}
+  - {subtopic: policy-and-regulation, weight: 0.20, keywords: [privacy]}
+  - {subtopic: evals-and-safety, weight: 0.15, keywords: [misinformation]}
+  - {subtopic: business-and-funding, weight: 0.10}
+  - {subtopic: chips-and-compute, weight: 0.10}
+latent_interests:
+  - {subtopic: research-methods, keywords: [medical imaging], weight: 0.20}
+  - {subtopic: agents-and-tools, keywords: [scheduling], weight: 0.10}
+delivery: {length_s: 180, depth: headline, technicality: plain, style: narrative}
+drift: []
+behavior:
+  explicitness: 0.2
+  followup_rate: 0.1
+  time_budget_s: {dist: mixture, rushed_p: 0.6, rushed: [60, 150], relaxed: [240, 420]}
+  exploration_openness: 0.5
+  noise: 0.1
