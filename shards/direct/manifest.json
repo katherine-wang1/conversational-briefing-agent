@@ -4,12 +4,12 @@
   "rows": 0
  },
  "coverage": {
-  "files": 14,
-  "rows": 91
+  "files": 43,
+  "rows": 315
  },
  "documents": {
   "files": 79,
-  "rows": 39018
+  "rows": 39752
  },
  "hn_items": {
   "files": 92,
@@ -21,10 +21,10 @@
  },
  "observations": {
   "files": 94,
-  "rows": 143938
+  "rows": 146894
  },
  "units": {
   "files": 93,
-  "rows": 707
+  "rows": 987
  }
 }
