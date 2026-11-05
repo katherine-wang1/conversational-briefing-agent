@@ -315,6 +315,8 @@ def test_push_shards_to_orphan_branch(tmp_path):
     # orphan: no shared history with the code branch
     assert len(git("rev-list", "data/archive-raw", cwd=remote).split()) == 1
     assert push_shards(sd, wt, repo=repo) == "no changes"
+    # a second data worktree in the same clone (branch already checked out in `wt`) works detached
+    assert push_shards(sd, tmp_path / "wt-other", repo=repo) == "no changes"
 
     # a second clone (Kate's laptop) pushes another namespace; both survive, and rebuild merges them
     laptop = tmp_path / "laptop"

@@ -181,7 +181,12 @@ def ensure_data_worktree(
     _git(["worktree", "prune"], repo, check=False)
     _git(["fetch", remote, branch], repo, check=False)
     if _has_ref(repo, f"refs/heads/{branch}"):
-        _git(["worktree", "add", str(worktree), branch], repo)
+        r = _git(["worktree", "add", str(worktree), branch], repo, check=False)
+        if r.returncode != 0:
+            # e.g. the branch is already checked out in another worktree: work detached; pushes go to
+            # HEAD:refs/heads/<branch> and the tree is re-synced to the remote tip before every commit
+            start = f"{remote}/{branch}" if _has_ref(repo, f"refs/remotes/{remote}/{branch}") else branch
+            _git(["worktree", "add", "--detach", str(worktree), start], repo)
     elif _has_ref(repo, f"refs/remotes/{remote}/{branch}"):
         _git(["worktree", "add", "-b", branch, str(worktree), f"{remote}/{branch}"], repo)
     else:
