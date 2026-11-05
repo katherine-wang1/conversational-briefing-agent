@@ -1,8 +1,8 @@
 # Design explorations: corpus, sources, voice, and mobile
 
-**Status:** Draft v0.2, for discussion alongside PRD v0.5
+**Status:** Draft v0.3, companion to PRD v0.6
 
-> **Decision (PRD v0.5):** the MVP uses a **fixed catalog of three curated channels**: AI; Energy, Grid & Data Centers; and Physical AI, Robotics & Simulation. Open topics are deferred. Sections 1–2 below now describe the **expansion path** (from more catalog channels, to a news-API provider, to a topic resolver and open topics), not the MVP build. Sections 3–4 (voice, iPhone) still apply to the MVP as written.
+> **Decision (PRD v0.6):** the MVP is **agent-native** (§6 below). There's no ingestion pipeline and no user-facing channels. A shared **newsroom** agent judges importance from headline signals, a per-user **chief-of-staff** agent personalises, and a fast **voice** agent talks. The three topic areas become the newsroom's **beats**. A frozen archive exists only for evaluation. Sections 1–2 are kept as the **alternatives we considered** (shared corpus, topic channels, news APIs); they remain useful if per-user cost ever pushes back toward shared ingestion. Sections 3–4 (voice, iPhone) still apply as written.
 **Purpose:** Work through the biggest open design questions before the technical design: how news gets into the system, whether a shared corpus still makes sense once users can follow any topic, whether to use audio-to-audio models, and how users reach the agent from an iPhone. Each section ends with a recommendation and its **effect on the research goals**.
 
 > Pricing and model details below come from web searches in November 2026. Sources often disagree, so treat the numbers as rough and check vendor pricing pages before committing.
@@ -165,9 +165,59 @@ There's now a solid set of options that avoid writing scrapers:
 
 | Question | Recommendation |
 |---|---|
-| Shared corpus with diverse interests | **Topic channels**, shared per topic. **MVP: 3 fixed curated channels.** Later: channels created on demand. Cost grows with distinct topics, not users. |
+| Shared corpus with diverse interests | **Superseded by §6: agent-native.** No corpus in the product; a shared newsroom digest plus per-user search. The topic-channel analysis (§1) is kept as the alternative. |
 | Fixed source list? | Not for the product (use a source policy). **Yes for the AI research domain** (a curated, versioned registry). |
 | Where news comes from | Free structured feeds for AI; an event-clustered news API for other channels; an AI search API for live search and follow-up research; all behind a provider interface. |
 | Audio-to-audio | Cascade for the MVP; a hybrid speech-to-speech front end as a stretch experiment that measures faithfulness drift. |
 | iPhone | Mobile web first; Expo app or phone call as the second client if needed. |
 | Research | The core evaluation stays on a **frozen AI-domain research config**. Product extensions are evaluated separately or switched off in that config. |
+
+---
+
+## 6. Agent-native design (adopted in PRD v0.6)
+
+### 6.1 Why not keep a corpus?
+
+A capable agent with web search and fetch can find what's new on demand, and importance can be **borrowed from external judgements** instead of computed over our own corpus:
+- **editorial front pages** (Techmeme, trade-press front pages, wire top stories);
+- **crowd rankings** (Hacker News, Reddit, Hugging Face daily papers);
+- **expert curation** (newsletters);
+- **coverage** across independent outlets.
+
+Agreement across these signals is a strong, cheap importance estimate. That removes the ingestion pipeline, clustering infrastructure, and channel management from the product.
+
+### 6.2 Why three roles
+
+| Role | Why it's separate |
+|---|---|
+| **Newsroom** (shared, no user data) | Importance must be judged **without** the user's memory in context, or "important" drifts toward "important in your areas" and the filter bubble returns. A separate run also makes the importance-only baseline trivial, separates retrieval misses from selection misses in failure analysis, and lets one cached digest serve every user. |
+| **Chief of staff** (per user, slow) | Personal search, scoring, brief writing, and source packs need minutes of agentic work, which is fine before the brief and impossible during a voice turn. |
+| **Voice agent** (per session, fast) | A spoken turn needs about 1 s. It works from pre-built source packs with a fast model and a narrow tool set. |
+
+The separation is enforced by **context**, not by deployment. One orchestrating job starts each role as its own model run, with its own prompt, tools, and inputs. The newsroom run is simply never given user data or memory tools.
+
+### 6.3 Live vs. replay
+
+Agents call tools (`search`, `fetch`, `headline_source`) whose backends are swappable:
+- **Live:** the web.
+- **Replay:** a frozen, date-stamped archive of the evaluation window, built from sources with date archives (Techmeme daily pages, HN Algolia, arXiv listings, RSS and blog archives).
+
+The agent code is identical in both modes, which keeps the evaluation honest. Every live run also saves a trace of its tool calls and results.
+
+### 6.4 Rough cost (planning only; measure in M4)
+
+| Role | Per run | Frequency | Rough cost |
+|---|---|---|---|
+| Newsroom | About 30–60 fetches and searches, about 200–400K input tokens | 2–4× a day, shared | About $1–6 a day on Opus 5.5 ($4 / $20 per M tokens), shared by all users |
+| Chief of staff | About 10–30 searches and fetches, about 100–200K input tokens | 1× per user per day | About $0.20–0.50 on Sonnet 5.5 ($2 / $10); a few cents on Haiku 5.5 |
+| Voice agent | About 10–30K cached context, short turns | Per session | About $0.01–0.05 per session on Haiku 5.5, plus speech-to-text and text-to-speech |
+| Web search | About $10 per 1,000 searches (Claude web search) or about $5–8 per 1,000 (Exa / Tavily) | Per search | Included in the estimates above at about $0.10–0.30 a day per user |
+
+Per-user cost lands at **roughly $0.05–1.00 a day** depending on model tiering. Evaluation runs (6 configs × 3 seeds × about 600 user-days) are the larger budget item and must be sized in the technical design. Prices change, so confirm against current pricing pages.
+
+### 6.5 Effect on research goals
+
+- **Replay** works through the replay backends. The archive is needed **only** for evaluation.
+- **Hacker News circularity:** using HN as a live signal while also using HN score as a hindsight label is partly circular. The fix is brief-time HN values only, the coverage label as primary, and an ablation without HN.
+- **Non-determinism:** agent runs vary, so use traces, at least 3 seeds, and report variance.
+- **Search mismatch:** live web search differs from replay archive search. State this as a limitation.

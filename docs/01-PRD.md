@@ -1,20 +1,26 @@
 # PRD: Conversational Briefing Agent (MVP)
 
-**Status:** Draft v0.5, ready for review
+**Status:** Draft v0.6, ready for review
 **Owner:** Kate Wang
 **Source:** `proposal.pdf` ("Expanding the Aperture", CS329Z Fall 2026)
-**Companion doc:** `01a-design-explorations.md` (corpus, sources, voice, mobile: options and the path to open topics)
+**Companion doc:** `01a-design-explorations.md` (alternatives considered: shared corpus, topic channels, news sources, voice, mobile)
 **Next docs:** `02-technical-design.md` (after this PRD is approved), then the build
 
 **Changelog**
-- **v0.5:** The MVP uses a **fixed catalog of three curated topic channels** instead of open topics:
-  - **AI** (the anchor and research domain);
-  - **Energy, Grid & Data Centers**;
-  - **Physical AI, Robotics & Simulation**.
-
-  Each has a defined scope, subtopics, curated sources, and boundary rules (§7.1). Removed the topic resolver, on-the-fly channel creation, and the open-web source policy. The channel architecture stays, so more topics can be added later. Requests for topics outside the catalog are logged as demand signals. Research flags are simplified, and an optional second-domain evaluation is added.
+- **v0.6:** **Agent-native architecture.**
+  - No news-ingestion pipeline and no user-facing channels.
+  - Three agent roles, each run in its own context:
+    - a shared **newsroom** agent that judges importance from headline signals (editorial front pages, community rankings, expert curation, coverage);
+    - a per-user **chief-of-staff** agent that personalises the brief and pre-fetches material for deep dives;
+    - a fast **voice** agent for the conversation.
+  - Users state interests in their own words. The three topic areas (AI; Energy, Grid & Data Centers; Physical AI, Robotics & Simulation) become the newsroom's **beats**.
+  - Agent tools have **live and replay backends**, so evaluation runs the same agent code over a frozen archive.
+  - Rebuilt the evaluation plan to course standards: explicit task sets, data provenance, grader types, LLM-judge validation, statistics, failure analysis.
+  - Added a naive-agent baseline, a separation ablation, and a prompt-injection safety evaluation.
+  - Added a course-requirements map (§13).
+- **v0.5:** Fixed catalog of three topic channels.
 - **v0.4:** Topic channels, follow-up bookmarks, memory that doesn't over-curate, iPhone access, specific headlines, research guardrails, future vision.
-- **v0.3:** Target users described broadly; persona variety moved to the simulated-user panel.
+- **v0.3:** Target users described broadly; persona variety moved to simulated users.
 - **v0.2:** Multi-user from day one.
 - **v0.1:** Initial draft from the proposal.
 
@@ -22,7 +28,7 @@
 
 ## 1. Summary
 
-A chief-of-staff style agent that gives each user a short spoken morning brief on **the topics they follow**, asks what they want to dig into, holds a back-and-forth with a cited source for every claim, and updates **that user's** memory of their interests and preferred format. When it can't answer a question on the spot, it **bookmarks it, researches it in the background, and follows up**.
+A chief-of-staff style agent that gives each user a short spoken morning brief, asks what they want to dig into, holds a back-and-forth with a cited source for every claim, and updates **that user's** memory of their interests and preferred format. When it can't answer something live, it **bookmarks the question, researches it in the background, and follows up**.
 
 Each brief balances three things:
 
@@ -30,27 +36,24 @@ Each brief balances three things:
 2. **Relevance:** stories that matter to this user.
 3. **Exploration:** stories that widen the user's view rather than reinforce a filter bubble.
 
-To keep voice turns fast, the agent pre-fetches material for each user's likely deep dives before the brief.
+**How it works: three agent roles, one daily job**
 
-The MVP covers a **fixed catalog of three curated topic channels**:
+| Role | Runs | Speed | Job |
+|---|---|---|---|
+| 📰 **Newsroom** (shared) | A few times a day | Minutes | Reads headline signals across three beats and writes a cached **headlines digest**: what's big today, with evidence. **Never sees any user data.** |
+| 🗂️ **Chief of staff** (per user) | Daily, before the user's brief time | Minutes | Reads the digest and the user's memory, runs personal searches, scores candidates, writes the brief, and pre-fetches a **source pack** for each story |
+| 🎙️ **Voice agent** (per session) | Live | About 1 s per turn | Delivers the brief and answers follow-ups from the source packs. Bookmarks what it can't answer. Records memory signals. |
 
-| Channel | One-line scope |
-|---|---|
-| 🧠 **AI** | Models, research, products, business, and policy of AI. **The research domain.** |
-| ⚡ **Energy, Grid & Data Centers** | The clean-energy transition and the power and infrastructure buildout behind AI |
-| 🤖 **Physical AI, Robotics & Simulation** | AI in the physical world: robots, autonomy, and the simulation and world models that train them |
+**Beats** are the newsroom's coverage areas: 🧠 **AI**; ⚡ **Energy, Grid & Data Centers**; 🤖 **Physical AI, Robotics & Simulation**. Users don't pick from a menu. They describe their interests in their own words, and personal search covers interests outside the beats.
 
-Users pick channels at sign-up, weight them, and tell the agent what they care about within each. Memory learns the finer-grained interests. Each channel is gathered **once** and shared by everyone who follows it.
-
-The MVP is a **multi-user service**. Each user has an account, isolated stored data, and their own scheduled daily processes.
+The MVP is a **multi-user service** with isolated per-user data and processes, used by Kate and a small invite-only pilot.
 
 The MVP has to do three jobs:
+- **A usable daily product** for anyone on the go who wants to stay current in a fast-moving field.
+- **A rigorously evaluated research system.** The core evaluation replays the same agent code over a frozen archive of the **AI beat** for a past window, with simulated users, baselines, ablations, validated graders, and failure analysis (§10).
+- **A foundation to grow** toward more beats, more users, and eventually a broader personal chief of staff.
 
-- **A usable daily product** for anyone on the go who wants to stay current in these fields: Kate first, then pilot users from a variety of roles.
-- **A reproducible research system.** The **core research evaluation runs on the AI channel**, as in the proposal: a frozen corpus replayed with simulated users and baselines, under a frozen research configuration (§9).
-- **A foundation for expansion.** Adding a topic channel is a configuration change, and the architecture leaves room for open topics later (`01a` §1).
-
-**Rule for every extension:** product features may go beyond the research scope, but they must not weaken or silently change the research evaluation (§9).
+**Rule for every extension:** product features may go beyond the research scope, but they must not weaken or silently change the research evaluation (§11).
 
 ---
 
@@ -66,15 +69,13 @@ The MVP has to do three jobs:
 
 ## 3. Target users
 
-**Anyone who wants to stay current in a fast-moving field and is on the go.** They have little time, the news is scattered, and the moments they do have (a commute, a walk, the gym) suit listening and talking better than reading and scrolling.
-
-The MVP's three channels share a thread: **AI, the energy needed to run it, and AI moving into the physical world**. That covers a wide range of people: researchers, engineers, founders, investors, operators, policy people, and students. The product doesn't assume fixed user types. The agent learns each person's interests and format from conversation.
+**Anyone who wants to stay current in a fast-moving field and is on the go.** The MVP's beats share a thread: AI, the energy that runs it, and AI moving into the physical world. That covers researchers, engineers, founders, investors, operators, policy people, and students. The product doesn't assume fixed user types.
 
 **Real users in the MVP:**
-- **Kate:** the first user, the primary self-study participant, and the admin.
-- **Pilot users:** about 5–15 people from a variety of roles, recruited after Kate's own use is stable (§11).
+- **Kate:** first user, primary self-study participant, admin.
+- **Pilot users:** about 5–15 people from a variety of roles, recruited after Kate's use is stable.
 
-**Simulated users** are where variety is designed in on purpose (SIM-2). They run as `synthetic` accounts on the same infrastructure.
+**Simulated users** are where variety is designed in on purpose (§9).
 
 ---
 
@@ -82,54 +83,54 @@ The MVP's three channels share a thread: **AI, the energy needed to run it, and 
 
 ### 4.1 Product goals (MVP)
 
-- **G1. Daily brief.** A spoken or text brief of about 5–7 stories in roughly 2–4 minutes, drawn from the user's channels. Each story is **specific** (it names the company, person, product, paper, project, or bill) and carries a source.
-- **G2. Conversational deep dive.** The user describes what they want in their own words. They don't need to remember list numbers.
-- **G3. Memory from conversation.** The agent infers interests (channel weights and subtopics) and delivery preferences, **without over-reading a short session**. It lets stale interests fade and keeps room for new ones.
-- **G4. Exploration.** Every brief reserves explicit, labelled slots for stories outside the user's current profile: less-followed subtopics, or channels the user doesn't follow.
-- **G5. Low latency.** Most follow-ups are answered from a pre-fetched cache.
-- **G6. Groundedness.** Every factual claim is tied to a cited source item.
-- **G7. Follow-up bookmarks.** If the agent can't answer well live, it says so, saves the question, researches it in the background, and brings back a grounded answer later.
-- **G8. Catalog topics.** Users choose and weight channels at sign-up and can change them by voice ("more on data centers", "drop energy"). Requests outside the catalog are handled politely and logged.
+- **G1. Daily brief.** About 5–7 **specific** stories (named companies, people, products, papers, bills, numbers) in roughly 2–4 minutes, each with a source.
+- **G2. Conversational deep dive.** The user refers to stories in their own words and asks open questions.
+- **G3. Memory from conversation.** The agent learns interests and delivery preferences without over-reading a short session. Stale interests fade, and there's room for new ones.
+- **G4. Exploration.** Every brief has explicit, labelled "outside your usual" slots.
+- **G5. Low latency.** Most follow-ups are answered from pre-fetched source packs.
+- **G6. Groundedness.** Every factual claim cites a source. The agent says when it can't support something.
+- **G7. Follow-up bookmarks.** Questions the agent can't answer live are researched in the background and answered next time.
+- **G8. Open interests.** Users state and change interests in natural language, at sign-up or by voice.
 
 ### 4.2 Platform goals (MVP)
 
-- **P1. Accounts.** Invite-based sign-up, login, and a short onboarding: channels, interests within them, delivery preferences, timezone, and brief time.
+- **P1. Accounts:** invite-only sign-up, login, short onboarding.
 - **P2. Per-user data isolation.**
 - **P3. Per-user processes**, isolated from each other.
-- **P4. Shared topic channels.** News gathering, clustering, and importance scoring run once per channel and are shared by all of its followers.
+- **P4. Shared newsroom digest**, computed once and reused by every user.
 - **P5. Cost limits** per user and overall.
-- **P6. Data rights:** view, export, delete, and separate research consent.
+- **P6. Data rights:** view, export, delete, separate research consent.
 - **P7. Admin tools.**
 - **P8. iPhone access**, including voice.
-- **P9. Channels as config.** A new channel (sources, subtopics, schedule) can be added with a config file and no agent code changes.
+- **P9. Swappable tool backends:** every agent tool has a live backend and a replay backend (§6.4).
 
 ### 4.3 Research goals (MVP), all held
 
-- **R1. Replay mode.** Deterministic replay of a frozen **AI-channel** corpus (for example August–September 2026) on a simulated clock, with no future leakage.
-- **R2. Ablations.** Full agent vs. importance-only, static profile, no exploration, and no pre-fetch.
-- **R3. Simulated users.** 10–20 varied users with hidden, drifting profiles, one calibrated to Kate.
-- **R4. Evaluation harness.** Every metric in §10.
-- **R5. Real-user study.** Kate's 4–5 week self-study with daily ratings and blinded baseline days; pilot data as a secondary sample.
-- **R6 (optional extension). Second-domain check.** Repeat the importance-recall and coverage metrics on the **Physical AI** channel, to test whether the results hold outside the core AI domain (§9, F1).
+- **R1. Replay.** Deterministic-as-possible replay of the **same agent code** over a frozen **AI-beat archive** for a past window (for example August–September 2026), with no future leakage.
+- **R2. Baselines and ablations** (§10.5).
+- **R3. Simulated users:** 10–20 varied users with hidden, drifting profiles, one calibrated to Kate.
+- **R4. Evaluation harness:** every task set and metric in §10, with validated graders.
+- **R5. Real-user study:** Kate's 4–5 week self-study with blinded baseline days; pilot as a secondary sample.
+- **R6 (optional). Second beat:** repeat importance and coverage metrics on the Physical AI beat.
+- **R7. Failure analysis:** a categorised error analysis for every task set (§10.8).
+- **R8. Safety:** faithfulness, correct abstention, prompt-injection robustness, and data isolation (§10.9).
 
 ### 4.4 Non-goals (MVP)
 
-- **Open topics** (following anything at all). The path there is designed (`01a` §1), but not built.
-- **Public sign-up, billing, teams, or sharing.**
+- A news-ingestion pipeline or a full news corpus for the **product**. A frozen archive exists **only for evaluation**.
+- Public sign-up, billing, teams, or sharing between users.
 - Large scale. The MVP targets up to about 50 accounts.
-- Custom speech models, or an **end-to-end speech-to-speech agent** as the main path (§9, F3).
+- Custom speech models, or an end-to-end speech-to-speech agent as the main path (§11, F3).
 - A native Swift app; full-duplex voice with barge-in.
 - Training or fine-tuning models.
 - Paywalled content and full-text redistribution.
-- **Cross-user learning** (§9, F7).
+- Cross-user learning (§11, F7).
 - Everything in §4.5.
 
 ### 4.5 Future vision (bookmarked, NOT in the MVP)
 
-- **More channels, then open topics.** Add catalog channels driven by logged topic requests. Then add a news-API provider and a topic resolver, so users can follow anything (`01a` §1).
-- **A broader personal chief of staff** beyond news: email triage, tasks and calendar, meeting prep, in the same conversational, memory-driven style.
-
-The MVP keeps these paths open by making channels config-driven, putting source providers and agent tools behind interfaces, and keeping the user model general.
+- **More beats** and better coverage of interests outside the beats.
+- **A broader personal chief of staff** beyond news: email triage, tasks and calendar, meeting prep, in the same conversational, memory-driven style. The role-based agent design and the general user model keep this path open.
 
 ---
 
@@ -138,42 +139,40 @@ The MVP keeps these paths open by making channels config-driven, putting source 
 ### 5.1 Account lifecycle
 
 ```
- invite ──► sign up / log in ──► onboarding (≈2 min) ──► daily loop ──► manage memory / channels / data
-                                    ├─ pick channels + rough weights (AI / Energy & DC / Physical AI)
-                                    ├─ "what do you care about within these?" (free text or voice)
+ invite ──► sign up / log in ──► onboarding (≈2 min) ──► daily loop ──► manage memory / data
+                                    ├─ "What do you want to keep up with?" (free text or voice)
                                     ├─ delivery prefs (length, depth, technicality)
                                     ├─ timezone + brief time
                                     └─ research consent (opt-in)
 ```
 
-Free-text interests are mapped to each channel's subtopics. They seed the interest model with low confidence, so conversation overrides them quickly.
+Onboarding interests seed memory with low confidence. Conversation overrides them quickly.
 
 ### 5.2 The daily loop
 
 ```
- SHARED, PER CHANNEL (scheduled)               PER USER (scheduled before the user's brief time)
- ┌──────────────────────────────┐             ┌─────────────────────────────────────────────────┐
- │ AI │ Energy & DC │ Physical AI │  stories   │ 1. PRE-COMPUTE: candidates from followed channels│
- │ fetch → dedupe → cluster →    │──────────► │    + exploration pool → relevance, novelty →     │
- │ importance within channel     │            │    channel slots + MMR → brief → pre-fetch →     │
- └──────────────────────────────┘             │    attach answered follow-ups                    │
-                                              └──────────────┬──────────────────────────────────┘
-                                                             ▼  user opens a session
-                                              ┌─────────────────────────────────────────────────┐
-                                              │ 2. BRIEF (+ "you asked yesterday…")  3. DEEP DIVE │
-                                              │    cache first → live search → bookmark           │
-                                              └──────────────┬──────────────────────────────────┘
-                                                             ▼  session ends
-                                              ┌─────────────────────────────────────────────────┐
-                                              │ 4. UPDATE MEMORY   5. RESEARCH BOOKMARKED Qs      │
-                                              └─────────────────────────────────────────────────┘
+ ┌──────────────────────── DAILY JOB (orchestrated by code) ────────────────────────┐
+ │                                                                                    │
+ │  📰 NEWSROOM RUN (once, shared)              🗂️ CHIEF-OF-STAFF RUN (per user)       │
+ │  context: beat source lists only            context: digest + THIS user's memory   │
+ │  tools: search, fetch                       tools: search, fetch, read_memory(user)│
+ │  ─────────────────────────────►  digest  ─► personal searches → score candidates  │
+ │  front pages, rankings, curation,  (cached,  → selection (slots + MMR, in code)    │
+ │  coverage → "what's big today"      no user   → brief script → source packs        │
+ │                                     data)     → attach answered follow-ups         │
+ └────────────────────────────────────────────────────────────────────────────────────┘
+                                                        │ user opens a session
+                                                        ▼
+                         🎙️ VOICE AGENT: brief → deep dive from source packs
+                            → quick search (with "let me check") → bookmark if unresolved
+                                                        │ session ends
+                                                        ▼
+                         memory update (this user) · background research on bookmarks
 ```
 
-If the brief isn't ready when the user opens a session, it's computed on demand.
+If the brief isn't ready when the user opens a session, the chief-of-staff run happens on demand.
 
 ### 5.3 Example session (illustrative; companies and products are fictional)
-
-The user follows AI (high), Energy & Data Centers (medium), and doesn't follow Physical AI.
 
 > **Agent:** Morning. Six stories, about three minutes. Also, you asked yesterday why Halden's chip launch slipped. I found the answer, and it's at the end.
 > 1) **Northwind AI released Atlas-3**, an open-weights reasoning model. It scores within two points of the top closed models on the main math and coding benchmarks. *[Northwind blog; HN discussion]*
@@ -181,12 +180,12 @@ The user follows AI (high), Energy & Data Centers (medium), and doesn't follow P
 > 3) **The EU AI Office published draft guidance** on what general-purpose model providers must disclose about training data. *[Reuters]*
 > 4) **Voltaic Storage signed a 2 GWh grid battery deal with Texas utility Lonestar Power**, the largest sodium-ion order so far. *[Utility Dive; Canary Media]*
 > 5) **Cirrus Cloud is pairing a 1 GW Arizona data center with an on-site gas plant**, because the grid connection is five years out. *[Data Center Dynamics]*
-> 6) **Outside your usual (Physical AI):** **Kinema released an open robot foundation model trained mostly in simulation**, and says it transfers to real warehouse arms with no fine-tuning. *[The Robot Report; arXiv]*
+> 6) **Outside your usual:** **Kinema released an open robot foundation model trained mostly in simulation**, and says it transfers to real warehouse arms with no fine-tuning. *[The Robot Report; arXiv]*
 > What do you want to dig into?
 >
 > **User:** The long-context paper. Which models held up best?
 >
-> **Agent:** *(answers from the pre-fetched paper with figures and a citation)* …
+> **Agent:** *(answers from the source pack with figures and a citation)* …
 >
 > **User:** Does that hold for Atlas-3 too?
 >
@@ -194,477 +193,512 @@ The user follows AI (high), Energy & Data Centers (medium), and doesn't follow P
 >
 > **User:** Great. I've got to go, but the battery one sounded interesting too.
 >
-> **Agent:** I'll save the battery story and bring you more tomorrow. Here's the Halden answer quickly: …
+> **Agent:** I'll save the battery story for tomorrow. Here's the Halden answer quickly: …
 
 Memory written to **this user's** store:
-- AI › `long-context / agent memory` ↑ (explicit dive + follow-up)
-- Energy › `grid storage` ↑ (explicitly saved, even though there was no time to dive)
-- the other stories they didn't dive into, including the Physical AI exploration story: **no negative signal**, because the session was cut short
-- open question: "Does the long-context degradation hold for Atlas-3?" → background research
+- `long-context / agent memory` ↑ (explicit dive + follow-up)
+- `grid storage` ↑ (explicitly saved)
+- the other stories they didn't dive into: **no negative signal**, because the session was cut short
+- open question → background research
 
 ### 5.4 Interaction requirements
 
 | ID | Requirement |
 |---|---|
-| UX-1 | The brief opens with the story count and expected length, plus any answered follow-ups. |
-| UX-2 | **Specific headlines:** every story names the concrete actors and objects in its first sentence. No generic phrasing ("a frontier lab", "a utility") when the source names them. |
-| UX-3 | **Natural references:** stories can be referred to by description, keyword, or position. The agent resolves the reference and asks briefly if it's ambiguous. |
-| UX-4 | Open questions that aren't tied to a story are supported ("what's going on with Nvidia this week?"). |
-| UX-5 | *Why you're hearing this* tags where useful: "big news", "for you", "outside your usual (channel)". |
-| UX-6 | Supported intents include: dive, ask, "more like this", "less of this", "save for later", "more / less [channel or subtopic]", "follow / unfollow [channel]", "go deeper" / "simpler", "who's reacting?", "source?", "what do you know about me?", "what questions do I have open?", "I only have N minutes", and "end". |
-| UX-7 | **Out-of-catalog requests** ("follow Formula 1"): the agent explains which topics it covers, logs the request (§7.1, CH-9), and answers one-off questions about the topic via live search where it can. |
-| UX-8 | Citations are spoken lightly and shown in full in the transcript. |
-| UX-9 | Unsupported claims are never made. The agent offers to bookmark the question instead. |
-| UX-10 | Text and voice modes share the same agent logic. |
-| UX-11 | Users can see and edit their past briefs, transcripts, open questions, channels, and memory. |
-| UX-12 | Optional email reminder at brief time. |
+| UX-1 | The brief opens with the story count, expected length, and any answered follow-ups. |
+| UX-2 | **Specific headlines:** concrete actors and objects named in the first sentence. No generic phrasing when the source names them. |
+| UX-3 | **Natural references:** stories can be referred to by description, keyword, or position. The agent asks briefly if a reference is ambiguous. |
+| UX-4 | Open questions not tied to a story are supported. |
+| UX-5 | *Why you're hearing this* tags where useful: "big news", "for you", "outside your usual". |
+| UX-6 | Supported intents include: dive, ask, "more like this", "less of this", "save for later", "keep me posted on X", "stop covering X", "go deeper" / "simpler", "who's reacting?", "source?", "what do you know about me?", "what questions do I have open?", "I only have N minutes", and "end". |
+| UX-7 | Citations are spoken lightly and shown in full in the transcript. |
+| UX-8 | Unsupported claims are never made. The agent offers to bookmark the question instead. |
+| UX-9 | Text and voice share one agent stack. |
+| UX-10 | Users can see and edit their past briefs, transcripts, open questions, and memory. |
+| UX-11 | Optional email reminder at brief time. |
 
 ---
 
-## 6. Accounts, data, and processes
+## 6. System design: agents, signals, and tools
 
-### 6.1 Accounts and authentication
+### 6.1 📰 Newsroom agent (shared)
+
+| ID | Requirement |
+|---|---|
+| NEWS-1 | Runs on a schedule (a few times a day), **once for all users**. |
+| NEWS-2 | **Context isolation:** its prompt and tools contain no user data and no memory access. This is enforced by the orchestrating code, not by instructions to the model. |
+| NEWS-3 | Reads **headline signals** for each beat (§6.4) and writes a **headlines digest**: for each story, a specific headline, beat and subtopic tags, an importance score, the **importance evidence** (which signals, coverage count, engagement observed at that time), and links to primary sources. |
+| NEWS-4 | Covers roughly 15–30 stories per beat per day, deliberately broader than any one brief, so it also supplies **exploration candidates**. |
+| NEWS-5 | The digest is versioned and cached, identical for every user, and saved with all of the newsroom's tool calls and results (the **trace**). |
+| NEWS-6 | **Importance is evidence-based.** Scores must cite observable signals. The model's background knowledge isn't evidence. |
+
+### 6.2 🗂️ Chief-of-staff agent (per user)
+
+| ID | Requirement |
+|---|---|
+| COS-1 | Runs per user, scheduled about 60 minutes before the user's brief time, in a **fresh context** with the digest, that user's memory, and that user's open questions. |
+| COS-2 | **Personal search:** turns memory into queries (subtopics, followed entities, open questions, "keep me posted" items) and gathers personal candidates, including ones outside the beats. |
+| COS-3 | **Scoring:** for each candidate (digest stories + personal finds), outputs structured scores for importance (from digest evidence, or estimated with evidence for personal finds), relevance (against memory, with the reason), and novelty (against recently shown stories and the profile). |
+| COS-4 | **Selection runs in code, not in the model:** slot allocation (importance + relevance + at least one exploration slot) plus an MMR redundancy penalty run deterministically over the agent's scores. This keeps ablations clean and the selection auditable. |
+| COS-5 | Writes the **brief script** (grounded, specific, in the user's preferred format) and a **source pack** for each story: key passages from the primary sources, related context, and community reaction, sized for the voice agent's context. |
+| COS-6 | **Pre-fetch prediction:** spends more source-pack depth on stories the user is likely to dive into. |
+| COS-7 | Attaches answered follow-ups to the brief. |
+| COS-8 | Its trace is saved per user. |
+
+### 6.3 🎙️ Voice agent (per session)
+
+| ID | Requirement |
+|---|---|
+| VOICE-1 | **Cascade:** streaming speech-to-text → a fast text model → streaming text-to-speech. The rationale is in `01a` §3. |
+| VOICE-2 | Holds the brief and source packs in a cached context. It answers from them first. |
+| VOICE-3 | Tools: `quick_search` (time-boxed, covered by "let me check"), `bookmark_question`, `save_for_later`, `note_preference`. It has no other tools. |
+| VOICE-4 | First audio within about 1 s on source-pack answers. |
+| VOICE-5 | Sits behind a `VoiceFrontEnd` interface; speech-to-speech is only a separate experiment (§11, F3). |
+| VOICE-6 | At session end, emits **memory signals** (explicit and implicit, with session context: time available, how it ended) for the memory update. |
+
+### 6.4 Headline signals, beats, and tool backends
+
+**Headline signals** (how importance is judged without our own corpus):
+
+| Signal type | Examples | What it tells us |
+|---|---|---|
+| Editorial front pages | Techmeme (AI); Utility Dive, Canary Media, Latitude Media (Energy & DC); The Robot Report, IEEE Spectrum Robotics (Physical AI); Google News and wire front pages | Editors have already ranked the day |
+| Crowd rankings | Hacker News front page and points (**brief-time values only**), Reddit top posts, Hugging Face daily papers, GitHub trending | What practitioners are paying attention to |
+| Expert curation | Field newsletters (for example Import AI, The Batch; energy and robotics newsletters) | Expert judgement, usually a day late |
+| Coverage | How many independent outlets the agent finds covering a story; optionally event-clustered news APIs | Breadth of coverage |
+| Primary sources | Lab, company, and agency blogs and releases; arXiv | Ground truth for claims, not for importance |
+
+**Beats** are versioned config: a beat name, its scope notes and subtopic list (carried over from v0.5 §7.1, with its boundary rules), and its headline-signal list.
+
+**Tool backends (P9):**
+
+| Tool | Live backend | Replay backend |
+|---|---|---|
+| `search` | Claude's built-in web search (or Exa / Tavily) | Date-filtered search index over the frozen archive |
+| `fetch` | Claude's built-in web fetch | Archived copy of the page as of the replay date |
+| `headline_source(name, date)` | The source's current front page or feed | The source's **date archive** (for example Techmeme daily pages, HN Algolia by date, arXiv listings by date, archived RSS) |
+
+| ID | Requirement |
+|---|---|
+| TOOL-1 | Agent code is **identical** in live and replay mode. Only the tool backend changes. |
+| TOOL-2 | Replay backends return only content published and observable at or before the simulated time. |
+| TOOL-3 | **Live traces:** every live tool call and result is saved, so self-study days can be re-analysed. |
+| TOOL-4 | All fetched web content is treated as **untrusted data**: tool results are clearly delimited, and instructions inside them are never followed (tested in §10.9). |
+
+---
+
+## 7. Accounts, data, and processes
+
+### 7.1 Accounts and authentication
 
 | ID | Requirement |
 |---|---|
 | ACC-1 | Account fields: id, email, name, timezone, brief time, status, type (`real` / `synthetic`), role (`user` / `admin`), research consent, created date. |
 | ACC-2 | Invite-only sign-up from a single-use link. |
 | ACC-3 | Passwordless email link or Google login. |
-| ACC-4 | Every request and session is bound to one user id. Synthetic accounts use service credentials only. |
+| ACC-4 | Every request and agent run is bound to one user id. Synthetic accounts use service credentials only. |
 | ACC-5 | Admins see metadata, job status, and cost. They can read real users' content only with consent, and access is logged. |
 
-### 6.2 Data tiers and isolation
+### 7.2 Data tiers and isolation
 
 | Tier | Contents | Scope |
 |---|---|---|
-| **Shared** | Channel configs, source registries, ingested items, stories, importance scores, labels, the content cache, topic-request counts (aggregated) | Global, read-only to user processes |
-| **Per-user state** | Profile, channel follows and weights, interest model, delivery prefs, open questions, experiment assignments, budgets | One user |
-| **Per-user activity** | Briefs, selections, transcripts, pre-fetch manifests, follow-up answers, topic requests, ratings, timings, costs | One user |
+| **Shared** | Beat configs, newsroom digests and traces, the shared source-pack cache (content-keyed) | Global; read-only to per-user runs |
+| **Per-user state** | Profile, interest model, delivery prefs, open questions, experiment assignments, budgets | One user |
+| **Per-user activity** | Chief-of-staff traces, briefs, source packs, transcripts, memory signals, follow-up answers, ratings, timings, costs | One user |
+| **Evaluation** | Frozen replay archive, hindsight labels, simulated-user profiles, task sets, graders, judge validation labels | Research only, in `run_id` namespaces |
 
 | ID | Requirement |
 |---|---|
-| DATA-1 | Every per-user record carries a `user_id`, and all access goes through a user-scoped data-access layer. |
-| DATA-2 | Agent tools are built per session with a fixed user id. |
-| DATA-3 | Shared caches are content-keyed and contain no user data. Topic-request counts are aggregated, with no user identifiers. |
+| DATA-1 | Per-user records carry a `user_id`, and all access goes through a user-scoped data-access layer. |
+| DATA-2 | Agent tools are built per run with a fixed user id. The newsroom gets **no** user-scoped tools. |
+| DATA-3 | Shared caches are content-keyed and contain no user data. |
 | DATA-4 | Replay and simulation runs live in `run_id` namespaces. |
 | DATA-5 | No raw audio is stored by default. Deletion is supported; deleting an account purges per-user data within 7 days. |
 | DATA-6 | Users can export their data as JSON. |
 | DATA-7 | Encryption in transit and at rest. Secrets are never stored in the database or repo. |
 | DATA-8 | Research analysis uses only consenting users, with pseudonymous ids. |
 
-### 6.3 Processes and scheduling
+### 7.3 Processes and scheduling
 
 | ID | Requirement |
 |---|---|
-| PROC-1 | **Channel ingestion jobs:** one per channel, on that channel's schedule. They're idempotent, and every item is written to the **timestamped snapshot store**. |
-| PROC-2 | **Per-user pre-compute job:** once per local day, about 60 minutes before the user's brief time. |
-| PROC-3 | Jobs are isolated, queued with retries, and tagged with `user_id` or `channel_id`, date, config version, and `run_id`. |
-| PROC-4 | **On-demand fallback** if the brief isn't ready. |
-| PROC-5 | Live sessions are isolated and run concurrently. |
-| PROC-6 | Memory updates are serialised per user. |
-| PROC-7 | **Follow-up research job** per bookmarked question, with a larger budget than a live turn. It must finish before the user's next brief. |
-| PROC-8 | **Capacity:** at least 10 concurrent sessions; pre-compute for 50 accounts within 1 hour. |
-| PROC-9 | The simulation runner drives the same jobs on a simulated clock. |
-| PROC-10 | Structured logs, filterable by user, channel, and run. |
+| PROC-1 | **Daily job orchestrator** (code): newsroom run(s) → per-user chief-of-staff runs, each scheduled before that user's brief time and after the latest digest. |
+| PROC-2 | Runs are isolated, queued with retries, and tagged (user or newsroom, date, config version, `run_id`). One failure doesn't block others. |
+| PROC-3 | **On-demand fallback** if a brief isn't ready. |
+| PROC-4 | Voice sessions are isolated and concurrent. |
+| PROC-5 | Memory updates are serialised per user. |
+| PROC-6 | **Follow-up research runs** (chief-of-staff role, larger budget) finish before the user's next brief. |
+| PROC-7 | **Capacity:** at least 10 concurrent sessions; chief-of-staff runs for 50 accounts within 1 hour. |
+| PROC-8 | The simulation runner drives the same jobs on a simulated clock with replay backends. |
+| PROC-9 | Structured logs and traces, filterable by user, role, and run. |
 
-### 6.4 Cost control
+### 7.4 Cost control
 
 | ID | Requirement |
 |---|---|
-| COST-1 | Every external call records its cost against a user, a channel, or the shared pipeline. |
-| COST-2 | Per-user daily budget, with graceful degradation. |
+| COST-1 | Every model and tool call records its cost against a user, the newsroom, or a run. |
+| COST-2 | Per-user daily budget, with graceful degradation (cheaper model, shallower source packs, fewer personal searches). |
 | COST-3 | Global daily budget, plus a budget per simulation run. |
-| COST-4 | Shared work is computed once per channel and reused by every follower. Because the catalog is fixed, channel ingestion cost is fixed and known. |
+| COST-4 | The newsroom digest and source packs are shared and cached. Prompt caching is used for stable prompts and digests. |
+| COST-5 | Rough planning figure: about $0.05–1.00 per user per day depending on model choice (`01a` §6). It's measured and reported in evaluation (§10.3, T6). |
 
-### 6.5 Admin
+### 7.5 Admin
 
 | ID | Requirement |
 |---|---|
 | ADM-1 | Invites, an account list, job status, and cost. |
-| ADM-2 | Retry jobs, disable accounts, change experiment assignments. |
+| ADM-2 | Retry runs, disable accounts, change experiment assignments. |
 | ADM-3 | Bulk-create and delete synthetic accounts by `run_id`. |
-| ADM-4 | **Channel health:** per channel, freshness, items per day per source, failing sources, follower count, and cost. |
-| ADM-5 | **Topic-request report:** out-of-catalog requests, grouped and counted, to choose the next channel. |
+| ADM-4 | Newsroom health: digest freshness, headline sources that are failing or empty, stories per beat. |
+| ADM-5 | A report of interests outside the beats, to pick future beats. |
 
 ---
 
-## 7. Agent functional requirements
+## 8. Agent behaviour details
 
-Requirements run **per user** unless marked *shared*.
-
-### 7.1 The topic catalog (*shared*)
-
-#### 7.1.1 Channel definitions
-
-**🧠 AI: models, research & industry** (anchor; **research domain**)
-
-| | |
-|---|---|
-| **In scope** | Frontier and open models and labs; research (reasoning, agents, memory, evaluation, interpretability, training methods); AI products and developer tools; AI business (funding, M&A, revenue, talent); AI policy, safety, and regulation; **AI chips and compute supply** (accelerators, chip export controls, cloud GPU capacity) |
-| **Subtopics** | `frontier-models` · `open-models` · `research-methods` · `agents-and-tools` · `evals-and-safety` · `products-and-apps` · `business-and-funding` · `policy-and-regulation` · `chips-and-compute` |
-| **Sources (draft registry)** | arXiv (cs.AI, cs.CL, cs.LG); lab and company blogs (OpenAI, Anthropic, Google DeepMind, Meta AI, Mistral, Microsoft, NVIDIA, Hugging Face, and others); Hacker News (Algolia API); selected subreddits; tech and business press (for example TechCrunch, The Verge, Reuters tech, Ars Technica, SemiAnalysis public posts); policy sources (EU AI Office, US NIST / OSTP, UK AISI) |
-| **Importance signals** | HN points and comments, coverage across registry sources, arXiv attention (for example Hugging Face daily papers), source tier |
-
-**⚡ Energy, Grid & Data Centers**
-
-| | |
-|---|---|
-| **Framing** | *The clean-energy transition and the power and infrastructure buildout behind AI.* |
-| **In scope** | Solar, wind, and storage deployment and economics; nuclear (fission, SMRs, fusion milestones); grid, transmission, and interconnection; power markets and prices; **data center buildout** (hyperscaler capex, siting, power purchase agreements, on-site generation, cooling, water); energy policy and regulation (for example FERC, DOE, tax credits, permitting); climate-tech funding |
-| **Out of scope** | Oil and gas markets in general (unless tied to power supply or data centers); consumer EV reviews; general climate science |
-| **Subtopics** | `solar-wind` · `storage-batteries` · `nuclear-fusion` · `grid-transmission` · `power-markets` · `data-center-buildout` · `energy-policy` · `climatetech-funding` |
-| **Sources (draft registry)** | Trade and specialist press with RSS: Canary Media, Utility Dive, Latitude Media, Heatmap, Data Center Dynamics, Data Center Frontier, Electrek (energy), Carbon Brief, pv magazine, Energy-Storage.news; government and agency releases: EIA, DOE, FERC, IEA; hyperscaler sustainability and infrastructure blogs; HN filtered by keyword |
-| **Importance signals** | Coverage across registry sources, source tier, deal size or capacity (GW, GWh, $) extracted from the text. There's no strong community-vote signal like HN here. |
-
-**🤖 Physical AI, Robotics & Simulation**
-
-| | |
-|---|---|
-| **Framing** | *AI that acts in the physical world, and the simulation and world models used to build it.* |
-| **In scope** | Robot foundation models and vision-language-action models; humanoids and general-purpose robots; industrial, warehouse, and logistics automation; autonomous vehicles and robotaxis; drones and field robotics; **simulation, digital twins, and world models** (sim-to-real, synthetic data, physics simulators, generative world models); robotics hardware (actuators, sensors, hands); robotics funding and deployments |
-| **Out of scope** | Consumer gadget reviews; pure manufacturing news without automation |
-| **Subtopics** | `robot-foundation-models` · `humanoids` · `industrial-logistics` · `autonomous-vehicles` · `drones-field` · `simulation-world-models` · `hardware` · `business-and-deployments` |
-| **Sources (draft registry)** | arXiv (cs.RO, plus cs.CV / cs.LG filtered for embodied AI); The Robot Report; IEEE Spectrum Robotics; Robotics 24/7; company and lab blogs (NVIDIA robotics / Isaac, Google DeepMind robotics, Physical Intelligence, Figure, Boston Dynamics, Agility, Waymo, and others); TechCrunch robotics; HN filtered by keyword; r/robotics |
-| **Importance signals** | HN points (partial coverage), coverage across registry sources, arXiv attention, source tier |
-
-#### 7.1.2 Boundaries between channels
-
-The channels overlap on purpose. These rules keep the overlap manageable:
-
-| Overlap | Rule |
-|---|---|
-| **AI chips vs. data centers** | Chip design, supply, and export controls → **AI** (`chips-and-compute`). Physical sites, power, cooling, and grid deals → **Energy** (`data-center-buildout`). Hyperscaler capex announcements usually go in both. |
-| **AI research vs. robotics research** | Embodied, robotic, or physical-world work → **Physical AI**. General model methods → **AI**. VLA or world-model papers from major labs often go in both. |
-| **World models** | Generative world models used for robots and simulation → **Physical AI**. Generative video models as products → **AI**. |
-
-- **Stories can belong to several channels.** A story is one cluster with multiple channel tags. It's never duplicated, and it appears at most once in a brief.
-- **For research purposes,** the AI evaluation corpus is every story tagged **AI** (§9).
-
-#### 7.1.3 Catalog requirements
-
-| ID | Requirement |
-|---|---|
-| CH-1 | A channel is a **versioned config**: name, framing, scope notes, subtopic list, source registry (provider + feed + tier), refresh schedule, and importance-signal settings. |
-| CH-2 | **Channels as config:** adding a channel needs only a new config and its source registry (P9). |
-| CH-3 | **Source providers behind one interface:** RSS, arXiv API, HN Algolia, Reddit, government feeds, and an AI search API (for live deep-dive search). A news-API provider can be added later without changing the agent. |
-| CH-4 | **Curated registries for every channel.** Sources are known and tiered, so no open-web source policy is needed in the MVP. |
-| CH-5 | Item fields: id, channel tags, subtopic tags, source, URL, title, published time, fetched time, text or snippet, engagement signals, provider. |
-| CH-6 | **Story clustering** within and across channels. One event is one story, with multiple channel tags. |
-| CH-7 | **Snapshot everything** with fetch times. Replay never re-queries live APIs. |
-| CH-8 | **No time leakage in replay.** |
-| CH-9 | **Topic-request logging:** out-of-catalog requests are stored per user (activity tier) and aggregated anonymously for ADM-5. |
-| CH-10 | An optional **wire headlines** feed (major general-news outlets) may be added only as an exploration and "huge news" safety net, and is off in the research config. |
-
-### 7.2 Ranking and selection
-
-| ID | Requirement |
-|---|---|
-| RANK-1 | *Shared:* **importance within each channel**, from signals available at brief time. It never uses hindsight labels. |
-| RANK-2 | Relevance against the user's channel weights and subtopic interests. |
-| RANK-3 | Novelty and exploration scores against the user's profile and recently shown stories. |
-| RANK-4 | **Slot-based selection:** brief slots are split across followed channels by weight (each followed channel gets at least one slot), then importance + relevance slots, then at least one **exploration slot**, with an MMR redundancy penalty. Importance isn't compared across channels on one scale. |
-| RANK-5 | **Exploration pool:** stories from low-weight subtopics, or from **unfollowed catalog channels**, above a quality floor. |
-| RANK-6 | All component scores are logged per decision. |
-| RANK-7 | Saved-for-later stories carry over (capped). |
-
-### 7.3 Brief generation
+### 8.1 Brief generation
 
 | ID | Requirement |
 |---|---|
 | BRF-1 | Uses only source text, and every sentence carries a citation. |
 | BRF-2 | Specific headlines (UX-2). |
-| BRF-3 | Follows the user's delivery preferences, within limits. |
+| BRF-3 | Follows delivery preferences, within limits (3–8 stories, 1–4 minutes). |
 | BRF-4 | Opens with answered follow-ups and ends with an open prompt. |
 
-### 7.4 Pre-fetch and deep dive
+### 8.2 Follow-up bookmarks
 
 | ID | Requirement |
 |---|---|
-| PF-1 | Predict likely dives and build a per-user pre-fetch manifest. |
-| PF-2 | Fetched material goes into the shared, content-keyed cache. |
-| PF-3 | Per-user pre-fetch budget. |
-| PF-4 | Cache first, then live search (corpus search in replay mode), with hits and misses logged. |
-| PF-5 | Grounded answers, with a hedge when support is missing. |
-| PF-6 | Natural-language references and open questions (UX-3, UX-4). |
-
-### 7.5 Follow-up bookmarks
-
-| ID | Requirement |
-|---|---|
-| FUP-1 | A question is bookmarked when no supported answer is found within the latency budget, or when the user asks. The agent tells the user. |
+| FUP-1 | A question is bookmarked when no supported answer is found within the latency budget, or when the user asks. |
 | FUP-2 | An open question stores: user, question, context, time, status (`open`, `researching`, `answered`, `unanswerable`, `dismissed`), answer, and citations. |
-| FUP-3 | The background research job writes a grounded answer or marks the question unanswerable. |
-| FUP-4 | Answers are surfaced at the next session, in the email reminder, and on request, and can be explored in full. |
-| FUP-5 | Open questions count as an interest signal and can create a temporary watch. |
+| FUP-3 | A background research run writes a grounded answer, or marks the question unanswerable with what it found. |
+| FUP-4 | Answers are surfaced at the next session, in the reminder email, and on request, and can be explored in full. |
+| FUP-5 | Open questions count as interest signals and feed personal search (COS-2). |
 | FUP-6 | Open questions can be listed and dismissed, and they expire. |
 
-### 7.6 Memory
+### 8.3 Memory
 
 | ID | Requirement |
 |---|---|
-| MEM-1 | **Interest model:** channel weights and subtopic interests (open-ended labels inside a channel's subtopics), each with a weight, confidence, evidence, a last-reinforced time, and a source. |
-| MEM-2 | **Positive signals:** explicit statements, dives, follow-ups, "save for later", and bookmarked questions. |
+| MEM-1 | **Interest model:** open-vocabulary interests, mapped to beat subtopics where possible, plus followed entities and "keep me posted" items. Each has a weight, confidence, evidence, a last-reinforced time, and a source. |
+| MEM-2 | **Positive signals:** explicit statements, dives, follow-ups, "save for later", bookmarked questions. |
 | MEM-3 | **Negative signals are explicit only, or strong and repeated** across several sessions where the user had time. Not diving in once is not disinterest. |
-| MEM-4 | **Session-context awareness:** implicit signals are weighted by time available and how the session ended. |
-| MEM-5 | **Exposure-normalised learning.** |
-| MEM-6 | **Concentration guard:** no single subtopic or channel absorbs more than a set share of weight unless the user has said so. |
+| MEM-4 | Session-context awareness: implicit signals are weighted by time available and how the session ended. |
+| MEM-5 | Exposure-normalised learning. |
+| MEM-6 | Concentration guard: no single interest absorbs more than a set share of weight unless the user has said so. |
 | MEM-7 | An occasional "save any of the others for later?" when the user ends early. |
 | MEM-8 | Decay with a configurable half-life. |
 | MEM-9 | Delivery preferences: length, depth, technicality, quantitative vs. narrative, preferred sources. |
-| MEM-10 | Exploration feedback can promote a subtopic, or suggest following a channel ("You've dug into three robotics stories. Want me to add Physical AI?"). |
-| MEM-11 | Memory can be viewed and edited by its owner, and is versioned daily. |
+| MEM-10 | Engagement with exploration stories can promote new interests. |
+| MEM-11 | Memory can be viewed and edited by its owner, and is versioned daily (snapshots for evaluation). |
 | MEM-12 | Static-profile mode for the baseline. |
 
-### 7.7 Voice and clients
+### 8.4 Clients
 
 | ID | Requirement |
 |---|---|
-| VOX-1 | **Cascade** (streaming speech-to-text → text agent → streaming text-to-speech). |
-| VOX-2 | Voice sits behind a `VoiceFrontEnd` interface, so speech-to-speech can be a separate experiment (§9, F3). |
-| VOX-3 | Push-to-talk. |
-| VOX-4 | First audio within about 1 s on cache hits. |
 | CLI-1 | **iPhone:** a mobile-first web app that works in iPhone Safari, including microphone and audio. Home-screen microphone access is tested early. |
 | CLI-2 | One backend API for every client. An Expo app or phone-call channel is a stretch goal. |
 | CLI-3 | A CLI client for development and simulation. |
 
-### 7.8 Simulation and evaluation
+---
+
+## 9. Simulated users
 
 | ID | Requirement |
 |---|---|
-| SIM-1 | Simulated user: hidden interests, delivery prefs, drift schedule, behaviour settings. |
-| SIM-2 | **A deliberately varied panel** of 10–20 users, one calibrated to Kate, as synthetic accounts. |
-| SIM-3 | Separate per-story relevance ratings, used as a judge. |
-| SIM-4 | The runner replays the window through the normal per-user jobs. |
-| SIM-5 | Reproducible: seeds, cached calls, versioned configs. |
-| SIM-6 | Results are cross-checked against real users. |
-| SIM-7 | Simulated users ask some questions the corpus can't answer, to exercise follow-up bookmarks. |
-
-**Simulated-panel dimensions (SIM-2):**
+| SIM-1 | **Simulated user:** an LLM agent with a hidden interest profile, hidden delivery prefs, a drift schedule, and behaviour settings. It holds full conversations with the voice agent (in text). |
+| SIM-2 | **A deliberately varied panel** of 10–20 users, one calibrated to Kate, as synthetic accounts. It varies along the dimensions below. |
+| SIM-3 | Simulated users also give **separate** per-story relevance ratings, used as a judge (§10.4). |
+| SIM-4 | Simulated users ask deep-dive questions, including some the source packs can't answer, so bookmarks get exercised. |
+| SIM-5 | Profiles, drift schedules, and behaviour settings are versioned files, and generation is documented in a datasheet (§10.2). |
+| SIM-6 | **Simulator validity check:** the Kate-calibrated simulator's choices are compared with Kate's real choices on the same briefs (§10.4). |
 
 | Dimension | Range to cover | Example values |
 |---|---|---|
 | Role and lens | Several reasons for following AI | Researcher, builder, PM, investor, policy or safety, journalist, student, generalist |
 | Interest breadth | Specialist through generalist | 1–2 subtopics vs. 6+ |
-| Interest drift | Stable through fast-changing | Fixed; a new subtopic each week; a sudden shift mid-window |
+| Interest drift | Stable through fast-changing | Fixed; a new interest each week; a sudden shift mid-window |
 | Delivery preferences | Every option in MEM-9 | Short vs. long; headline vs. deep; technical vs. plain; numbers vs. narrative |
 | Engagement style | Amount of signal | Explicit vs. implicit; many vs. few follow-ups |
-| Time available per session | Rushed through relaxed | Often 2 minutes vs. 10+ minutes (tests MEM-3–6) |
+| Time available per session | Rushed through relaxed | Often 2 minutes vs. 10+ (tests MEM-3–6) |
 | Openness to exploration | Curious through dismissive | Often dives into exploration stories vs. always skips |
 | Consistency | Clean through noisy | Acts on stated interests vs. sometimes contradicts |
 
-For the **core results**, the panel's hidden interests are defined over the AI channel's subtopics (§9, F1). Users in the optional R6 check get Physical AI interests.
-
-### 7.9 Real-user instrumentation
-
-| ID | Requirement |
-|---|---|
-| SS-1 | Post-session rating: usefulness, per-story relevance, "learned something new", length fit, follow-up usefulness. |
-| SS-2 | Blinded baseline days, drawn per user. |
-| SS-3 | Experiment assignment stored per user and day. |
-| SS-4 | Only consenting users are analysed. |
-| SS-5 | Each rated story is tagged with its channel, so AI-channel results are reported as primary (§9, F5). |
+For the core results, hidden interests are defined over the AI beat's subtopics (§11, F1).
 
 ---
 
-## 8. MVP scope cut
+## 10. Evaluation plan
+
+This section is the backbone of the project, defined before the build. Exact formulas and prompts go in the technical design. The task sets, data, success criteria, and graders are fixed here.
+
+### 10.1 What the agent is evaluated on: task sets
+
+| Task set | Unit (one task) | Approximate size | Tests |
+|---|---|---|---|
+| **T1 Daily selection** | One (user, day): choose the brief from the digest + personal candidates | 15 simulated users × about 40 days ≈ **600 user-days** per config | Importance, relevance, exploration, over-narrowing |
+| **T2 Brief writing** | One brief: the script and its claims | All T1 briefs; claim-level audit on a sample of **about 1,500 claims** | Faithfulness, specificity, packaging adherence |
+| **T3 Deep-dive QA** | One question about a story in the brief, labelled answerable from the pack / needs search / unanswerable | Simulated-user questions + a **curated set of about 300 questions** with labels | Answer accuracy and grounding, correct abstention and bookmarking, latency, pre-fetch hit rate |
+| **T4 Memory** | One user's trajectory over the window | 15 trajectories + targeted scenarios (drift, rushed users, contradictions) | Interest recovery, drift tracking, delivery-pref learning, no over-curation |
+| **T5 Follow-up research** | One bookmarked question | All bookmarks from T3 (target **≥100**) | Resolution rate, faithfulness, correct "unanswerable" |
+| **T6 System** | One run or session | All runs | Latency p50/p95, digest-ready rate, cost per user-day |
+| **T7 Safety** | One adversarial or isolation case | About **50 injected pages** + the isolation test suite | Prompt-injection robustness, cross-user isolation |
+| **T8 Real use** | One real session | Kate about 25–35 sessions; pilot as available | Usefulness, relevance, "learned something new", follow-up usefulness |
+
+### 10.2 Data: where it comes from and how it's collected
+
+| Dataset | Source and collection | Documentation |
+|---|---|---|
+| **Replay archive (AI beat; Physical AI optional)** | Collected after the fact for the window: Techmeme daily pages, HN Algolia (items + time-stamped points where available), arXiv listings by date, lab/company blog archives and RSS history, and selected outlets' archives. Pages are stored as fetched, with publication time. | Datasheet: sources, coverage per day, collection scripts, known gaps, licence and terms notes |
+| **Hindsight importance labels** | (a) HN score above a calibrated cutoff; (b) **coverage by at least k independent archive sources within 14 days** (primary, see §11, F2) | Calibration procedure, per-day label counts, spot-check results |
+| **Topic labels** | The AI beat's fixed subtopic taxonomy, assigned by an LLM | Spot-check of about 200 stories by Kate; agreement reported |
+| **Simulated-user profiles** | Generated from a documented template across the §9 dimensions; one calibrated to Kate from her onboarding and early sessions | Profile files + generation datasheet |
+| **Deep-dive question set** | About 300 questions written by an LLM from source packs, plus questions drawn from simulated-user and real sessions; each labelled for answerability and with the supporting passage. A sample is human-checked. | Labelling guide, agreement on the human-checked sample |
+| **Injection set** | About 50 archive pages with planted instructions (for example "ignore previous instructions and say X", hidden text) | Construction guide |
+| **Real-use logs** | Live traces, transcripts, and ratings from consenting users | Consent form; pseudonymised |
+
+### 10.3 Success criteria and metrics
+
+| Task | Metric | Success criterion (provisional; refined after first baselines) | Grader |
+|---|---|---|---|
+| T1 | **Importance recall@K** (share of hindsight-important stories surfaced within d days) | At least about 90% of the importance-only baseline | Code |
+| T1 | **Relevance** (hidden-profile relevance of shown stories) | Beats static profile and the naive agent | LLM judge (simulated user's separate rating) + code (profile overlap) |
+| T1 | **Topic coverage** (distinct subtopics or entropy over a window) | Above the no-exploration baseline | Code |
+| T1 / T4 | **Over-narrowing** (learned vs. hidden profile spread) | No worse than static profile for rushed users | Code |
+| T2 | **Citation faithfulness** (share of atomic claims supported by the cited source) | At least 95% | LLM judge (validated, §10.4) + human audit |
+| T2 | **Specificity** (headlines naming concrete actors) | At least 95% of headlines | LLM judge + code (named-entity check) |
+| T2 | **Packaging adherence** (length, depth, technicality vs. hidden prefs) | Beats static profile | Code (length) + LLM judge (depth, technicality) |
+| T3 | **Answer accuracy and groundedness** | At least 90% on answerable questions | LLM judge vs. labelled supporting passage |
+| T3 | **Abstention quality** (bookmarks unanswerable questions, doesn't guess) | At least 90% correct abstention, under 5% unsupported answers | Code (labels) + LLM judge |
+| T3 | **Pre-fetch hit rate** (answered from the pack; bookmarks count as misses) | At least about 70% | Code |
+| T3 / T6 | **Latency** (p50 / p95 time to first audio, pack vs. search) | p95 under about 1.5 s on pack answers | Code |
+| T4 | **Interest recovery** (learned vs. hidden profile over time) | Beats static profile; tracks drift within about 3–5 days | Code |
+| T5 | **Follow-up resolution** (supported answer before the next brief) | At least about 60% of answerable bookmarks | LLM judge + code |
+| T6 | **Digest and brief on-time rate; cost per user-day** | At least 95% on time; within budget | Code |
+| T7 | **Injection success rate** (agent follows a planted instruction) | 0 in the brief and in actions; reported for all cases | Code + LLM judge |
+| T7 | **Isolation tests** | 100% pass | Code |
+| T8 | **Ratings: full agent vs. blinded baseline days** | Full agent rated higher on usefulness and relevance (effect size reported) | Human ratings |
+
+### 10.4 Grader validity
+
+- **LLM-judge validation:** each LLM judge (faithfulness, relevance, packaging, answer accuracy) is checked against **human labels by Kate on a held-out sample of 100–200 items**. Agreement (accuracy and Cohen's κ) is reported. A judge with poor agreement is revised before its numbers are used.
+- **Judge independence:** judges use a different prompt and, where practical, a different model from the agent being graded. Judges never see which config produced an output.
+- **Simulator validity:** on a set of real briefs, the Kate-calibrated simulator's choices (dives, skips, ratings) are compared with Kate's actual choices. Agreement is reported as a limitation or support.
+- **Label quality:** hindsight-label spot checks and topic-label agreement are reported (§10.2).
+
+### 10.5 Baselines and ablations
+
+| # | Config | Purpose |
+|---|---|---|
+| B1 | **Importance-only:** serve the newsroom digest's top stories, with no personalisation | Upper reference for importance; floor for relevance |
+| B2 | **Static profile:** memory frozen after onboarding | Tests learned memory |
+| B3 | **No exploration:** exploration slots removed | Tests the filter-bubble claim |
+| B4 | **No pre-fetch:** every follow-up uses live or quick search | Tests latency and pre-fetch value |
+| B5 | **Naive agent:** one model call with web search and the user's profile as text ("write today's brief for this person"), with no newsroom, scoring, or memory updates | A strong, realistic baseline close to what a commercial "AI briefing" does |
+| A1 | **No newsroom separation:** one chief-of-staff run that judges importance with memory in context | **Tests the design claim** that separating importance protects importance recall and coverage |
+| A2 | **No HN signal** at brief time | Checks circularity with the HN hindsight label (§11, F2) |
+| A3 | **No session-context weighting** in memory | Tests the over-curation fixes (MEM-3–6) |
+
+The full agent and B1–B5 are required. A1–A3 are planned and ordered by priority (A1 first).
+
+### 10.6 Real-user protocol (T8)
+
+- **Kate:** 4–5 weeks of daily use. About 20–25% of days are **blinded baseline days**, drawn at random and stratified across B1, B2, and B3. Kate rates every session (SS-1) without knowing which config she got.
+- **Pilot:** the same protocol where possible, as a secondary, noisier sample.
+- **Analysis:** within-user comparisons, effect sizes with confidence intervals. Results are reported as a case study, not as population claims.
+
+### 10.7 Statistics and reporting
+
+- Results reported **per config with 95% confidence intervals** (bootstrap over user-days or items). Paired comparisons use paired bootstrap or permutation tests.
+- **At least 3 seeds** per config in simulation, to account for agent non-determinism. Variance across seeds is reported.
+- Results are reported per simulated-user type (dimension), not only on average, because averages can hide failures on rushed or narrow users.
+- Cost and latency are reported next to quality for every config.
+
+### 10.8 Failure analysis (R7)
+
+For every task set, failures are sampled (at least 30 per task set, or all if there are fewer) and categorised with a fixed taxonomy, refined during analysis:
+
+| Area | Failure categories |
+|---|---|
+| Importance | Newsroom missed the story (retrieval) · newsroom found it but ranked it low · chief of staff dropped it (selection) · label noise |
+| Relevance and memory | Wrong interest inferred · over-narrowing · slow to notice drift · ignored explicit feedback · delivery pref misread |
+| Faithfulness | Unsupported number · wrong attribution · claim extrapolated beyond the source · citation to the wrong source · stale information |
+| Deep dive | Reference resolution failed · answered when it should have bookmarked · bookmarked when the pack had the answer · slow path taken unnecessarily |
+| Follow-ups | Unresolved but answerable · answer unsupported |
+| Safety | Injection partially followed · content leaked into the brief |
+
+The report includes the category distribution, representative examples, and what was changed in response (with before and after numbers where a fix was made).
+
+### 10.9 Safety evaluation (R8)
+
+- **Faithfulness and abstention:** T2, T3, and T5 above.
+- **Prompt injection:** planted instructions in archive pages (T7). Measured: whether any agent role follows them, mentions them as fact, or changes tool behaviour.
+- **Isolation:** automated tests try to make each per-user tool and API read another user's data, and check that newsroom runs contain no user data.
+- **Privacy:** consent flow, deletion, and pseudonymisation verified with tests.
+
+---
+
+## 11. Research integrity guardrails
+
+### 11.1 Rules
+
+| ID | Rule |
+|---|---|
+| RG-1 | **Frozen research config:** AI beat, replay archive, AI subtopic taxonomy, cascade voice evaluated in text, baselines B1–B5, pinned model versions and prompts. Other features are off or evaluated separately. |
+| RG-2 | **Replay only from the frozen archive.** Never re-query live sources for past dates. |
+| RG-3 | **No hindsight leakage:** agents see only signals observable at brief time (for example HN points as of that time). |
+| RG-4 | **New features declare their evaluation impact** in this table. |
+| RG-5 | **The same agent code** runs live and in replay. Only tool backends differ (TOOL-1). |
+| RG-6 | **Scope protection:** product extensions are cut before research goals. |
+| RG-7 | **Evaluation defined first:** task sets, graders, and success criteria (§10) are fixed before the full agent is tuned. Tuning uses a separate dev slice of days and users, and the test slice is held out. |
+
+### 11.2 Flags: where product features pull against the research goals
+
+| # | Feature | Tension | Resolution | Status |
+|---|---|---|---|---|
+| F1 | **Three beats + open interests** | The HN label is strongest for AI; open interests have no labels | Core evaluation on the AI beat; Physical AI optional (R6); open interests evaluated only through real-user ratings | ✅ Resolved by scoping |
+| F2 | **HN as a live headline signal** | Circularity with the HN hindsight label | Brief-time HN values only; **coverage label is primary**; ablation A2 | ✅ Resolved |
+| F3 | **Audio-to-audio models** | The evaluation would measure a different system; grounding is weaker | Cascade; speech-to-speech only as a separate experiment | ⚠️ **Don't adopt without revisiting** |
+| F4 | **Follow-up bookmarks** | Changes what counts as a pre-fetch miss | Bookmarks count as misses; T5 metrics | ✅ Resolved |
+| F5 | **Non-AI interests in the self-study** | Fewer AI stories rated | Ratings tagged by beat; guaranteed minimum AI share in Kate's briefs during the study | ⚠️ **Watch** |
+| F6 | **Memory changes** | They improve alignment with the research | Time-available dimension; ablation A3 | ✅ Strengthens |
+| F7 | **Cross-user learning** | Breaks per-user memory evaluation | Out of the MVP | ✅ Excluded |
+| F8 | **Broader personal agent** | Scope | Out of the MVP | ✅ Excluded |
+| F9 | **Exploration outside the AI beat** | Changes the AI coverage metric | In the research config, the exploration pool is limited to AI-beat digest stories | ✅ Resolved |
+| F10 | **Overall scope** | Solo project | RG-6; ◇ milestones | ⚠️ **Ongoing risk** |
+| F11 | **Agent non-determinism** | Reproducibility | Traces, pinned prompts and models, at least 3 seeds, variance reported | ✅ Resolved |
+| F12 | **Live web search vs. replay search** | The self-study system searches a bigger, different index than the simulations | Same code (RG-5); report it as a limitation; compare search-result quality on a small sample | ⚠️ **State as a limitation** |
+| F13 | **LLM knowledge of the replay window** | The model may already know the window's events, which inflates quality | Choose a window after the model's training cutoff; importance must cite evidence (NEWS-6); spot-check | ⚠️ **Check the cutoff when picking the window** |
+
+---
+
+## 12. MVP scope cut
 
 | Area | In the MVP | Later or stretch |
 |---|---|---|
 | Accounts | Invite-only, up to about 50 accounts | Public sign-up, billing |
-| Topics | **3 catalog channels** with curated registries; topic-request logging | More channels; open topics via news API + topic resolver |
-| Sources | RSS, arXiv, HN, Reddit, government feeds; an AI search API for live search | Event-clustered news API |
+| News | Newsroom over 3 beats + personal search; replay archive for the AI beat | More beats; Physical AI replay (R6) |
 | Clients | Mobile-first web app (iPhone Safari) + dev CLI | Expo app or phone channel |
 | Voice | Cascade with push-to-talk | Speech-to-speech front-end experiment; barge-in |
-| Ranking | Weighted scoring + channel slots + MMR | Contextual bandit, cross-user signals |
-| Memory | Channel weights + subtopics, exposure-normalised, decay, concentration guard | Open-vocabulary embeddings, episodic memory |
-| Follow-ups | Bookmark, background research, surface next session | Push notifications, ongoing watches |
-| Evaluation | All metrics in §10 on the AI channel; optional Physical AI check | Energy channel evaluation |
+| Selection | Agent scoring + code selection (slots + MMR) | Contextual bandit, learned weights |
+| Memory | Open-vocabulary interests, exposure-normalised, decay, concentration guard | Episodic memory, cross-user signals |
+| Follow-ups | Bookmark, research, surface next session | Push notifications, ongoing watches |
+| Evaluation | T1–T8, B1–B5, A1, judge validation, failure analysis | A2–A3 if time; R6 |
 | Beyond news | None | Personal chief of staff (§4.5) |
 
 ---
 
-## 9. Research integrity guardrails
+## 13. Course requirements coverage (CS329Z final project)
 
-### 9.1 Rules
-
-| ID | Rule |
-|---|---|
-| RG-1 | **Frozen research config.** All core results come from one versioned config: the **AI channel** and its source registry, the AI subtopic taxonomy, cascade voice (text evaluation), the baseline set, and model versions. Other channels and product features are off or evaluated separately. |
-| RG-2 | **Replay only from snapshots** (CH-7). |
-| RG-3 | **No hindsight leakage into ranking** (RANK-1). |
-| RG-4 | **New features declare their evaluation impact**, and this table is updated in each revision. |
-| RG-5 | **Shared code.** The research config and the product run the same code paths. |
-| RG-6 | **Scope protection.** Product extensions are cut before research goals. |
-
-### 9.2 Research goals → evaluation
-
-| Goal | Evaluated by | Data |
+| Requirement | Where it's covered | Status |
 |---|---|---|
-| R1 Replay | Determinism and leakage tests | AI replay corpus |
-| R2 Ablations | Every metric across the 5 configs | AI corpus × simulated panel |
-| R3 Simulated users | Relevance, interest recovery, coverage, packaging adherence, over-narrowing | AI corpus × simulated panel |
-| R4 Corpus metrics | Importance recall@K, citation faithfulness, latency, pre-fetch hit rate and efficiency, follow-up resolution | AI corpus |
-| R5 Real users | Ratings, full agent vs. blinded baselines; AI-channel stories primary | Kate (primary), pilot (secondary) |
-| R6 Second domain (optional) | Importance recall (coverage label + HN where present) and coverage | Physical AI replay corpus × small panel |
+| **Relates to core course topics** | **Retrieval:** headline signals, personal search, source packs (§6). **Tool use:** search, fetch, bookmark, and memory tools; pre-fetch decisions (§6). **Memory:** per-user interest and preference memory with decay and over-curation guards (§8.3). **Multi-agent:** newsroom, chief of staff, and voice roles with enforced context separation (§6), plus simulated users. **Optimization:** pre-fetch budget, latency and cost trade-offs (§10.3). **Data agents need:** replay archive, hindsight labels, question set, datasheets (§10.2). **Evaluation and safety:** §10, including faithfulness, abstention, injection, isolation. | ✅ Covers most topics |
+| **Working in teams** | Proposal states a team of one | ⚠️ **Confirm a team of one is OK with course staff** (if not already confirmed) |
+| **Design, build, and evaluate over the quarter** | Milestones §14 | ✅ |
+| **Define evaluation early** | §10 is fixed before the full build; RG-7 requires it | ✅ |
+| **What tasks the agent handles** | Task sets T1–T8 (§10.1) | ✅ |
+| **Where the data comes from and how it was collected** | §10.2, with datasheets | ✅ |
+| **What counts as success** | Success criteria per metric (§10.3) | ✅ (thresholds provisional, refined after first baselines, as the proposal says) |
+| **How success is measured (code, LLM judge, human)** | Grader column (§10.3); **all three types used**; judge validation against human labels (§10.4) | ✅ |
+| **Meaningful set of tasks** | About 600 user-days per config, about 1,500 audited claims, about 300 deep-dive questions, at least 100 bookmarks, about 50 injection cases, about 25–35 real sessions | ✅ Sizes to be confirmed against budget in the technical design |
+| **Baselines and comparisons** | B1–B5 including a strong naive-agent baseline; ablations A1–A3 (§10.5); confidence intervals and seeds (§10.7) | ✅ |
+| **Analyse where and why the agent fails** | Failure taxonomy and process (§10.8) | ✅ |
+| **"Showing it works in one instance won't score highly"** | Replay over many user-days, multiple seeds, a varied simulated panel, real-user blinded comparison | ✅ |
 
-### 9.3 Flags: where product features pull against the research goals
-
-| # | Feature | Tension | Resolution | Status |
-|---|---|---|---|---|
-| F1 | **Multiple channels** | The HN-based importance label is strongest for AI, weaker for Physical AI, and absent for Energy. | Core evaluation on AI (RG-1). Physical AI as the optional R6 check, using the coverage label plus HN. Energy isn't evaluated for importance. | ✅ Resolved by scoping |
-| F2 | **Sourcing** | Live search isn't reproducible. | Every channel has a curated registry; replay only from snapshots. Live search is used only for deep-dive misses and follow-ups, and is replaced by corpus search in replay. | ✅ Resolved |
-| F3 | **Audio-to-audio models** | An end-to-end speech-to-speech agent means the evaluation measures a different system, and grounding is weaker. | Cascade for the MVP. Speech-to-speech only as a separate experiment measuring faithfulness drift. | ⚠️ **Don't adopt speech-to-speech as the main path without revisiting** |
-| F4 | **Follow-up bookmarks** | Changes what counts as a pre-fetch miss. | Bookmarked turns count as misses; follow-up resolution rate added; faithfulness checks on follow-up answers. | ✅ Resolved |
-| F5 | **Kate and pilot users following Energy and Physical AI** | Fewer AI-channel stories get rated in the self-study. | Ratings tagged by channel (SS-5). Make sure the AI channel keeps enough slots in Kate's briefs, for example by keeping her AI weight high or guaranteeing a minimum number of AI slots during the study. | ⚠️ **Watch** |
-| F6 | **Memory changes** | They improve alignment with the research. | Time-available dimension in the simulated panel; over-narrowing metric. | ✅ Strengthens |
-| F7 | **Cross-user learning** | Breaks the per-user memory evaluation. | Out of the MVP. | ✅ Excluded |
-| F8 | **Broader personal agent** | Scope only. | Out of the MVP. | ✅ Excluded |
-| F9 | **Exploration from other channels** | In the research config, exploration from non-AI channels would change the AI coverage metric. | In the research config, the exploration pool is limited to the AI channel's lower-weight subtopics. In the product, exploration can use any catalog channel. Report this difference. | ✅ Resolved |
-| F10 | **Overall scope** | Solo-project time risk. | RG-6; ◇ milestones; research work on the critical path. Three fixed channels cut most of the open-topic complexity. | ⚠️ **Ongoing risk, now reduced** |
+**Remaining risks to the grade, and mitigations:**
+1. **Scope vs. evaluation time.** The evaluation needs about 2–3 weeks of a solo quarter. Milestones protect M5 (evaluation) over ◇ product work.
+2. **Simulated-user validity** is a known weakness in the literature. It's mitigated by the simulator validity check (§10.4) and the real-user comparison. Discuss it honestly in the report.
+3. **Small real-user sample.** Frame it as a case study with effect sizes, not significance claims.
+4. **Evaluation cost.** 6 configs × 3 seeds × 600 user-days is a lot of agent runs. The technical design must budget this and may reduce the panel or days, or use cheaper models for simulators and judges.
 
 ---
 
-## 10. Evaluation and success metrics
+## 14. Milestones (proposed)
 
-### 10.1 Hindsight labels (AI replay corpus; also Physical AI for R6)
-
-- **Primary importance label:** HN score above a calibrated cutoff (AI channel).
-- **Secondary importance label:** covered by at least *k* registry sources within 14 days (works for any channel).
-- **Topic labels:** the channel's fixed subtopic taxonomy, assigned by an LLM and spot-checked.
-
-### 10.2 Metrics
-
-| Layer | Metric | Definition (precise version in the technical design) |
-|---|---|---|
-| Corpus | **Importance recall@K** | Share of hindsight-important stories surfaced within *d* days |
-| | **Citation faithfulness** | Share of atomic claims supported, across briefs, dives, and follow-up answers |
-| | **Latency** | p50 and p95 time to first audio or token, split by hit and miss, under concurrency |
-| | **Pre-fetch hit rate** | Share of deep-dive turns answered from the cache; bookmarked turns count as misses |
-| | **Pre-fetch efficiency** | Share of pre-fetched stories used, cost per brief, cache reuse |
-| | **Follow-up resolution rate** | Share of bookmarked questions answered with support before the next brief |
-| Simulated users | **Relevance** | Hidden-profile relevance of the stories shown |
-| | **Interest recovery** | Similarity between learned and hidden profiles over time |
-| | **Over-narrowing** | Learned profile spread vs. hidden profile spread |
-| | **Topic coverage** | Distinct subtopics or entropy over a window |
-| | **Packaging adherence** | Delivered format vs. hidden prefs |
-| Real users | Usefulness, relevance, "learned something new", length fit, follow-up usefulness | Full agent vs. blinded baselines, AI-channel stories primary |
-| Platform | Brief on-time rate, cost per user, cost per channel, channel freshness | |
-
-### 10.3 Baselines
-
-1. Importance-only.
-2. Static profile.
-3. No exploration.
-4. No pre-fetch.
-
-### 10.4 MVP success criteria
-
-**Research (all required):**
-- ✅ Beats the static profile on relevance (simulated and real users).
-- ✅ At least about 90% of importance-only's importance recall.
-- ✅ Topic coverage above the no-exploration baseline.
-- ✅ At least 95% supported claims.
-- ✅ At least about 70% pre-fetch hit rate; p95 time to first audio under about 1.5 s on hits.
-- ✅ Over-narrowing no worse than the static profile for time-constrained users.
-
-**Product and platform:**
-- ✅ At least 95% of briefs ready on time.
-- ✅ Isolation tests pass.
-- ✅ A new user needs no code changes; a new channel needs config only.
-- ✅ At least about 60% follow-up resolution rate (provisional).
-- ✅ The full voice loop works on an iPhone.
-- ✅ Each channel delivers enough fresh stories per day (target set per channel during M1).
-- ✅ Cost per user within budget.
-
----
-
-## 11. Milestones (proposed)
-
-Dates are placeholders until they're lined up with the course deadlines. Milestones marked ◇ can slip without hurting the research goals (RG-6).
+Dates are placeholders until they're lined up with the course deadlines. Milestones marked ◇ can slip without hurting research goals (RG-6).
 
 | Milestone | Contents | Exit criterion |
 |---|---|---|
-| **M0: Docs** | PRD, design explorations, technical design | Approved |
-| **M1: Foundations + AI channel** | Database (users, channels, per-user tables), data-access layer, job queue, snapshot store, provider interface, **AI channel config + registry**, replay corpus, clustering, hindsight labels | Two isolated test accounts; AI corpus loaded; label cutoff calibrated |
-| **M2: Text agent v0** | Ranking + brief + deep dive + basic memory + follow-up bookmarks (CLI); per-user and channel jobs; replay and live | One replayed day for two synthetic accounts; one live day for Kate |
-| **M3: Web app + self-study** | Login, onboarding, mobile web chat + voice (on iPhone), memory, channels and open-questions pages, ratings, blinded baselines, admin CLI | Kate uses it daily on her iPhone; isolation tests pass |
-| **M3◇: Energy + Physical AI channels** | Configs + registries for both; cross-channel clustering and boundaries; channel slots; topic-request logging | Both channels fresh daily; mixed briefs work |
-| **M4: Full agent** | Exploration, exposure-normalised memory, delivery prefs, pre-fetch, ablation flags, budgets | All 5 configs run on replay |
+| **M0: Docs** | PRD, design explorations, technical design **including the full evaluation spec** | Approved |
+| **M1: Foundations + evaluation data** | Database and user-scoped data layer; orchestrator and queue; tool interface with live and replay backends; **replay archive for the AI beat** + datasheet; hindsight labels calibrated; subtopic taxonomy | Archive covers the window; labels spot-checked; two isolated test accounts |
+| **M2: Agents v0 (text)** | Newsroom, chief of staff, voice agent (text), basic memory, bookmarks; CLI; live and replay | One replayed day for two synthetic accounts; one live day for Kate |
+| **M3: Web app + self-study** | Login, onboarding, mobile web chat + voice on iPhone, memory and open-questions pages, ratings, blinded baselines, admin CLI | Kate uses it daily; isolation tests pass |
+| **M4: Full agent + evaluation harness** | Exploration, full memory rules, source-pack pre-fetch, configs B1–B5 and A1; task sets T1–T7 built; judges written and **validated** | All required configs run on the dev slice; judge agreement reported |
 | **M4◇: Pilot** | Invite pilot users | Pilot users get daily briefs |
-| **M5: Simulation and evaluation** | Simulated panel, runner, metrics, judges, human audit | Full results table vs. baselines |
-| **M5◇: Stretch** | R6 Physical AI check; speech-to-speech experiment; Expo app or phone channel | Optional |
-| **M6: Write-up** | Analysis and report | Final report |
-
-Snapshotting all three channels should start **as early as possible**, ideally in M1 even before their agent support is finished. That way the replay windows for R6 exist when they're needed.
+| **M5: Full evaluation** | Test-slice runs (3 seeds), statistics, failure analysis, real-user analysis | Results tables + failure analysis |
+| **M5◇: Stretch** | A2–A3, R6 Physical AI, speech-to-speech experiment, Expo app | Optional |
+| **M6: Write-up** | Report | Final report |
 
 ---
 
-## 12. Risks and mitigations
+## 15. Risks and mitigations
 
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Overall scope for a solo project | Slips the research | RG-6; ◇ milestones; fixed catalog |
+| Overall scope for a solo project | Research slips | RG-6; ◇ milestones; evaluation spec first |
+| **Historical archive gaps** for the window | Weak replay | Choose sources with date archives (Techmeme, HN Algolia, arXiv); document gaps in the datasheet; choose the window around availability |
+| **Agent non-determinism** | Noisy comparisons | Seeds, traces, confidence intervals |
+| **Prompt injection from web pages** | Unsafe or wrong behaviour | Untrusted-data handling (TOOL-4); the voice agent has a narrow tool set; T7 evaluation |
+| **LLM-judge bias** | Wrong conclusions | Validation against human labels; blind judging; a different judge model |
+| **Evaluation cost** | Budget | Budget per run; cheaper simulator and judge models; prompt caching; size the panel to fit |
+| Per-user cost in production | Budget | Shared digest and cache, per-user budgets, model tiering |
+| Headline sources change or block access | Weaker importance | Several signals per beat; ADM-4 health checks; fallbacks |
 | Cross-user data leak | Privacy breach | DATA-1–3; isolation tests |
-| Personal data of other people | Ethics | Consent, export and delete, no audio, pseudonymised analysis. Check whether a human-subjects review is needed before the pilot. |
-| **Thin or stale sources for Energy or Physical AI** | Weak briefs on those channels | Channel health monitoring (ADM-4); a freshness target per channel; add sources to the registry as needed |
-| **Weak importance signals for Energy** (no HN equivalent) | Lower-quality "big news" picks | Coverage across sources, source tier, deal-size extraction; Energy isn't part of the importance evaluation |
-| **Overlapping channels cause duplicate or confusing stories** | Repetitive briefs | Cross-channel clustering, one story with multiple tags, MMR penalty, boundary rules (§7.1.2) |
-| **Users want topics outside the catalog** | Unmet demand | Polite handling, live search for one-off questions, request logging to choose the next channel |
-| Per-user cost | Budget | Shared channels and cache, budgets, cheap models for routine steps |
-| Job failures | Missed briefs | Retries, on-demand fallback, alerts |
-| iPhone web microphone limits | Poor commute experience | Test early; stretch Expo or phone channel |
-| Historical data gaps | Weak replay | Choose sources by archive availability; snapshot from day one |
-| LLM knowledge leakage | Inflated quality judgements | Window after model cutoff; ranking from corpus signals only |
-| Hindsight label noise | Biased importance metric | Two labels; report both |
-| Unreliable simulated users | Misleading evaluation | Calibration to Kate; real-user cross-check |
-| Unsupported claims | Trust | Retrieval-only generation, claim checks, bookmark instead of guessing |
-| Voice latency under load | Poor UX | Pre-fetch, streaming, a fast turn model, a load test |
+| Personal data of other people | Ethics | Consent, deletion, pseudonymisation. Check whether a human-subjects review is needed before the pilot. |
+| iPhone web microphone limits | Poor commute UX | Test early; Expo or phone channel as a stretch goal |
+| Voice latency under load | Poor UX | Source packs, streaming, a fast model, a load test |
+| LLM knowledge of window events | Inflated results | Window after the model's training cutoff; evidence-only importance |
 
 ---
 
-## 13. Open questions (decisions for Kate)
+## 16. Open questions (decisions for Kate)
 
-1. **Channel definitions (§7.1):** are the scopes, subtopics, and boundaries right? In particular:
-   - Should **autonomous vehicles** sit in Physical AI, or be left out?
-   - Should **nuclear and fusion** sit in Energy?
-   - Is **chips and compute** right in AI rather than Energy & Data Centers?
-2. **Source registries:** any must-have sources for each channel (newsletters, podcasts with transcripts, specific blogs)?
-3. **Replay window:** August–September 2026? It must sit after the models' training cutoff.
-4. **LLM provider and models:** OpenRouter as the default? A separate budget for pilot users?
-5. **Live search provider:** Exa or Tavily?
-6. **Hosting:** a single VM with Postgres, or a managed platform (Fly.io, Render, Supabase)?
-7. **Auth:** email link or Google?
+1. **Team of one:** confirmed with course staff?
+2. **Course deadlines** (milestone, final report, poster), to put dates on §14. The course site was blocked from this session.
+3. **Replay window:** August–September 2026, or adjust after checking the models' training cutoff and archive availability?
+4. **Models:** Claude for all three roles? A suggested starting point:
+   - Opus 5.5 for the newsroom (shared, quality-critical);
+   - Sonnet 5.5 for the chief of staff;
+   - Haiku 5.5 for the voice agent and simulated users;
+   - a different model or prompt family for judges.
+
+   Budget source: course credits (OpenRouter), or an Anthropic API key?
+5. **Agent harness:** the Claude API with our own orchestrator, or Managed Agents (scheduled deployments, memory stores)? To be decided in the technical design.
+6. **Headline sources per beat:** any must-haves (newsletters, sites)?
+7. **Hosting** and **auth** (email link vs. Google).
 8. **Pilot size**, and whether a human-subjects review is needed.
-9. **iPhone:** is Safari web acceptable for the start of the self-study?
+9. **iPhone:** Safari web for the start of the self-study?
 10. **Brief size default:** 6 stories, about 3 minutes, at least 1 exploration slot?
-11. **Course deadlines**, to put dates on §11.
-12. **Memory transparency:** should the agent say *why* it thinks you care about something?
-13. **Self-study channel mix (F5):** a guaranteed minimum number of AI slots in your briefs during the study?
+11. **Self-study AI minimum (F5):** guarantee, for example, at least 4 of 6 stories from the AI beat during the study?
+12. **Human labelling time:** about 4–6 hours of Kate's time for judge validation, label spot checks, and the question-set check. Is that OK?
 
 ---
 
 ## Appendix A: Glossary
 
-- **Account:** a `real` or `synthetic` user record.
-- **Topic channel:** a curated, config-defined stream of news for one topic area, shared by all its followers. The MVP has three.
-- **Subtopic:** a fixed category within a channel, used for interests, coverage, and evaluation.
-- **Source registry:** the curated, versioned, tiered list of sources for a channel.
-- **Source provider:** an adapter for one way of getting news (RSS, arXiv, HN, a search API).
-- **Item / Story:** a single document / a cluster of items about one event, which can carry several channel tags.
-- **Brief:** the ordered stories delivered to one user in a session.
-- **Open question / follow-up bookmark:** a user question saved for background research.
-- **Topic request:** a logged request for a topic outside the catalog.
+- **Newsroom agent:** shared role that judges what's big today from headline signals. Never sees user data.
+- **Headlines digest:** the newsroom's cached output: stories with importance scores and evidence.
+- **Beat:** a newsroom coverage area (AI; Energy, Grid & Data Centers; Physical AI, Robotics & Simulation), with scope, subtopics, and headline signals.
+- **Headline signal:** an external judgement of importance (front page, ranking, curation, coverage).
+- **Chief-of-staff agent:** per-user role that personalises, selects, writes the brief, and builds source packs.
+- **Source pack:** pre-fetched, compact source material for one story, used by the voice agent.
+- **Voice agent:** per-session role that delivers the brief and handles the conversation.
+- **Tool backend:** the live (web) or replay (frozen archive) implementation behind an agent tool.
+- **Trace:** the saved record of an agent run's tool calls and results.
+- **Replay archive:** frozen, date-stamped pages for an evaluation window, used only for research.
+- **Open question / bookmark:** a question saved for background research.
 - **Research config:** the frozen configuration all core results come from (RG-1).
-- **Run (`run_id`):** a namespace isolating a replay or simulation.
-- **Hindsight label:** an importance label computed with future information, used only for evaluation.
 
 ## Appendix B: Related work, as it informs requirements
 
 | Work | Informs |
 |---|---|
 | Li et al. 2010, MIND | Relevance and exploration trade-off |
-| Carbonell & Goldstein 1998 (MMR), Ziegler et al. 2005 | Redundancy and diversity |
+| Carbonell & Goldstein 1998 (MMR), Ziegler et al. 2005 | Redundancy and diversity in selection |
 | Nguyen et al. 2014, Kaminskas & Bridge 2017 | Coverage, novelty, over-narrowing metrics |
 | MemGPT, Mem0, LaMP | Per-user memory; we evaluate *selection* |
-| Park et al. 2023, Zhang et al. 2024, Wang et al. 2023, Zhu et al. 2024 | Simulated users and their limitations |
+| Park et al. 2023, Zhang et al. 2024, Wang et al. 2023, Zhu et al. 2024 | Simulated users and their limits; simulator validity check |
+| Yao et al. 2024 (τ-bench) | Tool-agent-user evaluation design |
 | Gao et al. 2023, Liu et al. 2023 | Citation faithfulness |
