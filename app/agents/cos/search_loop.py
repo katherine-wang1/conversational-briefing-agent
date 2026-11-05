@@ -49,11 +49,15 @@ FINISH_SPEC = ToolSpec(
 )
 
 
+MAX_CONSECUTIVE_SEARCH_FAILURES = 2
+
+
 class SearchState:
     def __init__(self, max_searches: int):
         self.max_searches = max_searches
         self.used = 0
         self.exhausted = False
+        self.consecutive_failures = 0
         self.finds: dict[str, Find] = {}
 
     @property
@@ -100,7 +104,14 @@ async def run_search_loop(
             return "Search budget exhausted. Call finish."
         except ToolUnavailable as e:
             cc.trace.add("C2", "tool", ok=False, tool="search", query=query, error=str(e)[:200])
+            state.consecutive_failures += 1
+            if state.consecutive_failures >= MAX_CONSECUTIVE_SEARCH_FAILURES:
+                # Search is down (e.g. no live key): stop spending the budget on it.
+                state.exhausted = True
+                cc.trace.degraded("C2", "search unavailable: stopped after repeated failures")
+                return f"Search failed: {e}. Search is unavailable; call finish."
             return f"Search failed: {e}"
+        state.consecutive_failures = 0
         cc.trace.add("C2", "tool", tool="search", query=query, query_kind=kind, n_hits=len(hits))
         for h in hits:
             state.finds.setdefault(h.doc_id, Find(hit=h, kind=kind, query=query))

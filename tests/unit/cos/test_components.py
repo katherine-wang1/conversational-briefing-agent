@@ -134,6 +134,19 @@ async def test_search_loop_tool_budget_exceeded_stops_searching():
     assert any("search budget exceeded" in e.detail["reason"] for e in c.trace.degradations)
 
 
+async def test_search_loop_stops_after_repeated_search_unavailable():
+    plan = SearchPlan(
+        queries=[SearchQuery(query=f"memory {n}", kind="personal", rationale="r") for n in range(6)]
+    )
+    client = FakeModelClient({"cos.search_loop": lambda req: [tc("finish")]})
+    c = cc(client, searches=12)
+    search = FakeSearch(documents(), fail=True)
+    finds, state = await run_search_loop(c, plan, {"search": search}, mode="replay", now=NOW)
+    assert finds == [] and state.exhausted
+    assert len(search.calls) == 2  # stops after two failures in a row instead of using all 6
+    assert any("search unavailable" in e.detail["reason"] for e in c.trace.degradations)
+
+
 async def test_search_loop_results_are_wrapped_untrusted():
     seen = []
 
