@@ -638,13 +638,13 @@ The report includes the category distribution, representative examples, and what
 2. **Simulated-user validity** is a known weakness in the literature. It's mitigated by the simulator validity check (§10.4) and the real-user comparison. Discuss it honestly in the report.
 3. **Small real-user sample.** Frame it as a case study with effect sizes, not significance claims.
 4. **Evaluation cost.** Addressed by the lean design rules and computation reuse (`02a` §1.4, §8): target about $100–130 total.
-5. **Schedule.** If about 5 weeks remain in the quarter, the self-study shrinks to about 3 weeks and the pilot drops (`02-technical-design.md` §25).
+5. **Schedule.** Done by December 2: the self-study runs November 15–29 (about 2.5 weeks), and the pilot is optional (`02-technical-design.md` §25).
 
 ---
 
 ## 14. Milestones (proposed)
 
-> ⚠️ See `02-technical-design.md` §25 for the week-by-week build plan, including a **compressed 5-week variant** in case the quarter ends in early to mid December.
+> **Deadline: everything done by Wednesday, December 2, 2026.** The week-by-week plan is in `02-technical-design.md` §25. It supersedes the milestone table below where they differ.
 
 
 Dates are placeholders until they're lined up with the course deadlines. Milestones marked ◇ can slip without hurting research goals (RG-6).

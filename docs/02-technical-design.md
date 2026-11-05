@@ -1,6 +1,6 @@
 # Technical design: Conversational Briefing Agent (MVP)
 
-**Status:** v1.0 draft, ready for review and handoff
+**Status:** v1.1, ready for handoff · **Deadline: everything done by Wednesday, December 2, 2026**
 **Owner:** Kate Wang
 **Inputs:** `01-PRD.md` (v0.7), `01a-design-explorations.md`, `02a-technical-design-options.md` (decision log §12, design questions §13)
 **Audience:** the engineer building the system. Read §0–§3 first, then the component you're building.
@@ -922,7 +922,16 @@ The panel generator creates 12 test + 6 dev profiles covering PRD §9 dimensions
 ### 18.3 Judge validation workflow
 
 1. `eval/labeling` (a Streamlit app) serves samples: claims (faithfulness), story × profile (relevance), QA answers.
-2. Kate labels 100–200 items per judge **before** the full judge run (about 4–6 h total [OQ-4]).
+2. Kate labels about 100 items per judge **before** the test runs. **Most of it starts early, on historical news**, so it doesn't pile up at the end (about 3.5 h total [OQ-4]):
+
+   | Session | When | What | Needs | Time |
+   |---|---|---|---|---|
+   | **L1** | W2 (as soon as the archive has most days) | Topic-label spot check (100 stories) + importance-label sanity check (50 stories, "is this big news?") | Archive + labels only | About 1 h |
+   | **L2** | W2 | Relevance pairs: story × simulated profile (100 pairs) → validates the relevance judge | Archive + simulated panel (no agent needed) | About 1 h |
+   | **L3** | W3 (Sat–Sun) | Faithfulness: about 120 claims vs. cited passages + about 80 deep-dive answers, from **dev-slice** outputs | Dev runs of the agent | About 1.5 h |
+   | — | W4 | Simulator validity: compare `sim_kate`'s choices with Kate's on about 10 real briefs | Self-study logs | About 15 min |
+
+   Separate from labelling: the 30-second rating after each self-study session.
 3. Compute accuracy and Cohen's κ. If κ < 0.6, revise the judge prompt or model and re-validate on fresh items.
 4. Judges are blind to config. Their prompts are versioned.
 
@@ -1041,7 +1050,7 @@ Pick the cheapest model per role that meets the bars (schema validity ≥ 98%, f
 - Consent captured at onboarding (`research_consent`); analysis exports filter on it and pseudonymise user ids.
 - Data export and deletion endpoints.
 - Rate limits on the API (per user: 60 requests a minute; WebSocket: 1 active session).
-- Pilot human-subjects question **[OQ-3]**: no pilot data in the report until cleared.
+- No human-subjects review is needed (confirmed). Pilot data still requires research consent at onboarding.
 
 ---
 
@@ -1061,33 +1070,63 @@ CI runs unit, contract, isolation (local Postgres service), and the determinism 
 
 ---
 
-## 25. Build plan
+## 25. Build plan: 4 weeks, done by **Wednesday, December 2, 2026**
 
-**⚠️ Schedule risk [OQ-1]: the build plan depends on the course deadlines, which aren't known yet.** If Stanford's fall quarter ends in early to mid December, about **5 weeks** remain from today (November 5). That's shorter than the 4–5 week self-study in the proposal *plus* a build. Two variants follow. Choose one once the deadlines are confirmed.
+Today is Thursday, November 5. That leaves **27 days**, including Thanksgiving (Thursday, November 26). The plan runs four Thursday-to-Wednesday weeks. Three rules:
+1. **The archive and the self-study are the long poles.** Archive collection starts on day 1. Kate's self-study starts by **Sunday, November 15** (about 2.5 weeks of use).
+2. **Labelling starts early, on historical news** (§18.3), not at the end.
+3. **The test runs launch by Tuesday, November 24** and run over Thanksgiving, so week 4 is for analysis and writing.
 
-### 25.1 Compressed plan (about 5 weeks; assumes a final report around December 10)
+### W1: Thu Nov 5 – Wed Nov 11 · Foundations, newsroom, archive
 
-| Week | Build | Exit criterion |
+| Day(s) | Work | Done when |
 |---|---|---|
-| **W1** | Spikes (§27) · repo scaffold · Supabase + Railway + RLS · model layer + ledger + call cache · tool layer (live) · newsroom N1–N6 for the AI beat (live) · archive collectors started (they run in the background all week) | Live digest produced daily; spikes resolved; archive collection running |
-| **W2** | Chief of staff C1–C10 (live) · memory v1 (reflect + rules) · voice agent (text over WebSocket) · PWA: login, onboarding, Today screen with pre-rendered brief + stage-1 interrupt + VAD + browser STT · rating sheet · experiment assignments | **Kate starts the self-study by the end of W2** (≈ 3 weeks of use); briefs on time |
-| **W3** | Replay backends + runner · simulated users + panel · newsroom replay over the window · graders (code) + judges + labelling app · follow-up research · bake-off on the dev slice · Energy and Physical AI beats (live only, ◇) | Dev-slice run of Full + B1 end to end; bake-off pins models |
-| **W4** | Judge validation (Kate labels) · test-slice runs: Full, B1–B5 (+ A1 if budget allows) · T3 curated QA set · T7 injection run · isolation suite complete | Results tables v1 |
-| **W5** | Failure analysis · fixes with before/after on dev · real-user analysis · report and figures · (◇ stage-2 barge-in, pilot) | Final report |
+| Thu–Fri | **Spikes** (§27): iPhone audio + interrupt, OpenRouter models, Tinker, archive feasibility, model cutoffs, TTS listening test. Repo scaffold, Supabase project, Railway project, migrations + RLS. | Spike notes in `docs/spikes.md`; replay **window chosen**; app deploys "hello world" over HTTPS |
+| Fri | **Start archive collectors** (run in the background all week, resumable) | Collection running |
+| Sat–Tue | Model layer (OpenRouter + Tinker adapters, structured outputs, ledger, call cache). Tool layer with live + replay interfaces. Source adapters for the AI beat. Newsroom N1–N6 (live). | A live AI digest generated on schedule |
+| Wed | Hindsight-label script + topic labelling over the collected archive. Datasheet v0. | Labels for collected days |
 
-**Cuts in the compressed plan:**
-- The self-study is about 3 weeks, not 4–5.
-- The pilot is likely dropped (or informal, outside the report).
-- A2, A3, R6, and the Tinker fine-tuning stretch are dropped.
-- Stage-2 barge-in only if W5 has slack.
+### W2: Thu Nov 12 – Wed Nov 18 · The usable product (self-study starts)
 
-### 25.2 Standard plan (about 9–10 weeks)
+| Day(s) | Work | Done when |
+|---|---|---|
+| Thu–Sat | Chief of staff C1–C10 (live). Memory v1 (reflect + rules). TTS render. Onboarding. | A full brief + source packs for Kate's profile |
+| Thu–Sat | Voice agent over the WebSocket (text). PWA: login, Today screen, pre-rendered playback, **stage-1 interrupt (tap / AirPods / button) + VAD + browser STT**, post-session rating. Experiment assignments (blinded baseline days drawn). | End-to-end session on Kate's iPhone |
+| **Sun Nov 15** | **Kate starts the self-study** (daily brief + 30-second rating) | First rated session logged |
+| Mon–Wed | Follow-up research job. Bug fixes from daily use. Archive completed + labels finalised. **Labelling session 1** (§18.3). | Archive done; labels spot-checked |
+| Wed | ◇ Energy and Physical AI beats as config only (live), if the AI beat is stable | Optional |
 
-The same order, with: W1–2 foundations + newsroom + archive; W3–4 chief of staff + memory + voice + PWA (self-study starts end of W4, 4–5 weeks); W5–6 replay + simulator + graders + bake-off + pilot; W7–8 full evaluation + A1–A3 + R6; W9–10 failure analysis, fixes, report, ◇ stretch items.
+### W3: Thu Nov 19 – Wed Nov 25 · Evaluation machinery and test launch
 
-### 25.3 Critical path
+| Day(s) | Work | Done when |
+|---|---|---|
+| Thu–Fri | Replay backends wired into the runner. Simulated users + panel (12 test, 6 dev). Newsroom replay over the whole window (shared digests). | Digests for all window days |
+| Fri | **Model bake-off** on the dev slice → pin models per role | `models.yaml` pinned |
+| Sat–Sun | Graders (code) + judges. Dev-slice runs of Full + B1 + B5 → fix the worst failures. **Labelling session 2** on dev outputs. Judge validation (κ). | Judges validated |
+| Mon | Curated QA set (T3), injection set (T7), isolation suite complete. **Code and prompt freeze.** Cost and runtime probe → final sizing (test days 30 vs. 21). | Freeze tag `eval-v1` |
+| **Tue Nov 24** | **Launch test runs:** Full, B1–B5 (seeds per §18.4), then A1 if budget allows | Runs in progress |
+| Wed | Monitor runs; start the report skeleton (method, system, data sections) | — |
 
-The archive (W1) → replay newsroom → runner → test runs. The self-study start depends on the live chief of staff + PWA. **Start archive collection on day 1.** It's slow (Wayback rate limits) and gates the whole evaluation.
+### W4: Thu Nov 26 – Wed Dec 2 · Results, failure analysis, report
+
+| Day(s) | Work | Done when |
+|---|---|---|
+| Thu–Fri (Thanksgiving) | Runs finish (the laptop runs unattended). Light work only. | All required runs complete |
+| Sat | Grading + statistics + tables | Results tables v1 |
+| Sun | **Self-study ends (Sun Nov 29)**. Failure analysis (≥ 30 per task set). Simulator validity check against Kate's sessions. | Failure categories + examples |
+| Mon–Tue | Real-user analysis. Report writing (results, analysis, limitations). Figures. | Full draft |
+| **Wed Dec 2** | Final polish and **submit** | ✅ Done |
+
+### Cut list (apply in this order if behind)
+
+1. ◇ Energy and Physical AI beats; stage-2 barge-in; the pilot; Tinker fine-tuning; A2, A3, R6 (all out by default unless ahead of schedule)
+2. A1 (no-separation ablation)
+3. Test window from 30 to 21 days
+4. 2 seeds everywhere
+5. Injection set from 50 to 20 documents
+6. B4 evaluated only as a day-wise counterfactual on a subset of users
+
+**Never cut:** Full + B1, B2, B3, B5; the judge validation; the failure analysis; the self-study comparison. These are the course's core rigor requirements.
 
 ---
 
@@ -1097,10 +1136,10 @@ The archive (W1) → replay newsroom → runner → test runs. The self-study st
 
 | ID | Question | Why it matters | Default if unanswered |
 |---|---|---|---|
-| **OQ-1** | **Course deadlines** (milestone, final report, poster)? | Picks the compressed vs. standard plan; self-study length | Assume the compressed plan (final around December 10) |
-| **OQ-2** | **Team of one** confirmed with course staff? | The assignment says teams | Proceed solo |
-| **OQ-3** | **Human-subjects / IRB** needed if pilot data appears in the report? | Pilot inclusion | No pilot data in the report |
-| **OQ-4** | Kate's **labelling time**: about 4–6 h in W3–W4 OK? | Judge validation is a rigor requirement | Plan for it |
+| ~~OQ-1~~ | ~~Course deadlines~~ | **Resolved:** everything done by **December 2**; 4-week plan (§25) | — |
+| ~~OQ-2~~ | ~~Team of one~~ | **Resolved:** confirmed with course staff | — |
+| ~~OQ-3~~ | ~~Human-subjects review~~ | **Resolved:** not needed | — |
+| **OQ-4** | Kate's **labelling time**: about 3.5 h in 3 sessions, starting on historical news in W2 (§18.3)? | Judge validation is a rigor requirement | Plan for it |
 | **OQ-6** | **Replay window:** confirm after spikes (model cutoffs + archive coverage) | Leakage and evaluation validity | Latest qualifying 40-day window |
 | **OQ-14** | **HN brief-time signal:** if Wayback front-page coverage is thin, drop HN as a replay signal (and as a live signal, for parity)? | No-leakage rule | Drop HN in both modes if coverage is under 80% of days |
 
@@ -1112,10 +1151,10 @@ The archive (W1) → replay newsroom → runner → test runs. The self-study st
 | OQ-8 | STT default: browser Web Speech vs. server (Groq Whisper)? | Browser first; switch if the iPhone spike shows unreliability |
 | OQ-9 | Memory constants (η, half-lives, cap 35%, opportunity factors) | As in §9.3; tune on dev |
 | OQ-10 | Slot mix for 6 stories (2 big / 3 for-you / 1 outside-usual) | As stated |
-| OQ-11 | Self-study length and baseline-day share (about 20–25%) under the compressed plan | 3 weeks, 20% baseline days |
+| OQ-11 | Self-study length and baseline-day share | November 15–29 (15 days), 4 blinded baseline days (B1, B2, B3, + 1 random) |
 | OQ-11b | B3/B4 evaluated as day-wise counterfactuals on Full's memory trajectory (cheaper) vs. full independent trajectories | Counterfactual (document it) |
 | OQ-12b | Importance label calibration target (about 8 important AI stories a day) | 8 |
-| OQ-13 | Pilot go/no-go given the schedule | No-go in the compressed plan |
+| OQ-13 | Pilot: no review is needed, but the schedule is tight | Optional ◇: up to 5 friends from W3 if the app is stable; their ratings reported as secondary |
 | OQ-15 | Headline source lists per beat: confirm or add favourites | PRD v0.5 §7.1 lists |
 | OQ-15b | Live search API: Tavily vs. Exa | Tavily (free 1,000 a month) |
 | OQ-16 | Bake-off shortlist per role | 3–4 cheap models across families + one mid-tier for newsroom and writer |
