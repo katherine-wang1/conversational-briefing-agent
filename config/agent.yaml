@@ -1,0 +1,46 @@
+# Agent defaults (TDD Appendix B). Experiments override via config/experiments/*.yaml.
+budgets:
+  newsroom_run: {input_tokens: 80000, fetches: 5}
+  cos_daily: {input_tokens: 90000, searches: 12, fetch_per_story: 3}
+  voice_turn: {input_tokens: 30000, quick_searches: 2, quick_search_timeout_s: 3}
+  followup: {input_tokens: 50000, searches: 8, fetches: 6}
+  memory_reflect: {input_tokens: 20000}
+clustering: {tau: 0.78, tiebreak_band: 0.08, identity_lookback_days: 7}
+selection:
+  k_default: 6
+  k_min: 3
+  k_max: 8
+  slots: {big_news: 2, for_you: 3, outside_usual: 1}
+  mmr_lambda: 0.7
+  min_importance_outside_usual: 50
+  carryover_max: 1
+  update_requires_new_facts: true
+  min_beat_share: {}          # e.g. {ai: 0.67} for Kate during the self-study
+packs:
+  deep: {docs: 3, tokens: 2500}
+  standard: {docs: 2, tokens: 1500}
+  light: {docs: 1, tokens: 800}
+  deep_threshold: 0.6
+  light_threshold: 0.25
+memory:
+  eta_explicit: 0.30
+  eta_implicit: 0.15
+  implicit_strength: {dive: 0.5, followup: 0.3, save_for_later: 0.4, skip: 0.2}
+  half_life_implicit_d: 21
+  half_life_explicit_d: 60
+  max_subtopic_share: 0.35
+  cut_short_opportunity: 0.3
+  skip_rule: {min_sessions: 2, window: 4}
+  blend_implicit: 0.3
+  beta_prior: {a: 1, b: 2}    # e = (engaged + a) / (shown + a + b)
+  floor: 0.05
+  floor_after_days: 14
+  onboarding: {weight: 0.4, confidence: 0.3}
+voice:
+  vad_silence_ms: 700
+  max_utterance_s: 30
+  auto_resume_delay_s: 1.5
+  idle_end_s: 90
+schedule:
+  cos_lead_min: 60
+spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}

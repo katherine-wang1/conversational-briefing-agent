@@ -1,0 +1,23 @@
+# Role -> model mapping (TDD §4.3). No default provider: TBD values are filled by the bake-off
+# (TDD §19.4) and then pinned. `dev_default` is used until then (cheap model for development).
+dev_default: {provider: openrouter, model: "TBD-cheap"}
+roles:
+  newsroom.cluster_tiebreak: {provider: openrouter, model: TBD}
+  newsroom.score: {provider: openrouter, model: TBD}
+  cos.plan: {provider: openrouter, model: TBD}
+  cos.search_loop: {provider: openrouter, model: TBD}
+  cos.score: {provider: openrouter, model: TBD}
+  cos.extract_passages: {provider: openrouter, model: TBD}
+  cos.write_brief: {provider: openrouter, model: TBD}
+  cos.claim_check: {provider: openrouter, model: TBD}
+  voice.turn: {provider: openrouter, model: TBD}
+  memory.reflect: {provider: openrouter, model: TBD}
+  memory.onboarding_extract: {provider: openrouter, model: TBD}
+  followup.research: {provider: openrouter, model: TBD}
+  sim.user: {provider: tinker, model: inkling-small}
+  sim.rate: {provider: tinker, model: inkling-small}
+  judge.faithfulness: {provider: tinker, model: inkling-small}
+  judge.relevance: {provider: tinker, model: inkling-small}
+  judge.packaging: {provider: tinker, model: inkling-small}
+  judge.qa: {provider: tinker, model: inkling-small}
+  judge.injection: {provider: tinker, model: inkling-small}

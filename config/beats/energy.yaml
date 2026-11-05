@@ -1,0 +1,25 @@
+# Beat: Energy, Grid & Data Centers (live product only in the MVP; not evaluated for importance).
+id: energy
+name: "Energy, Grid & Data Centers"
+scope: >
+  The clean-energy transition and the power and infrastructure buildout behind AI: solar, wind,
+  storage, nuclear and fusion, grid and transmission, power markets, data center buildout,
+  energy policy, climate-tech funding.
+out_of_scope: ["oil and gas markets in general (unless tied to power or data centers)", "consumer EV reviews", "general climate science"]
+subtopics: [solar-wind, storage-batteries, nuclear-fusion, grid-transmission, power-markets,
+            data-center-buildout, energy-policy, climatetech-funding]
+digest_size: 25
+refresh_live_utc: ["06:00", "18:00"]
+headline_sources:
+  - {id: utility_dive, type: rss, tier: 1, weight: 0.8, url: "https://www.utilitydive.com/feeds/news/", verified: false}
+  - {id: canary_media, type: frontpage, tier: 1, weight: 0.8, url: "https://www.canarymedia.com/", verified: false}
+  - {id: latitude_media, type: frontpage, tier: 1, weight: 0.7, url: "https://www.latitudemedia.com/", verified: false}
+  - {id: heatmap, type: frontpage, tier: 1, weight: 0.7, url: "https://heatmap.news/", verified: false}
+  - {id: dcd, type: rss, tier: 1, weight: 0.8, url: "https://www.datacenterdynamics.com/en/rss/", verified: false}
+  - {id: dc_frontier, type: rss, tier: 2, weight: 0.6, url: "https://www.datacenterfrontier.com/rss", verified: false}
+  - {id: electrek_energy, type: rss, tier: 2, weight: 0.4, url: "https://electrek.co/feed/", verified: false}
+  - {id: carbon_brief, type: rss, tier: 2, weight: 0.5, url: "https://www.carbonbrief.org/feed/", verified: false}
+  - {id: pv_magazine, type: rss, tier: 2, weight: 0.4, url: "https://www.pv-magazine.com/feed/", verified: false}
+  - {id: energy_storage_news, type: rss, tier: 2, weight: 0.5, url: "https://www.energy-storage.news/feed/", verified: false}
+  - {id: eia_today, type: rss, tier: 1, weight: 0.5, url: "https://www.eia.gov/rss/todayinenergy.xml", verified: false}
+  - {id: hn_front, type: hn_front, tier: 2, weight: 0.3, url: "https://news.ycombinator.com/", params: {keyword_filter: energy}, verified: false}

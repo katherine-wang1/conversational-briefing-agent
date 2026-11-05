@@ -1,0 +1,4 @@
+id: b3_no_exploration
+extends: full
+description: No outside-your-usual slot.
+selection_overrides: {slots: {big_news: 2, for_you: 4, outside_usual: 0}}

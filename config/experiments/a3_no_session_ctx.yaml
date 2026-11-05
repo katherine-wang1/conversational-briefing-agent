@@ -1,0 +1,4 @@
+id: a3_no_session_ctx
+extends: full
+description: Memory ignores session context (opportunity factor = 1, no skip rule).
+flags: {session_ctx_weighting: false}

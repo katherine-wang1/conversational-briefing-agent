@@ -1,0 +1,4 @@
+id: b2_static
+extends: full
+description: Memory frozen after onboarding (signals still logged).
+flags: {memory: static}

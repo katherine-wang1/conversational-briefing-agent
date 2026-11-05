@@ -1,0 +1,4 @@
+id: b1_importance_only
+extends: full
+description: Serve the newsroom digest's top stories; no personalization (no C1–C4).
+flags: {personalization: false}

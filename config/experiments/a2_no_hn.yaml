@@ -1,0 +1,4 @@
+id: a2_no_hn
+extends: full
+description: Remove HN features and the hn_front source.
+flags: {hn_signal: false}

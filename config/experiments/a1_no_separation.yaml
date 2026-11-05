@@ -1,0 +1,4 @@
+id: a1_no_separation
+extends: full
+description: Chief of staff receives raw headline observations + features (no digest) and judges importance with memory in context.
+flags: {newsroom_separation: false}

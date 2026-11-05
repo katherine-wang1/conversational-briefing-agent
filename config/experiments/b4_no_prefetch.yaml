@@ -1,0 +1,4 @@
+id: b4_no_prefetch
+extends: full
+description: Voice agent gets no source packs; must quick_search.
+flags: {prefetch: false}

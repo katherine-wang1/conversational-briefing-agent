@@ -1,0 +1,4 @@
+id: b5_naive
+extends: full
+description: One LLM call with the search tool + profile text writes the brief; memory appends explicit statements to profile text.
+flags: {pipeline: naive}

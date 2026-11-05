@@ -1,0 +1,12 @@
+id: full
+description: Full agent (research config)
+flags:
+  personalization: true
+  memory: learn            # learn | static
+  pipeline: standard       # standard | naive
+  prefetch: true
+  newsroom_separation: true
+  hn_signal: true
+  session_ctx_weighting: true
+  claim_check: true
+selection_overrides: {}

@@ -1,0 +1,21 @@
+# Beat: Physical AI, Robotics & Simulation (live product; optional second-domain evaluation R6).
+id: physical_ai
+name: "Physical AI, Robotics & Simulation"
+scope: >
+  AI that acts in the physical world and the simulation and world models used to build it:
+  robot foundation models / VLAs, humanoids, industrial and logistics automation, autonomous
+  vehicles, drones and field robotics, simulation / digital twins / world models, hardware, business.
+out_of_scope: ["consumer gadget reviews", "manufacturing news without automation"]
+subtopics: [robot-foundation-models, humanoids, industrial-logistics, autonomous-vehicles, drones-field,
+            simulation-world-models, robotics-hardware, robotics-business]
+digest_size: 25
+refresh_live_utc: ["06:00", "18:00"]
+headline_sources:
+  - {id: robot_report, type: rss, tier: 1, weight: 0.8, url: "https://www.therobotreport.com/feed/", verified: false}
+  - {id: ieee_robotics, type: rss, tier: 1, weight: 0.7, url: "https://spectrum.ieee.org/feeds/topic/robotics.rss", verified: false}
+  - {id: robotics247, type: rss, tier: 2, weight: 0.5, url: "https://www.robotics247.com/rss", verified: false}
+  - {id: techcrunch_robotics, type: rss, tier: 2, weight: 0.6, url: "https://techcrunch.com/category/robotics/feed/", verified: false}
+  - {id: arxiv_cs_ro, type: arxiv, tier: 2, weight: 0.4, params: {cat: cs.RO}, verified: false}
+  - {id: nvidia_blog, type: rss, tier: 2, weight: 0.4, url: "https://blogs.nvidia.com/feed/", verified: false}
+  - {id: hn_front, type: hn_front, tier: 2, weight: 0.4, url: "https://news.ycombinator.com/", params: {keyword_filter: robotics}, verified: false}
+  - {id: reddit_robotics, type: reddit_top, tier: 3, weight: 0.3, url: "https://www.reddit.com/r/robotics/top/.rss?t=day", verified: false}

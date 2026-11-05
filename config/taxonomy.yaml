@@ -1,0 +1,112 @@
+# Fixed subtopic taxonomy (evaluation level). Memory interests and hidden simulated-user profiles
+# both map to these ids (TDD §6.2, design question Q2). Changing ids after M1 invalidates labels.
+version: 1
+subtopics:
+  # --- AI beat ---
+  - id: frontier-models
+    beat: ai
+    description: Releases, capabilities and benchmarks of frontier closed models and the labs building them.
+    examples: ["new flagship model launch", "benchmark leaderboard change", "model card / system card"]
+  - id: open-models
+    beat: ai
+    description: Open-weight model releases, licences, and the open-source model ecosystem.
+    examples: ["open-weights LLM release", "new licence terms", "community fine-tunes"]
+  - id: research-methods
+    beat: ai
+    description: Research advances in training, architectures, reasoning, long context, efficiency, and inference.
+    examples: ["new training method paper", "long-context study", "quantization / speculative decoding"]
+  - id: agents-and-tools
+    beat: ai
+    description: AI agents, tool use, memory, coding agents, and agent frameworks and products.
+    examples: ["agent benchmark", "coding agent launch", "agent memory paper"]
+  - id: evals-and-safety
+    beat: ai
+    description: Evaluation methods, safety and alignment research, interpretability, red-teaming, incidents.
+    examples: ["interpretability result", "jailbreak research", "safety framework update"]
+  - id: products-and-apps
+    beat: ai
+    description: AI product launches and features for consumers and businesses; developer platforms and APIs.
+    examples: ["assistant feature launch", "API pricing change", "enterprise rollout"]
+  - id: business-and-funding
+    beat: ai
+    description: Funding rounds, M&A, revenue, partnerships, talent moves, and market dynamics of AI companies.
+    examples: ["Series B for an AI startup", "acquisition", "exec departure"]
+  - id: policy-and-regulation
+    beat: ai
+    description: AI laws, regulation, government action, litigation, copyright, and export policy affecting AI.
+    examples: ["EU AI Act guidance", "lawsuit over training data", "executive order"]
+  - id: chips-and-compute
+    beat: ai
+    description: AI accelerators, chip design and supply, export controls on chips, and cloud GPU capacity.
+    examples: ["new accelerator", "chip export rule", "GPU cloud capacity deal"]
+  # --- Energy, Grid & Data Centers beat ---
+  - id: solar-wind
+    beat: energy
+    description: Solar and wind deployment, manufacturing, economics, and project news.
+    examples: ["offshore wind auction", "solar module prices"]
+  - id: storage-batteries
+    beat: energy
+    description: Grid and behind-the-meter storage, battery chemistries, and storage deployment.
+    examples: ["GWh battery project", "sodium-ion order"]
+  - id: nuclear-fusion
+    beat: energy
+    description: Nuclear fission (including SMRs and restarts) and fusion milestones and deals.
+    examples: ["SMR licensing", "plant restart deal", "fusion milestone"]
+  - id: grid-transmission
+    beat: energy
+    description: Transmission, interconnection queues, grid reliability, and utility planning.
+    examples: ["interconnection reform", "new transmission line"]
+  - id: power-markets
+    beat: energy
+    description: Electricity prices, capacity markets, and utility economics.
+    examples: ["capacity auction results", "rate case"]
+  - id: data-center-buildout
+    beat: energy
+    description: Data center construction, siting, power deals and PPAs, on-site generation, cooling, and water.
+    examples: ["hyperscaler PPA", "1 GW campus announcement", "on-site gas turbines"]
+  - id: energy-policy
+    beat: energy
+    description: Energy regulation and policy (FERC, DOE, tax credits, permitting) and related litigation.
+    examples: ["FERC order", "tax credit guidance"]
+  - id: climatetech-funding
+    beat: energy
+    description: Funding, M&A, and business news for climate and energy companies.
+    examples: ["climate-tech Series C", "utility acquisition"]
+  # --- Physical AI, Robotics & Simulation beat ---
+  - id: robot-foundation-models
+    beat: physical_ai
+    description: Foundation and vision-language-action models for robots, and embodied AI research.
+    examples: ["VLA model release", "generalist robot policy paper"]
+  - id: humanoids
+    beat: physical_ai
+    description: Humanoid and general-purpose robots, their capabilities and deployments.
+    examples: ["humanoid pilot deployment", "new humanoid hardware"]
+  - id: industrial-logistics
+    beat: physical_ai
+    description: Industrial, warehouse, and logistics automation and robot deployments.
+    examples: ["warehouse picking robots", "factory automation contract"]
+  - id: autonomous-vehicles
+    beat: physical_ai
+    description: Self-driving cars, robotaxis, autonomous trucking, and their regulation.
+    examples: ["robotaxi expansion", "AV safety investigation"]
+  - id: drones-field
+    beat: physical_ai
+    description: Drones and field robotics (agriculture, inspection, defence, delivery).
+    examples: ["drone delivery approval", "agricultural robot"]
+  - id: simulation-world-models
+    beat: physical_ai
+    description: Simulation, digital twins, synthetic data, sim-to-real, and generative world models.
+    examples: ["physics simulator release", "world model for robot training"]
+  - id: robotics-hardware
+    beat: physical_ai
+    description: Actuators, sensors, hands, and other robotics hardware components.
+    examples: ["dexterous hand", "new actuator"]
+  - id: robotics-business
+    beat: physical_ai
+    description: Funding, deployments, M&A, and business news of robotics and physical-AI companies.
+    examples: ["robotics startup raise", "fleet deployment deal"]
+  # --- catch-all ---
+  - id: other
+    beat: none
+    description: Anything outside the taxonomy (e.g. a user's interest outside the beats).
+    examples: []
