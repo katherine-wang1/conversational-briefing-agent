@@ -1,0 +1,24 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t11
+split: test
+role: investor
+persona: >-
+  Public-markets analyst covering semiconductors. Always between meetings; wants the number and the
+  ticker-level implication, nothing else.
+onboarding: >-
+  Semis analyst. AI chips, data-center GPU demand, export controls, and earnings-relevant AI deals.
+hidden_interests:
+  - {subtopic: chips-and-compute, weight: 0.55, entities: [NVIDIA, AMD, TSMC, Broadcom], keywords: [HBM, accelerator]}
+  - {subtopic: business-and-funding, weight: 0.30, keywords: [capex, earnings]}
+  - {subtopic: policy-and-regulation, weight: 0.15, keywords: [export controls, tariffs]}
+latent_interests:
+  - {subtopic: open-models, entities: [DeepSeek], weight: 0.20}
+delivery: {length_s: 120, depth: headline, technicality: high, style: numbers}
+drift:
+  - {day: 10, op: add, interest: {subtopic: frontier-models, weight: 0.15, keywords: [training run]}}
+behavior:
+  explicitness: 0.5
+  followup_rate: 0.2
+  time_budget_s: {dist: mixture, rushed_p: 0.9, rushed: [45, 120], relaxed: [240, 360]}
+  exploration_openness: 0.4
+  noise: 0.05

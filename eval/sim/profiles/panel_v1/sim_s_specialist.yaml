@@ -1,0 +1,20 @@
+# Hand-authored test content (W-G). T4 scenario user: narrow specialist. Not collected data.
+id: sim_s_specialist
+split: scenario
+role: researcher
+persona: >-
+  Compiler engineer working only on GPU kernels for transformer inference. One topic, nothing else.
+onboarding: >-
+  GPU kernels and inference performance. Only that.
+hidden_interests:
+  - {subtopic: chips-and-compute, weight: 1.0, entities: [NVIDIA, CUDA, Triton], keywords: [kernel, FlashAttention, inference performance]}
+latent_interests:
+  - {subtopic: research-methods, keywords: [speculative decoding, KV cache], weight: 0.20}
+delivery: {length_s: 180, depth: deep, technicality: high, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.8
+  followup_rate: 0.6
+  time_budget_s: {dist: mixture, rushed_p: 0.3, rushed: [90, 150], relaxed: [300, 480]}
+  exploration_openness: 0.15
+  noise: 0.0

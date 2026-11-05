@@ -1,0 +1,23 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t02
+split: test
+role: builder
+persona: >-
+  Solo founder building a coding-agent product on top of hosted model APIs. Always busy, listens
+  between calls, only cares about things that change what they ship this week.
+onboarding: >-
+  I build developer tools with LLM agents. Tell me about coding agents, agent frameworks and API changes.
+  Keep it short.
+hidden_interests:
+  - {subtopic: agents-and-tools, weight: 0.70, entities: [Cursor, Claude Code, Codex, Model Context Protocol], keywords: [coding agent, tool use]}
+  - {subtopic: products-and-apps, weight: 0.30, keywords: [API pricing, rate limits, context window]}
+latent_interests:
+  - {subtopic: evals-and-safety, keywords: [SWE-bench, agent benchmark], weight: 0.20}
+delivery: {length_s: 120, depth: headline, technicality: high, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.2
+  followup_rate: 0.15
+  time_budget_s: {dist: mixture, rushed_p: 0.8, rushed: [60, 120], relaxed: [240, 360]}
+  exploration_openness: 0.2
+  noise: 0.05

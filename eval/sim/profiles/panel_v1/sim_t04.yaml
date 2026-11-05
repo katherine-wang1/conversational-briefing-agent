@@ -1,0 +1,28 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t04
+split: test
+role: investor
+persona: >-
+  Early-stage venture investor focused on AI infrastructure and applications. Listens in the car,
+  wants deal sizes and valuations, happy to hear about anything that could be a market.
+onboarding: >-
+  I'm a VC. I want funding rounds, valuations and M&A in AI, plus compute deals and big model launches.
+  Numbers please.
+hidden_interests:
+  - {subtopic: business-and-funding, weight: 0.40, entities: [OpenAI, Anthropic, Mistral, xAI, Perplexity], keywords: [Series, valuation, acquisition]}
+  - {subtopic: chips-and-compute, weight: 0.20, entities: [NVIDIA, CoreWeave], keywords: [GPU capacity]}
+  - {subtopic: frontier-models, weight: 0.20, entities: [OpenAI, Google DeepMind]}
+  - {subtopic: products-and-apps, weight: 0.10, keywords: [revenue run-rate, paid users]}
+  - {subtopic: policy-and-regulation, weight: 0.10, keywords: [antitrust]}
+latent_interests:
+  - {subtopic: open-models, keywords: [licence], weight: 0.15}
+  - {subtopic: agents-and-tools, keywords: [vertical agent], weight: 0.15}
+delivery: {length_s: 150, depth: headline, technicality: plain, style: numbers}
+drift:
+  - {day: 15, op: add, interest: {subtopic: agents-and-tools, weight: 0.15, keywords: [AI agent startups]}}
+behavior:
+  explicitness: 0.8
+  followup_rate: 0.2
+  time_budget_s: {dist: mixture, rushed_p: 0.7, rushed: [60, 150], relaxed: [300, 480]}
+  exploration_openness: 0.8
+  noise: 0.05

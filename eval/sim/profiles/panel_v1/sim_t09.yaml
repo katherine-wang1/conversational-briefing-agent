@@ -1,0 +1,27 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+# Based on the TDD §17.1 example profile.
+id: sim_t09
+split: test
+role: builder
+persona: "ML infra engineer at a mid-size startup; follows inference efficiency and agents"
+onboarding: >-
+  I run inference infrastructure. Chips and accelerators, quantization and long-context tricks, open
+  models we could self-host, and agent tooling.
+hidden_interests:
+  - {subtopic: chips-and-compute, weight: 0.30, entities: [NVIDIA, Groq]}
+  - {subtopic: agents-and-tools, weight: 0.25}
+  - {subtopic: open-models, weight: 0.20, entities: [Mistral, Qwen]}
+  - {subtopic: research-methods, weight: 0.25, keywords: [quantization, long context]}
+latent_interests:
+  - {subtopic: research-methods, keywords: [speculative decoding], weight: 0.15}
+  - {entities: [Cerebras], weight: 0.10}
+delivery: {length_s: 150, depth: deep, technicality: high, style: numbers}
+drift:
+  - {day: 12, op: add, interest: {subtopic: policy-and-regulation, weight: 0.2}}
+  - {day: 20, op: fade, subtopic: open-models}
+behavior:
+  explicitness: 0.3
+  followup_rate: 0.5
+  time_budget_s: {dist: mixture, rushed_p: 0.4, rushed: [60, 150], relaxed: [300, 600]}
+  exploration_openness: 0.6
+  noise: 0.1

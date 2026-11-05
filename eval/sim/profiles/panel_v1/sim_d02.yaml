@@ -1,0 +1,21 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d02
+split: dev
+role: investor
+persona: >-
+  Angel investor and former founder; skims for deals, rarely asks questions.
+onboarding: >-
+  AI startup funding and acquisitions, and which products are getting traction.
+hidden_interests:
+  - {subtopic: business-and-funding, weight: 0.60, keywords: [seed round, Series A, acquisition]}
+  - {subtopic: products-and-apps, weight: 0.40, keywords: [traction, launch]}
+latent_interests:
+  - {subtopic: agents-and-tools, keywords: [AI agent startups], weight: 0.20}
+delivery: {length_s: 120, depth: headline, technicality: plain, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.2
+  followup_rate: 0.1
+  time_budget_s: {dist: mixture, rushed_p: 0.8, rushed: [60, 120], relaxed: [240, 360]}
+  exploration_openness: 0.3
+  noise: 0.05

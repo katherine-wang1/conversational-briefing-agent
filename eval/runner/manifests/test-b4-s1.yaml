@@ -1,0 +1,11 @@
+# Example manifest: B4 (no pre-fetch) reuses Full's briefs and is evaluated as a day-wise
+# counterfactual on Full's memory trajectory (TDD §16.2, OQ-11b). Not run yet.
+run_id: test-b4-s1
+experiment: b4_no_prefetch
+seed: 1
+window: {start: 2026-10-01, days: 30, slice: test}
+cache_namespace: test-b4-s1
+reuse:
+  digests_from: digests-v1
+  briefs_from: test-full-s1
+  day_wise_counterfactual_from: test-full-s1

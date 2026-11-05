@@ -1,0 +1,29 @@
+# Hand-authored test content (W-G). Hidden from the agent; not collected data.
+id: sim_t12
+split: test
+role: pm
+persona: >-
+  Head of AI enablement at a retail bank. Broad interests, long commute, likes to go deep on what
+  affects compliance and vendor choice. Inconsistent: sometimes engages with things they claimed
+  not to care about.
+onboarding: >-
+  I lead AI adoption at a bank. Enterprise AI products, regulation and compliance, model risk and
+  safety, agents for back-office work. Not interested in funding gossip.
+hidden_interests:
+  - {subtopic: products-and-apps, weight: 0.30, entities: [Microsoft Copilot, ChatGPT Enterprise], keywords: [enterprise]}
+  - {subtopic: policy-and-regulation, weight: 0.20, entities: [EU AI Act], keywords: [model risk, compliance]}
+  - {subtopic: evals-and-safety, weight: 0.15, keywords: [hallucination, audit]}
+  - {subtopic: agents-and-tools, weight: 0.15, keywords: [back-office automation]}
+  - {subtopic: frontier-models, weight: 0.10}
+  - {subtopic: business-and-funding, weight: 0.10, keywords: [partnership]}
+latent_interests:
+  - {subtopic: open-models, keywords: [on-premises], weight: 0.20}
+  - {subtopic: chips-and-compute, keywords: [sovereign cloud], weight: 0.10}
+delivery: {length_s: 600, depth: deep, technicality: plain, style: numbers}
+drift: []
+behavior:
+  explicitness: 0.6
+  followup_rate: 0.3
+  time_budget_s: {dist: mixture, rushed_p: 0.15, rushed: [120, 200], relaxed: [480, 900]}
+  exploration_openness: 0.6
+  noise: 0.3

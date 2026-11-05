@@ -1,0 +1,27 @@
+# Hand-authored test content (W-G). Dev split (10-day dev slice). Not collected data.
+id: sim_d04
+split: dev
+role: journalist
+persona: >-
+  Newsletter writer covering the AI industry for a business audience; broad, curious, noisy.
+onboarding: >-
+  Everything big in AI: launches, money, lawsuits, chips, safety.
+hidden_interests:
+  - {subtopic: frontier-models, weight: 0.20}
+  - {subtopic: business-and-funding, weight: 0.20}
+  - {subtopic: policy-and-regulation, weight: 0.15}
+  - {subtopic: chips-and-compute, weight: 0.15}
+  - {subtopic: products-and-apps, weight: 0.15}
+  - {subtopic: evals-and-safety, weight: 0.15}
+latent_interests:
+  - {subtopic: open-models, entities: [Mistral], weight: 0.15}
+delivery: {length_s: 240, depth: standard, technicality: medium, style: balanced}
+drift:
+  - {day: 3, op: add, interest: {subtopic: agents-and-tools, weight: 0.1}}
+  - {day: 7, op: add, interest: {subtopic: research-methods, weight: 0.1}}
+behavior:
+  explicitness: 0.4
+  followup_rate: 0.6
+  time_budget_s: {dist: mixture, rushed_p: 0.5, rushed: [90, 180], relaxed: [300, 600]}
+  exploration_openness: 0.9
+  noise: 0.25

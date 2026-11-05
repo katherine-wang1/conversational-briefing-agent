@@ -1,0 +1,8 @@
+# Example manifest: dev slice (10 days before the test window), dev profiles. Not run yet.
+run_id: dev-full-s1
+experiment: full
+seed: 1
+window: {start: 2026-09-21, days: 10, slice: dev}
+cache_namespace: dev-full-s1
+reuse:
+  digests_from: digests-dev-v1
