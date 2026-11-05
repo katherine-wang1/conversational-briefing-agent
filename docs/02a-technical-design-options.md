@@ -139,6 +139,22 @@ Structured outputs vary by model through OpenRouter. Use JSON-schema mode where 
 
 Live search volume (Kate plus pilot, about 20 searches per user-day) is about 5,000–6,000 a quarter, which fits in free tiers or costs about $30–50 if paid. Replay search is free.
 
+**Provider built-in web search vs. our own `search` tool**
+
+| | Provider built-in search (model provider runs it server-side) | Our own tool over a search API |
+|---|---|---|
+| Per-search price | Roughly $10–35 per 1,000 searches depending on provider, **plus** the result text billed as input tokens (often large); OpenRouter's web plugin is roughly $4 per 1,000 results | $0 within free tiers (Tavily, Exa), otherwise about $5–8 per 1,000; we control how much result text reaches the model |
+| Live volume (Kate + pilot, about 6,000 searches) | About $60–200 + tokens | About $0–50 |
+| Evaluation (replay) | **Can't be used.** Results can't come from the frozen archive, so we'd still build our own replay search | Same tool, replay backend (free) |
+| Code to write | Almost none for live, but **two different search paths** (live vs. replay) | About 150–250 lines: search wrapper, fetch + extraction, caching |
+| Same behaviour live and in replay (RG-5) | ❌ The provider decides result format, count, page fetching, ranking | ✅ |
+| Logging, caching, sharing results across users | Partial, inside the model response | Full |
+| Model choice | Limited to providers that offer it | Any model |
+| Course framing | Hides the retrieval step (a core course topic) | Retrieval is ours and evaluable |
+| Result quality | Possibly better freshness and recall (big search indexes) | Depends on the API; swappable (Brave, Exa, Tavily, Google-results APIs) |
+
+**Decision:** build our own `search` tool. The only real advantage of built-in search is result quality. If live results disappoint, swap the search API behind our tool rather than switching to built-in search.
+
 **Prompt-injection hygiene (TOOL-4):** tool results are wrapped in clearly marked untrusted-content blocks. Hidden text is stripped during extraction. The voice agent's tool set is narrow.
 
 ---
