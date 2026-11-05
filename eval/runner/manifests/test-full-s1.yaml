@@ -1,0 +1,11 @@
+# Example manifest (TDD §16.1). Window start is a placeholder until the replay window is chosen
+# (TDD §15.6, OQ-6). Not run yet.
+run_id: test-full-s1
+experiment: full
+seed: 1
+window: {start: 2026-10-01, days: 30, slice: test}
+panel: eval/sim/profiles/panel_v1/*.yaml
+models: config/models.yaml
+cache_namespace: test-full-s1
+reuse:
+  digests_from: digests-v1

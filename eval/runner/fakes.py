@@ -68,6 +68,28 @@ class FakeModelClient:
         return [r for r in self.requests if r.role == role]
 
 
+def scripted_sim_client(seed: int = 0) -> FakeModelClient:
+    """A deterministic stand-in for `sim.user` / `sim.rate`: interrupts with a question about one
+    story in three (by hash of the prompt), otherwise lets the brief play; rates every story 3."""
+    import re
+
+    def user(req: ChatRequest) -> dict[str, Any]:
+        prompt = req.messages[-1].content
+        m = re.search(r"Allowed actions now: (.*)", prompt)
+        allowed = [a.strip() for a in m.group(1).split(",")] if m else ["let_play"]
+        h = _h(seed, prompt) % 3
+        for a in (("interrupt", "ask") if h == 0 else ("let_play", "end")):
+            if a in allowed:
+                return {"action": a, "text": "What exactly was announced?" if a in ("interrupt", "ask") else ""}
+        return {"action": allowed[-1], "text": ""}
+
+    def rate(req: ChatRequest) -> dict[str, Any]:
+        refs = re.findall(r"^(\S+): ", req.messages[-1].content.split("STORIES", 1)[-1], re.M)
+        return {"ratings": [{"story_ref": r, "rating": 3} for r in refs]}
+
+    return FakeModelClient({"sim.user": user, "sim.rate": rate})
+
+
 # ---- fake voice agent (server side of the text session protocol) ------------------------------
 
 
@@ -161,7 +183,6 @@ class FakeAgent:
 
     def __init__(self) -> None:
         self.calls: list[tuple[str, str]] = []
-        self._briefs: dict[str, BriefScript] = {}
         self._agents: dict[str, FakeVoiceAgent] = {}
         self._snap: dict[str, list[Interest]] = {}
 
@@ -195,12 +216,11 @@ class FakeAgent:
         sentences.append(BriefSentence(sid="s9", text="That's the brief.", kind="outro"))
         brief = BriefScript(brief_id=f"b-{user_id}-{local_date}", user_id=user_id, local_date=local_date,
                             arm=ctx.experiment.id, stories=stories, sentences=sentences, est_duration_s=60)
-        self._briefs[brief.brief_id] = brief
         return DailyBrief(brief=brief, packs=packs, candidates=[])
 
-    async def open_session(self, user_id: str, brief_id: str, ctx: Any) -> tuple[str, FakeVoiceAgent]:
-        sid = f"sess-{brief_id}"
-        agent = FakeVoiceAgent(self._briefs[brief_id])
+    async def open_session(self, user_id: str, daily: Any, ctx: Any) -> tuple[str, FakeVoiceAgent]:
+        sid = f"sess-{daily.brief.brief_id}"
+        agent = FakeVoiceAgent(daily.brief)
         self._agents[sid] = agent
         return sid, agent
 
