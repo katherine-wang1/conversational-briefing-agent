@@ -1,12 +1,14 @@
 # PRD: Conversational Briefing Agent (MVP)
 
-**Status:** Draft v0.6.1, ready for review
+**Status:** Draft v0.7, ready for review
+**Technical design:** `02-technical-design.md`
 **Owner:** Kate Wang
 **Source:** `proposal.pdf` ("Expanding the Aperture", CS329Z Fall 2026)
 **Companion doc:** `01a-design-explorations.md` (alternatives considered: shared corpus, topic channels, news sources, voice, mobile)
 **Next docs:** `02-technical-design.md` (after this PRD is approved), then the build
 
 **Changelog**
+- **v0.7:** Role split clarified: news gathering is a pipeline, and the chief-of-staff agent decides what fits the user, compiles the brief and the live Q&A corpus, and decides memory updates. Exploration means **adjacent discovery**, and simulated users get hidden **latent interests** to measure it. Interruption is two-stage: tap or AirPods-squeeze to interrupt with automatic end-of-speech detection, then voice barge-in with headphones. The evaluation is resized to fit the budget (12 users × 30 days). Schedule risk flagged.
 - **v0.6.1:** Added the build principle (§6.0): we build the agent loop, tools, memory, selection, and evaluation ourselves; models are interchangeable API calls with no default provider; no hosted agent platforms or provider-side tools.
 - **v0.6:** **Agent-native architecture.**
   - No news-ingestion pipeline and no user-facing channels.
@@ -87,7 +89,7 @@ The MVP has to do three jobs:
 - **G1. Daily brief.** About 5–7 **specific** stories (named companies, people, products, papers, bills, numbers) in roughly 2–4 minutes, each with a source.
 - **G2. Conversational deep dive.** The user refers to stories in their own words and asks open questions.
 - **G3. Memory from conversation.** The agent learns interests and delivery preferences without over-reading a short session. Stale interests fade, and there's room for new ones.
-- **G4. Exploration.** Every brief has explicit, labelled "outside your usual" slots.
+- **G4. Exploration as adjacent discovery.** Every brief has an explicit, labelled "outside your usual" slot. It holds stories **related to what the user thinks about that they wouldn't know to search for** (adjacent topics, companies, people, methods), not random news.
 - **G5. Low latency.** Most follow-ups are answered from pre-fetched source packs.
 - **G6. Groundedness.** Every factual claim cites a source. The agent says when it can't support something.
 - **G7. Follow-up bookmarks.** Questions the agent can't answer live are researched in the background and answered next time.
@@ -257,7 +259,7 @@ This is a course project in building agents, so **the agentic system is our own 
 | ID | Requirement |
 |---|---|
 | COS-1 | Runs per user, scheduled about 60 minutes before the user's brief time, in a **fresh context** with the digest, that user's memory, and that user's open questions. |
-| COS-2 | **Personal search:** turns memory into queries (subtopics, followed entities, open questions, "keep me posted" items) and gathers personal candidates, including ones outside the beats. |
+| COS-2 | **Personal search and adjacent discovery:** turns memory into personal queries (subtopics, followed entities, open questions, "keep me posted" items) and **adjacent-discovery queries** (related topics, companies, people, and methods the user may not know to search for). It gathers candidates, including ones outside the beats. |
 | COS-3 | **Scoring:** for each candidate (digest stories + personal finds), outputs structured scores for importance (from digest evidence, or estimated with evidence for personal finds), relevance (against memory, with the reason), and novelty (against recently shown stories and the profile). |
 | COS-4 | **Selection runs in code, not in the model:** slot allocation (importance + relevance + at least one exploration slot) plus an MMR redundancy penalty run deterministically over the agent's scores. This keeps ablations clean and the selection auditable. |
 | COS-5 | Writes the **brief script** (grounded, specific, in the user's preferred format) and a **source pack** for each story: key passages from the primary sources, related context, and community reaction, sized for the voice agent's context. |
@@ -274,7 +276,9 @@ This is a course project in building agents, so **the agentic system is our own 
 | VOICE-3 | Tools: `quick_search` (time-boxed, covered by "let me check"), `bookmark_question`, `save_for_later`, `note_preference`. It has no other tools. |
 | VOICE-4 | First audio within about 1 s on source-pack answers. |
 | VOICE-5 | Sits behind a `VoiceFrontEnd` interface; speech-to-speech is only a separate experiment (§11, F3). |
-| VOICE-6 | At session end, emits **memory signals** (explicit and implicit, with session context: time available, how it ended) for the memory update. |
+| VOICE-6 | Emits **memory signals** during the session (explicit and implicit, with session context: time available, how it ended). The voice agent does **not** write memory. The chief-of-staff agent decides memory updates after the session (MEM-13). |
+| VOICE-7 | **Interruption, stage 1 (MVP):** the brief is pre-rendered audio; the user can interrupt **at any moment** by tapping, squeezing AirPods or pressing the headphone button, or using the on-screen button. The microphone opens and end of speech is detected automatically (no second tap). The agent knows the interrupted position and resumes from it. Answers can be interrupted the same way. |
+| VOICE-8 | **Interruption, stage 2:** with headphones, the microphone stays open during playback and starting to speak interrupts (barge-in), giving a fully conversational feel. Built after stage 1 is stable on iPhone. |
 
 ### 6.4 Headline signals, beats, and tool backends
 
@@ -403,6 +407,7 @@ This is a course project in building agents, so **the agentic system is our own 
 |---|---|
 | MEM-1 | **Interest model:** open-vocabulary interests, mapped to beat subtopics where possible, plus followed entities and "keep me posted" items. Each has a weight, confidence, evidence, a last-reinforced time, and a source. |
 | MEM-2 | **Positive signals:** explicit statements, dives, follow-ups, "save for later", bookmarked questions. |
+| MEM-13 | **The chief-of-staff agent decides memory updates.** After each session it reviews the transcript and signals and proposes updates. Code applies the weighting, decay, and guards (MEM-3–8). |
 | MEM-3 | **Negative signals are explicit only, or strong and repeated** across several sessions where the user had time. Not diving in once is not disinterest. |
 | MEM-4 | Session-context awareness: implicit signals are weighted by time available and how the session ended. |
 | MEM-5 | Exposure-normalised learning. |
@@ -428,7 +433,7 @@ This is a course project in building agents, so **the agentic system is our own 
 
 | ID | Requirement |
 |---|---|
-| SIM-1 | **Simulated user:** an LLM agent with a hidden interest profile, hidden delivery prefs, a drift schedule, and behaviour settings. It holds full conversations with the voice agent (in text). |
+| SIM-1 | **Simulated user:** an LLM agent with a hidden interest profile, hidden **latent interests** (things it would engage with if shown but never mentions; the target of adjacent discovery), hidden delivery prefs, a drift schedule, and behaviour settings. It holds full conversations with the voice agent (in text). |
 | SIM-2 | **A deliberately varied panel** of 10–20 users, one calibrated to Kate, as synthetic accounts. It varies along the dimensions below. |
 | SIM-3 | Simulated users also give **separate** per-story relevance ratings, used as a judge (§10.4). |
 | SIM-4 | Simulated users ask deep-dive questions, including some the source packs can't answer, so bookmarks get exercised. |
@@ -458,7 +463,7 @@ This section is the backbone of the project, defined before the build. Exact for
 
 | Task set | Unit (one task) | Approximate size | Tests |
 |---|---|---|---|
-| **T1 Daily selection** | One (user, day): choose the brief from the digest + personal candidates | 15 simulated users × about 40 days ≈ **600 user-days** per config | Importance, relevance, exploration, over-narrowing |
+| **T1 Daily selection** | One (user, day): choose the brief from the digest + personal candidates | 12 simulated users × 30 test days = **360 user-days** per config (+ 6 × 10 dev) | Importance, relevance, exploration, over-narrowing |
 | **T2 Brief writing** | One brief: the script and its claims | All T1 briefs; claim-level audit on a sample of **about 1,500 claims** | Faithfulness, specificity, packaging adherence |
 | **T3 Deep-dive QA** | One question about a story in the brief, labelled answerable from the pack / needs search / unanswerable | Simulated-user questions + a **curated set of about 300 questions** with labels | Answer accuracy and grounding, correct abstention and bookmarking, latency, pre-fetch hit rate |
 | **T4 Memory** | One user's trajectory over the window | 15 trajectories + targeted scenarios (drift, rushed users, contradictions) | Interest recovery, drift tracking, delivery-pref learning, no over-curation |
@@ -486,6 +491,7 @@ This section is the backbone of the project, defined before the build. Exact for
 | T1 | **Importance recall@K** (share of hindsight-important stories surfaced within d days) | At least about 90% of the importance-only baseline | Code |
 | T1 | **Relevance** (hidden-profile relevance of shown stories) | Beats static profile and the naive agent | LLM judge (simulated user's separate rating) + code (profile overlap) |
 | T1 | **Topic coverage** (distinct subtopics or entropy over a window) | Above the no-exploration baseline | Code |
+| T1 | **Latent discovery** (share of a simulated user's latent interests surfaced, and engagement when surfaced) | Above the no-exploration baseline and the naive agent | Code |
 | T1 / T4 | **Over-narrowing** (learned vs. hidden profile spread) | No worse than static profile for rushed users | Code |
 | T2 | **Citation faithfulness** (share of atomic claims supported by the cited source) | At least 95% | LLM judge (validated, §10.4) + human audit |
 | T2 | **Specificity** (headlines naming concrete actors) | At least 95% of headlines | LLM judge + code (named-entity check) |
@@ -622,7 +628,7 @@ The report includes the category distribution, representative examples, and what
 | **Where the data comes from and how it was collected** | §10.2, with datasheets | ✅ |
 | **What counts as success** | Success criteria per metric (§10.3) | ✅ (thresholds provisional, refined after first baselines, as the proposal says) |
 | **How success is measured (code, LLM judge, human)** | Grader column (§10.3); **all three types used**; judge validation against human labels (§10.4) | ✅ |
-| **Meaningful set of tasks** | About 600 user-days per config, about 1,500 audited claims, about 300 deep-dive questions, at least 100 bookmarks, about 50 injection cases, about 25–35 real sessions | ✅ Sizes to be confirmed against budget in the technical design |
+| **Meaningful set of tasks** | About 360 user-days per config, about 1,000 judged claims (150 human-checked), about 250 curated deep-dive questions, at least 100 bookmarks, about 50 injection cases, about 25–35 real sessions | ✅ Sizes to be confirmed against budget in the technical design |
 | **Baselines and comparisons** | B1–B5 including a strong naive-agent baseline; ablations A1–A3 (§10.5); confidence intervals and seeds (§10.7) | ✅ |
 | **Analyse where and why the agent fails** | Failure taxonomy and process (§10.8) | ✅ |
 | **"Showing it works in one instance won't score highly"** | Replay over many user-days, multiple seeds, a varied simulated panel, real-user blinded comparison | ✅ |
@@ -631,11 +637,15 @@ The report includes the category distribution, representative examples, and what
 1. **Scope vs. evaluation time.** The evaluation needs about 2–3 weeks of a solo quarter. Milestones protect M5 (evaluation) over ◇ product work.
 2. **Simulated-user validity** is a known weakness in the literature. It's mitigated by the simulator validity check (§10.4) and the real-user comparison. Discuss it honestly in the report.
 3. **Small real-user sample.** Frame it as a case study with effect sizes, not significance claims.
-4. **Evaluation cost.** 6 configs × 3 seeds × 600 user-days is a lot of agent runs. The technical design must budget this and may reduce the panel or days, or use cheaper models for simulators and judges.
+4. **Evaluation cost.** Addressed by the lean design rules and computation reuse (`02a` §1.4, §8): target about $100–130 total.
+5. **Schedule.** If about 5 weeks remain in the quarter, the self-study shrinks to about 3 weeks and the pilot drops (`02-technical-design.md` §25).
 
 ---
 
 ## 14. Milestones (proposed)
+
+> ⚠️ See `02-technical-design.md` §25 for the week-by-week build plan, including a **compressed 5-week variant** in case the quarter ends in early to mid December.
+
 
 Dates are placeholders until they're lined up with the course deadlines. Milestones marked ◇ can slip without hurting research goals (RG-6).
 
