@@ -27,6 +27,8 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.19 Smaller audio files** (Claude). Text-to-speech returns raw audio, which we save as WAV (48 KB/s, about 23 MB per 8-minute brief). Convert to MP3 on the server (ffmpeg in the Docker image) for about 8× less.
 - [ ] **1.20 Faster spoken answers** (Claude). Each answer sentence is sent only when its audio is complete (about 1.4 s), which misses the ≤ 1 s target. Stream audio to the browser as it arrives.
 
+- [ ] **1.21 Faster voice** (Claude). Kate finds the voice too slow. Plan: a playback-speed setting in the web app (default about 1.2×, pitch preserved; free, works in Safari). Prompting the model to speak faster is possible but risks the word-for-word reading. A provider with a speed parameter (OpenAI or Google) would need a new account.
+
 ### Only if you want to show it on your phone
 - [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`.
 - [ ] **1.12 iPhone checklist** (Kate). Run `docs/iphone-checklist.md` in Safari and as a home-screen app.
