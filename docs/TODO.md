@@ -8,7 +8,7 @@ Background and evidence: `docs/status.md`.
 
 ### Must-have for the video
 - [ ] **1.1 Text-to-speech** (both). Pick a provider (OQ-7) and add `TTS_API_KEY`; Claude wires and tests it. Right now the backend makes placeholder audio, so the agent can't speak.
-- [ ] **1.2 Search key** (Kate). Set `SEARCH_PROVIDER=tavily` and `SEARCH_API_KEY`. Without it, briefs use only the daily digest and follow-up questions can't look anything up.
+- [x] **1.2 Search key** (Kate). Done 2026-11-06: live search works, and a test brief got 3 of 4 stories from search (`docs/smoke/2026-11-06/search/`). Still needed locally and on Railway. Set `SEARCH_PROVIDER=tavily` and `SEARCH_API_KEY`. Without it, briefs use only the daily digest and follow-up questions can't look anything up.
 - [ ] **1.3 Full run in the browser against the real backend, with sound** (both). Play → interrupt → ask → hear the answer → resume → end. Fix what breaks, including the two known mismatches between the web app and the backend: `/api/history`, and asking for a brief before onboarding (409/202).
 - [ ] **1.4 Use it yourself for a few days before recording** (Kate). Onboard, then listen to daily briefs, so the video can show memory and learning across days.
 - [ ] **1.5 README for running the prototype** (Claude). Required for the submission: setup, env vars, local run with `docker compose` plus the web dev server, and a short tour of the architecture.
@@ -19,6 +19,9 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.8 Apply memory decay before each run** (Claude).
 - [ ] **1.9 Quick fallback brief when the full run takes too long** (Claude). See TDD §20 and the TODO in `app/api/routes.py`.
 - [ ] **1.10 Tune the clustering threshold** (Claude). `tau` 0.78 hasn't been tuned on real embeddings; check the live digests for duplicate or merged stories.
+
+- [ ] **1.17 Clean up search results** (Claude). About half of Tavily news hits are Google redirect links, so the source shows as "google.com". Use the address the fetch ends up at for the citation and source. Also parse dates as UTC.
+- [ ] **1.18 Keep the "big news" slot when fetches fail** (Claude). Paywalled or bot-blocked fetches (wsj.com 401, openai.com 403) left both big stories with no grounded passages, and the brief dropped them. Fall back to other articles on the same story or to the digest snippet. Also improve variety in the "for you" stories.
 
 ### Only if you want to show it on your phone
 - [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`.
