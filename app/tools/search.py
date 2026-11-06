@@ -80,7 +80,7 @@ class TavilyProvider(_HttpProvider):
             "query": args.query,
             "max_results": args.max_results,
             "search_depth": "basic",
-            "topic": "general",
+            "topic": "news",  # "general" returns no published_date (smoke 2026-11-06)
             "include_answer": False,
         }
         if args.since:
