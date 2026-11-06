@@ -33,8 +33,7 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
   `TRACE_DIR` (optional) writes newsroom / chief-of-staff run traces as JSON.
 - FakeTTS audio can't be decoded by a browser, so the web app skips every segment. Use a real
   `TTS_PROVIDER` to hear the brief.
-- Until W-A's parsers merge, live headlines come from the interim adapters in `app/sources/_interim.py`
-  (RSS, HN front page, Techmeme feed). Sources of type `arxiv`, `hf_papers` and `frontpage` are skipped.
+- Live headlines come from the source adapters in `app/sources/adapters.py` (all configured source types).
   A worked live run: `docs/smoke/2026-11-05/`.
 - Tests: `.venv/bin/python -m pytest` (DB tests create and drop their own database on the local server;
   set `TEST_DATABASE_ADMIN_URL` to point them elsewhere).
@@ -151,6 +150,8 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
    | `CREDIT_OPENROUTER_USD`, `CREDIT_TINKER_USD` | `200`, `100` | spend-guard alerts at 40/60/80 % |
    | `AGENT_PORTS` | `auto` (or `real` to fail loudly if agents are missing) | worker |
    | `DEV_AUTH_BYPASS` | `0` | never `1` in prod (ignored anyway when `APP_ENV=prod`) |
+   | `VITE_SUPABASE_URL` | same as `SUPABASE_URL` | **web only, used at build time** (baked into the PWA) |
+   | `VITE_SUPABASE_ANON_KEY` | anon / publishable key | **web only, build time**; safe to expose, never the service_role key |
 
 5. **Deploy.** Push to the branch; both services rebuild. Check:
    - `https://<name>.up.railway.app/healthz` → `{"ok": true, "db": true, "env": "prod"}`

@@ -5,6 +5,10 @@
 # Stage 1 builds the PWA in web/ when it exists; stage 2 is the Python runtime.
 
 FROM node:22-slim AS web
+# Vite bakes these into the PWA at build time. Railway passes service variables with the same names as build args.
+ARG VITE_SUPABASE_URL=""
+ARG VITE_SUPABASE_ANON_KEY=""
+ARG VITE_API_BASE=""
 WORKDIR /src
 COPY . .
 RUN if [ -f web/package.json ]; then \
