@@ -24,6 +24,9 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.17 Clean up search results** (Claude). About half of Tavily news hits are Google redirect links, so the source shows as "google.com". Use the address the fetch ends up at for the citation and source. Also parse dates as UTC.
 - [ ] **1.18 Keep the "big news" slot when fetches fail** (Claude). Paywalled or bot-blocked fetches (wsj.com 401, openai.com 403) left both big stories with no grounded passages, and the brief dropped them. Fall back to other articles on the same story or to the digest snippet. Also improve variety in the "for you" stories.
 
+- [ ] **1.19 Smaller audio files** (Claude). Text-to-speech returns raw audio, which we save as WAV (48 KB/s, about 23 MB per 8-minute brief). Convert to MP3 on the server (ffmpeg in the Docker image) for about 8× less.
+- [ ] **1.20 Faster spoken answers** (Claude). Each answer sentence is sent only when its audio is complete (about 1.4 s), which misses the ≤ 1 s target. Stream audio to the browser as it arrives.
+
 ### Only if you want to show it on your phone
 - [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`.
 - [ ] **1.12 iPhone checklist** (Kate). Run `docs/iphone-checklist.md` in Safari and as a home-screen app.
