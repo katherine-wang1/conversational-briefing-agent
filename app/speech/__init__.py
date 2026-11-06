@@ -3,10 +3,14 @@ sentence splitting, audio storage and the brief pre-render."""
 
 from __future__ import annotations
 
+import os
+from typing import Any
+
 from app.config.settings import Settings
 from app.speech.base import SpeechUnavailable, STTProvider, TtsAudio, TTSProvider
 from app.speech.fake import FakeSTT, FakeTTS
 from app.speech.http import OpenAICompatibleTTS, WhisperSTT
+from app.speech.openrouter_audio import OpenRouterAudioTTS
 from app.speech.storage import AudioStorage, LocalDiskStorage, SupabaseStorage
 
 __all__ = [
@@ -15,6 +19,7 @@ __all__ = [
     "FakeTTS",
     "LocalDiskStorage",
     "OpenAICompatibleTTS",
+    "OpenRouterAudioTTS",
     "STTProvider",
     "SpeechUnavailable",
     "SupabaseStorage",
@@ -27,11 +32,17 @@ __all__ = [
 ]
 
 
-def build_tts(s: Settings) -> TTSProvider | None:
+def build_tts(s: Settings, *, ledger: Any = None) -> TTSProvider | None:
     """None when no provider is configured: briefs are then served without audio and the client
-    falls back to browser speechSynthesis (dev only)."""
+    falls back to browser speechSynthesis (dev only). `ledger` (the model layer's `Ledger`) records
+    spend for providers that report it (openrouter_audio)."""
     if s.tts_provider == "fake":
         return FakeTTS()
+    if s.tts_provider == "openrouter_audio":
+        key = s.openrouter_api_key or os.environ.get("OPENROUTER_API_KEY", "")
+        if not key:
+            return None
+        return OpenRouterAudioTTS(key, model=s.tts_openrouter_model, voice=s.tts_voice, ledger=ledger)
     if s.tts_api_key and s.tts_provider in ("openai", ""):
         return OpenAICompatibleTTS(
             s.tts_api_key, base_url=s.tts_base_url, model=s.tts_model, voice=s.tts_voice

@@ -7,7 +7,8 @@ Background and evidence: `docs/status.md`.
 ## Track 1 — Working agent (midpoint demo)
 
 ### Must-have for the video
-- [ ] **1.1 Text-to-speech** (both). Pick a provider (OQ-7) and add `TTS_API_KEY`; Claude wires and tests it. Right now the backend makes placeholder audio, so the agent can't speak.
+- [x] **1.1 Text-to-speech** (both). Pick a provider (OQ-7) and add `TTS_API_KEY`; Claude wires and tests it. Right now the backend makes placeholder audio, so the agent can't speak.
+  Done 2026-11-06: `TTS_PROVIDER=openrouter_audio` (gpt-audio-mini via the existing OpenRouter key, WAV, ~$0.0044/min, verbatim with a strict prompt + transcript/length guards); results in `docs/smoke/2026-11-06/tts/results.md`. Still to do: a Safari/iPhone listening check.
 - [x] **1.2 Search key** (Kate). Done 2026-11-06: live search works, and a test brief got 3 of 4 stories from search (`docs/smoke/2026-11-06/search/`). Still needed locally and on Railway. Set `SEARCH_PROVIDER=tavily` and `SEARCH_API_KEY`. Without it, briefs use only the daily digest and follow-up questions can't look anything up.
 - [ ] **1.3 Full run in the browser against the real backend, with sound** (both). Play → interrupt → ask → hear the answer → resume → end. Fix what breaks, including the two known mismatches between the web app and the backend: `/api/history`, and asking for a brief before onboarding (409/202).
 - [ ] **1.4 Use it yourself for a few days before recording** (Kate). Onboard, then listen to daily briefs, so the video can show memory and learning across days.

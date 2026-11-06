@@ -36,11 +36,14 @@ class Settings(BaseSettings):
     archive_path: str = "eval/data/archive.sqlite"
 
     # speech
-    tts_provider: Literal["openai", "fake", ""] = ""
+    tts_provider: Literal["openai", "openrouter_audio", "fake", ""] = ""
     tts_api_key: str = ""
     tts_base_url: str = "https://api.openai.com/v1"
     tts_model: str = "gpt-4o-mini-tts"
     tts_voice: str = "alloy"
+    # openrouter_audio: OpenRouter chat model with audio output; uses OPENROUTER_API_KEY
+    tts_openrouter_model: str = "openai/gpt-audio-mini"
+    openrouter_api_key: str = ""
     stt_provider: Literal["groq", "openai", "fake", ""] = ""
     stt_api_key: str = ""
     stt_base_url: str = "https://api.groq.com/openai/v1"

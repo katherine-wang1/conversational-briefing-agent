@@ -93,7 +93,7 @@ def create_app(
     st.admin_db = None if admin_db is _UNSET else admin_db
     st.tools = tools
     st.voice_model = voice_model or pick_voice_model(s)
-    st.tts = build_tts(s) if tts is _UNSET else tts
+    st.tts = build_tts(s, ledger=getattr(st.voice_model, "ledger", None)) if tts is _UNSET else tts
     st.stt = build_stt(s) if stt is _UNSET else stt
     st.storage = storage or build_storage(s)
     st.verifier = JwtVerifier(s)

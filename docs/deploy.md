@@ -32,7 +32,8 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
   `LLM_SPEND_CAP_USD` sets a hard per-process spend fence; it is unset (no fence) by default.
   `TRACE_DIR` (optional) writes newsroom / chief-of-staff run traces as JSON.
 - FakeTTS audio can't be decoded by a browser, so the web app skips every segment. Use a real
-  `TTS_PROVIDER` to hear the brief.
+  `TTS_PROVIDER` to hear the brief: `TTS_PROVIDER=openrouter_audio` works with just `OPENROUTER_API_KEY`
+  (spike and measurements: `docs/smoke/2026-11-06/tts/results.md`).
 - Live headlines come from the source adapters in `app/sources/adapters.py` (all configured source types).
   A worked live run: `docs/smoke/2026-11-05/`.
 - Tests: `.venv/bin/python -m pytest` (DB tests create and drop their own database on the local server;
@@ -142,9 +143,9 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
    | `TINKER_API_KEY` | | not needed in prod unless sim/judges run there |
    | `SEARCH_PROVIDER` | `tavily` \| `exa` \| `brave` | live `search` tool |
    | `SEARCH_API_KEY` | | without it, search returns "search unavailable" (never fake results) |
-   | `TTS_PROVIDER` | `openai` | any OpenAI-compatible `/audio/speech` endpoint |
-   | `TTS_API_KEY` | | without it briefs are served without audio |
-   | `TTS_BASE_URL`, `TTS_MODEL`, `TTS_VOICE` | defaults: OpenAI, `gpt-4o-mini-tts`, `alloy` | |
+   | `TTS_PROVIDER` | `openrouter_audio` | brief audio + spoken answers via OpenRouter (uses `OPENROUTER_API_KEY`; no extra key). `openai` = any OpenAI-compatible `/audio/speech` endpoint (needs `TTS_API_KEY`) |
+   | `TTS_OPENROUTER_MODEL`, `TTS_VOICE` | defaults `openai/gpt-audio-mini`, `alloy` | output is WAV (24 kHz mono PCM); ~$0.0044 per minute of speech. Spend goes to the ledger (role `tts`) and counts toward `LLM_SPEND_CAP_USD` |
+   | `TTS_API_KEY`, `TTS_BASE_URL`, `TTS_MODEL` | only for `TTS_PROVIDER=openai` (defaults: OpenAI, `gpt-4o-mini-tts`) | without a working provider, briefs are served without audio |
    | `STT_PROVIDER`, `STT_API_KEY` | `groq` + key (optional) | server STT fallback; browser STT otherwise |
    | `WORKER_CONCURRENCY` | `4` | worker |
    | `CREDIT_OPENROUTER_USD`, `CREDIT_TINKER_USD` | `200`, `100` | spend-guard alerts at 40/60/80 % |

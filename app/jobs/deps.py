@@ -67,5 +67,5 @@ def build_deps(db: Database, settings: Settings | None = None) -> Deps:
         storage=build_storage(s),
         settings=s,
         model_client=client,
-        tts=build_tts(s),
+        tts=build_tts(s, ledger=getattr(client, "ledger", None)),
     )
