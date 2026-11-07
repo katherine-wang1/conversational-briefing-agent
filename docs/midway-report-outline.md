@@ -132,4 +132,3 @@ Same style as the proposal: alphabetical, full author names, year, title, venue.
 - **Data:** Claude wrote the archive collectors and the simulated-user profiles. The 50-item injection set was authored with AI. The judges and simulators are LLMs (Tinker Inkling). Human labels will come from you.
 - **Smoke tests and analysis:** run and written up by Claude agents (`docs/smoke/`).
 - **This report:** Claude collected the facts and wrote this outline from the repo docs. You wrote the text. (If Claude also gives feedback on your draft, disclose that too.)
-- Note: the proposal's disclosure says Claude produced a first draft of the proposal. The logistics page forbids AI-written reports. Don't repeat that for this report, or ask staff first.
