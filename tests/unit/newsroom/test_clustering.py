@@ -121,3 +121,23 @@ async def test_match_to_prior_url_embedding_and_tiebreak():
 async def test_ids_must_be_unique():
     with pytest.raises(ValueError):
         await cluster_texts(["a", "a"], ["x", "y"], embedder=EMB)
+
+
+@pytest.mark.parametrize("seed", range(6))
+def test_agglomerative_numpy_matches_pure_python(seed):
+    np = pytest.importorskip("numpy")
+    from app.agents.newsroom.clustering import _agglomerative_np, _agglomerative_py
+
+    rng = np.random.default_rng(seed)
+    base = rng.normal(size=(12, 32))
+    v = base[rng.integers(0, 12, size=90)] + rng.normal(scale=0.45, size=(90, 32))
+    v /= np.linalg.norm(v, axis=1, keepdims=True)
+    sim = (v @ v.T).tolist()
+    for tau, floor in [(0.78, 0.70), (0.6, None), (0.9, 0.82)]:
+        cp, lp = _agglomerative_py(sim, tau, floor)
+        cn, ln = _agglomerative_np(sim, tau, floor)
+        assert cn == cp
+        assert ln["roots"] == lp["roots"]
+        assert ln["avg"].keys() == lp["avg"].keys()
+        for k, val in lp["avg"].items():
+            assert ln["avg"][k] == pytest.approx(val, abs=1e-12)
