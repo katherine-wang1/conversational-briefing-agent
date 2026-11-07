@@ -1,0 +1,420 @@
+{
+ "checks": [
+  {
+   "name": "Today screen ready after reload",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "phase playing",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "brief segments play in order with no decode errors",
+   "ok": true,
+   "detail": "{\"playing\":3,\"ended\":1,\"errs\":0,\"segIndex\":1}"
+  },
+  {
+   "name": "Media Session metadata set",
+   "ok": true,
+   "detail": "{\"title\":\"Anthropic files S-1 with the SEC for proposed initial public offering\",\"artist\":\"Your briefing\",\"state\":\"playing\"}"
+  },
+  {
+   "name": "currentTime advancing",
+   "ok": true,
+   "detail": "1668 -> 3171"
+  },
+  {
+   "name": "WebSocket: hello sent, server READY then PLAYING_BRIEF",
+   "ok": true,
+   "detail": "ws=ws://localhost:5173/ws/session/se_01m6snm8p2w6cz2h8agsnjhf84?token=dev%3A5a0e0000-0000-4000-8000-0000000000e2%3Akate-e2e%40example.com"
+  },
+  {
+   "name": "interrupt -> listening",
+   "ok": true,
+   "detail": "interrupt->pause 0 ms"
+  },
+  {
+   "name": "interrupt frame has segment_id + offset_ms",
+   "ok": true,
+   "detail": "{\"type\":\"interrupt\",\"segment_id\":\"s001\",\"offset_ms\":3259}"
+  },
+  {
+   "name": "utterance sent -> thinking/answering",
+   "ok": true,
+   "detail": "thinking"
+  },
+  {
+   "name": "answer audio starts (phase answering)",
+   "ok": true,
+   "detail": "end-of-speech->audio: client 2988 ms, wall 3042 ms"
+  },
+  {
+   "name": "tts_chunks received and played",
+   "ok": true,
+   "detail": "{\"chunks\":3,\"fmt\":\"wav\",\"seqs\":[1,2,3]}"
+  },
+  {
+   "name": "resume_brief received and brief playing again",
+   "ok": true,
+   "detail": "[{\"type\":\"resume_brief\",\"segment_id\":\"s001\"}]"
+  },
+  {
+   "name": "brief plays to the end -> open_floor; completed playback sent; server OPEN_FLOOR",
+   "ok": true,
+   "detail": "{\"endPh\":\"open_floor\",\"completedFrames\":23,\"states\":[\"READY\",\"PLAYING_BRIEF\",\"LISTENING\",\"THINKING\",\"SPEAKING_ANSWER\",\"PLAYING_BRIEF\",\"OPEN_FLOOR\"]}"
+  },
+  {
+   "name": "End -> ended (rating sheet)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "answer": [
+  {
+   "role": "agent",
+   "text": "The corpus doesn't name who is leading the offering, and it gives no timeline beyond the filing itself.",
+   "cites": []
+  },
+  {
+   "role": "agent",
+   "text": "What it does say is that Anthropic intends to list Class A common stock on the Nasdaq under the symbol \"ANT\", but the share count and price range haven't been set, and the registration statement hasn't taken effect yet, so the shares can't be sold until it does.",
+   "cites": [
+    "138f8fbf64952c3ea1f975aad26e2ca4:192-436",
+    "138f8fbf64952c3ea1f975aad26e2ca4:866-1114"
+   ]
+  },
+  {
+   "role": "agent",
+   "text": "Do you want me to look into the leadership and timing, or save that as a question for the next brief?",
+   "cites": []
+  }
+ ],
+ "user": [
+  {
+   "role": "user",
+   "text": "Who is leading that, and what's the timeline?",
+   "cites": []
+  }
+ ],
+ "resumeAtSeg": 1,
+ "audioSummary": {
+  "playing": 28,
+  "ended": 26,
+  "error": 0,
+  "errors": []
+ },
+ "sessionId": "se_01m6snm8p2w6cz2h8agsnjhf84",
+ "frames": [
+  {
+   "dir": "in",
+   "type": "connected",
+   "t": 1794010390854
+  },
+  {
+   "dir": "out",
+   "type": "hello",
+   "t": 1794010391274
+  },
+  {
+   "dir": "out",
+   "type": "control",
+   "t": 1794010391274
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "READY",
+   "t": 1794010391290
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "PLAYING_BRIEF",
+   "t": 1794010391293
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s000",
+   "completed": true,
+   "t": 1794010399026
+  },
+  {
+   "dir": "out",
+   "type": "interrupt",
+   "seg": "s001",
+   "t": 1794010402338
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "LISTENING",
+   "t": 1794010402350
+  },
+  {
+   "dir": "out",
+   "type": "utterance",
+   "t": 1794010403672
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "THINKING",
+   "t": 1794010403673
+  },
+  {
+   "dir": "in",
+   "type": "transcript",
+   "t": 1794010403677
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "SPEAKING_ANSWER",
+   "t": 1794010405012
+  },
+  {
+   "dir": "in",
+   "type": "transcript",
+   "t": 1794010405013
+  },
+  {
+   "dir": "in",
+   "type": "tts_chunk",
+   "t": 1794010406602
+  },
+  {
+   "dir": "in",
+   "type": "transcript",
+   "t": 1794010406611
+  },
+  {
+   "dir": "in",
+   "type": "tts_chunk",
+   "t": 1794010409206
+  },
+  {
+   "dir": "in",
+   "type": "transcript",
+   "t": 1794010409211
+  },
+  {
+   "dir": "in",
+   "type": "tts_chunk",
+   "t": 1794010410792
+  },
+  {
+   "dir": "in",
+   "type": "resume_brief",
+   "seg": "s001",
+   "t": 1794010412295
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "PLAYING_BRIEF",
+   "t": 1794010412296
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010420854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s001",
+   "completed": true,
+   "t": 1794010440910
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s002",
+   "completed": true,
+   "t": 1794010446467
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010450854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s003",
+   "completed": true,
+   "t": 1794010453177
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s004",
+   "completed": true,
+   "t": 1794010458499
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s005",
+   "completed": true,
+   "t": 1794010464163
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s006",
+   "completed": true,
+   "t": 1794010474775
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010480854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s007",
+   "completed": true,
+   "t": 1794010481594
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s008",
+   "completed": true,
+   "t": 1794010494769
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s009",
+   "completed": true,
+   "t": 1794010500177
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s010",
+   "completed": true,
+   "t": 1794010508740
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010510854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s011",
+   "completed": true,
+   "t": 1794010517601
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s012",
+   "completed": true,
+   "t": 1794010526058
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s013",
+   "completed": true,
+   "t": 1794010531231
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010540854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s014",
+   "completed": true,
+   "t": 1794010541888
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s015",
+   "completed": true,
+   "t": 1794010548448
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s016",
+   "completed": true,
+   "t": 1794010554666
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s017",
+   "completed": true,
+   "t": 1794010560735
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s018",
+   "completed": true,
+   "t": 1794010565906
+  },
+  {
+   "dir": "out",
+   "type": "ping",
+   "t": 1794010570854
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s019",
+   "completed": true,
+   "t": 1794010571851
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s020",
+   "completed": true,
+   "t": 1794010577406
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s021",
+   "completed": true,
+   "t": 1794010581874
+  },
+  {
+   "dir": "out",
+   "type": "playback",
+   "seg": "s022",
+   "completed": true,
+   "t": 1794010584334
+  },
+  {
+   "dir": "in",
+   "type": "state",
+   "state": "OPEN_FLOOR",
+   "t": 1794010584338
+  }
+ ],
+ "log": [
+  "[http 200] GET http://localhost:5173/api/briefs/today",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/briefs/today",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 201] POST http://localhost:5173/api/sessions"
+ ]
+}

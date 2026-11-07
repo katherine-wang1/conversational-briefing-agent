@@ -1,0 +1,42 @@
+import fs from "node:fs";
+import { open, sleep, BASE, SP } from "./lib.mjs";
+const TOKEN = process.env.TOKEN || "dev";
+const SID = process.env.SID;
+const { ctx, page, log } = await open();
+const out = { checks: [] };
+const check = (name, ok, detail = "") => { out.checks.push({ name, ok, detail }); console.log(ok ? "  ok  " : "  FAIL", name, detail ? `(${String(detail).slice(0, 400)})` : ""); };
+await page.goto(`${BASE}/#/history`);
+await sleep(2500);
+const hist = await page.textContent("main");
+check("History lists today's brief with headlines", /2026-11-06/.test(hist) && /6 stories/.test(hist), hist.slice(0, 300));
+await page.locator(".card-head").first().click();
+await sleep(1500);
+const histOpen = await page.textContent("main");
+check("History: expanding shows the session's conversation", /Who is leading that/.test(histOpen) && /Nasdaq/.test(histOpen), histOpen.slice(0, 600));
+await page.screenshot({ path: `${SP}/shots/09-history.png`, fullPage: false });
+await page.goto(`${BASE}/#/memory`); await sleep(2000);
+const mem = await page.textContent("main");
+check("Memory lists onboarding interests", /humanoid robots/.test(mem) && /grid-scale battery storage/.test(mem), mem.slice(0, 300));
+await page.screenshot({ path: `${SP}/shots/10-memory.png` });
+await page.goto(`${BASE}/#/questions`); await sleep(1500);
+const qs = await page.textContent("main");
+check("Questions screen renders", /Open questions/.test(qs), qs.slice(0, 200));
+await page.goto(`${BASE}/#/settings`); await sleep(1500);
+await page.getByRole("button", { name: /server/i }).first().click().catch(() => {});
+await sleep(800);
+const me = await page.evaluate(async (t) => (await (await fetch("/api/me", { headers: { Authorization: "Bearer " + t } })).json()).settings, TOKEN);
+check("Settings: stt_mode change persisted on the server (PATCH /api/me)", me.stt_mode === "server", JSON.stringify(me));
+// put it back
+await page.getByRole("button", { name: /browser/i }).first().click().catch(() => {});
+await sleep(500);
+const rating = await page.evaluate(async ([t, sid]) => { const r = await fetch("/api/ratings", { method: "POST", headers: { Authorization: "Bearer " + t, "Content-Type": "application/json" }, body: JSON.stringify({ session_id: sid, usefulness: 4, per_story: { "ai-5a0fcd7b426c": 4 }, learned_new: true, length_fit: "about_right", followup_useful: 3 }) }); return { status: r.status }; }, [TOKEN, SID]);
+check("Rating body the web sends is accepted", rating.status === 201, JSON.stringify(rating));
+// reload Today: brief persists, no new cos_daily
+await page.goto(`${BASE}/#/today`);
+const t0 = Date.now(); let ph = null;
+while (Date.now() - t0 < 15000) { ph = await page.getAttribute('[data-testid="phase"]', "data-phase").catch(() => null); if (ph === "ready") break; await sleep(300); }
+check("Reload: today's brief loads straight away (no regeneration)", ph === "ready", `${Date.now() - t0} ms`);
+out.todayText = (await page.textContent("main")).slice(0, 200);
+out.log = log;
+fs.writeFileSync(`${SP}/step4.json`, JSON.stringify(out, null, 1));
+await ctx.close();

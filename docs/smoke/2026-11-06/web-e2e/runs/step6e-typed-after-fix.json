@@ -1,0 +1,41 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 4307,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Who is leading that, and what's the timeline?",
+   "turn_id": "t_01m6sp7f4pqqecdpw617xbvfrgu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The reports I have name Anthropic as the company behind these launches, and they describe Haiku 5.5, Sonnet 5.5 and Opus 5.5 as a new Claude 5.5 family, with Opus 5.5 as the first model in it.",
+   "turn_id": "t_01m6sp7f4pqqecdpw617xbvfrg",
+   "citations": [
+    "70dd77e15b4f7f3a5b3f04c0a51dd2a4:0-177"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "I don't have a release date beyond that, and the sources don't give a separate timeline for the rollout.",
+   "turn_id": "t_01m6sp7f4pqqecdpw617xbvfrg",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "If you want that, I can look into it for the next brief.",
+   "turn_id": "t_01m6sp7f4pqqecdpw617xbvfrg",
+   "citations": []
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

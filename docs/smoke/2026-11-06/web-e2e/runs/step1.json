@@ -1,0 +1,68 @@
+{
+ "routeAfterLogin": "#/onboarding",
+ "bodyAfterLogin": "\n    WelcomeWhat do you want to keep up with?Brief length~2 min~4 min~7 minDepthlightstandarddeepBrief timeTimezoneUse my anonymised sessions and ratings for the course research project (optional; you can change this later).Start\n    \n  \n\n",
+ "todayBefore": {
+  "status": 409,
+  "body": "{\"status\":\"onboarding_required\",\"local_date\":\"2026-11-06\"}"
+ },
+ "samples": [
+  {
+   "t": 1000,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 2009,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 3014,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 4020,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 5026,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 6030,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 7035,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  },
+  {
+   "t": 8041,
+   "hash": "#/today",
+   "text": "TodayYour brief?Preparing your brief… this can take a few minutes.Your briefSkip storyNextType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms"
+  }
+ ],
+ "log": [
+  "[http 409] GET http://localhost:5173/api/briefs/today",
+  "[console.error] Failed to load resource: the server responded with a status of 409 (Conflict)",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 409] GET http://localhost:5173/api/briefs/today",
+  "[console.error] Failed to load resource: the server responded with a status of 409 (Conflict)",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 409] GET http://localhost:5173/api/briefs/today",
+  "[console.error] Failed to load resource: the server responded with a status of 409 (Conflict)",
+  "[http 202] POST http://localhost:5173/api/onboarding",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today"
+ ]
+}

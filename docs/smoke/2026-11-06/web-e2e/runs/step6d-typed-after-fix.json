@@ -1,0 +1,50 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 3090,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Why did China block that deal?",
+   "turn_id": "t_01m6sp69thk8ndspsp0b188hpcu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The closest match is the SoftBank and ABB Robotics story, which the brief covers as the last story.",
+   "turn_id": "t_01m6sp69thk8ndspsp0b188hpc",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "I'll answer that one, since it's the only blocked deal in my sources.",
+   "turn_id": "t_01m6sp69thk8ndspsp0b188hpc",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "China's Office of the Working Mechanism for Foreign Investment Security Review prohibited SoftBank's acquisition of ABB Robotics, citing concerns that robotics data could be transferred overseas and used to train AI models.",
+   "turn_id": "t_01m6sp69thk8ndspsp0b188hpc",
+   "citations": [
+    "804d7128d31c4141aceda9457e80c168:248-562"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "ABB says it and SoftBank are still in close dialogue on the deal.",
+   "turn_id": "t_01m6sp69thk8ndspsp0b188hpc",
+   "citations": [
+    "804d7128d31c4141aceda9457e80c168:1213-1327"
+   ]
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

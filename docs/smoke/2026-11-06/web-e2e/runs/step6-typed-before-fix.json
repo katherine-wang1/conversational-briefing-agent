@@ -1,0 +1,64 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 2683,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Why did China block that deal?",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwhu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The listener is asking about the China block, but the position is story 2 (Anthropic Claude launch).",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The \"that deal\" most plausibly refers to the SoftBank and ABB Robotics block, which is story 6, not the current story.",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "I should answer about the China block and note the mismatch briefly.",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "China's regulators blocked it because they were concerned that robotics data could be transferred overseas and used to train AI models.",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": [
+    "804d7128d31c4141aceda9457e80c168:248-562"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The block came from China's Office of the Working Mechanism for Foreign Investment Security Review.",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": [
+    "d1e0f80d2d4315f6806167755f78502c:0-327"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "That's the SoftBank and ABB Robotics deal we'll hear about later in the brief, so I'll read that story when we get there.",
+   "turn_id": "t_01m6snyd02c6m9b4j5w4pdybwh",
+   "citations": []
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

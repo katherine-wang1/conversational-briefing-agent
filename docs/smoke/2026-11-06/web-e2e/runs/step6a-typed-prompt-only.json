@@ -1,0 +1,57 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 3090,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Why did China block that deal?",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9vu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The listener is asking about China blocking a deal, and their position is on the Anthropic model story.",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9v",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The deal they mean is SoftBank's acquisition of ABB Robotics, which is story 6, so I'll answer from that story.",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9v",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "China's Office of the Working Mechanism for Foreign Investment Security Review prohibited the acquisition.",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9v",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "Regulators were concerned that robotics data could be transferred overseas and used to train AI models.",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9v",
+   "citations": [
+    "804d7128d31c4141aceda9457e80c168:248-562"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "Chinese regulators were concerned that data for training AI models could be transferred overseas.",
+   "turn_id": "t_01m6sp0yvbavz17z87k2w39j9v",
+   "citations": [
+    "d1e0f80d2d4315f6806167755f78502c:0-327"
+   ]
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

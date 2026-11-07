@@ -1,0 +1,43 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 2479,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Wait, which one is this?",
+   "turn_id": "t_01m6sp2ch5jx8hn9y3vm1ynkjnu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "This is the story about Anthropic launching new Claude models.",
+   "turn_id": "t_01m6sp2ch5jx8hn9y3vm1ynkjn",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The one being read right now is Claude Opus 5.5, the first model in the new 5.5 family.",
+   "turn_id": "t_01m6sp2ch5jx8hn9y3vm1ynkjn",
+   "citations": [
+    "70dd77e15b4f7f3a5b3f04c0a51dd2a4:0-177"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "The brief also covers Haiku 5.5, built for high-volume, cost-sensitive tasks.",
+   "turn_id": "t_01m6sp2ch5jx8hn9y3vm1ynkjn",
+   "citations": [
+    "6b1b69f74c1fd122bfcc0f6ac7bc3275:103-299"
+   ]
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

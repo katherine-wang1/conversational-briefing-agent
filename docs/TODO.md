@@ -10,7 +10,8 @@ Background and evidence: `docs/status.md`.
 - [x] **1.1 Text-to-speech** (both). Pick a provider (OQ-7) and add `TTS_API_KEY`; Claude wires and tests it. Right now the backend makes placeholder audio, so the agent can't speak.
   Done 2026-11-06: `TTS_PROVIDER=openrouter_audio` (gpt-audio-mini via the existing OpenRouter key, WAV, ~$0.0044/min, verbatim with a strict prompt + transcript/length guards); results in `docs/smoke/2026-11-06/tts/results.md`. Still to do: a Safari/iPhone listening check.
 - [x] **1.2 Search key** (Kate). Done 2026-11-06: live search works, and a test brief got 3 of 4 stories from search (`docs/smoke/2026-11-06/search/`). Still needed locally and on Railway. Set `SEARCH_PROVIDER=tavily` and `SEARCH_API_KEY`. Without it, briefs use only the daily digest and follow-up questions can't look anything up.
-- [ ] **1.3 Full run in the browser against the real backend, with sound** (both). Play → interrupt → ask → hear the answer → resume → end. Fix what breaks, including the two known mismatches between the web app and the backend: `/api/history`, and asking for a brief before onboarding (409/202).
+- [x] **1.3 Full run in the browser against the real backend, with sound** (both). Play → interrupt → ask → hear the answer → resume → end. Fix what breaks, including the two known mismatches between the web app and the backend: `/api/history`, and asking for a brief before onboarding (409/202).
+  Done 2026-11-06 (headless Chromium, real agents + TTS + search): every step passes after 10 fixes (fresh-deploy digests, newsroom DB + Docker deps, onboarding race, spoken reasoning, brief-ended signal, REST shapes, ws URL, settings, `/media` proxy) plus resume-after-reload; `docs/smoke/2026-11-06/web-e2e/results.md`. Speech input was a stubbed browser STT and typing.
 - [ ] **1.4 Use it yourself for a few days before recording** (Kate). Onboard, then listen to daily briefs, so the video can show memory and learning across days.
 - [ ] **1.5 README for running the prototype** (Claude). Required for the submission: setup, env vars, local run with `docker compose` plus the web dev server, and a short tour of the architecture.
 
@@ -28,6 +29,11 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.20 Faster spoken answers** (Claude). Each answer sentence is sent only when its audio is complete (about 1.4 s), which misses the ≤ 1 s target. Stream audio to the browser as it arrives.
 
 - [ ] **1.21 Faster voice** (Claude). Kate finds the voice too slow. Plan: a playback-speed setting in the web app (default about 1.2×, pitch preserved; free, works in Safari). Prompting the model to speak faster is possible but risks the word-for-word reading. A provider with a speed parameter (OpenAI or Google) would need a new account.
+
+- [ ] **1.22 Readable citations** (Claude). Answers and History show raw passage ids (`138f8fb…:192-436`). Show the source name with a link (the source packs have the URL). Found in 1.3.
+- [ ] **1.23 Ask before bookmarking** (Claude). The voice model offered to look something up and saved the question in the same answer. Make it wait for a yes. Found in 1.3.
+- [ ] **1.24 Voice answers: reasoning out loud** (Claude). Haiku with reasoning off sometimes narrates its plan ("The listener is asking…"). 1.3 added a prompt rule and a filter that drops those sentences; check how often the filter fires (log line `dropped a meta sentence`) and adjust the prompt or model in the bake-off (2.9).
+- [ ] **1.25 Brief length estimate** (Claude). The app showed "~2 min" for a brief whose audio is about 2.5 min; use the manifest's segment durations.
 
 ### Only if you want to show it on your phone
 - [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`.
