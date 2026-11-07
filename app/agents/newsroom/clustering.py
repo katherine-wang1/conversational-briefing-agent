@@ -40,9 +40,10 @@ import hashlib
 import heapq
 import math
 import re
+import threading
 from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import dataclass, field
-from typing import Protocol
+from typing import Any, Protocol
 
 try:  # optional acceleration; the module works without numpy
     import numpy as _np
@@ -66,28 +67,45 @@ def _l2(v: Vector) -> Vector:
     return [x / n for x in v] if n > 0 else v
 
 
-class FastEmbedEmbedder:
-    """Local CPU embeddings via fastembed (install extra `newsroom`).
+# One ONNX session per model per process: concurrent newsroom runs in the worker share it instead
+# of each loading its own copy (on a ~750 MB Railway service, four copies got the worker OOM-killed).
+_FASTEMBED_MODELS: dict[str, Any] = {}
+_FASTEMBED_LOCK = threading.Lock()
+# fastembed's default batch is 256 texts; ONNX activation memory grows with it.
+FASTEMBED_BATCH_SIZE = 32
 
-    The model is downloaded once on first use (network) and cached by fastembed; in replay and
-    tests, pass a pre-cached model or another `Embedder`.
-    """
 
-    def __init__(self, model: str = "BAAI/bge-small-en-v1.5") -> None:
-        self.model = model
-        self.name = f"fastembed:{model}"
-        self._impl = None
-
-    def embed(self, texts: Sequence[str]) -> list[Vector]:
-        if self._impl is None:
+def _fastembed_model(model: str) -> Any:
+    with _FASTEMBED_LOCK:
+        impl = _FASTEMBED_MODELS.get(model)
+        if impl is None:
             try:
                 from fastembed import TextEmbedding
             except ImportError as e:  # pragma: no cover - depends on environment
                 raise RuntimeError(
                     "fastembed is not installed: pip install -e '.[newsroom]' or pass another Embedder"
                 ) from e
-            self._impl = TextEmbedding(model_name=self.model)
-        return [_l2([float(x) for x in v]) for v in self._impl.embed(list(texts))]
+            impl = _FASTEMBED_MODELS[model] = TextEmbedding(model_name=model)
+        return impl
+
+
+class FastEmbedEmbedder:
+    """Local CPU embeddings via fastembed (install extra `newsroom`).
+
+    The model is downloaded once on first use (network) and cached by fastembed; in replay and
+    tests, pass a pre-cached model or another `Embedder`. The loaded model is shared by every
+    instance in the process, and calls into it are serialised.
+    """
+
+    def __init__(self, model: str = "BAAI/bge-small-en-v1.5") -> None:
+        self.model = model
+        self.name = f"fastembed:{model}"
+
+    def embed(self, texts: Sequence[str]) -> list[Vector]:
+        impl = _fastembed_model(self.model)
+        with _FASTEMBED_LOCK:
+            vecs = list(impl.embed(list(texts), batch_size=FASTEMBED_BATCH_SIZE))
+        return [_l2([float(x) for x in v]) for v in vecs]
 
 
 _STOP = frozenset(
