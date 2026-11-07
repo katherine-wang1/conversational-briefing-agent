@@ -1,0 +1,49 @@
+{
+ "typedAnswerPhase": "answering",
+ "msToAnswerAudio": 2688,
+ "backToBrief": "playing",
+ "frames": [
+  {
+   "type": "transcript",
+   "role": "user",
+   "text": "Is that bigger than last year?",
+   "turn_id": "t_01m6sp36p68g2hnmv7cdc5aeayu",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "I don't have a year-over-year comparison in my sources for these model launches.",
+   "turn_id": "t_01m6sp36p68g2hnmv7cdc5aeay",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "What I do have is that Haiku 5.5 costs about 75 percent less to run than Haiku 4.5, and Opus 5.5 costs 40 percent less than Opus 5 on typical workloads.",
+   "turn_id": "t_01m6sp36p68g2hnmv7cdc5aeay",
+   "citations": [
+    "6b1b69f74c1fd122bfcc0f6ac7bc3275:517-626",
+    "70dd77e15b4f7f3a5b3f04c0a51dd2a4:2452-2621"
+   ]
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "If you want to know whether the launch is bigger overall than last year's releases, I can bookmark that for the next brief.",
+   "turn_id": "t_01m6sp36p68g2hnmv7cdc5aeay",
+   "citations": []
+  },
+  {
+   "type": "transcript",
+   "role": "agent",
+   "text": "I've saved that question, and I'll follow up on it in the next brief.",
+   "turn_id": "t_01m6sp36p68g2hnmv7cdc5aeay",
+   "citations": []
+  },
+  {
+   "type": "resume_brief",
+   "segment_id": "s005"
+  }
+ ]
+}

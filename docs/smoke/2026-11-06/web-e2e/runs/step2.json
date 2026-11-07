@@ -1,0 +1,53 @@
+{
+ "secondsToReady": 111,
+ "last": [
+  {
+   "t": 100,
+   "ph": "idle",
+   "prep": true
+  },
+  {
+   "t": 105,
+   "ph": "idle",
+   "prep": true
+  },
+  {
+   "t": 110,
+   "ph": "ready",
+   "prep": false
+  }
+ ],
+ "text": "2026-11-066 stories · ~2 min?Anthropic files S-1 with the SEC for proposed initial public offeringSkip storyNext▶Play today's briefType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end-of-speech→audio=-ms",
+ "log": [
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 202] GET http://localhost:5173/api/briefs/today",
+  "[http 200] GET http://localhost:5173/media/5a0e0000-0000-4000-8000-0000000000e2/br_01m6sng8keanhc3a7185zhwh75/s000.wav"
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "checks": [
+  {
+   "name": "History lists today's brief with headlines",
+   "ok": true,
+   "detail": "History2026-11-066 storiesAnthropic files S-1 with the SEC for proposed initial public offeringAnthropic launches Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5Agility Robotics begins trading on Nasdaq as first US pure-play humanoid company, closes first day 2% up at $11.49India approves $1.53 billion vi"
+  },
+  {
+   "name": "History: expanding shows the session's conversation",
+   "ok": true,
+   "detail": "History2026-11-066 storiesAnthropic files S-1 with the SEC for proposed initial public offeringAnthropic launches Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5Agility Robotics begins trading on Nasdaq as first US pure-play humanoid company, closes first day 2% up at $11.49India approves $1.53 billion viability gap funding scheme for development of 92 GWh grid-scale energy storage - pv magazine GlobalPerplexity Teammates: $200 Max AI Agents [2026]China's regulators block SoftBank's $5.4B acquisition of ABB Robotics over robot data concernsWho is leading that, and what's the timeline?The corpus does"
+  },
+  {
+   "name": "Memory lists onboarding interests",
+   "ok": true,
+   "detail": "What I know you followPinned items always count. Delete anything that's wrong.grid-scale battery storagestorage-batteries · weight 0.40 · onboardingPinEditDeletehumanoid robotshumanoids · weight 0.40 · onboardingPinEditDeleteAI agentsagents-and-tools · weight 0.23 · onboardingPinEditDeleteagent memo"
+  },
+  {
+   "name": "Questions screen renders",
+   "ok": true,
+   "detail": "Open questionsThings you asked that I'm still looking into. Answers come in your next brief.No open questions."
+  },
+  {
+   "name": "Settings: stt_mode change persisted on the server (PATCH /api/me)",
+   "ok": true,
+   "detail": "{\"brief_time\":\"07:30\",\"timezone\":\"America/Los_Angeles\",\"voice\":\"alloy\",\"stt_mode\":\"server\",\"auto_resume\":true,\"headphones_mode\":false,\"depth_pref\":\"standard\"}"
+  },
+  {
+   "name": "Rating body the web sends is accepted",
+   "ok": true,
+   "detail": "{\"status\":201}"
+  },
+  {
+   "name": "Reload: today's brief loads straight away (no regeneration)",
+   "ok": true,
+   "detail": "312 ms"
+  }
+ ],
+ "todayText": "2026-11-066 stories · ~2 min?Anthropic files S-1 with the SEC for proposed initial public offeringSkip storyNext▶Play today's briefType insteaddebugserver=- conn=- vad=- seg=0interrupt→pause=-ms · end",
+ "log": [
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/history?days=14",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/history?days=14",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/sessions/se_01m6snm8p2w6cz2h8agsnjhf84/transcript",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/memory/interests",
+  "[http 200] GET http://localhost:5173/api/memory/interests",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] PATCH http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] PATCH http://localhost:5173/api/me",
+  "[http 201] POST http://localhost:5173/api/ratings",
+  "[http 200] GET http://localhost:5173/api/briefs/today",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/briefs/today",
+  "[http 200] GET http://localhost:5173/media/5a0e0000-0000-4000-8000-0000000000e2/br_01m6sng8keanhc3a7185zhwh75/s000.wav"
+ ]
+}

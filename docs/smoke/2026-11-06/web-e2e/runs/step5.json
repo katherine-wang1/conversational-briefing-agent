@@ -1,0 +1,31 @@
+{
+ "checks": [
+  {
+   "name": "Skip story moves on (real backend)",
+   "ok": true,
+   "detail": "segmentIndex 5"
+  },
+  {
+   "name": "Reload: brief still there, resumes at the same sentence",
+   "ok": true,
+   "detail": "{\"idxBefore\":5,\"idxAfter\":5,\"label\":\"Resume today's brief\"}"
+  },
+  {
+   "name": "Playback after reload starts at the saved segment",
+   "ok": true,
+   "detail": "{\"firstPlayback\":{\"type\":\"playback\",\"segment_id\":\"s005\",\"offset_ms\":0},\"firstSrc\":\"b:http://localhost:5173/656fa31a-3816-461d-ba64-b23750511d45\"}"
+  }
+ ],
+ "log": [
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 201] POST http://localhost:5173/api/sessions",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 200] GET http://localhost:5173/api/questions",
+  "[http 200] GET http://localhost:5173/api/me",
+  "[http 201] POST http://localhost:5173/api/sessions"
+ ]
+}
