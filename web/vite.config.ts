@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
           // App shell only (TDD §13.4): no API, audio or VAD-model caching.
           globPatterns: ["**/*.{js,css,html,svg,png}"],
           globIgnores: ["vad/**"],
-          navigateFallbackDenylist: [/^\/api\//, /^\/ws\//, /^\/audio\//, /^\/media\//, /^\/vad\//],
+          navigateFallbackDenylist: [/^\/healthz/, /^\/api\//, /^\/ws\//, /^\/audio\//, /^\/media\//, /^\/vad\//],
           runtimeCaching: [],
         },
       }),
