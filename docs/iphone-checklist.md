@@ -27,17 +27,18 @@ Record the iOS version, iPhone model and headphones used at the top of the resul
 ## Checks
 
 ### A. Playback
-1. Tap the big ▶. The brief starts within ~1 s, with no "tap to allow audio" prompt.
+1. Tap the microphone character ("Play today's brief"). The brief starts within ~1 s, with no "tap to allow audio" prompt.
 2. Let it run across at least 3 segments. There is no audible gap or click longer than ~300 ms between sentences.
 3. The story card follows the audio (headline changes at each new story).
 4. Skip story jumps to the next story; Next jumps one sentence.
 5. Lock-screen / Control Centre shows "Briefing" with the story headline.
+6. Speed: the brief plays at 1.2× by default and the voice sounds natural (not chipmunk). Tap the `1.2×` chip to change it; it stays across sentences, answers and a reload (Settings → Voice speed shows the same value).
 
 ### B. Tap interrupt
-1. While the brief plays, tap anywhere in the lower half. Audio stops **instantly** (debug `interrupt→pause` < 50 ms; by ear, no trailing syllable).
+1. While the brief plays, tap anywhere in the lower half. Audio stops **instantly** (live log `interrupt → brief paused` < 50 ms with Settings → "Show what's happening" on; by ear, no trailing syllable).
 2. The first time, iOS asks for microphone permission. Allow it. The app keeps working afterwards without a reload.
-3. The talk area turns red ("Listening…"). Ask a question, then stop talking.
-4. Tap the ▶ Play/Interrupt button instead of the area: same behaviour.
+3. The character turns red ("Listening…") with sound waves. Ask a question, then stop talking. It turns purple while thinking and green while speaking; citations under the answer show source names that open the article.
+4. Tap the "Tap to talk" button instead of the area: same behaviour.
 5. Deny the mic permission once (Settings → Safari → Microphone → Deny, then retry): the app shows a clear message and returns to the brief; it doesn't hang.
 
 ### C. AirPods / headphone controls

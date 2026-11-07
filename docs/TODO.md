@@ -28,12 +28,17 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.19 Smaller audio files** (Claude). Text-to-speech returns raw audio, which we save as WAV (48 KB/s, about 23 MB per 8-minute brief). Convert to MP3 on the server (ffmpeg in the Docker image) for about 8× less.
 - [ ] **1.20 Faster spoken answers** (Claude). Each answer sentence is sent only when its audio is complete (about 1.4 s), which misses the ≤ 1 s target. Stream audio to the browser as it arrives.
 
-- [ ] **1.21 Faster voice** (Claude). Kate finds the voice too slow. Plan: a playback-speed setting in the web app (default about 1.2×, pitch preserved; free, works in Safari). Prompting the model to speak faster is possible but risks the word-for-word reading. A provider with a speed parameter (OpenAI or Google) would need a new account.
+- [x] **1.21 Faster voice** (Claude). Kate finds the voice too slow. Plan: a playback-speed setting in the web app (default about 1.2×, pitch preserved; free, works in Safari). Prompting the model to speak faster is possible but risks the word-for-word reading. A provider with a speed parameter (OpenAI or Google) would need a new account.
+  Done 2026-11-07: Settings → Voice speed (1.0–1.5×, default 1.2×, also a speed chip on the player), applied to brief and answers with pitch preserved and re-applied on every load; saved in `settings.playback_rate` (`docs/smoke/2026-11-07/ui/results.md`). Check it on the iPhone.
 
-- [ ] **1.22 Readable citations** (Claude). Answers and History show raw passage ids (`138f8fb…:192-436`). Show the source name with a link (the source packs have the URL). Found in 1.3.
+- [x] **1.22 Readable citations** (Claude). Answers and History show raw passage ids (`138f8fb…:192-436`). Show the source name with a link (the source packs have the URL). Found in 1.3.
+  Done 2026-11-07: the server resolves citations to `{source, url, title}` (`TranscriptMsg.sources`, `sources` on transcript turns; additive) from the packs, article titles and quick-search hits; the app shows source-name chips that link to the article.
 - [ ] **1.23 Ask before bookmarking** (Claude). The voice model offered to look something up and saved the question in the same answer. Make it wait for a yes. Found in 1.3.
 - [ ] **1.24 Voice answers: reasoning out loud** (Claude). Haiku with reasoning off sometimes narrates its plan ("The listener is asking…"). 1.3 added a prompt rule and a filter that drops those sentences; check how often the filter fires (log line `dropped a meta sentence`) and adjust the prompt or model in the bake-off (2.9).
-- [ ] **1.25 Brief length estimate** (Claude). The app showed "~2 min" for a brief whose audio is about 2.5 min; use the manifest's segment durations.
+- [x] **1.25 Brief length estimate** (Claude). The app showed "~2 min" for a brief whose audio is about 2.5 min; use the manifest's segment durations.
+  Done 2026-11-07: the header sums the manifest's segment durations, divided by the playback speed.
+- [x] **1.26 Friendly talk button and live log** (Claude). Done 2026-11-07: the playing screen's big blue circle is now a microphone character labelled "Tap to talk", with playing / listening / thinking / speaking / resuming states; Settings → "Show what's happening" adds a live log (side panel on desktop, drawer on the phone) with client events and the voice session's server events (heard text, states, model calls with time / tokens / $, searches, spoken and dropped sentences, memory signals).
+- [ ] **1.27 Brief build trace in the live log** (Claude). Show how today's brief was built (the worker's C1–C8 steps: searches, candidates, scores, selection, packs, claim checks) in the live log, next to the session events.
 
 ### Only if you want to show it on your phone
 - [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`. In progress: Supabase project created (East US, Ohio), GitHub integration deploys migrations from `main`.
