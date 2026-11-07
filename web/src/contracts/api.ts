@@ -33,8 +33,9 @@ export interface OnboardingRequest {
 }
 
 export interface TodayBrief {
-  brief_id: string;
-  status: "pending" | "ready" | "failed";
+  // null while the brief is still pending (202) or before onboarding (409 onboarding_required)
+  brief_id: string | null;
+  status: "pending" | "ready" | "failed" | "onboarding_required";
   script: BriefScript | null;
   manifest: AudioManifest | null;
 }
@@ -62,7 +63,7 @@ export interface HistoryItem {
 export interface OpenQuestion {
   id: string;
   question: string;
-  status: "open" | "researching" | "answered" | "dismissed" | "expired";
+  status: "open" | "researching" | "answered" | "unanswerable" | "delivered" | "dismissed" | "expired";
   answer?: { text: string } | null;
   citations?: string[];
   created_at: string;

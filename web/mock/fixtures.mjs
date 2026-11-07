@@ -120,20 +120,37 @@ export function initialQuestions() {
   ];
 }
 
+/** GET /api/history in the real backend's shape (app/api/routes.py): briefs + sessions, newest
+ * first. Turns come from GET /api/sessions/{id}/transcript (see `transcript`). */
 export function history() {
   const d = new Date(Date.now() - 86400e3).toISOString().slice(0, 10);
-  return [
-    {
-      brief_id: "brief-mock-0",
-      local_date: d,
-      headlines: ["Halden delays its inference chip", "EU AI Office drafts training-data disclosure guidance"],
-      session_id: "sess-old",
-      turns: [
-        { role: "agent", text: "Halden pushed its inference chip launch by a quarter.", citations: ["p:hd-0"] },
-        { role: "user", text: "Why did it slip?" },
-        { role: "agent", text: "They didn't say. I'll look into it and tell you tomorrow.", citations: [] },
-      ],
-      citation_urls: { "p:hd-0": "https://example.com/halden" },
-    },
-  ];
+  return {
+    briefs: [
+      {
+        id: "brief-mock-0",
+        local_date: d,
+        status: "ready",
+        arm: "full",
+        stories: [
+          { story_ref: "d:hd", headline: "Halden delays its inference chip" },
+          { story_ref: "d:eu", headline: "EU AI Office drafts training-data disclosure guidance" },
+        ],
+      },
+    ],
+    sessions: [
+      { id: "sess-old", brief_id: "brief-mock-0", started_at: `${d}T15:00:00Z`, ended_at: null, end_reason: null, n_turns: 3 },
+    ],
+  };
+}
+
+export function transcript(sessionId) {
+  if (sessionId !== "sess-old") return null;
+  return {
+    turns: [
+      { seq: 0, role: "system", text: "", action: "state" },
+      { seq: 1, role: "agent", text: "Halden pushed its inference chip launch by a quarter.", citations: ["p:hd-0"] },
+      { seq: 2, role: "user", text: "Why did it slip?", citations: [] },
+      { seq: 3, role: "agent", text: "They didn't say. I'll look into it and tell you tomorrow.", citations: [] },
+    ],
+  };
 }

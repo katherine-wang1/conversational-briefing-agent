@@ -11,6 +11,14 @@ import type {
 import type { Interest } from "../contracts/brief";
 import { auth } from "./auth";
 import { config } from "./config";
+import {
+  historyFromApi,
+  interestsFromApi,
+  mePatchToApi,
+  questionFromApi,
+  questionsFromApi,
+  turnsFromApi,
+} from "./normalize";
 
 export class ApiError extends Error {
   constructor(
@@ -42,30 +50,51 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
 export const api = {
   me: () => request<Me>("GET", "/api/me"),
   patchMe: (patch: Partial<Settings> & { research_consent?: boolean }) =>
-    request<Me>("PATCH", "/api/me", patch),
+    request<Me>("PATCH", "/api/me", mePatchToApi(patch)),
   onboarding: (body: OnboardingRequest) => request<Me>("POST", "/api/onboarding", body),
-  today: () => request<TodayBrief>("GET", "/api/briefs/today"),
+  /** 200 ready brief, 202 `{status: "pending" | "failed", brief_id: null | id}`, or 409 before onboarding. */
+  today: async (): Promise<TodayBrief> => {
+    try {
+      return await request<TodayBrief>("GET", "/api/briefs/today");
+    } catch (err) {
+      if (err instanceof ApiError && err.status === 409)
+        return { brief_id: null, status: "onboarding_required", script: null, manifest: null };
+      throw err;
+    }
+  },
   createSession: (brief_id: string) => request<SessionCreated>("POST", "/api/sessions", { brief_id }),
-  history: (days = 14) => request<HistoryItem[]>("GET", `/api/history?days=${days}`),
-  interests: () => request<Interest[]>("GET", "/api/memory/interests"),
+  history: async (days = 14): Promise<HistoryItem[]> =>
+    historyFromApi(await request<unknown>("GET", `/api/history?days=${days}`)),
+  transcript: async (sessionId: string) =>
+    turnsFromApi(await request<unknown>("GET", `/api/sessions/${encodeURIComponent(sessionId)}/transcript`)),
+  interests: async (): Promise<Interest[]> => interestsFromApi(await request<unknown>("GET", "/api/memory/interests")),
   patchInterest: (id: string, patch: Partial<Pick<Interest, "label" | "weight" | "explicit_pin">>) =>
     request<Interest>("PATCH", `/api/memory/interests/${encodeURIComponent(id)}`, patch),
   deleteInterest: (id: string) =>
     request<void>("DELETE", `/api/memory/interests/${encodeURIComponent(id)}`),
-  questions: () => request<OpenQuestion[]>("GET", "/api/questions"),
-  dismissQuestion: (id: string) =>
-    request<OpenQuestion>("PATCH", `/api/questions/${encodeURIComponent(id)}`, { status: "dismissed" }),
+  questions: async (): Promise<OpenQuestion[]> => questionsFromApi(await request<unknown>("GET", "/api/questions")),
+  dismissQuestion: async (id: string): Promise<OpenQuestion> =>
+    questionFromApi(
+      await request<Record<string, unknown>>("PATCH", `/api/questions/${encodeURIComponent(id)}`, {
+        status: "dismissed",
+      }),
+    ),
   rate: (body: RatingRequest) => request<void>("POST", "/api/ratings", body),
 };
 
 /** Resolve the WebSocket URL from POST /api/sessions. Browsers can't set headers on a WebSocket,
- * so the bearer token goes in the `token` query parameter. */
-export function resolveWsUrl(wsUrl: string, token: string | null): string {
+ * so the bearer token goes in the `token` query parameter.
+ *
+ * Same-origin mode (no VITE_API_BASE): connect to the ws_url's path on this page's origin. The
+ * backend builds an absolute ws_url from its own view of the host, which behind the Vite proxy or an
+ * HTTPS tunnel is `ws://localhost:8000` — unreachable from a phone, and mixed content on https. */
+export function resolveWsUrl(wsUrl: string, token: string | null, apiBase = config.apiBase): string {
+  const absolute = /^wss?:\/\//.test(wsUrl);
   let url: URL;
-  if (/^wss?:\/\//.test(wsUrl)) url = new URL(wsUrl);
+  if (absolute && apiBase) url = new URL(wsUrl);
   else {
-    const base = config.apiBase || window.location.origin;
-    url = new URL(wsUrl, base);
+    const u = absolute ? new URL(wsUrl) : null;
+    url = new URL(u ? u.pathname + u.search : wsUrl, apiBase || window.location.origin);
     url.protocol = url.protocol === "https:" ? "wss:" : "ws:";
   }
   if (token) url.searchParams.set("token", token);
