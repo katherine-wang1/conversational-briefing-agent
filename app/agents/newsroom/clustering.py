@@ -189,11 +189,82 @@ def cosine_matrix(vectors: Sequence[Vector]) -> list[list[float]]:
     return sim
 
 
+def _sim_array(vectors: Sequence[Vector]) -> Any:
+    """Like `cosine_matrix`, but keeps the numpy array (n x n Python floats is ~4x the memory)."""
+    if _np is None or not vectors:
+        return cosine_matrix(vectors)
+    m = _np.asarray(vectors, dtype=float)
+    return m @ m.T
+
+
 def _key(x: float) -> float:
     return round(x, 9)  # stable ordering despite float noise
 
 
-def agglomerative(sim: list[list[float]], tau: float) -> tuple[list[list[int]], dict]:
+def agglomerative(sim: Any, tau: float, link_floor: float | None = None) -> tuple[list[list[int]], dict]:
+    """Average-linkage agglomerative clustering with a similarity threshold.
+
+    Returns (clusters, linkage) where clusters are sorted lists of indices ordered by first index,
+    and linkage = {"roots": [...], "avg": {(root_a, root_b): average similarity}} for later band
+    queries. With `link_floor`, "avg" keeps only pairs at or above it (the caller only needs the
+    tiebreak band); without it, every root pair is listed.
+
+    Uses numpy when available: the pure-Python version keeps the n x n sums in dicts, which took
+    a ~2,500-item newsroom run to 1.6 GB and got the worker OOM-killed on Railway.
+    """
+    if _np is None:
+        return _agglomerative_py(sim, tau, link_floor)
+    return _agglomerative_np(sim, tau, link_floor)
+
+
+def _agglomerative_np(sim: Any, tau: float, link_floor: float | None) -> tuple[list[list[int]], dict]:
+    """Same merges, ties and float arithmetic as `_agglomerative_py`, on an n x n float64 array."""
+    S = _np.array(sim, dtype=_np.float64)  # copy: row/col i hold summed similarity to cluster i
+    n = S.shape[0]
+    members: dict[int, list[int]] = {i: [i] for i in range(n)}
+    size = _np.ones(n, dtype=_np.float64)
+    active = _np.ones(n, dtype=bool)
+    version = [0] * n
+    ii, jj = _np.nonzero(_np.triu(S >= tau, 1))
+    heap: list[tuple[float, int, int, int, int]] = [
+        (-_key(float(S[i, j])), int(i), int(j), 0, 0) for i, j in zip(ii, jj, strict=True)
+    ]
+    heapq.heapify(heap)
+    while heap:
+        neg, i, j, vi, vj = heapq.heappop(heap)
+        if not (active[i] and active[j]) or version[i] != vi or version[j] != vj:
+            continue
+        if -neg < tau:
+            break
+        # merge j into i (i < j keeps the lowest index as the root)
+        members[i].extend(members.pop(j))
+        version[i] += 1
+        active[j] = False
+        size[i] += size[j]
+        row = S[i] + S[j]
+        S[i] = row
+        S[:, i] = row
+        ks = _np.nonzero(active)[0]
+        ks = ks[ks != i]
+        avg = S[i, ks] / (size[i] * size[ks])
+        for k, a_ in zip(ks[avg >= tau].tolist(), avg[avg >= tau].tolist(), strict=True):
+            a, b = (i, k) if i < k else (k, i)
+            heapq.heappush(heap, (-_key(a_), a, b, version[a], version[b]))
+    roots = sorted(members)
+    clusters = [sorted(members[r]) for r in roots]
+    r = _np.array(roots, dtype=_np.intp)
+    A = S[_np.ix_(r, r)] / _np.outer(size[r], size[r])
+    keep = _np.triu(_np.ones_like(A, dtype=bool), 1)
+    if link_floor is not None:
+        keep &= A >= link_floor
+    xs, ys = _np.nonzero(keep)
+    linkage = {(roots[x], roots[y]): float(A[x, y]) for x, y in zip(xs.tolist(), ys.tolist(), strict=True)}
+    return clusters, {"roots": roots, "avg": linkage}
+
+
+def _agglomerative_py(
+    sim: list[list[float]], tau: float, link_floor: float | None = None
+) -> tuple[list[list[int]], dict]:
     """Average-linkage agglomerative clustering with a similarity threshold.
 
     Returns (clusters, linkage) where clusters are sorted lists of indices ordered by first index,
@@ -237,6 +308,7 @@ def agglomerative(sim: list[list[float]], tau: float) -> tuple[list[list[int]], 
         (a, b): sums[a][b] / (len(members[a]) * len(members[b]))
         for x, a in enumerate(roots)
         for b in roots[x + 1 :]
+        if link_floor is None or sums[a][b] / (len(members[a]) * len(members[b])) >= link_floor
     }
     return clusters, {"roots": roots, "avg": linkage}
 
@@ -296,8 +368,8 @@ async def cluster_texts(
     sid = [ids[k] for k in order]
     stext = [texts[k] for k in order]
     vecs = [list(vectors[k]) for k in order] if vectors is not None else embedder.embed(stext)
-    sim = cosine_matrix(vecs)
-    groups, link = agglomerative(sim, tau)
+    sim = _sim_array(vecs)
+    groups, link = agglomerative(sim, tau, link_floor=tau - band)
 
     tiebreaks: list[tuple[TiebreakPair, bool]] = []
     if tiebreaker is not None and len(groups) > 1 and band > 0:
