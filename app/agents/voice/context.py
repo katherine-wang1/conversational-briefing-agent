@@ -9,6 +9,7 @@
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from pathlib import Path
 
@@ -121,5 +122,32 @@ def turn_messages(
     for role, text in history[-TRANSCRIPT_TURNS:]:
         msgs.append(Message(role="user" if role == "user" else "assistant", content=text))
     extra = f"\nOPEN QUESTIONS: {open_questions}" if open_questions else ""
-    msgs.append(Message(role="user", content=f"{position}{extra}\n\nListener: {utterance}"))
+    msgs.append(Message(role="user", content=f"{position}{extra}\n\nListener: {utterance}{SPOKEN_REMINDER}"))
     return msgs
+
+
+# Haiku-class models with reasoning off sometimes "think out loud" in the answer (live run,
+# docs/smoke/2026-11-06/web-e2e): every sentence is spoken, so remind them on each turn, and drop
+# sentences that are clearly narration about the listener or the prompt (is_meta_sentence).
+SPOKEN_REMINDER = "\n\n(Reply with only the words you say to the listener, addressed as you.)"
+
+_META = re.compile(
+    r"^(?:the (?:listener|user) (?:is|was|wants|asked|asks|means|might|seems|probably)\b"
+    r"|they(?:'re| are) asking\b|their (?:position|question) is\b"
+    r"|i should (?:answer|respond|reply|say|note|mention|ask|clarify|call|use|explain)\b"
+    r"|i(?:'ll| will) answer (?:from|based)\b"
+    r"|the (?:deal|story|company|one|question) they mean\b)"
+    r"|\b(?:most (?:likely|plausibly)|plausibly) refers to\b|\bposition line\b|\bstory_id\b",
+    re.IGNORECASE,
+)
+_CORPUS = re.compile(r"\bthe corpus\b", re.IGNORECASE)
+
+
+def is_meta_sentence(text: str) -> bool:
+    """True for a sentence that narrates the model's reasoning instead of talking to the listener."""
+    return bool(_META.search(text.strip()))
+
+
+def spoken_form(text: str) -> str:
+    """Replace the prompt's word "the corpus" with "what I have" before it is spoken."""
+    return _CORPUS.sub(lambda m: "What I have" if m.group(0)[0] == "T" else "what I have", text)

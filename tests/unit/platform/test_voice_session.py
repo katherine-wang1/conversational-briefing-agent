@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 
 import pytest
 
+from app.agents.voice.context import SPOKEN_REMINDER, is_meta_sentence, spoken_form
 from app.agents.voice.fake_model import CorpusEchoModel, ScriptedModel, UnavailableModel, tool_call
 from app.agents.voice.session import VoiceConfig, VoiceSession, _seconds
 from app.agents.voice.store import MemorySessionStore
@@ -281,3 +282,54 @@ def test_protocol_rejects_garbage(bad):
 
     with pytest.raises(ValidationError):
         TypeAdapter(ClientMessage).validate_json(bad)
+
+
+# Seen live (docs/smoke/2026-11-06/web-e2e): Haiku with reasoning off narrated its plan, and every
+# sentence was spoken.
+@pytest.mark.parametrize(
+    "text",
+    [
+        "The listener is asking about China blocking a deal, and their position is on story 2.",
+        "The deal they mean is SoftBank's acquisition of ABB Robotics, so I'll answer from that story.",
+        "I should answer about the China block and note the mismatch briefly.",
+        'The "that deal" most plausibly refers to the SoftBank and ABB Robotics block, which is story 6.',
+    ],
+)
+def test_meta_sentences_are_detected(text):  # noqa: ANN001
+    assert is_meta_sentence(text)
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "China's regulators prohibited the acquisition.",
+        "This is the story about Anthropic launching new Claude models.",
+        "I should have more on that tomorrow.",
+        "The user base grew 40 percent.",
+        "It likely refers to a 2025 law.",
+    ],
+)
+def test_normal_sentences_are_spoken(text):  # noqa: ANN001
+    assert not is_meta_sentence(text)
+
+
+def test_spoken_form_hides_the_word_corpus():
+    assert spoken_form("The corpus doesn't name them, and nothing in the corpus gives a date.") == (
+        "What I have doesn't name them, and nothing in what I have gives a date."
+    )
+
+
+async def test_meta_sentences_are_not_spoken_and_the_turn_asks_for_spoken_words():
+    tts = FakeTTS()
+    model = ScriptedModel(
+        ["The listener is asking about the round. I should answer from story 1. It was Gridline [p:p2]."]
+    )
+    h = Harness(model, text_mode=False, tts=tts)
+    await h.s.handle(ClientHello(session_id="sess1", client=h.mode))
+    await h.s.handle(Control(action="play"))
+    await h.s.handle(Interrupt(segment_id="s1", offset_ms=10))
+    await h.s.handle(Utterance(text="who led it?"))
+    await h.settle()
+    assert tts.calls == ["It was Gridline."]
+    assert [m.text for m in h.of("transcript") if m.role == "agent"] == ["It was Gridline."]
+    assert model.requests[0].messages[-1].content.endswith(SPOKEN_REMINDER)
