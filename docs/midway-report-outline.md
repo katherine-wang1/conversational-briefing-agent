@@ -4,7 +4,6 @@
 
 ## Assignment requirements (cs329z.stanford.edu/project.html)
 
-- 3–4 pages, ICLR submission template (Overleaf link on project.html). References don't count toward the page limit. No prior-work section needed.
 - Sections, in order: Research Questions / Problem Specification → Environment & Data → Methods → Summary of Progress → References → AI-Use Disclosure Statement.
 - Graded "mainly on the Environment & Data, Methods, and Summary of Progress sections." Worth 5% of the course grade. The demo video is a separate 5% and goes in with a GitHub link and a README for running the prototype.
 - **Due Fri Nov 6, 11:59 pm (already passed).** Ed #56 mentions 3 free late days per course. Check that they apply to this milestone.
