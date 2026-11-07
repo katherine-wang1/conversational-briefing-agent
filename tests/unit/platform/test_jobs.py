@@ -145,6 +145,9 @@ def test_latest_slot():
     )
     assert scheduler.latest_slot(datetime(2026, 11, 5, 16, 0, tzinfo=UTC), slots) is None  # > 3 h late
     assert scheduler.latest_slot(datetime(2026, 11, 5, 1, 0, tzinfo=UTC), slots) is None
+    assert scheduler.latest_slot(datetime(2026, 11, 5, 16, 0, tzinfo=UTC), slots, grace=None) == datetime(
+        2026, 11, 5, 12, tzinfo=UTC
+    )
 
 
 async def test_tick_is_idempotent(db: Database):
@@ -156,9 +159,29 @@ async def test_tick_is_idempotent(db: Database):
     async with db.system_scope() as s:
         cos = await s.jobs.list(type="cos_daily")
         assert [j["dedupe_key"] for j in cos if j["user_id"] == uid] == [f"cos:{uid}:2026-11-05"]
-        assert await s.jobs.count(type="newsroom_run") == 1  # only the ai beat has a 12:00 UTC slot
+        # ai: its 12:00 UTC slot; energy / physical_ai: no digest yet, so bootstrapped from 06:00
+        runs = await s.jobs.list(type="newsroom_run")
+        assert sorted(j["dedupe_key"] for j in runs) == [
+            "newsroom:ai:2026110512",
+            "newsroom:energy:2026110506",
+            "newsroom:physical_ai:2026110506",
+        ]
         assert await s.jobs.count(type="spend_guard") == 1
     assert first
+
+
+async def test_tick_skips_bootstrap_when_digests_are_recent(db: Database):
+    q = JobQueue(db)
+    now = datetime(2026, 11, 5, 16, 0, tzinfo=UTC)  # > 3 h after every beat's latest slot
+    async with db.system_scope() as s:
+        for id_, beat, age_h in (("dg_e", "energy", 10), ("dg_a", "ai", 30)):
+            at = now - timedelta(hours=age_h)
+            await s.digests.insert(id=id_, run_id="live", beat=beat, at=at, version=1)
+    await scheduler.tick(db, q, now)
+    async with db.system_scope() as s:
+        keys = sorted(j["dedupe_key"] for j in await s.jobs.list(type="newsroom_run"))
+    # energy has a 10 h old digest: wait for its next slot; ai (30 h old) and physical_ai (none) bootstrap
+    assert keys == ["newsroom:ai:2026110512", "newsroom:physical_ai:2026110506"]
 
 
 # ---- handlers end to end (stub agents, fake TTS) ----
@@ -193,6 +216,41 @@ async def test_onboarding_to_ready_brief(db: Database, tmp_path):
         assert await s.source_packs.count(brief_id=b["id"]) == 1
 
 
+async def test_cos_daily_waits_for_a_pending_onboarding_seed(db: Database, tmp_path, monkeypatch):
+    from app.jobs import handlers
+
+    monkeypatch.setattr(handlers, "SEED_POLL_S", 0.02)
+    deps = make_deps(db, tmp_path)
+    uid = await make_user(db, timezone="UTC")
+    # Onboarding queued the seed; GET /api/briefs/today queued cos_daily right after it.
+    seed_id = await deps.queue.enqueue("onboarding_seed", {"text": "x"}, user_id=uid, dedupe_key="onb")
+    await deps.queue.enqueue("cos_daily", {"local_date": "2026-11-05"}, user_id=uid, dedupe_key="cos")
+    seed = await deps.queue.claim("w1", ["onboarding_seed"])  # another worker slot is running it
+    assert seed is not None and seed.id == seed_id
+    cos = await deps.queue.claim("w2", ["cos_daily"])
+    task = asyncio.create_task(Worker(deps, run_scheduler=False).execute(cos))
+    await asyncio.sleep(0.2)
+    assert not task.done()  # still waiting for the interests
+    await deps.queue.complete(seed_id)
+    assert await asyncio.wait_for(task, 5) == "done"
+    async with db.user_scope(uid) as s:
+        assert (await s.briefs.find_one(local_date=date(2026, 11, 5)))["status"] == "rendering"
+
+
+async def test_cos_daily_gives_up_waiting_for_a_stuck_seed(db: Database, tmp_path, monkeypatch):
+    from app.jobs import handlers
+
+    monkeypatch.setattr(handlers, "SEED_POLL_S", 0.02)
+    monkeypatch.setattr(handlers, "SEED_WAIT_S", 0.1)
+    deps = make_deps(db, tmp_path)
+    uid = await make_user(db, timezone="UTC")
+    await deps.queue.enqueue("onboarding_seed", {"text": "x"}, user_id=uid, dedupe_key="onb")
+    await deps.queue.claim("w1", ["onboarding_seed"])
+    await deps.queue.enqueue("cos_daily", {"local_date": "2026-11-05"}, user_id=uid, dedupe_key="cos")
+    cos = await deps.queue.claim("w2", ["cos_daily"])
+    assert await asyncio.wait_for(Worker(deps, run_scheduler=False).execute(cos), 5) == "done"
+
+
 async def test_brief_without_tts_is_ready_without_audio(db: Database, tmp_path):
     deps = make_deps(db, tmp_path, tts=False)
     uid = await make_user(db, timezone="UTC")
@@ -213,6 +271,7 @@ async def test_newsroom_run_writes_shared_digest(db: Database, tmp_path):
                 url=f"https://x/{cfg.id}",
                 title=f"Story from {cfg.id}",
                 rank=1,
+                extra={"feed_position": 1},  # real adapters set it (jsonb column)
             )
         ]
 
@@ -227,6 +286,7 @@ async def test_newsroom_run_writes_shared_digest(db: Database, tmp_path):
         assert d is not None and d["version"] == "stub"
         assert await s.digest_entries.count(digest_id=d["id"]) > 5
         assert await s.headline_observations.count(beat="ai") > 5
+        assert (await s.headline_observations.find_one(beat="ai"))["extra"] == {"feed_position": 1}
         assert (await s.newsroom_runs.find_one(beat="ai"))["status"] == "done"
 
 

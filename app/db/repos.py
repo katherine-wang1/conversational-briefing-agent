@@ -317,7 +317,7 @@ USER_TABLES: tuple[str, ...] = (
 
 class HeadlineObservationsRepo(Repo):
     table = "headline_observations"
-    json_cols = frozenset({"engagement"})
+    json_cols = frozenset({"engagement", "extra"})
     default_order = "observed_at"
 
 

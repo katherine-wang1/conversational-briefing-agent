@@ -6,6 +6,7 @@ StubAgents otherwise; see app/jobs/ports.py).
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from collections.abc import Awaitable, Callable
 from datetime import UTC, date, datetime, timedelta
@@ -203,9 +204,34 @@ async def latest_digests(deps: Deps, at: datetime) -> list[Digest]:
     return out
 
 
+# A first brief requested right after onboarding (GET /api/briefs/today, or the scheduler) must not
+# start before onboarding_seed has stored the user's interests, or it is built for nobody in particular.
+SEED_WAIT_S = 120.0
+SEED_POLL_S = 1.0
+
+
+async def wait_for_onboarding_seed(deps: Deps, uid: UUID) -> None:
+    waited = 0.0
+    while True:
+        async with deps.db.system_scope() as s:
+            row = await s.fetch_one(
+                "select count(*) as n from jobs where type = 'onboarding_seed' and user_id = %s"
+                " and status in ('queued', 'running')",
+                [str(uid)],
+            )
+        if not row or not row["n"]:
+            return
+        if waited >= SEED_WAIT_S:
+            log.warning("cos_daily for %s: onboarding_seed pending after %.0f s; going ahead", uid, waited)
+            return
+        await asyncio.sleep(SEED_POLL_S)
+        waited += SEED_POLL_S
+
+
 @handler("cos_daily")
 async def cos_daily(deps: Deps, job: Job) -> None:
     uid = _need_user(job)
+    await wait_for_onboarding_seed(deps, uid)
     now = deps.clock()
     arm = job.payload.get("arm", "full")
     async with deps.db.user_scope(uid) as s:

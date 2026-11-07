@@ -18,12 +18,17 @@ RUN if [ -f web/package.json ]; then \
     fi
 
 FROM python:3.12-slim AS runtime
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PORT=8000
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PORT=8000 \
+    FASTEMBED_CACHE_PATH=/srv/var/fastembed
 WORKDIR /srv
 COPY pyproject.toml README.md ./
 COPY app ./app
 COPY eval ./eval
-RUN pip install -e .
+# The newsroom extra (fastembed, rapidfuzz, numpy) is needed by the worker's newsroom_run.
+RUN pip install -e ".[newsroom]"
+# Bake the clustering embedding model (config/agent.yaml newsroom.embedder) into the image so a
+# fresh worker doesn't download it on its first run.
+RUN python -c "from fastembed import TextEmbedding; TextEmbedding('BAAI/bge-small-en-v1.5')"
 COPY config ./config
 COPY supabase ./supabase
 COPY --from=web /src/web/dist ./web/dist
