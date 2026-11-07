@@ -4,6 +4,8 @@ import type { AudioOutput } from "./output";
 export interface Position {
   segment_id: string;
   offset_ms: number;
+  /** This segment finished playing (on the last one, the brief ended). */
+  completed?: boolean;
 }
 
 export interface BriefPlayerEvents {
@@ -101,6 +103,8 @@ export class BriefPlayer {
       offsetMs = 0;
       if (run !== this.run) return;
       if (result === "stopped") return;
+      if (result === "ended")
+        this.ev.onPosition?.({ segment_id: seg.sid, offset_ms: Math.round(seg.duration_ms), completed: true });
       // "error": skip the broken segment rather than stalling the brief.
       this.evict(i - 1);
     }

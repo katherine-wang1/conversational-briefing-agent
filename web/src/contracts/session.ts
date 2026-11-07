@@ -32,6 +32,7 @@ export interface Playback {
   type: "playback";
   segment_id: string;
   offset_ms: number;
+  completed?: boolean; // this segment finished playing; on the last one, the brief ended
 }
 
 export interface Interrupt {
@@ -107,7 +108,7 @@ export type ServerMessage = StateMsg | TranscriptMsg | TtsChunk | ResumeBrief | 
 /** Field names per message type, mirrored from the pydantic models (checked by a unit test). */
 export const CLIENT_FIELDS: Record<ClientMessage["type"], readonly string[]> = {
   hello: ["type", "session_id", "client"],
-  playback: ["type", "segment_id", "offset_ms"],
+  playback: ["type", "segment_id", "offset_ms", "completed"],
   interrupt: ["type", "segment_id", "offset_ms"],
   utterance: ["type", "text", "stt", "end_of_speech_ts"],
   utterance_audio: ["type", "format", "data_b64", "end_of_speech_ts"],

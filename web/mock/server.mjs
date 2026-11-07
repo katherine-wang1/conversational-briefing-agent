@@ -17,13 +17,14 @@ import {
   history,
   initialInterests,
   initialQuestions,
+  transcript,
 } from "./fixtures.mjs";
 
 // Field lists mirrored from app/contracts/session.py (extra="forbid"): reject unknown fields so
 // the client can't drift from the contract without the mock noticing.
 const CLIENT_FIELDS = {
   hello: ["type", "session_id", "client"],
-  playback: ["type", "segment_id", "offset_ms"],
+  playback: ["type", "segment_id", "offset_ms", "completed"],
   interrupt: ["type", "segment_id", "offset_ms"],
   utterance: ["type", "text", "stt", "end_of_speech_ts"],
   utterance_audio: ["type", "format", "data_b64", "end_of_speech_ts"],
@@ -148,10 +149,11 @@ export function startMockServer({
 
     if (p === "/api/me" && m === "GET") return json(res, 200, db.me);
     if (p === "/api/me" && m === "PATCH") {
+      // Real backend shape (MePatch): profile fields flat, client settings under `settings`.
       const body = await readBody(req);
       if ("research_consent" in body) db.me.research_consent = !!body.research_consent;
-      delete body.research_consent;
-      db.me.settings = { ...db.me.settings, ...body };
+      for (const k of ["brief_time", "timezone"]) if (k in body) db.me.settings[k] = body[k];
+      db.me.settings = { ...db.me.settings, ...(body.settings ?? {}) };
       return json(res, 200, db.me);
     }
     if (p === "/api/onboarding" && m === "POST") {
@@ -175,17 +177,24 @@ export function startMockServer({
           explicit_pin: false,
           source: "onboarding",
         });
-      return json(res, 200, db.me);
+      return json(res, 202, { status: "seeding", next: "/api/briefs/today" });
     }
-    if (p === "/api/briefs/today" && m === "GET")
+    if (p === "/api/briefs/today" && m === "GET") {
+      if (!db.me.onboarded) return json(res, 409, { status: "onboarding_required", local_date: script.local_date });
       return json(res, 200, { brief_id: BRIEF_ID, status: "ready", script, manifest });
+    }
     if (p === "/api/sessions" && m === "POST") {
       const id = `sess-${++sessionCounter}`;
       db.sessions.set(id, { frames: [] });
-      return json(res, 200, { session_id: id, ws_url: `/ws/session/${id}` });
+      return json(res, 201, { session_id: id, ws_url: `ws://localhost:${port}/ws/session/${id}` });
     }
     if (p === "/api/history" && m === "GET") return json(res, 200, history());
-    if (p === "/api/memory/interests" && m === "GET") return json(res, 200, db.interests);
+    const tr = p.match(/^\/api\/sessions\/([^/]+)\/transcript$/);
+    if (tr && m === "GET") {
+      const t = transcript(decodeURIComponent(tr[1]));
+      return t ? json(res, 200, t) : json(res, 404, { detail: "not_found" });
+    }
+    if (p === "/api/memory/interests" && m === "GET") return json(res, 200, { interests: db.interests });
     const interest = p.match(/^\/api\/memory\/interests\/(.+)$/);
     if (interest) {
       const id = decodeURIComponent(interest[1]);
@@ -201,7 +210,7 @@ export function startMockServer({
         return json(res, 200, it);
       }
     }
-    if (p === "/api/questions" && m === "GET") return json(res, 200, db.questions);
+    if (p === "/api/questions" && m === "GET") return json(res, 200, { questions: db.questions });
     const q = p.match(/^\/api\/questions\/(.+)$/);
     if (q && m === "PATCH") {
       const it = db.questions.find((x) => x.id === decodeURIComponent(q[1]));
@@ -210,8 +219,9 @@ export function startMockServer({
       return json(res, 200, it);
     }
     if (p === "/api/ratings" && m === "POST") {
-      db.ratings.push(await readBody(req));
-      return json(res, 204);
+      const body = await readBody(req);
+      db.ratings.push(body);
+      return json(res, 201, { id: `ra-${db.ratings.length}`, ...body });
     }
     return json(res, 404, { detail: `no route ${m} ${p}` });
   });

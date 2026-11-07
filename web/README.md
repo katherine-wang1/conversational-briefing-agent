@@ -17,7 +17,7 @@ npm run dev
 BACKEND_URL=http://localhost:8000 npm run dev   # against the real backend (W-E)
 ```
 
-The dev server proxies `/api`, `/ws` and `/audio` to `BACKEND_URL`, so the app is same-origin. In dev, sign in with **Dev sign-in (bypass)**; it sends `Authorization: Bearer $VITE_DEV_TOKEN` (default `dev`). See `.env.example`. For the iPhone, see `docs/iphone-checklist.md` (HTTPS tunnel).
+The dev server proxies `/api`, `/ws`, `/audio` and `/media` (the real backend's local brief audio) to `BACKEND_URL`, so the app is same-origin. In dev, sign in with **Dev sign-in (bypass)**; it sends `Authorization: Bearer $VITE_DEV_TOKEN` (default `dev`). See `.env.example`. For the iPhone, see `docs/iphone-checklist.md` (HTTPS tunnel).
 
 ## Check
 

@@ -26,6 +26,7 @@ import { EnergyDetector, SileroDetector, type VoiceDetector } from "../audio/vad
 import { resolveAudioUrl } from "../lib/api";
 import type { ClientSettings } from "../lib/settings";
 import { Store } from "../lib/store";
+import { clearProgress, loadProgress, saveProgress } from "./progress";
 import { SessionSocket } from "./socket";
 
 export type Phase =
@@ -160,11 +161,13 @@ export class Conversation {
       {
         onSegment: (i, seg) => {
           this.patch({ segmentIndex: i, storyRef: seg.story_ref ?? null });
+          saveProgress(manifest.brief_id, i);
           const story = this.script?.stories.find((st) => st.story_ref === seg.story_ref);
           setNowPlaying(story?.headline ?? "Today's briefing");
         },
         onPosition: (pos) => this.socket?.send({ type: "playback", ...pos }),
         onEnded: () => {
+          clearProgress();
           setPlaybackState("paused");
           if (this.s.phase === "playing") this.patch({ phase: "open_floor" });
           this.maybeArmBargeIn();
@@ -172,7 +175,11 @@ export class Conversation {
       },
       resolveAudioUrl,
     );
-    void this.player.preload(0);
+    // Resume where this device left off in this brief (reload, or iOS evicting the tab).
+    const saved = loadProgress(manifest.brief_id);
+    const at = saved !== null && saved < manifest.segments.length ? saved : 0;
+    if (this.s.phase === "idle" && at > 0) this.patch({ segmentIndex: at, storyRef: manifest.segments[at].story_ref ?? null });
+    void this.player.preload(at);
     if (this.s.phase === "idle") this.patch({ phase: "ready" });
   }
 

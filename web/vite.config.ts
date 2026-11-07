@@ -2,7 +2,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig, loadEnv } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
-// The dev server proxies /api, /ws and /audio to BACKEND_URL so the app is same-origin in dev
+// The dev server proxies /api, /ws, /audio (mock) and /media (real backend, AUDIO_STORAGE=local) to BACKEND_URL so the app is same-origin in dev
 // (one host to expose to the phone). Default: the mock server in web/mock (port 8787).
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
           // App shell only (TDD §13.4): no API, audio or VAD-model caching.
           globPatterns: ["**/*.{js,css,html,svg,png}"],
           globIgnores: ["vad/**"],
-          navigateFallbackDenylist: [/^\/api\//, /^\/ws\//, /^\/audio\//, /^\/vad\//],
+          navigateFallbackDenylist: [/^\/api\//, /^\/ws\//, /^\/audio\//, /^\/media\//, /^\/vad\//],
           runtimeCaching: [],
         },
       }),
@@ -62,6 +62,7 @@ export default defineConfig(({ mode }) => {
       proxy: {
         "/api": { target: backend, changeOrigin: true },
         "/audio": { target: backend, changeOrigin: true },
+        "/media": { target: backend, changeOrigin: true },
         "/healthz": { target: backend, changeOrigin: true },
         "/ws": {
           target: wsBackend,
@@ -77,6 +78,7 @@ export default defineConfig(({ mode }) => {
       proxy: {
         "/api": { target: backend, changeOrigin: true },
         "/audio": { target: backend, changeOrigin: true },
+        "/media": { target: backend, changeOrigin: true },
         "/ws": {
           target: wsBackend,
           ws: true,

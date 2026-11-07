@@ -43,6 +43,7 @@ export function Today({ openQuestions }: { openQuestions: number }) {
         if (b.status === "ready" && b.manifest) {
           if (conv.state.get().phase === "idle") conv.load(b.script, b.manifest);
         } else if (b.status === "pending") timer = setTimeout(load, 4000);
+        else if (b.status === "onboarding_required") navigate("onboarding");
       } catch (err) {
         if (!stop) setLoadError(String(err));
       }
@@ -68,7 +69,7 @@ export function Today({ openQuestions }: { openQuestions: number }) {
   // Interrupt runs on pointerdown by default (faster); pausing doesn't need user activation.
   const onTalk = (ev: "down" | "click") => {
     if (s.phase === "ready") {
-      if (ev === "click") void conv.play(brief!.brief_id).catch((e) => alert(String(e)));
+      if (ev === "click" && brief?.brief_id) void conv.play(brief.brief_id).catch((e) => alert(String(e)));
       return;
     }
     if ((ev === "down") === (tapEvent === "pointerdown")) conv.interrupt("tap");
@@ -94,7 +95,12 @@ export function Today({ openQuestions }: { openQuestions: number }) {
       </header>
 
       {loadError && <div className="banner error">Couldn't load today's brief: {loadError}</div>}
-      {brief?.status === "pending" && <div className="banner">Preparing your brief… this can take a minute.</div>}
+      {brief?.status === "pending" && (
+        <div className="banner" data-testid="preparing">
+          Preparing your brief… this can take a few minutes.
+        </div>
+      )}
+      {brief?.status === "onboarding_required" && <div className="banner">Finish onboarding to get your first brief.</div>}
       {brief?.status === "failed" && <div className="banner error">Today's brief failed to build.</div>}
 
       <section className="story-card" data-testid="story-card">
@@ -188,7 +194,13 @@ export function Today({ openQuestions }: { openQuestions: number }) {
           <div className={`orb ${s.phase}`} />
         )}
         <div className="talk-label" data-testid="phase" data-phase={s.phase}>
-          {s.phase === "idle" ? (brief ? "" : "Loading…") : TALK_LABEL[s.phase]}
+          {s.phase === "idle"
+            ? brief
+              ? ""
+              : "Loading…"
+            : s.phase === "ready" && s.segmentIndex > 0
+              ? "Resume today's brief"
+              : TALK_LABEL[s.phase]}
         </div>
         {s.phase === "listening" && (
           <div className="small muted">{s.speechDetected ? "I'll answer when you pause" : "Go ahead"}</div>
@@ -200,7 +212,7 @@ export function Today({ openQuestions }: { openQuestions: number }) {
             onClick={(e) => {
               e.stopPropagation();
               if (s.phase === "playing") conv.interrupt("button");
-              else void conv.play(brief!.brief_id);
+              else if (brief?.brief_id) void conv.play(brief.brief_id);
             }}
             data-testid="interrupt-btn"
           >
