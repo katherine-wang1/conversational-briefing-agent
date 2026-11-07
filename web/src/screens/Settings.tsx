@@ -1,10 +1,11 @@
-import type { Me, Settings } from "../contracts/api";
+import type { Me } from "../contracts/api";
 import { browserSttSupported } from "../audio/browserStt";
 import { mediaSessionSupported } from "../audio/mediaSession";
-import { api } from "../lib/api";
+import { PLAYBACK_RATES } from "../audio/output";
 import { auth, signOut } from "../lib/auth";
 import { settings, type ClientSettings } from "../lib/settings";
 import { useStore } from "../lib/store";
+import { updateSetting } from "../lib/updateSetting";
 
 const VOICES = ["default", "alloy", "verse", "sage"];
 
@@ -12,12 +13,7 @@ export function SettingsScreen({ me }: { me: Me | null }) {
   const s = useStore(settings);
   const a = useStore(auth);
 
-  /** Update locally; sync the server-side ones to PATCH /api/me (best effort). */
-  const set = <K extends keyof ClientSettings>(k: K, v: ClientSettings[K]) => {
-    settings.patch({ [k]: v } as Partial<ClientSettings>);
-    const serverKeys: (keyof Settings)[] = ["brief_time", "voice", "stt_mode", "auto_resume", "headphones_mode"];
-    if ((serverKeys as string[]).includes(k)) void api.patchMe({ [k]: v } as Partial<Settings>).catch(() => {});
-  };
+  const set = updateSetting;
 
   return (
     <div className="page settings">
@@ -38,6 +34,24 @@ export function SettingsScreen({ me }: { me: Me | null }) {
       </label>
 
       <fieldset className="field">
+        <legend>Voice speed</legend>
+        <div className="seg" role="radiogroup" aria-label="Voice speed" data-testid="speed-setting">
+          {PLAYBACK_RATES.map((r) => (
+            <button
+              key={r}
+              role="radio"
+              aria-checked={s.playback_rate === r}
+              className={s.playback_rate === r ? "on" : ""}
+              onClick={() => set("playback_rate", r)}
+            >
+              {r.toFixed(1)}×
+            </button>
+          ))}
+        </div>
+        <span className="small muted">For the brief and spoken answers. The pitch stays natural.</span>
+      </fieldset>
+
+      <fieldset className="field">
         <legend>Speech recognition</legend>
         <div className="seg">
           <button className={s.stt_mode === "browser" ? "on" : ""} onClick={() => set("stt_mode", "browser")}>
@@ -47,7 +61,9 @@ export function SettingsScreen({ me }: { me: Me | null }) {
             Server
           </button>
         </div>
-        {!browserSttSupported() && <span className="small muted">This browser has no Web Speech API; server STT is used.</span>}
+        {!browserSttSupported() && (
+          <span className="small muted">This browser has no Web Speech API; server STT is used.</span>
+        )}
       </fieldset>
 
       <label className="check">
@@ -62,11 +78,31 @@ export function SettingsScreen({ me }: { me: Me | null }) {
         </span>
       </label>
 
+      <label className="check switch-row">
+        <input
+          type="checkbox"
+          role="switch"
+          checked={s.show_debug}
+          onChange={(e) => set("show_debug", e.target.checked)}
+          data-testid="show-debug"
+        />
+        <span>
+          Show what's happening
+          <span className="small muted block">
+            A live log next to the player: what I heard, each model call (time, tokens, cost), searches, and audio
+            timing.
+          </span>
+        </span>
+      </label>
+
       <details className="field">
         <summary>Advanced (voice detection)</summary>
         <label className="field">
           <span>Voice detector</span>
-          <select value={s.vad_engine} onChange={(e) => set("vad_engine", e.target.value as ClientSettings["vad_engine"])}>
+          <select
+            value={s.vad_engine}
+            onChange={(e) => set("vad_engine", e.target.value as ClientSettings["vad_engine"])}
+          >
             <option value="silero">Silero (default)</option>
             <option value="energy">Simple energy</option>
           </select>

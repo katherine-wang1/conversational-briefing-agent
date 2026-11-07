@@ -61,6 +61,23 @@ export function briefScript(today = new Date()) {
   };
 }
 
+/** Citation id -> what the real backend resolves it to (app/agents/voice/citations.py). */
+export const SOURCES = {
+  "atl-1": { source: "Northwind AI", url: "https://example.com/northwind/atlas-3", title: "Introducing Atlas-3" },
+  "atl-2": { source: "arXiv", url: "https://example.com/arxiv/2611.01234", title: "Atlas-3 technical report" },
+  "atl-3": { source: "Northwind blog", url: "https://example.com/northwind/funding", title: "Our Series B, led by Halden Ventures" },
+  "lc-3": { source: "arXiv", url: "https://example.com/arxiv/2611.04321", title: "Long-context retrieval under pressure" },
+  "hd-0": { source: "Reuters", url: "https://example.com/reuters/halden-chip", title: "Halden delays inference chip by a quarter" },
+};
+
+/** `citations` -> `sources` (CitationSource[]), like TranscriptMsg.sources from the real server. */
+export function sourcesFor(citations) {
+  return citations.map((c) => {
+    const id = c.replace(/^p:/, "");
+    return { passage_id: id, source: null, url: null, title: null, ...(SOURCES[id] ?? {}) };
+  });
+}
+
 /** Canned answers keyed by a keyword test on the user's utterance. */
 export function answerFor(text) {
   const t = text.toLowerCase();
@@ -148,7 +165,7 @@ export function transcript(sessionId) {
   return {
     turns: [
       { seq: 0, role: "system", text: "", action: "state" },
-      { seq: 1, role: "agent", text: "Halden pushed its inference chip launch by a quarter.", citations: ["p:hd-0"] },
+      { seq: 1, role: "agent", text: "Halden pushed its inference chip launch by a quarter.", citations: ["hd-0"], sources: sourcesFor(["hd-0"]) },
       { seq: 2, role: "user", text: "Why did it slip?", citations: [] },
       { seq: 3, role: "agent", text: "They didn't say. I'll look into it and tell you tomorrow.", citations: [] },
     ],

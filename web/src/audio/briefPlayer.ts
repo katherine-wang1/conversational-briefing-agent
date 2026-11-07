@@ -99,7 +99,7 @@ export class BriefPlayer {
       void this.preload(i + 1);
       this.ev.onSegment?.(i, seg);
       this.ev.onPosition?.({ segment_id: seg.sid, offset_ms: offsetMs });
-      const result = await this.out.play(src, offsetMs, "brief");
+      const result = await this.out.play(src, offsetMs, "brief", seg.sid);
       offsetMs = 0;
       if (run !== this.run) return;
       if (result === "stopped") return;

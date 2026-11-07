@@ -111,6 +111,7 @@ async function main() {
     await scenarioSilero(browser, base);
     await scenarioBargeIn(browser, base);
     await scenarioRating(browser, base);
+    await scenarioLiveLog(browser, base);
     validateFramesWithPydantic(await (await fetch(`http://localhost:${MOCK_PORT}/__mock/log`)).json());
   } finally {
     await browser.close();
@@ -162,6 +163,9 @@ async function scenarioBrowserStt(browser, base) {
   const page = await newPage(browser, base, "?vad=energy&stt=browser");
   await startAndPlay(page, 2);
   check("brief audio is playing on the single audio element", await conv(page, "!c.out.el.paused && c.out.owner === 'brief'"));
+  const rate = await conv(page, "({r: c.out.el.playbackRate, p: c.out.el.preservesPitch, seg: c.state.get().segmentIndex})");
+  check("brief plays at the default 1.2x with pitch preserved, after segment changes", rate.r === 1.2 && rate.p === true, JSON.stringify(rate));
+  check("talk button offers 'Tap to talk' while playing", (await page.getByTestId("interrupt-btn").textContent()) === "Tap to talk");
   await page.waitForTimeout(2200);
   const playbacks = (await frames(page)).filter((f) => f.dir === "out" && f.msg.type === "playback");
   check("playback reported (segment changes + every 2 s)", playbacks.length >= 3, `${playbacks.length} frames`);
@@ -198,6 +202,13 @@ async function scenarioBrowserStt(browser, base) {
   check("end-of-speech -> first answer audio measured", typeof latency === "number", `${latency} ms against mock`);
   await page.waitForFunction(() => document.querySelector('[data-testid="transcript"]')?.textContent.includes("Halden Ventures"));
   check("agent transcript shown with citations", (await page.locator(".cite").count()) > 0);
+  const cite = await page.locator("a.cite").first().evaluate((a) => ({ text: a.textContent, href: a.href }));
+  check(
+    "citations show the source name with a link, not a passage id",
+    cite.text.includes("Northwind blog") && cite.href.startsWith("https://") && !/atl-3|p:/.test(cite.text),
+    JSON.stringify(cite),
+  );
+  check("answer audio plays at the same speed", await conv(page, "c.out.el.playbackRate === 1.2"));
 
   await waitPhase(page, "playing", 15000);
   const segAfter = await conv(page, "c.state.get().segmentIndex");
@@ -244,7 +255,8 @@ async function scenarioServerStt(browser, base) {
   console.log("\n[2] server STT: utterance_audio (MediaRecorder webm/opus)");
   const page = await newPage(browser, base, "?vad=energy&stt=server");
   await startAndPlay(page, 1);
-  await tapTalk(page);
+  await page.getByTestId("interrupt-btn").click(); // the "Tap to talk" pill
+  check("the 'Tap to talk' pill interrupts", (await phase(page)) === "listening");
   await waitPhase(page, "thinking", 10000);
   await page.waitForFunction(
     () => window.__conv.frames.some((f) => f.dir === "out" && f.msg.type === "utterance_audio"),
@@ -314,8 +326,66 @@ async function scenarioRating(browser, base) {
   await page.context().close();
 }
 
+async function scenarioLiveLog(browser, base) {
+  console.log("\n[6] settings: speed + live log persist; the log shows client and server events");
+  const ctx = await browser.newContext({ permissions: ["microphone"], viewport: { width: 1280, height: 800 } });
+  await ctx.addInitScript(STT_STUB);
+  const page = await ctx.newPage();
+  page.on("pageerror", (e) => console.log("    [pageerror]", e.message));
+  await page.goto(`${base}/?vad=energy#/settings`);
+  if (await page.getByTestId("dev-login").isVisible().catch(() => false)) await page.getByTestId("dev-login").click();
+  await page.getByTestId("show-debug").waitFor();
+  check("live log is off by default", !(await page.getByTestId("show-debug").isChecked()));
+  await page.getByTestId("show-debug").check();
+  await page.getByTestId("speed-setting").getByRole("radio", { name: "1.3×" }).click();
+  await page.waitForTimeout(300);
+  const me = await (await fetch(`http://localhost:${MOCK_PORT}/api/me`, { headers: { Authorization: "Bearer dev" } })).json();
+  check("settings reach the server under `settings`", me.settings.show_debug === true && me.settings.playback_rate === 1.3, JSON.stringify(me.settings));
+  await page.reload();
+  await page.getByTestId("show-debug").waitFor();
+  check("settings survive a reload", (await page.getByTestId("show-debug").isChecked()) && (await page.getByRole("radio", { name: "1.3×" }).getAttribute("aria-checked")) === "true");
+
+  await page.goto(`${base}/?vad=energy#/today`);
+  await page.waitForSelector('[data-phase="ready"]', { timeout: 15000 });
+  await page.getByTestId("livelog").waitFor();
+  const [player, panel] = await Promise.all([page.locator(".today").boundingBox(), page.getByTestId("livelog").boundingBox()]);
+  check("desktop: the log is a side panel next to the player", panel.x >= player.x + player.width - 1 && panel.height > 300, `${JSON.stringify(player)} ${JSON.stringify(panel)}`);
+  await startAndPlay(page, 1);
+  check("playback at the chosen 1.3x", await conv(page, "c.out.el.playbackRate === 1.3"));
+  await page.evaluate(() => (window.__sttText = "who funded that?"));
+  await tapTalk(page);
+  await waitPhase(page, "answering", 10000);
+  await page.waitForFunction(() => document.querySelectorAll('[data-testid="log-row"][data-kind="speak"]').length > 0, null, { timeout: 8000 });
+  const rows = await page.locator('[data-testid="log-row"]').evaluateAll((els) => els.map((e) => ({ k: e.dataset.kind, f: e.dataset.from, t: e.textContent })));
+  const has = (k, f) => rows.some((r) => r.k === k && r.f === f);
+  check("log: client websocket, frames, audio, latency and STT entries", has("ws", "client") && has("out", "client") && has("in", "client") && has("audio", "client") && has("latency", "client") && has("stt", "client"), [...new Set(rows.map((r) => `${r.f}:${r.k}`))].join(","));
+  check("log: server state, heard, model and spoken-sentence entries", has("state", "server") && has("heard", "server") && has("model", "server") && has("speak", "server"));
+  check("log: no audio payloads", rows.every((r) => r.t.length < 800));
+  const scrolled = await page.locator(".livelog-list").evaluate((el) => el.scrollHeight - el.scrollTop - el.clientHeight < 60);
+  check("log: auto-scrolls to the newest entry", scrolled);
+  await page.getByTestId("livelog-clear").click();
+  check("log: clear empties it", (await page.locator('[data-testid="log-row"]').count()) < 3);
+
+  // Phone width: a drawer behind a small toggle.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForTimeout(400);
+  const hidden = await page.getByTestId("livelog").evaluate((el) => el.getBoundingClientRect().top >= window.innerHeight - 2);
+  await page.getByTestId("livelog-toggle").click();
+  await page.waitForTimeout(400);
+  const shown = await page.getByTestId("livelog").evaluate((el) => el.getBoundingClientRect().top < window.innerHeight * 0.6);
+  check("phone: the log is a slide-up drawer opened by a toggle", hidden && shown, `hidden=${hidden} shown=${shown}`);
+
+  // Leave the mock as we found it for anyone reusing it.
+  await fetch(`http://localhost:${MOCK_PORT}/api/me`, {
+    method: "PATCH",
+    headers: { Authorization: "Bearer dev", "Content-Type": "application/json" },
+    body: JSON.stringify({ settings: { show_debug: false, playback_rate: 1.2 } }),
+  });
+  await ctx.close();
+}
+
 function validateFramesWithPydantic(log) {
-  console.log("\n[6] protocol frames validated against app/contracts/session.py");
+  console.log("\n[7] protocol frames validated against app/contracts/session.py");
   const all = Object.values(log).flat();
   const errors = all.filter((f) => f.dir === "out" && f.msg.type === "error");
   check("mock reported no contract errors", errors.length === 0, JSON.stringify(errors.slice(0, 3)));

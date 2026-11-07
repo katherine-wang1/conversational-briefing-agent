@@ -62,7 +62,13 @@ export interface Control {
   action: ControlAction;
 }
 
-export type ClientMessage = ClientHello | Playback | Interrupt | Utterance | UtteranceAudio | Control;
+/** Ask the server for `debug` events for this session (the live log). */
+export interface DebugSubscribe {
+  type: "debug_subscribe";
+  enabled?: boolean;
+}
+
+export type ClientMessage = ClientHello | Playback | Interrupt | Utterance | UtteranceAudio | Control | DebugSubscribe;
 
 // ---- server -> client --------------------------------------------------------------------------
 
@@ -71,12 +77,21 @@ export interface StateMsg {
   state: SessionState;
 }
 
+/** A citation resolved for display (TODO 1.22). */
+export interface CitationSource {
+  passage_id: string;
+  source?: string | null;
+  url?: string | null;
+  title?: string | null;
+}
+
 export interface TranscriptMsg {
   type: "transcript";
   role: "user" | "agent";
   text: string;
   turn_id: string;
   citations?: string[];
+  sources?: CitationSource[];
 }
 
 export interface TtsChunk {
@@ -103,7 +118,16 @@ export interface ErrorMsg {
   message: string;
 }
 
-export type ServerMessage = StateMsg | TranscriptMsg | TtsChunk | ResumeBrief | BookmarkCreated | ErrorMsg;
+/** Live-log event from the server (only after debug_subscribe). */
+export interface DebugMsg {
+  type: "debug";
+  kind: string;
+  text: string;
+  ts: number; // epoch seconds
+  data?: Record<string, unknown>;
+}
+
+export type ServerMessage = StateMsg | TranscriptMsg | TtsChunk | ResumeBrief | BookmarkCreated | ErrorMsg | DebugMsg;
 
 /** Field names per message type, mirrored from the pydantic models (checked by a unit test). */
 export const CLIENT_FIELDS: Record<ClientMessage["type"], readonly string[]> = {
@@ -113,15 +137,17 @@ export const CLIENT_FIELDS: Record<ClientMessage["type"], readonly string[]> = {
   utterance: ["type", "text", "stt", "end_of_speech_ts"],
   utterance_audio: ["type", "format", "data_b64", "end_of_speech_ts"],
   control: ["type", "action"],
+  debug_subscribe: ["type", "enabled"],
 };
 
 export const SERVER_FIELDS: Record<ServerMessage["type"], readonly string[]> = {
   state: ["type", "state"],
-  transcript: ["type", "role", "text", "turn_id", "citations"],
+  transcript: ["type", "role", "text", "turn_id", "citations", "sources"],
   tts_chunk: ["type", "seq", "format", "data_b64", "sentence_id"],
   resume_brief: ["type", "segment_id"],
   bookmark_created: ["type", "question_id"],
   error: ["type", "code", "message"],
+  debug: ["type", "kind", "text", "ts", "data"],
 };
 
 /**
@@ -144,7 +170,7 @@ export function parseServerMessage(raw: string): ServerMessage | null {
         : null;
     case "transcript":
       return (m.role === "user" || m.role === "agent") && typeof m.text === "string"
-        ? ({ citations: [], turn_id: "", ...m } as unknown as TranscriptMsg)
+        ? ({ citations: [], sources: [], turn_id: "", ...m } as unknown as TranscriptMsg)
         : null;
     case "tts_chunk":
       return typeof m.seq === "number" && typeof m.data_b64 === "string"
@@ -156,6 +182,10 @@ export function parseServerMessage(raw: string): ServerMessage | null {
       return typeof m.question_id === "string" ? (m as unknown as BookmarkCreated) : null;
     case "error":
       return { type: "error", code: String(m.code ?? "unknown"), message: String(m.message ?? "") };
+    case "debug":
+      return typeof m.text === "string"
+        ? { type: "debug", kind: String(m.kind ?? "info"), text: m.text, ts: Number(m.ts) || Date.now() / 1000, data: (m.data as Record<string, unknown>) ?? {} }
+        : null;
     default:
       return null;
   }

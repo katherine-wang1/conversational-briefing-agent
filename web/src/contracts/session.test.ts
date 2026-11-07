@@ -23,7 +23,7 @@ describe("session contract mirror", () => {
   const classes = pyClasses();
 
   it("finds the python message classes", () => {
-    expect(Object.keys(classes).length).toBe(12);
+    expect(Object.keys(classes).length).toBe(14);
   });
 
   it("client message fields match app/contracts/session.py", () => {
@@ -64,7 +64,8 @@ describe("parseServerMessage", () => {
       segment_id: "s12",
     });
     const t = parseServerMessage('{"type":"transcript","role":"agent","text":"hi","turn_id":"t1"}');
-    expect(t).toMatchObject({ role: "agent", citations: [] });
+    expect(t).toMatchObject({ role: "agent", citations: [], sources: [] });
+    expect(parseServerMessage('{"type":"debug","kind":"model","text":"x","ts":1}')).toMatchObject({ kind: "model", data: {} });
   });
 
   it("rejects malformed and unknown frames without throwing", () => {

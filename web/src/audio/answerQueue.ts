@@ -72,7 +72,7 @@ export class AnswerQueue {
         this.ev.onStart?.();
       }
       this.ev.onSentence?.(item.sentence_id);
-      const result = await this.out.play(item.url, 0, "answer");
+      const result = await this.out.play(item.url, 0, "answer", item.sentence_id);
       URL.revokeObjectURL(item.url);
       if (result === "stopped" && gen === this.gen) {
         // Something else took over the output (e.g. the brief resumed): drop the rest.

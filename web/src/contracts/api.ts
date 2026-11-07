@@ -2,6 +2,7 @@
 // TDD §10.2. The mock server (web/mock) implements exactly these. If W-E's API differs, adapt here.
 
 import type { AudioManifest, BriefScript, Interest } from "./brief";
+import type { CitationSource } from "./session";
 
 export interface Settings {
   brief_time: string; // "07:30"
@@ -10,6 +11,8 @@ export interface Settings {
   stt_mode: "browser" | "server";
   auto_resume: boolean;
   headphones_mode: boolean; // stage-2 barge-in
+  playback_rate?: number; // 0.8-2.0, default 1.2 (TODO 1.21)
+  show_debug?: boolean; // live log
   length_pref?: "short" | "medium" | "long";
   depth_pref?: "light" | "standard" | "deep";
 }
@@ -49,6 +52,7 @@ export interface HistoryTurn {
   role: "user" | "agent";
   text: string;
   citations?: string[];
+  sources?: CitationSource[]; // citations resolved by the server (TODO 1.22)
 }
 
 export interface HistoryItem {
@@ -57,7 +61,6 @@ export interface HistoryItem {
   headlines: string[];
   session_id?: string | null;
   turns?: HistoryTurn[];
-  citation_urls?: Record<string, string>; // passage_id -> url
 }
 
 export interface OpenQuestion {

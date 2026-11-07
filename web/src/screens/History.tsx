@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { HistoryItem } from "../contracts/api";
+import { Sources } from "../components/Sources";
 import { api } from "../lib/api";
 
 export function History() {
@@ -45,18 +46,7 @@ export function History() {
               {it.turns.map((t, i) => (
                 <div key={i} className={`line ${t.role}`}>
                   <span>{t.text}</span>
-                  {t.citations?.map((c) => {
-                    const url = it.citation_urls?.[c];
-                    return url ? (
-                      <a key={c} className="cite" href={url} target="_blank" rel="noreferrer">
-                        {c}
-                      </a>
-                    ) : (
-                      <span key={c} className="cite">
-                        {c}
-                      </span>
-                    );
-                  })}
+                  {t.role === "agent" && <Sources sources={t.sources} citations={t.citations} />}
                 </div>
               ))}
             </div>

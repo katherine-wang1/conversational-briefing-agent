@@ -2,7 +2,9 @@ import { parseServerMessage, type ClientMessage, type ServerMessage } from "../c
 
 export interface SocketEvents {
   onMessage(msg: ServerMessage): void;
-  onStatus?(status: "connecting" | "open" | "closed"): void;
+  onStatus?(status: "connecting" | "open" | "closed", detail?: string): void;
+  /** Every frame in/out, before payloads are elided (for the live log). */
+  onFrame?(dir: "in" | "out", msg: ClientMessage | ServerMessage): void;
 }
 
 /**
@@ -30,6 +32,7 @@ export class SessionSocket {
   }
 
   send(msg: ClientMessage): void {
+    this.ev.onFrame?.("out", msg);
     this.record("out", msg);
     const data = JSON.stringify(msg);
     if (this.ws?.readyState === WebSocket.OPEN) this.ws.send(data);
@@ -50,6 +53,7 @@ export class SessionSocket {
     ws.onopen = () => {
       this.attempt = 0;
       const hello = this.hello();
+      this.ev.onFrame?.("out", hello);
       this.record("out", hello);
       ws.send(JSON.stringify(hello));
       for (const q of this.queue.splice(0)) ws.send(q);
@@ -62,13 +66,14 @@ export class SessionSocket {
         console.warn("ignoring unknown server frame", e.data.slice(0, 200));
         return;
       }
+      this.ev.onFrame?.("in", msg);
       this.record("in", msg.type === "tts_chunk" ? { ...msg, data_b64: `<${msg.data_b64.length}b>` } : msg);
       this.ev.onMessage(msg);
     };
-    ws.onclose = () => {
+    ws.onclose = (e) => {
       if (this.ws !== ws) return;
       this.ws = null;
-      this.ev.onStatus?.("closed");
+      this.ev.onStatus?.("closed", `code ${e.code}${e.reason ? ` ${e.reason}` : ""}`);
       if (!this.closed) {
         const delay = Math.min(10_000, 500 * 2 ** this.attempt++);
         this.retryTimer = setTimeout(() => this.open(), delay);

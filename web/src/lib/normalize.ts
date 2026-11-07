@@ -4,6 +4,7 @@
 
 import type { HistoryItem, HistoryTurn, OpenQuestion, Settings } from "../contracts/api";
 import type { Interest } from "../contracts/brief";
+import type { CitationSource } from "../contracts/session";
 
 type Obj = Record<string, unknown>;
 const isObj = (x: unknown): x is Obj => typeof x === "object" && x !== null && !Array.isArray(x);
@@ -65,11 +66,22 @@ export function turnsFromApi(raw: unknown): HistoryTurn[] {
       role: t.role as HistoryTurn["role"],
       text: String(t.text),
       citations: Array.isArray(t.citations) ? t.citations.map(String) : [],
+      sources: Array.isArray(t.sources) ? sourcesFromApi(t.sources) : [],
     }));
 }
 
+/** Keep only well-formed citation sources with http(s) links. */
+export function sourcesFromApi(raw: unknown[]): CitationSource[] {
+  return raw.filter(isObj).map((s) => ({
+    passage_id: String(s.passage_id ?? ""),
+    source: typeof s.source === "string" ? s.source : null,
+    title: typeof s.title === "string" ? s.title : null,
+    url: typeof s.url === "string" && /^https?:\/\//i.test(s.url) ? s.url : null,
+  }));
+}
+
 const PROFILE_KEYS = ["brief_time", "timezone", "research_consent", "display_name"] as const;
-const SETTINGS_KEYS = ["voice", "stt_mode", "auto_resume", "headphones_mode"] as const;
+const SETTINGS_KEYS = ["voice", "stt_mode", "auto_resume", "headphones_mode", "playback_rate", "show_debug"] as const;
 
 /** Client settings patch → the backend's PATCH /api/me body (profile fields flat, the rest under
  * `settings`, depth under `delivery`). Unknown keys are dropped (the backend would reject them). */

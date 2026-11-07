@@ -3,7 +3,7 @@
  * audio queue and the WebSocket protocol (TDD §12.5, §13.2). UI-independent; React reads `state`.
  */
 import type { AudioManifest, BriefScript } from "../contracts/brief";
-import type { ServerMessage, SessionState } from "../contracts/session";
+import type { CitationSource, ServerMessage, SessionState } from "../contracts/session";
 import { AnswerQueue } from "../audio/answerQueue";
 import { BriefPlayer, type Position } from "../audio/briefPlayer";
 import { BrowserStt, browserSttSupported } from "../audio/browserStt";
@@ -24,6 +24,7 @@ import {
 import { AudioOutput } from "../audio/output";
 import { EnergyDetector, SileroDetector, type VoiceDetector } from "../audio/vad";
 import { resolveAudioUrl } from "../lib/api";
+import { debugLog, summarizeFrame } from "../lib/debugLog";
 import type { ClientSettings } from "../lib/settings";
 import { Store } from "../lib/store";
 import { clearProgress, loadProgress, saveProgress } from "./progress";
@@ -47,6 +48,8 @@ export interface TranscriptLine {
   role: "user" | "agent";
   text: string;
   citations: string[];
+  /** Citations resolved by the server (source name, link). */
+  sources: CitationSource[];
   pending?: boolean;
 }
 
@@ -124,14 +127,19 @@ export class Conversation {
   private resumeTimer: ReturnType<typeof setTimeout> | null = null;
   private uninstallMedia: (() => void) | null = null;
   private localTurn = 0;
+  private debugOn = false;
+  private lastInterim = "";
 
   constructor(private deps: ConversationDeps) {
     this.out = deps.output ?? new AudioOutput();
+    this.out.onEvent = (ev, text) => debugLog.add(ev === "error" ? "error" : "audio", text);
     this.answers = new AnswerQueue(this.out, {
       onStart: () => {
         this.clearThinkingTimer();
         if (this.endOfSpeechAt !== null) {
-          this.patch({ lastLatencyMs: Math.round(performance.now() - this.endOfSpeechAt) });
+          const ms = Math.round(performance.now() - this.endOfSpeechAt);
+          this.patch({ lastLatencyMs: ms });
+          debugLog.add("latency", `end of speech → first answer audio: ${ms} ms`);
           this.endOfSpeechAt = null;
         }
         this.patch({ phase: "answering" });
@@ -140,6 +148,23 @@ export class Conversation {
       },
       onIdle: () => this.afterAnswer(),
     });
+    this.applySettings();
+  }
+
+  /** Re-read the settings that apply live (speed, live log). Called when settings change. */
+  applySettings(): void {
+    const st = this.deps.settings();
+    this.out.setRate(st.playback_rate ?? 1.2);
+    this.setDebug(!!st.show_debug);
+  }
+
+  /** Turn the live log on/off; asks the server for its `debug` events on this session. */
+  setDebug(on: boolean): void {
+    debugLog.enabled = on;
+    if (on === this.debugOn) return;
+    this.debugOn = on;
+    if (on) debugLog.add("info", `live log on · rate ${this.out.playbackRate}× · phase ${this.s.phase}`);
+    this.socket?.send({ type: "debug_subscribe", enabled: on });
   }
 
   private get s(): ConvState {
@@ -214,7 +239,17 @@ export class Conversation {
       }),
       {
         onMessage: (m) => this.onServer(m),
-        onStatus: (conn) => this.patch({ conn }),
+        onStatus: (conn, detail) => {
+          this.patch({ conn });
+          debugLog.add("ws", `websocket ${conn}${detail ? ` (${detail})` : ""}`);
+          // The server starts a fresh session object per connection: re-subscribe after reconnects.
+          if (conn === "open" && this.debugOn) this.socket?.send({ type: "debug_subscribe", enabled: true });
+        },
+        onFrame: (dir, m) => {
+          if (!debugLog.enabled) return;
+          if (m.type === "debug") debugLog.server(m.kind, m.text, m.ts);
+          else debugLog.add(dir, summarizeFrame(m as unknown as Record<string, unknown>));
+        },
       },
     );
     this.socket.connect();
@@ -296,12 +331,16 @@ export class Conversation {
 
     if (phase === "playing") {
       const pos = this.player?.pause() ?? null;
-      this.patch({ interruptedAt: pos, pendingResume: null, lastInterruptMs: Math.round(performance.now() - t0) });
+      const ms = Math.round(performance.now() - t0);
+      this.patch({ interruptedAt: pos, pendingResume: null, lastInterruptMs: ms });
+      debugLog.add("latency", `interrupt (${source}) → brief paused: ${ms} ms at ${pos?.segment_id ?? "-"} +${pos?.offset_ms ?? 0} ms`);
       this.socket?.send({ type: "interrupt", segment_id: pos?.segment_id ?? null, offset_ms: pos?.offset_ms ?? 0 });
     } else {
       if (phase === "answering") this.answers.clear();
       this.out.stop();
-      this.patch({ lastInterruptMs: Math.round(performance.now() - t0) });
+      const ms = Math.round(performance.now() - t0);
+      this.patch({ lastInterruptMs: ms });
+      debugLog.add("latency", `interrupt (${source}) → ${phase} stopped: ${ms} ms`);
       this.socket?.send({ type: "interrupt", segment_id: null, offset_ms: 0 });
     }
     setPlaybackState("paused");
@@ -317,10 +356,16 @@ export class Conversation {
     this.stt = null;
     if (st.stt_mode === "browser") {
       if (browserSttSupported()) {
-        const stt = new BrowserStt((text) => this.patch({ interim: text }));
+        this.lastInterim = "";
+        const stt = new BrowserStt((text) => {
+          this.patch({ interim: text });
+          if (text && text !== this.lastInterim) debugLog.add("stt", `partial: ${text}`);
+          this.lastInterim = text;
+        });
         try {
           stt.start();
           this.stt = stt;
+          debugLog.add("stt", "browser speech recognition started");
         } catch (err) {
           this.patch({ notice: `Speech recognition unavailable (${String(err)}); using server STT.` });
         }
@@ -346,6 +391,7 @@ export class Conversation {
       this.recorder = new UtteranceRecorder();
       try {
         this.recorder.start(this.stream);
+        debugLog.add("stt", "recording for server speech-to-text");
       } catch (err) {
         this.recorder = null;
         this.patch({ error: `Can't record audio: ${String(err)}` });
@@ -366,8 +412,13 @@ export class Conversation {
 
   private onEndpoint(gen: number, e: EndpointEvent) {
     if (gen !== this.listenGen) return;
-    if (e.type === "speech_start") this.patch({ speechDetected: true });
-    else void this.finishListening(gen, e.reason);
+    if (e.type === "speech_start") {
+      this.patch({ speechDetected: true });
+      debugLog.add("stt", `voice detected (${this.s.vadEngine ?? "vad"})`);
+    } else {
+      debugLog.add("stt", `end of speech (${e.reason})`);
+      void this.finishListening(gen, e.reason);
+    }
   }
 
   /** Manual end of utterance (second tap / AirPods while listening). */
@@ -395,6 +446,7 @@ export class Conversation {
     if (!this.deps.settings().headphones_mode) this.releaseMic();
 
     if (stt) {
+      debugLog.add("stt", text ? `final: ${text}` : `no text${stt.error ? ` (${stt.error})` : ""}`);
       if (!text) return this.nothingHeard(stt.error);
       this.sendUserText(text, endTs);
       return;
@@ -408,14 +460,14 @@ export class Conversation {
       data_b64: await blobToB64(blob),
       end_of_speech_ts: endTs,
     });
-    this.addLine({ role: "user", text: "…", citations: [], pending: true });
+    this.addLine({ role: "user", text: "…", citations: [], sources: [], pending: true });
   }
 
   private sendUserText(text: string, endTs: number) {
     this.acceptingTts = true;
     this.armThinkingTimer();
     this.patch({ interim: "" });
-    this.addLine({ role: "user", text, citations: [], pending: true });
+    this.addLine({ role: "user", text, citations: [], sources: [], pending: true });
     this.socket?.send({ type: "utterance", text, stt: "browser", end_of_speech_ts: endTs });
   }
 
@@ -532,7 +584,7 @@ export class Conversation {
         }
         break;
       case "transcript":
-        this.onTranscript(m.role, m.text, m.turn_id, m.citations ?? []);
+        this.onTranscript(m.role, m.text, m.turn_id, m.citations ?? [], m.sources ?? []);
         break;
       case "tts_chunk":
         if (!this.acceptingTts) return; // stale audio from an interrupted answer
@@ -552,11 +604,17 @@ export class Conversation {
     }
   }
 
-  private onTranscript(role: "user" | "agent", text: string, turnId: string, citations: string[]) {
+  private onTranscript(
+    role: "user" | "agent",
+    text: string,
+    turnId: string,
+    citations: string[],
+    sources: CitationSource[],
+  ) {
     const lines = [...this.s.transcript];
     if (role === "user") {
       const i = lines.findIndex((l) => l.role === "user" && l.pending);
-      const line = { id: turnId || `u${++this.localTurn}`, role, text, citations };
+      const line = { id: turnId || `u${++this.localTurn}`, role, text, citations, sources };
       if (i >= 0) lines[i] = line;
       else lines.push(line);
     } else {
@@ -566,8 +624,9 @@ export class Conversation {
           ...last,
           text: text.startsWith(last.text) ? text : `${last.text} ${text}`,
           citations: [...new Set([...last.citations, ...citations])],
+          sources: mergeSources(last.sources, sources),
         };
-      } else lines.push({ id: turnId || `a${++this.localTurn}`, role, text, citations });
+      } else lines.push({ id: turnId || `a${++this.localTurn}`, role, text, citations, sources });
     }
     this.patch({ transcript: lines });
   }
@@ -683,4 +742,17 @@ export class Conversation {
     this.out.stop();
     this.releaseMic();
   }
+}
+
+/** Union of citation sources, one per article (url), in first-seen order. */
+export function mergeSources(a: CitationSource[], b: CitationSource[]): CitationSource[] {
+  const out: CitationSource[] = [];
+  const seen = new Set<string>();
+  for (const c of [...a, ...b]) {
+    const key = c.url || `id:${c.passage_id}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(c);
+  }
+  return out;
 }

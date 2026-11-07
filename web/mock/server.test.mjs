@@ -9,6 +9,7 @@ describe("validateClientMessage", () => {
     expect(validateClientMessage({ type: "playback", segment_id: "s1", offset_ms: 1400 })).toBeNull();
     expect(validateClientMessage({ type: "interrupt", segment_id: null, offset_ms: 0 })).toBeNull();
     expect(validateClientMessage({ type: "control", action: "resume" })).toBeNull();
+    expect(validateClientMessage({ type: "debug_subscribe", enabled: true })).toBeNull();
   });
 
   it("rejects unknown fields, missing fields and bad values", () => {
@@ -68,6 +69,30 @@ describe("mock session server", () => {
     expect(chunks.map((c) => c.seq)).toEqual([0, 1]);
     expect(got.at(-1)).toEqual({ type: "resume_brief", segment_id: "s2" });
     expect(got.some((m) => m.type === "error")).toBe(false);
+    expect(got.some((m) => m.type === "debug")).toBe(false); // not subscribed
+    const answer = got.find((m) => m.type === "transcript" && m.role === "agent");
+    expect(answer.sources[0]).toMatchObject({ source: "Northwind blog", url: expect.stringMatching(/^https:/) });
+  });
+
+  it("sends debug events after debug_subscribe", async () => {
+    const ws = new WebSocket(`ws://localhost:${port}/ws/session/test-3?token=dev`);
+    const got = [];
+    await new Promise((r) => ws.on("open", r));
+    const done = new Promise((resolve) =>
+      ws.on("message", (raw) => {
+        const m = JSON.parse(String(raw));
+        got.push(m);
+        if (m.type === "state" && m.state === "OPEN_FLOOR") resolve();
+      }),
+    );
+    const send = (m) => ws.send(JSON.stringify(m));
+    send({ type: "hello", session_id: "test-3", client: {} });
+    send({ type: "debug_subscribe", enabled: true });
+    send({ type: "utterance", text: "anything new?", stt: "browser" });
+    await done;
+    ws.close();
+    const kinds = got.filter((m) => m.type === "debug").map((m) => m.kind);
+    expect(kinds).toEqual(expect.arrayContaining(["info", "heard", "state", "model", "speak"]));
   });
 
   it("answers a bad frame with an error", async () => {

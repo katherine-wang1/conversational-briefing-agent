@@ -68,8 +68,8 @@ describe("normalize (real backend shapes, app/api/routes.py)", () => {
         ],
       }),
     ).toEqual([
-      { role: "user", text: "why?", citations: [] },
-      { role: "agent", text: "Because.", citations: ["p1"] },
+      { role: "user", text: "why?", citations: [], sources: [] },
+      { role: "agent", text: "Because.", citations: ["p1"], sources: [] },
     ]);
   });
 
@@ -81,5 +81,37 @@ describe("normalize (real backend shapes, app/api/routes.py)", () => {
       settings: { headphones_mode: true },
     });
     expect(mePatchToApi({ depth_pref: "deep" })).toEqual({ delivery: { depth: "deep" } });
+  });
+});
+
+describe("readable citations and new settings", () => {
+  it("keeps resolved sources from the transcript and drops non-http links", async () => {
+    const { turnsFromApi } = await import("./normalize");
+    const turns = turnsFromApi({
+      turns: [
+        {
+          role: "agent",
+          text: "Hi.",
+          citations: ["a:1-2", "b:1-2"],
+          sources: [
+            { passage_id: "a:1-2", source: "Reuters", url: "https://reuters.com/x", title: "T" },
+            { passage_id: "b:1-2", source: "Bad", url: "javascript:alert(1)", title: null },
+          ],
+        },
+        { role: "user", text: "q", citations: [] },
+      ],
+    });
+    expect(turns[0].sources).toEqual([
+      { passage_id: "a:1-2", source: "Reuters", url: "https://reuters.com/x", title: "T" },
+      { passage_id: "b:1-2", source: "Bad", url: null, title: null },
+    ]);
+    expect(turns[1].sources).toEqual([]);
+  });
+
+  it("sends playback speed and the live-log switch under `settings`", async () => {
+    const { mePatchToApi } = await import("./normalize");
+    expect(mePatchToApi({ playback_rate: 1.3, show_debug: true })).toEqual({
+      settings: { playback_rate: 1.3, show_debug: true },
+    });
   });
 });

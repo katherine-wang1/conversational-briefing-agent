@@ -34,22 +34,87 @@ export function silentWavUrl(): string {
   return silentUrl;
 }
 
+/** Playback speeds offered in Settings (TODO 1.21). */
+export const PLAYBACK_RATES = [1.0, 1.1, 1.2, 1.3, 1.5] as const;
+export const DEFAULT_PLAYBACK_RATE = 1.2;
+
+export function clampRate(r: unknown): number {
+  const n = typeof r === "number" && Number.isFinite(r) ? r : DEFAULT_PLAYBACK_RATE;
+  return Math.min(2, Math.max(0.8, n));
+}
+
+export type OutputEvent = "load" | "playing" | "ended" | "error" | "rate";
+
 export class AudioOutput {
   readonly el: HTMLAudioElement;
   unlocked = false;
   private token = 0;
   private settle: ((r: PlayResult) => void) | null = null;
+  private rate = 1;
+  private label = "";
   /** What the element is currently playing ("brief" | "answer"), for interrupt routing. */
   owner: "brief" | "answer" | null = null;
+  /** Audio events for the live log. */
+  onEvent: ((ev: OutputEvent, text: string) => void) | null = null;
 
   constructor(el?: HTMLAudioElement) {
     this.el = el ?? new Audio();
     this.el.preload = "auto";
     this.el.setAttribute("playsinline", "");
-    this.el.addEventListener("ended", () => this.finish("ended"));
-    this.el.addEventListener("error", () => {
-      if (this.el.src && this.el.src !== silentUrl) this.finish("error");
+    this.el.addEventListener("ended", () => {
+      if (this.owner) this.emit("ended", `${this.owner} ${this.label} ended`);
+      this.finish("ended");
     });
+    this.el.addEventListener("error", () => {
+      if (this.el.src && this.el.src !== silentUrl) {
+        this.emit("error", `${this.owner ?? "audio"} ${this.label} error: ${this.el.error?.message || this.el.error?.code || "?"}`);
+        this.finish("error");
+      }
+    });
+    // Browsers reset playbackRate to defaultPlaybackRate when a new src loads; set both, and again
+    // once the media is loaded / starts, in case a browser (Safari) resets it anyway.
+    this.el.addEventListener("loadedmetadata", () => {
+      this.applyRate();
+      if (this.owner) this.emit("load", `${this.owner} ${this.label} loaded (${Math.round(this.el.duration * 1000) || "?"} ms)`);
+    });
+    this.el.addEventListener("playing", () => {
+      this.applyRate();
+      if (this.owner) this.emit("playing", `${this.owner} ${this.label} playing at ${this.el.playbackRate}×`);
+    });
+  }
+
+  /** Playback speed for everything (brief and answers), pitch preserved. */
+  setRate(rate: number): void {
+    const r = clampRate(rate);
+    if (r === this.rate) return;
+    this.rate = r;
+    this.applyRate();
+    this.emit("rate", `playback rate ${r}×`);
+  }
+
+  get playbackRate(): number {
+    return this.rate;
+  }
+
+  private applyRate(): void {
+    const el = this.el as HTMLAudioElement & { webkitPreservesPitch?: boolean; mozPreservesPitch?: boolean };
+    try {
+      el.preservesPitch = true;
+      el.webkitPreservesPitch = true;
+      el.mozPreservesPitch = true;
+      el.defaultPlaybackRate = this.rate;
+      if (el.playbackRate !== this.rate) el.playbackRate = this.rate;
+    } catch {
+      /* some engines throw on unsupported rates; keep 1.0 */
+    }
+  }
+
+  private emit(ev: OutputEvent, text: string) {
+    try {
+      this.onEvent?.(ev, text);
+    } catch {
+      /* never break playback for the log */
+    }
   }
 
   /**
@@ -74,10 +139,11 @@ export class AudioOutput {
   }
 
   /** Play `src` from `startMs`. Resolves when it ends, errors, or is stopped/replaced. */
-  play(src: string, startMs = 0, owner: "brief" | "answer" = "brief"): Promise<PlayResult> {
+  play(src: string, startMs = 0, owner: "brief" | "answer" = "brief", label = ""): Promise<PlayResult> {
     this.finish("stopped");
     const token = ++this.token;
     this.owner = owner;
+    this.label = label;
     return new Promise<PlayResult>((resolve) => {
       this.settle = (r) => {
         if (token === this.token) this.owner = null;
@@ -85,6 +151,7 @@ export class AudioOutput {
       };
       const el = this.el;
       el.src = src;
+      this.applyRate();
       if (startMs > 0) {
         const seek = () => {
           if (token !== this.token) return;

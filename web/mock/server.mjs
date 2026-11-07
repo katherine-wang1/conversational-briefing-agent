@@ -17,6 +17,7 @@ import {
   history,
   initialInterests,
   initialQuestions,
+  sourcesFor,
   transcript,
 } from "./fixtures.mjs";
 
@@ -29,6 +30,7 @@ const CLIENT_FIELDS = {
   utterance: ["type", "text", "stt", "end_of_speech_ts"],
   utterance_audio: ["type", "format", "data_b64", "end_of_speech_ts"],
   control: ["type", "action"],
+  debug_subscribe: ["type", "enabled"],
 };
 const REQUIRED = {
   hello: ["session_id"],
@@ -37,6 +39,7 @@ const REQUIRED = {
   utterance: ["text"],
   utterance_audio: ["format", "data_b64"],
   control: ["action"],
+  debug_subscribe: [],
 };
 const CONTROL_ACTIONS = ["skip", "next", "resume", "end", "play"];
 
@@ -87,6 +90,8 @@ export function startMockServer({
         stt_mode: "browser",
         auto_resume: true,
         headphones_mode: false,
+        playback_rate: 1.2,
+        show_debug: false,
       },
     },
     interests: initialInterests(),
@@ -243,14 +248,24 @@ export function startMockServer({
     let answerGen = 0;
     let turn = 0;
     let seq = 0;
+    let debug = false;
 
     const send = (msg) => {
       if (ws.readyState !== ws.OPEN) return;
-      rec.frames.push({ dir: "out", t: Date.now(), msg: msg.type === "tts_chunk" ? { ...msg, data_b64: "<mp3>" } : msg });
+      rec.frames.push({
+        dir: "out",
+        t: Date.now(),
+        msg: msg.type === "tts_chunk" ? { ...msg, data_b64: "<mp3>" } : msg,
+      });
       ws.send(JSON.stringify(msg));
+    };
+    // Live log: fake server-side debug events, only after debug_subscribe (like the real server).
+    const dbg = (kind, text, data = {}) => {
+      if (debug) send({ type: "debug", kind, text, ts: Date.now() / 1000, data });
     };
     const setState = (s) => {
       if (s === state) return;
+      dbg("state", `${state} → ${s}`, { prev: state, state: s });
       state = s;
       send({ type: "state", state: s });
     };
@@ -260,19 +275,42 @@ export function startMockServer({
       const gen = ++answerGen;
       const turnId = `t${++turn}`;
       send({ type: "transcript", role: "user", text: userText, turn_id: `${turnId}-u`, citations: [] });
+      dbg("heard", `heard: ${userText}`, { turn_id: turnId });
       setState("THINKING");
       const a = answerFor(userText);
       await sleep(answerDelayMs);
       if (gen !== answerGen) return;
+      dbg("model", `voice.turn round 1: mock-model · ${answerDelayMs} ms · 1200 in / 40 out · $0.0001`, {
+        role: "voice.turn",
+        model: "mock-model",
+        latency_ms: answerDelayMs,
+        tokens_in: 1200,
+        tokens_out: 40,
+        cost_usd: 0.0001,
+      });
       setState("SPEAKING_ANSWER");
       let text = "";
       for (const [i, sentence] of a.sentences.entries()) {
         if (gen !== answerGen) return;
         text = text ? `${text} ${sentence}` : sentence;
         const sentenceId = `${turnId}-${i + 1}`;
-        send({ type: "transcript", role: "agent", text, turn_id: turnId, citations: a.citations });
+        send({
+          type: "transcript",
+          role: "agent",
+          text,
+          turn_id: turnId,
+          citations: a.citations,
+          sources: sourcesFor(a.citations),
+        });
+        dbg("speak", `say #${i + 1}: ${sentence}`, { n: i + 1 });
         const mp3 = fakeMp3(sentenceId + userText, durationFor(sentence, audioScale), "answer");
-        send({ type: "tts_chunk", seq: seq++, format: "mp3", data_b64: mp3.toString("base64"), sentence_id: sentenceId });
+        send({
+          type: "tts_chunk",
+          seq: seq++,
+          format: "mp3",
+          data_b64: mp3.toString("base64"),
+          sentence_id: sentenceId,
+        });
         await sleep(120);
       }
       if (gen !== answerGen) return;
@@ -290,7 +328,11 @@ export function startMockServer({
       } catch {
         return send({ type: "error", code: "bad_json", message: "frame is not JSON" });
       }
-      rec.frames.push({ dir: "in", t: Date.now(), msg: m.type === "utterance_audio" ? { ...m, data_b64: `<${m.data_b64?.length}b>` } : m });
+      rec.frames.push({
+        dir: "in",
+        t: Date.now(),
+        msg: m.type === "utterance_audio" ? { ...m, data_b64: `<${m.data_b64?.length}b>` } : m,
+      });
       const err = validateClientMessage(m);
       if (err) {
         log("bad client frame:", err, m);
@@ -299,6 +341,10 @@ export function startMockServer({
       switch (m.type) {
         case "hello":
           send({ type: "state", state });
+          break;
+        case "debug_subscribe":
+          debug = m.enabled !== false;
+          dbg("info", `live log on · session ${sessionId} · state ${state}`);
           break;
         case "playback":
           if (!["LISTENING", "THINKING"].includes(state)) setState("PLAYING_BRIEF");

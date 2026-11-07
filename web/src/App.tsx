@@ -39,6 +39,8 @@ export function App() {
         headphones_mode: m.settings.headphones_mode,
         voice: m.settings.voice,
         brief_time: m.settings.brief_time,
+        playback_rate: m.settings.playback_rate,
+        show_debug: m.settings.show_debug,
       });
       if (!m.onboarded) navigate("onboarding");
     } catch (err) {

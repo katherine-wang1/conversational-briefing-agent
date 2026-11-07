@@ -357,17 +357,39 @@ textarea {
   opacity: 0.65;
 }
 .cites {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  margin-left: 6px;
+  margin-top: 6px;
 }
 .cite {
-  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  max-width: 100%;
+  font-size: 0.72rem;
   background: var(--panel2);
   color: var(--muted);
-  border-radius: 6px;
-  padding: 1px 5px;
+  border-radius: 8px;
+  padding: 2px 7px;
   text-decoration: none;
+}
+a.cite {
+  color: #b9c8ff;
+}
+a.cite:hover b {
+  text-decoration: underline;
+}
+.cite b {
+  font-weight: 650;
+  white-space: nowrap;
+}
+.cite-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 190px;
+  color: var(--muted);
 }
 
 .controls {
@@ -378,83 +400,288 @@ textarea {
   flex: 1;
 }
 
-/* The talk / interrupt area: the lower half of the screen. */
+/* The talk area: the lower part of the screen. Tapping anywhere in it talks (interrupts). */
 .talk {
-  flex: 0 0 45vh;
-  min-height: 220px;
-  border-radius: 22px;
-  background: radial-gradient(circle at 50% 40%, #1f2a44, var(--panel) 70%);
+  --mood: var(--accent);
+  --mood2: #3b63d9;
+  --glow: rgba(91, 140, 255, 0.28);
+  flex: 0 0 auto;
+  min-height: 300px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--mood) 22%, var(--panel)), var(--panel) 72%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  padding: 14px 16px 16px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   outline: none;
-  transition: background 0.15s;
+  cursor: pointer;
+  transition: background 0.25s;
 }
-.talk:active {
-  background: radial-gradient(circle at 50% 40%, #28365a, var(--panel) 70%);
+.talk:focus-visible {
+  box-shadow: 0 0 0 3px var(--glow);
 }
-.talk.phase-listening {
-  background: radial-gradient(circle at 50% 40%, #4a1f1c, var(--panel) 70%);
+.talk.mood-listening,
+.talk.mood-hearing {
+  --mood: var(--listen);
+  --mood2: #e0453a;
+  --glow: rgba(255, 107, 91, 0.32);
 }
-.talk-label {
-  font-size: 1.15rem;
-  font-weight: 600;
+.talk.mood-thinking {
+  --mood: #b48cff;
+  --mood2: #8a5cf0;
+  --glow: rgba(180, 140, 255, 0.3);
 }
-.play-big {
-  width: 120px;
-  height: 120px;
+.talk.mood-speaking {
+  --mood: var(--ok);
+  --mood2: #23955c;
+  --glow: rgba(63, 191, 127, 0.3);
+}
+.talk.mood-resuming {
+  --mood: #ffc65c;
+  --mood2: #e8a530;
+  --glow: rgba(255, 198, 92, 0.3);
+}
+.talk.mood-idle {
+  --mood: #7d8aa8;
+  --mood2: #5d6987;
+  --glow: rgba(125, 138, 168, 0.2);
+}
+.buddy-disc {
+  width: 168px;
+  height: 168px;
   border-radius: 999px;
-  background: var(--accent);
   display: grid;
   place-items: center;
-  font-size: 3rem;
-  color: white;
-  padding-left: 8px;
+  background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--mood) 18%, transparent), transparent 70%);
+  transition: transform 0.12s;
 }
-.orb {
-  width: 96px;
-  height: 96px;
+.talk:active .buddy-disc {
+  transform: scale(0.96);
+}
+.talk-text {
+  text-align: center;
+}
+.talk-label {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.talk-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.talk-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  min-width: 200px;
+  padding: 12px 26px;
   border-radius: 999px;
-  background: var(--accent);
+  border: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #0e1220;
+  background: linear-gradient(180deg, var(--mood), var(--mood2));
+  box-shadow: 0 6px 22px var(--glow);
+  margin-top: 4px;
+}
+.talk-pill:active {
+  transform: translateY(1px);
+}
+.talk-pill.pill-play {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  box-shadow: none;
+}
+
+/* ---- the character (components/Buddy.tsx) ---- */
+.buddy {
+  overflow: visible;
+}
+.buddy .buddy-c1 {
+  stop-color: color-mix(in srgb, var(--mood) 70%, white);
+}
+.buddy .buddy-c2 {
+  stop-color: var(--mood2);
+}
+.buddy-stand {
+  stroke: color-mix(in srgb, var(--mood) 55%, #c9d1e3);
+}
+.buddy-stand-fill {
+  fill: color-mix(in srgb, var(--mood) 55%, #c9d1e3);
+}
+.buddy-halo {
+  fill: var(--glow);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.buddy-waves path {
+  stroke: var(--mood);
+  opacity: 0;
+}
+.buddy-dots circle {
+  fill: var(--mood);
+  opacity: 0;
+}
+.buddy-play circle {
+  fill: var(--accent);
+}
+.buddy-bob,
+.buddy-eyes,
+.buddy-mouth-open {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.buddy-eyes {
+  animation: buddy-blink 4.5s infinite;
+}
+.mood-playing .buddy-halo,
+.mood-ready .buddy-halo {
+  animation: buddy-pulse 2.4s ease-in-out infinite;
+}
+.mood-playing .buddy-bob {
+  animation: buddy-bob 2.4s ease-in-out infinite;
+}
+.mood-listening .buddy-waves path,
+.mood-hearing .buddy-waves path {
+  animation: buddy-wave 1.2s ease-in-out infinite;
+}
+.mood-listening .buddy-waves .w2,
+.mood-hearing .buddy-waves .w2 {
+  animation-delay: 0.3s;
+}
+.mood-hearing .buddy-waves path {
+  animation-duration: 0.55s;
+}
+.mood-listening .buddy-halo,
+.mood-hearing .buddy-halo {
+  opacity: 0.9;
+  animation: buddy-pulse 1.2s ease-in-out infinite;
+}
+.mood-hearing .buddy-mouth-open {
+  animation: buddy-talk 0.35s ease-in-out infinite alternate;
+}
+.mood-thinking .buddy-dots circle {
+  animation: buddy-dot 1.2s ease-in-out infinite;
+}
+.mood-thinking .buddy-dots .d2 {
+  animation-delay: 0.2s;
+}
+.mood-thinking .buddy-dots .d3 {
+  animation-delay: 0.4s;
+}
+.mood-thinking .buddy-bob {
+  animation: buddy-tilt 2s ease-in-out infinite;
+}
+.mood-speaking .buddy-mouth-open {
+  animation: buddy-talk 0.28s ease-in-out infinite alternate;
+}
+.mood-speaking .buddy-halo {
   opacity: 0.8;
+  animation: buddy-pulse 0.9s ease-in-out infinite;
 }
-.orb.playing,
-.orb.answering {
-  animation: pulse 1.6s ease-in-out infinite;
+.mood-resuming .buddy-bob {
+  animation: buddy-hop 0.9s ease-in-out infinite;
 }
-.orb.listening {
-  background: var(--listen);
+.mood-idle .buddy {
+  opacity: 0.85;
 }
-.talk.hearing .orb {
-  animation: pulse 0.5s ease-in-out infinite;
-}
-.orb.thinking {
-  animation: spin 1s linear infinite;
-  background: conic-gradient(var(--accent), transparent);
-}
-.orb.paused,
-.orb.open_floor,
-.orb.ended {
-  opacity: 0.35;
-}
-@keyframes pulse {
+@keyframes buddy-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.92);
+  }
   50% {
-    transform: scale(1.12);
+    opacity: 0.85;
+    transform: scale(1.06);
   }
 }
-@keyframes spin {
+@keyframes buddy-bob {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes buddy-hop {
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+}
+@keyframes buddy-tilt {
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes buddy-blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes buddy-wave {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes buddy-dot {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+@keyframes buddy-talk {
+  from {
+    transform: scaleY(0.35);
+  }
   to {
-    transform: rotate(1turn);
+    transform: scaleY(1.1);
   }
 }
-.interrupt-btn {
-  margin-top: 6px;
-  background: rgba(255, 255, 255, 0.08);
+@media (prefers-reduced-motion: reduce) {
+  .buddy *,
+  .buddy {
+    animation: none !important;
+  }
+  .mood-listening .buddy-waves path,
+  .mood-hearing .buddy-waves path,
+  .mood-thinking .buddy-dots circle {
+    opacity: 1;
+  }
+}
+
+.speed-btn {
+  border-radius: 999px;
+  min-width: 52px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
 }
 
 .type-row {
@@ -468,9 +695,194 @@ textarea {
   gap: 6px;
   flex: 1;
 }
-.debug summary {
-  color: var(--muted);
-  font-size: 0.75rem;
+.block {
+  display: block;
+  margin-top: 2px;
+}
+.switch-row span {
+  line-height: 1.35;
+}
+
+/* ---- live log ("under the hood") -------------------------------------------------------- */
+.today-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.today-layout > .today {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+.livelog {
+  --k-ws: #8b92a3;
+  --k-out: #7aa2ff;
+  --k-in: #5bd1ff;
+  --k-audio: #3fbf7f;
+  --k-latency: #ffc65c;
+  --k-stt: #ff9b8f;
+  --k-state: #c3a6ff;
+  --k-heard: #ff6b5b;
+  --k-model: #b48cff;
+  --k-tool: #ffb347;
+  --k-speak: #63e6a8;
+  --k-tts: #4fc3a1;
+  --k-drop: #ff5fa2;
+  --k-memory: #f2e35c;
+  --k-error: #e5484d;
+  --k-info: #a8b0c2;
+  background: #0b0d11;
+  border: 1px solid #232838;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+}
+.livelog-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #232838;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.livelog-title {
+  font-weight: 650;
+  font-size: 0.85rem;
+  flex: 1;
+}
+.small-btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  min-height: 32px;
+}
+.livelog-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 8px 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.livelog-empty {
+  padding: 12px 4px;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.log-row {
+  display: grid;
+  grid-template-columns: auto 12px 52px minmax(0, 1fr);
+  gap: 6px;
+  padding: 2px 0 2px 6px;
+  border-left: 3px solid var(--k);
+  margin: 1px 0;
+  line-height: 1.35;
+}
+.log-row time {
+  color: #5f667a;
+}
+.log-src {
+  color: #5f667a;
+  font-weight: 700;
+}
+.log-row[data-from="server"] .log-src {
+  color: #c9a7ff;
+}
+.log-kind {
+  color: var(--k);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.log-text {
+  color: #d4d8e2;
+  word-break: break-word;
+}
+.log-row.k-error .log-text {
+  color: #ffb4b0;
+}
+.k-ws { --k: var(--k-ws); }
+.k-out { --k: var(--k-out); }
+.k-in { --k: var(--k-in); }
+.k-audio { --k: var(--k-audio); }
+.k-latency { --k: var(--k-latency); }
+.k-stt { --k: var(--k-stt); }
+.k-state { --k: var(--k-state); }
+.k-heard { --k: var(--k-heard); }
+.k-model { --k: var(--k-model); }
+.k-tool { --k: var(--k-tool); }
+.k-speak { --k: var(--k-speak); }
+.k-tts { --k: var(--k-tts); }
+.k-drop { --k: var(--k-drop); }
+.k-memory { --k: var(--k-memory); }
+.k-error { --k: var(--k-error); }
+.k-info { --k: var(--k-info); }
+.livelog-toggle {
+  position: fixed;
+  right: 12px;
+  bottom: calc(58px + env(safe-area-inset-bottom));
+  z-index: 30;
+  border-radius: 999px;
+  padding: 6px 12px;
+  min-height: 36px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #232838;
+  border: 1px solid #2f3547;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.livelog-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--k, #a8b0c2);
+}
+.livelog-led.k-ws { background: #8b92a3; }
+.livelog-led.k-model { background: #b48cff; }
+.livelog-led.k-error { background: #e5484d; }
+.livelog-led.k-audio { background: #3fbf7f; }
+
+/* Phone: slide-up drawer above the tab bar. */
+@media (max-width: 899px) {
+  .livelog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 58vh;
+    z-index: 40;
+    border-radius: 16px 16px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    transform: translateY(105%);
+    transition: transform 0.25s ease;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .livelog.open {
+    transform: translateY(0);
+  }
+  .livelog-toggle.on {
+    bottom: calc(58vh + 10px);
+  }
+}
+/* Desktop: side panel next to the player. */
+@media (min-width: 900px) {
+  .today-layout.with-log {
+    flex-direction: row;
+    gap: 12px;
+    padding-right: 12px;
+  }
+  .today-layout.with-log > .today {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .today-layout.with-log .livelog {
+    flex: 0 0 min(460px, 40vw);
+    margin: 10px 0 8px;
+    border-radius: 14px;
+  }
+  .livelog-toggle,
+  .livelog-close {
+    display: none;
+  }
 }
 
 /* ---- rating sheet ------------------------------------------------------------------------- */

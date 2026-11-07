@@ -19,6 +19,10 @@ export interface ClientSettings {
   barge_in_onset_ms: number;
   /** Which tap event interrupts: pointerdown (fastest) or click (if iOS needs a full gesture). */
   tap_event: "pointerdown" | "click";
+  /** Playback speed for the brief and spoken answers (pitch preserved). Synced to the server. */
+  playback_rate: number;
+  /** Live log ("Show what's happening"). Synced to the server. */
+  show_debug: boolean;
 }
 
 export const DEFAULT_SETTINGS: ClientSettings = {
@@ -33,6 +37,8 @@ export const DEFAULT_SETTINGS: ClientSettings = {
   no_speech_timeout_ms: 8_000,
   barge_in_onset_ms: 250,
   tap_event: "pointerdown",
+  playback_rate: 1.2,
+  show_debug: false,
 };
 
 const KEY = "briefing.settings";
@@ -45,7 +51,7 @@ function readStored(): Partial<ClientSettings> {
   }
 }
 
-/** URL overrides for testing on a device, e.g. ?vad=energy&stt=server&silence=500&headphones=1.
+/** URL overrides for testing on a device, e.g. ?vad=energy&stt=server&silence=500&headphones=1&rate=1.5&debug=1.
  * They win over stored and server settings and are not persisted. */
 function readOverrides(): Partial<ClientSettings> {
   const o: Partial<ClientSettings> = {};
@@ -58,6 +64,9 @@ function readOverrides(): Partial<ClientSettings> {
     const silence = Number(q.get("silence"));
     if (silence > 0) o.silence_ms = silence;
     if (q.get("headphones") === "1") o.headphones_mode = true;
+    const rate = Number(q.get("rate"));
+    if (rate >= 0.8 && rate <= 2) o.playback_rate = rate;
+    if (q.get("debug") === "1") o.show_debug = true;
   } catch {
     /* ignore */
   }
