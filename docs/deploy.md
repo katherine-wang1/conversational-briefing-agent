@@ -157,12 +157,16 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
 5. **Deploy.** Push to the branch; both services rebuild. Check:
    - `https://<name>.up.railway.app/healthz` → `{"ok": true, "db": true, "env": "prod"}`
    - worker logs show `worker … started (concurrency 4, agents=real)` and, within a minute, the
-     scheduler enqueueing `spend_guard` / `cleanup` (and `newsroom_run` at beat times).
+     scheduler enqueueing `spend_guard` / `cleanup` and `newsroom_run`: at beat times, and right
+     away for any beat without a digest in the last 24 h (a fresh deploy). Those first newsroom
+     runs take 3–5 min; log in after they finish (`/api/admin/jobs`), or your first brief has
+     only search results.
 
 6. **First login.** Open the web URL, sign in with the invited email, finish onboarding. The first
    brief is generated on demand (`GET /api/briefs/today` enqueues `cos_daily` at top priority; the
-   app shows "Preparing your brief"). After that, `cos_daily` runs at `brief_time − 60 min` in your
-   timezone.
+   app shows "Preparing your brief"; about 2 min in the local run, docs/smoke/2026-11-06/web-e2e).
+   It waits for onboarding to store your interests first. After that, `cos_daily` runs at
+   `brief_time − 60 min` in your timezone.
 
 ---
 

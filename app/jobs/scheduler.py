@@ -2,7 +2,8 @@
 repeated ticks (and several workers ticking at once) enqueue each job exactly once.
 
 - per user: `cos_daily` at brief_time − cos_lead_min in the user's timezone; `daily_snapshot` at 23:55
-- per beat: `newsroom_run` at each `refresh_live_utc` slot (only the latest slot passed, within 3 h)
+- per beat: `newsroom_run` at each `refresh_live_utc` slot (only the latest slot passed, within 3 h);
+  a beat with no digest in the last 24 h (a fresh deploy) gets one for its latest slot at once
 - `spend_guard` hourly, `cleanup` daily
 """
 
@@ -21,6 +22,7 @@ log = logging.getLogger(__name__)
 SNAPSHOT_AT = time(23, 55)
 NEWSROOM_GRACE = timedelta(hours=3)
 COS_GRACE = timedelta(hours=12)
+BOOTSTRAP_AFTER = timedelta(hours=24)
 
 
 def _tz(name: str) -> ZoneInfo:
@@ -42,7 +44,9 @@ def cos_due(now: datetime, tz_name: str, brief_time: time, lead_min: int) -> dat
     return None
 
 
-def latest_slot(now: datetime, slots_utc: list[str]) -> datetime | None:
+def latest_slot(
+    now: datetime, slots_utc: list[str], grace: timedelta | None = NEWSROOM_GRACE
+) -> datetime | None:
     now = now.astimezone(UTC)
     best = None
     for day in (now.date() - timedelta(days=1), now.date()):
@@ -51,7 +55,7 @@ def latest_slot(now: datetime, slots_utc: list[str]) -> datetime | None:
             t = datetime.combine(day, time(h, m), UTC)
             if t <= now and (best is None or t > best):
                 best = t
-    if best is not None and now - best <= NEWSROOM_GRACE:
+    if best is not None and (grace is None or now - best <= grace):
         return best
     return None
 
@@ -85,6 +89,12 @@ async def tick(db: Database, queue: JobQueue, now: datetime | None = None) -> li
 
     for beat in loader.beats().values():
         slot = latest_slot(now, beat.refresh_live_utc)
+        if slot is None:
+            # Bootstrap: without any recent digest the first brief would have no shared news at all.
+            async with db.system_scope() as s:
+                recent = await s.digests.latest(beat.id, now)
+            if recent is None or now - recent["at"] > BOOTSTRAP_AFTER:
+                slot = latest_slot(now, beat.refresh_live_utc, grace=None)
         if slot is not None:
             ids.append(
                 await queue.enqueue(
