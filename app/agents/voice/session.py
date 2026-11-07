@@ -34,7 +34,14 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
 
-from app.agents.voice.context import position_line, prefix_messages, turn_messages, voice_prompt
+from app.agents.voice.context import (
+    is_meta_sentence,
+    position_line,
+    prefix_messages,
+    spoken_form,
+    turn_messages,
+    voice_prompt,
+)
 from app.agents.voice.store import SessionStore
 from app.agents.voice.tools import NAV_ACTIONS, PREFERENCE_KINDS, VOICE_TOOLS
 from app.contracts.brief import BriefScript, SourcePack
@@ -406,6 +413,10 @@ class VoiceSession:
             nonlocal n_sent
             clean, cites = strip_citations(sentence)
             if not clean:
+                return
+            clean = spoken_form(clean)
+            if is_meta_sentence(clean):
+                log.info("voice turn %s: dropped a meta sentence: %r", turn_id, clean[:200])
                 return
             if "first_sentence_ms" not in timings:
                 timings["first_sentence_ms"] = int((time.time() - t0) * 1000)
