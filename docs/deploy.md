@@ -28,7 +28,7 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
 - `AGENT_PORTS=auto` uses the real newsroom / chief-of-staff agents when their code is present **and**
   `OPENROUTER_API_KEY` is set, and a clearly marked placeholder (`arm="stub"`) otherwise.
 - Model calls go through W-B's Router (`app.llm.get_client`). Every call is logged to the JSONL ledger
-  (`LLM_LEDGER_PATH`, default `eval/runs/llm_ledger.jsonl`) and to the `llm_calls` table.
+  (`LLM_LEDGER_PATH`, default `eval/runs/llm_ledger.jsonl`; `/srv/var/runs/llm_ledger.jsonl` in the Docker image, since the app user can only write under `/srv/var`) and to the `llm_calls` table.
   `LLM_SPEND_CAP_USD` sets a hard per-process spend fence; it is unset (no fence) by default.
   `TRACE_DIR` (optional) writes newsroom / chief-of-staff run traces as JSON.
 - FakeTTS audio can't be decoded by a browser, so the web app skips every segment. Use a real
