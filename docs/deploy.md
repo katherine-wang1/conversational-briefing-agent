@@ -47,20 +47,17 @@ cp .env.example .env                                     # then edit: DEV_AUTH_B
    (e.g. `us-west`). Save the database password. Note the **project ref** (the `abcd1234` in
    `https://abcd1234.supabase.co`).
 
-2. **Apply the migrations** (`supabase/migrations/*.sql`). Either:
-   - Supabase CLI (recommended):
-     ```bash
-     supabase login
-     supabase link --project-ref <ref>
-     supabase db push
-     ```
-   - or our runner, with the `postgres` connection string from *Project Settings → Database →
-     Connection string → Session pooler*:
-     ```bash
-     MIGRATIONS_DATABASE_URL='postgresql://postgres.<ref>:<db-password>@aws-0-<region>.pooler.supabase.com:5432/postgres' \
-       python -m app.db.migrate
-     ```
-   Use one method consistently (they track applied migrations separately).
+2. **Apply the migrations** (`supabase/migrations/*.sql`) with Supabase's **GitHub integration** (used in
+   prod): *Project Settings → Integrations → GitHub* → this repo, Supabase directory `supabase`,
+   production branch `main`, **Deploy to production on**. Every push to `main` then applies new
+   migration files. Check *Table Editor* (tables such as `users`, `briefs`, `jobs`, `invites`) or the
+   project's *Last migration* after a push.
+   - Change the schema only by adding a migration file and pushing to `main`; never edit tables in the
+     dashboard.
+   - Don't run `python -m app.db.migrate` against this database: it records applied migrations in its
+     own table, separate from Supabase's. Our runner is for local Postgres only.
+   - Without the integration: `supabase link --project-ref <ref> && supabase db push` (same tracking
+     as the integration).
 
 3. **Give the app roles a login.** The migrations create `app_rw` (what the app uses; *not*
    BYPASSRLS, so row-level security always applies) and `app_admin` (read-only admin views) without
