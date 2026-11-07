@@ -30,7 +30,7 @@ Background and evidence: `docs/status.md`.
 - [ ] **1.21 Faster voice** (Claude). Kate finds the voice too slow. Plan: a playback-speed setting in the web app (default about 1.2×, pitch preserved; free, works in Safari). Prompting the model to speak faster is possible but risks the word-for-word reading. A provider with a speed parameter (OpenAI or Google) would need a new account.
 
 ### Only if you want to show it on your phone
-- [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`.
+- [ ] **1.11 Deploy to Supabase and Railway** (both). Steps are in `docs/deploy.md`. In progress: Supabase project created (East US, Ohio), GitHub integration deploys migrations from `main`.
 - [ ] **1.12 iPhone checklist** (Kate). Run `docs/iphone-checklist.md` in Safari and as a home-screen app.
 - [ ] **1.13 Server speech-to-text** (both, optional). Choose OQ-8 and add `STT_API_KEY` if browser speech recognition isn't good enough.
 
