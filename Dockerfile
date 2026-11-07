@@ -19,7 +19,8 @@ RUN if [ -f web/package.json ]; then \
 
 FROM python:3.12-slim AS runtime
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PORT=8000 \
-    FASTEMBED_CACHE_PATH=/srv/var/fastembed
+    FASTEMBED_CACHE_PATH=/srv/var/fastembed \
+    LLM_LEDGER_PATH=/srv/var/runs/llm_ledger.jsonl
 WORKDIR /srv
 COPY pyproject.toml README.md ./
 COPY app ./app
