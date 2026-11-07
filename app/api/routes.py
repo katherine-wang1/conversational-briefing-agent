@@ -9,8 +9,10 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from pydantic import BaseModel, Field, field_validator
 
+from app.agents.voice.citations import CitationIndex, load_titles, pack_doc_ids
 from app.api.auth import CurrentUser
 from app.api.deps import current_user
+from app.contracts.brief import SourcePack
 from app.db.ids import new_id
 from app.db.repos import USER_TABLES
 from app.jobs.handlers import local_today
@@ -20,7 +22,9 @@ router = APIRouter(prefix="/api")
 User = Depends(current_user)
 
 PREF_KEYS = ("length_s", "depth", "technicality", "style", "preferred_sources")
-SETTINGS_KEYS = {"voice", "stt_mode", "auto_resume", "headphones_mode", "tts"}
+SETTINGS_KEYS = {"voice", "stt_mode", "auto_resume", "headphones_mode", "tts", "playback_rate", "show_debug"}
+PLAYBACK_RATES = (0.8, 2.0)  # allowed playback_rate range (inclusive)
+DEFAULT_PLAYBACK_RATE = 1.2  # TODO 1.21: the voice is a bit slow at 1.0
 
 
 def _db(request: Request):  # noqa: ANN202
@@ -121,6 +125,8 @@ async def get_me(request: Request, user: CurrentUser = User) -> dict[str, Any]:
             "stt_mode": st.get("stt_mode", "browser"),
             "auto_resume": st.get("auto_resume", True),
             "headphones_mode": st.get("headphones_mode", False),
+            "playback_rate": st.get("playback_rate", DEFAULT_PLAYBACK_RATE),
+            "show_debug": st.get("show_debug", False),
             "depth_pref": delivery.get("depth"),
         },
         # full detail
@@ -138,6 +144,16 @@ async def _set_prefs(s: Any, values: dict[str, Any], confidence: float) -> None:
             await s.delivery_prefs.set(k, v, confidence)
 
 
+def _check_settings(st: dict[str, Any]) -> None:
+    if "playback_rate" in st:
+        r = st["playback_rate"]
+        lo, hi = PLAYBACK_RATES
+        if isinstance(r, bool) or not isinstance(r, int | float) or not lo <= r <= hi:
+            raise HTTPException(422, f"playback_rate must be a number from {lo} to {hi}")
+    if "show_debug" in st and not isinstance(st["show_debug"], bool):
+        raise HTTPException(422, "show_debug must be true or false")
+
+
 @router.patch("/me")
 async def patch_me(body: MePatch, request: Request, user: CurrentUser = User) -> dict[str, Any]:
     async with _db(request).user_scope(user.user_id) as s:
@@ -148,6 +164,7 @@ async def patch_me(body: MePatch, request: Request, user: CurrentUser = User) ->
             bad = set(body.settings) - SETTINGS_KEYS
             if bad:
                 raise HTTPException(422, f"unknown settings {sorted(bad)}")
+            _check_settings(body.settings)
             fields["settings"] = {**(user.profile.get("settings") or {}), **body.settings}
         if fields:
             fields["updated_at"] = datetime.now(UTC)
@@ -297,10 +314,21 @@ async def history(request: Request, days: int = Query(14, ge=1, le=90), user: Cu
 @router.get("/sessions/{session_id}/transcript")
 async def transcript(session_id: str, request: Request, user: CurrentUser = User) -> dict[str, Any]:
     async with _db(request).user_scope(user.user_id) as s:
-        if await s.sessions.get(session_id) is None:
+        sess = await s.sessions.get(session_id)
+        if sess is None:
             raise HTTPException(404, "not_found")
         turns = await s.turns.list(session_id=session_id)
-    return {"turns": turns}
+        cited = any(t.get("citations") for t in turns)
+        rows = await s.source_packs.list(brief_id=sess["brief_id"]) if cited and sess["brief_id"] else []
+        packs = [SourcePack.model_validate(p["pack"]) for p in rows]
+        index = CitationIndex(packs, await load_titles(s, pack_doc_ids(packs)))
+    # Additive (TODO 1.22): `sources` = the turn's `citations` resolved to {source, url, title}.
+    return {
+        "turns": [
+            {**t, "sources": [c.model_dump() for c in index.resolve_many(t.get("citations") or [])]}
+            for t in turns
+        ]
+    }
 
 
 # ---- memory / questions / ratings ----

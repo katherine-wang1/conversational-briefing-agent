@@ -54,8 +54,16 @@ class Control(Strict):
     action: Literal["skip", "next", "resume", "end", "play"]
 
 
+class DebugSubscribe(Strict):
+    """Additive: ask the server to send `debug` events for this (the caller's own) session."""
+
+    type: Literal["debug_subscribe"] = "debug_subscribe"
+    enabled: bool = True
+
+
 ClientMessage = Annotated[
-    ClientHello | Playback | Interrupt | Utterance | UtteranceAudio | Control, Field(discriminator="type")
+    ClientHello | Playback | Interrupt | Utterance | UtteranceAudio | Control | DebugSubscribe,
+    Field(discriminator="type"),
 ]
 
 
@@ -67,12 +75,22 @@ class StateMsg(Strict):
     state: SessionState
 
 
+class CitationSource(Strict):
+    """A citation resolved for display: the source's name and a link to the article."""
+
+    passage_id: str
+    source: str | None = None  # e.g. "Reuters", or the site's domain
+    url: str | None = None  # http(s) only
+    title: str | None = None  # article title (or the story headline if unknown)
+
+
 class TranscriptMsg(Strict):
     type: Literal["transcript"] = "transcript"
     role: Literal["user", "agent"]
     text: str
     turn_id: str
     citations: list[str] = []
+    sources: list[CitationSource] = []  # additive: `citations` resolved (same order, deduped by url)
 
 
 class TtsChunk(Strict):
@@ -99,7 +117,18 @@ class ErrorMsg(Strict):
     message: str
 
 
+class DebugMsg(Strict):
+    """Additive: a "what's happening" event for the live log, sent only after `debug_subscribe`.
+    Kinds are state, heard, model, tool, speak, drop, memory, tts, error and info."""
+
+    type: Literal["debug"] = "debug"
+    kind: str
+    text: str
+    ts: float  # epoch seconds
+    data: dict = {}
+
+
 ServerMessage = Annotated[
-    StateMsg | TranscriptMsg | TtsChunk | ResumeBrief | BookmarkCreated | ErrorMsg,
+    StateMsg | TranscriptMsg | TtsChunk | ResumeBrief | BookmarkCreated | ErrorMsg | DebugMsg,
     Field(discriminator="type"),
 ]

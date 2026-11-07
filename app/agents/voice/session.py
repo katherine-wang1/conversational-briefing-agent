@@ -34,6 +34,7 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
 
+from app.agents.voice.citations import CitationIndex
 from app.agents.voice.context import (
     is_meta_sentence,
     position_line,
@@ -51,6 +52,8 @@ from app.contracts.session import (
     BookmarkCreated,
     ClientHello,
     Control,
+    DebugMsg,
+    DebugSubscribe,
     ErrorMsg,
     Interrupt,
     Playback,
@@ -62,7 +65,7 @@ from app.contracts.session import (
     Utterance,
     UtteranceAudio,
 )
-from app.contracts.tools import Tool, ToolContext
+from app.contracts.tools import SearchResult, Tool, ToolContext
 from app.db.ids import new_id
 from app.speech.base import SpeechUnavailable, STTProvider, TTSProvider
 from app.speech.sentence_splitter import SentenceSplitter, strip_citations
@@ -122,6 +125,7 @@ class VoiceSession:
         config: VoiceConfig | None = None,
         run_id: str = "live",
         open_questions: str = "",
+        citations: CitationIndex | None = None,
     ):
         self.session_id = session_id
         self.user_id = user_id
@@ -155,6 +159,10 @@ class VoiceSession:
         self._idle_task: asyncio.Task | None = None
         self._send_lock = asyncio.Lock()
         self._sids = [s.sid for s in brief.sentences] if brief else []
+        self.citations = citations or CitationIndex(packs)
+        # Live log ("under the hood"): off until the client sends debug_subscribe.
+        self.debug = False
+        self._debug_cost = 0.0
 
     # ---- plumbing -----------------------------------------------------------------------------------
 
@@ -162,10 +170,22 @@ class VoiceSession:
         async with self._send_lock:
             await self._send(msg)
 
+    async def debug_event(self, kind: str, text: str, **data: Any) -> None:
+        """Send a live-log event to this session's own client (only when it subscribed). Never
+        include secrets: model names, timings, token counts, costs and the user's own text only."""
+        if not self.debug or self.ended:
+            return
+        try:
+            await self.send(DebugMsg(kind=kind, text=text[:500], ts=time.time(), data=data))
+        except Exception:  # noqa: BLE001 - the live log must never break the session
+            log.debug("debug event dropped", exc_info=True)
+
     async def set_state(self, state: SessionState) -> None:
         if state == self.state and state != "READY":
             return
+        prev = self.state
         self.state = state
+        await self.debug_event("state", f"{prev} → {state}", prev=prev, state=state)
         await self.send(StateMsg(state=state))
         if state in ("OPEN_FLOOR", "LISTENING"):
             self._arm_idle()
@@ -224,6 +244,12 @@ class VoiceSession:
                 "payload": payload,
             }
         )
+        extra = f" ({payload['value']})" if "value" in payload else ""
+        await self.debug_event(
+            "memory",
+            f"signal {type_}{' on ' + story_ref if story_ref else ''}{extra}",
+            type=type_, story_ref=story_ref, explicit=explicit, strength=strength,
+        )
 
     async def _error(self, code: str, message: str) -> None:
         await self.send(ErrorMsg(code=code, message=message))
@@ -248,6 +274,11 @@ class VoiceSession:
             await self._on_audio(msg)
         elif isinstance(msg, Control):
             await self._on_control(msg)
+        elif isinstance(msg, DebugSubscribe):
+            self.debug = msg.enabled
+            await self.debug_event(
+                "info", f"live log on · session {self.session_id} · state {self.state}", state=self.state
+            )
 
     async def _on_hello(self, msg: ClientHello) -> None:
         if msg.session_id != self.session_id:
@@ -273,6 +304,10 @@ class VoiceSession:
 
     async def _on_interrupt(self, msg: Interrupt) -> None:
         was = self.state
+        await self.debug_event(
+            "info", f"interrupt in {was} at {msg.segment_id or '-'} +{msg.offset_ms} ms",
+            segment_id=msg.segment_id, offset_ms=msg.offset_ms,
+        )
         await self._cancel_tasks()
         if was == "PLAYING_BRIEF":
             sid = msg.segment_id or (self.position or {}).get("segment_id")
@@ -304,6 +339,7 @@ class VoiceSession:
         if not text.strip():
             await self._error("stt_empty", "didn't catch that")
             return
+        await self.debug_event("heard", f"server STT: {text}", stt="server")
         await self._start_turn(text, msg.end_of_speech_ts, stt="server")
 
     async def _on_control(self, msg: Control) -> None:
@@ -399,6 +435,10 @@ class VoiceSession:
             }
         )
         await self.send(TranscriptMsg(role="user", text=text, turn_id=turn_id + "u"))
+        await self.debug_event(
+            "heard", f"heard: {text}", turn_id=turn_id,
+            eos_lag_ms=int((t0 - end_of_speech_ts) * 1000) if end_of_speech_ts else None,
+        )
         self.history.append(("user", text))
 
         spoken: list[str] = []
@@ -417,6 +457,7 @@ class VoiceSession:
             clean = spoken_form(clean)
             if is_meta_sentence(clean):
                 log.info("voice turn %s: dropped a meta sentence: %r", turn_id, clean[:200])
+                await self.debug_event("drop", f"dropped a meta sentence: {clean[:200]}", turn_id=turn_id)
                 return
             if "first_sentence_ms" not in timings:
                 timings["first_sentence_ms"] = int((time.time() - t0) * 1000)
@@ -426,13 +467,28 @@ class VoiceSession:
             n_sent += 1
             spoken.append(clean)
             citations.extend(c for c in cites if c not in citations)
-            await self.send(TranscriptMsg(role="agent", text=clean, turn_id=turn_id, citations=cites))
+            sources = self.citations.resolve_many(cites)
+            await self.send(
+                TranscriptMsg(role="agent", text=clean, turn_id=turn_id, citations=cites, sources=sources)
+            )
+            names = ", ".join(sorted({c.source or "?" for c in sources}))
+            await self.debug_event(
+                "speak", f"say #{n_sent}: {clean}" + (f"  [{names}]" if names else ""),
+                turn_id=turn_id, n=n_sent, at_ms=int((time.time() - t0) * 1000), cites=len(cites),
+            )
             if self.tts is not None and not self.text_mode:
+                ts0 = time.time()
                 try:
                     audio = await self.tts.synthesize(clean, voice=self.cfg.voice)
                 except SpeechUnavailable as e:
                     await self._error("tts_failed", str(e))
+                    await self.debug_event("error", f"TTS failed: {e}"[:300])
                     return
+                tts_ms = int((time.time() - ts0) * 1000)
+                await self.debug_event(
+                    "tts", f"TTS #{n_sent}: {tts_ms} ms, {len(audio.data) // 1024} KB {audio.format}",
+                    ms=tts_ms, bytes=len(audio.data),
+                )
                 self.tts_seq += 1
                 await self.send(
                     TtsChunk(
@@ -454,7 +510,7 @@ class VoiceSession:
         searches = 0
         filler_said = False
         try:
-            for _round in range(self.cfg.max_tool_rounds):
+            for round_no in range(self.cfg.max_tool_rounds):
                 req = ChatRequest(
                     role="voice.turn",
                     messages=messages,
@@ -467,7 +523,13 @@ class VoiceSession:
                 splitter = SentenceSplitter()
                 round_text: list[str] = []
                 calls: list[ToolCall] = []
+                rt0 = time.time()
+                first_ms: int | None = None
                 async for ev in self.model.stream(req):
+                    if first_ms is None and ev.type in ("text_delta", "tool_call"):
+                        first_ms = int((time.time() - rt0) * 1000)
+                    if ev.type == "done" and ev.response:
+                        await self._debug_model(ev.response, round_no, first_ms)
                     if ev.type == "text_delta" and ev.text:
                         round_text.append(ev.text)
                         for s in splitter.feed(ev.text):
@@ -491,6 +553,10 @@ class VoiceSession:
                     sid_arg = self._valid_story(call.arguments.get("story_id"))
                     if sid_arg:
                         story_hits.add(sid_arg)
+                    await self.debug_event(
+                        "tool", f"tool call {call.name}({_args_summary(call.arguments)})",
+                        name=call.name, turn_id=turn_id,
+                    )
                     if call.name == "quick_search":
                         if searches >= self.cfg.max_quick_searches:
                             result = "<tool_error>quick_search limit reached for this turn</tool_error>"
@@ -513,10 +579,18 @@ class VoiceSession:
         except Exception as e:  # noqa: BLE001
             log.exception("voice turn failed")
             await self._error("turn_failed", type(e).__name__)
+            await self.debug_event("error", f"turn failed: {type(e).__name__}")
             if not spoken:
                 await speak("Sorry, something went wrong there.")
         finally:
             timings["total_ms"] = int((time.time() - t0) * 1000)
+            if not aborted:
+                first = timings.get("first_sentence_ms")
+                await self.debug_event(
+                    "info", f"turn done: {n_sent} sentences in {timings['total_ms']} ms"
+                    + (f", first after {first} ms" if first is not None else ""),
+                    turn_id=turn_id, **timings,
+                )
             answer = " ".join(spoken)
             if answer:
                 self.history.append(("agent", answer))
@@ -605,14 +679,43 @@ class VoiceSession:
         if tool is None or not query:
             return "<tool_error>search unavailable</tool_error>"
         ctx = self.tool_ctx(budget)
+        q0 = time.time()
         try:
             r = await asyncio.wait_for(tool(ctx, query=query, max_results=5), self.cfg.quick_search_timeout_s)
         except TimeoutError:
+            await self.debug_event("tool", f"search {query!r}: timed out", query=query)
             return (
                 "<tool_error>search timed out; answer without it or offer to bookmark the question"
                 "</tool_error>"
             )
+        ms = int((time.time() - q0) * 1000)
+        if r.ok and isinstance(r.data, SearchResult):
+            self.citations.add_hits(r.data.hits)
+            await self.debug_event(
+                "tool", f"search {query!r}: {len(r.data.hits)} hits in {ms} ms", query=query,
+                hits=len(r.data.hits), ms=ms,
+            )
+        else:
+            await self.debug_event("tool", f"search {query!r}: failed in {ms} ms ({(r.error or '')[:120]})")
         return r.as_untrusted_text()
+
+    async def _debug_model(self, resp: Any, round_: int, first_ms: int | None) -> None:
+        if not self.debug:
+            return
+        u = resp.usage
+        cost = u.cost_usd or 0.0
+        self._debug_cost += cost
+        await self.debug_event(
+            "model",
+            f"voice.turn round {round_ + 1}: {resp.model} · {resp.latency_ms} ms"
+            + (f" (first token {first_ms} ms)" if first_ms is not None else "")
+            + f" · {u.tokens_in} in ({u.tokens_cached} cached) / {u.tokens_out} out"
+            + f" · ${cost:.4f} (session ${self._debug_cost:.4f})"
+            + (f" · {len(resp.tool_calls)} tool call(s)" if resp.tool_calls else ""),
+            role="voice.turn", model=resp.model, provider=resp.provider, latency_ms=resp.latency_ms,
+            first_ms=first_ms, tokens_in=u.tokens_in, tokens_out=u.tokens_out,
+            tokens_cached=u.tokens_cached, cost_usd=cost, cached=resp.cached,
+        )
 
     async def _run_voice_tool(self, call: ToolCall, turn_id: str, nav: list[tuple[str, str | None]]) -> str:
         a = call.arguments
@@ -680,6 +783,14 @@ class VoiceSession:
             await self.send(StateMsg(state="ENDED"))
         except Exception:  # noqa: BLE001 - the socket may already be gone
             pass
+
+
+def _args_summary(args: dict[str, Any]) -> str:
+    parts = []
+    for k, v in args.items():
+        sv = repr(v) if isinstance(v, str) else str(v)
+        parts.append(f"{k}={sv[:80]}")
+    return ", ".join(parts)[:240]
 
 
 def _seconds(value: str) -> int | None:

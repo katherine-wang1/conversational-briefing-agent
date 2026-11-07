@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import uuid
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -109,9 +110,9 @@ def seed_digest(pgdb: TestDatabase) -> None:
         )
         for i, h in enumerate(["Acme ships Voltaic battery", "Labs agree on eval standard"]):
             c.execute(
-                "insert into digest_entries (digest_id, story_id, headline, summary, importance)"
-                " values (%s, %s, %s, %s, %s)",
-                [did, f"st-{did}-{i}", h, f"{h} (summary).", 90 - i],
+                "insert into digest_entries (digest_id, story_id, headline, summary, importance, urls)"
+                " values (%s, %s, %s, %s, %s, %s)",
+                [did, f"st-{did}-{i}", h, f"{h} (summary).", 90 - i, json.dumps([f"https://news.example/{i}"])],
             )
 
 

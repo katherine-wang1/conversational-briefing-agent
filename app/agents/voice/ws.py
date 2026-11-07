@@ -18,6 +18,7 @@ from typing import Any
 from fastapi import APIRouter, Query, WebSocket, WebSocketDisconnect
 from pydantic import TypeAdapter, ValidationError
 
+from app.agents.voice.citations import CitationIndex, load_titles, pack_doc_ids
 from app.agents.voice.session import VoiceConfig, VoiceSession
 from app.agents.voice.store import DbSessionStore
 from app.api.auth import AuthError, bearer, resolve_user
@@ -39,13 +40,16 @@ async def load_session_context(db: Any, user_id: Any, session_id: str) -> dict[s
         if sess is None:
             return None
         brief = await s.briefs.get(sess["brief_id"]) if sess["brief_id"] else None
-        packs = await s.source_packs.list(brief_id=sess["brief_id"]) if brief else []
+        rows = await s.source_packs.list(brief_id=sess["brief_id"]) if brief else []
+        packs = [SourcePack.model_validate(p["pack"]) for p in rows]
+        titles = await load_titles(s, pack_doc_ids(packs))
         prof = await s.profiles.me()
         questions = await s.open_questions.list(status=["open", "researching"], run_id=sess["run_id"])
     return {
         "session": sess,
         "brief": BriefScript.model_validate(brief["script"]) if brief and brief.get("script") else None,
-        "packs": [SourcePack.model_validate(p["pack"]) for p in packs],
+        "packs": packs,
+        "citations": CitationIndex(packs, titles),
         "settings": (prof or {}).get("settings") or {},
         "open_questions": "; ".join(q["question"] for q in questions[:5]),
     }
@@ -110,6 +114,7 @@ async def ws_session(websocket: WebSocket, session_id: str, token: str | None = 
         config=cfg,
         run_id=run_id,
         open_questions=ctx["open_questions"],
+        citations=ctx["citations"],
     )
     try:
         while True:
