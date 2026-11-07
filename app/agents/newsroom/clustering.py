@@ -39,6 +39,7 @@ from __future__ import annotations
 import hashlib
 import heapq
 import math
+import os
 import re
 import threading
 from collections.abc import Awaitable, Callable, Sequence
@@ -75,6 +76,14 @@ _FASTEMBED_LOCK = threading.Lock()
 FASTEMBED_BATCH_SIZE = 32
 
 
+def _fastembed_threads() -> int | None:
+    """ONNX Runtime sizes its thread pool from the host's core count, which in a container capped at
+    ~2 vCPU (Railway) means dozens of threads fighting over two CPUs. FASTEMBED_THREADS caps it
+    (set to 2 in the Docker image); unset leaves ONNX's default."""
+    v = os.environ.get("FASTEMBED_THREADS", "").strip()
+    return int(v) if v else None
+
+
 def _fastembed_model(model: str) -> Any:
     with _FASTEMBED_LOCK:
         impl = _FASTEMBED_MODELS.get(model)
@@ -85,7 +94,7 @@ def _fastembed_model(model: str) -> Any:
                 raise RuntimeError(
                     "fastembed is not installed: pip install -e '.[newsroom]' or pass another Embedder"
                 ) from e
-            impl = _FASTEMBED_MODELS[model] = TextEmbedding(model_name=model)
+            impl = _FASTEMBED_MODELS[model] = TextEmbedding(model_name=model, threads=_fastembed_threads())
         return impl
 
 
