@@ -26,7 +26,7 @@ model provider and web search.
 |---|---|---|
 | Python | 3.12 or newer | `python3 --version` |
 | Node.js | 20 or newer (tested on 22) | `node --version` |
-| Docker | Docker Desktop or any Docker with `docker compose` | runs Postgres 16. If you already have Postgres 16 running locally, you can use it instead (see [Troubleshooting](#troubleshooting)). |
+| Postgres 16 | **either** Docker (Docker Desktop or any Docker with `docker compose`) **or** a local Postgres, e.g. from Homebrew | step 2 shows both. On a Mac without Docker, the Homebrew route is quicker. |
 | Chrome or Edge | any recent | for the microphone and Web Speech recognition. Safari works for playback and typed questions. |
 | An **OpenRouter** API key | | runs all the model calls *and* text-to-speech. One full run (news digest + onboarding + brief + a few questions) costs about **$0.10**. |
 | A **Tavily** API key | free tier is enough | live web search. Without it the brief still works but uses only the daily news digest, and questions can't search the web. |
@@ -48,15 +48,50 @@ cd web && npm install && cd ..
 
 ### 2. Start the database and create the schema
 
+Start Postgres 16 with **one** of the two options below. Both give you a database named `briefing`
+on `localhost:5432` with a superuser `postgres` (password `postgres`), which is what `.env.example` and
+the tests expect.
+
+**Option A: Docker**
+
 ```bash
 docker compose up -d db
 ```
+
+**Option B: Homebrew (macOS, no Docker)**
+
+```bash
+brew install postgresql@16
+```
+
+```bash
+brew services start postgresql@16
+```
+
+```bash
+export PATH="$(brew --prefix postgresql@16)/bin:$PATH"
+```
+
+```bash
+createdb briefing
+```
+
+```bash
+psql -d briefing -c "create role postgres with superuser login password 'postgres';"
+```
+
+Homebrew's Postgres makes your macOS user the superuser. The last command adds the `postgres` role the
+app's settings use. The `export PATH` line only applies to the current terminal; you need it only for
+`createdb` and `psql`. On Linux, install `postgresql-16` from your package manager and create the
+same database and role.
+
+**Then, either way, create the schema:**
 
 ```bash
 MIGRATIONS_DATABASE_URL=postgresql://postgres:postgres@localhost:5432/briefing .venv/bin/python -m app.db.migrate --dev-role-passwords
 ```
 
-The second command should end with `4 migration(s) applied`. It creates the tables, row-level
+It should end with `4 migration(s) applied`. It creates the tables, row-level
 security and two app roles (`app_rw`, `app_admin`) with local-only passwords.
 
 ### 3. Configure
@@ -218,8 +253,8 @@ Design documents: product requirements in [`docs/01-PRD.md`](docs/01-PRD.md), te
 .venv/bin/python -m pytest -q
 ```
 
-The database tests create and drop their own database on the local Postgres from
-`docker compose`. Set `TEST_DATABASE_ADMIN_URL` to use a different server. Tests that call real model
+The database tests create and drop their own database on the Postgres from step 2
+(`postgres:postgres@localhost:5432`). Set `TEST_DATABASE_ADMIN_URL` to use a different server. Tests that call real model
 providers are skipped unless `LLM_LIVE_TESTS=1`.
 
 ```bash
@@ -232,9 +267,14 @@ The web app also runs without the backend, against a mock server: `cd web && npm
 
 ## Troubleshooting
 
-- **Port 5432 is already in use.** Another Postgres is running. Stop it, or use it instead of
-  Docker: create a database named `briefing` and a superuser `postgres` with password `postgres`
-  (or change the URLs in the migrate command and `.env`), then run the migrate command.
+- **`command not found: docker`.** Docker isn't installed. Use option B (Homebrew) in step 2.
+- **`command not found: createdb` or `psql`.** Homebrew's `postgresql@16` isn't on your PATH.
+  Run the `export PATH=...` line from step 2 in that terminal.
+- **`role "postgres" already exists`.** That's fine; the role is already there. Carry on with the
+  migrate command.
+- **Port 5432 is already in use.** Another Postgres is running. Stop it, or use it instead: create a
+  database named `briefing` and a superuser `postgres` with password `postgres` (or change the URLs in
+  the migrate command and `.env`), then run the migrate command.
 - **`agents=stub` in the worker log**, or briefs that say they're placeholders: the worker can't see
   `OPENROUTER_API_KEY`. Start it from the repository root, where `.env` is.
 - **"fastembed is not installed"** in the worker log: you installed without the extra. Run
@@ -250,10 +290,19 @@ The web app also runs without the backend, against a mock server: `cd web && npm
 
 ### Reset
 
-To start over with an empty database (you'll onboard again):
+To start over with an empty database (you'll onboard again), stop the API server and the worker,
+then:
+
+Docker:
 
 ```bash
 docker compose down -v && docker compose up -d db
+```
+
+Homebrew (with the `export PATH=...` line from step 2 in this terminal):
+
+```bash
+dropdb briefing && createdb briefing
 ```
 
 Then rerun the migrate command from step 2 and restart the API server and the worker. The newsroom runs
