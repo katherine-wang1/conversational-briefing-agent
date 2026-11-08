@@ -17,3 +17,4 @@ eval/cache/
 *.sqlite
 *.sqlite-journal
 briefing_agent.egg-info/
+var/
