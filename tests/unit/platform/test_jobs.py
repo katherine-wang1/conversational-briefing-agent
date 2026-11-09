@@ -40,6 +40,8 @@ async def clean_jobs(db: Database):
     async with db.system_scope() as s:
         await s.execute("delete from jobs")
     yield
+    async with db.system_scope() as s:  # digests made by the news-wait / stub tests below
+        await s.execute("delete from digests where id like 'dg-t-%'")
 
 
 # ---- queue ----
@@ -184,6 +186,26 @@ async def test_tick_skips_bootstrap_when_digests_are_recent(db: Database):
     assert keys == ["newsroom:ai:2026110512", "newsroom:physical_ai:2026110506"]
 
 
+async def test_tick_reruns_a_beat_whose_only_digest_is_a_stub_placeholder(db: Database):
+    q = JobQueue(db)
+    now = datetime(2026, 11, 5, 16, 0, tzinfo=UTC)  # > 3 h after every beat's latest slot
+    async with db.system_scope() as s:
+        await s.execute("delete from digests where run_id = 'live'")
+        for beat in ("ai", "energy", "physical_ai"):
+            # energy: a real digest; ai: only a stub placeholder (a worker started without a key)
+            version = "stub" if beat == "ai" else "v"
+            await s.digests.insert(
+                id=f"dg-t-{beat}", run_id="live", beat=beat, at=now - timedelta(hours=2), version=version
+            )
+        assert (await s.digests.latest("ai", now, real_only=True)) is None
+        assert (await s.digests.latest("ai", now))["version"] == "stub"
+    await q.enqueue("newsroom_run", {"beat": "ai"}, dedupe_key="newsroom:ai:2026110512")  # the stub's run
+    await scheduler.tick(db, q, now)
+    async with db.system_scope() as s:
+        keys = sorted(j["dedupe_key"] for j in await s.jobs.list(type="newsroom_run"))
+    assert keys == ["newsroom:ai:2026110512", "newsroom:ai:2026110512:after-stub"]
+
+
 # ---- handlers end to end (stub agents, fake TTS) ----
 
 
@@ -246,6 +268,69 @@ async def test_cos_daily_gives_up_waiting_for_a_stuck_seed(db: Database, tmp_pat
     uid = await make_user(db, timezone="UTC")
     await deps.queue.enqueue("onboarding_seed", {"text": "x"}, user_id=uid, dedupe_key="onb")
     await deps.queue.claim("w1", ["onboarding_seed"])
+    await deps.queue.enqueue("cos_daily", {"local_date": "2026-11-05"}, user_id=uid, dedupe_key="cos")
+    cos = await deps.queue.claim("w2", ["cos_daily"])
+    assert await asyncio.wait_for(Worker(deps, run_scheduler=False).execute(cos), 5) == "done"
+
+
+async def _fresh_digests(db: Database, beats, age=timedelta(hours=1)) -> None:  # noqa: ANN001
+    async with db.system_scope() as s:
+        await s.execute("delete from digests where run_id = 'live'")
+        for b in beats:
+            await s.digests.insert(id=f"dg-t-{b}", run_id="live", beat=b, at=NOW - age, version="v")
+
+
+async def test_news_pending_only_while_first_digests_are_missing(db: Database):
+    from app.config import loader
+    from app.jobs import handlers
+
+    beats = list(loader.beats())
+    q = JobQueue(db)
+    await _fresh_digests(db, beats[:-1])  # the last beat has no digest yet
+    async with db.system_scope() as s:
+        assert not await handlers.news_pending(s, NOW)  # nothing running: nothing to wait for
+    await q.enqueue("newsroom_run", {"beat": beats[-1]}, dedupe_key="nr-first")
+    async with db.system_scope() as s:
+        assert await handlers.news_pending(s, NOW)
+    await _fresh_digests(db, beats)  # every beat has recent news: a scheduled refresh doesn't block
+    async with db.system_scope() as s:
+        assert not await handlers.news_pending(s, NOW)
+    await _fresh_digests(db, beats, age=timedelta(hours=30))  # stale everywhere: wait for the refresh
+    async with db.system_scope() as s:
+        assert await handlers.news_pending(s, NOW)
+
+
+async def test_cos_daily_waits_for_the_first_news_digests(db: Database, tmp_path, monkeypatch):
+    from app.config import loader
+    from app.jobs import handlers
+
+    monkeypatch.setattr(handlers, "NEWS_POLL_S", 0.02)
+    beats = list(loader.beats())
+    await _fresh_digests(db, [])
+    deps = make_deps(db, tmp_path)
+    uid = await make_user(db, timezone="UTC")
+    nr_id = await deps.queue.enqueue("newsroom_run", {"beat": beats[0]}, dedupe_key="nr")
+    assert (await deps.queue.claim("w1", ["newsroom_run"])).id == nr_id  # running in another slot
+    await deps.queue.enqueue("cos_daily", {"local_date": "2026-11-05"}, user_id=uid, dedupe_key="cos")
+    cos = await deps.queue.claim("w2", ["cos_daily"])
+    task = asyncio.create_task(Worker(deps, run_scheduler=False).execute(cos))
+    await asyncio.sleep(0.2)
+    assert not task.done()  # still gathering news
+    await _fresh_digests(db, beats)
+    await deps.queue.complete(nr_id)
+    assert await asyncio.wait_for(task, 5) == "done"
+
+
+async def test_cos_daily_gives_up_waiting_for_stuck_news(db: Database, tmp_path, monkeypatch):
+    from app.jobs import handlers
+
+    monkeypatch.setattr(handlers, "NEWS_POLL_S", 0.02)
+    monkeypatch.setattr(handlers, "NEWS_WAIT_S", 0.1)
+    await _fresh_digests(db, [])
+    deps = make_deps(db, tmp_path)
+    uid = await make_user(db, timezone="UTC")
+    await deps.queue.enqueue("newsroom_run", {"beat": "ai"}, dedupe_key="nr")
+    await deps.queue.claim("w1", ["newsroom_run"])
     await deps.queue.enqueue("cos_daily", {"local_date": "2026-11-05"}, user_id=uid, dedupe_key="cos")
     cos = await deps.queue.claim("w2", ["cos_daily"])
     assert await asyncio.wait_for(Worker(deps, run_scheduler=False).execute(cos), 5) == "done"

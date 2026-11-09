@@ -350,9 +350,14 @@ class DigestsRepo(Repo):
     table = "digests"
     default_order = "at"
 
-    async def latest(self, beat: str, at: datetime, run_id: str = "live") -> dict[str, Any] | None:
+    async def latest(
+        self, beat: str, at: datetime, run_id: str = "live", *, real_only: bool = False
+    ) -> dict[str, Any] | None:
+        """Latest digest at or before `at`. `real_only` skips StubAgents placeholders (version 'stub')."""
+        stub = " and version <> 'stub'" if real_only else ""
         return await self.s.fetch_one(
-            "select * from digests where beat = %s and run_id = %s and at <= %s order by at desc limit 1",
+            f"select * from digests where beat = %s and run_id = %s and at <= %s{stub}"
+            " order by at desc limit 1",
             [beat, run_id, at],
         )
 

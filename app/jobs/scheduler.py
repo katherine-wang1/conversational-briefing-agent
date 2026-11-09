@@ -89,18 +89,21 @@ async def tick(db: Database, queue: JobQueue, now: datetime | None = None) -> li
 
     for beat in loader.beats().values():
         slot = latest_slot(now, beat.refresh_live_utc)
-        if slot is None:
+        async with db.system_scope() as s:
+            # Placeholder digests (StubAgents, e.g. a worker started without a model key) don't count.
+            recent = await s.digests.latest(beat.id, now, real_only=True)
+            newest = await s.digests.latest(beat.id, now)
+        if slot is None and (recent is None or now - recent["at"] > BOOTSTRAP_AFTER):
             # Bootstrap: without any recent digest the first brief would have no shared news at all.
-            async with db.system_scope() as s:
-                recent = await s.digests.latest(beat.id, now)
-            if recent is None or now - recent["at"] > BOOTSTRAP_AFTER:
-                slot = latest_slot(now, beat.refresh_live_utc, grace=None)
+            slot = latest_slot(now, beat.refresh_live_utc, grace=None)
+        # A stub run already used this slot's dedupe key: queue the real run under a second key.
+        suffix = ":after-stub" if newest is not None and newest["version"] == "stub" else ""
         if slot is not None:
             ids.append(
                 await queue.enqueue(
                     "newsroom_run",
                     {"beat": beat.id, "at": slot.isoformat()},
-                    dedupe_key=f"newsroom:{beat.id}:{slot:%Y%m%d%H}",
+                    dedupe_key=f"newsroom:{beat.id}:{slot:%Y%m%d%H}{suffix}",
                 )
             )
 

@@ -307,8 +307,10 @@ class RealAgents:
         q = OpenQuestion(
             id=question["id"],
             question=question["question"],
-            context={**(question.get("context") or {}), **({"story_ref": question["story_ref"]}
-                                                          if question.get("story_ref") else {})},
+            context={
+                **(question.get("context") or {}),
+                **({"story_ref": question["story_ref"]} if question.get("story_ref") else {}),
+            },
             status="researching",
             created_at=question["created_at"],
         )
@@ -339,7 +341,15 @@ def load_ports(mode: str = "auto", *, model_available: bool = True) -> AgentPort
         log.warning("agent entry points unavailable (%s); using StubAgents placeholder", e)
         return StubAgents()
     if mode == "auto" and not model_available:
-        log.warning("no model client (OPENROUTER_API_KEY unset): AGENT_PORTS=auto uses StubAgents")
+        bar = "!" * 78
+        log.error(
+            "\n%s\n!! NO MODEL KEY: OPENROUTER_API_KEY is empty, so this worker runs PLACEHOLDER agents.\n"
+            "!! Briefs will be fake (the digest headlines read back, no search, no real writing).\n"
+            "!! Fix: set OPENROUTER_API_KEY in .env (or export it); make sure this shell doesn't export an\n"
+            "!! empty one (`unset OPENROUTER_API_KEY`); restart; then reset the database (README).\n%s",
+            bar,
+            bar,
+        )
         return StubAgents()
     return ports
 

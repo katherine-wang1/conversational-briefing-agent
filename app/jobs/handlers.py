@@ -171,7 +171,7 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
         for o in observations:
             await s.headline_observations.insert(id=new_id("ob"), **o.model_dump())
         history = await newsroom_history(s, beat_id, at)
-        prev = await s.digests.latest(beat_id, at)
+        prev = await s.digests.latest(beat_id, at, real_only=_real(deps))
     digest, trace = await deps.ports.run_newsroom(
         beat_id,
         at,
@@ -194,11 +194,16 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
 # ---- chief of staff -------------------------------------------------------------------------------------
 
 
+def _real(deps: Deps) -> bool:
+    """Real agents never build on StubAgents placeholder digests (e.g. left by a run without a key)."""
+    return getattr(deps.ports, "name", "") != "stub"
+
+
 async def latest_digests(deps: Deps, at: datetime) -> list[Digest]:
     out = []
     async with deps.db.system_scope() as s:
         for beat_id in loader.beats():
-            d = await s.digests.latest(beat_id, at)
+            d = await s.digests.latest(beat_id, at, real_only=_real(deps))
             if d:
                 out.append(digest_from_rows(d, await s.digest_entries.list(digest_id=d["id"])))
     return out
@@ -228,10 +233,53 @@ async def wait_for_onboarding_seed(deps: Deps, uid: UUID) -> None:
         waited += SEED_POLL_S
 
 
+# On a fresh install the worker builds every beat's first digest at startup (3-5 min). A brief started
+# before then would have no shared news ("big news" slots empty), so cos_daily waits for those runs.
+# It only waits while a beat has no digest from the last 24 h and a newsroom_run is queued or running,
+# so a routine scheduled refresh never delays a brief.
+NEWS_WAIT_S = 480.0
+NEWS_POLL_S = 2.0
+NEWS_FRESH = timedelta(hours=24)
+
+
+async def news_pending(s: Any, now: datetime) -> bool:
+    """True while today's first shared news is still being gathered (see NEWS_WAIT_S)."""
+    row = await s.fetch_one(
+        "select count(*) as n from jobs where type = 'newsroom_run' and run_id = 'live'"
+        " and status in ('queued', 'running')"
+    )
+    if not row or not row["n"]:
+        return False
+    for beat_id in loader.beats():
+        d = await s.digests.latest(beat_id, now, real_only=True)
+        if d is None or d["at"] < now - NEWS_FRESH:
+            return True
+    return False
+
+
+async def wait_for_news(deps: Deps, uid: UUID) -> None:
+    waited = 0.0
+    while True:
+        async with deps.db.system_scope() as s:
+            pending = await news_pending(s, deps.clock())
+        if not pending:
+            return
+        if waited >= NEWS_WAIT_S:
+            log.warning(
+                "cos_daily for %s: first newsroom runs pending after %.0f s; going ahead", uid, waited
+            )
+            return
+        if waited == 0:
+            log.info("cos_daily for %s: waiting for today's first news digests", uid)
+        await asyncio.sleep(NEWS_POLL_S)
+        waited += NEWS_POLL_S
+
+
 @handler("cos_daily")
 async def cos_daily(deps: Deps, job: Job) -> None:
     uid = _need_user(job)
     await wait_for_onboarding_seed(deps, uid)
+    await wait_for_news(deps, uid)
     now = deps.clock()
     arm = job.payload.get("arm", "full")
     async with deps.db.user_scope(uid) as s:

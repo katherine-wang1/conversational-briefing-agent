@@ -47,6 +47,7 @@ def test_full_flow_onboarding_brief_session_over_websocket(client, pgdb, tmp_pat
     u.onboard()
     r = u.get("/api/briefs/today")
     assert r.status_code == 202 and r.json()["status"] == "pending"
+    assert r.json()["stage"] in ("gathering_news", "writing")
     ran = run_jobs(pgdb, tmp_path)
     assert {"onboarding_seed", "cos_daily", "tts_render"} <= set(ran)
 
@@ -262,3 +263,20 @@ async def test_jwt_verification_with_jwks():
         await v.verify(_token(other))
     with pytest.raises(AuthError):  # alg=none / HS256 without a configured secret
         await v.verify(jwt.encode({"sub": "x", "exp": 9999999999}, "s" * 40, algorithm="HS256"))
+
+
+def test_pending_brief_reports_gathering_news_while_first_digests_build(client, pgdb):
+    with psycopg.connect(pgdb.owner_dsn, autocommit=True) as c:
+        c.execute("delete from digests where run_id = 'live'")
+        c.execute("insert into jobs (type, dedupe_key, payload) values ('newsroom_run', 'nr-api', '{}')")
+    try:
+        u = ApiUser(client, pgdb)
+        u.onboard()
+        r = u.get("/api/briefs/today")
+        assert r.status_code == 202 and r.json()["stage"] == "gathering_news"
+        with psycopg.connect(pgdb.owner_dsn, autocommit=True) as c:
+            c.execute("update jobs set status = 'done' where dedupe_key = 'nr-api'")
+        assert u.get("/api/briefs/today").json()["stage"] == "writing"
+    finally:
+        with psycopg.connect(pgdb.owner_dsn, autocommit=True) as c:
+            c.execute("delete from jobs where dedupe_key = 'nr-api'")
