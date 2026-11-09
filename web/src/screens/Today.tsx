@@ -117,7 +117,9 @@ export function Today({ openQuestions }: { openQuestions: number }) {
         {loadError && <div className="banner error">Couldn't load today's brief: {loadError}</div>}
         {brief?.status === "pending" && (
           <div className="banner" data-testid="preparing">
-            Preparing your brief… this can take a few minutes.
+            {brief.stage === "gathering_news"
+              ? "Gathering today's news… your first brief can take 3–5 minutes."
+              : "Writing your brief… this can take a couple of minutes."}
           </div>
         )}
         {brief?.status === "onboarding_required" && (

@@ -15,7 +15,7 @@ from app.api.deps import current_user
 from app.contracts.brief import SourcePack
 from app.db.ids import new_id
 from app.db.repos import USER_TABLES
-from app.jobs.handlers import local_today
+from app.jobs.handlers import local_today, news_pending
 from app.jobs.queue import ON_DEMAND_PRIORITY, JobQueue
 
 router = APIRouter(prefix="/api")
@@ -256,13 +256,17 @@ async def brief_today(request: Request, response: Response, user: CurrentUser = 
     response.status_code = 202
     # TODO(TDD §20): after 3 min, serve the importance-only quick brief from the digest (B1 logic).
     failed = (pending or {}).get("status") == "failed"
+    async with _db(request).system_scope() as s:
+        gathering = await news_pending(s, datetime.now(UTC))
     return {
         "brief_id": (pending or {}).get("id"),
         "status": "failed" if failed else "pending",  # W-F: pending | ready | failed
         "script": None,
         "manifest": None,
         "local_date": d,
-        "message": "Preparing your brief (about 1–2 min)",
+        # Additive: what the worker is doing, so the app can say so while it waits.
+        "stage": "gathering_news" if gathering else "writing",
+        "message": "Gathering today's news" if gathering else "Writing your brief",
     }
 
 

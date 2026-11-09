@@ -13,7 +13,9 @@ Background and evidence: `docs/status.md`.
 - [x] **1.3 Full run in the browser against the real backend, with sound** (both). Play → interrupt → ask → hear the answer → resume → end. Fix what breaks, including the two known mismatches between the web app and the backend: `/api/history`, and asking for a brief before onboarding (409/202).
   Done 2026-11-06 (headless Chromium, real agents + TTS + search): every step passes after 10 fixes (fresh-deploy digests, newsroom DB + Docker deps, onboarding race, spoken reasoning, brief-ended signal, REST shapes, ws URL, settings, `/media` proxy) plus resume-after-reload; `docs/smoke/2026-11-06/web-e2e/results.md`. Speech input was a stubbed browser STT and typing.
 - [ ] **1.4 Use it yourself for a few days before recording** (Kate). Onboard, then listen to daily briefs, so the video can show memory and learning across days.
-- [ ] **1.5 README for running the prototype** (Claude). Required for the submission: setup, env vars, local run with `docker compose` plus the web dev server, and a short tour of the architecture.
+- [x] **1.5 README for running the prototype** (Claude). Required for the submission: setup, env vars, local run with `docker compose` plus the web dev server, and a short tour of the architecture.
+  Done 2026-11-08: `README.md`, checked step by step on a fresh database (newsroom 2.7 min, onboarding → brief ready in 136 s, typed question answered with a source chip, $0.08 total). The midpoint demo runs locally; Railway is on hold (1.11).
+  2026-11-09: one-command setup for graders: `./scripts/dev.sh` (installs, finds/starts Postgres, creates `.env` and asks for the keys, builds the app, runs server + worker on :8000). The first brief now waits for today's news, so you can onboard straight away (the app says "Gathering today's news" / "Writing your brief"); fresh DB to playable brief in ~4.5 min. Also fixed: a key only in `.env` didn't reach the model layer (the worker silently ran placeholder agents).
 
 ### Should-have
 - [ ] **1.6 Save which interest each candidate story matched** (Claude). Then skipping a story teaches the agent something; today `ShownStory.interest_ids` is empty.

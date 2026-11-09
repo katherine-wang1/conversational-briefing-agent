@@ -41,6 +41,8 @@ export interface TodayBrief {
   status: "pending" | "ready" | "failed" | "onboarding_required";
   script: BriefScript | null;
   manifest: AudioManifest | null;
+  /** While pending (additive): the worker is still gathering today's first news, or writing the brief. */
+  stage?: "gathering_news" | "writing";
 }
 
 export interface SessionCreated {
