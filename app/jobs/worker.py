@@ -126,7 +126,10 @@ class Worker:
 
 
 async def main() -> None:
+    from app.config.env_file import load_env_file
     from app.config.settings import get_settings
+
+    load_env_file()  # before anything reads os.environ (model layer, speech, fastembed threads)
     from app.db.pool import Database
     from app.jobs.deps import build_deps
 

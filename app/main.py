@@ -134,6 +134,9 @@ def create_app(
 
 
 def _lazy_app() -> FastAPI:
+    from app.config.env_file import load_env_file
+
+    load_env_file()  # before anything reads os.environ (model layer, speech)
     logging.basicConfig(level=logging.INFO)
     return create_app()
 

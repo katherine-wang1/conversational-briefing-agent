@@ -102,6 +102,9 @@ async def amain(argv: list[str] | None = None) -> int:
 
 
 def main() -> None:
+    from app.config.env_file import load_env_file
+
+    load_env_file()
     raise SystemExit(asyncio.run(amain()))
 
 

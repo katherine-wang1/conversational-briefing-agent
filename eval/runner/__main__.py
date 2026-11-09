@@ -34,6 +34,9 @@ def _factory(spec: str) -> Any:
 
 
 def main(argv: list[str] | None = None) -> int:
+    from app.config.env_file import load_env_file
+
+    load_env_file()
     ap = argparse.ArgumentParser(prog="python -m eval.runner")
     sub = ap.add_subparsers(dest="cmd", required=True)
     v = sub.add_parser("validate")

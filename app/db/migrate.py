@@ -53,6 +53,9 @@ async def apply_migrations(dsn: str, *, dev_role_passwords: bool = False, verbos
 
 
 def main() -> None:
+    from app.config.env_file import load_env_file
+
+    load_env_file()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dsn", default=os.environ.get("MIGRATIONS_DATABASE_URL", ""))
     ap.add_argument("--dev-role-passwords", action="store_true")
