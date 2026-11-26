@@ -64,6 +64,8 @@ newsroom:
   impl: classic                 # classic (N2-N6 below) | editor (newsroom_editor below). Overrides, highest
                                 # first: experiment flag newsroom_impl, env NEWSROOM_IMPL, this key.
   window_hours: 24             # observations in (at - window, at] feed one run
+  freshness_filter: true        # drop feed items published before the window (false = pre-2026-11-26)
+  max_undated_per_source: 20
   update_gap_hours: 12          # new items >= this long after a prior story's first_seen = new facts -> update_of
   score_candidates: 80          # top clusters by importance_rules sent to newsroom.score (lean rule L1)
   score_batch_size: 20
@@ -96,6 +98,7 @@ newsroom_editor:
   chunk_size: 400               # candidates per editor call; more -> 2-3 calls merged by URL/title overlap
   max_calls: 3
   max_stories: 40               # stories the editor returns per call (digest takes beat.digest_size)
+  min_stories: 30               # asked-for minimum (Haiku returned 15-30 when only a maximum was given)
   max_output_tokens: 10000
   snippet_chars: 160
   merge_title_threshold: 88     # headline similarity that merges stories across calls

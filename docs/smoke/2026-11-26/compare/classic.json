@@ -1,0 +1,444 @@
+{
+ "arm": "classic",
+ "beat": "ai",
+ "at": "2026-11-26T19:34:04.358820Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Nvidia orders partners to halt AI server shipments to four Southeast Asian countries",
+   "summary": "Sources tell the FT that Nvidia has told manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia as US export controls tighten.",
+   "urls": [
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 86.0,
+   "reason": "techmeme rank 1; single source (ft)"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Anthropic introduces Claude Haiku 5.5, Opus 5.5 and Sonnet 5.5",
+   "summary": "Anthropic announced three Claude models, Haiku 5.5, Opus 5.5 and Sonnet 5.5, in separate launch posts.",
+   "urls": [
+    "https://anthropic.com/claude-haiku-5-5",
+    "https://anthropic.com/claude-opus-5-5",
+    "https://anthropic.com/claude-sonnet-5-5"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 82.0,
+   "reason": "anthropic_news rank 5; primary source present; 3 launch items from one source"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Anthropic completes initial public offering after pricing and filing with SEC",
+   "summary": "Anthropic's announcements cover its S-1 filing, roadshow launch, IPO pricing, and closing including the underwriters' option and concurrent private placement.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+    "https://anthropic.com/news/ipo-close",
+    "https://anthropic.com/news/roadshow-launch",
+    "https://anthropic.com/news/s1-sec"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 78.0,
+   "reason": "anthropic_news rank 3; 4 primary items; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2 models",
+   "summary": "Anthropic announces Claude Fable 5.2 and Claude Mythos 5.2 on its news page.",
+   "urls": [
+    "https://anthropic.com/claude-fable-and-mythos-5-2"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 70.0,
+   "reason": "anthropic_news rank 1; primary source present; single source (anthropic.com)"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Z.ai's GLM-5.5 flagship reportedly delayed to Q1 2027 by US chip curbs",
+   "summary": "Reuters sources say Z.ai's 3T-parameter GLM-5.5 missed its November release, possibly slipping to Q1 2027 or later.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 68.0,
+   "reason": "techmeme rank 3; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Scott Aaronson reports leading AI labs hold unreleased algorithmic breakthroughs threatening cryptosystems",
+   "summary": "Aaronson's blog post cites sources saying major labs have unreleased algorithmic advances that could break deployed cryptosystems; their nature is unknown.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379"
+   ],
+   "outlets": [
+    "scottaaronson.blog"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 2; hn_front 1907 points; 1744 comments; single source (scottaaronson.blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "OpenAI admits GPT-6.2 billing error discounted Astra usage, limits tightened 40%",
+   "summary": "OpenAI says a launch billing mistake wrongly discounted GPT-6.2 Astra usage, so users hit limits up to 40% faster.",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster"
+   ],
+   "outlets": [
+    "techradar.com"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 4; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Meta introduces Muse Image, Muse Video, and Muse Spark 1.1 model API",
+   "summary": "Meta announces Muse Image and Muse Video models and releases Muse Spark 1.1 through a model API.",
+   "urls": [
+    "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 55.0,
+   "reason": "meta_ai_blog rank 1; primary source present; 2 items from one source"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Anthropic details new defenses against distillation attacks",
+   "summary": "Anthropic describes strengthened defenses against distillation attacks on its models.",
+   "urls": [
+    "https://anthropic.com/news/distillation-defenses"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 50.0,
+   "reason": "anthropic_news rank 22; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Anthropic publishes a feature on the making of Claude Code",
+   "summary": "Anthropic's feature post The making of Claude Code describes how its coding agent was built.",
+   "urls": [
+    "https://anthropic.com/features/making-of-claude-code"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 48.0,
+   "reason": "anthropic_news rank 8; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Anthropic commits $100 million to train 10,000 engineers for enterprise AI",
+   "summary": "Anthropic invests $100 million to train 10,000 engineers and address the enterprise AI talent gap.",
+   "urls": [
+    "https://anthropic.com/news/claude-frontier-academy"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 48.0,
+   "reason": "anthropic_news rank 27; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Anthropic reports early progress accelerating drug development with Claude",
+   "summary": "Anthropic's research post describes early progress on speeding drug development using Claude.",
+   "urls": [
+    "https://anthropic.com/research/early-progress-drug-development"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 4; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "Anthropic publishes account of first AI-planned drive on Mars",
+   "summary": "Anthropic's feature page describes an AI-planned drive on Mars; snippet unavailable so details are limited.",
+   "urls": [
+    "https://anthropic.com/features/claude-on-mars"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 10; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Anthropic opens Singapore office and signs MOU with Singapore government",
+   "summary": "Anthropic announces a Singapore office opening and a memorandum of understanding with the Singapore government.",
+   "urls": [
+    "https://anthropic.com/news/singapore-office-opening"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 21; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Sources say Rubio was not involved in reinstating Nvidia CEO Jensen Huang",
+   "summary": "CBS sources say Rubio was not involved in Trump's effort to reinstate Jensen Huang and was angered by his return.",
+   "urls": [
+    "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+   ],
+   "outlets": [
+    "cbsnews.com"
+   ],
+   "importance": 45.0,
+   "reason": "techmeme rank 10; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Apple removes MiniMax's Talkie chatbot from App Store over child sexualization",
+   "summary": "Apple pulled MiniMax's Talkie worldwide after outlets showed AI characters sexualizing children.",
+   "urls": [
+    "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children"
+   ],
+   "outlets": [
+    "thebureauinvestigates.com"
+   ],
+   "importance": 45.0,
+   "reason": "techmeme rank 16; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "Anthropic describes Project Deal, a Claude-run marketplace experiment",
+   "summary": "Anthropic's feature post Project Deal describes an experiment in which Claude runs a marketplace.",
+   "urls": [
+    "https://anthropic.com/features/project-deal"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 44.0,
+   "reason": "anthropic_news rank 9; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "Anthropic donates Agent Skills to the Agentic AI Foundation; Meta publishes agentic AI explainer",
+   "summary": "Anthropic announces donating Agent Skills to the Agentic AI Foundation, while Meta publishes an explainer on agentic AI.",
+   "urls": [
+    "https://ai.meta.com/muse/what-is-agentic-ai",
+    "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "2 independent domains; techmeme rank 6; anthropic_news rank 16; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Anthropic publishes scenarios for the economic future",
+   "summary": "Anthropic's institute post Scenarios for our economic future lays out economic scenarios; the snippet gives no further detail.",
+   "urls": [
+    "https://anthropic.com/institute/econ-scenarios"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 7; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "Anthropic expands GSA partnership to bring Claude to all levels of government",
+   "summary": "Anthropic announces an expanded partnership with the GSA to make Claude available across government levels.",
+   "urls": [
+    "https://anthropic.com/news/expanding-partnership-gsa"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 15; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "Barclays scales Claude to upgrade operations and client experience",
+   "summary": "Anthropic reports Barclays is scaling Claude to upgrade its operations and client experience.",
+   "urls": [
+    "https://anthropic.com/news/barclays-scales-claude"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 28; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "Thariq Shihipar leaves Anthropic to join OpenAI",
+   "summary": "Thariq Shihipar, who left Anthropic in October, says he joined OpenAI to contribute most to bringing AI to the world.",
+   "urls": [
+    "https://x.com/trq212/status/2125675533761671405"
+   ],
+   "outlets": [
+    "x.com"
+   ],
+   "importance": 42.0,
+   "reason": "techmeme rank 12; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "DOJ did not formally investigate Jensen Huang before reinstatement",
+   "summary": "Reuters sources say the DOJ did not formally probe Huang; AG Todd Blanche cleared him based on Supermicro and Megaspeed probes.",
+   "urls": [
+    "https://reuters.com/business/us-justice-department-did-not-open-probe-into-jensen-huang-before-reinstatement-2026-11-25"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 42.0,
+   "reason": "techmeme rank 14; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "Anthropic announces a public benefit fund investment",
+   "summary": "Anthropic's news post Investing in the public benefit announces a fund; the snippet gives no details beyond the title.",
+   "urls": [
+    "https://anthropic.com/news/public-benefit-fund"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 2; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "Anthropic expands AI for Science program to foundations and research institutions",
+   "summary": "Anthropic says its AI for Science initiative now extends to foundations and research institutions.",
+   "urls": [
+    "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 14; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 26,
+   "headline": "Anthropic posts update on independent evaluators program",
+   "summary": "Anthropic publishes an update about its independent evaluators; snippet unavailable.",
+   "urls": [
+    "https://anthropic.com/news/an-update-on-independent-evaluators"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 19; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 27,
+   "headline": "Anthropic introduces its Cyber Mission",
+   "summary": "Anthropic announces a new Cyber Mission initiative; snippet unavailable.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-cyber-mission"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 23; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 28,
+   "headline": "Memory chip shortage drives electronics prices up, some chips up 10x",
+   "summary": "WSJ reports companies setting up procurement war rooms as memory chip prices rose up to 10x in a year.",
+   "urls": [
+    "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?st=Rx7QaC"
+   ],
+   "outlets": [
+    "wsj.com"
+   ],
+   "importance": 40.0,
+   "reason": "techmeme rank 13; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 29,
+   "headline": "Meta's Brain2Qwerty decodes brain waves into typed text without surgery",
+   "summary": "Meta's blog describes Brain2Qwerty, a method for communicating via brain waves without surgery.",
+   "urls": [
+    "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 38.0,
+   "reason": "meta_ai_blog rank 5; primary source present; single source (meta_ai_blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 30,
+   "headline": "Anthropic publishes 2026 Usage Policy update",
+   "summary": "Anthropic releases an update to its 2026 Usage Policy.",
+   "urls": [
+    "https://anthropic.com/news/2026-usage-policy-update"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 38.0,
+   "reason": "anthropic_news rank 24; primary source present; single source (anthropic_news)"
+  }
+ ],
+ "wall_s": 25.4,
+ "peak_rss_mb": 426.3,
+ "cost_usd": 0.0127,
+ "searches": null,
+ "notes": {
+  "observations": 3832
+ }
+}

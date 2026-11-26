@@ -1,0 +1,548 @@
+{
+ "arm": "classic",
+ "beat": "ai",
+ "at": "2026-11-26T19:19:34.373694Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Anthropic prices, closes and staged the roadshow for its initial public offering",
+   "summary": "Anthropic's own news posts cover the S-1 filing with the SEC, the roadshow launch, pricing, and closing of the IPO including the underwriters' option and a concurrent private placement. The sequence is confirmed by the primary source only.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+    "https://anthropic.com/news/ipo-close",
+    "https://anthropic.com/news/roadshow-launch",
+    "https://anthropic.com/news/s1-sec"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 92.0,
+   "reason": "anthropic_news best rank 3; primary source present; 4 items from anthropic_news"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Anthropic launches Claude Haiku 5.5, Opus 5.5 and Sonnet 5.5",
+   "summary": "Anthropic's news posts announce three model releases: Claude Haiku 5.5, Claude Opus 5.5 and Claude Sonnet 5.5. Only the titles are available, so capabilities and pricing are unknown here.",
+   "urls": [
+    "https://anthropic.com/claude-haiku-5-5",
+    "https://anthropic.com/claude-opus-5-5",
+    "https://anthropic.com/claude-sonnet-5-5"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 88.0,
+   "reason": "anthropic_news best rank 5; primary source present; 3 items from anthropic_news"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2",
+   "summary": "Anthropic announces two new model versions, Claude Fable 5.2 and Claude Mythos 5.2. Only the title is available, so capabilities and availability are not known from this batch.",
+   "urls": [
+    "https://anthropic.com/claude-fable-and-mythos-5-2"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 85.0,
+   "reason": "anthropic_news best rank 1; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Nvidia tells manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia as US steps up export controls",
+   "summary": "Per FT sources, Nvidia has instructed its manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia, as the US tightens export controls to limit Chinese access to AI computing power.",
+   "urls": [
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 70.0,
+   "reason": "techmeme rank 1; frontpage_hits 1; single source (techmeme, FT link); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Meta releases Muse Image, Muse Video and Muse Spark 1.1, and Muse Glimmer as open-source local agentic model",
+   "summary": "Meta announces Muse Image and Muse Video, plus Muse Spark 1.1 through its model API. Hugging Face covers Muse Glimmer as a local, agentic, multimodal and open-source model from Meta.",
+   "urls": [
+    "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+    "https://huggingface.co/blog/muse-glimmer"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "huggingface.co"
+   ],
+   "importance": 68.0,
+   "reason": "meta_ai_blog best rank 1; primary source present; 2 independent domains; 3 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "OpenAI introduces GPT-6.1 Terra for fast, capable computer use at scale",
+   "summary": "OpenAI announces GPT-6.1 Terra, positioned for fast and capable computer use at scale. A Hugging Face post on GPT OSS cost on Google Cloud C4 and an older GPT Store item are also included.",
+   "urls": [
+    "https://openai.com/index/introducing-gpt-6-1-terra",
+    "https://openai.com/index/introducing-the-gpt-store",
+    "https://huggingface.co/blog/gpt-oss-on-intel-xeon"
+   ],
+   "outlets": [
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 65.0,
+   "reason": "primary source present (openai_news); 2 independent domains (openai_news, hf_blog); velocity 3 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "Scott Aaronson reports sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems",
+   "summary": "A blog post by Scott Aaronson relays sources saying leading AI labs are sitting on major unreleased algorithmic breakthroughs that could break deployed cryptosystems, while the nature of those breakthroughs is unknown. The claim rests on anonymous sourcing.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379"
+   ],
+   "outlets": [
+    "scottaaronson.blog"
+   ],
+   "importance": 62.0,
+   "reason": "hn_front best rank 19; hn_front 1904 points at observation; hn_front 1742 comments at observation; techmeme best rank 2"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "OpenAI releases Codex Security into research preview as an application security agent",
+   "summary": "OpenAI's Codex Security is described as an AI application security agent that detects, validates and patches vulnerabilities. Other Codex items in the batch cover the Codex app and related deployments, with sources including a Hugging Face post with an unclear title.",
+   "urls": [
+    "https://openai.com/index/codex-security-now-in-research-preview",
+    "https://openai.com/index/introducing-codex",
+    "https://openai.com/index/introducing-the-codex-app",
+    "https://openai.com/index/o3-o4-mini-codex-system-card-addendum",
+    "https://openai.com/index/sea-david-chen",
+    "https://huggingface.co/blog/hf-skills-training-codex"
+   ],
+   "outlets": [
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 62.0,
+   "reason": "primary source present (openai_news); 2 independent domains (openai_news, hf_blog); velocity 6 items; best_tier 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Google DeepMind introduces Gemma 4 12B, a unified encoder-free multimodal model",
+   "summary": "Google DeepMind announced Gemma 4 12B as a unified, encoder-free multimodal model. Companion items include an arXiv paper on AVQFormer for audio-visual video captioning and a Hugging Face post on NeoMME, a multimodal multilingual encoder.",
+   "urls": [
+    "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model",
+    "https://arxiv.org/abs/2611.33409",
+    "https://huggingface.co/blog/Hcompany/neomme"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "arxiv.org",
+    "huggingface.co"
+   ],
+   "importance": 60.0,
+   "reason": "primary source present (deepmind_blog tier 1); 3 independent domains; velocity 3; no frontpage hits"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "OpenAI launches ChatGPT for Excel and new enterprise spend controls, and publishes usage-adoption reports",
+   "summary": "OpenAI introduced ChatGPT for Excel with financial data integrations powered by GPT-5.4, and new usage analytics and spend controls for ChatGPT Enterprise. It also published reports on ChatGPT work adoption across 165 activities and nearly 100 countries.",
+   "urls": [
+    "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work",
+    "https://openai.com/business/learn/how-openai-uses-chatgpt-atlas-at-work",
+    "https://openai.com/index/chatgpt-enterprise-spend-controls",
+    "https://openai.com/index/chatgpt-expanding-world-of-work",
+    "https://openai.com/index/chatgpt-for-excel",
+    "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+    "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+    "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+    "https://openai.com/index/uber-chatgpt-work-rollout",
+    "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work"
+   ],
+   "outlets": [
+    "openai.com",
+    "techcrunch.com"
+   ],
+   "importance": 60.0,
+   "reason": "primary source present; 2 independent domains; 10 items; velocity 10"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Sources say Z.ai's 3T-parameter GLM-5.5 missed November release, may slip to 2027 amid US chip curbs",
+   "summary": "Reuters reports, citing sources, that Z.AI's flagship GLM-5.5 missed its November release and could be delayed to Q1 2027 or later due to US rules and labs' distillation curbs. Rival Moonshot AI is also mentioned.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 60.0,
+   "reason": "best rank 3 on techmeme; frontpage_hits 1; single source (techmeme, reuters)"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Google DeepMind releases EmbeddingGemma 2, an open lightweight multimodal embedding model, alongside benchmark and embedding tooling posts",
+   "summary": "Google DeepMind announces EmbeddingGemma 2 as an open, lightweight multimodal embedding model. Related items include an arXiv benchmark for multimodal embedding similarity, Hugging Face posts on EmbeddingGemma, OlmoEarth embeddings and CPU-optimized embeddings.",
+   "urls": [
+    "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model",
+    "https://openai.com/index/new-embedding-models-and-api-updates",
+    "https://arxiv.org/abs/2611.33594",
+    "https://huggingface.co/blog/allenai/olmoearth-embeddings",
+    "https://huggingface.co/blog/embeddinggemma",
+    "https://huggingface.co/blog/getting-started-with-embeddings",
+    "https://huggingface.co/blog/intel-fast-embedding",
+    "https://huggingface.co/blog/matryoshka",
+    "https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune",
+    "https://huggingface.co/blog/token-pooling"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "openai.com",
+    "arxiv.org",
+    "huggingface.co"
+   ],
+   "importance": 58.0,
+   "reason": "deepmind_blog tier 1 primary source; 4 independent domains; 10 items; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "Anthropic, OpenAI and Meta publish agentic AI governance and product posts, including Anthropic donating Agent Skills to the Agentic AI Foundation",
+   "summary": "Items from Anthropic, OpenAI, Meta and Hugging Face focus on agentic AI, including Anthropic donating Agent Skills to the Agentic AI Foundation and an OpenAI post on governing agentic systems. Several other items are explainers or commentary on AI agents.",
+   "urls": [
+    "https://ai.meta.com/muse/what-is-agentic-ai",
+    "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+    "https://openai.com/index/practices-for-governing-agentic-ai-systems",
+    "https://openai.com/index/zendesk",
+    "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+    "https://huggingface.co/blog/ethics-soc-7"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "anthropic.com",
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 55.0,
+   "reason": "anthropic_news best rank 16; meta_ai_blog best rank 6; frontpage_hits 2; 4 independent domains"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Anthropic announces investment in a public benefit fund",
+   "summary": "Anthropic's news post 'Investing in the public benefit' announces an investment directed at a public benefit fund. The title is the only text available, so amounts and terms are unknown.",
+   "urls": [
+    "https://anthropic.com/news/public-benefit-fund"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 55.0,
+   "reason": "anthropic_news best rank 2; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Anthropic reports early progress on accelerating drug development with Claude",
+   "summary": "Anthropic published a research item titled 'Early progress on accelerating drug development with Claude', ranked 4 on its news feed. No snippet is available, so the findings cannot be confirmed.",
+   "urls": [
+    "https://anthropic.com/research/early-progress-drug-development"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 55.0,
+   "reason": "anthropic_news best rank 4; frontpage_hits 1; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Google DeepMind announces DiffusionGemma, claiming 4x faster text generation",
+   "summary": "Google DeepMind's blog announces DiffusionGemma with a claim of 4x faster text generation. Remaining items are Hugging Face posts on assisted generation, constrained beam search, contrastive search and open-source text generation tooling.",
+   "urls": [
+    "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation",
+    "https://huggingface.co/blog/assisted-generation",
+    "https://huggingface.co/blog/constrained-beam-search",
+    "https://huggingface.co/blog/introducing-csearch",
+    "https://huggingface.co/blog/os-llms",
+    "https://huggingface.co/blog/textgen-pipe-gaudi",
+    "https://huggingface.co/blog/tgi-benchmarking",
+    "https://huggingface.co/blog/tgi-multi-backend"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "huggingface.co"
+   ],
+   "importance": 55.0,
+   "reason": "primary source present (deepmind_blog tier 1); 2 independent domains; 8 items; velocity 8"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "OpenAI reports research on misalignment generalization and an internal feature that can be reversed",
+   "summary": "OpenAI's research describes how training on incorrect responses can cause broader misalignment and identifies an internal feature driving this, reversible with minimal fine-tuning. Related arXiv papers cover repairing trustworthiness in distilled language models; the other OpenAI items are older alignment work.",
+   "urls": [
+    "https://openai.com/index/emergent-misalignment",
+    "https://openai.com/index/improving-language-model-behavior",
+    "https://openai.com/index/instruction-following",
+    "https://arxiv.org/abs/2611.34831"
+   ],
+   "outlets": [
+    "openai.com",
+    "arxiv.org"
+   ],
+   "importance": 55.0,
+   "reason": "primary source present (openai_news); 2 independent domains (openai_news, arxiv_cs_ai, arxiv_cs_cl); velocity 4 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "Meta and Google commit AI models and $40M in tokens and credits to the Genesis Mission science projects",
+   "summary": "Meta describes its AI models powering early Genesis Mission projects with Lawrence Berkeley National Laboratory. Google DeepMind commits $40M in AI tokens and credits to the Genesis Mission.",
+   "urls": [
+    "https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino",
+    "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "deepmind.google"
+   ],
+   "importance": 52.0,
+   "reason": "meta_ai_blog best rank 3; deepmind_blog primary source; 2 independent domains"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Anthropic expands AI for Science to foundations and research institutions; OpenAI publishes scientific computing field report",
+   "summary": "Anthropic announces AI for Science expansion to foundations and research institutions. Related items cover an arXiv benchmark for research agents, Hugging Face's Project ProtoStar for AI-ready public science, and an OpenAI field report on AI coding agents in scientific computing.",
+   "urls": [
+    "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+    "https://openai.com/index/scientific-computing-agentic-ai",
+    "https://arxiv.org/abs/2611.34646",
+    "https://huggingface.co/blog/announcing-project-protostar"
+   ],
+   "outlets": [
+    "anthropic.com",
+    "openai.com",
+    "arxiv.org",
+    "huggingface.co"
+   ],
+   "importance": 50.0,
+   "reason": "anthropic_news best rank 14; 4 independent domains; primary source present; arxiv_cs_ai item present"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "DeepMind, Hugging Face and OpenAI publish AI security posts on agent control, openness and disrupting malicious use",
+   "summary": "DeepMind's post describes an AI Control Roadmap for securing internal systems against agents. OpenAI posts cover disrupting malicious AI use, including by state-affiliated actors, and a cybersecurity grant program. Hugging Face argues openness matters for AI in cybersecurity.",
+   "urls": [
+    "https://deepmind.google/blog/securing-the-future-of-ai-agents",
+    "https://openai.com/global-affairs/disrupting-malicious-uses-of-ai",
+    "https://openai.com/index/disrupting-malicious-uses-of-ai-by-state-affiliated-threat-actors",
+    "https://openai.com/index/empowering-defenders-through-our-cybersecurity-grant-program",
+    "https://huggingface.co/blog/cybersecurity-openness"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 50.0,
+   "reason": "3 independent domains; primary source present (deepmind_blog, openai_news); 5 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "OpenAI publishes safety-case guidelines for frontier AI training alongside a set of Hugging Face safety tools",
+   "summary": "OpenAI released early guidelines for safety cases in frontier AI training covering technical safeguards, operational practices and misalignment incident investigation. Hugging Face items cover AprielGuard, a safety leaderboard, Nemotron 3.5 Content Safety and RiskRubric.ai.",
+   "urls": [
+    "https://openai.com/index/frontier-ai-regulation",
+    "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+    "https://huggingface.co/blog/ServiceNow-AI/aprielguard",
+    "https://huggingface.co/blog/leaderboard-decodingtrust",
+    "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
+    "https://huggingface.co/blog/riskrubric"
+   ],
+   "outlets": [
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 50.0,
+   "reason": "primary source present; 2 independent domains; 6 items; velocity 6"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "OpenAI and Paradigm introduce EVMbench, a smart-contract security benchmark for AI agents",
+   "summary": "OpenAI and Paradigm introduced EVMbench to evaluate AI agents on detecting, patching and exploiting high-severity smart contract vulnerabilities. Other items add OpenAI's BioBasicsBench for wet-lab science, PaperBench for replicating AI research, and several arXiv agent benchmarks.",
+   "urls": [
+    "https://openai.com/index/introducing-evmbench",
+    "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+    "https://openai.com/index/paperbench",
+    "https://arxiv.org/abs/2611.34400",
+    "https://arxiv.org/abs/2611.34852",
+    "https://arxiv.org/abs/2611.33093"
+   ],
+   "outlets": [
+    "openai.com",
+    "arxiv.org"
+   ],
+   "importance": 50.0,
+   "reason": "primary source present; 2 independent domains; 6 items; velocity 6"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "Google DeepMind launches sign-language-to-text model SL2T for Deaf and hard of hearing users",
+   "summary": "DeepMind introduces SL2T, a sign-language-to-text model powering new sign language features. Related arXiv papers propose end-to-end 3D sign generation and spectral optimal transport for sign language generation.",
+   "urls": [
+    "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands",
+    "https://arxiv.org/abs/2611.33588",
+    "https://arxiv.org/abs/2611.33818"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "arxiv.org"
+   ],
+   "importance": 50.0,
+   "reason": "primary source present (deepmind_blog); 2 independent domains (deepmind_blog, arxiv_cs_ai, arxiv_cs_cl); velocity 3 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "Anthropic expands partnership with GSA to bring Claude to all levels of government",
+   "summary": "Anthropic announces an expanded partnership with the US General Services Administration to bring Claude to government agencies at all levels.",
+   "urls": [
+    "https://anthropic.com/news/expanding-partnership-gsa"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 48.0,
+   "reason": "primary source present (anthropic_news); best rank 15 on anthropic_news; frontpage_hits 1; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "Meta's Brain2Qwerty and an arXiv technical report MEG2text advance non-invasive brain-to-text decoding",
+   "summary": "Meta describes Brain2Qwerty as a path to communication without surgery by decoding brain waves to words. An arXiv technical report presents MEG2text, a non-invasive brain-to-text decoding system.",
+   "urls": [
+    "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication",
+    "https://arxiv.org/abs/2611.34686"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "arxiv.org"
+   ],
+   "importance": 45.0,
+   "reason": "meta_ai_blog best rank 5; arxiv_cs_cl item present; 2 independent domains; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 26,
+   "headline": "Anthropic's Project Deal runs a Claude-driven marketplace; arXiv paper studies small reasoning models in auction bidding",
+   "summary": "Anthropic published Project Deal, a marketplace experiment run by Claude. Separately, an arXiv paper evaluates six open reasoning models of 4B to 14B parameters on auction bidding using eBay closing data.",
+   "urls": [
+    "https://anthropic.com/features/project-deal",
+    "https://arxiv.org/abs/2611.34068"
+   ],
+   "outlets": [
+    "anthropic.com",
+    "arxiv.org"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news best rank 9; primary source present; arxiv_cs_ai and arxiv_cs_cl present (2 independent domains)"
+  },
+  {
+   "arm": "classic",
+   "rank": 27,
+   "headline": "Anthropic publishes an update on independent evaluators",
+   "summary": "Anthropic posted a news item titled 'An update on independent evaluators', ranked 19 on its news feed. Snippet text is unavailable, so the content is unknown beyond the title. Hugging Face also posted DiScoFormer, a transformer for density and score estimation.",
+   "urls": [
+    "https://anthropic.com/news/an-update-on-independent-evaluators",
+    "https://huggingface.co/blog/allenai/discoformer"
+   ],
+   "outlets": [
+    "anthropic.com",
+    "huggingface.co"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news best rank 19; frontpage_hits 1; primary source present; 2 independent domains"
+  },
+  {
+   "arm": "classic",
+   "rank": 28,
+   "headline": "OpenAI announces Learning Accelerator and Pioneers Program alongside GPT OSS open-model family",
+   "summary": "Sources list OpenAI's Learning Accelerator announcement, the Pioneers Program, and a Hugging Face welcome post for the GPT OSS open-source model family. Snippets are sparse; the o3/o4-mini item is older material.",
+   "urls": [
+    "https://openai.com/global-affairs/learning-accelerator",
+    "https://openai.com/index/introducing-o3-and-o4-mini",
+    "https://openai.com/index/introducing-openai-o1-preview",
+    "https://openai.com/index/openai-pioneers-program",
+    "https://huggingface.co/blog/welcome-openai-gpt-oss"
+   ],
+   "outlets": [
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 45.0,
+   "reason": "primary source present (openai_news); 2 independent domains (openai_news, hf_blog); velocity 5 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 29,
+   "headline": "OpenAI details WebSocket-based speedups in the Codex agent loop via the Responses API",
+   "summary": "OpenAI's technical deep dive explains how WebSockets and connection-scoped caching reduced API overhead in the Codex agent loop. Related items cover the Codex CLI loop and Hugging Face's agent-optimized hf CLI.",
+   "urls": [
+    "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+    "https://openai.com/index/unrolling-the-codex-agent-loop",
+    "https://huggingface.co/blog/hf-cli-for-agents"
+   ],
+   "outlets": [
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 44.0,
+   "reason": "primary source present (openai_news); 2 independent domains (openai_news, hf_blog); velocity 3 items"
+  },
+  {
+   "arm": "classic",
+   "rank": 30,
+   "headline": "DeepSeekMath, Apriel-H1, DeepMath, Kimina-Prover and OpenAI o1-mini feature in a cluster of math and reasoning model posts",
+   "summary": "A cluster of five items covers math and reasoning models: DeepSeekMath on GitHub, several Hugging Face blog posts on distillation, agents and formal proving, and an OpenAI o1-mini post on cost-efficient reasoning. The items are a loose collection with no single shared event.",
+   "urls": [
+    "https://github.com/deepseek-ai/deepseek-math",
+    "https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning",
+    "https://huggingface.co/blog/ServiceNow-AI/apriel-h1",
+    "https://huggingface.co/blog/intel-deepmath",
+    "https://huggingface.co/blog/project-numina/kimina-prover"
+   ],
+   "outlets": [
+    "github.com",
+    "openai.com",
+    "huggingface.co"
+   ],
+   "importance": 42.0,
+   "reason": "hn_front best rank 3; hn_front 19 points at observation; 3 independent domains; primary source present"
+  }
+ ],
+ "wall_s": 145.0,
+ "peak_rss_mb": 1749.5,
+ "cost_usd": 0.0173,
+ "searches": null,
+ "notes": {
+  "observations": 3835
+ }
+}

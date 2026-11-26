@@ -147,6 +147,8 @@ async def _run_newsroom_arm(arm: str, beat: str, day: str, ledger: Path) -> tupl
         kw["editor_settings"] = EditorSettings.from_config({"gap_search": True})
         tools = build_tools(search_provider="anthropic", ledger=_ledger(ledger), check_urls=False)
     digest, trace = await fn(beat, at, obs, client, tools, None, run_id=f"compare-{day}-{arm}", **kw)
+    if hasattr(trace, "model_dump_json"):
+        (day_dir(day, beat) / f"{arm}.trace.json").write_text(trace.model_dump_json(indent=1))
     gap = next((s.detail for s in getattr(trace, "steps", []) if s.step == "N1b"), None)
     if gap:
         notes["gap_search"] = gap

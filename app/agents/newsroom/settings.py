@@ -38,6 +38,10 @@ class RulesWeights(_M):
 class NewsroomSettings(_M):
     impl: Literal["classic", "editor"] = "classic"  # which newsroom runs (see newsroom/__init__.py)
     window_hours: float = 24
+    # Drop feed items published before the window (live feeds return their whole archive with
+    # observed_at = fetch time). Added 2026-11-26; false reproduces the earlier behaviour.
+    freshness_filter: bool = True
+    max_undated_per_source: int = 20
     update_gap_hours: float = 12
     score_candidates: int = 80
     score_batch_size: int = 20

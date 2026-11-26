@@ -83,6 +83,7 @@ class EditorSettings(BaseModel):
     chunk_size: int = 400
     max_calls: int = 3
     max_stories: int = 40
+    min_stories: int = 30  # ask for at least a digest's worth (beat digest_size is 30)
     max_output_tokens: int = 10000
     snippet_chars: int = 160
     merge_title_threshold: float = 88
@@ -818,6 +819,7 @@ async def run_editor_newsroom(
         beat_out_of_scope="\n".join(f"- {b}" for b in beat.out_of_scope) or "- (none)",
         subtopics=subtopic_lines,
         max_stories=es.max_stories,
+        min_stories=min(es.min_stories, es.max_stories),
     )
     trace_ctx = TraceCtx(run_id=run_id, user_id=None, job_id=job_id, role=EDITOR_ROLE, step="N5")
 

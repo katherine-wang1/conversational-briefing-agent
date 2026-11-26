@@ -16,6 +16,7 @@ from typing import Any
 
 from app.agents.newsroom.clustering import Embedder, FastEmbedEmbedder
 from app.agents.newsroom.features import SourceIndex, compute_features, importance_rules
+from app.agents.newsroom.freshness import freshness_filter
 from app.agents.newsroom.llm_steps import BatchLog, LlmTiebreaker, RunCtx, Scorer, split_quota
 from app.agents.newsroom.normalize import normalize
 from app.agents.newsroom.prompts import load_prompt
@@ -211,6 +212,14 @@ async def run_newsroom(
             dropped["hn_ablation"] += 1
         else:
             kept.append(o.model_copy(update={"observed_at": _utc(o.observed_at)}))
+    if st.newsroom.freshness_filter:
+        kept, fresh_dropped = freshness_filter(
+            kept,
+            window_start=window_start,
+            source_type=sources.type,
+            max_undated_per_source=st.newsroom.max_undated_per_source,
+        )
+        dropped |= fresh_dropped
     items = normalize(kept, {s.id: s.tier for s in beat.headline_sources})
     trace.steps.append(
         TraceStep(
