@@ -14,12 +14,19 @@ import socket
 import time
 import traceback
 
+from app.config import loader
 from app.jobs import scheduler
 from app.jobs.deps import Deps
 from app.jobs.handlers import HANDLERS, Handler, PermanentJobError
 from app.jobs.queue import Job
 
 log = logging.getLogger("app.jobs.worker")
+
+
+def default_type_limits() -> dict[str, int]:
+    """`worker.type_concurrency` from config/agent.yaml, e.g. {newsroom_run: 1}."""
+    raw = (loader.agent().get("worker") or {}).get("type_concurrency") or {}
+    return {str(k): max(1, int(v)) for k, v in raw.items()}
 
 
 class Worker:
@@ -32,6 +39,7 @@ class Worker:
         poll_s: float = 1.0,
         handlers: dict[str, Handler] | None = None,
         run_scheduler: bool = True,
+        type_limits: dict[str, int] | None = None,
     ):
         self.deps = deps
         self.queue = deps.queue
@@ -40,6 +48,11 @@ class Worker:
         self.poll_s = poll_s
         self.handlers = handlers if handlers is not None else HANDLERS
         self.run_scheduler = run_scheduler
+        # Per-type caps on jobs running at once in this worker (e.g. newsroom_run: 1, since each run
+        # holds the embedding model, clustering matrices and fetched pages in memory). Other types
+        # are only bound by `concurrency`.
+        self.type_limits = dict(type_limits if type_limits is not None else default_type_limits())
+        self.running_by_type: dict[str, int] = {}
 
     async def execute(self, job: Job) -> str:
         fn = self.handlers.get(job.type)
@@ -82,16 +95,36 @@ class Worker:
             await s.worker_heartbeats.upsert(
                 worker_id=self.worker_id,
                 seen_at=self.deps.clock(),
-                info={"concurrency": self.concurrency, "agents": self.deps.ports.name},
+                info={
+                    "concurrency": self.concurrency,
+                    "type_limits": self.type_limits,
+                    "agents": self.deps.ports.name,
+                },
             )
+
+    def excluded_types(self) -> list[str] | None:
+        """Job types at their per-type limit right now (not to be claimed)."""
+        out = sorted(t for t, cap in self.type_limits.items() if self.running_by_type.get(t, 0) >= cap)
+        return out or None
+
+    def _started(self, job: Job) -> None:
+        self.running_by_type[job.type] = self.running_by_type.get(job.type, 0) + 1
+
+    def _finished(self, job: Job) -> None:
+        n = self.running_by_type.get(job.type, 0) - 1
+        if n > 0:
+            self.running_by_type[job.type] = n
+        else:
+            self.running_by_type.pop(job.type, None)
 
     async def run_forever(self, stop: asyncio.Event) -> None:
         running: set[asyncio.Task] = set()
         last_tick = last_reap = 0.0
         log.info(
-            "worker %s started (concurrency %s, agents=%s)",
+            "worker %s started (concurrency %s, per-type limits %s, agents=%s)",
             self.worker_id,
             self.concurrency,
+            self.type_limits,
             self.deps.ports.name,
         )
         while not stop.is_set():
@@ -106,13 +139,15 @@ class Worker:
                     await self.queue.reap_stale()
                 claimed = False
                 while len(running) < self.concurrency and not stop.is_set():
-                    job = await self.queue.claim(self.worker_id)
+                    job = await self.queue.claim(self.worker_id, exclude_types=self.excluded_types())
                     if job is None:
                         break
                     claimed = True
+                    self._started(job)
                     task = asyncio.create_task(self.execute(job))
                     running.add(task)
                     task.add_done_callback(running.discard)
+                    task.add_done_callback(lambda _t, job=job: self._finished(job))
             except Exception:  # noqa: BLE001 - keep the loop alive across DB hiccups
                 log.exception("worker loop error")
                 claimed = False

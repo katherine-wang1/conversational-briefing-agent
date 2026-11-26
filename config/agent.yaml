@@ -56,6 +56,8 @@ concurrency:
   cos_search_queries: 6       # C2 plan queries (refinement stays sequential)
   cos_packs: 4                # C6 packs built at once
   pack_fetches: 3             # C6 fetch+extract per pack
+worker:
+  type_concurrency: {newsroom_run: 1}   # max jobs of a type running at once per worker (memory)
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
 # Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
 newsroom:
