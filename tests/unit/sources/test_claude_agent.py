@@ -76,7 +76,7 @@ async def test_request_and_parse():
         loader.beats()["ai"], AT, max_searches=7, top_k=2, client=fake.client, ledger=ledger
     )
     body = fake.requests[0]
-    assert body["stream"] is True and body["model"] == "claude-opus-5-5"
+    assert body["stream"] is True and body["model"] == "claude-sonnet-5-5"
     assert body["tools"] == [
         {"type": "web_search_20260318", "name": "web_search", "max_uses": 7},
         {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 10},

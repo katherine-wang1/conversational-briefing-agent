@@ -177,7 +177,7 @@ async def claude_agent_digest(
                 {"type": anth.WEB_SEARCH_TOOL, "name": "web_search", "max_uses": max_searches},
                 {"type": anth.WEB_FETCH_TOOL, "name": "web_fetch", "max_uses": max_fetches},
             ],
-            output_config={"effort": effort},  # thinking is always on (adaptive) on claude-opus-5-5
+            output_config={"effort": effort},  # adaptive thinking is on by default on claude-sonnet-5-5
             max_continuations=max_continuations,
         )
     except anth.AnthropicCallError as e:

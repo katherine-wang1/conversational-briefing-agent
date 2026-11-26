@@ -21,7 +21,7 @@ from typing import Any
 
 from pydantic import BaseModel
 
-DEFAULT_MODEL = "claude-opus-5-5"
+DEFAULT_MODEL = "claude-sonnet-5-5"  # Sonnet, not Opus, for search and the agent arm (cost)
 DEFAULT_BASE_URL = "https://api.anthropic.com"
 WEB_SEARCH_TOOL = "web_search_20260318"
 WEB_FETCH_TOOL = "web_fetch_20260209"

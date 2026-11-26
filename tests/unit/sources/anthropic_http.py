@@ -19,7 +19,7 @@ def message(
     content: list[dict[str, Any]],
     *,
     stop_reason: str = "end_turn",
-    model: str = "claude-opus-5-5",
+    model: str = "claude-sonnet-5-5",
     input_tokens: int = 1000,
     output_tokens: int = 200,
     searches: int = 0,

@@ -73,7 +73,7 @@ def build_tools(
     options: dict[str, Any] = {}
     if (provider_name or "").lower() == "anthropic":
         options = {
-            "model": getattr(settings, "anthropic_search_model", "claude-opus-5-5"),
+            "model": getattr(settings, "anthropic_search_model", "claude-sonnet-5-5"),
             "max_uses": getattr(settings, "anthropic_search_max_uses", 3),
             "effort": getattr(settings, "anthropic_search_effort", "low"),
             "ledger": ledger,

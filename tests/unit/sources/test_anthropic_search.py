@@ -63,11 +63,11 @@ async def test_request_shape_and_parsing():
         [message([text("Searching."), search_call("acme x"), search_result([R1, R2, R3]), reply], searches=1)]
     )
     ledger = Ledger([MemoryLedgerSink()])
-    p = provider(fake, model="claude-opus-5-5", max_uses=4, ledger=ledger)
+    p = provider(fake, model="claude-sonnet-5-5", max_uses=4, ledger=ledger)
     hits = await p.search(SearchArgs(query="acme x", since=SINCE, max_results=5))
 
     body = fake.requests[0]
-    assert body["model"] == "claude-opus-5-5"
+    assert body["model"] == "claude-sonnet-5-5"
     assert body["tools"] == [{"type": "web_search_20260318", "name": "web_search", "max_uses": 4}]
     assert body["fallbacks"] == "default" and "thinking" not in body
     assert body["output_config"] == {"effort": "low"}
@@ -82,7 +82,7 @@ async def test_request_shape_and_parsing():
     assert hits[1].published_at == datetime(2026, 11, 26, tzinfo=UTC)
     rec = ledger.sinks[0].records[0]
     assert rec.provider == "anthropic" and rec.role == "search.anthropic"
-    assert rec.cost_usd == round((1000 * 4 + 200 * 20) / 1e6 + 0.01, 6)
+    assert rec.cost_usd == round((1000 * 2 + 200 * 10) / 1e6 + 0.01, 6)
 
 
 async def test_no_json_falls_back_to_results_with_cited_text_and_date_filter():
