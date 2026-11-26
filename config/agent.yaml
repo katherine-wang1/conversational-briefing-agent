@@ -85,5 +85,15 @@ newsroom_editor:
   snippet_chars: 160
   merge_title_threshold: 88     # headline similarity that merges stories across calls
   identity_title_threshold: 88  # title similarity that matches a story to a prior one (no shared URL)
+  gap_search: false             # arm editor_search: fixed queries through the `search` tool before N2
+  gap_max_searches: 4
+  gap_max_results: 8
+  gap_queries:
+    ai: ["most important AI news today", "AI model release announced today",
+         "AI policy regulation news today", "AI funding acquisition news today"]
+    energy: ["most important energy and power grid news today", "data center power news today",
+             "nuclear energy news today", "energy policy news today"]
+    physical_ai: ["most important robotics news today", "humanoid robot news today",
+                  "autonomous vehicles news today", "physical AI news today"]
   paywalled_domains: [wsj.com, ft.com, bloomberg.com, nytimes.com, theinformation.com, economist.com,
                       barrons.com, washingtonpost.com, businessinsider.com, theatlantic.com, wired.com]

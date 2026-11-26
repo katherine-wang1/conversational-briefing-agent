@@ -1,0 +1,35 @@
+# Event Registry query per beat for the `eventregistry` arm (from docs/sources/eventregistry.md).
+# Concept URIs are unverified until the first live run (check with suggestConceptsFast).
+ai:
+  concepts:
+    - http://en.wikipedia.org/wiki/Artificial_intelligence
+    - http://en.wikipedia.org/wiki/Large_language_model
+    - http://en.wikipedia.org/wiki/Generative_artificial_intelligence
+    - http://en.wikipedia.org/wiki/OpenAI
+    - http://en.wikipedia.org/wiki/Anthropic
+    - http://en.wikipedia.org/wiki/Nvidia
+  lang: eng
+  count: 30
+  min_articles: 3
+energy:
+  concepts:
+    - http://en.wikipedia.org/wiki/Renewable_energy
+    - http://en.wikipedia.org/wiki/Solar_power
+    - http://en.wikipedia.org/wiki/Wind_power
+    - http://en.wikipedia.org/wiki/Nuclear_power
+    - http://en.wikipedia.org/wiki/Electrical_grid
+    - http://en.wikipedia.org/wiki/Data_center
+    - http://en.wikipedia.org/wiki/Battery_energy_storage_system
+  ignore_keywords: ["oil price", "crude"]
+  lang: eng
+  count: 30
+physical_ai:
+  concepts:
+    - http://en.wikipedia.org/wiki/Robotics
+    - http://en.wikipedia.org/wiki/Humanoid_robot
+    - http://en.wikipedia.org/wiki/Self-driving_car
+    - http://en.wikipedia.org/wiki/Industrial_robot
+    - http://en.wikipedia.org/wiki/Unmanned_aerial_vehicle
+  lang: eng
+  count: 30
+  min_articles: 2

@@ -61,7 +61,7 @@ from app.contracts.common import BudgetExceeded, Mode, Strict, TokenBudget, Trac
 from app.contracts.digest import Digest, DigestEntry, DigestEntryLLM, Story, StoryFeatures
 from app.contracts.llm import ChatRequest, ChatResponse, Message, ModelClient, StructuredOutputInvalid
 from app.contracts.sources import HeadlineObservation
-from app.contracts.tools import Tool
+from app.contracts.tools import SearchResult, Tool, ToolContext
 
 EDITOR_ROLE = "newsroom.editor"
 EDITOR_PROMPT = "newsroom.editor"
@@ -88,6 +88,13 @@ class EditorSettings(BaseModel):
     merge_title_threshold: float = 88
     identity_title_threshold: float = 88
     paywalled_domains: list[str] = []
+    # Gap-fill search (docs/architecture-revisit.md, arm `editor_search`): fixed per-beat queries run
+    # through the `search` tool before N2, so the live backend (e.g. Anthropic web search) and the
+    # replay backend (archive) are interchangeable (TOOL-1). Queries carry no user context (NEWS-2).
+    gap_search: bool = False
+    gap_queries: dict[str, list[str]] = {}
+    gap_max_searches: int = 4
+    gap_max_results: int = 8
 
     @classmethod
     def from_config(cls, overrides: Mapping[str, Any] | None = None) -> EditorSettings:
@@ -95,6 +102,69 @@ class EditorSettings(BaseModel):
         if overrides:
             raw = loader._deep_merge(raw, dict(overrides))
         return cls(**raw)
+
+
+# ---- gap-fill search ------------------------------------------------------------------------------
+
+GAP_SOURCE_ID = "gap_search"
+
+
+def _search_tool(tools: Mapping[str, Tool] | Sequence[Tool] | None) -> Tool | None:
+    if not tools:
+        return None
+    if isinstance(tools, Mapping):
+        return tools.get("search")
+    return next((t for t in tools if getattr(t, "name", None) == "search"), None)
+
+
+async def gap_search_observations(
+    beat_id: str,
+    beat_name: str,
+    at: datetime,
+    tools: Mapping[str, Tool] | Sequence[Tool] | None,
+    es: EditorSettings,
+    *,
+    mode: Mode,
+    run_id: str,
+    job_id: str | None,
+    window_hours: int,
+) -> tuple[list[HeadlineObservation], dict[str, Any]]:
+    """Run the beat's fixed gap-fill queries through the `search` tool; hits become observations."""
+
+    tool = _search_tool(tools)
+    default = [f"most important {beat_name} news today"]
+    queries = (es.gap_queries.get(beat_id) or default)[: es.gap_max_searches]
+    info: dict[str, Any] = {"queries": queries, "hits": 0, "errors": []}
+    if tool is None:
+        info["errors"].append("no search tool")
+        return [], info
+    budget = TokenBudget(input_tokens=0, searches=len(queries))
+    since = at - timedelta(hours=window_hours)
+
+    async def one(q: str) -> list[HeadlineObservation]:
+        ctx = ToolContext(
+            mode=mode, now=at, run_id=run_id, user_id=None, budget=budget,
+            trace=TraceCtx(run_id=run_id, user_id=None, job_id=job_id, role="newsroom", step="N1b"),
+        )
+        res = await tool(ctx, query=q, since=since, until=at, max_results=es.gap_max_results)
+        if not res.ok:
+            info["errors"].append(f"{q}: {res.error}")
+            return []
+        data = res.data
+        hits = data.hits if hasattr(data, "hits") else SearchResult.model_validate(data).hits
+        return [
+            HeadlineObservation(
+                source_id=GAP_SOURCE_ID, beat=beat_id, observed_at=at, url=h.url, title=h.title,
+                rank=i, snippet=h.snippet or None, published_at=h.published_at, provenance="search",
+                extra={"query": q, "outlet": h.source},
+            )
+            for i, h in enumerate(hits, 1)
+        ]
+
+    results = await asyncio.gather(*(one(q) for q in queries))
+    obs = [o for r in results for o in r]
+    info["hits"] = len(obs)
+    return obs, info
 
 
 # ---- structured output ----------------------------------------------------------------------------
@@ -621,11 +691,11 @@ async def run_editor_newsroom(
 ) -> tuple[Digest, Trace]:
     """Produce one beat's digest at `at` (same contract as classic `run_newsroom`).
 
-    `tools` and `embedder` are accepted for signature parity and ignored. `mode` is not needed:
-    nothing here depends on live vs replay. `editor_settings` defaults to agent.yaml
-    `newsroom_editor`.
+    `embedder` is accepted for signature parity and ignored. `tools` is used only by the optional
+    gap-fill search (`newsroom_editor.gap_search`), through the `search` tool, whose live or replay
+    backend is chosen by the caller. `editor_settings` defaults to agent.yaml `newsroom_editor`.
     """
-    del tools, embedder, mode  # no tools, no embeddings; identical in live and replay
+    del embedder  # no embeddings
     at = _utc(at)
     fl = flags if isinstance(flags, ExperimentFlags) else ExperimentFlags(**dict(flags or {}))
     st = settings or Settings.from_config()
@@ -645,6 +715,15 @@ async def run_editor_newsroom(
         embedder=EMBEDDER_NAME,
     )
     sources = SourceIndex(beat, st.newsroom.primary_sources.get(beat_id, []))
+
+    # ---- N1b gap-fill search (optional) ------------------------------------------------------------
+    if es.gap_search:
+        found, info = await gap_search_observations(
+            beat_id, beat.name, at, tools, es, mode=mode, run_id=run_id, job_id=job_id,
+            window_hours=st.newsroom.window_hours,
+        )
+        observations = [*observations, *found]
+        trace.steps.append(TraceStep(step="N1b", name="gap_search", detail=info))
 
     # ---- N2 normalise ----------------------------------------------------------------------------
     window_start = at - timedelta(hours=st.newsroom.window_hours)

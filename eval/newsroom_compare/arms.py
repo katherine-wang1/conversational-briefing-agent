@@ -138,29 +138,58 @@ async def _run_newsroom_arm(arm: str, beat: str, day: str, ledger: Path) -> tupl
         from app.agents.newsroom.pipeline import run_newsroom as fn
     else:
         from app.agents.newsroom.editor import run_editor_newsroom as fn  # editor arm (W: editor newsroom)
-    kw = {}
+    kw, tools, notes = {}, {}, {"observations": len(obs)}
     if arm == "editor_search":
-        kw["gap_search"] = True  # live gap-fill through the `search` tool (Anthropic backend)
-    digest, trace = await fn(beat, at, obs, client, {}, None, run_id=f"compare-{day}-{arm}", **kw)
-    return _digest_stories(arm, digest), {"observations": len(obs)}
+        # Gap-fill through our `search` tool with the Anthropic web search backend (live only).
+        from app.agents.newsroom.editor import EditorSettings
+        from app.tools import build_tools
+
+        kw["editor_settings"] = EditorSettings.from_config({"gap_search": True})
+        tools = build_tools(search_provider="anthropic", ledger=_ledger(ledger), check_urls=False)
+    digest, trace = await fn(beat, at, obs, client, tools, None, run_id=f"compare-{day}-{arm}", **kw)
+    gap = next((s.detail for s in getattr(trace, "steps", []) if s.step == "N1b"), None)
+    if gap:
+        notes["gap_search"] = gap
+    return _digest_stories(arm, digest), notes
 
 
-async def _run_claude_agent(beat: str, day: str) -> tuple[list[CompareStory], dict]:
+def _ledger(path: Path):  # noqa: ANN202
+    from app.llm.ledger import JsonlLedgerSink, Ledger
+
+    return Ledger([JsonlLedgerSink(str(path))])
+
+
+def _usage_notes(res) -> dict:  # noqa: ANN001
+    usage = getattr(res, "usage", None)
+    notes = {"meta": getattr(res, "meta", {})}
+    if usage is not None:
+        notes["usage"] = usage.model_dump() if hasattr(usage, "model_dump") else str(usage)
+        cost = getattr(usage, "cost_usd", None)
+        if isinstance(cost, int | float):
+            notes["cost_usd"] = round(float(cost), 4)
+    return notes
+
+
+async def _run_claude_agent(beat: str, day: str, ledger: Path) -> tuple[list[CompareStory], dict]:
     from app.sources.claude_agent import claude_agent_digest
 
-    res = await claude_agent_digest(loader.beats()[beat], collected_at(day, beat), top_k=TOP_K)
-    ranked, extra = (res if isinstance(res, tuple) else (res, {}))
-    notes = extra if isinstance(extra, dict) else {"usage": str(extra)}
-    return _ranked_stories("claude_agent", ranked), notes
+    res = await claude_agent_digest(
+        loader.beats()[beat], collected_at(day, beat), top_k=TOP_K, ledger=_ledger(ledger)
+    )
+    return _ranked_stories("claude_agent", res), _usage_notes(res)
+
+
+ER_PARAMS = Path(__file__).with_name("eventregistry_params.yaml")
 
 
 async def _run_eventregistry(beat: str, day: str) -> tuple[list[CompareStory], dict]:
+    import yaml
+
     from app.sources.eventregistry import eventregistry_ranked
 
-    params = loader.beats()[beat].model_dump().get("eventregistry") or {}
+    params = (yaml.safe_load(ER_PARAMS.read_text()) or {}).get(beat, {})
     res = await eventregistry_ranked(loader.beats()[beat], collected_at(day, beat), params)
-    ranked, extra = (res if isinstance(res, tuple) else (res, {}))
-    return _ranked_stories("eventregistry", ranked), extra if isinstance(extra, dict) else {}
+    return _ranked_stories("eventregistry", res), _usage_notes(res)
 
 
 async def run_arm_inproc(arm: str, beat: str, day: str) -> ArmResult:
@@ -173,7 +202,7 @@ async def run_arm_inproc(arm: str, beat: str, day: str) -> ArmResult:
         if arm in ("classic", "classic_all", "editor", "editor_search"):
             res.stories, res.notes = await _run_newsroom_arm(arm, beat, day, ledger)
         elif arm == "claude_agent":
-            res.stories, res.notes = await _run_claude_agent(beat, day)
+            res.stories, res.notes = await _run_claude_agent(beat, day, ledger)
         elif arm == "eventregistry":
             res.stories, res.notes = await _run_eventregistry(beat, day)
         else:
