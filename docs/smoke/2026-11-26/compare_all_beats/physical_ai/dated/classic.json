@@ -1,0 +1,185 @@
+{
+ "arm": "classic",
+ "beat": "physical_ai",
+ "at": "2026-11-26T19:59:22.520711Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Genesis AI raises $500M Series A at $3.5B valuation",
+   "summary": "Robotics247 reports Genesis AI announced a $500M Series A at a $3.5B valuation.",
+   "urls": [
+    "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 40.0,
+   "reason": "single source (robotics247 rank 13); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Rockwell Automation to acquire AGILOX",
+   "summary": "Robotics247 reports Rockwell Automation plans to acquire AGILOX, a mobile robotics company.",
+   "urls": [
+    "https://robotics247.com/article/rockwell-automation-to-acquire-agilox"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 35.0,
+   "reason": "single source (robotics247 rank 11); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Boston Dynamics expands GlobalFoundries partnership with Spot and Atlas robots",
+   "summary": "Robotics247 reports Boston Dynamics is expanding its GlobalFoundries partnership to deploy Spot and Atlas in semiconductor manufacturing; headline is truncated.",
+   "urls": [
+    "https://robotics247.com/article/boston-dynamics-expands-globalfoundries-partnership-with-spot-and-atlas-in-semiconductor-manufacturing"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "single source (robotics247 rank 6); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Humyn Labs raises $47M Series A for physical AI research and deployment",
+   "summary": "Robotics247 reports physical AI research and deployment company Humyn Labs raised $47M in a Series A round.",
+   "urls": [
+    "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "single source (robotics247 rank 12); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Jensen Huang reinstated as NVIDIA CEO after reported resignation",
+   "summary": "Two Robotics247 headlines conflict: one reports Jensen Huang resigned as NVIDIA CEO amid an affairs scandal, the other that he was reinstated as president, CEO and board member.",
+   "urls": [
+    "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member",
+    "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "single source (robotics247 rank 4); two conflicting items; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Dexory launches DexoryView Inspect warehouse safety and compliance module",
+   "summary": "Robotics247 reports Dexory has launched DexoryView Inspect, a warehouse safety and compliance module.",
+   "urls": [
+    "https://robotics247.com/article/dexory-launches-dexoryview-inspect-warehouse-safety-and-compliance-module"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "single source (robotics247 rank 3); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "GM targets 20% increase in robotics and factory automation by 2028",
+   "summary": "Robotics247 reports General Motors is targeting a 20% increase in robotics and factory automation by 2028.",
+   "urls": [
+    "https://robotics247.com/article/gm-targets-20-increase-in-robotics-and-factory-automation-by-2028"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "single source (robotics247 rank 7); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "FlytBase launches Octane platform for autonomous drones in oil and gas",
+   "summary": "Robotics247 reports FlytBase launched its Octane platform as autonomous drones become infrastructure for oil and gas operations; headline is truncated.",
+   "urls": [
+    "https://robotics247.com/article/flytbase-launches-octane-platform-as-autonomous-drones-become-everyday-infrastructure-for-oil-and-gas"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "single source (robotics247 rank 9); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Kinco launches iWMC integrated servo wheel modules for mobile material handling",
+   "summary": "Robotics247 covers Kinco's iWMC integrated servo wheel modules aimed at mobile material handling applications.",
+   "urls": [
+    "https://robotics247.com/article/kinco-iwmc-integrated-servo-wheel-modules-for-mobile-material-handling"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "techmeme rank 2 not applicable; single source (robotics247 rank 2); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Miba deploys Flexxbotics platform for advanced manufacturing operations",
+   "summary": "Robotics247 reports Miba is deploying Flexxbotics for next-generation advanced manufacturing and intelligent operations.",
+   "urls": [
+    "https://robotics247.com/article/miba-deploys-flexxbotics-for-next-gen-advanced-manufacturing-and-intelligent-operations"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "single source (robotics247 rank 5); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Beckhoff Automation controls power Four Growers robotic greenhouse harvesting",
+   "summary": "Robotics247 reports Beckhoff Automation controls are powering Four Growers' robotic greenhouse harvesting.",
+   "urls": [
+    "https://robotics247.com/article/beckhoff-automations-controls-power-four-growers-robotic-greenhouse-harvesting"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "single source (robotics247 rank 8); frontpage_hits 1; no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "IntelliProve raises \u20ac2.7M for health sensing layer spanning virtual care and humanoid robots",
+   "summary": "Robotics247 reports IntelliProve raised \u20ac2.7M to build a health sensing layer for any camera, from virtual care to humanoid robots; headline is truncated.",
+   "urls": [
+    "https://robotics247.com/article/intelliprove-raises-27m-to-build-health-sensing-layer-for-any-camera-from-virtual-care-to-humanoid-robots"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "single source (robotics247 rank 10); frontpage_hits 1; no primary source"
+  }
+ ],
+ "wall_s": 15.1,
+ "peak_rss_mb": 358.0,
+ "cost_usd": 0.0029,
+ "searches": null,
+ "notes": {
+  "observations": 323
+ }
+}

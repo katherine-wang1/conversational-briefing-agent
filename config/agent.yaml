@@ -64,7 +64,7 @@ newsroom:
   impl: classic                 # classic (N2-N6 below) | editor (newsroom_editor below). Overrides, highest
                                 # first: experiment flag newsroom_impl, env NEWSROOM_IMPL, this key.
   window_hours: 24             # observations in (at - window, at] feed one run
-  freshness_filter: true        # drop feed items published before the window (false = pre-2026-11-26)
+  freshness_filter: true        # drop items published before the window; aggregator front pages exempt (false = pre-2026-11-26)
   max_undated_per_source: 20
   update_gap_hours: 12          # new items >= this long after a prior story's first_seen = new facts -> update_of
   score_candidates: 80          # top clusters by importance_rules sent to newsroom.score (lean rule L1)
@@ -92,7 +92,7 @@ newsroom:
 # Editor newsroom (newsroom.impl: editor; app/agents/newsroom/editor.py). Shares newsroom.window_hours,
 # update_gap_hours, score_floor, primary_sources, rules_weights and clustering.identity_lookback_days.
 newsroom_editor:
-  max_undated_per_source: 20    # undated feed items kept per source, by feed order (front pages keep all)
+  max_undated_per_source: 20    # undated items kept per source, by feed order (aggregator front pages keep all)
   title_dedupe_threshold: 90    # rapidfuzz token_sort_ratio on cleaned titles: >= this = same item
   max_candidates: 400           # candidates shown to the editor model, strongest signal first
   chunk_size: 400               # candidates per editor call; more -> 2-3 calls merged by URL/title overlap

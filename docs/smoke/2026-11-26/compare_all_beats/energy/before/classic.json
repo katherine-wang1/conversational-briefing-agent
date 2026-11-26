@@ -1,0 +1,368 @@
+{
+ "arm": "classic",
+ "beat": "energy",
+ "at": "2026-11-26T19:59:19.305863Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Senate passes permitting bill that would boost clean and fossil energy",
+   "summary": "Canary Media reports the Senate approved a permitting bill that would boost both clean and dirty energy.",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 55.0,
+   "reason": "canary_media tier 1; best rank 10; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Senate clears permitting reform after split among environmental groups",
+   "summary": "Latitude Media reports the Senate cleared permitting reform after a divided response from green groups; single source.",
+   "urls": [
+    "https://latitudemedia.com/news/senate-clears-permitting-reform-after-a-bitter-split-among-greens"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 50.0,
+   "reason": "single source (latitude_media); best rank 6; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Google and Constellation agree to bring 890 MW new nuclear to PJM grid",
+   "summary": "Latitude Media reports Google and Constellation announced an 890 MW new nuclear capacity deal for PJM.",
+   "urls": [
+    "https://latitudemedia.com/industry-news/google-and-constellation-announce-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid-as-part-of-long-term-power-deal"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 50.0,
+   "reason": "latitude_media tier 1; best rank 18; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Canary Media and Latitude Media report US grid batteries surging while fire risk falls",
+   "summary": "Two tier-1 outlets report grid batteries expanding and fire risk declining, while outage fears rise and batteries and gas buffer the grid.",
+   "urls": [
+    "https://canarymedia.com/articles/batteries/us-grid-batteries-fire-risk",
+    "https://latitudemedia.com/news/outage-fears-rise-but-batteries-and-gas-are-buffering-the-grid"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "latitudemedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "2 independent domains; techmeme rank 13; frontpage_hits 2"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Google bets on superhot geothermal to power Oregon data centers",
+   "summary": "Canary Media reports Google is backing superhot geothermal power to supply its Oregon data centers.",
+   "urls": [
+    "https://canarymedia.com/articles/geothermal/google-superhot-geothermal-oregon-data-centers"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "canary_media tier 1; best rank 19; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "W\u00e4rtsil\u00e4 to supply 282 MW onsite power for a U.S. data center",
+   "summary": "Latitude Media reports W\u00e4rtsil\u00e4 will provide a 282 MW onsite power solution for a U.S. data center.",
+   "urls": [
+    "https://latitudemedia.com/industry-news/wartsila-to-supply-282-mw-onsite-power-solution-for-a-u-s-data-center-as-ai-growth-intensifies-demand-for-reliable-power"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "latitude_media tier 1; best rank 19; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "Canary Media reports Iran war will cause global fossil fuel emissions to fall",
+   "summary": "Canary Media reports global fossil fuel emissions are expected to fall this year due to the Iran war.",
+   "urls": [
+    "https://canarymedia.com/articles/emissions-reduction/turns-out-the-worlds-fossil-fuel-emissions-will-actually-drop-this-year"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "canary_media tier 1; best rank 24; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Canary Media quantifies how much Trump's Iran war added to fuel costs",
+   "summary": "Canary Media quantifies added US fuel costs attributed to the Iran war under Trump.",
+   "urls": [
+    "https://canarymedia.com/articles/fossil-fuels/trump-iran-war-american-fuel-costs"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "canary_media tier 1; best rank 26; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "US clean energy jobs fell in 2025 for the first time in years",
+   "summary": "Canary Media reports US clean energy employment declined in 2025, the first drop in years.",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy-jobs/trump-us-employment-falls-data-2025"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "canary_media tier 1; best rank 28; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "New Democratic regulators plan to challenge Georgia Power's data center gas buildout",
+   "summary": "Canary Media reports new Democratic Georgia regulators plan to scrutinize Georgia Power's gas expansion driven by data centers.",
+   "urls": [
+    "https://canarymedia.com/articles/politics/new-dem-regulators-georgia-power"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 45.0,
+   "reason": "canary_media rank 37; single source (canary_media)"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Ohio approves gas plant for data centers despite local voter backlash",
+   "summary": "Canary Media reports Ohio approved a gas plant to serve data centers over local voter opposition; single source.",
+   "urls": [
+    "https://canarymedia.com/articles/data-centers/ohio-oks-gas-plant-for-data-centers"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "single source (canary_media); best rank 2; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Trump EPA continues efforts to end Solar for All despite court losses",
+   "summary": "Canary Media reports the EPA keeps trying to kill Solar for All after losing in court; single source.",
+   "urls": [
+    "https://canarymedia.com/articles/solar/trump-epa-solar-for-all"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "single source (canary_media); best rank 8; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "Michigan readies rules to rein in utilities and data centers",
+   "summary": "Latitude Media reports Michigan is preparing rules to constrain utilities and data centers.",
+   "urls": [
+    "https://latitudemedia.com/news/michigan-is-a-test-bed-for-democrats-energy-affordability-promises"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "latitude_media tier 1; best rank 11; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Utilities ask FERC to make data centers pay for grid upgrades",
+   "summary": "Latitude Media reports utilities want FERC to require data centers to fund grid upgrades.",
+   "urls": [
+    "https://latitudemedia.com/news/utilities-want-ferc-to-lock-data-centers-into-paying-for-grid-upgrades"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "latitude_media tier 1; best rank 14; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Vantage and Heron Power Electronics sign gigawatt-scale 800 VDC agreement",
+   "summary": "Vantage and Heron Power Electronics announced a gigawatt-scale 800 VDC agreement for AI infrastructure.",
+   "urls": [
+    "https://latitudemedia.com/industry-news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "latitude_media tier 1; best rank 17; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Canary Media examines permitting reform as a contested energy transition bet",
+   "summary": "Canary Media describes permitting reform as a big, controversial bet for the energy transition.",
+   "urls": [
+    "https://canarymedia.com/articles/politics/permitting-reform-uncertain-bet"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 40.0,
+   "reason": "canary_media tier 1; best rank 21; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "EIA reports Hurricane Isaias nears landfall, causing production shut-ins",
+   "summary": "EIA Today in Energy reports Hurricane Isaias threatens Gulf Coast energy infrastructure and forces production shut-ins.",
+   "urls": [
+    "https://eia.gov/todayinenergy/detail.php?id=68284"
+   ],
+   "outlets": [
+    "eia.gov"
+   ],
+   "importance": 40.0,
+   "reason": "primary source present; eia_today tier 1; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "Canary Media reports leading small modular reactor will be late and over budget",
+   "summary": "Canary Media reports a leading small modular nuclear reactor project in Canada faces delays and cost overruns.",
+   "urls": [
+    "https://canarymedia.com/articles/nuclear/small-modular-nuclear-reactor-late-canada"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 38.0,
+   "reason": "canary_media rank 36; single source (canary_media)"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Heatmap analyzes permitting bill provisions covering data centers",
+   "summary": "Heatmap examines what the permitting bill says about data centers, a single-source piece at top rank.",
+   "urls": [
+    "https://heatmap.news/politics/baaja-data-centers"
+   ],
+   "outlets": [
+    "heatmap.news"
+   ],
+   "importance": 35.0,
+   "reason": "best rank 1; single source (heatmap); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "Google grid deal in Ohio tests faster path to data center power",
+   "summary": "Latitude Media reports Google's Ohio grid deal as a test of faster data center power access; single source.",
+   "urls": [
+    "https://latitudemedia.com/news/googles-grid-deal-in-ohio-tests-a-faster-path-to-data-center-power"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "single source (latitude_media); best rank 1; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "North Carolina regulators delay clean transition tariff decision again",
+   "summary": "Canary Media reports North Carolina utility regulators postponed a clean transition tariff decision once more; single source.",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/north-carolina-clean-transition-tariff-punt"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "single source (canary_media); best rank 5; frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "New York awards ports $230M in repurposed offshore wind grants",
+   "summary": "New York is awarding $230M to ports for repurposed offshore wind grants, per Canary Media.",
+   "urls": [
+    "https://canarymedia.com/articles/offshore-wind/new-york-ports-get-230m-boost-for-offshore-wind-other-industries"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "canary_media tier 1; best rank 9; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "Massachusetts pilot offers free batteries and extra cash to participants",
+   "summary": "Canary Media reports a Massachusetts pilot program offering free batteries and extra cash.",
+   "urls": [
+    "https://canarymedia.com/articles/batteries/massachusetts-pilot-program-free-batteries"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "canary_media tier 1; best rank 15; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "US power sector emissions set to fall amid lower coal use",
+   "summary": "Canary Media reports US power sector emissions are set to fall as coal use declines.",
+   "urls": [
+    "https://canarymedia.com/articles/fossil-fuels/us-power-sector-emissions-fall-coal"
+   ],
+   "outlets": [
+    "canarymedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "canary_media tier 1; best rank 18; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "Latitude Media examines the global geopolitics of nuclear fuel",
+   "summary": "Latitude Media covers the geopolitical dynamics of the global nuclear fuel supply.",
+   "urls": [
+    "https://latitudemedia.com/news/catalyst-the-global-geopolitics-of-nuclear-fuel"
+   ],
+   "outlets": [
+    "latitudemedia.com"
+   ],
+   "importance": 35.0,
+   "reason": "latitude_media tier 1; best rank 22; single source"
+  }
+ ],
+ "wall_s": 22.9,
+ "peak_rss_mb": 425.2,
+ "cost_usd": 0.0108,
+ "searches": null,
+ "notes": {
+  "observations": 625
+ }
+}

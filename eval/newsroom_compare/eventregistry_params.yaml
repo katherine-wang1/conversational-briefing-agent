@@ -1,5 +1,6 @@
 # Event Registry query per beat for the `eventregistry` arm (from docs/sources/eventregistry.md).
-# Concept URIs are unverified until the first live run (check with suggestConceptsFast).
+# Concept URIs checked live with suggestConceptsFast on 2026-11-26 (all 18 resolve).
+# Cost per beat and run: 5 tokens (getEvents) + 1 per top_articles call = 15 tokens.
 ai:
   concepts:
     - http://en.wikipedia.org/wiki/Artificial_intelligence
@@ -10,6 +11,8 @@ ai:
     - http://en.wikipedia.org/wiki/Nvidia
   lang: eng
   count: 30
+  top_articles: 10        # outlets per event: the 10 articles closest to the event centroid
+  top_articles_events: 10
   min_articles: 3
 energy:
   concepts:
@@ -23,6 +26,8 @@ energy:
   ignore_keywords: ["oil price", "crude"]
   lang: eng
   count: 30
+  top_articles: 10        # outlets per event: the 10 articles closest to the event centroid
+  top_articles_events: 10
 physical_ai:
   concepts:
     - http://en.wikipedia.org/wiki/Robotics
@@ -32,4 +37,6 @@ physical_ai:
     - http://en.wikipedia.org/wiki/Unmanned_aerial_vehicle
   lang: eng
   count: 30
+  top_articles: 10        # outlets per event: the 10 articles closest to the event centroid
+  top_articles_events: 10
   min_articles: 2

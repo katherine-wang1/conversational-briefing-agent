@@ -1,0 +1,156 @@
+{
+ "arm": "classic",
+ "beat": "physical_ai",
+ "at": "2026-11-26T19:59:22.520711Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Genesis AI announces $500M Series A at $3.5B valuation",
+   "summary": "Robotics247 reports Genesis AI announced a $500M Series A at a $3.5B valuation.",
+   "urls": [
+    "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 48.0,
+   "reason": "best rank 13 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Rockwell Automation to acquire AGILOX",
+   "summary": "Robotics247 reports Rockwell Automation plans to acquire AGILOX, an autonomous mobile robot maker.",
+   "urls": [
+    "https://robotics247.com/article/rockwell-automation-to-acquire-agilox"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 45.0,
+   "reason": "best rank 11 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Boston Dynamics expands GlobalFoundries partnership with Spot and Atlas",
+   "summary": "Robotics247 reports Boston Dynamics is expanding its GlobalFoundries partnership to deploy Spot and Atlas in semiconductor manufacturing.",
+   "urls": [
+    "https://robotics247.com/article/boston-dynamics-expands-globalfoundries-partnership-with-spot-and-atlas-in-semiconductor-manufacturing"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 40.0,
+   "reason": "best rank 6 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Humyn Labs raises $47M Series A for physical AI research and deployment",
+   "summary": "Robotics247 reports physical AI company Humyn Labs raised a $47M Series A.",
+   "urls": [
+    "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 35.0,
+   "reason": "best rank 12 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "GM targets 20% increase in robotics and factory automation by 2028",
+   "summary": "Robotics247 reports General Motors targets a 20% increase in robotics and factory automation by 2028.",
+   "urls": [
+    "https://robotics247.com/article/gm-targets-20-increase-in-robotics-and-factory-automation-by-2028"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "best rank 7 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Dexory launches DexoryView Inspect warehouse safety and compliance module",
+   "summary": "Dexory has launched DexoryView Inspect, a warehouse safety and compliance module, per robotics247.",
+   "urls": [
+    "https://robotics247.com/article/dexory-launches-dexoryview-inspect-warehouse-safety-and-compliance-module"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "best rank 3 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "FlytBase launches Octane platform for autonomous drones in oil and gas",
+   "summary": "FlytBase has launched its Octane platform for autonomous drone operations in oil and gas, per robotics247.",
+   "urls": [
+    "https://robotics247.com/article/flytbase-launches-octane-platform-as-autonomous-drones-become-everyday-infrastructure-for-oil-and-gas"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "best rank 9 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Kinco launches iWMC integrated servo wheel modules for mobile material handling",
+   "summary": "Robotics247 covers Kinco's iWMC integrated servo wheel modules aimed at mobile material handling.",
+   "urls": [
+    "https://robotics247.com/article/kinco-iwmc-integrated-servo-wheel-modules-for-mobile-material-handling"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 22.0,
+   "reason": "best rank 2 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Miba deploys Flexxbotics platform for advanced manufacturing operations",
+   "summary": "Robotics247 reports manufacturer Miba is deploying Flexxbotics for advanced manufacturing and intelligent operations.",
+   "urls": [
+    "https://robotics247.com/article/miba-deploys-flexxbotics-for-next-gen-advanced-manufacturing-and-intelligent-operations"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "best rank 5 robotics247; single source (robotics247); no primary source"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Beckhoff Automation controls power Four Growers' robotic greenhouse harvesting",
+   "summary": "Robotics247 reports Beckhoff Automation controls run Four Growers' robotic greenhouse harvesting system.",
+   "urls": [
+    "https://robotics247.com/article/beckhoff-automations-controls-power-four-growers-robotic-greenhouse-harvesting"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "best rank 8 robotics247; single source (robotics247); no primary source"
+  }
+ ],
+ "wall_s": 14.6,
+ "peak_rss_mb": 363.0,
+ "cost_usd": 0.0035,
+ "searches": null,
+ "notes": {
+  "observations": 323
+ }
+}

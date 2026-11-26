@@ -33,6 +33,7 @@ import os
 from collections.abc import Callable
 from datetime import UTC, datetime, time, timedelta
 from typing import Any
+from urllib.parse import urlparse
 
 import httpx
 
@@ -139,10 +140,15 @@ def _lang_val(v: Any, lang: str) -> Any:
 
 def _article(a: dict[str, Any]) -> dict[str, Any]:
     src = a.get("source") or {}
+    url = a.get("url")
+    # Outlet as a domain (ER's source uri, e.g. "bbc.com"), like the other arms, so outlet counts and the
+    # paywall check compare like with like; the display name is kept as outlet_name.
+    host = (urlparse(url).hostname or "").removeprefix("www.") if url else ""
     return {
-        "url": a.get("url"),
+        "url": url,
         "title": one_line(a.get("title")),
-        "outlet": src.get("title") or src.get("uri"),
+        "outlet": src.get("uri") or host or src.get("title"),
+        "outlet_name": src.get("title"),
         "date": a.get("dateTimePub") or a.get("dateTime") or a.get("date"),
         "body_excerpt": one_line(a.get("body"))[:300] or None,
     }
@@ -155,13 +161,30 @@ def fetch_events(
     api_key: str | None = None,
     post: Post = http_post,
     now: datetime | None = None,
+    usage: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
-    """Raw event dicts, biggest first; each gets `_top_articles` if `params.top_articles` > 0."""
+    """Raw event dicts, biggest first; each gets `_top_articles` if `params.top_articles` > 0.
+
+    `usage`, if given, is updated with `requests` and `tokens` (the sum of the `req-tokens` response
+    headers: 5 per recent event search, 1 per event-articles call, as confirmed live 2026-11-26)."""
+    usage = usage if usage is not None else {}
+    usage.setdefault("requests", 0)
+    usage.setdefault("tokens", 0.0)
+
+    def counted(url: str, body: dict[str, Any]) -> httpx.Response:
+        r = post(url, body)
+        usage["requests"] += 1
+        try:
+            usage["tokens"] += float(r.headers.get("req-tokens") or 0)
+        except ValueError:
+            pass
+        return r
+
     key = api_key if api_key is not None else api_key_from_env()
     if not key:
         raise ToolError("unavailable", "Event Registry is not configured (EVENT_REGISTRY_API_KEY not set)")
     try:
-        data = _check(post(GET_EVENTS, build_events_body(params, at, key, now=now)))
+        data = _check(counted(GET_EVENTS, build_events_body(params, at, key, now=now)))
         events = list((data.get("events") or {}).get("results") or [])
         n_top = int(params.get("top_articles", 0) or 0)
         for ev in events[: int(params.get("top_articles_events", 5))] if n_top > 0 else []:
@@ -174,7 +197,7 @@ def fetch_events(
                 "articleBodyLen": 300,
                 "lang": params.get("lang", "eng"),
             }
-            res = _check(post(GET_EVENT, body))
+            res = _check(counted(GET_EVENT, body))
             ev["_top_articles"] = ((res.get(ev.get("uri")) or {}).get("articles") or {}).get("results") or []
     except httpx.HTTPError as e:
         raise ToolError("unavailable", f"Event Registry request failed ({type(e).__name__})") from e
@@ -316,19 +339,17 @@ async def eventregistry_ranked(
     """Event Registry's own ranking (by event size) for the beat in the 24 h before `at`.
 
     `params` defaults to the `params` of the beat's first `eventregistry` headline source, if it has one.
-    `.usage` is {"requests": n}; ER reports no per-call token use in the response.
+    `.usage` is {"requests": n, "tokens": t}, tokens as charged (`req-tokens` response headers).
     """
     beat = loader.beats()[beat_cfg] if isinstance(beat_cfg, str) else beat_cfg
     if params is None:
         params = next((s.params for s in beat.headline_sources if s.type == "eventregistry"), {})
-    n_calls = 1
-    events = await asyncio.to_thread(fetch_events, params, at, api_key=api_key, post=post)
-    if params.get("top_articles"):
-        n_calls += min(len(events), int(params.get("top_articles_events", 5)))
+    usage: dict[str, Any] = {}
+    events = await asyncio.to_thread(fetch_events, params, at, api_key=api_key, post=post, usage=usage)
     end = _utc(at)
     return RankedStories(
         events_to_ranked(events, params.get("lang", "eng")),
-        usage={"requests": n_calls},
+        usage=usage,
         meta={
             "provider": "eventregistry",
             "beat": beat.id,

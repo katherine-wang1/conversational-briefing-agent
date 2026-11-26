@@ -22,6 +22,7 @@ from typing import Any
 from pydantic import BaseModel
 
 DEFAULT_MODEL = "claude-opus-5-5"
+DEFAULT_BASE_URL = "https://api.anthropic.com"
 WEB_SEARCH_TOOL = "web_search_20260318"
 WEB_FETCH_TOOL = "web_fetch_20260209"
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
@@ -134,7 +135,12 @@ def make_async_client(api_key: str | None = None, *, timeout_s: float = 600.0, m
         raise AnthropicUnavailable(
             'the anthropic package is not installed (pip install -e ".[anthropic]")'
         ) from e
-    return anthropic.AsyncAnthropic(api_key=key, timeout=timeout_s, max_retries=max_retries)
+    # Pinned on purpose: the SDK would otherwise read ANTHROPIC_BASE_URL, which hosted agent containers
+    # (e.g. Claude Code cloud sessions) set to their own endpoint. Override with ANTHROPIC_API_BASE_URL.
+    base_url = os.environ.get("ANTHROPIC_API_BASE_URL") or DEFAULT_BASE_URL
+    return anthropic.AsyncAnthropic(
+        api_key=key, base_url=base_url, timeout=timeout_s, max_retries=max_retries
+    )
 
 
 def _sdk_error(e: Exception) -> AnthropicCallError | None:

@@ -1,0 +1,535 @@
+{
+ "arm": "classic_all",
+ "beat": "ai",
+ "at": "2026-11-26T19:59:15.118708Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic_all",
+   "rank": 1,
+   "headline": "Nvidia halts AI server shipments to Malaysia, Singapore, Thailand and Indonesia amid US export curbs",
+   "summary": "FT, Reuters and others report Nvidia told partners to halt AI server shipments to four Southeast Asian countries as US export controls tighten.",
+   "urls": [
+    "https://ft.com/content/33772353-35dd-4e5a-89e4-b75dccbd9eca?syn-25a6b1a6=1",
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902",
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxOM1ZtZ1FmQ3d0Nk9xZzFmaDNtd3ZURjZ1cm1sWkptUktqcm1aOUc3eWpIYjVpUGoxWGxWd2FjRTZiTzBGRGtaTTA3ZUFsTEJLNk5BV3VfV2VKNHJVbk1mTDJqYkZkdEFPQ09jdzVHRzBHazlKVko5bVp4WDZMSUpUaEpyZk5ZUUUxbm42MjBIRWJCaGZzVXRkNklKN2dfdDRES3RwazQ1UU55Q3Bf?oc=5",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNT2IzeDRBUHdXNi1LQjBNUEl3S21Va0NyeGN6eFZQZmdHUU5STk5FRXZTSFVhd2tYbTBHNjRfUkNDS29yNDlXYXdYMXZGMVZOZzE1STd1dEdVdk1iM0szN3B4ai1QWkpHTDlnVGZzZzNlQ09acXRCRklnWTgwMGV2Q3MtbWtYbkg0SnV1bjNCMV9tbW5zMUVEUU1IOTBNRHdDZUpGWXZuaG1MLWlSV3p2UkZFQVhoeF94RDY3Yzh6MkdtamtCVGQzamRsQ1VkbTU3X1huQ3NJTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi2AJBVV95cUxPdGpodGZZZkhBY0lBaUZWMkM4QTFrYmJSaHM0ZVRKX2RtYW5UcE5EeERHbHBSZ1QwY0xUaGIybEcxY2pFU0J3dXQtV1lXWkRFbHZOOGFha1hiOEJyb18xb0tjV3NadDR0c015SjdvZ2VvVXJPN1BrSDJsZm9OWWtBSkFpN0g1R0RYRFB6bXJZS0hQVUl6TXdNSDVKa2lVSlJfYUtkLUVRWlVLLWx6MEdkN2FpSUVqeU5zSHVyeUV3Q3RhRGFXZ2lMZnFOSlg1ZzFUdmRiTVhPUk9ZM1EwMzBjWU0zV3k2bzNOZ21sQnE5NkFaODNISE41Q1BfMWwxNUtWbWFXZmNYQjQyYVdXaXI0cDdvcVIwMjV0T2Y2N3l4b09ST0NLbnM0ZnVsbXNsY3hmSWV4bldvT0VMUXg0MTEyZDV6NXNFTkpEQVJiQlhKYWxXeDNwQlNSbg?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TSEJuajdiT01OOU1kaEFxam54MDA5ZHB6Z1NEdEJHb3hrUGt0QzN3b3hSUGVycTNJMlZBMVJkOVRRd2NERndoQUtfLVl6MDVvVGFGLVAwSDg3NGhJRmFSQ0NMLXY0QnBJN2M0Yw?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNXzFaTHpSU0dRQ2U4cEphenBFNHRUZV80VHliZ0dGU0p5UE8yTVZKd2ZqbklFd1l3bDd0bjdKRkV4TVc5UzF4SlNsbGJzTlpuaE1KQ095TUtZTm1HOUMySnNwaHFLMHRYVnB6OVMyellGcVNKcGc?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbDFtRGxaSmJxdndYb1VMbTBjLWJGOExCdUdULWNlRXF6RG90SDQzQkdYb29GbmI3Q1J5UHp2Yk80N3R1Wkl4UXlfWFdFd0VmQ2FEYUZXdnFpbnR3SndRWkh6dVJYQlY1cHhQMWVkTEpJaV9lbHJteGc1ai0tS0ppYWxuWVI?oc=5",
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMGx4WWx1WGczczFBTE5nX2ZLaEw5Zm9rVG85Z2wwTWlPNU5wcm9veG56UlJPenYzMWNIX3lfTDF0cnlaU2FqcVcwdXpTTjBXbFZOYW9hY0w1RF9QbHdJUTFid2xLTGxJLWJZc3JmeTRYMUdTdkR2UDZYVlZ1NGJERmdSS2ZQdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenZwTC1tbVoyVFBCQVY5MlpGa296SzNNUGpXT195Z19tamNhMGx5RFk0OHhKcEVpa0RGTnFWYjd2UWIwUFZOY295RUhaWkNrMUNET1I5cUUxLW4zejJRUjE2TkNma1ZjcnpucDJFeHNXNkp6S2E4VGFRNzl3WXBWZUVFNG1kcy1k?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxPY0M2ckFncU1tMHdoOUZjN29SeDlkd2JXZkk2TkRWYUNoVmtHdlBLT3Z2Q3R3NnlkeVE0cnNhM250TmtSWFl1bXRBWEk5eGpxbzlUZmdGRUZKRktaakxTaHUtY2JMVnhCZnBPMGpoNloyR3RreDZCVC1FMkMyWXI2b1dQRGpGSF9pZUdaRkZ0UWgzczh1?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGFER2Vpbl9JMXo5TFF1MFdQemdLcWFENFE0eGhwRS1pWkVyVTJvMFQ3RnRxUURGSjBxbHVMVVlyYzk0N3ZVU0tfb0tJa3NJREFmSzNmbkVWd0xxdDlvLUlqNzQ1bnBmUExWNWxmVTczRG1UNEQzd3NReXh5N2xTU3IwbkRwcDJFT1BXYzExU3NLMVNkZ3RR?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVkRtU002ejB5V3JRbm1qTnpFVk5pMFZQYzRMZGFsTDN6N0ZFeXR5UFBPVUk4NFJJUE9CTFEzMnJIbGFjR0wxekNRZ0FsaGhPcHZfOEEzb3Y3ejhyOVFVME1XdjFIckJ2NUFjaEhXSWhBYkZQbTZ1dEM4TW5PNHozMzgtdElLR1VzNjA4UzExVV9RYXdDYUFDQnQ4aGY?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOV3dMNG5nSXB6aWtwVVpJSTc5SU5ST0l3MjZkdUtVOGhHalBMaGFBaWVHT1UxM3dLTXd3QlhmaW5iV2dxQ0N6R1F3R3Zwd0p2cjQzajM5NUVuRDhnallFMHpGa1VObVZvb0pfaWRlX3ZuQTF5RVYxOWV1ZzRZQ0IybVlUZWIwM0xOb2RnRWh4MWF1a1BmMzRXNEdSaUl6dw?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxNdUh3MXpvTENyanZLczZzd29RNVFPTDh4aHVvcVA5OHNOREd1WWQtdk85YU9jbElGRllubnN6c1poTWRtQ2JoMk83Q2xKWWg5YzIxQmY5LTVXVkZXRFFSWS1QUUVmQUxLTzhzU0hqeWFSY193akwtR0ZRVTFTUG9YNXdzQ0NmM3BGUjNoeHpLVlBfRnliSXpUM2hWaG1xajB2MGZjZklB?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWlI2MmFSNGVseUkxcGNLWW5RQklfcDJnUE9weDhQT2hOXzQ3dkdQekxaX3dET1ZzS0FMd0ozOWF3ZTlaVHdxcW0yeFJBTjFDTlVscU1CT25KTUd2cjdHSnM1ZG1CZTFkay1ZVHBZR204cWRacUJpbi1WZ1M1SnN1U25CLW1sbHZ6emFXMzRfNnBzVUxMcUlfOTVEdGZER2ZlcFZmU3JmUlJWemVtUldxTmFOdkM?oc=5"
+   ],
+   "outlets": [
+    "ft.com",
+    "news.google.com",
+    "nytimes.com",
+    "wsj.com"
+   ],
+   "importance": 88.0,
+   "reason": "techmeme rank 1; 4 independent domains; 19 items across sources; ft_tech and reuters coverage"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 2,
+   "headline": "Anthropic prices, launches roadshow for, and closes its initial public offering",
+   "summary": "Anthropic's blog posts cover its S-1 filing, roadshow launch, IPO pricing and closing with full underwriter option exercise.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+    "https://anthropic.com/news/ipo-close",
+    "https://anthropic.com/news/roadshow-launch",
+    "https://anthropic.com/news/s1-sec"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 84.0,
+   "reason": "anthropic_news rank 3; primary source present; 4 primary-source items"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 3,
+   "headline": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2",
+   "summary": "Anthropic announces Claude Fable 5.2 and Claude Mythos 5.2 in a primary-source post.",
+   "urls": [
+    "https://anthropic.com/claude-fable-and-mythos-5-2"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 72.0,
+   "reason": "anthropic_news rank 1; primary source present; single primary item"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 4,
+   "headline": "Anthropic shares split analysts after newly listed stock slips below IPO price",
+   "summary": "Bloomberg reports conflicting analyst views on Anthropic's newly listed shares, with several outlets covering the stock's decline.",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-25/anthropic-s-stock-sparks-rare-divide-inside-one-wall-street-firm",
+    "https://nytimes.com/2026/11/25/technology/anthropic-stock-tech-start-ups.html",
+    "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMmpFZUNudkVlYUlreHZmQ2gzVnNMZXFIWlRyY3gtUmRma2MxN0RWZW5VOE1nUTNmYzNEbThON0QtTE10WHFERVJaS3ZOVUhzX2lTSGVlY3BadF9oQkVDbVFqZzM4OXkxSklGdWtGZktrbV8wcElfY3N0SkY0RU5Sbm1sYVdkSktIY1otajM3NnpaU21tOEctWGo1SGVQY2IzdC1CZGFQSHdZQjliYzA2QU5oNzdjZzY4Zjg0Z3piU3BCanBaNWlsb3laU3JoNmZDcVktX21fOEhSSVZnWkZn?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpekNGOGRHMnpUbXpucGpYTkxial82M3hCdk9QNDAycndPWWhtWi1DTEVZTlFENW9FdzEwSm5tM0VDYVRBd3BEUmRSemgyLXlOODY1MENqdnNnUDg?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZVFJsLUhiTUVxUU14VzdQamVCVWVKWnh6U0U0aGRBWjQ3N1NXZUdlcEhWSDhZMFJiSnp4aWhrZ19UOWhXNXB2YXc3a0l5LXEtOEZZbEdRTGFfNFJKLURQWlhOci1qMnhtOGtpdQ?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE5qeFZ5Z2g0dHlNNVJ4THhNOXo1SzhSZGhRdmMzejNVdERLSDhCZUZIczBtNXl3R05VWGN2ZktqNUhEQWJybXY0MXJwcGZkUnotQndGM3VwcUJxUVJlaDlIcGZyd1FIeFRFTFZCZWlWckJ5SHc?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE5wZUY2RGdBQ2Y5Z09jenpzdk9FVzY3Qnl2THFESlJyTmJLS0xFdERrTXViYVJjVWd2U3BWSmxCS0NYTXQtZzBpN0hhZ2tGYnQtakwxNHl1ckdsbTBwLTNPOXFmUm5ENUk3dVNOWUZTZnRBNUVzRWNDZk1qMk1uZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPb0pyWndTN2d0MkpuNlBaQXFQS3g3Z0cwWHRVY281ck1FaTRGNnFLUTFRWC10b1NFRmZqSjVXX2NlRHRRY0FaVlVzcmlaUWdIQmgzQklyQjJxNElqM2xMS3ByV0JOaWh5WWRydnVsSllPTlQ0VVpfbjJhcmJWVlVYeU5raWEzc0Zq?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbk1hLUV4QUZnNUh6QXd1LVpVY1o0d0tTemNicDNRUHlUYWdTamtSNG9nQ09uaFBZQUUwVl9UWXlmM0hhemhBQmNsWmZRd1g2c1JXN1JLRjRHTWV2ZnJPaTZsMl94OUxNM3lrYlZ3QzE2M2pZWUNjWlNKNU55NEg1ejlJVkRjN0NqZmc?oc=5",
+    "https://news.google.com/rss/articles/CBMikgJBVV95cUxQbVNkNXNBOElhX0NoV05iZUNEdkhjeDlGRVdHUWhxRkRhN0ZvUWxldlZmdlNoRFIwUG5jWTVKOThTcGdmZUJTa0xrUlRKOTNZNExNM1lZN0hyNmR2eWdmLTI2TFlETS1TYjBfOWttMkM3OTJ4ei03NFdFV2ItSVg3eS1wSE1FcENJMlZMRlN2VzR4RXZqZVNyMlBqTnJOa01wRlJhcW5kOW1MeV83LV9HSjdUWTN0VXVJVGNLNXoxTjZkZ3JkeHVkem5kSlpPNWFKN1hlWU03MllxOVh0eXVGbUtsenM4ODlaQlp3TmFfU3A5dW0tbGN6Q3VDbHVKOTgwNEU3TVlHMkRTdC1JcEFLUUpR?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaWk0VWFfRnFpYlY3Z0FYRXpEaWI1b1BaMmdSU2tqZG1mYVFBaWE4S0ktR2drWml3ME91RC1YRUt5S09kWFZJRVVrem9Ybk9paWszblE3RnNEbVpraDlHTkcwNmVNLWtNVUNaS3FVV0RSTUhNZkFGcEVVUWhKdF9Mc3RoMnUxVmJROVNKMlRlMDY3SVNT?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdXlVSTZCOUtpQ3E0VWRhanIzWG1Xa0lwc1BPODhCeXh2MG5VTk1HQlBJbGgwMmZrYmFFUTM4T0pNaXlWa1dBSlVFeXVyc3dZYUxfQnZqWUh2ZGFZa1dlaldBcDZqUVQ4NDRKTEJsSllHSWcwbGRpUUxaYXJBMUtSZ3NKOEJLVGNpZUtkWXBGV1RMQzFN?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTXBpVmxTLXYxcC1pczdiZWs0Zkk4UWI0S2RmNjZzd3JjX1I0WFhTdkVTd0I1bUpaWUJHcmlQWTJvVHRWYThzN0w2ZjZLSk05Qld4V3BrNklSM0l4NjVHc0xza25PQWt1NHp5Sm1NdUxrMUJLUEMwMnBQbHZfUWxFUEkwblhDb2NLUm5qZWQyajNfTFhQblBRRA?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQmF5RGYyWXcxVUlrNTg5N21SMU5uNTVSdVhPdUhBR0ltV3NLWUVyWXlscjJtcW5USEJWRmFkcmdUMFdfRTRGSklTdjR2M3FsUnBDNHR1d0hSTFp5SHBVN0J6LVhlN2tUVnlLWkhzR3B5UUdlUm51aWV0cnJJWWVmUTh2bmxPdjg1QXRYbFZ2VmFZcm9iU0hiOVFn?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQa0FyWTNOWV9XWHluR1lJRDZhY2RycGszSE1vUFUtb2s4RFVIclh1UGFYd1RVQVNKZUg2S3BxaWd2VWE0NFdBN29YQVJ1bWlZc3NQdmFEazNkeFJJOXhzemd4U3hGcWpYMzZEZnQ4OE1fVnE2SEtaOW5yMk1UVHR1elhFNzgwdXVMcGhIbzBwV0NaTDZVbTR5OURmNA?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2Y3Q21iQmpWbjd1T1hIQjYyaXgySjhyYk5aOU1KWjMzMXpJTmhUYlRLSjNHZGZETVM4V1Z5bGFvZi11a09RUDZGVDFaaHlSZVBnaHBTVzdNTHhZaVlKcy1pY25hcC0xUTNVcGFJRU1XRWZFTEpQNVF3amFGZVkxVExoZ3Fsdkx1bkZ4ZENUbmNEU1FKX184M2V5MG8?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYTVhWmhTMHdiX2RQcVUyWHlsODJSN1J6dXByeVlPVm54V3o2U3kyTWdTS1dNRm5QWVRKZDc1aFVpcFZrLTJOVm15c0djSlNNRXRFWkVlQ2hGWHpzZFU4RlIyRUI1V25oX2NTVi0ycnF4c1hhb21waDh2VmdUU3ZFcFBtVmQzdHNFNFdiNml2czNrTzJ2QlUwNVh1Mjc?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUDFjSVMyZlBQdmhPeE5sRFhfTm1rcUNxd3dZS1hHNjRFR0tIaExIS2huVzdNZzNidGxpV0VyeGhIRy14ckxBRzJ3ZkVma3pOSW51ZHgzazlSNklaNVQybXUybm9RUlpGSS1Oa3UxdzBDd2NtZTI0Wk1iaFBhUjNrVHp0YzFJZUZMNmtNallGVGlHMFlaRXBRY2NNa3M?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdGtMMTM4bDg3T2dUeGprQ2plUzdtd0x4Xy1zWXRTWlowVVJpd0Z5VFphZTJ0VExwam9RdnFNeXJRY2xWTy1kcGxVR2dnaG9TNG5LdjRLb09RazFyRTRnWS1WbldiOTI2V0dvNTFTeTJjc0RqdVJfY1ZheFNCRkctaVNSZE1fWTJSWmtIUjJ5WHhOWTJzaW1Ga0x1eC1OSFE?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaTVIbmYtZHdRbGNrSzBFQ0FRbGNIcnR0dWRfaGdiOTVmWlFfQ0EteXdud3EtZHNVNFBYaXhGb1NZaDFjcFlGTF8wS1RJV00waVJZM3JLQlJqeDlockdVUlJQVVB3emR3VXdXOWhCWHBkOUxUcldaT3RlckJyLXJRRVJPUmJOMl94UWVIZDNfMEZVSHR3cXZLbW9XMC0wdXd0?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPODJ4azZ4azNueHpjY3c5TS1xV2FEV2JjY0ZLdmh3aVBBeFFSc2IyMkVIUTQ3aUhTZnhjemNmYVpvTTRTNlcwZ2dvaDlYMmExNGNuRFVJWWVLSzYzUEl3YW1HWDBCMlN3dk9TdWR3R2JKdjI5SjNwMExISW8zSXpVaXRHUkxxN1JEbVZ6TGFob3Q3Q1g1enpJS25vRG1Qckt4YnN5cmJ5dXRkU25Gcnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxObTNqUnlxOTBxMlVDaWR6QlpaRTJSQkFqc20zQTRJY2VNdV9wQU5mT0VHYUNrdWZlRThCY2JUUVk0SHNkMHBvSW9KYWhhVWI1VXFlTUpjODFsTXdJMG5ORGZPbTc4Z2hpUTBoQS1pc3U4MkVaeF9pbkJhOWpEbGFmQ0RaNm53QnFFQXRTNkV0UHFUZEJ1cWxLYkNzc1dDNFNVaXEwYUVrTzk5cmFQbHNoSEUwZw?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNlM1cEVZV2FiQzNweFlINDdoTDVGaDFnOS02eWpIV3BDUks0Q2FNc2dUWUkxOHl4LThWVXJCeXFRMHFETVpORjR2Y0lKSkh5YVN0Y2dUR0pTb1dmWUJoQmtCWTdETmpwYWtDZ1otOTlHb2lpdWNpSG5Kc3Z2QW94VjlWX1doeEJOLW01NU04aDBBYmxFY3RnLU1Vek9jdmEtVE9TTmFJZ1pWd0xLUXpnUnZjOEx3UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdFNYN21fTE9wTk80YmxDNU96RlIzdnluRmtKMklDMVAxX1dEa1hGQzBNd1g2QUpBVUdLYVFLeVltUHR2b0MzSzJNMS1LX1VCU29NWm10TWQ0cTVncXdPbU5HLTZrVk9fODh0WDZkanl0UllHRW4zaFhsYU13bGl6WklFYTRjSEVTVjJsVnItTHZQWU5ST3AxVjItR3pTZG8tUW5WTjJLOEMtRXVkZDRRRWFDT0F6X0k?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPR3VOemxxdlNiNjRhUU5RSVlQaDBfZy1BVnJROWVGX0d4ajFWWnFKTUwwY3ZlX1p2bFFwNzJnajFCSEhNNWpkM0laNjNRLWIzcm1LVGFoM2J4SFk3ekVWN3RrNnlSM1NNRzJYOS1VRTMtRnVYZHpVVnlqbXVkMS16cGJHc3NTRUpKOHJaT3F2a1BJemZxNFc2MGRwWldwTERRQWpmVGZhbEVLbXZjN1NpLU9uekVtTHM0Nnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQzRmWmJnREs3SkdRWmF0U1dOaHdhd2hrUXdLeEZzWlc5RHQ3NWwzcnhOeG5hOEtfaUFxTkQ2TWNEWU1zZnY5Vm9HVHhHeWkzQ1E3UGNPRHg4YVRTUW9FUmtQTWc2M1doczJRaE0xVl9fcFlnZU1pZEVZRHlEQjI0enIxUUNwNFl1RjBTdUtCVE9aRk53UkJtZGpFc0ZkR3JoaDN3S0Q2ZlY4OTU1ekY2d0xZMmJwcU1PY21F?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbThLVXlsbWk1SUhzWEkzc1plaHNDSnVjU1l5SkREQ3NlVTlHN1dtTmtZS2lVajBvQ3gxV3hoeWY5UVJWMUs0TzVWWUVhdkF0clhJOFVodkFyWUNyOUk5VktKSDJTdkUtYS1TNjJmaG5oQnlWOGh3Z3JXaWx5OG44S2xTT0RNckY5ZWVwcVhZWlVubUd1ajB3NGFEY19VUTNEa0lZT2FwOEM3U19XbzEwLXpFdGZyTlJyVTB5ZXZvQUh6b2tuT2c?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWXotWmhsTEN6dnZfVklNTTZvQmllWGxYRlJzdC1pUnI2RV91OVdnN0JGOXFLY2tTT0ZKYnVSYTNrdG8tcGtrVVFCOGV3LWpSR2dDZkFkMEpWM0hJekJoS3NuVEJ1QUx3ZllsMmFndkpEZV85Um0yakJCd1NFTDlpZzFPVzFRZXZSd0x5d29iQkZ5akxJb0pxeDlaVDZmWjRnYzlfRlVYTkpWdXlkVXRtMUpNYWtaZkszZWRNU1J6STFLM1NwMUtwZUp5WHdVWmc?oc=5"
+   ],
+   "outlets": [
+    "bloomberg.com",
+    "nytimes.com",
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "3 independent domains; bloomberg_tech and nyt_tech tier 1; 28 items"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 5,
+   "headline": "Anthropic introduces Claude Haiku 5.5 and Claude Opus 5.5",
+   "summary": "Anthropic's news page announces two model releases, Claude Haiku 5.5 and Claude Opus 5.5.",
+   "urls": [
+    "https://anthropic.com/claude-haiku-5-5",
+    "https://anthropic.com/claude-opus-5-5"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 68.0,
+   "reason": "anthropic_news rank 5; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 6,
+   "headline": "OpenAI admits GPT-6.2 billing error, Astra users hit usage limits up to 40% faster",
+   "summary": "OpenAI says it corrected a GPT-6.2 Astra and Sol billing mistake that had discounted usage, so users reach limits faster.",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+    "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1c0VJYVZwRW5ZWHV2b3FxNVpxVTlkaHhoWERvWVRqcTlqNlFlVEJXOGZwRmZpSmhBamo1ZWZ1Q0VnS0dJVHJFc1dwajZMWnZHSjRhbDBueFJScXZrMndHSUVabEVfQWVkYVdmSXZfdEhoN21SMGhMYlpfdw?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbU9nOWs0eWxKRDYyTzlodS10SV9sd2NEUXB0MzBTbzhYeFBPbHZIUGtWenlHc3VaS1BqUkNkd0NVVFN1THhWbTJ0dm1wMVI0N2JuNWM0SkdSN25CenZ5RG4ySVdFNzVRTE5Kc042RXZvVEotekEwQnZGNUJ3alVvX1NQSDNJWl9DOWhIdGtzNjBaaWc?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxPN3JyRHhaMUFJSFA2V0hDeWhKUEZQSjlFdHgyalZBblNtd3FUb0Z2bEVoWldBVEREaHJSUkNXeUhDS01SODJMTkhrTS1mODczNVRNMmY5X0hfS2JjU3VIdlo0RHJGNWpITVNLT2w5Q0J0Rm5IWldSTGhuQkNKb1diZXJqQnRWNW9zM2JhNjZCNThyMU5tNUpZVHQwcmJfZzhpbGprcA?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOWdodFNyY0JqWEdzaHowQlNrVXZMb1B5SUh4Z0ZpZVFzNG9weVFXUTVOZUZMVE1YaURlVC0xQU03ejZZclZmYjdNdXpka3lHMWpyTnhuWG9Pdzhwb2VNSUlUZkJyZjZDTHhrRDZNVEJWTzRpdTdfZ0EyZ2hOR19MYlVVejBpNUtZYUt1SEFBbmo5YlkxRW1mVXdNMGhOb2R2VG81U2xFWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMTh2UzA1UkwxNzJzWGxTS0Mxd1pxd01uUHZhV3R1bExSNE95ZjNFNEJqbWFxemZDWDBMN3JYYnE1NFE1dHNuVjE5Vk0zUWhFUDRNWWFrcHZGSTBsemRVT1FLOE5sc2VOemdNanJ5QUs0M0tZdmNQVnJodEcxYVpNSnAyZU16eTFzaldyWDhka0Fkb1J6SnRWVzdjb1ZCckVlV1otMWJKbV9XMV9rMGo0?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbmRxTnhtQkxYcU00d2FHQWtJX004TXBUMk1fTkpQTEJHWW9sM2xiMllvSFI5Zkh2Z25PenJIRWJnNllGMW5NdVlteGxjbTMzODVhclo4NE1McnRNYl9Pa1JScnBpMnllZk8td09Zdk9SRW9XRTVYV0dFSDFIdUNRd25PbWF4UG5CNnhZd0RxYVRMeVd6U2pmYmt2U00xNWJtdnRjajlNVW40V2p2eElGRw?oc=5"
+   ],
+   "outlets": [
+    "techradar.com",
+    "techcrunch.com",
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "techmeme rank 4; 3 independent domains; 8 items across sources; techcrunch_ai coverage"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 7,
+   "headline": "US approves SpaceX plan to launch one million satellites for orbital AI data centers",
+   "summary": "Regulators authorised SpaceX to deploy one million Starmind satellites for space-based AI computing; scientists are sceptical.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUmh3LVh3RnFNUW5hVjJWcXlzOERNTTloeEdIbnRiRGVSV1B4UzJaWVhudzNvS0Q4YlRvN1pUTThRVjhka1JpYUFBWC1RWW1hYnFxT3RxM0VoMERWRmlJdmd4LXJJR0F5S083cThjNDFWay1zRWVPcmRUeXR5WWVuQ01ObUVGRVZBOGFzTDdobUxMUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVk5uRnprd285MEw5V2prcHR6bXljVGN4cUZuOHA4eHJUZkFzOVFnS1QtYnZaal8yYUYxa0t1cW84WjVzQWpub0czSGxUblh3STB6WnZxcThWZUxNRDk2emliZ0tfTmk5U3YxY3FZRXdEYWNyb2VMTmlkZE5RNWZHOS12OWdjSkpNdzhGU0Z4NWo3VmpSZHNXWGNJZUFpZjl2T2xuUkRKRXBpOTFqVFdFLXFvV0xHd1czWDFKbFU3OWFGU21B?oc=5",
+    "https://bbc.co.uk/news/articles/cwp836l8n1jgo",
+    "https://theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdzF4Z2xkQnNTOFo1R3hMdkRIVFYwVmhSUTVZd0pETDR2ODRUQUNOZnpoaUNDd0hrbEFXazdSRE14dWJWNjVWclV6YUtmeEV5OFNyeVdiMXJkaW9KMHFnYXJrd2pHQ2EydzkyVVdJaVRFZWN1ZklqVWcyeXU2NU5CeWItT2N2elgxclA3alIxMmUyNExtWUp5bXRwSU1BcFFUaW12QWdtNlFuXzFvalI1TFlmdEFJUQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com",
+    "bbc.co.uk",
+    "theguardian.com"
+   ],
+   "importance": 66.0,
+   "reason": "3 independent domains; gn_ap_ai and gn_reuters_ai tier 1; 5 items"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 8,
+   "headline": "Apple removes MiniMax's Talkie chatbot from App Store over child safety concerns",
+   "summary": "Apple pulled the Talkie chatbot worldwide after reports that its characters sexualised children.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNU9tZmh6STA3Ui1FY1FQaE9LMDgzQjJjV2xoZ3Q1Znlvbk5wdll2OXoyOUdxUHp2WEYteFpvTFBhVDZYbFozTXp5T0RpaE4zUUhBaDhiVDAxUkY2RURGQWFFaE1BRTVmdmdXTDh3UEdReDM5N0pjSjBzUXB3UEpPa05ma2ZoWDZhTzhJbTNFeDBfQllEWS02eHhST1FPRWI0VlRMOEhHanpvUjZpWkNPWEJLS1BlSllaZ25XeTRGUXF3bUZEcE5n?oc=5",
+    "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children"
+   ],
+   "outlets": [
+    "news.google.com",
+    "thebureauinvestigates.com"
+   ],
+   "importance": 63.0,
+   "reason": "2 independent domains; reuters and techmeme coverage; techmeme rank 16"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 9,
+   "headline": "Scott Aaronson says leading AI labs hold unreleased algorithmic breakthroughs that could break cryptosystems",
+   "summary": "Aaronson's blog post and a Google News rumor item say labs may hold breakthroughs threatening deployed cryptography; the exact nature is unknown.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNR3dCUlpNaXNmZEJ0c04tZjg1eGlTb0ZTTmw5cXlPWGtRYVhFM1lTcWhEZVloWS1CcXhFQ0E3SnFuT2hUdDI1X2R5dlVCQ0taNXRHUHBVLWd3TXNGOElmSnNSNzB6Y2tVdWlnSWZ1REQyaGVsMEFLYTNrZ3g1TzM5eDJ6R3huX1hqTnA3YzdXQnk4cGswSGNUTGdKeUEyN3gxWmxwbjZCYmZBZG02T3c?oc=5"
+   ],
+   "outlets": [
+    "scottaaronson.blog",
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "hn_front rank 25 with 1914 points; techmeme rank 2; 2 independent domains; no primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 10,
+   "headline": "Z.ai's GLM-5.5 flagship reportedly delayed after US chip curbs",
+   "summary": "Reuters reports Z.ai's 3T-parameter GLM-5.5 missed its November release and could slip to Q1 2027 or later amid US rules and distillation curbs.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVENaTUJjQ0trZ2NQMG1FdkQwT0ZkcXNHbGhHVmstbjRBbXFPQnhOUVZvNVlOWXo2UGxybkI0NXRjZ3JQbXg1azUzM1ZBQTFmZzVpVnQ1bzgxUHMyZHlqbW5LZW9hREptN05jLWhxOUxkQVpNUGtXalk0OTNVS09LWTBuSkpwelVxczJjQ29oNHVqT3owWk9sU2dNS1FQS0taaXpibkkwVEowZ282MzRCS0plakpiejUwcXQxVWJfeDBEOXdRUGRDMVctSzE?oc=5"
+   ],
+   "outlets": [
+    "reuters.com",
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "techmeme rank 3; 2 independent domains; frontpage_hits 1"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 11,
+   "headline": "S&P places Nvidia on CreditWatch negative over governance concerns",
+   "summary": "S&P warned Nvidia's credit rating could be cut over management and governance risk, per several outlets.",
+   "urls": [
+    "https://theinformation.com/articles/s-p-discovers-nvidias-governance-lapses",
+    "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
+    "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOa2tIellfWlVfWkFzR0tnaVFlLUdvd3U3NHlNMEtWT0x6SHA0RVJOMGNFN0ljLUgyWU1wN0lWbE0tQ3lNOUNyVVNGaTdDYVlIZ1dDWDVDRWtwMENzOGNMbmJ1OGpwUHVhLWRneDltcWNCaUVuOTFjcy10aGkxekc4aUJaUWV2RjFONGlZQmRrSE44U1o4T1hlSjQwTkoxLWJnSjc0WG9LVFFuR3FYQmcyR3BkeVRrMHZXcV9nRFRaNEV4ZS1fRWFsYUsxMmE0UnEwc3VCZkgzTUZBM29JcnRCYTI0WS0?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE51YVJtVWRQVW9UQ2F0TmcyYnRIY1o3eTdTX1pPamJjRWlod2stNjhCRnIwdndsRm4zTkdWR1NSblpacElZSUdVcmc3ZlB5WDdUNk02VHRid19Nak83VjVVYmlhcVlwZ3BUQVg4RXB3V2N5UU9v0gF6QVVfeXFMT05JRkhHVWFocEE4YlFWMHpMb29MZzJSa2NpX1VuSVNtSGxJbkpsLXEtbHBocEh4Zk1NQVlmMVdFd1FNX0FhT0dRUFJ5dGo0aGozelJMY3VYVDNhUmRzR1pkVzViaUdRc1RxU19xWWstT2xtMDNELW9oaHc?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUFRfRXJRVDVpMGNCbDFuaHpxUXJSM1dTQjM1ZEJZN3M2MjkwemdhTjZrZEtZLUFiTFlBdWw3dkZ6TFZsRFFzbFFUREloei1fTHQ4bENQZVBnVGRaS01MZlM4bVRHQ21XRzBVdzZJQzgzYlMwV19zWlRKbUdKNllCM09wazItZ1RJT2c?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPTWJHTjBDZXduNUlCTDR6ZUFocjJYV1MzS1UtX3RhQXVVcjVaMXJaTENzNjRJTmJqcEJCY0RfVVNmaWNFUnpqUjVWRHNXaE9rRFpGVXd3ZFF5cENGX1JkX2hWZl8zejhVOTRUaEF6dlY2LXI2YUw4UkZVTVRvbXJCNDRTU2tNY2NyRlo5OFN3a3llMWVPampxZGFn?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxON3BILVhfUlhTUXBIWVQ3THFMX0s4OWpnd0g0M1VBMnZJeDdYOHBTaERHcWM1Vk82cXdSY1dGamp1VWo0WnlTYVkwUkM2SkpOcEJrZWM3V2NHSEl6T0dLQnVHRC1lYnVuVEx6VEVWSzVJakVUR25oM1ZSTURYdEloSC00UDRJM1dqT3liaGk0TG5wbHhmVmJPU21Fd1EzNlU?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSnFCZTJhQkQzR25PLTNfcWRtdFdUVENhU184c3RraWp0M0g4NGw0NXRVOU5sSFBsR2tnRktxYjBBcUlGRzNJVnEtaVh5Zk82NGY2WVQ2VFdBUkIwZ294SjdHR0trM0k5dTl0MTg2OURCOW9RNklVczNVa0VkZU8tV0tXWDVHY1NxUG1aUXZFdUVzazhJTDlYRHBfaGc2VEFEUHNOOFAwbjI?oc=5"
+   ],
+   "outlets": [
+    "theinformation.com",
+    "techcrunch.com",
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "3 independent domains; the_information tier 1; techcrunch_ai tier 2"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 12,
+   "headline": "Meta launches Muse Image, Muse Video and Muse Spark 1.1 model API",
+   "summary": "Meta's AI blog introduces Muse Image and Muse Video and the Muse Spark 1.1 model API.",
+   "urls": [
+    "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 58.0,
+   "reason": "meta_ai_blog rank 1; primary source present; 2 items from primary source"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 13,
+   "headline": "SAP weighs cutting at least 10,000 jobs in AI restructuring",
+   "summary": "Bloomberg, FT and Reuters report SAP is preparing to eliminate at least 10,000 positions to reshape its software business for AI.",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring",
+    "https://ft.com/content/ef05b4ab-7944-44ae-ad00-15475f8c1ec9?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdEkwcUVNZU5SbHN4QWpxRU81d3p0eWFzcDY5VVd2dnBCeU8wMDlxVTM1NzhEM0NZMnNTNGZRVnA1WU1OUWM1N21tV29IZlJ6WUZLQ0xuWmd5cS1wU2dtaHpuRGRjZFA4V2I0VXRPYjhlN1ZQamVzMFBKQk1yRExURUFCX3B0MVdDRFd4djY2cEpmaERpbENDalRtcjFwd0trT3JHU3haMWRQdlBsRFNYNFhSTUt1QQ?oc=5"
+   ],
+   "outlets": [
+    "bloomberg.com",
+    "ft.com",
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "techmeme rank 9; 3 independent domains; frontpage_hits 1; multiple tier-1 outlets"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 14,
+   "headline": "Anthropic expands GSA partnership to bring Claude to all levels of US government",
+   "summary": "Anthropic announces a broader GSA partnership putting Claude across government levels.",
+   "urls": [
+    "https://anthropic.com/news/expanding-partnership-gsa"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 55.0,
+   "reason": "anthropic_news rank 15; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 15,
+   "headline": "Anthropic publishes behind-the-scenes account of building Claude Code",
+   "summary": "Anthropic's features page describes how Claude Code was made, a primary-source feature post.",
+   "urls": [
+    "https://anthropic.com/features/making-of-claude-code"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 50.0,
+   "reason": "anthropic_news rank 8; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 16,
+   "headline": "Anthropic describes the first AI-planned drive on Mars",
+   "summary": "Anthropic's feature post covers a Mars rover drive planned by AI, a primary-source report.",
+   "urls": [
+    "https://anthropic.com/features/claude-on-mars"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 48.0,
+   "reason": "anthropic_news rank 10; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 17,
+   "headline": "Anthropic expands AI for Science program to foundations and research institutions",
+   "summary": "Anthropic's news post extends its AI for Science program to foundations and research bodies.",
+   "urls": [
+    "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 46.0,
+   "reason": "anthropic_news rank 14; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 18,
+   "headline": "llama.cpp adds AMD-specific patches and a benchmark dashboard for Ryzen and Radeon",
+   "summary": "Hugging Face blog introduces a llama.cpp benchmark dashboard for AMD Ryzen and Radeon, alongside AMD-specific patches.",
+   "urls": [
+    "https://devnull.land/amd-specific-llama-cpp",
+    "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+   ],
+   "outlets": [
+    "devnull.land",
+    "huggingface.co"
+   ],
+   "importance": 45.0,
+   "reason": "hn_front rank 1 with 138 points; primary source present; 2 independent domains"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 19,
+   "headline": "Anthropic publishes scenarios for the economic future",
+   "summary": "Anthropic's institute page sets out economic scenarios, a primary-source post from the company's own news feed.",
+   "urls": [
+    "https://anthropic.com/institute/econ-scenarios"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 7; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 20,
+   "headline": "Anthropic updates on its independent evaluators programme",
+   "summary": "Anthropic's news post gives an update on its independent evaluator arrangements.",
+   "urls": [
+    "https://anthropic.com/news/an-update-on-independent-evaluators"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 44.0,
+   "reason": "anthropic_news rank 19; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 21,
+   "headline": "Anthropic outlines preparations for the 2026 US midterms",
+   "summary": "Anthropic's news post describes its plans ahead of the 2026 US midterm elections.",
+   "urls": [
+    "https://anthropic.com/news/2026-us-midterms"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 43.0,
+   "reason": "anthropic_news rank 20; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 22,
+   "headline": "Anthropic donates Agent Skills to the Agentic AI Foundation; Meta publishes agentic AI explainer",
+   "summary": "Anthropic announces donating agent skills to the Agentic AI Foundation; Meta publishes a primer on agentic AI.",
+   "urls": [
+    "https://ai.meta.com/muse/what-is-agentic-ai",
+    "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 16; meta_ai_blog rank 6; primary source present; 2 sources"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 23,
+   "headline": "Anthropic reports on Project Deal, a Claude-run marketplace experiment",
+   "summary": "Anthropic's feature post describes an experiment in which Claude operated a marketplace.",
+   "urls": [
+    "https://anthropic.com/features/project-deal"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 9; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 24,
+   "headline": "New York Times warns photographers not to update Photoshop over AI features",
+   "summary": "The Verge reports the NYT told photographers to avoid updating Photoshop because of its AI features.",
+   "urls": [
+    "https://theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features"
+   ],
+   "outlets": [
+    "theverge.com"
+   ],
+   "importance": 40.0,
+   "reason": "hn_front rank 12 with 615 points; single source (hn_front)"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 25,
+   "headline": "Anthropic reports early progress accelerating drug development with Claude",
+   "summary": "Anthropic's research post describes early progress on using Claude to accelerate drug development.",
+   "urls": [
+    "https://anthropic.com/research/early-progress-drug-development"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 4; primary source present; single source"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 26,
+   "headline": "Anthropic opens call for guest investigators in life sciences",
+   "summary": "Anthropic's news post invites guest investigators to work in the life sciences.",
+   "urls": [
+    "https://anthropic.com/news/open-call-guest-investigators-life-sciences"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 17; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 27,
+   "headline": "Trump to lead TSMC Arizona chip plant groundbreaking on December 4",
+   "summary": "Trump will lead a December 4 groundbreaking for TSMC's Phoenix chip plant expansion, per Bloomberg via The Information.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbVFCZEVvMWJxMnFTWE96SjlweXVka0V5WC1FVTF4R0IzX3lpODRfTzM5dDhfSWNrRS1iNXdzRWJZME1odmRCY2JMUXJMOENabjBUNzJKMS1lYW5SN1A2bTRrU2hOTXpOUEszSEQ2aTZMeG95VXNMVFltUzNJWHNxbVpKZnAwOFVMQk1KNVFyRFJ4NmctZUMzYw?oc=5",
+    "https://theinformation.com/briefings/trump-lead-tsmc-arizona-groundbreaking-ceremony-bringing-huang-back-nvidia",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxNS2tDVW1HNHlZc01hTl9LSGRCaW5OYTdPemFVNXNkMVBVZ2hWc3hEU1BlOU80MGN0aVdROUtYVW4wekFxemNCT2cwbEIyTnRtWjRNaGpvMVY3Y2lqUklUWE1qRXZuZzk3b016MEhiSXVucXNzOWl6cDcxWFpYRWJmSg?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMEd0N3RmcHZzcGdpeGRlQzJjelh5LTI3bmV6bS1RZHM1QTBSY3djVDlMTWQzMXNHNWJIY1g0Q2c1c1hfcG5wdTV2WW1NVkE2Qmlqc21IX2FLd2lwVUlLNkIzNVIteVBRM0dzdWJBQTV1X3NzQlV0UDRoWElRYm4yQg?oc=5"
+   ],
+   "outlets": [
+    "news.google.com",
+    "theinformation.com"
+   ],
+   "importance": 40.0,
+   "reason": "4 items across 2 domains; tier 1 source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 28,
+   "headline": "Meta's Brain2Qwerty decodes brain waves into typed text without surgery",
+   "summary": "Meta's blog presents Brain2Qwerty, a method for communicating via brain waves without surgery.",
+   "urls": [
+    "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 38.0,
+   "reason": "meta_ai_blog rank 5; primary source present; single source"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 29,
+   "headline": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+   "summary": "Anthropic announces physicist Christopher Stubbs as a new member of its Long-Term Benefit Trust.",
+   "urls": [
+    "https://anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 38.0,
+   "reason": "anthropic_news rank 18; primary source present"
+  },
+  {
+   "arm": "classic_all",
+   "rank": 30,
+   "headline": "Memory chip shortage drives electronics prices up, some chips up 10x in a year",
+   "summary": "WSJ reports a global memory chip shortage prompting procurement war rooms and steep electronics price rises.",
+   "urls": [
+    "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?mod=rss_Technology",
+    "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?st=Rx7QaC"
+   ],
+   "outlets": [
+    "wsj.com"
+   ],
+   "importance": 38.0,
+   "reason": "techmeme rank 13; 2 items same domain; frontpage_hits 1"
+  }
+ ],
+ "wall_s": 36.2,
+ "peak_rss_mb": 485.1,
+ "cost_usd": 0.0158,
+ "searches": null,
+ "notes": {
+  "observations": 4665
+ }
+}

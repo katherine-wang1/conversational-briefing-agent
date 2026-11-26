@@ -1,10 +1,10 @@
 # Event Registry (newsapi.ai): datasheet
 
 Written 2026-11-26 for the newsroom comparison (docs/architecture-revisit.md, "buy ranking and
-clustering from a provider?"). **Not yet exercised against the live API**: no key was available, so
-everything below comes from the official Python SDK (github.com/EventRegistry/event-registry-python,
-cloned 2026-11-26), the newsapi.ai web app's own API calls, and the plans page. Items marked
-*(assumed)* still need one live call to confirm.
+clustering from a provider?"), first from the official Python SDK (github.com/EventRegistry/event-registry-python,
+cloned 2026-11-26), the newsapi.ai web app's own API calls, and the plans page. **Checked against the
+live API on 2026-11-26** (free-plan key): everything formerly marked *(assumed)* is now marked
+*(confirmed live)* or corrected. See "Live check, 2026-11-26" at the end.
 
 Code: `app/sources/eventregistry.py` (headline source type `eventregistry`, and `eventregistry_ranked`).
 Key: `EVENT_REGISTRY_API_KEY` (the official SDK reads `EVENTREGISTRY_API_KEY`; we don't). Without a key
@@ -22,7 +22,7 @@ language), a date, concepts (Wikipedia-URI entities), categories, and an article
 | Call | Request | Notes |
 |---|---|---|
 | Events search | `POST https://eventregistry.org/api/v1/event/getEvents`, JSON body | The SDK sends the same parameters to `/api/v1/event` with `"action": "getEvents"`; the newsapi.ai web app uses the `/event/getEvents` path. Both carry `apiKey` in the body. |
-| Articles of one event (optional) | `POST https://eventregistry.org/api/v1/event/getEvent` with `eventUri`, `resultType: "articles"` | Only when `params.top_articles > 0`; one call per event *(path assumed by analogy; the SDK uses `/api/v1/event` + `"action": "getEvent"`)*. |
+| Articles of one event (optional) | `POST https://eventregistry.org/api/v1/event/getEvent` with `eventUri`, `resultType: "articles"` | Only when `params.top_articles > 0`; one call per event *(confirmed live: this path works, 1 token per call; the server logs it as an `articleSearch`)*. |
 | Breaking events (not used) | `POST /api-c/v1/event/getBreakingEvents` | Returns `breakingScore`; an alternative "what's hot now" ranking worth a look later. |
 
 ### getEvents request fields (as we send them)
@@ -61,7 +61,8 @@ as HTTP 200 with `{"error": "..."}` (we raise `unavailable`). Per event:
 | `concepts` | `[{uri, type, score, label: {eng}}]` | not mapped yet |
 | `categories` | `[{uri, label, wgt}]` | `extra.categories` (top 3) |
 | `location`, `sentiment`, `socialScore` | | not mapped |
-| `infoArticle` *(shape assumed: per-language article object)* | `{"eng": {uri, url, title, dateTime, source: {uri, title}, ...}}` | `url` (top article), outlet, `published_at` |
+| `infoArticle` *(confirmed live: one article object per language)* | `{"eng": {uri, lang, isDuplicate, date, time, dateTime, dateTimePub, dataType, sim, url, source: {uri, dataType, title}}}`; no `title` or `body` in it | `url` (top article), outlet (`source.uri`, a domain such as `bbc.com`), `published_at` |
+| `wgt`, `relevance` | int | not mapped (`wgt` equalled `totalArticleCount` in the live sample) |
 
 Event articles (`getEvent`, `resultType: articles`): `{"<eventUri>": {"articles": {"results": [...]}}}`;
 each article has `uri, url, title, body, date, dateTime, dateTimePub, source{uri,title}, lang,
@@ -80,7 +81,8 @@ isDuplicate, ...`. Sort options: `cosSim` (closest to the event centroid, defaul
 | Support | docs + sandbox only | |
 
 So the free plan buys about **400 event searches** (e.g. 3 beats × 1 search/day ≈ 4 months; each
-`top_articles` follow-up costs more tokens, cost *(assumed)* 1–5 per call). Concurrency: at most 5
+`top_articles` follow-up costs 1 token per call, *(confirmed live)*). The comparison arm uses 5 + 10 =
+15 tokens per beat and run, so 45 a day for three beats: about 40 days on the free plan. Concurrency: at most 5
 simultaneous requests per key (HTTP 429 above that, per the SDK). HTTP codes: 401 bad key or out of
 tokens, 403 account/IP disabled or tokens used up, 204 no data, 429, 500, 503.
 
@@ -98,8 +100,8 @@ Even inside 30 days, results are **not as-of**: `totalArticleCount` includes art
 - `importance` in `eventregistry_ranked` is relative (100 = biggest event in that result), not absolute.
 - English only (`lang: eng`) by default; an event's count covers all languages (`articleCounts` splits it).
 - Keyword queries on short generic words ("AI") match a lot of unrelated coverage; concept URIs are
-  more precise. Concept URIs below are **unverified**: confirm each with
-  `POST /api/v1/suggestConceptsFast {"prefix": "...", "lang": "eng"}` before relying on it.
+  more precise. The concept URIs below were checked with
+  `POST /api/v1/suggestConceptsFast {"prefix": "...", "lang": "eng", "apiKey": ...}` on 2026-11-26: all 18 resolve.
 - Not an agent tool: there is no replay backend. Record results if a comparison run has to be repeated.
 
 ## Example `params` per beat (not added to config/beats/*.yaml)
@@ -153,7 +155,35 @@ params:
 ```
 
 Within a field the list is OR'd (`conceptOper` / `keywordOper` = `or`); different fields (`concepts`,
-`keywords`, `categories`) are AND'd together *(assumed, from the SDK's query model)*, so the examples use
+`keywords`, `categories`) are AND'd together *(confirmed live: adding `categoryUri:
+dmoz/Computers/Artificial_Intelligence` to the ai concepts cut 125 events to 21)*, so the examples use
 concepts alone. `ignore_keywords` excludes events whose articles mention any of the words.
 `top_articles: 5` (with `top_articles_events: 5`) adds the five closest articles for the five biggest
 events, at extra token cost.
+
+## Live check, 2026-11-26
+
+One free-plan key, about 110 tokens used in total (suggest calls included).
+
+- **Request fields:** the `getEvents` body built by `build_events_body` is accepted as is: `resultType`,
+  `conceptUri`/`conceptOper`, `lang`, `dateStart`/`dateEnd`, `minArticlesInEvent`, `eventsSortBy: size`,
+  `eventsCount`, `includeEventInfoArticle`, `forceMaxDataTimeWindow`. HTTP 200.
+- **Response:** `{"events": {"results", "totalResults", "page", "count", "pages"}}` as documented. Event keys:
+  `articleCounts, categories, concepts, eventDate, infoArticle, location, relevance, sentiment, summary,
+  title, totalArticleCount, uri, wgt`. `title` and `summary` hold every language the event has
+  (e.g. 10); `categories` are dmoz paths with `wgt`.
+- **Cost headers:** each response carries `req-tokens` (5.000 for a recent event search, 1.000 for
+  event articles), `req-action`, `req-archive: 0` and `req-chargable`. `eventregistry_ranked` now sums
+  `req-tokens` into `usage.tokens`. `POST /api/v1/usage {"apiKey"}` returns
+  `{"availableTokens", "usedTokens"}` (the free plan shows 2,000 available; usage counts up). The
+  `suggestConceptsFast` and `suggestCategoriesFast` calls also seem to count, about 1 token each.
+- **Outlets:** `source.uri` is a domain (`bbc.com`, `nytimes.com`), `source.title` a display name. The
+  code now uses the domain as the outlet (as the other arms do), so the paywall check works.
+- **Query quality (ai beat, 30 events, two calendar days):** sorting by size over six OR'd concepts
+  surfaces big events where AI is a side concept: gold prices, Miss Universe, a Brad Pitt film review,
+  "Air India / AI Express". Adding the AI category (AND) removes those, but also the two biggest real
+  stories (SpaceX's orbital data centres, Nvidia halting Southeast Asia sales), and leaves physical_ai
+  with 1 event. The comparison keeps the concept-only query; the blind rating will show the noise.
+- **Category URIs** (suggestCategoriesFast): `dmoz/Computers/Artificial_Intelligence`,
+  `dmoz/Computers/Robotics`, `dmoz/Business/Energy`, `dmoz/Business/Energy/Renewable`,
+  `iptc/environment/natural_resource/renewable_energy`.

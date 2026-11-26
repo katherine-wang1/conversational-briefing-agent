@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import gzip
 import json
 import os
 import subprocess
@@ -59,10 +60,26 @@ async def collect(beat: str, at: datetime, day: str, concurrency: int = 8) -> di
 
 
 def load_observations(day: str, beat: str) -> list[HeadlineObservation]:
-    path = day_dir(day, beat) / "observations.jsonl"
-    if not path.exists():
+    """observations.jsonl, or observations.jsonl.gz once `pack` has run (committed daily runs)."""
+    d = day_dir(day, beat)
+    path, gz = d / "observations.jsonl", d / "observations.jsonl.gz"
+    if path.exists():
+        text = path.read_text()
+    elif gz.exists():
+        text = gzip.decompress(gz.read_bytes()).decode()
+    else:
         raise SystemExit(f"no observations for {day}/{beat}: run `collect` first")
-    return [HeadlineObservation.model_validate_json(line) for line in path.read_text().splitlines() if line]
+    return [HeadlineObservation.model_validate_json(line) for line in text.splitlines() if line]
+
+
+def pack(day: str, beat: str) -> None:
+    """Gzip a day's observations and traces in place (for committing a run; replay reads either)."""
+    d = day_dir(day, beat)
+    for path in [d / "observations.jsonl", *sorted(d.glob("*.trace.json"))]:
+        if path.exists():
+            gz = path.with_name(path.name + ".gz")
+            gz.write_bytes(gzip.compress(path.read_bytes(), mtime=0))
+            path.unlink()
 
 
 def collected_at(day: str, beat: str) -> datetime:
@@ -238,7 +255,9 @@ def run_arms(beat: str, day: str, arms: list[str]) -> list[ArmResult]:
             res = ArmResult(arm=arm, beat=beat, at=datetime.now(UTC), ok=False, error=f"exit status {status}")
         res.peak_rss_mb = round(ru.ru_maxrss / 1024, 1)  # Linux: KiB
         write_json(path, res)
-        print(f"{arm:14s} ok={res.ok} stories={len(res.stories)} {res.wall_s}s {res.peak_rss_mb}MB "
-              f"${res.cost_usd} {res.error or ''}")
+        print(
+            f"{arm:14s} ok={res.ok} stories={len(res.stories)} {res.wall_s}s {res.peak_rss_mb}MB "
+            f"${res.cost_usd} {res.error or ''}"
+        )
         out.append(res)
     return out

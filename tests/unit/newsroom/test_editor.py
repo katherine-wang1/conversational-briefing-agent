@@ -435,13 +435,55 @@ def test_freshness_filter():
     ]
     kept, dropped = freshness_filter(o, window_start=ws, source_type=types, max_undated_per_source=20)
     urls = {k.url for k in kept}
-    assert dropped == {"stale": 1, "undated_over_cap": 5}
+    assert dropped == {"stale": 1, "stale_page": 0, "undated_over_cap": 5}
     assert (
         "https://o.example/fresh" in urls
         and "https://hf.example/p" in urls
         and "https://tm.example/1" in urls
     )
     assert "https://o.example/u19" in urls and "https://o.example/u20" not in urls
+
+
+def test_freshness_exempts_aggregators_not_site_front_pages():
+    # Regression: lab index pages (anthropic_news, meta_ai_blog) are type `frontpage`; they list old
+    # posts every day and must go through the date rule. Aggregator front pages stay exempt.
+    ws = AT - timedelta(hours=24)
+    types = {
+        "anthropic_news": "frontpage",
+        "meta_ai_blog": "frontpage",
+        "canary": "frontpage",
+        "techmeme": "techmeme",
+        "hn_front": "hn_front",
+        "hf_papers": "hf_papers",
+        "reddit_top": "reddit_top",
+    }.get
+    old = AT - timedelta(days=17)
+    page_old = {"page_newest_date": (AT - timedelta(days=6)).isoformat()}
+    page_new = {"page_newest_date": AT.isoformat()}
+    o = [
+        obs("anthropic_news", "https://a.example/launch", "old launch", published_at=old, rank=1),
+        obs(
+            "anthropic_news",
+            "https://a.example/new",
+            "new post",
+            published_at=AT - timedelta(hours=1),
+            rank=2,
+        ),
+        obs("anthropic_news", "https://a.example/undated", "undated", rank=3, extra=page_old),
+        obs("meta_ai_blog", "https://m.example/undated", "undated, page has today", rank=1, extra=page_new),
+        obs("canary", "https://c.example/undated", "undated, page shows no dates", rank=1),
+    ] + [
+        obs(sid, f"https://{sid}.example/x", "old but on the aggregator front page", published_at=old, rank=1)
+        for sid in ("techmeme", "hn_front", "hf_papers", "reddit_top")
+    ]
+    kept, dropped = freshness_filter(o, window_start=ws, source_type=types)
+    urls = {k.url for k in kept}
+    assert dropped == {"stale": 1, "stale_page": 1, "undated_over_cap": 0}
+    assert "https://a.example/launch" not in urls and "https://a.example/undated" not in urls
+    assert {"https://a.example/new", "https://m.example/undated", "https://c.example/undated"} <= urls
+    assert all(
+        f"https://{sid}.example/x" in urls for sid in ("techmeme", "hn_front", "hf_papers", "reddit_top")
+    )
 
 
 # ---- dispatch -------------------------------------------------------------------------------------

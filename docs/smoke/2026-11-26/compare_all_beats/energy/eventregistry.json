@@ -1,0 +1,661 @@
+{
+ "arm": "eventregistry",
+ "beat": "energy",
+ "at": "2026-11-26T19:59:19.305863Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "eventregistry",
+   "rank": 1,
+   "headline": "US regulators approve SpaceX plan to send a million data satellites to space",
+   "summary": "US regulators have given SpaceX the go-ahead to launch a million satellites into Earth's orbit to help build data centres in space - the first approval of its kind. The company, which is owned by Elon Musk, wants to use sunlight to power satellites that will process data for AI and send the results back to Earth. The Federal Communications Commission (FCC) said on Wednesday that the project, known as Starmind, will \"support America's booming super intelligence economy\". Its approval comes as c",
+   "urls": [
+    "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo",
+    "https://eu.usatoday.com/story/tech/space/2026/11/25/fcc-approves-spacex-data-center-satellites/92959168007/",
+    "https://vinnews.com/2026/11/26/679594/",
+    "https://www.independent.co.uk/tech/spacex-data-center-satellites-fcc-starmind-approval-b3091649.html",
+    "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers",
+    "https://www.anews.com.tr/tech/2026/11/25/us-approves-spacex-plan-to-deploy-1m-data-center-satellites",
+    "https://techcentral.co.za/spacex-million-satellite-ai-network-fcc/288719/",
+    "https://articles.thelocalreport.in/fcc-approves-spacex-plan-to-launch-up-to-1-million-ai-data-centre-satellites-in-space-report/",
+    "https://timesofindia.indiatimes.com/technology/tech-news/us-makes-first-authorisation-of-its-kind-in-us-history-allows-spacex-to-deploy-1-million-satellites-for-/articleshow/136169110.cms",
+    "https://en.tempo.co/read/2124456/us-approves-spacex-to-send-1-million-data-center-satellites-into-space",
+    "https://www.centraloregondaily.com/fcc-approves-spacex-plan-for-1-million-data-center-satellites-in-space/article_ddcea93e-9c89-5318-bbf3-7b7cedbab978.html"
+   ],
+   "outlets": [
+    "bbc.com",
+    "usatoday.com",
+    "vinnews.com",
+    "independent.co.uk",
+    "cointelegraph.com",
+    "anews.com.tr",
+    "techcentral.co.za",
+    "articles.thelocalreport.in",
+    "timesofindia.indiatimes.com",
+    "en.tempo.co",
+    "centraloregondaily.com"
+   ],
+   "importance": 100.0,
+   "reason": "676 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 2,
+   "headline": "Elon Musk, SpaceX pledge major stock donations to active Trump Accounts",
+   "summary": "SpaceX announced Wednesday that it will contribute one share of its stock to every currently active Trump Account, with CEO Elon Musk pledging to personally match the company's donation. The aerospace company's commitment follows Musk's pledge earlier this year to give every child in America a share of the company. Musk later elaborated on the planned stock giveaway in a post on X Wednesday evening, saying every child in America would receive an additional share from him personally. \"Every chi",
+   "urls": [
+    "https://www.aol.com/articles/elon-musk-spacex-pledge-major-042955000.html",
+    "https://www.telegraphindia.com/business/elon-musk-vows-two-spacex-shares-for-every-us-child-under-trump-backed-savings-initiative/cid/2191344",
+    "https://www.deccanherald.com/world/us/elon-musk-says-every-child-in-the-us-will-get-two-spacex-shares-4231777",
+    "https://www.moneycontrol.com/world/elon-musk-makes-massive-share-giveaway-promise-every-us-child-to-get-two-spacex-shares-here-s-how-it-will-work-article-14089336.html",
+    "https://www.newkerala.com/news/a/spacex-give-one-company-share-millions-american-children-294.htm",
+    "https://www.theverge.com/news/1042593/spacex-and-elon-musk-say-they-will-donate-shares-to-trump-accounts",
+    "https://www.idnfinancials.com/news/72326/musk-and-spacex-plan-to-give-u-s-children-two-shares-each",
+    "https://www.riverineherald.com.au/world/musk-pledges-two-spacex-shares-for-every-us-child/",
+    "https://www.republicworld.com/business/one-spacex-share-for-every-child-elon-musk-spacex-announce-stock-gift-for-millions-of-american-children-through-trump-accounts-2026-11-26-141899",
+    "https://www.independent.co.uk/tech/elon-musk-children-kids-spacex-shares-b3091931.html",
+    "https://www.aninews.in/news/business/spacex-to-give-one-company-share-to-millions-of-american-children-through-trump-accounts20261126105807/"
+   ],
+   "outlets": [
+    "aol.com",
+    "telegraphindia.com",
+    "deccanherald.com",
+    "moneycontrol.com",
+    "newkerala.com",
+    "theverge.com",
+    "idnfinancials.com",
+    "riverineherald.com.au",
+    "republicworld.com",
+    "independent.co.uk",
+    "aninews.in"
+   ],
+   "importance": 64.0,
+   "reason": "436 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 3,
+   "headline": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+   "summary": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips. Nvidia has halted some sales of its most advanced A.I. chips to four countries in Southeast Asia as the Trump administration intensifies efforts to cut Chinese companies off from American computing power. Data center operators in Malaysia, Singapore, Thailand and Indonesia have had orders put on hold, according to two people with knowledge o",
+   "urls": [
+    "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://www.thejakartapost.com/business/2026/11/26/nvidia-halts-chip-shipments-to-southeast-asia-reports",
+    "https://theedgemalaysia.com/node/827396",
+    "https://www.asiaone.com/singapore/nvidia-halts-server-shipments-singapore-and-others-report",
+    "https://www.freemalaysiatoday.com/category/highlight/2026/11/26/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports",
+    "https://www.cnbctv18.com/technology/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports-20041900.htm",
+    "https://www.firstpost.com/business/nvidia-chip-exports-southeast-asia-jensen-huang-ceo-dell-supermicro-14062710.html",
+    "https://www.ndtv.com/world-news/nvidia-halts-server-shipments-to-4-southeast-asian-countries-report-12380116",
+    "https://www.business-standard.com/world-news/nvidia-halts-shipments-of-ai-servers-to-four-southeast-asian-countries-126112601562_1.html",
+    "https://timesofindia.indiatimes.com/business/international-business/nvidia-halts-server-shipments-to-4-southeast-asian-countries-amid-chip-scandal-china-not-on-list-report/articleshow/136185184.cms",
+    "https://www.straitstimes.com/world/united-states/nvidia-halts-server-shipments-to-four-south-east-asian-countries-including-singapore-report"
+   ],
+   "outlets": [
+    "nytimes.com",
+    "thejakartapost.com",
+    "theedgemalaysia.com",
+    "asiaone.com",
+    "freemalaysiatoday.com",
+    "cnbctv18.com",
+    "firstpost.com",
+    "ndtv.com",
+    "business-standard.com",
+    "timesofindia.indiatimes.com",
+    "straitstimes.com"
+   ],
+   "importance": 60.0,
+   "reason": "406 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 4,
+   "headline": "Kim Jong Un Makes Rare Show Of Nuclear Warheads After Snubbing Trump Talks",
+   "summary": "Kim Jong Un accused Washington of approving South Korea's push to acquire a nuclear-powered submarine. North Korea also showed Kim inspecting what appeared to be a facility to enrich uranium for weapons. North Korean leader Kim Jong Un inspected atomic warheads and a plant making fissile material for bombs, pledging never to waver from his country's status as a nuclear-armed state after snubbing President Donald Trump's overtures for talks. In his most direct comments aimed at the US since Tru",
+   "urls": [
+    "https://www.ndtv.com/world-news/kim-jong-un-makes-rare-show-of-nuclear-warheads-after-snubbing-trump-talks-12379028",
+    "https://www.eagletribune.com/region/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/article_be57e31b-4dce-553c-8804-be200b67bd10.html",
+    "https://www.usnews.com/news/world/articles/2026-11-25/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture",
+    "https://triblive.com/news/world/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/",
+    "https://economictimes.indiatimes.com/news/international/world-news/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/articleshow/136178755.cms",
+    "https://www.dailymail.com/wires/ap/article-16323081/North-Koreas-Kim-vows-build-nuclear-weapons-ignoring-Trumps-overture.html",
+    "https://www.thehindubusinessline.com/news/world/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/article71745071.ece",
+    "https://www.yakimaherald.com/ap/international/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/article_7c0943b9-312a-509b-898e-8e76b13d8dc7.html",
+    "https://www.ksat.com/news/world/2026/11/26/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/",
+    "https://www.seattletimes.com/nation-world/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/",
+    "https://www.whas11.com/article/syndication/associatedpress/north-koreas-kim-vows-to-build-more-nuclear-weapons-after-ignoring-trumps-overture/616-080a0165-9ffd-4478-9aa4-36654836d21a"
+   ],
+   "outlets": [
+    "ndtv.com",
+    "eagletribune.com",
+    "usnews.com",
+    "triblive.com",
+    "economictimes.indiatimes.com",
+    "dailymail.com",
+    "thehindubusinessline.com",
+    "yakimaherald.com",
+    "ksat.com",
+    "seattletimes.com",
+    "whas11.com"
+   ],
+   "importance": 28.0,
+   "reason": "190 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 5,
+   "headline": "Mark Cuban Says Someone Else Could Take Your Job if You Don't Do This",
+   "summary": "Mark Cuban gave his own daughter some blunt career advice ahead of her college graduation. On the April 29, 2026 episode of the Big Technology Podcast, hosted by Alex Kantrowitz, Cuban laid out a theory about who wins and who loses in the AI job market. The advice applies whether you're looking for work-from-home jobs or building skills in your current role. His point wasn't that software is coming for every desk job. It's that the person sitting next to you who knows how to use AI tools well mi",
+   "urls": [
+    "https://www.aol.com/articles/mark-cuban-says-someone-else-123000000.html",
+    "https://www.analyticsinsight.net/podcast/why-ai-adoption-is-not-enough-nalin-agrawal-dynatrace-india-analytics-insight-podcast",
+    "https://itbrief.news/story/ai-innovation-only-matters-when-people-understand-how-to-use-it",
+    "https://www.computer.org/publications/tech-news/trends/enterprise-data-readiness-for-ai",
+    "https://www.miragenews.com/dislike-of-ai-doesnt-deter-its-influence-1784031/",
+    "https://www.colliers.com/en-gb/news/20261126-five-types-of-ai-companies-shaping-office-market",
+    "https://www.aninews.in/news/business/concierto-ai-is-now-live-sovereign-ai-for-every-employee-inside-the-enterprises-own-cloud-or-data-center20261126164734/",
+    "https://capitalfm.africa/kenyan-firms-risk-data-breaches-as-ai-adoption-outpaces-oversight/",
+    "https://thewillnews.com/10-common-misconceptions-about-artificial-intelligence-in-nigeria-and-africa/",
+    "https://tech-insider.org/ai-readiness-gap-enterprises-ready-tools-bought/",
+    "https://cstoredecisions.com/ai-trends-to-watch-in-2027/"
+   ],
+   "outlets": [
+    "aol.com",
+    "analyticsinsight.net",
+    "itbrief.news",
+    "computer.org",
+    "miragenews.com",
+    "colliers.com",
+    "aninews.in",
+    "capitalfm.africa",
+    "thewillnews.com",
+    "tech-insider.org",
+    "cstoredecisions.com"
+   ],
+   "importance": 16.0,
+   "reason": "110 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 6,
+   "headline": "Is Nvidia Stock a Buy After Dell's Record AI Backlog?",
+   "summary": "Dell Technologies (NYSE:DELL) has a record $132.3 billion in artificial intelligence (AI) server orders it hasn't shipped yet. The server maker reported that backlog with its fiscal third-quarter results after the market closed on Tuesday, Nov. 24. Three months before, the total was $95 billion. The report came after a tough day for Nvidia (NASDAQ:NVDA) shareholders. Nvidia's shares lost almost 6% on Nov. 24, giving back some of a 31% gain the day before, when the company said its board had rein",
+   "urls": [
+    "https://www.aol.com/articles/nvidia-stock-buy-dells-record-030702000.html",
+    "https://www.cambuy.tw/1941/dell-raises-revenue-forecast-to-202b-as-ai-server-sales-soar/",
+    "https://analyticsindiamag.com/ai-news/dell-lifts-fy27-outlook-for-third-time-as-ai-server-backlog-hits-132-billion",
+    "https://www.rte.ie/news/business/2026/1125/1600563-dell-quarterly-results/",
+    "https://money.usnews.com/investing/news/articles/2026-11-24/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand",
+    "https://www.billionaires.africa/2026/11/25/american-billionaire-michael-dells-dell-technologies-posts-record-54-94-billion-quarter-and-lifts-full-year-forecast-to-202-billion/",
+    "https://www.techrepublic.com/article/news-dell-ai-server-revenue-q3-fy27-backlog/",
+    "https://www.billionaires.africa/2026/11/25/american-billionaire-michael-dells-dell-posts-5-7-billion-third-quarter-profit/",
+    "https://www.vcpost.com/articles/131063/20261125/dell-posts-record-549-billion-quarter-revenue-doubles-ai-server-backlog-reaches-1323-billion.htm",
+    "https://www.tokenpost.com/news/business/62616",
+    "https://blockonomi.com/?p=220531"
+   ],
+   "outlets": [
+    "aol.com",
+    "cambuy.tw",
+    "analyticsindiamag.com",
+    "rte.ie",
+    "money.usnews.com",
+    "billionaires.africa",
+    "techrepublic.com",
+    "vcpost.com",
+    "tokenpost.com",
+    "blockonomi.com"
+   ],
+   "importance": 16.0,
+   "reason": "109 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 7,
+   "headline": "S&P Global warns Nvidia's credit rating could be downgraded over governance risks",
+   "summary": "* S&P Global Ratings put Nvidia on watch for a credit downgrade on Wednesday. * The ratings agency cited concerns regarding the chipmaker's corporate governance. * Analysts revealed plans to meet with Nvidia's board and management to discuss its concerns. The drama at Nvidia in recent weeks has landed it on the watchlist for a potential ratings downgrade by one of the major US credit rating agencies. As Nvidia stock tumbled again on Wednesday, S&P Global Ratings announced that the company's c",
+   "urls": [
+    "https://www.aol.com/articles/p-global-warns-nvidia-credit-205320000.html",
+    "https://www.businessinsider.com/nvidia-credit-rating-downgrade-spglobal-jensen-huang-nvda-2026-11",
+    "https://www.ibtimes.com/nvidia-credit-downgrade-governance-concerns-3810220",
+    "https://www.courant.com/2026/11/25/nvidia-at-risk-of-rating-cut-by-sp-over-governance-concerns/",
+    "https://www.bloomberg.com/news/articles/2026-11-25/s-p-says-it-may-downgrade-nvidia-s-ratings-on-governance-worries",
+    "https://www.cnbcafrica.com/2026/sp-warns-nvidia-credit-rating-could-be-cut-over-rising-management-and-governance-risk",
+    "https://africa.businessinsider.com/markets/sandp-global-warns-nvidias-credit-rating-could-be-downgraded-over-governance-risks/0zlgcxe",
+    "https://www.moneyweb.co.za/news-fast-news/nvidia-at-risk-of-rating-cut-by-sp-over-governance-concerns/",
+    "https://articles.thelocalreport.in/nvidia-faces-potential-credit-downgrade-as-sp-questions-board-independence/",
+    "https://southasiandaily.com/sp-places-nvidias-credit-rating-on-downgrade-watch-amid-corporate-governance-concerns/"
+   ],
+   "outlets": [
+    "aol.com",
+    "businessinsider.com",
+    "ibtimes.com",
+    "courant.com",
+    "bloomberg.com",
+    "cnbcafrica.com",
+    "africa.businessinsider.com",
+    "moneyweb.co.za",
+    "articles.thelocalreport.in",
+    "southasiandaily.com"
+   ],
+   "importance": 7.0,
+   "reason": "49 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 8,
+   "headline": "Alice Huang-Linked Firms Listed $270 Million In AI Servers In China: Report",
+   "summary": "Alice Huang formerly controlled Megaspeed, a major overseas buyer of Nvidia processors. Beijing: Companies linked to Alice Huang, the Chinese businesswoman whose affair with Nvidia CEO Jensen Huang triggered his short-lived exit, raised financing against powerful computing equipment for major AI data centres in China, previously unreported records reviewed by Reuters show. The central-bank documents identify up to 764 AI servers and modules valued at $270 million, along with $31 million in equ",
+   "urls": [
+    "https://www.ndtv.com/world-news/alice-huang-linked-firms-listed-270-million-in-ai-servers-in-china-report-12373872",
+    "https://www.investing.com/news/stock-market-news/exclusivealice-huanglinked-firms-listed-270-million-in-ai-servers-in-china-records-show-5049792",
+    "https://www.thestandard.com.hk/finance/article/349578/Alice-Huang-linked-firms-listed-US270-million-in-AI-servers-in-China-records-show",
+    "https://www.tbsnews.net/worldbiz/usa/alice-huang-linked-firms-listed-270m-ai-servers-china-records-1613421",
+    "https://www.straitstimes.com/asia/east-asia/alice-huang-linked-firms-listed-us270-million-in-ai-servers-in-china-records-show",
+    "https://www.asiaone.com/world/alice-huang-linked-firms-listed-349m-ai-servers-china-records-show",
+    "https://www.businesstimes.com.sg/startups-tech/technology/alice-huang-linked-firms-listed-us270-million-ai-servers-china-records-show",
+    "https://www.koreatimes.co.kr/world/20261125/alice-huang-linked-firms-listed-270-mil-in-ai-servers-in-china-records-show",
+    "https://www.cnbctv18.com/technology/alice-huang-linked-firms-listed-usd-270-million-in-ai-servers-in-china-20041085.htm",
+    "https://www.reuters.com/business/finance/alice-huang-linked-firms-listed-270-million-ai-servers-china-records-show-2026-11-25/"
+   ],
+   "outlets": [
+    "ndtv.com",
+    "investing.com",
+    "thestandard.com.hk",
+    "tbsnews.net",
+    "straitstimes.com",
+    "asiaone.com",
+    "businesstimes.com.sg",
+    "koreatimes.co.kr",
+    "cnbctv18.com",
+    "reuters.com"
+   ],
+   "importance": 6.0,
+   "reason": "42 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 9,
+   "headline": "Malaysia regulator seeks $146 million damages from Google over 'harmful' content",
+   "summary": "KUALA LUMPUR, Nov 25 (Reuters) - Malaysia's communications regulator said on Wednesday it has filed lawsuits against Alphabet's Google (GOOGL.O), opens new tab seeking a combined 600 million ringgit ($145.84 million) in damages, alleging it had failed to take adequate action against harmful content. The Malaysian Communications and Multimedia Commission said Google, a major investor in the country, had not taken adequate action to address content related to online gambling, scams and fraud on",
+   "urls": [
+    "https://www.reuters.com/legal/litigation/malaysia-regulator-files-lawsuits-against-google-seeking-146-million-over-2026-11-25/",
+    "https://www.channelnewsasia.com/business/malaysia-regulator-seeks-146-million-damages-google-over-harmful-content-6580801",
+    "https://www.timeslive.co.za/news/world/2026-11-25-malaysia-regulator-seeks-146m-damages-from-google-over-harmful-content/",
+    "https://www.channelnewsasia.com/asia/malaysia-communications-regulator-damages-google-harmful-content-6580801",
+    "http://www.daily-sun.com/world/911397/malaysia-regulator-seeks-146-million-damages-from-google-over-harmful-content",
+    "https://www.sunherald.com/news/business/article318245214.html",
+    "https://lufkindailynews.com/news_reuters/business/malaysia-regulator-seeks-146-million-damages-from-google-over-harmful-content/article_d683f9a1-f488-598c-9e85-6124dc850ffd.html",
+    "https://timesofindia.indiatimes.com/world/rest-of-world/malaysia-sues-google-over-harmful-content/articleshow/136176503.cms",
+    "https://www.channelnewsasia.com/business/malaysia-regulator-files-lawsuits-against-google-seeking-146-million-over-harmful-content-6580801",
+    "https://srnnews.com/malaysia-regulator-files-lawsuits-against-google-seeking-146-million-over-harmful-content/"
+   ],
+   "outlets": [
+    "reuters.com",
+    "channelnewsasia.com",
+    "timeslive.co.za",
+    "daily-sun.com",
+    "sunherald.com",
+    "lufkindailynews.com",
+    "timesofindia.indiatimes.com",
+    "srnnews.com"
+   ],
+   "importance": 6.0,
+   "reason": "40 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 10,
+   "headline": "Cabinet Approves Rs 1,491-Crore Push To Modernise Post Offices",
+   "summary": "It includes upgrades for 2,500 rented offices and renovation of 150 residential colonies. New Delhi: In a bid to transform and modernise the estates infrastructure of the Department of Posts, the Cabinet, chaired by Prime Minister Narendra Modi, on Wednesday approved the continuation of the 'Estates Management Scheme' with a total financial outlay of Rs 1,491 crore over a five-year period (FY 2026-27 to FY 2030-31). The scheme, according to an official statement, focuses heavily on the constru",
+   "urls": [
+    "https://www.ndtv.com/india-news/cabinet-approves-rs-1-491-crore-push-to-modernise-post-offices-12376506",
+    "https://www.bizzbuzz.news/industry/infra/cabinet-approves-scheme-to-transform-department-of-posts-with-rs-1491-crore-outlay-1417420",
+    "https://english.punjabkesari.com/india/cabinet-approves-scheme-to-transform-department-of-posts-with-rs-1491-crore-outlay/",
+    "https://www.newkerala.com/news/a/cabinet-approves-scheme-transform-department-posts-rs-1491-283.htm",
+    "https://www.freepressjournal.in/business/delivering-a-new-future-cabinet-clears-1491-crore-scheme-to-modernise-india-post",
+    "https://www.greaterkashmir.com/national/cabinet-approves-continuation-of-estates-management-scheme-for-department-of-posts-with-an-outlay-of-rs-1491-crore-12840618",
+    "https://zeenews.india.com/business/article-cabinet-approves-scheme-to-transform-department-of-posts-with-rs-1491-crore-outlay-3163050",
+    "https://telanganatoday.com/cabinet-approves-rs-1-491-crore-postal-scheme",
+    "https://bilkulonline.com/2026/11/25/cabinet-approves-scheme-to-transform-department-of-posts-with-rs-1491-crore-outlay/",
+    "https://www.thestatesman.com/india/cabinet-clears-rs-1491-crore-plan-to-modernise-india-posts-buildings-preserve-heritage-structures-1503666882.html"
+   ],
+   "outlets": [
+    "ndtv.com",
+    "bizzbuzz.news",
+    "english.punjabkesari.com",
+    "newkerala.com",
+    "freepressjournal.in",
+    "greaterkashmir.com",
+    "zeenews.india.com",
+    "telanganatoday.com",
+    "bilkulonline.com",
+    "thestatesman.com"
+   ],
+   "importance": 5.0,
+   "reason": "34 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 11,
+   "headline": "Assam to get two more advanced data centres as govt signs MoU with Bharti Airtel",
+   "summary": "The Assam government and Bharti Airtel Limited on Wednesday signed an agreement to set up two data centres in Jorhat and Silchar, involving a combined initial investment of \u20b9455 crore. The projects, with a proposed capacity of 25 MW, are expected to generate around 164 direct jobs, chief minister Himanta Biswa Sarma said. The memorandum of understanding (MoU) was signed by Nandita Dutta, commissioner and secretary of the department of information technology, and Priyanka Jain, circle head (com",
+   "urls": [
+    "https://www.hindustantimes.com/india-news/assam-to-get-two-more-advanced-data-centres-as-govt-signs-mou-with-bharti-airtel-101795618270148.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 5.0,
+   "reason": "33 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 12,
+   "headline": "Puerto Rico's Supreme Court cancels key power contract, many wonder what's next",
+   "summary": "San Juan (Puerto Rico), Nov 26 (AP) Puerto Rico's Supreme Court has narrowly ruled in favour of cancelling the government's contract with Luma Energy following a contentious legal fight with the private power company. The 5-4 ruling of more than 200 pages, made public on Wednesday, plunges the island into further uncertainty as many wonder who will take over from Luma while power outages persist across the US territory and crews continue to repair the grid razed by Hurricane Maria in 2017. Puer",
+   "urls": [
+    "https://www.news18.com/agency-feeds/puerto-ricos-supreme-court-cancels-key-power-contract-many-wonder-whats-next-10441144.html"
+   ],
+   "outlets": [
+    "news18.com"
+   ],
+   "importance": 4.0,
+   "reason": "28 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 13,
+   "headline": "Oyetola reveals what Apapa, Tin-Can ports modernisation will deliver for Nigerians",
+   "summary": "Minister of Marine and Blue Economy, Adegboyega Oyetola, has said the planned modernisation of Apapa and Tin-Can Island Ports in Lagos will tackle decades of infrastructure deficiencies, ageing facilities and operational challenges while improving efficiency and vessel turnaround time. Oyetola disclosed this in a statement issued by his spokesperson, Bolaji Akinola, on Monday, ahead of the official commencement of the project scheduled for Wednesday in Lagos. The Minister described the initiati",
+   "urls": [
+    "https://dailypost.ng/2026/11/16/oyetola-reveals-what-apapa-tin-can-ports-modernisation-will-deliver-for-nigerians/"
+   ],
+   "outlets": [
+    "dailypost.ng"
+   ],
+   "importance": 4.0,
+   "reason": "26 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 14,
+   "headline": "German President Steinmeier to visit Kenya on November, to hold talks with Ruto",
+   "summary": "Steinmeier's programme will include engagements in healthcare, digital services, skills development, arts and culture, nature and biodiversity conservation German Federal President Frank-Walter Steinmeier is expected in Kenya on November 25-26 for a two-day official visit that will include bilateral talks with President William Ruto at State House. The visit is part of a five-day African tour that will also take him to C\u00f4te d'Ivoire and Ghana. \"Germany's Federal President Frank-Walter Steinme",
+   "urls": [
+    "https://www.the-star.co.ke/news/2026-11-21-german-president-steinmeier-to-visit-kenya-next-week"
+   ],
+   "outlets": [
+    "the-star.co.ke"
+   ],
+   "importance": 4.0,
+   "reason": "24 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 15,
+   "headline": "Exclusive-US chip curbs, distillation crackdown threaten Chinese AI model development, sources say",
+   "summary": "Nov 26 (Reuters) - China's Z.AI has fallen behind schedule on its next flagship AI model, while rival Moonshot AI expects the interval between major releases could double from six months to a year or longer if it loses access to overseas computing power, people familiar with the matter said. The previously unreported details show how efforts by US AI companies OpenAI and Anthropic to prevent distillation, a technique in which developers train models using answers generated by more capable ones,",
+   "urls": [
+    "https://ca.finance.yahoo.com/news/exclusive-us-chip-curbs-distillation-071923402.html"
+   ],
+   "outlets": [
+    "ca.finance.yahoo.com"
+   ],
+   "importance": 3.0,
+   "reason": "22 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 16,
+   "headline": "China Courts Global South With Energy Security and Clean Tech",
+   "summary": "China is leveraging its dominance in clean technologies to expand partnerships with developing countries, promising to help them not only decarbonize but also strengthen energy security and economic development. That was the message from Thursday's Belt and Road energy meeting in Qingdao, which brought together ministers and officials from dozens of nations involved in the Chinese global infrastructure and investment program. China stands ready to work with other countries to bolster their energ",
+   "urls": [
+    "https://www.bloomberg.com/news/articles/2026-11-26/china-courts-global-south-with-energy-security-and-clean-tech"
+   ],
+   "outlets": [
+    "bloomberg.com"
+   ],
+   "importance": 3.0,
+   "reason": "22 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 17,
+   "headline": "PM-SETU: Only 15 of 205 ITI clusters clear investment-plan stage in 18 months",
+   "summary": "Eighteen months after the Union Cabinet approved the \u20b960,000-crore PM-SETU (Pradhan Mantri Skilling and Employability Transformation through Upgraded ITIs) to modernise the country's Industrial Training Institutes (ITIs), only 15 of the 205 identified clusters have secured approval for their strategic investment plans, while just one state, Rajasthan, has incorporated the special purpose vehicle (SPV) for its Bhiwadi cluster, a key step towards managing the upgraded institutes, according to doc",
+   "urls": [
+    "https://www.hindustantimes.com/india-news/pmsetu-only-15-of-205-iti-clusters-clear-investment-plan-stage-in-18-months-101795583147978.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 3.0,
+   "reason": "21 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 18,
+   "headline": "Broadcom Stock Hasn't Traded This Low Since July 2025. I Think It's a Buy.",
+   "summary": "Broadcom (NASDAQ:AVGO) stock fell about 5% on Wednesday to under $290 as I write, on a day when chip stocks sold off broadly. The slide took the chipmaker to its lowest point since July 2025, even below the $291.53 close it hit on Nov. 5. Shares are now about 40% under June 2's record close of $481.57. The business is going the other way. Management's September guidance was for 93% year-over-year revenue growth in its fiscal fourth quarter of 2026 (the period that ended Nov. 1, 2026). That would",
+   "urls": [
+    "https://www.aol.com/articles/broadcom-stock-hasnt-traded-low-010302000.html"
+   ],
+   "outlets": [
+    "aol.com"
+   ],
+   "importance": 3.0,
+   "reason": "21 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 19,
+   "headline": "Billions In Data Centre Deals Grind To Halt After Chip Curbs",
+   "summary": "Over a dozen bankers said their teams were waiting for answers on how new curbs would affect borrowers Lenders have hit the brakes on billions of dollars in loans tied to Chinese firms ByteDance, Alibaba and Tencent, as new US curbs on chip access threaten to upend Asia's burgeoning AI debt financing market. While Jensen Huang's surprise return to Nvidia Corp. buoyed AI stocks briefly earlier this week, bankers remained concerned about the legal risks of financing data centers and neoclouds pot",
+   "urls": [
+    "https://www.ndtv.com/world-news/billions-in-data-centre-deals-grind-to-halt-after-chip-curbs-12378668"
+   ],
+   "outlets": [
+    "ndtv.com"
+   ],
+   "importance": 3.0,
+   "reason": "18 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 20,
+   "headline": "Japan's data centre boom faces growing revolt from urban residents",
+   "summary": "Until a few years ago, Susumu Goto's house in Kashiwa, northeast of Tokyo, looked out on a grassy field where neighbours played baseball and soccer. Today, a couple of 31-metre-tall (102-foot) data centres owned by Hong Kong-based asset manager PAG loom in front of it. At least once a month, tests of backup generators send black fumes into the sky and the smell of burning fuel hangs in the air. \"Every morning when I step outside, my whole view is swallowed up by the buildings,\" said the reti",
+   "urls": [
+    "https://www.thehindu.com/sci-tech/technology/japans-data-centre-boom-faces-growing-revolt-from-urban-residents/article71745111.ece"
+   ],
+   "outlets": [
+    "thehindu.com"
+   ],
+   "importance": 3.0,
+   "reason": "17 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 21,
+   "headline": "Karnataka plans India's first sustainable data centre at Mangaluru's Tannirbhavi: Priyank Kharge",
+   "summary": "Karnataka plans to set up what it says will be India's first sustainable data centre at Tannirbhavi in Mangaluru, with the proposed 20-acre coastal site to undergo technical and environmental assessments before being presented to potential investors, minister Priyank Kharge said on Wednesday. The proposed facility is part of a 49-acre land parcel at Tannirbhavi, of which about 20 acres are available for permanent construction under Coastal Regulation Zone (CRZ) rules, officials told Kharge durin",
+   "urls": [
+    "https://www.hindustantimes.com/india-news/karnataka-plans-india-s-first-sustainable-data-centre-at-mangaluru-s-tannirbhavi-priyank-kharge-101795614128476.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 3.0,
+   "reason": "17 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 22,
+   "headline": "India under-investing on net-zero ambitions, needs to invest $500bn a year: Report",
+   "summary": "\"The country is investing only about $135 billion per year on such initiatives as against the requirement to put more than $500 billion,\" the report by BCG and industry body IVCA said \"India needs to significantly increase its annual investments on climate change and sustainability initiatives in order to achieve the net-zero ambition by 2070,\" a report said on Thursday (November 26, 2026). \"The country is investing only about $135 billion per year on such initiatives as against the requirement",
+   "urls": [
+    "https://www.thehindu.com/news/national/india-under-investing-on-net-zero-ambitions-needs-to-invest-500bn-a-year-report/article71747032.ece"
+   ],
+   "outlets": [
+    "thehindu.com"
+   ],
+   "importance": 3.0,
+   "reason": "17 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 23,
+   "headline": "\"Calamitous Guide\" Sends Ambarella Crashing",
+   "summary": "Signs of a broadening memory crunch emerged Wednesday morning as Ambarella shares plunged up to 36% in premarket trading. The semiconductor company forecast fourth-quarter revenue roughly 35% below the Bloomberg Consensus estimate after Tuesday's close, prompting analysts to warn that rising memory costs and supply shortages are severely squeezing customer demand. Ambarella, which designs AI and video-processing chips that help cameras, vehicles, and robots capture images and interpret their sur",
+   "urls": [
+    "https://www.zerohedge.com/markets/calamitous-guide-sends-ambarella-crashing"
+   ],
+   "outlets": [
+    "zerohedge.com"
+   ],
+   "importance": 2.0,
+   "reason": "16 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 24,
+   "headline": "US data centre boom to drive power, natural gas demand through 2028: Goldman Sachs",
+   "summary": "Goldman Sachs forecasts a sharp rise in US data-centre capacity, with an additional 52 GW expected by 2028, driven by growing AI infrastructure demand. This expansion could increase electricity consumption, tighten power markets and boost natural gas prices. However, tighter regulations following midterm election results may moderate future data-centre development. Goldman Sachs expects strong growth in US data-centre capacity to continue through 2028, posing upside risks to electricity and natu",
+   "urls": [
+    "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-data-centre-boom-to-drive-power-natural-gas-demand-through-2028-goldman-sachs/articleshow/136147594.cms"
+   ],
+   "outlets": [
+    "economictimes.indiatimes.com"
+   ],
+   "importance": 2.0,
+   "reason": "15 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 25,
+   "headline": "Nvidia chip sellers warn neoclouds against renting AI computing capacity to Chinese companies",
+   "summary": "Companies that sell Nvidia's advanced artificial intelligence (AI) chips have warned neocloud companies that they will not be able to buy these chips if any part of their computing capacity is rented out to Chinese companies. Sources familiar with the matter told CNBC. This means neocloud companies could lose access to Nvidia chips if they allow Chinese businesses to use their computing power, even if their data centres are located outside China. The warning comes after the Trump administration",
+   "urls": [
+    "https://www.hindustantimes.com/world-news/us-news/nvidia-chip-sellers-warn-neoclouds-against-renting-ai-computing-capacity-to-chinese-companies-101795709714486.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 2.0,
+   "reason": "15 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 26,
+   "headline": "Hindustan Zinc, IIT-M develop zinc-air battery for electric 3-wheelers",
+   "summary": "Jaipur, Nov 26 (PTI) Hindustan Zinc and IIT Madras have developed an electric three-wheeler prototype equipped with a zinc-air battery designed to supplement its lithium-ion pack and potentially extend driving range. The prototype, unveiled recently, uses an approximately 1 kWh zinc-air battery that supplies nearly 10 per cent of the vehicle's total energy requirements, Hindustan Zinc said on Thursday. The lithium-ion battery provides power for acceleration and other high-demand operations, and",
+   "urls": [
+    "https://www.news18.com/agency-feeds/hindustan-zinc-iit-m-develop-zinc-air-battery-for-electric-3-wheelers-10442060.html"
+   ],
+   "outlets": [
+    "news18.com"
+   ],
+   "importance": 2.0,
+   "reason": "14 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 27,
+   "headline": "Data centre rush drives biggest rise in Australian business investment since mining boom",
+   "summary": "SYDNEY, Nov 26 (Reuters) - Australian business investment surged anew in the September quarter as firms poured money into data centres, recording its biggest rise since 2011 at the height of the mining boom, while companies further upgraded spending plans for coming months. The strong numbers on Thursday suggested some resilience in the Australian economy even as five interest rate hikes this year triggered the biggest housing downturn in 40 years, hit consumer spending and weakened the labour m",
+   "urls": [
+    "https://www.reuters.com/world/asia-pacific/data-centre-rush-drives-biggest-rise-australian-business-investment-since-mining-2026-11-26/"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 2.0,
+   "reason": "14 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 28,
+   "headline": "Guj panel calls on CM Yogi; extends invitation for summit",
+   "summary": "A high-level delegation from the Gujarat government met with the chief minister Yogi Adityanath on Wednesday, to further deepen the partnership between Gujarat and Uttar Pradesh. The delegation extended an invitation to him to participate in the Vibrant Gujarat Global Summit (VGGS) 2027. The delegation was led by Gujarat's minister for food, civil supplies, and consumer affairs, Ramanbhai Solanki. It included secretary Alok Kumar Pandey, MSME commissioner Kshipra Agre, and other senior officials",
+   "urls": [
+    "https://www.hindustantimes.com/cities/lucknow-news/guj-panel-calls-on-cm-yogi-extends-invitation-for-summit-101795621448460.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 2.0,
+   "reason": "13 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 29,
+   "headline": "Ruto: Kenyans working in Germany rise to 9,500",
+   "summary": "The number of Kenyans employed in Germany rose to 9,500 in March 2026 from 7,000 two years earlier, President William Ruto has announced. Ruto attributed the increase to growing employment opportunities under the Comprehensive Migration and Mobility Partnership Agreement (CMMPA) between Kenya and Germany, which seeks to create pathways for skilled workers and trainees. He also revealed that the number of Kenyan trainees contributing to Germany's social security system increased from 820 in Marc",
+   "urls": [
+    "https://www.standardmedia.co.ke/national/article/2001563010/ruto-kenyans-working-in-germany-rise-to-9500"
+   ],
+   "outlets": [
+    "standardmedia.co.ke"
+   ],
+   "importance": 2.0,
+   "reason": "13 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 30,
+   "headline": "India's Semiconductor Market Set To Double To $110 Billion By 2030: Report",
+   "summary": "India's semiconductor market could reach $110 billion by 2030, with networking, communications and computing leading the industry's growth. India's semiconductor industry is poised for a major transformation over the next four years, with networking and communications expected to become its biggest revenue-generating segment by 2030. According to a report by CareEdge Advisory, the country's semiconductor demand is moving beyond conventional consumer electronics, with connectivity, computing and",
+   "urls": [
+    "https://www.timesnownews.com/business-economy/industry/indias-semiconductor-market-set-to-double-to-110-billion-by-2030-report-article-156570199"
+   ],
+   "outlets": [
+    "timesnownews.com"
+   ],
+   "importance": 2.0,
+   "reason": "12 articles in the event cluster"
+  }
+ ],
+ "wall_s": 11.7,
+ "peak_rss_mb": 56.9,
+ "cost_usd": null,
+ "searches": null,
+ "notes": {
+  "meta": {
+   "provider": "eventregistry",
+   "beat": "energy",
+   "window": [
+    "2026-11-25T19:59:19.305863+00:00",
+    "2026-11-26T19:59:19.305863+00:00"
+   ],
+   "date_range": [
+    "2026-11-25",
+    "2026-11-26"
+   ],
+   "hindsight": false,
+   "params": {
+    "concepts": [
+     "http://en.wikipedia.org/wiki/Renewable_energy",
+     "http://en.wikipedia.org/wiki/Solar_power",
+     "http://en.wikipedia.org/wiki/Wind_power",
+     "http://en.wikipedia.org/wiki/Nuclear_power",
+     "http://en.wikipedia.org/wiki/Electrical_grid",
+     "http://en.wikipedia.org/wiki/Data_center",
+     "http://en.wikipedia.org/wiki/Battery_energy_storage_system"
+    ],
+    "ignore_keywords": [
+     "oil price",
+     "crude"
+    ],
+    "lang": "eng",
+    "count": 30,
+    "top_articles": 10,
+    "top_articles_events": 10
+   }
+  },
+  "usage": {
+   "requests": 11,
+   "tokens": 15.0,
+   "tokens_source": "usage endpoint, 62 -> 107 over the 3 beats"
+  }
+ }
+}

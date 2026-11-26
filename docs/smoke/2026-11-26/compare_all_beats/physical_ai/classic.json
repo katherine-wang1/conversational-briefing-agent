@@ -1,0 +1,170 @@
+{
+ "arm": "classic",
+ "beat": "physical_ai",
+ "at": "2026-11-26T19:59:22.520711Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Genesis AI announces $500M Series A at $3.5B valuation",
+   "summary": "Genesis AI announced a $500M Series A round at a $3.5B valuation.",
+   "urls": [
+    "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 55.0,
+   "reason": "best rank 13; single source (robotics247)"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Rockwell Automation to acquire AGILOX",
+   "summary": "Rockwell Automation plans to acquire AGILOX, an autonomous mobile robot company.",
+   "urls": [
+    "https://robotics247.com/article/rockwell-automation-to-acquire-agilox"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 45.0,
+   "reason": "best rank 11; single source (robotics247)"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Humyn Labs raises $47M Series A for physical AI research and deployment",
+   "summary": "Physical AI research and deployment company Humyn Labs raised $47M in a Series A round.",
+   "urls": [
+    "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 42.0,
+   "reason": "best rank 12; single source (robotics247)"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Boston Dynamics expands GlobalFoundries partnership with Spot and Atlas robots",
+   "summary": "Boston Dynamics is expanding its GlobalFoundries partnership to deploy Spot and Atlas in semiconductor manufacturing.",
+   "urls": [
+    "https://robotics247.com/article/boston-dynamics-expands-globalfoundries-partnership-with-spot-and-atlas-in-semiconductor-manufacturing"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 40.0,
+   "reason": "best rank 6; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Dexory launches DexoryView Inspect warehouse safety and compliance module",
+   "summary": "Dexory launched DexoryView Inspect, a warehouse safety and compliance module for inspection workflows.",
+   "urls": [
+    "https://robotics247.com/article/dexory-launches-dexoryview-inspect-warehouse-safety-and-compliance-module"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "best rank 3; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "GM targets 20% increase in robotics and factory automation by 2028",
+   "summary": "General Motors targets a 20% increase in robotics and factory automation by 2028, per the headline.",
+   "urls": [
+    "https://robotics247.com/article/gm-targets-20-increase-in-robotics-and-factory-automation-by-2028"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "best rank 7; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "FlytBase launches Octane platform for autonomous drones in oil and gas",
+   "summary": "FlytBase launched its Octane platform for autonomous drone operations in oil and gas infrastructure.",
+   "urls": [
+    "https://robotics247.com/article/flytbase-launches-octane-platform-as-autonomous-drones-become-everyday-infrastructure-for-oil-and-gas"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 30.0,
+   "reason": "best rank 9; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "IntelliProve raises \u20ac2.7M for health sensing layer across cameras",
+   "summary": "IntelliProve raised \u20ac2.7M to build a health sensing layer for any camera, spanning virtual care and humanoid robots.",
+   "urls": [
+    "https://robotics247.com/article/intelliprove-raises-27m-to-build-health-sensing-layer-for-any-camera-from-virtual-care-to-humanoid-robots"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 28.0,
+   "reason": "best rank 10; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Miba deploys Flexxbotics platform for advanced manufacturing operations",
+   "summary": "Miba is deploying Flexxbotics software for next-generation advanced manufacturing and intelligent operations.",
+   "urls": [
+    "https://robotics247.com/article/miba-deploys-flexxbotics-for-next-gen-advanced-manufacturing-and-intelligent-operations"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 25.0,
+   "reason": "best rank 5; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Beckhoff Automation controls power Four Growers' robotic greenhouse harvesting",
+   "summary": "Beckhoff Automation controls are powering Four Growers' robotic greenhouse harvesting operations.",
+   "urls": [
+    "https://robotics247.com/article/beckhoff-automations-controls-power-four-growers-robotic-greenhouse-harvesting"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 22.0,
+   "reason": "best rank 8; single source (robotics247); frontpage_hits 1"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Kinco launches iWMC integrated servo wheel modules for mobile material handling",
+   "summary": "Kinco's iWMC integrated servo wheel modules are presented for mobile material handling applications.",
+   "urls": [
+    "https://robotics247.com/article/kinco-iwmc-integrated-servo-wheel-modules-for-mobile-material-handling"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 20.0,
+   "reason": "techmeme rank 2 not applicable; single source (robotics247); best rank 2"
+  }
+ ],
+ "wall_s": 15.6,
+ "peak_rss_mb": 358.2,
+ "cost_usd": 0.0029,
+ "searches": null,
+ "notes": {
+  "observations": 323
+ }
+}

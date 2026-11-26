@@ -6,9 +6,9 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from app.config.env_file import load_env_file
-from eval.newsroom_compare.arms import ARMS, collect, run_arm_inproc, run_arms
+from eval.newsroom_compare.arms import ARMS, collect, pack, run_arm_inproc, run_arms
 from eval.newsroom_compare.common import ROOT
-from eval.newsroom_compare.pool import build_pool, rate, report
+from eval.newsroom_compare.pool import build_pool, rate, report, summarize
 
 BEATS = ["ai", "energy", "physical_ai"]
 
@@ -36,10 +36,20 @@ def main() -> None:
     d = sub.add_parser("daily", help="collect + run all arms for today (for a scheduled job)")
     d.add_argument("--beat", action="append", choices=BEATS)
     d.add_argument("--arms", default="all")
+    d.add_argument("--pack", action="store_true", help="gzip observations and traces afterwards")
+
+    pk = sub.add_parser("pack", help="gzip a day's observations and traces (before committing)")
+    pk.add_argument("--day", default=today)
+    pk.add_argument("--beat", action="append", choices=BEATS)
 
     po = sub.add_parser("pool", help="build the blind rating pool")
     po.add_argument("--days", required=True, help="comma list of days")
     po.add_argument("--beat", action="append", choices=BEATS)
+
+    sm = sub.add_parser("summary", help="per-day tables without ratings (time, cost, overlap, outlets)")
+    sm.add_argument("--day", default=today)
+    sm.add_argument("--beat", action="append", choices=BEATS)
+    sm.add_argument("--depth", type=int, default=10)
 
     for name in ("rate", "report"):
         s = sub.add_parser(name)
@@ -58,11 +68,20 @@ def main() -> None:
         if a.cmd == "daily":
             for b in beats:
                 run_arms(b, day, arms)
+            if a.pack:
+                for b in beats:
+                    pack(day, b)
+            print(summarize(day, beats))
+    elif a.cmd == "pack":
+        for b in beats:
+            pack(a.day, b)
     elif a.cmd == "run":
         for b in beats:
             run_arms(b, a.day, arms)
     elif a.cmd == "run-arm":
         asyncio.run(run_arm_inproc(a.arm, a.beat, a.day))
+    elif a.cmd == "summary":
+        print(summarize(a.day, beats, a.depth))
     elif a.cmd == "pool":
         build_pool(a.days.split(","), beats)
     else:

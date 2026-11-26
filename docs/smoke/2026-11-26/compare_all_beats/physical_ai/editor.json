@@ -1,0 +1,476 @@
+{
+ "arm": "editor",
+ "beat": "physical_ai",
+ "at": "2026-11-26T19:59:22.520711Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor",
+   "rank": 1,
+   "headline": "XPeng unveils Turing Physical AI architecture (VLA 3.0) and IRON humanoid robot, targets January 2027 mass production",
+   "summary": "At XPeng AI Day, the company unveiled its Turing Physical AI architecture (VLA 3.0) and the IRON humanoid robot, targeting mass production from January 2027 and sales in 2027 at roughly EV pricing. Sources differ on timing details.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYzc5czVFNk1oOXh6NHhlUmxQeFUxTHFMNkxJbVVMRnU4TXNFS3VGSl9mQWlINkpCRDJKS3VfMTFtQ3VzUXJqaEMxajQ2MHBlaGVKU05LbmJBMm1HWlVkemxPMmZzdzlDUmx3Wl90THNYWjMzNEV0bVZTT3JBT2J5UTIzVHhNV3hBVTViU09odmlreU5aNm02TmtCZG1SbUFRenYyYzNubUNaWDlNcGFBQ3NjZXRFRWtORno5QkM3LXFxQWFFTkFlQnBLQzZ0bFYw?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE93VlNaN2NxU2VBRzctWWEzOWtua2JTa1NzOUh4YnVOZ0hrQ2JETjlwMExhanoyVWxNX0ZNYV9hU1l6YmhSVmJFNXE4ZmZaeC1kTm0xRVlwN2o2U3M?oc=5",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTE9wZ2VHNXUyc3g0SHNqazFSU1NMZXBxX2IweFhvMDIwUktQTjlTSTdiLW1ycnUtMjNvMWJqWUxyX0Z2eUJENW54aFpqX3ZMU3pyOS1IN1dpd0JiQUJRV21OYllvblJLYnNrRHNNS1VuN3RYdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZTlCUzl2dlUxWkk5bUwtRzl3aVp5Y0J2XzgzT3ktQzZpcXBXSl85czJIZjQyTWdzT2xiZEY5aFgtQlpZUTdpVVB4UmxQTlVic3NhUzJEODlPZC1wTGRha05FMk51blR5MThERndDYlhybVZ5VkFZNWRjSGxIbnJZbXVR?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPaUVSUF9HR1RZSkxQRk9IcUpQYVJEemJOdi0xNEdpZ0s5eURPeUJ5WXJLUlRlNVMwY2lwZ2k2SWhnTVlEZzVPYXpJOTJ2MUZHaGtCQVBEbFN6Z3lBSDdMam5kNVkxRUd6ODN5eFAyWHE1eE1jQWdvN256bU9qYUVPOHZUMEV3OGdKZUdPV2czSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOLWwxNVNJa3hkTmRNZjJ1RF9TY2FNQWVNU19BY0M2Q2p0ZDBKNXM1cjdmQkpMUzlCSTRsYktCUFFiUXd3UTNZcURKTlNPX2RmLWc1Nl9ob0ZJVEt5ZkF2bU11S2NKWEpJRnRQb0JMVnlhX28wZUtfaGFTeDM4cmlXenFOMVJuenRBcGdwbUFlWEg?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQekcwbU04bEx3SHhud2ZFVUJCbi1rZlRvcm00b2RFRHhZTE1pcVN2RFE0a0Y4cVV1dkZWOHVOcFE1U2Z1a3pmaTlFOS1pUVNwNzJKX3ZpRnZWVE5HMHNvbDdkSDYyckhhMENlMS1WaUhRRHlkNWJZTXduZzhzNzlYcVZiNWVUTm85RjF3SHNCS1A?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxNeDJsQW92aExZczl1V3FkSGItM2ZnVi12YjRmeFZvbnpORk0wX1hCWTUxNW1LelRycnVGT2IteWlieVFwQjZ3VU9YY2o0R2ZyQWpHbzhwb3J2WHhodkRlWDlmQkhOS2Y5TW94VkQ3bnBGSEQ2MUpZN1J2NExRTmVURmV2R3NGRTZSZmxCdEdxSkt4aTd4MEdMSA?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTXR0ZkFjTURyZVNwTmtkM28yTC1IbWwzLVlFdnZfcVVxVWhhdmktYU1sV0xBWG4wel9Jd0FlWC04bkNpOFFmU2Vzb3JVSUhlN0hsNVVsLWVGLXJOeVBSdHJvb3k2Mkg1YUgwOXZCVE02M1BQY0M3SlNhMG5RS3U2ZVU5UUpLLWZUdldMVXNVZV9mQ0lZc2xURmt1aGtyalE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNU2Q4MTg1dWVOZWxEM3VWS3dFakZTVlBzamJRMHdTTkJaUHUwVlRzeUZfRmFnN250NHVDTHRFNzZxWjRfTWctRDBTSEdzeS1rbF9yV2lKTlRUTERZcmRseHhCWXNNSDI1MzZuc2haLWJfWFZ2bC0xMm93bUNJbkE1WURBelpKbFhaTjlUWnBBTzJJRVAtSDBMLThzWWlTeTJWbVE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZDc0cWhDNy1XeXRaLWQtbUx4dWlOQk9LV1V1NUtkVXlnVU1IcHpRd0tVX1JtYm9oaTNBM1JKM0FjWk16R3FCZG1jaUpKVTR2ZmV5c1EydUtOcXBaa0E0MG5HaHFETGpXQTdXUEtKU2lObXc1eVZVNGtlTktSQVhBUVNVeF84OVFkcGFMcjhVQ3NpODNBNzBudUFnZmNxWnVMcnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNHc2TFhzOE1la2xDcHU5OGpaUjN2ZU1SeWJOUkd5dDFJcmZCZHE4OXlEMXJuVnJSNnIxaEQ5aWJaQk1XZ2FmZmVad2lFRGpxZS14eUpjOHpUWU1aNExFcXozYk5SWlQ5Z1RScjFqUjVwMWduazNqNzBlLXQzV3JQRFVoTk9LeVNHQWpnLUZQYXYxenBzc0NMZ0ZRb05GYUIyZlE?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeFVfd2RIbGZLZ2RieVg4WjhvbTE2MlRCbjhha0tFaGNpU3ZJZ0cyYlB4dnFEMC1LeEt3MFN5cUVaLUZJUTJBc3NpZUVYVWp3T3o0SWNyc1NudFd0MkVCQ3BVaGstcnEwT0lzMnh2M2RNUTVUUGt4UzU3bVppTW4yaDM3NkVjcjh2Rk0wcFRBTDFyT2tCU0M4cjlyMUs3UGs0Y0R2TVZoMXJLQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeFdwYmVXdjVPS0s0VF9sRGNicWlNWHQxemVUWEE3X3NtM2RHcXZ1NG1JS1E3MTNDMVZmVDFSdDFXX2l1ZjY4c096SlRaWS1BVUk5Q3dpcjIzMWstUERjdEhSenlfbXZhTXBDc2ZoWm1pTkNmcjNEQkZ6MjdaNzdYMzd5QmxYR19sWUU4YThZU0Z0T3l0cndKR0RBb1V4MWhpZUNGZFhqOUd0YmNEcG5kenI0bnVrcTA?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxOalBtbW9RaGNVN280b1RrbGg4N1Rzc3BqcGt0WnZlSGx2UWR4QUNTUnRkazdiUWR0LTM5emFsaElWTlZCaGpLaG9MU0xtbnE0Y3dWVGFvUmZkdmN2U1k1QTVvcFVmdjNsYzJNQXhNTmljUkNQR2pvTnZQbG5WOU1hM0w4V1NRRlhuU0FwUm12dUZ5a0dVLWJBSlZaZkZDbDU2VElGZXNDR3dVX1M2aVg1cGhEOGFaSjVWd1ROSXlR?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVWp6Rk45WXd0aFlJbGFkVTE2dEt4eWkwWjlORHpuYjBoM3RBdDRpNk1TWEFwaHJtWW10eGdWNG85b1NuS3MzMlhJZXhHOHQ3VE84WVNKRmRnYTlVWHZJcVVZTVNzQnpaaE44LVdMZUF4am9oVVhwWFotTmdIbHBCUERUQjdFN1ZQT3cyamUtUTNHeHBBZmx3bDh0YTAwYWdYaFFIM01ncjFVcHo3S3MtMTFsak5PUzFmay1BYjFZSmRKRG1CaUdLNQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 85.0,
+   "reason": "covered by Reuters-adjacent outlets, Bloomberg, Nikkei Asia, Xinhua, Digital Trends; multiple outlets carry it"
+  },
+  {
+   "arm": "editor",
+   "rank": 2,
+   "headline": "California DMV bars Waymo from freeways after safety incidents and recall",
+   "summary": "California's DMV ordered a ban on Waymo freeway driving citing safety incidents, after reports of lane incidents and a robotaxi recall covering 4,488 units. Waymo has halted freeway rides.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CRE1XVnFnWlBYaldncXdqRWI2YkEtNTVxOGtrOGk5bDRGLWw2aTdZRWg4UUZlZVYtaWliY1N5M09WM2d0Zl84T1JZOWlzZVd6V0hRbHN4dHVwX0hrcXJtcEVhRGkzODVCOGdyWU1yRkdfY1RoVEhpR1BONA?oc=5",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE1HeF9sb3c0V3hmYXlqZVY3ZFFwNThyMUduSERVN01lbWlnZzN4YTQ1MUQ3NXVBdWF3ZUhwZ1E5WTlRcGFhS292ck5ZcXViZkxnMTdVZ1NKYjhvdzVSREJRU2ZaOUdIRTZwdV9OYXV3XzhCNDlxdzZCdQ?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE9TbVZsWGkxZXZqUGs3OGk5dnNqbnVEeHJYSjlqV1hfd3NjbTlRZUNLaGwyUzZQMGNFejJvWWlQM3NBUVJlUGFhWUltRGVzSTcxRjM0TzMybWl5VUNfeklMNGVmeHRCLVNkcDByWFBXc3VKcUVWQXZIRkpZS3Z3cHc?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE12Yk1LZ3loNklNLS1PbUhXMjBuRllSTnlvd1lMdkF6cWFraS15WXEwLXdXcmlHaVRVaXZLaUctZW8yb3Bkc0RHcElXVjM5RnlFU0RraTNRVDhFbWdTckVkbWItZW1LM0ZpRmxOaU5waWMxOXpkWDBHWW1EUVl1dw?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE5MTF84ekpnYkhOd0VJOUNSNXJiZS1WODlMSUZ6Rk0zTmMtazgtY0NtYm5fZkhqUUNoRl9QZ2FnQXZDREZnQkFKTnVkN2ZiTEtGRVJFZTFnNjVoTnpsblhacGFOVUZLME1JTDVEYU9Ja2UtVm11c1puQkdxLXUtdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdXVzM0VJT3JNcV9HYmlERVMyUFhLcTU0VnZoODc5YWxwY2VOaXJNbTVOX0Z4N1ZqVFJUVmNTVWZrRU5tczJ6d05jaXNXVkowV0dSNmx1bTdxczNubDVROXRtY1o5cXdZMXRpU2ZlcGlUZXFsSUQ4ckFTVm40b21iTEp5TDlXU0VUcFZV0gGQAUFVX3lxTE5pbm9YZ21XUmZGLWJGc0Y2dVV1dXpPRVEzQmliUGRPdElVdjMyTVBCVXI1VHg0STZZXzVFRDZCUUdFSmFiLVJ2dVplQXpaTDFSVE9mTlFwR2wwMHlibVJBdVVqQW1QREhIMTNaRkFQWEpiRjhFemN5Mms4Um10MnVzQy1mM3VNZEtOazRJX0lEdQ?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSzdkX0NxeUI3dUxtd1psZGk4UG9vRkxMaEZUNXVkZTZfZ29DX3laaXMxVWhWNm80cGhINk55OHFsNjFFdDZJRWo2OF9vZDNmMC1HcVd5aVZaakxMQlcxQXhydDVGYVhyZGh4dHdnMy1la3Q5cF9TTDBXamZUSFZRMTFWN3hqRDJ0MHAwYjhiTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOajFYRWlGcTZpSVVhbktXZWlWYWJwT0VIWnlxTGVOZDBrWExXNFA0elJyYzg2b1JKeGxmTUhHTzNOTWdSdUswYXdZZXY4WjhXNHlZWkg5N0NnS25YLTlyMWFjS3Eyamd1bk94QzM3ZUtNbVRLYTZ5LVB2Wm1UWFdydmdGdkVCVnRnN1N3NWZ1Y1o?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZEVKMXprbklEYWtwOVpPWmEydFVkUVpSTWpJSWtEZjdYbnFpWTBkMjRWMFdJaHROaWJWTmRaV2w3ZlV1dUUzVnhNQXR0WU0talZBV081Q3ZFdUNrWDVpZjlUY0NrNkJtVGJxOTlYN3RPNUk4SzkwVjQyM2I1WWk5UC1XNXVLSWJXYmw0eHBqRG1DM0xabWN1cGQwTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOUlJ3MHQtMkNUR0JvSlhSQV9raUF6amx3T1JQUi1RUXVmcWhrTDF3SEtaaDFzRmxMb1lmYjBlUEFUbHJvV1dveFhJdWFydlMzYjBKVXAzNHItRUhobGl3UjcyS3czUVl3U2lHUnNtdS11emJnZFd2Z0Q4RkJRR2tlUHlwbkowZlZ4M1QwMFpscXo1dW1oNTd0c0NzYW5EQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQS2xTZVlYOV9oNmRUaUxyQVc1YUl1N3FRVC1fN0ZHR0pQejdzUU9pYjA1UHItY1FRZGMxeHA4eWtVMjlqWC0zdURpdk92WUFEZWhBLTVoODJiVXlOblNKVlZfbHNNdldQVllSTEpraGUxOGVrWTFSTG0xWnNNTWFHTnZSTERXWUloUUVLbGp4c1lGXzVMSzYxdk90RXhJNjZIcTlkVVJGbmlEZW8?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 82.0,
+   "reason": "covered by Mashable, SlashGear, Cryptopolitan, NeoTeo; regulatory action"
+  },
+  {
+   "arm": "editor",
+   "rank": 3,
+   "headline": "Nvidia forecasts more than $25 billion in physical AI revenue for fiscal 2027",
+   "summary": "Nvidia expects physical AI revenue to exceed $25 billion in fiscal 2027, with one report describing it as quadrupling. Sources frame the figure as a forecast.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8taENrWENmUmc0V2dTY1VXUkZRLXBaWVR2SHczNGZyM2FMUnh6WlpnODNDRUh6Tmdwc1dfamFWRTFfQmN0YzJlOWw2Mko5OFJQVWJvaEk4OFI?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE9rVFFLR28tMVREc2Jpckc3RUw5V1hCbXFlQU1ya09rM2lBdlhXTkRNb2ZEa0tITHdQRXQzYnZNdExVTUtPRWM5NThBNTJ2TE90MlBncHp6M1BUZXFIYmNtdHpjeWJKbWsxcTZQZWRrVFR5QWs?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIMHJLeF9pdkpqUTlBcDBQZlI1bHB4NDJtVGl6U0J5WU5ZTjc5R0tDelQybWNMeVJ3Z2o5ZkN6OWhEeS1wV2g0dTRRaVVPN281ODZrejRINENSUXlXRk9OT3pUSHU0cEU0Vkg5dEJYWnhWOXRZa3VTQXNzYw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 80.0,
+   "reason": "covered by tokenpost, Crypto Briefing, Pluang; financial forecast from company"
+  },
+  {
+   "arm": "editor",
+   "rank": 4,
+   "headline": "EU delays vote on Tesla's self-driving (FSD) approval to December 15",
+   "summary": "The EU postponed the discussion on approving Tesla's assisted self-driving system to December 15, pushing back plans for a Europe-wide launch.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE1sMFBWNUEzTlh6OC1lQ3cxaG1ZN1ExMDZzUjlqeFBERmlONDlPd25MbmZlbU9GanYyVlZHXzMyR3hGa2RscVREUlh5Y296dDFOVXEtbVRMUG9KUXdLZFc0N0t4R2Z4TVpWUDYyTDFOWVZkeU0?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE04eXJoNXZlM3ZCamFROGV4ZnJzZDVrcU1BczZSUmtEaHpKLTJwOWVpd1NoY3B4UVFxWk1ZUVVJZEVGSnIzNEt1dmZLQWtHTk5MajNrbXpvX1J4ck9heVpzbTRJNEpCUGZQbWJEY05VVk44dWRhcDVKOUR2dm9DaDA?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOT2F5UzFrakxEbmlpVklNNWJ1dGRfZlVDcGcwd3hxWkw1MDdhaGRtQ21VclJJSXJSZEZTRHUxVm5qZHpuaGlmdFdzUkNiS2g4THVGbFYzY3ZlRUdxTUYxX0N5alpwMkxmQ0lGLWFBT2oydFhkNFlhLU1IU0toS3pnQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeFFSYmlzTEp0Z3ZpZTh6blFveFBKczZOY2JXYTdjLXpRaVFtelJRejJ6eUhGZG9nMl9td0t3Z2ZXX1dScnlEWXJvdjZTRTNobHJraThTeHIxUWR4Ykd5QzNWdlZNX3NmNnVoNDRueXlsWk5HaGJ1cDBLQTlKS0NuNndTMFU3SVJQXzJRRjFoblFLcDJ2ckE?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNWElQRXIxVDJCT3VDZTV5RktDdHJzVVFtWGNRUDF3X0p3QjhXcTRyYl9tUW1fWS01NWp6bGZObGF1VFRUcUllYzRzTWlrN1lGZXBEeXJCeEFNUnY3dXNlMmJKaFpSUXp0R0JiREY3YThKTDd4ZURVVmRacjBqSm5Wb2hnc181TDNiSTBPVHQ4SVhHUUw3VlNMMkI4em5QQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYXExQlktb2I5OXJWMzA2WVhLd3FJeWdyd2R4UDhzckEwVFpHVU5BWFBnYll5LUpqYkttUWVQRnB0bFlCRVNqS1pkNmZxS0h1OHcySFMwdmg1NGJVRnZjenk2MmExa0xmQWhMajVyRTZNSlUxOEFsbVZNZUprTzhLakJfeFl5anVKcllHS2lma1pIR0M1S0FVem9wSG01ZHZXVlV1WkJR?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYk9lYWplZVhTSUtMaDU4SmNFRGh0X1g2TXI2d0RkcWpWUW55Um9qcHFxTG9Cb1ZwVWF6NFhIQUhUR2dndVpqa3NyQmdOWnN6bElkYm0yV3B6QVBicllhT2hVQlBGaDdOU1g2TmhTaUNYcm1OZjdLSUlTbzEyNjY1TTE0NkVUUGZDbzh2VEc2TW9ONXYtdi1TbG9LbHdWSGljbktHNG9zek80anZoZmNKbGV5NV9wYWkyNGp3X01HY292eWlvVi13?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRFh5ZnczeG5oemlkLUdvT2psRzBKcTZlem8yZWRsRGc1bG5SdllSbGo1TlVXNzI1U3plczJ5NmNSV1NLXzBSOUp3Rm1UNWZEZW1CcVM5YzVBLVlVZU9ZZk9xcTBiNE5YOU42aGItSWNxWVhCcFI4SzhnMkk4b3RoYXR5UmZzeVlLUF9jZ2V4Ukg3Wm0zSGZmYVZwY0p4aGVOaXRiQ0RXRUdCckp1VW9ITkVQTkR2U1BxZU9XUGpfbm9WeEd5SWFoWTdFa27SAdIBQVVfeXFMT0Zsbi1uZHZCanpTbnJRNEI3dGdMdXprM2JnOEZfUzBmZmZHSTZ6UmNBZnRGekd3X2s1OGJ0R2ZZbDJMU1ltUl9aaEhLN3ozX0hkbkxOMVpDY0FmVjlzUnpwTERIQzZqU19zTFJBc0UzcU41LXo0anRKYkhUS0FwWjREdGRZMncwUEFFbGdRc09qd0JBODBSTU5qZ1BhWWV4WlJhRVRhVjdYbTFqQkItY040RUh4R2ZBNDRlTE00YVJrTFBQbFhNSEJPc3ZlajZoREx3?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 78.0,
+   "reason": "covered by Cyprus Mail, Cryptopolitan, Hiru News; regulatory"
+  },
+  {
+   "arm": "editor",
+   "rank": 5,
+   "headline": "Volvo Cars begins training Hexagon humanoid robots for factory work",
+   "summary": "Volvo Cars is training Hexagon AEON humanoid robots at its Belgium plant, with production use from mid-2027.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE9oWjgwR3VhLUdIMy11bFhtamc3Sk5aNVFEcDZmOWhaS0JObmF5Q21XZWRUbVhWNnlHNWN6cGVScU1yVFFqNVJ6VnpoS3IySDVocm5Zam40bDgxNmJGaE9Tajd2LTRRRkliNHVld1J6RDM3bzNnLWRPVzY2d1dXdw?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM1lFaTRVdmlhT3ljSlh1bk44ZnhMcGJFeTVjUXhRYzdVT3ZlZU0tb1lub1l2NkMydkdQcElUbWZxdG13NWhnVVlxWTlYWTQteEk0aHZwX3RST0dycEJLMHdnTVRVZ2FlczdpUEF5ZVlhRm5qbzdzUUZzSnBWUUh1SXBtdTA5d2I0aDFKRW1RbzJPVXVQOWFFUDBkWm4?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNFRMOWVOcW83aUlLVy1hZlFHRDNyR09pT1FIem9KOEM1VzE0Nmxtam9OVGlzUEp0dWFEMEZBcC1Jc0RfT1hiWmJUVlZFR0xDNGtTS196TWRJQ0VuV2FTT1MxN2xOa0p2amFBU3hzUkNMVzlHQnRKbWNXRVI3LUxTQnNfMFJYTlZUZ0hsNGRrOEZOY0pWS3g4VGk3YnA3MXlpS0RIdnlScE4?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZnFaYTZEVms0R0wzMUdtVWpHX0NudXlKTTRDcjBCSzcweDZyZEo2dklLVFdBMnJkT1RFR25uN0JCdHJiUWpnSnBnUlU4UkNiLTFZSUdkVGQyaDlDWDV5YTBMaWhpSHUtMC00MURIdTFEaFNPc0RWVkF6UUVnRGVPdkR5TWJhdk1EZ2RjUUVzX1RRS3pMTXYxcUFlN3VQMVRWcEM0ZnhaWTJYQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPRDNCZ0VGMmtodXJGa1dGamNnUWxpekpYRkdzeENHNzFLXzRDaVNTeHNJNjZDNkduUEF3eFlROEFyZG5TdFJiZzNfS01XM0JEY3ZheGpJNXdlc2dJZ05YWm04X2dHVzdwamRnbl9iSG5yUEpJbFNySHJicVJTVEpFVDNFNnlHWDVULU85LUtxeHBNZkY4blNLR2xJdGJYME1pN2tQeVk1WHdGeGZYdkxLZlpjVXlzVDA?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTjhqeVhIUlpYUzFMRmoxWHNUSUgwMllUcWZLVTBiWDE2TjNtTWoxUFFWMWpYR0QwQ2h4RmczS0pkYk01T3FvNERrc1loOEQzeVhwSVdTZGU0T0t5N1BMTnZZemd3YTgzcEFLLWUySURqb0NPc2NkVFI1ZnJLZUJCVmxDSnFLOXhEM3hrc3o0VjZwaWZPcWRlemlRVkI2X2RwLWVPU1d2b2l2TEdFdURTcjZxSm8zLUxEOG9FbG1XMENPZw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "covered by Automotive News, Cision, MLQ.ai"
+  },
+  {
+   "arm": "editor",
+   "rank": 6,
+   "headline": "Tesla releases FSD v15 update removing a feature, and Europe expansion faces test",
+   "summary": "Tesla's v15 Full Self-Driving update removes a feature, while its Europe expansion faces a regulatory test.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMjdKT085LWh5N0hycmg1cDlaTjh2Zkh3bjBYRjVoWXUxS0E4NnNvSDh2aTV4Q2lWdEVWbzNXUFliTEpTNWVpd2NDSTN5a2xfM1hZd1NmOVpkWGNRRlhQMnJ3RDM0WEZtemRlbFpjZHhUTGpkcmZjY2FRY1BXZG9Ccg?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxONEVXeVUyU1NHX2h0bkpnenNVRlhEMFlLNU9MekZFTjZBcjR5ZFFxTlJnQUxLNzJxdWt2aHhueVc4dmRfa1dGTXR4dWI2b0N3T2tsSUZGanN3Z0hSN0FMVEV1bjZWcy04SW5fNVh6aUF6a1M1dHQ4b25EbjNMT0E0N0lVYWthN1I3OWRkN3JtLUg5YnRQd3FvS00wbWIxbmFu?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX0dpYmlyemx3Q0Fya0tXdUx1OFBjcDQ2UTlqX3k0NHB3SlBQbnczNVZaVnpybGpNamRFOFo0UV9KeEdpSkVEMnEtQ1UyOHE5ZUROdVhQRzIyTTBNOUZlVWlQSlE4U0QyeXQ0a1BYRl9pMUdmX29WUmNfT21fLTlaYkU5bFFGZFRiclQ4WUxYcmZ3QmFXMGhlUlRqOHg5RTNEVnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdDRRcWRMdE5xVXV3U0hqVG92Y2w5bUlWSUJjTGdGek5JU2pzY1duVnZrMDRsVjRiOHFtVXFGSUQzVTBsQ1BHaUlTZzUzYWFVNms2ajRmSE95Sy15aTBvSXI0NTByTTNESFBoQ25acGV6ZlZRZzhKZVpSR0R4TzhUTnMxWXZyeVlFdDdXXzlCV0lCOTdjeF9rSGZPdzlaa0xfalVj?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "multiple trade and finance outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 7,
+   "headline": "ROBOTERA deploys 45 humanoid robots at China Post's Hangzhou hub",
+   "summary": "ROBOTERA put 45 M7 humanoid robots into fleet operations at China Post in Hangzhou.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOelI4ZEFpNGdWS0Y5LU4zMlVYYlJ3aVlnZUN3QlhxT0dqd2lZT3c1dk9JOXk2aElyWnJ3Y2pjWnd2T05DVmpxWDRuUnI5bjZfS3JYdTJ6ZWU4YjlWTldCdkhBQ2p1VDVHSkx4Z0x0WHRYRTNKS0VSZzExbVh3T2dVLVNxR2t2Vk5TU2tBM1VUc2xrU0t6eDBiUi1OeEZydlVKVlA5Zm5SVklNblpibGxSRWppNl9mbF9sMlRHNzF4UXNxVTM4cmM4R0hXQlJJYnFRM1E?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUnY2b2QtVlR5SWpBbGc3SVR3c1pobTlpTDZiSklWZGdLVWpnY1BFMDJweEVkMUJJRjBqeHBxeUxudFdOQVRoRU96S3N3Wng1aVMxT1NYXzJsTkRVbllnTVFyZm95Ry1ud3BGWnVWZnlpWU02RnZlMDFFenM0NmozVnV4Vy1abmphM05KZENR?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbExxMDBXT3JtdmYwOTZ3SEhFdXVTM3g4dTVJZ3hlTWFUVTQtWW5JOXZtVmNKd1kzaW9MZU51Qm9VbzZRcnBLWkNnalAyb25Cd3JBSk1uUFU2MDNRcHZYU3kxMjd6SDA0bWdVN3l0bENEaDNTLU94RmhzRkRsbThnc0FEZkpqd3cxSjc5bTl0anF1MFd1TkhTamx2eGV3aDBXR29IR0J0SEJmdnkycHMwc0tjN2xHX3k3MjQ1UzZxdmlCSXhHRE83NA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "covered by Unite.AI, PR Newswire, Gasgoo"
+  },
+  {
+   "arm": "editor",
+   "rank": 8,
+   "headline": "Jensen Huang reinstated as Nvidia president, CEO and board member",
+   "summary": "Reports say Nvidia's Jensen Huang returned to his roles; Vance said he was not under investigation before returning.",
+   "urls": [
+    "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member",
+    "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBuNHFNMms2X24wSEJKOU1fbGoxV01VQ1JEVXFjRHdSTGdueGdJSWV4bnhwRFBQeWVFWGY1cTZCNkI3YzJMY3RyTHpENTI1TjRvQmY4YnhuRTI4ZUJWaEVwQm9WYmRBdU0?oc=5"
+   ],
+   "outlets": [
+    "robotics247.com",
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Reuters coverage"
+  },
+  {
+   "arm": "editor",
+   "rank": 9,
+   "headline": "Lucid and Uber begin driverless robotaxi tests in California",
+   "summary": "Uber began fully driverless robotaxi testing in the Bay Area with Lucid Gravity vehicles, a step toward commercial launch.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUmtJemZiczRqem9ldGZxQ043LWltandzTFlQY2d0bnBNMGs3SmQ3ZFg2bGR5QkFIbXZmanppbzhicVZyeDhwVGJTQ05wUWJ3d0dxUHc5dmRSdDIxUHZFZC1mNlYweGttNU45VmhEaTc2SVdfVm1PaFlNTUJveDZQdU9CWTFDZGxXQ214Z2oyazAxM1dSUVVjRXRmS09saEt6cFVybDFHbkdtbnljVnI1VFhrTk1nbVRZVHNZNnI0YlRpcXd3bEl6cnIyaFlReXZMakVLR2U3MNIB3AFBVV95cUxNeDVOVG9qVkM2TWNna3RkWEJSTERicXgySk9DLXYydmZJYXZBRmw1aW90Z1lSLU9meHNPRXREUU9KUjhTQnNfSVZ0dTdrYWFVSFUyb1Zzd1NRZ3FudmVxeTJMTWRnYVh6SHJNSjJKREdXSTZfaEpuVGVMRmdiX2ZJQklOOUJNZ0tFRk53NlhFSFl1dWpTU3dVV2ZGUm9TWVdLYnl6YnRxdzZ5cUx2R2hPdUNpZmhPOXpZS0lJNGIxck53YUpGT0FCMjQzOG5UaHp5VW5IUmNWbjZTQmdk?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxQQ2l4RDE3X3ZObU93NEM0My1WanpFeDFoZDFWZXllRU5vVmRCYVczQWVWNXpEbXRJQnN1ako1ZU9Vb18xeUp6ajliWmhicVpwN0tKclNLZU1tQVJTZGkwSlo5MnY3U0xNMUlZdEZEVzdtaEs2VkJ1YWVuUFZ3eUZPSWlLdw?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2NmdnV3UzVGajFUTDNmMmRUa3haaTJQUGpSTTRHZV9Fd0NsOWxNTERtZXdwc0h1bEotbS1YZTdaTUdFanVHSnFkMU1uM3o2Yi1hU3E5dzBWNmFXYmVyNXhCaW9qYVZBa3pNNzFwdE9uRjdFZGxRT2RPbmZUZEVqS2RUZw?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbGZCWVNSVTdXZWtLYlRnVlZfSDJSVnQzNUY5YnoxR2lfVmJQeVhaSGc2SU1oWllodjhFa2FZakQ4Q0tMX1NhU0ViNXVrQmUxUFphckZ4RXRLYnRkbE9FdHhrbXNZRVkwVEt5c1hhUWZ6c0pmb0JieXk3SkdMTDhPWDJFOVZyblFRN3RuNTZEM3dXbUpxNzNzdDQ3Rl9ldHBz?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX1RaRkN0ai10Y3poM0tEOHZpcF8xUG5lYUJ3ZWdhM3dfOHo5cDBCcFpkdUUxbmxBNWZFa3VxOGtNTll5UXJaVDdKWEVzSmpnZTB0X2d6SFhXMnBtcEZ4RThkRzVETEVrajNVLVVXTGVtQVhEQ0NMaXhGeVNVOTZETDFpeFZSUVJxS3pMdEwxb011RW5wc1BUOHJ5X05GNktKVnhwclVjdm9WMm1GcC1WWXVpWUFUMU5TUDhTQ1pzOHVjZFNweXFr?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "covered by Simply Wall St, InsideEVs, TIKR"
+  },
+  {
+   "arm": "editor",
+   "rank": 10,
+   "headline": "Robotics funding and M&A: Genesis AI $500M Series A, Humyn Labs $47M, Rockwell to acquire AGILOX",
+   "summary": "Several funding rounds and an acquisition: Genesis AI raised $500M at a $3.5B valuation, Humyn Labs raised $47M, and Rockwell Automation agreed to acquire AGILOX.",
+   "urls": [
+    "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation",
+    "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a",
+    "https://robotics247.com/article/rockwell-automation-to-acquire-agilox",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSEdac3Rxb2t0WU1BQkMtWGtXSEo2UzRzY3VZQzh6eWFXMHZ2SkJmVG16Y2ZmSFRHZS1HODNBd0JVU2JsczA4a1RTVzd1Um9mQi1SOG10MXJyVTVmVTV6aVNYVEZzRGdEOTVlTGtHenNqT0JTOEkxbXlqSDcyb1RGM29Zc0R6ZDFpclZmSWc0NXI5SVJkcTRqc0kzclpzQURtWW1nRnNRNU9DSzlyR2c?oc=5"
+   ],
+   "outlets": [
+    "robotics247.com",
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "robotics247 feed items"
+  },
+  {
+   "arm": "editor",
+   "rank": 11,
+   "headline": "Waymo passenger finds loaded handgun in San Francisco robotaxi",
+   "summary": "A Waymo passenger in San Francisco reported finding a loaded gun on the seat; Waymo says it is reviewing customer service handling.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fYVZZMkN6MVJhRWM0QnZlSlh6UDRDaWw4SWY2NjNrRzF6ZGlkclpPZ0NSOF9NU19YVUV6X2RuaFZKUVNmNXZxcVBZNnFfR3lwWXpCMDBqdTVmMTVUR2ZYNHRtdHdwOFZuV1VFbVZ3?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ZQS1wRHpYeEUtN0J4SXJfTE9Qay1uSFZGMHY5ZVI4Um5SdjBDQW0wejhIVVllLW1iVzVKOHhOdWV1c29rT2ZNNzJnU3l3R0M5TDM1SFNiT29pei1NdFJZUEw3Ulk5UWdSS19OVGhSRUhuM3NJZkE?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE1OVFpBQW5BMGs4MlJuMVduTWwtYXFGQXVjSHAyZ3hQTTgzaWc2QVpjTDh0S1V4clotVWNORzdFNktiMk15Mk01SUNDTVR1YlpGWVI5S3NkWmF0SVlvVnBiVGhkUC1rQ29ZZkZFREd4RV9tcEltZnhGelZNYw?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTFRIelJjRlNHSDQ1VWZ2eWtPS0xDcXdhWnl5bjRnQzYtOHBNM1ZwNlZqNHRGYjZNRVE5dWlOSHZlZkR4RXpQcDZ4UXBYSVFldzkydW40dFc4NmRDWThVTTloNklVeFdFcUl5ZXBlS3dDTlVsUExEUXJJMFdyQ2JtdXkya9IBiAFBVV95cUxQakNjSDNydGhtSHhWbmROMkdaNFpBVkFSVUU0Y25WWldrSHdFTFNvaTVmUE5kZlVlUTIxWmFCX0hQWk1EVnVUekUxN2RncURpc0tqLUpWLTBKWGw5QW0yQ21aLWxKZ2plbWh5U1R4NDBXTXJsTExHa3ViSGEwcFJFSnRLUlBJYXNp?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZTUxUTBSUnhNa0dUOU5idzNoOXFIaVk5dWZMRjhQbDE5YVJHVUpVVEdOYXlINzJ2NHhlNjlSbFdQOUtBZjhFNU83V2pXWEZqbmdDWEhWT29NX216elpDQmExM01PbWNNY2c1aWdGb0l4U2tQaE9vclMxRDZBZlJ2bnRSMA?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxQQlc4bjVSanlQMWtCRjZXZnFRZXg3RnNMUDRWeWx5MFkwNE1rdEJlblNtdmEtdjFCZm8zcG1QSEV1QUJCeHhYdjRCVHhLOW1JUG5jMHdsU0xFa2E3TTBMRmcwYy1hLW51TkVuN3ZOb1pkS1ZLTmo0cHYwb3BNYkpUemxHcTA?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM3g1dlpoVlJteHp6YnFNOFRWVmNlTzRqaGYzM0lTaWZRVTdYbEtKN1lNRkpucHQ2QnJKMV9Fbnh3bldiQ0ZDVS05eHdJREEtNjJCOUg1OUJvX2U2eXJGbU1WUV9XR3d5MXpIeEFvNDBvN1ViemYxbFRySkRzQ2FOeXFtNGxxNWJnbVlHa3d3?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdjVGMHc2YjZSVkd0c1JudkhlSVAyRW5weGJBcFJyMi01Y3k5NzNwbU1OV3BfTDBTc21fWENxRVQ0ejk1UWltMXp0bU5DVy1HVlIxcjRfWkxoOG5CZjNDcHJKUkNRb0Zkc050Z2k5MmZ2OXJtYkJPdDEwYlo2bEk0MFNQX1BwWFVnSE95RkZHNURKdGpRX2hwTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQa1JqckxYcE9RenRtcmNyU0YwVHAwdHRjX2pqSWRTRi1CMkY5dTFsUy01Rl9PbjgtcXpoWWg4MUs0RTJycjRFVW1ROExBTzNuVTBVTndmcTZGMFBpMzhHS09ldi1OZlpPQ1BFckFDbVF2bG1wd29vUmtTQ0dUSXJXb0Y5YVpOZTR3d0dWUU5EUFFGNkV0T2hKd1FvRXhtNEE?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNLUZGbDRkaWljWl9TNVBKTXRweThYWS1Nd21pTUNSaVRzRzNQU1hjbTVUcWM2dXJWWnR2M2VNd1ZtaWlPQ3U5YnpDblBzd3R1azUyWkltZE0xM0UyZmNNRHR4ZG91SGpaYkNlLU9QWmxLTWZ5aGtvVjg2UXI2a0R3dkZlUkVlRU1FcEZ6ajNWeXh5Tl9VYjhfRmdhMGJyeDJiUjhiQ19QVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVW9MRFpjZHc4RTh2TUhieldBMlJ5bVBYZ2U1c2NHc3czcFRsTm5HMFFmdldsOW5QNHFBcERCYmVhSlZhRkZ5YUNpdUFpb2RnSkQ1SGhDN0VUWVlkanBOdDNQSEVabjY0MGJxbFRQUmNTcVdDT3QzbWg5YWVlTWdVUjZUYXlCa1ZDZWZqcFBmZ3RoRFEzTXVVdE04ZHdvOVlubFp1eFVvQjRaSklQTUl0ek9TWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQlZxMDhVSVY1b25qa0FiUDNGOTJfWHFqUkVYd3BWZXVvV3lZNzZveDd3UDJMQ3VEZVB4SVhnMWpBTWVwOUxBUmt5TzVUZWc2bEJ2OXhQeDhEbzRYUnQyOG9xSWtxREpFTTVQMTkyejJvZGN1UkxmdXdaZ29WU0JPa2tyUjNqbXZfTXkzM2dnY1lGX0JiMlhtQkxXOVdxZ1NiNTNqbUpjVHlBbmowdl9PVlRwUHdUOTA?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbTR6RlR4N1ZwbkwwNmdhWFR0RTY3YkVoaFEyYWNhaEJuX2ZGLXkyRk9PWTVlV0I1T182MzBITXg3YmZWSU93cUY3eENWQ0hBNXhySUZybEtwbEhhanNYR2xHamg5bVlxQVVXNTFET2g4QXByLUd3RDZDRjFZc18zak1NVGFZVG1UaGZsVVBab3A5QzlFYURySngtUjlTc3BuT0V3VHVZbWFseXlpTG5OVDVsYjZway1SNkxfUUJR?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxNc3h5OHpzR3ZLa2pOLU9uUFBJSU10NDhFNnBrMWV4c2JENE1JUWwwWkJlRnVhQTZvRGdUTnUwazRNd2huZjlmdG1YTzBTb0F6QUNmUk5FWmw1NzZzcFNnYnpORXpWblZHRHlPcVFrUFlGaEZHWHo5MFJBRXhDaTcxb0N5V2tLVjVzVVhKVGFKd0RiOEU4ZU1nbjZHbXdZTnBFLUZYSUVKV0dUaVNmTHd6SV8wV0xMNkhhYjczYTRPY05feFBreFJ1ZWFLQ1RGUQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "covered by CBS, SF Chronicle, KQED, Newsweek"
+  },
+  {
+   "arm": "editor",
+   "rank": 12,
+   "headline": "XPeng plans showroom robots and robotaxi rollout, expanding Europe sales",
+   "summary": "XPeng says IRON will train as a store assistant in Q1 2027 and plans a Yoyo-01 robotaxi, with Europe sales expansion.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmJVeENXOVBLY3poZWRzei03czJiT3Fqc0F3UkxrSnhNb1V6QWtHSkswUUoxWVNUQkJiRVpaV3RCVE1ERnNDWkcwRUREUzZQQnRveUlzQXNvRF9yQUNPUndFOFNsZmFJNzdSMnM0cTZyaFptVUI2QkZJcm9xN2pWZzlua2NvOUhkTG9JcnJHOUtWTEpjbldoajZ2ejdwdDByekc5QkdDRlROakdmX2pmNnMzaGpTMnI3ZDVlOWd5Vm85YUU3VnNKWF9ha2IyX2k4RndaUlUzQnc5V3d2QjR3cTZCLV9UclczQkNIVHZNOFVTNVE5blZlZXFFaw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE55UlZBY0VfY3ZCMVhrNG5HZ2N5VUlLdXJnNXcwZ1hjN0VoMjdIS19jSU1ET1lUTFpqTkhyNWVvZ2NYT0ZyWGg0dmN1TEw3OHNaTDhwU1JKZm9nV3FaeFFmWEUzVVQ2VmFHcHozRHFuWHlMM3NUN0E?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxNc2wtWE1nWmptRlFoQk1IOVBPS0RyXzg0ZDJLTWxVZ0NBZDJNbTNrMDM1c0VESm1RdjAxRkt0WFJDTmttbmtnblc5bHRhZEFNR1U5cEVuRDhYWEY1RHpfZVRpUGRLTGV5ZDdoTXlhLWFVOWhaMmtobXhPTVJQa3hwZXdtNHJNdzNfRjEyaw?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOejdLYmNSRktkLXVDNkhxaTE2T0RiNWEyUEh4T0lBVzQ3SzNFWm9xZkZuZjFrWUtOMFZhT01oSnFTNXVTcDlhdDBBQldmdy1VaWhQa2pQZVg5Ujl3cnBqRlVGVDRXQ3VLVV9JTzRtc1Fnd3BISXV4bEl5VjBkZGdVMEdKYjZrUWplR08zRkJkMU83OHg3QURhVTJ6X2g2M1luNWlHeW9seVVTVEdzNjlBMkpaRXI?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "Nikkei Asia, Stock Titan, Reuters-adjacent coverage"
+  },
+  {
+   "arm": "editor",
+   "rank": 13,
+   "headline": "Chinese firms say home humanoid robots could follow commercial use within 1-2 years",
+   "summary": "XPeng and others say humanoid robots could handle household chores within one to two years, following commercial deployment.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hSjdTNklnMWpNOVZ3UXFjTzloaXhaSkl0Y1hxcHBrNTNDZExlc2ppQ1RrclpRVk1YbkZwblBNYnNjekJKTEtkbHBxT1QtTjlLS0lXUEtnalhmWEE?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRjF2VGo2ZHBPbU43Z2hhbTBtcGxDTXdSd09kTHJSeUR2RUFNdGU3Z0FweUdIZVY2bmNkOGRlOTB6ajZxd0dBSk9TWUVBUjI1Wm1idndYb0p6dGlORFliNW53YXdYQVltdGxkN2tsbkRSaGFlT2VFTV9abGtyT3FkWkJZb25WbFU?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeFlqQTNtdkw3bjdxcVZES3ZmS3pSZmMyN2k2S3FwUDM2enVfZmxjb1ZHb2VuMEZGOFFrYVNXLXJ3a0w1eW1QTG1TUHBzRk5hYnlxNDk0SW1aSFpZcS1ZcU9yeUdjYnN3LXo0YmJtS2NVZXU0ZXpUSVF2Q0hOakgzSDlNaWd4aFFF?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxOc1BINks3MVZUQ1BqeGk5azVmcm9QaFpCY001LVlOVVpvRW1SdG9xNlBENG5hLXFRamhpS0o0anNBZWU5ZzJaR2k5b0JFc2FRQ3djY3A2LTlaOW5sSFhWdGEzdHRyQzg0S2h2aVJMNWlzZE40UUp4RV9yTzN0RmdoaFpQVnJBRHZDOVNLadIBkgFBVV95cUxObzFMRk80QVkxUUIxdDFGSXdab01lX2xZTjhab0pRUXpzbTA3XzNJQXhYVjdJZVhIQU01a3lJNjdVeFcwTko1MC1Cak43aEtZakI3bVpOVjB5Q2JqTXVQRGo4NmtYX3QzVGNDczJHT09lRC16R0dOTTNUUDRWUGl2LVhZeHNtVHppemJlNjJuWVd6UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdzNEYlJ5NmRDb0ttd0gxWmktVnBncTN5eXhWWnN1U3IySktMNHEtUHRfOUFmbkFsTkdwcGZLSDlvOS0xMkhabFpraXNsN01UV0FIMGhNZHMyOXFrR1FudjJjNG45TmNTTExNUDhlWldFakQ1dEtqNm90YUpmNDl2emF4cnA3QzN5Vzd1MElIdlItRnV2QzZsTC1HNTBzci16M3lOM1pjUWs?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "CNBC, Digital Trends"
+  },
+  {
+   "arm": "editor",
+   "rank": 14,
+   "headline": "Figure AI responds to Musk's staged-demo criticism with Apple demo video",
+   "summary": "Figure AI answered Elon Musk's criticism of its robot demo with a video showing its robot picking up a moved apple.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE01YjdEeEJRRno3ZEdaRlVTM2VtVldSTVgtSjNJejllODluWi0wcXlPMUxtNGw5ZXZsaDFwYWZrUVlBakZxU0VROFBSYlhFdk5ONkhZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBxQWZwd1BycEVlQ0dwM3FxQ2t6RDFXemZjQTU0WFM1MDVOS2NVMUNmQ0haaWQ4MV95THFFSGlBaHJuZXVXNnlDamcwblFldGpfdFNN?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TWjBjMENGOFNtTHRwTlBvUFplaGx6R2JrS3dWUEtvOXBfVV8zeXk3ZkpFX0ttUXNaSlc5eUZ1cXMtZmFMQXVMaWFnRjFnM05jYzFfYlJJWXFOb1B2NGEyMERLS1d4TTB6dEJWdFdDbXhXdU0t?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1VWjQ2YWdUV1JWS0UtU3NfQUVZNUNIbm9vdFUyWG1lcVdTYmlhcGNaUFNYcVIzOFFnSUc0c1haMWRPclE5eXNkcEFkWGRER1NhTk14XzQ1M3ctRFNiUlN0aFBBa2xheDJ5dV9yX3JCcGJ1UTlHeGc?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX3BwRmtaeERwMGFyT3YyNG91YnV2Q014QjduZ3pKUmRxeUxTTnpKdlN3Z21WbGlUekVRTUR6WnhvN2QyVkdJbU0zUDladHgtUExMU1ZzOFdlNnhKQkVIcVB2UzVtaVIxdFBucTVsemhSbkhyOExsYjJnSFN4MTZGXw?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQ3A0d1hBcmh6d00yWTdpaVlyQjA3ZzlyQWJuOUhBdzk4cGMyWEV2VXBtWXpXZm1WSUJZd2FsMTNRVVVXYUVUQXQtcGotbXl3SlFWdU82Q1RJMlBfN3dwcGtURE9ianNwMUstOU0yOEc4YmpEWm90SjlyRzF6RHZab0lR?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeGcyMzQtb1poM0pKNTZlWVpRb0JFSEVReXpTSkNuUUxsV1RhNVVZME5MZjhGYU1iYTJBajFtRDEwNHdrV0ZNekdBdlc4RG96Ry16V2JERTFqdXJYdFdnQUYyNmNvOERjQTVqMUR6THNVWTVJaHp6c1VjTTBVT04zSzg4NGllZ3c?oc=5",
+    "https://news.google.com/rss/articles/CBMihwJBVV95cUxNOC1ablRUWlFkY1k3MWlpZ0RZYzh2LTVfb01ZRUFTeFMxWXBzWElBVmhpMEVwd3JRbXBXR0ZGdTRRc19BMFdtQlBqODZZZ09OeXhfRlU2Nzk3d1pCVTVHdlpld1VYOUVNWjZMckluZTg4dnJWaEpOdUYtMVRHLXhyRHBiSDk5QnUtRTBKM2ZRRU5JMDlDZmFCYTdabGFEUUdQMHlDWWR4cVJGeFNSVUxrUkthd0VVTWZkVTZTWTY5b3UwQ3I4LVljODZrbmlFYXNqQUMxeGR6YklKOEw5ZF9YQ0NxX1pDMlNsUWpVblJTamp0b3lZOFlrMmpORkZ6ejZUUnJ6RGM5OA?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPellUM2JpSTJYSWo4ajhkcnRveXFoaUhuQW9JclpNTkpJVnU4VGdkNkNMeFFEb3VLTEVSWk1JQjFoU1BMTlMtTE92ekpqR0E2MFQ5eG5xQUw2N1Z5Q3JGZ0g3NFJ6S0YzWkFkQ0doNXlMQ3phcUJhMHdEeFpNTnJ6TGVFbFNNZmpScXJHRVJFbzlYXzlONDVMRXdzMlJHVDdwVUNndlpfci1SUF9TeHpVdkdoRGpIWGFC?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "covered by several outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 15,
+   "headline": "Denver man repeatedly targets Waymo robotaxis with eggs and traffic cones",
+   "summary": "A Denver man has trapped and egged Waymo robotaxis at least 30 times, and prosecutors have struggled to charge him, per NYT and Electrek.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sRFpGT2tjNzF2Wm9xdVhmWTE1RE9VUU5QOEJ3b1pfQ3VRNzI4OHliYldNRTg3SXpQanNPRHY5UnRjNjJsZ1ZkME55aTdOdVI4T010NWxBZVhKY2NIS1E?oc=5",
+    "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5NMlBYN014U1dHYmhYbHV0alZDN25RZmxpODJwSExaRE1VRHZpX0xKTlJaT1ZkTk5iNXBkdldHV3dlSTI5QVQ4aUJxNFNiTkRxUEE0cGhTcUp1c3NENHIwQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jSVlkQk1fVjV5YTBCM0lIMzRPS05YQXJtVEExT2tFTXJ2dWNnR2lsZmFqME4xbnZsc0ZrdUVZdDVPdWd3c1BCMTBSMGR2TThfOHJyandTRlYxNWEzQUNsMGJwNXg?oc=5",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE5KNldhZmo0Zk5kQWZQeU9VcTB3VjRNSFJ1a29Ca3dWaEx2YnVsU01WOVNUU2x5cnZMSlFPUjBramZISkwyNXJnX3pvbDRyb0ZwVktJQk4zQkFlbGFsLVFUSHF3dTlQLWhWX3dv?oc=5",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE9maUhZb25EV3BKVGk3d0lDSE94T0k0X1hIMTdmOEo5TEdkMmdhQ1dNcDdQUXRETWdqLW1lVTNGUWd0bGZQLXNtMjFhQ2tvVkRacFpyYi1WZHE0QnB0ZHVLWDlwMnRXNnljQjZJM0VTQmt5SFFQYjRFVg?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQRkRaLVYxdjRTVGhZbGhfTUVsalZfTnpOeWVZeUZrSFlYWlgzZDBNN01zYnV2cU4yNjFKdE55d2RnWnJHM2NMVnNXOUljS0YwMm9LVWo5bllLZmw4WDNOcGlVRkd6WVBHOE9IVHZtdFE1Ym9wS2NJQkdYQ0cxVWFlMFpyV1NMeFJ2Y2RzcUlzMk5xOXpRajVJ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZi1sR3ZFN1E4ekdKazEwU3hzX1NqcWtTVGJPcTF2NmxlTDJhN0h2WHNrOHczbzIzSkdaR0FqMWl5U3hJQldtRF9TczVRaERZYVotVTFQc3RHUVQteURDRlVGZTdmajJ0SHgtNjZoSVYxTlhjeEZsdkp6VGdwdXBoRzV3UkRmX2dmYU15ekpQVkNqcVVoUGU4eU9ZR2FLaUpBSHZFQUdnYlF2d9IBrwFBVV95cUxPLUpWTzZUdTAtd09tcWptTHpFcFpXY1lvZ1dKLWtYU1pPWE5WenUzbWc1RlcyOHVadlVFdjEzV2laclJldWh1d2tfdHpGYnZvOFItWHM1aktjeXlEcjNXdjVWNGJOdUNnb1JhdjJBRGptM3VQTk9OTlJoZndZTjA2Q1NjRzFQTXpHbk83d0NDNnR0OG9WUEtObmxFSXVSOVk0VWM1Yi1iLWNkdk1ZM1hV?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTFBLdTBSRzZ5Tm5nVFphbTNvUDR1TnAzenFXdmgyTnVGUTBOc1c1T0xhalFuc0c2VkFZeF9Sa042WFVXYVhQU2dCUU1DZ0JubGdqcFVlT1N6Z1VaZ1BjQVVFNEFWUmV4cFp2andjOTRGRWZfZGQ1NnRB?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "covered by NYT, Electrek, Daily Mail"
+  },
+  {
+   "arm": "editor",
+   "rank": 16,
+   "headline": "India's Bhargavastra counter-swarm drone system clears Pokhran trials",
+   "summary": "India's indigenous Bhargavastra counter-swarm drone system completed final trials at Pokhran and is set for Army delivery.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeGRSbEFFU1BmRW9yQm9zY2Z3MlBBUTV0ZE4tVnB2dlBJOHNHS3Vza2R1X2pmQ3Z3eWZOYllrTmpoampMT3RoeFRxQ0xHcDlUc3VVc3pOMnFPVTMwR0JVMVZ4dTNBN1B0UXNOUDhiX2l0dXV2QzNPQU1VRUlQX05LanN4R1VTcDEzOENaekk3cV9UMGU2aGVmcFhxRF9ZU2swQVo3MndHLTB6Ylh5Q1RXTUJrell5TWFSWlIwTlRpQ3hQcjNHVkdGazd4RWhoNVdV0gHWAUFVX3lxTE51a0lrQXgyQXdGM1Axcldnb3RONTFBUnljSndQQTBIQlZIUDM2bGx2ZmtXSXp3anQ2aVVhVGxZQk40U1Z4QW0xay1idUM3cnZlbFllRzhnNUw0Qk56NXh6VDBsbFB3R3ZwSzl0RFBjeXFZYkNsTG90aGFER3V5OVhOamxoenpRZlFRc3FrR0JMaEU5czFOWWdmdzRwNkNjWm9WdWVXNE5QdUo1ajM0RjBtNldCRjhlaWdoaDdvT3h0cWVIbUFaTUFTaDdZRnFYaVpPdkt6ZlE?oc=5",
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNMzNST1dPMkFjWkxDQXBIRDJsVmx0T25XVVFrMWZqWjg0QUV1cVFqMkpTQjRvVXg5VFdXcGtNeHFGQzJDaFZXSnR0T0ZMVVUydHNtanlZOFNJbHhHQy1hZFhnLThzZl9iMVluVFk0by1OZ01VZ1BlV3BKbTFGY3ZTRlVPOU82TTNnV0NPMG02Q3p4dzAxY0V5aUo0LUN5YkNaQlNWeEZ5bm4yQm00WDJPZW1lZVVYaDFyUDhqRHlPd3VJUngyYUpQNk5ZOU9MalpYZ2QxTERTUGhTOTBIbmdmQg?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRmFadlFaeTdMQ1VhbUoxUGtQdktUWlJaeGU2cm9rOUsxNVh6TkxmdlB4SUo5NThjZFNwN1BmVk04QURRWlExLVZvLWVqaTNmTEhwMG4wX0ZxUTZ0UHIxWF95UEJWTGhXMUxTNGdncGVTeUlMTU9RM0VCMDhlUFNGV3hFSTfSAdgCQVVfeXFMTWFZTzAzNGdKeW8wWjJHVGs4TXpleDZQMG9Ed0xQVzVqTDNsOUM4ZzRvZ0ozS1hWYm9GMnRDU3pyNU5YTE0wY1Q0YnZ5Y211ODcwOGg1bnk2UXJxZzZuRm9EbHVjckQzNHRiSUw4ZFg5UTY0dWQ1QlVXSjRrMVRsVkM3RHltaE1SN2djOW5YeWVzYVlSS3F2aXRwTHhBQ0Q0ajV1UWpfUVZxWVg4a3pBYXpPNUdPVUk0RHlfM2tLUkJXNDVRcGkzMTRaVjBZc2dEb0RTaHNleHZHdC1oN0Y2YzdaRHNKYVZJakhuNkI0bWZsdWtGaFprRjgyMTdmNVNBMG50MEFkMWE3SDg5d3UyTHA1SnBqc0JlUGdna3NrMnFmeHloZW5jVmRONVpKLTlKZWlXU1FjWUJQN0pDeUlnNjdWY1Y5NjI1d3cxUFNLdUZydGloOE9Sem0?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTVh0ay1OSHpRYlVlcGlMd3lIdkpHWTNNeURQTGI5cUxySFZUZ3B2NkVqeGo4Z3lrYkVzckxiVHJkbFg3WUw4OWlXX1p1UC1OalJwYVFuWDJPTGtueS1UTkZsYjVOMUpNTmdMSHJXbV9uQnY4c0NYcTVnTFFoajhRdDUycEtSQ0xTZl9ERTB4bF9nUEU1M0M2c1d6LVNIVkE?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPS29ZVkJHUGswdXQ0MENOOUN2Y0pFam0weUcyRUh4QkVVMzBkQ0piYzJlWnpVZGE3WnVGbWlSWDBVWDFPOE9uNnNSRVc4X2J4bGp6bHdvakV1enJzNERpb1Y5eWxPTF9WYVNxYzR2ZU4tWDFWc2YtUXh4M1diWXhWSS1KOWdpYzJxYUhnbVRhUjBRbjBXSUlGUlJxTHJqS3I4TTJMUURIQmtPSXU3Vmc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "covered by Business Today, Defence.in, Pragativadi"
+  },
+  {
+   "arm": "editor",
+   "rank": 17,
+   "headline": "Samsung roadmap puts unmanned vehicles and robotic arms in chip fabs by 2028",
+   "summary": "Reports say Samsung plans to deploy unmanned vehicles, self-driving robots and robotic arms in its chip fabs by 2028.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02S0lwM0ZwZHFxUkpQZDhGa1UybWhmb0FJM0ZtQmU0RjEta1NLVWwzSlZLTUVwbTBzQVNUVHJmaDc3TkhkVGVtM0hVR2Z0eXUwOXl5TG9CZW0?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9uXzJTQUpWYURBWXlTMV9QOWt3bmhpaFN3WkRkTlM5YmtHRi1oZ3A1TXdkLXVfRklXWnBUNkh6WUp3R2txa2t6T0M4YWtxTjYwMWVfcU1zdmI5QnpoQWJwQUNzejdhMzUzR1ZOcURiaHp2RWRhWmc?oc=5",
+    "https://news.google.com/rss/articles/CBMingJBVV95cUxORUUxZDRyMlhvT2ZIZjJ0MmtDTFV4TzZTT1U4TGhreE80N1dfVndyODVGd0U3NDRhTEpoRUFBZkt0akVLWE1aSHFyUEgweFhiQjZKUDFaM3RXUDAzOUx1UUw1Mmt1MTVIX0g1Y0Z6SUlmdHZJem9hYzVvMmZBMk9iaTJHMzFwY1JPNTh0bEpETlFDa2N4RjJxWHV6Q2pNOXEzd3RmUDJ2NWEzRkpyRkxiSHBWbnVuMHJzSldEWDBIZzdrekhuMkxNNE00MkxwSGhvVUlHQ2pwTjJkNElBeHJVYjVvMDRLY2VfTk1nRXREVG4wNTdHY1lXNC1RRjM0ZlhINTkwOThBdU5JOWhqSnUycDdhYzRmSmhFekg1OC1n0gGjAkFVX3lxTE5BV29ObmRfWGxMODJtajNXRVIzQkQyclNZMlpsRkQzTFppejQ0QmE1XzA1UEtHMFpFcUt3ZzJxWDRCVHFMeW1iYTJaVnhsSXV6cko0cmxyOFpVdVhlZTFoNm1XS2wybTA3Q2RPaUVFM3pKVEJMUHkyeVlZV0ptRFEyWWlFSkN0ODJ6N2ZkMUZyRzBtampmWmd1TXpvWWZBZlB3aE1WNFZDVEVwSHZCTmkycDBVV1ROcFFWdW5meUdLUDFBb1Bqa1FzaVNnZmZfa2ctVEFyeDlUb2JxSzBqOFFQaHF5aDJGN2p3SEFrR0JkNEwwQno4dzRfVm00WlJWMFp4YmFJczFqS3RmUTFfSlUyM29uTFg2UEVpQXk4SFA2WngtMA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "Wccftech, Korean media"
+  },
+  {
+   "arm": "editor",
+   "rank": 18,
+   "headline": "Lute raises $20 million to give robots a sense of touch",
+   "summary": "Physical AI startup Lute, Polish-American, raised about $20M (\u20ac17.2M) for tactile sensing for robots.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE1yQVpneFlXVDRvbksyZEFKckxDQ3NEd25fU3NPczlVY1REbzU5amdOWlZYbG5ZVDU5blBTd3BITkZXN2k0cElpN1NVX2hoSVQ1bFo5SXZvYmoxRUNidUV2cXcwQWlGTmJmTFhvdkQ1cFh3NFAtSVg3eVFzalJOQdIBfkFVX3lxTE1yQVpneFlXVDRvbksyZEFKckxDQ3NEd25fU3NPczlVY1REbzU5amdOWlZYbG5ZVDU5blBTd3BITkZXN2k0cElpN1NVX2hoSVQ1bFo5SXZvYmoxRUNidUV2cXcwQWlGTmJmTFhvdkQ1cFh3NFAtSVg3eVFzalJOQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTUhLQnYxQkluZmdRM0NrMTJCX3Fja3VnUVZ4dXo4ejhBckg1V3FJbVRVSElIUFZqUXo4VVRkYWFQQ3E0NThxMW9jR2JZMlVoTzUzOFZHb0FjVFNzTG1vUFRsQ2hIT3Q4cVdfRjBKUkZoWFdMcnhqNjRyOUFIRDNGU0J4WU1JRlBpcC12Zk5XOU5PbGFKVkp2cl9mUE1RNzBFc091X3BLX0NOU3V5TUwtNQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUltYUdhWDRYMWtMTjZYUjdKa3ZpdnJNckF1ZU5lSjdVaENvZFBmRVZZWEkwVU1GV0NfMzlLZnJGcTJRSTE3TGhDYWN5RVRBM2FOUHNSYXdnWnJCSktzYWdCMVpMV0Y4X1ZLRjNxRVBaVVlEYm0yMGFNaWZGcVROZnVQUWdsUEx1aHlrSXFhT1U4aW1HRWEwbE93ZzZIbFRVSVR1ZGhNbXg0UGlaT2M4TUJyN001T1FmOXc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "covered by Robotics & Automation News, The Recursive, Ventureburn"
+  },
+  {
+   "arm": "editor",
+   "rank": 19,
+   "headline": "Economist says humanoid robots are coming sooner than expected",
+   "summary": "The Economist argues humanoid robots are arriving sooner than many expect; related benchmarks show LLMs struggling with humanoid manipulation.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9Fam54SWNTcHhieDJrbTFkWmk0U2F6aFBoVmdFeHp1cGtVenVRRWF2U2doQnhFRmkyRUxoVXVTRmxEZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOX0ZmaWhOTzBrRVd1TUI0bm1sNzRjZjVnSGhSQ1ZveVYwa2pfSWU3SklVRXoyWWdRVnlxVDFfYWlIbzN1Z2kxRGsySXA1ekplaDhORWJCak5lSXRiajMxTG9pVUF2NV9kV3VkRDc3VTk4Zkg5Zk5EdHJXMDZiamxzWmJ6NjFGMmlzRFVpMmpUc1M0enV0SXJ4NFhCc2xrQWI5bUd0eGVIVkozX2lLU1hLV29sVVVEd0RNY2JDWHllbktyUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVmxIdUZkQkRyU21naU1IT2ttY3VPLVVpUjBZSzVLMjctbkxRdks5cG5nRkFfV0VfSFFXWFVST19qNFRRWXlZVTRmbzlHWlZmc1c1LUpveUszZ3ViVUxJaFRKcDVtcnQwa2lmZ3RiTnNsa0M1YUc2MXMyVlNiMU51OTloSWM2M3I0bkpaVjJKdW5yOVFham1PYzZRcXp3VWs5alRFODJSRDZIWWdPend4dXFjZE1ObjBVMFpnSTRJZ3R4c2Nw?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTVcwd25vNlVhVThFSlJUVHRacFpnZzgtbElYaExPOGt4cHA3SEFCWE9XcmZMVUJCWDNhNi0ycDdOWTV5ajU4N0J3akZzTGVqR3NDZmQyQ1h5UGptRnItcGxWOXdNQ3o2eHEzRzVBc2QxREdPV3Yxclc3Qkt0MXVEc1MyUk9GSzY2U25GSU0xcmhuZy1XWEx2Znpn?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "single major outlet"
+  },
+  {
+   "arm": "editor",
+   "rank": 20,
+   "headline": "GM targets 20% increase in robotics and factory automation by 2028",
+   "summary": "General Motors aims for a 20% increase in robotics and factory automation by 2028.",
+   "urls": [
+    "https://robotics247.com/article/gm-targets-20-increase-in-robotics-and-factory-automation-by-2028"
+   ],
+   "outlets": [
+    "robotics247.com"
+   ],
+   "importance": 35.0,
+   "reason": "robotics247 #7"
+  },
+  {
+   "arm": "editor",
+   "rank": 21,
+   "headline": "Bolt begins self-driving operations in Luxembourg",
+   "summary": "Bolt started self-driving operations in Luxembourg with five cars and safety operators.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZU9RZWVNZjZPQi0tdWp4Mkw1TFJENWc1ZEJ6WFUxRks5N0xHLVFScHRwc2ZtZlM1WVJxSzN3UnktbHp6Mzg1Qmw2S3dLbGVaODF3UUdZaVV3VjAzQnBxUlBNM1QzWldReVpzOTlmdjdESTJMam9qLVpsUXdtbXZERUFtVjRWdm9jTEY4?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNQXJkYzZiTkxnTHpIZHY5YkRKTG1sNXFDbEZybVZiZkpLd0E5NTZOVnZDWTRyelF1ZDMteUt5X0UwSEVTVWhkdDhIMmRkeWkyRnI5VkxObzZSMWE5UnRfYlhvUmVGT0J1ejAwdW5GSEZ2SmFIUFZnZHRPMmp5YUNQQjRFUUc1OElvSFJVOW1aNUpxMmFTanBKSkx6TEJ3dw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTThPQ3JPSU94Z2FUekdGSkxxVS1fWVc4YjM0UEY5elQ0elZtVVFoMWZnZkdMSjhIdFdFX1dwWDQ3bXhUU0FEQW1hbExYZVlFcEhoMjBWU05jemVubW9OYkNGZVVlT1RKNlBWb3NlNTRkNmZ2dmhfZVhIWWdSNl9FdFJFRVlKdW14X0V6alNGZEluandkNHJINWEyZkVITVpMaWh3dHB2X3VMYjFXaVdNcWpMclpGZl83VS1BR1F3NkNHQQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "Future Transport-News, RTL Today"
+  },
+  {
+   "arm": "editor",
+   "rank": 22,
+   "headline": "Saab acquires American AI developer; US announces robotic warfare command",
+   "summary": "Saab bought an American AI developer, and the US announced a command for robotic warfare.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSlFnMUdtX2piMEM5bkdBenY3ek1fS3ppUEJqMzc1SDA4ZWwxTG9Gbkt5TGh6VnVOS2s1VG1rR2tIbnNvZWdPM3p6VEQ0SGJDWTBVaFJ0UjgybkplZUZTTzRTUU43dGtKSm9vRVhhSUZubkpKRFg1dHo5LWxrelQ0VjRZdFdtQ2Vv?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPLWRNd2lsc2R4eDBNMXFBTktVdDBjWE5kTzdHQmdhMmtZWkMza0ZUbTZId1AxeUU3QUZFb1NsVjd2OVpNSkZGVGJENTAxOFVVMWR3WUstYjhCcDI0ampzNnMwOFAwNmN3Y3ZiYXVnS3NaVkhlWnkwdS1kUnN2dXhPSV8yMVhHN0pUOEthag?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMGZ1NU9XdEUxcThoc25vbGtIaVJOanRhLWl5X09LVjM5NkZqV180dWY1NkdDZGE4MG5CZVFrY3ZYaWRMNnA4Z2QyREFVY2hqMkN5Mmc3a2ZWWlhQYXNqZHJPSXRtQkxRSTFQRmpiQzhjLWN6V2V1SlhOQ080RWlKM0FrQmxKRXgyOTJfQ0p0NEVBZDR4T2I0a0JCcXdVV081UUtoRXdjYzM?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "National Interest, Eurasia Review"
+  },
+  {
+   "arm": "editor",
+   "rank": 23,
+   "headline": "Auterion to build drone manufacturing facility in Germany",
+   "summary": "Auterion and partners will build a drone manufacturing facility in Germany.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55MF84MzJIcW84SjZZM0NlY1dwXzI5VFVVdlFYY19wYVdYdmtzbi1ZWndWQjhTd183b1R0akxGX1FwZjlBLUl3cmVpTkVTWlhLLWJCSkp6enM?oc=5",
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ25WczgyV3Q2SnBHS0trb2NuVjU4LXB5QUhxRjBYUGtIa2Z1ZEhab2FBSFAyRWFzQTZoVzVkbkM0UkpNRS01Y182WEpGLWltcHAxcklxcUZSV2kxYWNkSGVlSFNicnlNcnZZRVNVTnRUdjE3N2VmVkx0dWNsYTFFb2pYb0p2dw?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPRlNGN0I0UngwOExSV2phVmwyWHBSd05lM1I2Zkc1cDUtalVTcXN6R1M2eXczVXFWV3M5d0s1N3lPV2h3N21TQXFCeVkxNjR4V29ZTnBYclFqdjYtWXdEMUJ1aW1qbHhoaDhGejVSaGVLY2pIanJod1ZPd09EZjdLZnowdG9LdjZ1U2dSVU9NU2hrTE83NnEybVRLdGt3eE40R2YzSzNsNjZqZXNPaTZlTGdhZjd6UXM?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "Israel Defense"
+  },
+  {
+   "arm": "editor",
+   "rank": 24,
+   "headline": "RoboSense reports Q3 results with robotics LiDAR sales ranking No. 1 globally",
+   "summary": "RoboSense reported Q3 2026 results and says its robotics LiDAR sales rank first globally.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiigJBVV95cUxOWC1pNjVYbmlwQjdZd2c0SUVkVVZTNWhFcEJpT1JQRTV1aDhRaDRKMy1VNjZsYTJMM3NiT3VGdnA5VTFLQVl5NlVsTzNYM3BBRkNpVVg2SzRuU21mT2NRbk9JNWdvaGVSR09TQm9NQ2ZxeFFjZGl3TV96YUVVazRCRjdqV01lR1IzcXZBVGtFenhPRGRIc3dfc1dwNmcxM2JmNlhXaVQzTTI3b1B0aEJwNVR0ZkR0WGdTSDdEOEFJRE9qbUtINTRhMHJNaW5RekRBcEhycFNhSHd2aE96VHc1OHRUNXRNdGhuclUxRE9WekQxZ0RfMUpQWjg4V19PNGV5LVl2b3FuWGltZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZFVLRDQ0eWJhRFpoeGpHWFJId2Z4dFo4QXJXLWhPbS1aWkkycnpxam5ZdnoxRU5ZT0Z1OXdXSU50cm1IQmRUZy16elNlcEJabmFRTFZjWVNwVmw0QXdDV2JmTzNOT29rUE9xdEw1aW1KaGhpY0hkZGwwVmpyZExiaWRVZFF6ODREaldj?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "StreetInsider, Unite.AI"
+  },
+  {
+   "arm": "editor",
+   "rank": 25,
+   "headline": "Investigation into Nvidia hardware in Russian drone that killed civilians in Ukraine",
+   "summary": "Snopes examines whether Russia used Nvidia hardware in a drone that killed civilians in Ukraine.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xRHdUN1ZCV0JlUVkwZl9JZnF2Y2VDQXhxUWh1R2t1V1EtcFhGeFgxNm4yR3JQZGo3cm9QNDR5Q3UtcmFwN2dtS2hOMmMzZWRXdThKWGIwbjF6aUF4MnBmU1ZLZ0U5anBYLUozcjBHNDBIWXhxcXc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "Snopes"
+  }
+ ],
+ "wall_s": 23.7,
+ "peak_rss_mb": 81.7,
+ "cost_usd": 0.0052,
+ "searches": null,
+ "notes": {
+  "observations": 817
+ }
+}

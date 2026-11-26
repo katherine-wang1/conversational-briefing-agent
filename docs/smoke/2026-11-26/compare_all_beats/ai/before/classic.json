@@ -1,0 +1,446 @@
+{
+ "arm": "classic",
+ "beat": "ai",
+ "at": "2026-11-26T19:59:15.118708Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Anthropic files S-1, launches roadshow, prices and closes its IPO",
+   "summary": "Anthropic's posts trace its initial public offering from S-1 filing through roadshow, pricing and closing with the underwriters' option exercised.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+    "https://anthropic.com/news/ipo-close",
+    "https://anthropic.com/news/roadshow-launch",
+    "https://anthropic.com/news/s1-sec"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 88.0,
+   "reason": "anthropic_news rank 3; 4 primary-source posts; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Anthropic launches Claude Haiku 5.5, Opus 5.5 and Sonnet 5.5",
+   "summary": "Anthropic announces three new Claude models, Haiku 5.5, Opus 5.5 and Sonnet 5.5, in its official news posts.",
+   "urls": [
+    "https://anthropic.com/claude-haiku-5-5",
+    "https://anthropic.com/claude-opus-5-5",
+    "https://anthropic.com/claude-sonnet-5-5"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 88.0,
+   "reason": "anthropic_news rank 5; primary source present; 3 items from one source"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Nvidia tells partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia",
+   "summary": "FT sources report Nvidia told manufacturing partners to stop AI server shipments to four Southeast Asian countries as the US tightens export controls.",
+   "urls": [
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 82.0,
+   "reason": "techmeme rank 1; single source (techmeme, FT-linked)"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2",
+   "summary": "Anthropic announces Claude Fable 5.2 and Claude Mythos 5.2 models.",
+   "urls": [
+    "https://anthropic.com/claude-fable-and-mythos-5-2"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 80.0,
+   "reason": "anthropic_news rank 1; primary source present; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Scott Aaronson says leading AI labs hold unreleased algorithmic breakthroughs threatening cryptosystems",
+   "summary": "Aaronson's blog post cites sources saying leading AI labs have unreleased algorithmic breakthroughs that could break deployed cryptosystems, with exact nature unknown.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379"
+   ],
+   "outlets": [
+    "scottaaronson.blog"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 2; hn_front rank 25 with 1914 points; 1755 comments at observation; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Z.ai's GLM-5.5 flagship delayed past November release amid US chip curbs",
+   "summary": "Reuters sources say Z.ai's 3T-parameter GLM-5.5 missed November and may slip to Q1 2027 or later.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 3; single source (techmeme); Reuters sourced reporting"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "OpenAI admits GPT-6.2 Astra and Sol billing error, usage limits tightened",
+   "summary": "OpenAI says it fixed a billing mistake that discounted GPT-6.2 usage; Astra users hit limits up to 40% faster.",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster"
+   ],
+   "outlets": [
+    "techradar.com"
+   ],
+   "importance": 58.0,
+   "reason": "techmeme rank 4; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Meta launches Muse Image, Muse Video and Muse Spark 1.1",
+   "summary": "Meta announces Muse Image and Muse Video models and Muse Spark 1.1 via its Meta model API.",
+   "urls": [
+    "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 55.0,
+   "reason": "meta_ai_blog rank 1; primary source present; 2 posts from one domain"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Meta and Anthropic publish explainers and agent skills donation to Agentic AI Foundation",
+   "summary": "Meta publishes an explainer on agentic AI while Anthropic donates Agent Skills to the Agentic AI Foundation.",
+   "urls": [
+    "https://ai.meta.com/muse/what-is-agentic-ai",
+    "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "anthropic.com"
+   ],
+   "importance": 50.0,
+   "reason": "2 independent domains; primary sources present; anthropic_news rank 16; meta_ai_blog rank 6"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Anthropic invests $100 million to train 10,000 engineers in enterprise AI",
+   "summary": "Anthropic commits $100 million to train 10,000 engineers, addressing the enterprise AI talent gap.",
+   "urls": [
+    "https://anthropic.com/news/claude-frontier-academy"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 48.0,
+   "reason": "anthropic_news rank 27; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "llama.cpp adds AMD-specific patches and a Ryzen/Radeon benchmark dashboard",
+   "summary": "Hugging Face blog introduces a llama.cpp benchmark dashboard for AMD Ryzen and Radeon hardware, alongside AMD-specific patches.",
+   "urls": [
+    "https://devnull.land/amd-specific-llama-cpp",
+    "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+   ],
+   "outlets": [
+    "devnull.land",
+    "huggingface.co"
+   ],
+   "importance": 45.0,
+   "reason": "hn_front rank 1; 138 HN points at observation; 2 independent domains; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Anthropic reports early progress accelerating drug development with Claude",
+   "summary": "Anthropic's research post describes early progress on using Claude to accelerate drug development.",
+   "urls": [
+    "https://anthropic.com/research/early-progress-drug-development"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 4; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "Anthropic expands GSA partnership to bring Claude to all levels of government",
+   "summary": "Anthropic announces an expanded partnership with GSA to deploy Claude across government levels.",
+   "urls": [
+    "https://anthropic.com/news/expanding-partnership-gsa"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 15; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Anthropic details new defenses against distillation attacks",
+   "summary": "Anthropic describes strengthened defenses against distillation attacks on its models.",
+   "urls": [
+    "https://anthropic.com/news/distillation-defenses"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 22; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Anthropic Institute publishes economic future scenarios",
+   "summary": "Anthropic's Institute post 'Scenarios for our economic future' sets out scenarios for AI's economic impact; the snippet is absent.",
+   "urls": [
+    "https://anthropic.com/institute/econ-scenarios"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 7; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Anthropic publishes behind-the-scenes feature on making Claude Code",
+   "summary": "Anthropic's features page describes the making of Claude Code, its coding agent product.",
+   "urls": [
+    "https://anthropic.com/features/making-of-claude-code"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 8; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "Anthropic opens Singapore office and signs MOU with Singapore government",
+   "summary": "Anthropic opens an office in Singapore and signs a memorandum of understanding with its government.",
+   "urls": [
+    "https://anthropic.com/news/singapore-office-opening"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 21; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "Meta details SAM and DINO powering Genesis Mission projects at Berkeley Lab",
+   "summary": "Meta's blog says its SAM and DINO models are powering first Genesis Mission projects at Lawrence Berkeley National Laboratory.",
+   "urls": [
+    "https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 40.0,
+   "reason": "meta_ai_blog rank 3; primary source present; single source (meta_ai_blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Anthropic reports Project Deal, a Claude-run marketplace experiment",
+   "summary": "Anthropic's feature post describes Project Deal, an experiment in which Claude runs a marketplace.",
+   "urls": [
+    "https://anthropic.com/features/project-deal"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 9; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "Anthropic expands AI for Science program to foundations and research institutions",
+   "summary": "Anthropic says its AI for Science program now extends to foundations and research institutions.",
+   "urls": [
+    "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 14; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "Anthropic publishes update on its independent evaluators",
+   "summary": "Anthropic posts an update on its independent evaluator arrangements; details limited to title.",
+   "urls": [
+    "https://anthropic.com/news/an-update-on-independent-evaluators"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 19; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "Anthropic introduces Anthropic Cyber Mission",
+   "summary": "Anthropic introduces a new Cyber Mission initiative; details limited to title.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-cyber-mission"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 23; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "Barclays scales Claude to upgrade operations and client experience",
+   "summary": "Anthropic says Barclays is scaling Claude to upgrade its operations and client experience.",
+   "urls": [
+    "https://anthropic.com/news/barclays-scales-claude"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 28; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "Meta unveils Brain2Qwerty for brain-wave-to-text communication without surgery",
+   "summary": "Meta's blog presents Brain2Qwerty, a method turning brain waves into words without surgical implants.",
+   "urls": [
+    "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 38.0,
+   "reason": "meta_ai_blog rank 5; primary source present; single source (meta_ai_blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "Anthropic publishes 2026 Usage Policy update",
+   "summary": "Anthropic publishes an update to its 2026 Usage Policy; details limited to title.",
+   "urls": [
+    "https://anthropic.com/news/2026-usage-policy-update"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 38.0,
+   "reason": "anthropic_news rank 24; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 26,
+   "headline": "Google to make AI agents use its MCP servers, Gmail MCP lacks send email",
+   "summary": "Techstackups reports Google will require AI agents to use its MCP servers, noting the Gmail server cannot send email.",
+   "urls": [
+    "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+   ],
+   "outlets": [
+    "techstackups.com"
+   ],
+   "importance": 35.0,
+   "reason": "hn_front rank 17 with 116 points; 125 comments at observation; single source"
+  },
+  {
+   "arm": "classic",
+   "rank": 27,
+   "headline": "Anthropic announces Public Benefit Fund investment",
+   "summary": "Anthropic's news post titled 'Investing in the public benefit' is listed; the snippet is absent so details are unknown.",
+   "urls": [
+    "https://anthropic.com/news/public-benefit-fund"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 2; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 28,
+   "headline": "Anthropic publishes feature on AI-planned drive on Mars",
+   "summary": "Anthropic's feature page describes an AI-planned drive on Mars; only one primary source reports it.",
+   "urls": [
+    "https://anthropic.com/features/claude-on-mars"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 10; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 29,
+   "headline": "Anthropic publishes preparations for 2026 US midterms",
+   "summary": "Anthropic publishes its preparations for the 2026 US midterm elections.",
+   "urls": [
+    "https://anthropic.com/news/2026-us-midterms"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 20; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 30,
+   "headline": "Anthropic commits to American scientific discovery via Genesis Mission",
+   "summary": "Anthropic publishes a post on its commitment to American scientific discovery under the Genesis Mission.",
+   "urls": [
+    "https://anthropic.com/news/genesis-mission-commitment"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 25; primary source present; single source (anthropic_news)"
+  }
+ ],
+ "wall_s": 24.4,
+ "peak_rss_mb": 427.6,
+ "cost_usd": 0.0126,
+ "searches": null,
+ "notes": {
+  "observations": 3825
+ }
+}

@@ -26,11 +26,7 @@ def build_pool(days: list[str], beats: list[str], depth: int = POOL_DEPTH, seed:
     items: list[dict] = []
     for day in days:
         for beat in beats:
-            d = ROOT / day / beat
-            for path in sorted(d.glob("*.json")):
-                if path.name in ("collect_meta.json",) or path.name.endswith(".ledger.jsonl"):
-                    continue
-                res = read_arm(path)
+            for res in _arm_files(day, beat):
                 for s in res.stories[:depth]:
                     same_slice = (it for it in items if it["day"] == day and it["beat"] == beat)
                     match = next((it for it in same_slice if _same(s, it)), None)
@@ -96,10 +92,8 @@ def report(pool_path: Path) -> str:
     arm_runs = defaultdict(list)
     for day in days:
         for beat in beats:
-            for path in sorted((ROOT / day / beat).glob("*.json")):
-                if path.name != "collect_meta.json":
-                    res = read_arm(path)
-                    arm_runs[res.arm].append(res)
+            for res in _arm_files(day, beat):
+                arm_runs[res.arm].append(res)
 
     must_by_slice = defaultdict(set)
     for it in items:
@@ -148,4 +142,79 @@ def report(pool_path: Path) -> str:
             f"{p10:.2f} | {mean(rec):.2f} | {mean(ndcg):.2f} |"
         )
     lines.append(f"\n{len(items)} pooled stories, {len(ratings)} rated.")
+    return "\n".join(lines)
+
+
+# ---- per-day summary without ratings -------------------------------------------------------------
+
+
+def _arm_files(day: str, beat: str) -> list:
+    """Arm results for one day and beat (`<arm>.json`; not collect_meta, traces or ledgers)."""
+    out = []
+    for path in sorted((ROOT / day / beat).glob("*.json")):
+        if path.name == "collect_meta.json" or path.name.count(".") > 1:
+            continue
+        out.append(read_arm(path))
+    return out
+
+
+def _groups(runs: list, depth: int) -> list[dict]:
+    """Cross-arm story groups over each arm's top `depth` (same matching as the blind pool)."""
+    groups: list[dict] = []
+    for res in runs:
+        for s in res.stories[:depth]:
+            g = next((g for g in groups if _same(s, g)), None)
+            if g is None:
+                g = {"headline": s.headline, "urls": list(s.urls), "found_by": {}}
+                groups.append(g)
+            else:
+                g["urls"] = list(dict.fromkeys(g["urls"] + s.urls))
+            g["found_by"].setdefault(res.arm, s.rank)
+    return groups
+
+
+def summarize(day: str, beats: list[str], depth: int = 10) -> str:
+    """Markdown tables for one collected day: speed / memory / cost, outlets, top-`depth` overlap,
+    and the stories only one arm has in its top `depth`. No ratings needed."""
+    lines: list[str] = []
+    for beat in beats:
+        runs = [r for r in _arm_files(day, beat) if r.ok and r.stories]
+        failed = [r for r in _arm_files(day, beat) if not r.ok]
+        if not runs and not failed:
+            continue
+        groups = _groups(runs, depth)
+        lines += [f"### {beat}", ""]
+        lines += [
+            f"| Arm | Time (s) | Peak MB | Cost $ | Stories | Outlets (top {depth}) | Paywalled outlets | "
+            f"Only this arm (top {depth}) |",
+            "|---|---|---|---|---|---|---|---|",
+        ]
+        for r in runs:
+            outlets = {o for s in r.stories[:depth] for o in s.outlets}
+            pay = sorted(o for o in outlets if is_paywalled(o))
+            only = sum(1 for g in groups if list(g["found_by"]) == [r.arm])
+            cost = r.cost_usd if r.cost_usd is not None else r.notes.get("usage", {}).get("tokens")
+            cost_txt = (
+                f"{r.cost_usd:.4f}" if r.cost_usd is not None else (f"{cost:g} ER tokens" if cost else "-")
+            )
+            lines.append(
+                f"| {r.arm} | {r.wall_s} | {r.peak_rss_mb} | {cost_txt} | {len(r.stories)} | "
+                f"{len(outlets)} | {len(pay)} ({', '.join(pay)}) | {only} |"
+            )
+        for r in failed:
+            lines.append(f"| {r.arm} | failed: {(r.error or '')[:80]} | | | | | | |")
+        arms = [r.arm for r in runs]
+        lines += ["", f"Top-{depth} overlap (stories in both arms' top {depth}):", ""]
+        lines += ["| | " + " | ".join(arms) + " |", "|---" * (len(arms) + 1) + "|"]
+        for a in arms:
+            row = [str(sum(1 for g in groups if a in g["found_by"] and b in g["found_by"])) for b in arms]
+            lines.append(f"| {a} | " + " | ".join(row) + " |")
+        lines += ["", f"Only one arm (top {depth}):", ""]
+        for a in arms:
+            mine = sorted((g for g in groups if list(g["found_by"]) == [a]), key=lambda g: g["found_by"][a])
+            if mine:
+                lines.append(
+                    f"- **{a}**: " + "; ".join(f"{g['headline'][:90]} (#{g['found_by'][a]})" for g in mine)
+                )
+        lines.append("")
     return "\n".join(lines)

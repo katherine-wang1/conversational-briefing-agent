@@ -1,0 +1,648 @@
+{
+ "arm": "eventregistry",
+ "beat": "physical_ai",
+ "at": "2026-11-26T19:59:22.520711Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "eventregistry",
+   "rank": 1,
+   "headline": "Iran denies attacks on Kuwait, calls accusations attempt to exacerbate instability - TopNews",
+   "summary": "Two Italians working for Rheinmetall on air defence system killed Iran on Thursday denied staging a drone attack on Kuwait that killed two Italian technicians, calling such accusations an attempt to exacerbate instability. The Iranian armed forces have \"categorically and absolutely\" rejected accusations that they were responsible for the drone attack in Kuwait that killed the two Italian civilian technicians for the Rheinmetall company engaged in maintenance operations for antennas of the Skygu",
+   "urls": [
+    "https://www.ansa.it/english/news/2026/11/26/iran-denies-attacks-on-kuwait-calls-accusations-attempt-to-exacerbate-instability_d90cc59b-84ab-4ac6-a4d2-6cf1357f62d3.html",
+    "https://www.aa.com.tr/en/middle-east/iran-denies-attacking-vital-facility-in-kuwait/4139494",
+    "https://english.almanar.com.lb/article/155587/",
+    "https://en.irna.ir/news/86333502/Iran-denies-Kuwaiti-claims-of-attack-by-Iranian-forces",
+    "https://en.apa.az/asia/iran-denies-role-in-kuwait-drone-attack-that-killed-two-italians-538780",
+    "https://www.trtworld.com/article/15e5f52a1b26",
+    "https://www.timesofisrael.com/liveblog_entry/iran-denies-responsibility-for-deadly-attack-on-kuwait-air-defense-system/",
+    "https://www.presstv.co.uk/Detail/2026/11/26/781675/iran-dismisses-kuwaiti-claim-of-drone-attack-warns-against-us-israeli-false-flag-operation",
+    "https://www.presstv.co.uk/Detail/2026/11/26/781684/fm-araghchi-rejects-anti-iran-accusations-in-call-with-italian-fm-offers-investigation",
+    "https://tass.com/world/2225555"
+   ],
+   "outlets": [
+    "ansa.it",
+    "aa.com.tr",
+    "english.almanar.com.lb",
+    "en.irna.ir",
+    "en.apa.az",
+    "trtworld.com",
+    "timesofisrael.com",
+    "presstv.co.uk",
+    "tass.com"
+   ],
+   "importance": 100.0,
+   "reason": "252 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 2,
+   "headline": "UK conscription warning as 100,000 MoD letters 'step one' over WW3 concerns",
+   "summary": "EXCLUSIVE: The warning comes after around 100,000 former British military personnel have been contacted by the MoD. Britain has been warned it is relying on the \"goodwill of its adversaries\" as 100,000 former military personnel receive letters from the Ministry of Defence asking them to update their details amid growing international tensions. Thousands of army reservists have been sent a letter from the Ministry of Defence to check their contact details and skills, Defence Secretary Wes Streeti",
+   "urls": [
+    "https://www.express.co.uk/news/uk/2269441/uk-conscription-warning-100000-mod",
+    "https://www.walesonline.co.uk/news/uk-news/mod-sends-letters-100000-british-34968494",
+    "https://www.express.co.uk/news/uk/2269372/ww3-fears-brits-urgent-mod-letters",
+    "https://www.israelhayom.com/2026/11/26/britain-contacts-100000-veterans-in-preparation-for-possible-war/",
+    "https://uk.news.yahoo.com/mod-prepares-veterans-called-war-000100564.html",
+    "https://www.irishmirror.ie/news/world-news/uk-military-chiefs-write-100000-37917259",
+    "https://endtimeheadlines.org/2026/11/uk-tells-100000-military-reservists-to-prepare-for-war/",
+    "https://www.examinerlive.co.uk/news/uk-world-news/ww3-fears-rise-mod-sends-34967898",
+    "https://www.birminghammail.co.uk/news/uk-news/mod-writes-100000-veterans-amid-34968496",
+    "https://www.straitstimes.com/world/europe/around-100000-british-defence-veterans-contacted-amid-heightened-threat",
+    "https://english.alarabiya.net/News/world/2026/11/26/-around-100000-uk-defense-veterans-contacted-amid-heightened-threat-"
+   ],
+   "outlets": [
+    "express.co.uk",
+    "walesonline.co.uk",
+    "israelhayom.com",
+    "uk.news.yahoo.com",
+    "irishmirror.ie",
+    "endtimeheadlines.org",
+    "examinerlive.co.uk",
+    "birminghammail.co.uk",
+    "straitstimes.com",
+    "english.alarabiya.net"
+   ],
+   "importance": 70.0,
+   "reason": "177 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 3,
+   "headline": "Five Russian military jets hit in airfield strike, says Ukraine",
+   "summary": "Ukraine has said it damaged five Russian military aircraft in an attack on Russia's Savasleyka airfield, 300km (185 miles) east of Moscow. Three MiG-31 and two Su-34s aircraft were hit, Kyiv's General Staff said, adding that the extent of the damage was still being assessed but that \"there may be even better news to come\". It did not elaborate on what weapons it had used to hit the airfield. Russia has not commented on the strikes. The airfield at Savasleyka, in Russia's Nizhny Novgorod region",
+   "urls": [
+    "https://www.bbc.co.uk/news/articles/ck9q8xp5r5pgo",
+    "http://www.uawire.org/ukraine-says-it-has-struck-russian-airfield-and-two-oil-refineries",
+    "https://defence-blog.com/three-mig-31s-and-two-su-34s-hit-at-russian-base-ukraine-says/",
+    "https://www.ukrinform.net/rubric-ato/4188463-ukrainian-defense-forces-strike-savasleyka-airfield-in-russia.html",
+    "https://malawi24.com/?p=216397",
+    "https://www.aljazeera.com/news/2026/11/26/ukraine-attacks-russian-military-base-says-five-planes-struck",
+    "https://united24media.com/war-in-ukraine/ukraine-hits-three-kinzhal-missile-carriers-and-two-su-34s-in-single-overnight-strike-24704",
+    "https://theinsightinternational.com/ukraine-strikes-savasleyka-airfield-mig-31-su-34-samara-refineries-november-25/",
+    "https://abcnews.com.np/ukraine-reports-damaging-five-russian-jets-in-strike-on-savasleyka-airbase/",
+    "https://www.kyivpost.com/post/91162",
+    "https://tribune.com.pk/story/2642375/ukraine-strikes-airbase-deep-inside-russia"
+   ],
+   "outlets": [
+    "bbc.com",
+    "uawire.org",
+    "defence-blog.com",
+    "ukrinform.net",
+    "malawi24.com",
+    "aljazeera.com",
+    "united24media.com",
+    "theinsightinternational.com",
+    "abcnews.com.np",
+    "kyivpost.com",
+    "tribune.com.pk"
+   ],
+   "importance": 43.0,
+   "reason": "108 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 4,
+   "headline": "Two Italians killed after Iranian strike in Kuwait",
+   "summary": "Two Italian nationals have died after an Iranian strike on a facility in Kuwait, Italy's foreign ministry has said. The pair were technicians working for German arms manufacturing company Rheinmetall, the ministry added. Kuwait's defence ministry earlier said that four people - the two Italians, a Kuwaiti national and Pakistani national - had been injured from falling shrapnel after a number of drones from Iran were detected and intercepted. It comes just over a week after Kuwait said it had r",
+   "urls": [
+    "https://www.bbc.com/news/articles/c39w9y5dx4k5o",
+    "https://www.aa.com.tr/en/middle-east/kuwait-says-4-injured-in-iranian-drone-attack-on-vital-facility/4138869",
+    "https://www.newsofbahrain.com/en/article/iranian-drone-attack-injures-four-in-kuwait",
+    "https://english.news.cn/20261126/d2e545b8f2414bd1b1546c528985f7c9/c.html",
+    "https://newscord.org/article/iranian-drone-attack-kills-two-italians-at-kuwaits-vital-site-kuwait-says--Story_20261126_TwoItalianskilledbyda9daefeb",
+    "https://www.al-monitor.com/originals/2026/11/iranian-drone-attack-kuwait-leaves-two-italians-dead",
+    "https://www.tokenpost.com/news/regulation/62824",
+    "https://english.news.cn/20261126/01c3e70ed7ac45c8a4e39f521a128604/c.html",
+    "https://gulfnews.com/world/gulf/kuwait/four-injured-in-iranian-drone-attack-on-vital-facility-in-kuwait-1.500762119",
+    "https://gulfnews.com/world/gulf/kuwait/two-italians-killed-two-others-injured-in-iranian-drone-attack-on-kuwait-1.500762119",
+    "https://news.az/news/kuwait-says-four-injured-in-iranian-attack-on-vital-site"
+   ],
+   "outlets": [
+    "bbc.com",
+    "aa.com.tr",
+    "newsofbahrain.com",
+    "english.news.cn",
+    "newscord.org",
+    "al-monitor.com",
+    "tokenpost.com",
+    "gulfnews.com",
+    "news.az"
+   ],
+   "importance": 38.0,
+   "reason": "95 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 5,
+   "headline": "UK moving military aircraft to hangars at night over possible drone threats, media reports say",
+   "summary": "LONDON, Nov 25 (Reuters) - Britain's Royal Air Force is moving aircraft to hangars and shelters at night to protect them from possible drone threats, British media reported on Wednesday. The Times newspaper and Sky News, which both reported the measures without citing sources, said it also included plans to use anti-drone netting to protect exposed aircraft. The Ministry of Defence did not immediately respond to a request for comment on the reports. The reports came after Britain's defence min",
+   "urls": [
+    "https://www.aol.com/articles/uk-raf-moving-aircraft-hangars-121827000.html",
+    "https://www.firstpost.com/world/uk-moves-raf-aircraft-into-hangars-at-night-amid-rising-drone-threat-plans-anti-drone-netting-reports-14062590.html",
+    "https://www.arabtimesonline.com/news/britains-royal-air-force-moves-aircraft-into-shelters-at-night-amid-fears-of-drone-attacks/",
+    "https://www.straitstimes.com/world/europe/britain-moving-military-aircraft-to-hangars-at-night-over-possible-drone-threats-media-reports-say",
+    "https://www.independent.ie/world-news/uk-raf-moving-aircraft-to-hangars-at-night-over-possible-drone-threats/a/165085516.html",
+    "https://www.telegraph.co.uk/news/2026/11/25/raf-drone-nets-to-protect-aircraft-at-british-bases/",
+    "https://en.royanews.tv/news/76485/UK-said-to-move-warplanes-to-hangars-at-night-to-protect-from-drone-threats",
+    "https://www.lse.co.uk/news/uk-moving-military-aircraft-to-hangars-at-night-over-possible-drone-threats-media-reports-say-xtspjla507l2b1h.html",
+    "https://www.independent.co.uk/news/uk/home-news/raf-base-aircraft-drone-threat-lakenheath-fairford-b3091677.html",
+    "https://uk.news.yahoo.com/raf-moving-aircraft-hangars-night-101500129.html"
+   ],
+   "outlets": [
+    "aol.com",
+    "firstpost.com",
+    "arabtimesonline.com",
+    "straitstimes.com",
+    "independent.ie",
+    "telegraph.co.uk",
+    "en.royanews.tv",
+    "lse.co.uk",
+    "independent.co.uk",
+    "uk.news.yahoo.com"
+   ],
+   "importance": 37.0,
+   "reason": "92 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 6,
+   "headline": "25 Tankers Hit, Hormuz Traffic Down 40%: Why Isn't The World Facing An Oil Price Shock?",
+   "summary": "Traffic through the Strait of Hormuz fell by over 40% in November. Around 25 tankers have been reportedly hit. But oil prices have not risen in proportion to the disruption Iran's Foreign Ministry said on Monday that they would not tolerate the naval blockade by the United States at the Strait of Hormuz, and will use all \"available tools\" to confront it as Tehran felt the oil squeeze in November. Reports suggest that vessel traffic through the Strait fell by more than 40% between the first and",
+   "urls": [
+    "https://www.news18.com/explainers/25-tankers-hit-hormuz-traffic-down-40-why-isnt-the-world-facing-an-oil-price-shock-shil-ws-l-10439944.html",
+    "https://english.almayadeen.net/news/politics/two-oil-tankers-catch-fire-after-striking-mines-in-strait-of",
+    "https://oilprice.com/Latest-Energy-News/World-News/Iran-Says-LNG-Carrier-Exploded-After-Hitting-a-Mine-in-Hormuz.html",
+    "https://oilprice.com/Latest-Energy-News/World-News/Iran-Reports-Fresh-Tanker-Explosions-as-Hormuz-Attacks-Intensify.html",
+    "https://news.az/news/irgc-says-it-targeted-container-ship-in-strait-of-hormuz",
+    "https://www.tokenpost.com/news/investing/62809",
+    "https://en.irna.ir/news/86331897/Two-violating-oil-tankers-explode-on-unauthorized-route-in-Strait",
+    "https://english.almanar.com.lb/article/154712/",
+    "https://www.presstv.co.uk/Detail/2026/11/25/781551/two-oil-tankers-catch-fire-after-hitting-naval-mines-in-strait-of-hormuz-irgc",
+    "https://www.aa.com.tr/en/middle-east/iran-says-offending-vessel-targeted-in-southern-strait-of-hormuz/4136377",
+    "https://english.almanar.com.lb/article/154677/"
+   ],
+   "outlets": [
+    "news18.com",
+    "english.almayadeen.net",
+    "oilprice.com",
+    "news.az",
+    "tokenpost.com",
+    "en.irna.ir",
+    "english.almanar.com.lb",
+    "presstv.co.uk",
+    "aa.com.tr"
+   ],
+   "importance": 36.0,
+   "reason": "90 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 7,
+   "headline": "Laser shoots down Russian drone in world first, says Ukraine",
+   "summary": "Ukraine used a laser weapon to destroy a Russian drone for the first time in combat, according to a top Ukrainian official. The laser shot down a Russian Geran drone near an unspecified critical infrastructure site in the war-torn country, Serhii Beskrestnov, an adviser to Ukrainian President Volodymyr Zelensky's office, said in a post to social media on Wednesday. Geran drones are Russia's domestically-made version of the Iranian-designed Shahed unmanned aerial vehicles (UAVs), which Moscow ha",
+   "urls": [
+    "https://www.newsweek.com/laser-shoots-down-russian-drone-in-world-first-says-ukraine-12769954",
+    "https://euromaidanpress.com/2026/11/25/for-the-first-time-ukrainian-laser-shoots-down-russian-jet-drone-presidential-defense-tech-adviser-says-mass-production-too-early-he-adds/",
+    "https://www.ukrinform.net/rubric-defense/4188627-ukraines-blysk-laser-makes-world-first-shooting-down-russian-jetpowered-drone.html",
+    "https://glavnoe.in.ua/en/news-en/ukrainian-combat-laser-shoots-down-jet-powered-shahed-for-first-time-flash-shares-video",
+    "https://united24media.com/war-in-ukraine/ukraine-achieves-world-first-by-downing-jet-powered-drone-with-combat-laser-24715",
+    "https://www.sofx.com/ukraines-blysk-laser-downs-jet-powered-russian-drone-for-first-time/",
+    "https://www.aerotime.aero/articles/ukraine-blysk-laser-russian-jet-powered-geran-drone",
+    "https://en.interfax.com.ua/news/general/1242463.html",
+    "https://kyivindependent.com/ukrainian-combat-lasers-intercept-russian-jet-powered-drone-for-first-time/",
+    "https://rubryka.com/en/2026/11/25/ukrayinska-lazerna-systema-ppo-vpershe-zbyla-rosijskyj-reaktyvnyj-dron-geran/",
+    "https://www.pravda.com.ua/eng/news/2026/11/25/8064653/"
+   ],
+   "outlets": [
+    "newsweek.com",
+    "euromaidanpress.com",
+    "ukrinform.net",
+    "glavnoe.in.ua",
+    "united24media.com",
+    "sofx.com",
+    "aerotime.aero",
+    "en.interfax.com.ua",
+    "kyivindependent.com",
+    "rubryka.com",
+    "pravda.com.ua"
+   ],
+   "importance": 28.0,
+   "reason": "71 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 8,
+   "headline": "Russia burning as Ukraine rocks country with 2 huge strikes - Putin humiliated",
+   "summary": "Ukrainian forces hammered key Russian targets in a devastating wave of overnight strikes deep inside enemy territory. Vladimir Putin's war machine suffered another major blow overnight after Ukrainian forces launched a coordinated wave of long-range attacks, setting two key Russian oil facilities ablaze and slamming a military airfield. The General Staff of the Armed Forces of Ukraine confirmed on Thursday (November 26) that its forces struck a Transneft oil transportation and storage hub in the",
+   "urls": [
+    "https://www.express.co.uk/news/world/2269579/russia-burning-ukraine-strike-oil-depots-putin-humilated-rus",
+    "https://www.ukrinform.net/rubric-ato/4188879-ukraine-strikes-russian-airfield-and-transneft-oil-hub.html",
+    "https://en.interfax.com.ua/news/general/1242844.html",
+    "https://glavnoe.in.ua/en/news-en/airfield-housing-su-34-jets-and-major-oil-hub-ukraine-strikes-two-key-russian-facilities-in-one-night",
+    "https://en.lb.ua/news/2026/11/26/51584_defence_forces_strike_russian.html",
+    "https://censor.net/en/news/4035727/general-staff-confirmed-destruction-of-marinovka-airfield-and-transneft-oil-terminals",
+    "https://www.pravda.com.ua/eng/news/2026/11/26/8064783/",
+    "http://www.uawire.org/ukraine-says-neptune-missiles-strike-russian-military-airfield",
+    "https://euromaidanpress.com/2026/11/26/ukraine-strikes-russias-marinovka-airbase/",
+    "https://www.aol.co.uk/articles/russia-burning-ukraine-strikes-two-162200000.html"
+   ],
+   "outlets": [
+    "express.co.uk",
+    "ukrinform.net",
+    "en.interfax.com.ua",
+    "glavnoe.in.ua",
+    "en.lb.ua",
+    "censor.net",
+    "pravda.com.ua",
+    "uawire.org",
+    "euromaidanpress.com",
+    "aol.co.uk"
+   ],
+   "importance": 22.0,
+   "reason": "55 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 9,
+   "headline": "Five Mexicans arrested in Nigeria over $227m meth lab",
+   "summary": "Five Mexican nationals and a Nigerian businessman have been arrested in Nigeria after authorities uncovered an industrial-scale methamphetamine laboratory, the country's drug enforcement agency says. More than 1.5 tonnes of the highly addictive synthetic drug, commonly known as meth, was seized from the facility in the south-eastern state of Enugu. The haul included both finished drugs and meth still being produced. The National Drug Law Enforcement Agency (NDLEA) estimates the drugs are worth",
+   "urls": [
+    "https://www.bbc.com/news/articles/c6x20lw8955no",
+    "https://hallmarknews.com/ndlea-uncovers-n304bn-meth-lab-in-enugu-arrests-nigerian-kingpin-five-mexicans/",
+    "https://www.tvcnews.tv/ndlea-busts-226m-meth-lab-in-enugu-arrests-nigerian-five-mexicans/",
+    "https://thestreetjournal.org/ndlea-dismantles-industrial-scale-meth-lab-in-enugu-arrests-nigerian-drug-baron-5-mexicans-photos/",
+    "https://saharareporters.com/2026/11/25/nigerian-agency-ndlea-busts-n304billion-meth-lab-enugu-arrests-five-mexicans",
+    "https://www.vanguardngr.com/2026/11/ndlea-busts-%E2%82%A6303-9bn-meth-lab-in-enugu-arrests-nigerian-five-mexicans/",
+    "https://www.wionews.com/world/ndlea-dismantles-industrial-meth-lab-in-enugu-arrests-drug-baron-and-five-mexican-specialists-1795622118942",
+    "https://thewillnews.com/ndlea-dismantles-n303-9bn-meth-lab-in-enugu-arrests-drug-baron-five-mexicans/",
+    "https://guardian.ng/news/nigeria/metro/ndlea-busts-n303-9b-worth-meth-lab-arrests-kingpin-five-mexicans/",
+    "https://dailytrust.com/ndlea-busts-n304bn-meth-lab-in-enugu/",
+    "https://www.arise.tv/ndlea-busts-enugu-meth-lab-arrests-nigerian-drug-baron-five-mexican-specialists/"
+   ],
+   "outlets": [
+    "bbc.com",
+    "hallmarknews.com",
+    "tvcnews.tv",
+    "thestreetjournal.org",
+    "saharareporters.com",
+    "vanguardngr.com",
+    "wionews.com",
+    "thewillnews.com",
+    "guardian.ng",
+    "dailytrust.com",
+    "arise.tv"
+   ],
+   "importance": 21.0,
+   "reason": "54 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 10,
+   "headline": "Drones attack Russian chemical plant supplying materials for military explosives - video",
+   "summary": "Drones attacked a thermal power plant and a chemical plant supplying materials used to make explosives for Russia's defence industry in the city of Nevinnomyssk in Russia's Stavropol Krai on the night of 25-26 November. Source: Ukrainian monitoring Telegram channels Exilenova+ and Supernova+; Russian media outlet Astra; Stavropol Krai Governor Vladimir Vladimirov Quote from Astra: \"The industrial zone of Nevinnomyssk is under drone attack. It is home to a plant that supplies chemicals used in e",
+   "urls": [
+    "https://www.pravda.com.ua/eng/news/2026/11/26/8064712/",
+    "https://censor.net/en/news/4035664/drones-attacked-stavropol-krai-in-russian-federation-nevinnomyssk-azot-and-power-station-were",
+    "https://kyivindependent.com/ukrainian-drones-attack-key-russian-fertilizer-plant-linked-to-explosives-production-in-stavropol-krai-local-official-says/",
+    "https://www.eng.kavkaz-uzel.eu/articles/80476",
+    "https://www.eng.kavkaz-uzel.eu/articles/80471",
+    "https://euromaidanpress.com/2026/11/26/ukraine-sets-a-russian-pipeline-hub-alight-and-returns-to-an-explosives-chemistry-plant-attacked-at-least-seven-times-before/",
+    "http://www.uawire.org/attack-hits-power-station-in-russia-s-stavropol-region",
+    "https://www.euronews.com/2026/11/26/russia-launches-ballistic-missile-and-drone-barrage-on-ukraine-killing-at-least-three"
+   ],
+   "outlets": [
+    "pravda.com.ua",
+    "censor.net",
+    "kyivindependent.com",
+    "eng.kavkaz-uzel.eu",
+    "euromaidanpress.com",
+    "uawire.org",
+    "euronews.com"
+   ],
+   "importance": 18.0,
+   "reason": "46 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 11,
+   "headline": "German chancellor: Russia wants more than Ukraine",
+   "summary": "German Chancellor Friedrich Merz has warned that Russia wants much more than just to seize Ukraine and is therefore \"escalating on a massive scale\" in various regions. Source: The Guardian, as reported by European Pravda Quote from Merz's speech on the budget on 25 November: \"Russia knows exactly what it wants and Russia wants more than Ukraine. Anyone who fails to grasp this either does not understand the world as it is, or is pursuing an entirely different agenda - one that stands in oppositi",
+   "urls": [
+    "https://www.pravda.com.ua/eng/news/2026/11/25/8064567/"
+   ],
+   "outlets": [
+    "pravda.com.ua"
+   ],
+   "importance": 17.0,
+   "reason": "42 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 12,
+   "headline": "An exec who helped turn Starlink into SpaceX's cash machine is leaving",
+   "summary": "SpaceX has lost a longtime executive overseeing some operations at Starlink, its money-spinning satellite internet division. Chad Gibbs, SpaceX's vice president of business operations, is leaving the company after more than a decade, according to an internal announcement seen by Business Insider. The McKinsey alumnus oversaw the growth of Starlink's Mobile service, as well as the satellite internet network's supply chain, sales, and customer support teams. Gibbs' LinkedIn page has been changed",
+   "urls": [
+    "https://www.businessinsider.com/spacex-exec-chad-gibbs-leaves-starlink-2026-11"
+   ],
+   "outlets": [
+    "businessinsider.com"
+   ],
+   "importance": 15.0,
+   "reason": "38 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 13,
+   "headline": "Amitabh Bachchan's 'Jalsa' Home Named In Email Warning Of 26/11-Style Attacks",
+   "summary": "Amitabh Bachchan had received a bomb threat earlier this month too. Mumbai's Mayor Ritu Tawde and Brihanmumbai Municipal Corporation (BMC) Commissioner Ashwini Bhide have received an email warning of multiple attacks across the city, including at actor Amitabh Bachchan's bungalow Jalsa. The threat email came on Thursday, November 26, the 18 anniversary of the Mumbai terror attacks in which 166 people were killed in 2088. The email, received at 10:12 am, warns of a possible repeat of the 26/11 te",
+   "urls": [
+    "https://www.ndtv.com/india-news/amitabh-bachchans-jalsa-home-named-in-email-warning-of-26-11-style-attacks-12379999"
+   ],
+   "outlets": [
+    "ndtv.com"
+   ],
+   "importance": 14.0,
+   "reason": "35 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 14,
+   "headline": "Russian forces hit Kyiv with ballistic missiles, 7 wounded, mayor says",
+   "summary": "Russia struck Kyiv with ballistic missiles overnight, wounding seven people and hitting a shopping center and two other buildings, Mayor Vitali Klitschko said, while Moscow said it had struck drone-related sites in the city. A series of loud explosions echoed across Kyiv overnight and a large fire was still burning on Thursday morning on Kyiv's Left Bank, sending thick columns of dark smoke into the clear sky. Mayor Vitali Klitschko warned residents on Telegram to remain in shelters, late on",
+   "urls": [
+    "https://nypost.com/2026/11/26/world-news/russian-forces-hit-kyiv-with-ballistic-missiles-7-wounded-mayor-says/"
+   ],
+   "outlets": [
+    "nypost.com"
+   ],
+   "importance": 13.0,
+   "reason": "32 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 15,
+   "headline": "King Mohammed VI Chairs Signing of Two Accords to Fund Defense Industry Roadmap",
+   "summary": "Marrakech - King Mohammed VI, accompanied by Crown Prince Moulay El Hassan, chaired a ceremony at the Royal Palace in Rabat on Wednesday for the signing of two framework agreements covering the financing of Morocco's defense and security industry roadmap and the mobilization of the national private and financial sector for its rollout. The ceremony opened with an address by Ali Seddiki, Director General of the Moroccan Investment and Export Development Agency (AMDIE), whom the King has tasked wi",
+   "urls": [
+    "https://www.moroccoworldnews.com/2026/11/348160/king-mohammed-vi-chairs-signing-of-two-accords-to-fund-defense-industry-roadmap/"
+   ],
+   "outlets": [
+    "moroccoworldnews.com"
+   ],
+   "importance": 12.0,
+   "reason": "30 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 16,
+   "headline": "Pentagon denies favouritism after reports of $15 billion loan to Trump Jr.-linked startup",
+   "summary": "A ProPublica investigation said Tuesday that the Pentagon is considering extending one of the largest government-backed loans in US history to Hadrian Automation, a California-based defense manufacturing startup backed by investors including Donald Trump Jr.'s venture capital firm. According to the report, the proposed financing of $15 billion would help the company build automated factories producing precision components for defense, aerospace and commercial customers. However, the Pentagon has",
+   "urls": [
+    "https://www.hindustantimes.com/world-news/us-news/pentagon-denies-favouritism-after-reports-of-15-billion-loan-to-trump-jr-linked-startup-101795583477929.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 10.0,
+   "reason": "26 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 17,
+   "headline": "China, Cambodia stage joint military drills",
+   "summary": "Staunch allies China and Cambodia began joint military exercises on Wednesday, which Phnom Penh said were the largest yet, featuring nearly 3,000 personnel across three locations. The eighth \"Golden Dragon\" exercises will focus on \"joint counterterrorism and anti-piracy operations\" as well as humanitarian relief, and run until mid-December, China's defence ministry said in a statement. The opening ceremony was held at Ream Naval Base, located off Cambodia's southern coast in the Gulf of Thailan",
+   "urls": [
+    "https://sg.news.yahoo.com/china-cambodia-stage-joint-military-064620872.html"
+   ],
+   "outlets": [
+    "sg.news.yahoo.com"
+   ],
+   "importance": 10.0,
+   "reason": "25 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 18,
+   "headline": "'Brothers in Crisis': Abiy Pushes Peace Talks As Sudan Slams Ethiopia's RSF Links | Firstpost Africa",
+   "summary": "Watch this video as Firstpost explains how Ethiopian Prime Minister Abiy Ahmed has offered to host inclusive talks in a bid to end the devastating war in Sudan and push toward a national unity government, declaring it is no longer acceptable to stand by with folded arms as the tragedy deepens. Yet Sudan's army-aligned government under Gen. Abdel Fattah al-Burhan has rejected Ethiopia as a mediator -- accusing Addis Ababa of backing the Rapid Support Forces (RSF) and launching cross-border drones",
+   "urls": [
+    "https://www.firstpost.com/web-show/firstpost-africa/brothers-in-crisis-abiy-pushes-peace-talks-as-sudan-slams-ethiopias-rsf-links-firstpost-africa-vd2334237/"
+   ],
+   "outlets": [
+    "firstpost.com"
+   ],
+   "importance": 10.0,
+   "reason": "25 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 19,
+   "headline": "UN condemns deadly drone strikes in Sudan's Blue Nile state",
+   "summary": "Strikes killed 17 civilians in Ed Damazin, says UN, as Sudanese envoy holds talks with RSF-led alliance The UN on Wednesday condemned drone strikes in Sudan's Blue Nile state that it said killed 17 civilians in the state capital, Ed Damazin. \"We remain deeply concerned by the escalation of hostilities in Blue Nile State, which has reportedly resulted in civilian deaths and injuries,\" spokesman Stephane Dujarric told reporters. Citing local sources, Dujarric said a wave of drone strikes Tuesday",
+   "urls": [
+    "https://www.aa.com.tr/en/africa/un-condemns-deadly-drone-strikes-in-sudans-blue-nile-state/4137881"
+   ],
+   "outlets": [
+    "aa.com.tr"
+   ],
+   "importance": 10.0,
+   "reason": "24 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 20,
+   "headline": "Why Himanta believes defence facility in Assam could boost Army in Northeast",
+   "summary": "Rs 50-crore facility by Mumbai firm to start production by January 2028; Assam has earmarked 2,000 acres for defence park in Jagiroad A new defence manufacturing facility in Assam will be a boost for the Army, Chief Minister Himanta Biswa Sarma said on Wednesday, highlighting that a fourth of the Army is positioned in the Northeast. Sarma, who laid the foundation stone for a defence manufacturing facility in Rangia on Wednesday, said this will be a first not only for Assam but also for the Nort",
+   "urls": [
+    "https://indianexpress.com/article/india/himanta-biswa-sarma-believes-defence-facility-assam-boost-army-northeast-10978388/"
+   ],
+   "outlets": [
+    "indianexpress.com"
+   ],
+   "importance": 9.0,
+   "reason": "23 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 21,
+   "headline": "UAV strike on high-rise building in Kharkiv: two people killed",
+   "summary": "On the morning of 26 November, a Russian drone struck a multi-storey residential block in the Novobavarskyi district of Kharkiv. Two people were killed in the attack, and there are also casualties. According to Censor.NET, this was reported by Oleh Synehubov, head of the Kharkiv Regional State Administration, and Mayor Ihor Terekhov. According to Terekhov, a fire broke out in the high-rise building after the drone struck it. An apartment on the 15th floor was on fire. There were also reports of",
+   "urls": [
+    "https://censor.net/en/news/4035667/uav-strike-on-high-rise-building-in-kharkiv-two-people-killed"
+   ],
+   "outlets": [
+    "censor.net"
+   ],
+   "importance": 8.0,
+   "reason": "19 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 22,
+   "headline": "EU Curbs Exports to 15 Russian Defense Companies",
+   "summary": "In brief: The Council of the EU added on Wednesday, Nov. 25, 15 Russian entities linked to Moscow's military-industrial complex to its list of companies facing tighter export controls on dual-use goods and advanced technologies, while removing one. The measure follows the EU's largest sanctions listings in October, as Brussels seeks a direct role in peace negotiations with Russia. The EU continues to target the network supporting the Kremlin's war effort, imposing tighter export restrictions on",
+   "urls": [
+    "https://www.kyivpost.com/post/91205"
+   ],
+   "outlets": [
+    "kyivpost.com"
+   ],
+   "importance": 7.0,
+   "reason": "17 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 23,
+   "headline": "China's defence ministry urges Japan to stop 'stirring up' South China Sea disputes By Reuters",
+   "summary": "BEIJING, Nov 26 (Reuters) - China's defence ministry urged Japan on Thursday to stop \"stirring up trouble\" over the South China Sea after a spokesperson was asked about deepening cooperation between Tokyo and the Philippines, both formal US military allies. The comments were in response to an announcement earlier this month that Japan will provide the Philippines with radars and drones to boost its coastal surveillance capabilities. Chinese and Philippine coastguard vessels frequently clash nea",
+   "urls": [
+    "https://www.investing.com/news/world-news/chinas-defence-ministry-urges-japan-to-stop-stirring-up-south-china-sea-disputes-5052312"
+   ],
+   "outlets": [
+    "investing.com"
+   ],
+   "importance": 7.0,
+   "reason": "17 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 24,
+   "headline": "Morgan Stanley downgrades Ambarella stock rating on memory issues By Investing.com",
+   "summary": "Investing.com - Morgan Stanley downgraded Ambarella (NASDAQ:AMBA) from Overweight to Equalweight and lowered its price target to $42.00 from $70.00. The firm cited temporary memory supply setbacks affecting the company's business. The stock has shed ~19% in a single week and is trading near its 52-week low of $44.28, though InvestingPro data suggests the shares currently appear undervalued relative to their Fair Value -- a signal worth watching for contrarian investors. Ambarella reported revenu",
+   "urls": [
+    "https://www.investing.com/news/analyst-ratings/morgan-stanley-downgrades-ambarella-stock-rating-on-memory-issues-93CH-5049757"
+   ],
+   "outlets": [
+    "investing.com"
+   ],
+   "importance": 6.0,
+   "reason": "16 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 25,
+   "headline": "Power outages Hit 5 states on Thanksgiving- What energy providers are saying",
+   "summary": "Severe weather has caused power outages in five states, potentially affecting Thanksgiving for thousands of Americans. Parts of Illinois, Missouri, North Carolina, Maryland and Virginia were experiencing outages on Thursday morning, according to PowerOutage.us, with emergency crews working overtime to fix it. In a message posted on Wednesday night, Dominion Energy, which services Virginia and North Carolina, said they were preparing for heavy rain and strong winds overnight, and that they would",
+   "urls": [
+    "https://www.newsweek.com/power-outages-hit-states-on-thanksgiving-energy-providers-12770468"
+   ],
+   "outlets": [
+    "newsweek.com"
+   ],
+   "importance": 6.0,
+   "reason": "14 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 26,
+   "headline": "India's drone-killer Bhargavastra clears trials in major air defence boost",
+   "summary": "The trials mark a key milestone in the development of Bhargavastra, an indigenous system aimed at addressing the rapidly evolving threat posed by drones and drone swarms on the battlefield. India has successfully completed development trials of Bhargavastra, its first indigenously designed and developed two-layer, vehicle-mounted counter-swarm drone system, at the Pokaran field firing ranges in Rajasthan. This marks a major step in strengthening India's air defence capabilities against drone att",
+   "urls": [
+    "https://www.indiatoday.in/india/story/bhargavastra-counter-drone-system-completes-pokaran-development-trials-air-defence-3047615-2026-11-26"
+   ],
+   "outlets": [
+    "indiatoday.in"
+   ],
+   "importance": 5.0,
+   "reason": "12 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 27,
+   "headline": "Zamfara Governor Earmarks \u20a61.47bn To Arm Youths Against Bandits, Vow No Negotiation",
+   "summary": "The Zamfara State Government has earmarked \u20a61.47 billion to arm youths across the state to defend their communities against bandits and kidnappers. Governor Dauda Lawal disclosed this on Thursday while hosting leaders and youths of Tsafe East State Constituency of Tsafe Local Government Area at Government House, Gusau. Lawal said the intervention would involve providing *\u20a610 million to each of the 147 political wards* in the state to enable communities to acquire firearms and defend themsel",
+   "urls": [
+    "https://leadership.ng/zamfara-governor-earmarks-%E2%82%A61-47bn-to-arm-youths-against-bandits-vow-no-negotiation/"
+   ],
+   "outlets": [
+    "leadership.ng"
+   ],
+   "importance": 5.0,
+   "reason": "12 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 28,
+   "headline": "Green Aero raises $14 million to develop jet engines and combat drones",
+   "summary": "Green Aero has raised $14 million in a Series A funding round led by Crane Ventures to scale up jet engine development, expand testing facilities and accelerate the development of autonomous combat drones and collaborative combat aircraft in India. Green Aero, a deep-tech aerospace and defence technology company, has raised $14 million in Series A funding, led by Crane Ventures. The round also saw participation from 3one4 Capital, Antler Elevate and returning investors pi Ventures, Antler India",
+   "urls": [
+    "https://www.business-standard.com/companies/news/green-aero-raises-14-million-to-develop-jet-engines-and-combat-drones-126112501253_1.html"
+   ],
+   "outlets": [
+    "business-standard.com"
+   ],
+   "importance": 4.0,
+   "reason": "11 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 29,
+   "headline": "San Francisco Waymo passenger left horrified after finding handgun on seat",
+   "summary": "A California Waymo rider was left horrified after finding a loaded handgun in the back seat of the driverless car. Stefano Scalia, from San Francisco, found the Colt after getting into one of the robotic vehicles Tuesday night on his way to Cole Valley. \"I got a @Waymo in north beach back to Cole Valley and when I got in what I thought was a novelty lighter was a loaded handgun - a colt .25,\" Scalia posted on X. \"I was a firearms instructor so I rendered the gun safe. There was a round in the",
+   "urls": [
+    "https://nypost.com/2026/11/25/us-news/san-francisco-waymo-passenger-left-horrified-after-finding-handgun-on-seat/"
+   ],
+   "outlets": [
+    "nypost.com"
+   ],
+   "importance": 4.0,
+   "reason": "11 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 30,
+   "headline": "XPeng unveils embodied AI architecture to bridge cars and robots",
+   "summary": "Chinese NEV maker XPeng unveiled a new embodied artificial intelligence architecture on Wednesday, outlining a strategy to extend technologies developed for smart cars to humanoid robots and other physical AI applications. The Turing Embodied AI Architecture, introduced at the company's 2026 Tech Day in Guangzhou, capital of Guangdong province, consists of four layers: System 2, System 1, System 0 and the physical body. They are designed to work together to connect AI reasoning, action planning",
+   "urls": [
+    "https://www.chinadaily.com.cn/a/202611/26/WS6b078fcde4b03ebf8519ec0e.html"
+   ],
+   "outlets": [
+    "chinadaily.com.cn"
+   ],
+   "importance": 4.0,
+   "reason": "11 articles in the event cluster"
+  }
+ ],
+ "wall_s": 12.0,
+ "peak_rss_mb": 57.1,
+ "cost_usd": null,
+ "searches": null,
+ "notes": {
+  "meta": {
+   "provider": "eventregistry",
+   "beat": "physical_ai",
+   "window": [
+    "2026-11-25T19:59:22.520711+00:00",
+    "2026-11-26T19:59:22.520711+00:00"
+   ],
+   "date_range": [
+    "2026-11-25",
+    "2026-11-26"
+   ],
+   "hindsight": false,
+   "params": {
+    "concepts": [
+     "http://en.wikipedia.org/wiki/Robotics",
+     "http://en.wikipedia.org/wiki/Humanoid_robot",
+     "http://en.wikipedia.org/wiki/Self-driving_car",
+     "http://en.wikipedia.org/wiki/Industrial_robot",
+     "http://en.wikipedia.org/wiki/Unmanned_aerial_vehicle"
+    ],
+    "lang": "eng",
+    "count": 30,
+    "top_articles": 10,
+    "top_articles_events": 10,
+    "min_articles": 2
+   }
+  },
+  "usage": {
+   "requests": 11,
+   "tokens": 15.0,
+   "tokens_source": "usage endpoint, 62 -> 107 over the 3 beats"
+  }
+ }
+}

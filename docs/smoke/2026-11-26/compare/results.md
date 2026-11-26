@@ -50,3 +50,5 @@ The files in this folder hold all 30 stories per arm, with outlets and evidence.
   real outlet.
 - The editor cuts candidates at 400 (335 were cut today, mostly weak Google News topic-search
   items).
+
+**Second run, all beats, with Event Registry and the date-filter fix:** `../compare_all_beats/results.md`.

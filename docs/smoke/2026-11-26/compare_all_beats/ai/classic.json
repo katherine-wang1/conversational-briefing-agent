@@ -1,0 +1,448 @@
+{
+ "arm": "classic",
+ "beat": "ai",
+ "at": "2026-11-26T19:59:15.118708Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Anthropic files S-1, launches roadshow, prices and closes its initial public offering",
+   "summary": "Anthropic's announcements trace its IPO from S-1 filing through roadshow, pricing and closing, including the underwriters' option.",
+   "urls": [
+    "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+    "https://anthropic.com/news/ipo-close",
+    "https://anthropic.com/news/roadshow-launch",
+    "https://anthropic.com/news/s1-sec"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 80.0,
+   "reason": "anthropic_news rank 3; 4 posts from one primary source; primary sources present"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Anthropic launches Claude Haiku 5.5 and Claude Opus 5.5 models",
+   "summary": "Anthropic announces two new Claude models, Haiku 5.5 and Opus 5.5; snippets are titles only.",
+   "urls": [
+    "https://anthropic.com/claude-haiku-5-5",
+    "https://anthropic.com/claude-opus-5-5"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 72.0,
+   "reason": "anthropic_news rank 5; primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2 models",
+   "summary": "Anthropic announced two new models, Claude Fable 5.2 and Claude Mythos 5.2, via its news page.",
+   "urls": [
+    "https://anthropic.com/claude-fable-and-mythos-5-2"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 70.0,
+   "reason": "anthropic_news rank 1; primary source present; single source domain"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Nvidia tells Asian manufacturing partners to halt AI server shipments to Southeast Asia",
+   "summary": "FT sources say Nvidia halted AI server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls on Chinese access.",
+   "urls": [
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 68.0,
+   "reason": "techmeme rank 1; single source (ft)"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Scott Aaronson says leading AI labs hold unreleased algorithmic breakthroughs threatening cryptosystems",
+   "summary": "Aaronson's blog post cites sources saying labs have major unreleased algorithmic advances that could break deployed cryptosystems, with the exact nature unknown.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379"
+   ],
+   "outlets": [
+    "scottaaronson.blog"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 2; hn_front 1914 points at observation; 1755 comments at observation; single source domain"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Sources say Z.ai's GLM-5.5 flagship missed November release, may slip to 2027",
+   "summary": "Sources say Z.ai's 3T-parameter GLM-5.5 missed its November release and could slip to Q1 2027 or later amid US chip rules and distillation curbs.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 3; single source (techmeme); reuters.com origin"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "OpenAI admits billing error on GPT-6.2 Astra and Sol launch, Astra limits tightened 40%",
+   "summary": "OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had discounted usage; Astra users now hit limits up to 40% faster.",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster"
+   ],
+   "outlets": [
+    "techradar.com"
+   ],
+   "importance": 58.0,
+   "reason": "techmeme rank 4; single source (techmeme); techradar.com origin"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Meta launches Muse Image, Muse Video and Muse Spark 1.1",
+   "summary": "Meta announced Muse Image and Muse Video and released Muse Spark 1.1 through its model API.",
+   "urls": [
+    "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+    "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 55.0,
+   "reason": "meta_ai_blog rank 1; primary source present; 2 posts on one domain"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "Apple removes MiniMax's Talkie chatbot from App Store worldwide over sexualized child content",
+   "summary": "Apple pulled Talkie worldwide after outlets showed its AI characters sexualizing young users.",
+   "urls": [
+    "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children"
+   ],
+   "outlets": [
+    "thebureauinvestigates.com"
+   ],
+   "importance": 55.0,
+   "reason": "techmeme rank 16; single source (bureau investigates)"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Pentagon officials discussed Defense Production Act to pressure Nvidia board on Jensen Huang",
+   "summary": "Sources say Pete Hegseth and Pentagon officials floated using the DPA to pressure Nvidia's board to reinstate Huang.",
+   "urls": [
+    "https://washingtonpost.com/technology/2026/11/25/hegseth-pentagon-officials-floated-using-wartime-law-reappoint-nvidia-ceo?itid=gfta&pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6IjZiNDI1NjE3LTkzZDQtNDY5MS1hZjMxLTJmNjdhMWU2MGIwYyIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS90ZWNobm9sb2d5LzIwMjYvMTEvMjUvaGVnc2V0aC1wZW50YWdvbi1vZmZpY2lhbHMtZmxvYXRlZC11c2luZy13YXJ0aW1lLWxhdy1yZWFwcG9pbnQtbnZpZGlhLWNlby8ifQ.IC587f-ZsvMSTdejz3SE90kzYZs7rK7qFb57vH6USNU"
+   ],
+   "outlets": [
+    "washingtonpost.com"
+   ],
+   "importance": 50.0,
+   "reason": "techmeme rank 19; single source (washington post)"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "Microsoft says China and North Korea state hackers adopt AI tool ARTEX",
+   "summary": "Microsoft reports state-backed hacking groups in China and North Korea, including Salt Typhoon, now use the AI pentesting tool ARTEX in attacks.",
+   "urls": [
+    "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+   ],
+   "outlets": [
+    "therecord.media"
+   ],
+   "importance": 48.0,
+   "reason": "techmeme rank 7; single source (techmeme); therecord.media origin"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Meta and Anthropic publish explainers and agent-skills donation to Agentic AI Foundation",
+   "summary": "Meta published a what-is-agentic-AI explainer and Anthropic announced donating Agent Skills to the Agentic AI Foundation.",
+   "urls": [
+    "https://ai.meta.com/muse/what-is-agentic-ai",
+    "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+   ],
+   "outlets": [
+    "ai.meta.com",
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "2 independent domains; primary sources present; meta_ai_blog rank 6; anthropic_news rank 16"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "Anthropic announces new public benefit fund investment",
+   "summary": "Anthropic post titled Investing in the public benefit; details not in snippet.",
+   "urls": [
+    "https://anthropic.com/news/public-benefit-fund"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 2; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Anthropic publishes feature on AI-planned drive on Mars",
+   "summary": "Anthropic's feature describes an AI-planned drive on Mars; only the title is available.",
+   "urls": [
+    "https://anthropic.com/features/claude-on-mars"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 45.0,
+   "reason": "anthropic_news rank 10; single source (anthropic_news); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Companies set up procurement war rooms as memory chip shortage drives electronics prices up",
+   "summary": "A global memory chip shortage has companies scrambling, with some chip prices reportedly up 10x in a year.",
+   "urls": [
+    "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?st=Rx7QaC"
+   ],
+   "outlets": [
+    "wsj.com"
+   ],
+   "importance": 45.0,
+   "reason": "techmeme rank 13; single source (wsj)"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Anthropic publishes feature on how Claude Code was made",
+   "summary": "Anthropic feature piece on the making of Claude Code; details not in snippet.",
+   "urls": [
+    "https://anthropic.com/features/making-of-claude-code"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 8; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "Anthropic expands partnership with GSA to bring Claude to all levels of government",
+   "summary": "Anthropic is expanding its partnership with the GSA to bring Claude to all levels of US government.",
+   "urls": [
+    "https://anthropic.com/news/expanding-partnership-gsa"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 42.0,
+   "reason": "anthropic_news rank 15; single source (anthropic_news); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "Anthropic reports early progress accelerating drug development with Claude",
+   "summary": "Anthropic research post on Claude speeding drug development; details not in snippet.",
+   "urls": [
+    "https://anthropic.com/research/early-progress-drug-development"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 4; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Anthropic reports Project Deal, a Claude-run marketplace experiment",
+   "summary": "Anthropic feature on Project Deal, an experiment in which Claude runs a marketplace; details not in snippet.",
+   "urls": [
+    "https://anthropic.com/features/project-deal"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 40.0,
+   "reason": "anthropic_news rank 9; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "Sources say Rubio was not involved in reinstating Nvidia CEO Jensen Huang",
+   "summary": "CBS sources say Marco Rubio was not involved in efforts to reinstate Jensen Huang and was angered by his return.",
+   "urls": [
+    "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+   ],
+   "outlets": [
+    "cbsnews.com"
+   ],
+   "importance": 40.0,
+   "reason": "techmeme rank 11; single source (techmeme); cbsnews.com origin"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "Avicena raises $100M+ Series C for microLED AI chip interconnects",
+   "summary": "Avicena, which links AI chips with microLEDs, raised a $100M+ Series C with SK Hynix, Samsung and AMD participating.",
+   "urls": [
+    "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai"
+   ],
+   "outlets": [
+    "thenextweb.com"
+   ],
+   "importance": 40.0,
+   "reason": "techmeme rank 17; single source (tnw)"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "Google to make AI agents use its MCP servers; Gmail MCP server cannot send email",
+   "summary": "An article reports Google will require AI agents to use its MCP servers, noting the Gmail server cannot send email.",
+   "urls": [
+    "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+   ],
+   "outlets": [
+    "techstackups.com"
+   ],
+   "importance": 38.0,
+   "reason": "hn_front rank 17; 116 HN points at observation; single source domain"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "Meta unveils Brain2Qwerty for non-surgical brain-to-text communication",
+   "summary": "Meta blog describes Brain2Qwerty decoding brain waves into words without surgery; title only.",
+   "urls": [
+    "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication"
+   ],
+   "outlets": [
+    "ai.meta.com"
+   ],
+   "importance": 38.0,
+   "reason": "meta_ai_blog rank 5; primary source present; single source (meta_ai_blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "SAP preparing to cut at least 10,000 jobs in AI-era software restructuring",
+   "summary": "Sources say SAP is preparing to eliminate at least 10,000 positions, or 9% of staff, to transform its software business for AI.",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring"
+   ],
+   "outlets": [
+    "bloomberg.com"
+   ],
+   "importance": 38.0,
+   "reason": "techmeme rank 9; single source (techmeme); bloomberg.com origin"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "llama.cpp project publishes AMD Ryzen and Radeon benchmark dashboard on Hugging Face",
+   "summary": "Hugging Face blog introduces a llama.cpp benchmark dashboard for AMD hardware, alongside a separate post on AMD-specific patches.",
+   "urls": [
+    "https://devnull.land/amd-specific-llama-cpp",
+    "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+   ],
+   "outlets": [
+    "devnull.land",
+    "huggingface.co"
+   ],
+   "importance": 35.0,
+   "reason": "hn_front rank 1; 138 HN points at observation; primary source present; 2 independent domains"
+  },
+  {
+   "arm": "classic",
+   "rank": 26,
+   "headline": "Anthropic publishes scenarios for the economic future",
+   "summary": "Anthropic Institute post on possible economic scenarios from AI; details not in snippet.",
+   "urls": [
+    "https://anthropic.com/institute/econ-scenarios"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 7; primary source present; single source (anthropic_news)"
+  },
+  {
+   "arm": "classic",
+   "rank": 27,
+   "headline": "Anthropic expands AI for Science program to foundations and research institutions",
+   "summary": "Anthropic's AI for Science program is expanding to foundations and research institutions; only the title is available.",
+   "urls": [
+    "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 14; single source (anthropic_news); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 28,
+   "headline": "Anthropic posts update on independent evaluators",
+   "summary": "Anthropic publishes an update on its independent evaluators; only the title is available.",
+   "urls": [
+    "https://anthropic.com/news/an-update-on-independent-evaluators"
+   ],
+   "outlets": [
+    "anthropic.com"
+   ],
+   "importance": 35.0,
+   "reason": "anthropic_news rank 19; single source (anthropic_news); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 29,
+   "headline": "Thariq Shihipar leaves Anthropic for OpenAI",
+   "summary": "Thariq Shihipar says he joined OpenAI after leaving Anthropic in October, to bring AI to the world.",
+   "urls": [
+    "https://x.com/trq212/status/2125675533761671405"
+   ],
+   "outlets": [
+    "x.com"
+   ],
+   "importance": 35.0,
+   "reason": "techmeme rank 12; single source (techmeme)"
+  },
+  {
+   "arm": "classic",
+   "rank": 30,
+   "headline": "Four papers explore recursive self-improvement for coding and robot agents",
+   "summary": "Preprints describe evaluation-free self-improvement for coding agents and robot policies that co-evolve harnesses and skills.",
+   "urls": [
+    "https://arxiv.org/abs/2611.21056",
+    "https://arxiv.org/abs/2611.28244",
+    "https://arxiv.org/abs/2611.33915",
+    "https://arxiv.org/abs/2611.34675"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 35.0,
+   "reason": "hf_papers 4 items; primary source present"
+  }
+ ],
+ "wall_s": 24.3,
+ "peak_rss_mb": 432.0,
+ "cost_usd": 0.0124,
+ "searches": null,
+ "notes": {
+  "observations": 3825
+ }
+}

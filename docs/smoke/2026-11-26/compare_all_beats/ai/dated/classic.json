@@ -1,0 +1,441 @@
+{
+ "arm": "classic",
+ "beat": "ai",
+ "at": "2026-11-26T19:59:15.118708Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "classic",
+   "rank": 1,
+   "headline": "Nvidia tells manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand and Indonesia",
+   "summary": "FT sources say Nvidia told partners to halt AI server shipments to four Southeast Asian countries as US tightens export controls on Chinese AI compute access.",
+   "urls": [
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 80.0,
+   "reason": "techmeme rank 1; single source (techmeme, FT)"
+  },
+  {
+   "arm": "classic",
+   "rank": 2,
+   "headline": "Z.ai's GLM-5.5 flagship model slips past November and may be delayed to 2027",
+   "summary": "Reuters sources say Z.ai's 3T-parameter GLM-5.5 missed its November release and could slip to Q1 2027 or later because of US rules and distillation curbs.",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+   ],
+   "outlets": [
+    "reuters.com"
+   ],
+   "importance": 68.0,
+   "reason": "techmeme rank 3; single source (techmeme, Reuters); frontier model delay affects Chinese labs"
+  },
+  {
+   "arm": "classic",
+   "rank": 3,
+   "headline": "OpenAI corrects GPT-6.2 Astra and Sol billing error that discounted usage",
+   "summary": "OpenAI says it fixed a launch billing mistake for GPT-6.2 models; Astra users now hit usage limits up to 40% faster.",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster"
+   ],
+   "outlets": [
+    "techradar.com"
+   ],
+   "importance": 62.0,
+   "reason": "techmeme rank 4; single source (techmeme, TechRadar)"
+  },
+  {
+   "arm": "classic",
+   "rank": 4,
+   "headline": "Scott Aaronson reports leading AI labs hold unreleased algorithmic breakthroughs threatening cryptosystems",
+   "summary": "Aaronson's blog post, citing sources, says leading AI labs possess unreleased algorithmic advances that could break deployed cryptosystems; their nature is unknown.",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379"
+   ],
+   "outlets": [
+    "scottaaronson.blog"
+   ],
+   "importance": 60.0,
+   "reason": "hn_front 1914 points; techmeme rank 2; single source (blog)"
+  },
+  {
+   "arm": "classic",
+   "rank": 5,
+   "headline": "Microsoft reports China and North Korea state hackers using AI tool ARTEX",
+   "summary": "Microsoft says state-backed groups including Salt Typhoon added the AI penetration testing tool ARTEX to their attacks.",
+   "urls": [
+    "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+   ],
+   "outlets": [
+    "therecord.media"
+   ],
+   "importance": 55.0,
+   "reason": "techmeme rank 7; single source (techmeme, The Record)"
+  },
+  {
+   "arm": "classic",
+   "rank": 6,
+   "headline": "Hugging Face blog introduces llama.cpp benchmark dashboard for AMD Ryzen and Radeon hardware",
+   "summary": "Hugging Face published a llama.cpp benchmark dashboard for AMD Ryzen and Radeon; a separate post covers AMD-specific llama.cpp patches.",
+   "urls": [
+    "https://devnull.land/amd-specific-llama-cpp",
+    "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+   ],
+   "outlets": [
+    "devnull.land",
+    "huggingface.co"
+   ],
+   "importance": 45.0,
+   "reason": "hn_front rank 1; primary source present; 2 independent domains"
+  },
+  {
+   "arm": "classic",
+   "rank": 7,
+   "headline": "Sources say Rubio was not involved in reinstating Jensen Huang",
+   "summary": "CBS sources say Marco Rubio was not involved in efforts to reinstate Nvidia CEO Jensen Huang and was angry at his return.",
+   "urls": [
+    "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+   ],
+   "outlets": [
+    "cbsnews.com"
+   ],
+   "importance": 45.0,
+   "reason": "techmeme rank 11; single source (techmeme, CBS News)"
+  },
+  {
+   "arm": "classic",
+   "rank": 8,
+   "headline": "Apple removes MiniMax's Talkie chatbot from App Store worldwide over sexual content",
+   "summary": "Apple pulled MiniMax's Talkie app after investigators found its AI characters sexualised young users.",
+   "urls": [
+    "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children"
+   ],
+   "outlets": [
+    "thebureauinvestigates.com"
+   ],
+   "importance": 45.0,
+   "reason": "techmeme rank 16; single source (thebureauinvestigates)"
+  },
+  {
+   "arm": "classic",
+   "rank": 9,
+   "headline": "SAP prepares to eliminate at least 10,000 jobs in AI-driven restructuring",
+   "summary": "Bloomberg sources say SAP plans to cut at least 10,000 positions, about 9% of staff, to transform its software business for AI.",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring"
+   ],
+   "outlets": [
+    "bloomberg.com"
+   ],
+   "importance": 40.0,
+   "reason": "techmeme rank 9; single source (techmeme, Bloomberg)"
+  },
+  {
+   "arm": "classic",
+   "rank": 10,
+   "headline": "Hegseth and Pentagon officials floated Defense Production Act to pressure Nvidia board over Jensen Huang",
+   "summary": "Sources say Pentagon officials discussed using the Defense Production Act to pressure Nvidia's board to reinstate Jensen Huang.",
+   "urls": [
+    "https://washingtonpost.com/technology/2026/11/25/hegseth-pentagon-officials-floated-using-wartime-law-reappoint-nvidia-ceo?itid=gfta&pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6IjZiNDI1NjE3LTkzZDQtNDY5MS1hZjMxLTJmNjdhMWU2MGIwYyIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS90ZWNobm9sb2d5LzIwMjYvMTEvMjUvaGVnc2V0aC1wZW50YWdvbi1vZmZpY2lhbHMtZmxvYXRlZC11c2luZy13YXJ0aW1lLWxhdy1yZWFwcG9pbnQtbnZpZGlhLWNlby8ifQ.IC587f-ZsvMSTdejz3SE90kzYZs7rK7qFb57vH6USNU"
+   ],
+   "outlets": [
+    "washingtonpost.com"
+   ],
+   "importance": 40.0,
+   "reason": "techmeme rank 19; single source (washingtonpost)"
+  },
+  {
+   "arm": "classic",
+   "rank": 11,
+   "headline": "New York Times warns photographers not to update Photoshop over AI features",
+   "summary": "The Verge reports the New York Times advised photographers against updating Photoshop because of its new AI features.",
+   "urls": [
+    "https://theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features"
+   ],
+   "outlets": [
+    "theverge.com"
+   ],
+   "importance": 35.0,
+   "reason": "hn_front rank 12; 615 hn points; single source (theverge)"
+  },
+  {
+   "arm": "classic",
+   "rank": 12,
+   "headline": "Thariq Shihipar leaves Anthropic to join OpenAI",
+   "summary": "Shihipar posted that he joined OpenAI after leaving Anthropic in October to contribute to bringing AI to the world.",
+   "urls": [
+    "https://x.com/trq212/status/2125675533761671405"
+   ],
+   "outlets": [
+    "x.com"
+   ],
+   "importance": 35.0,
+   "reason": "techmeme rank 12; single source (techmeme, X post); talent move between frontier labs"
+  },
+  {
+   "arm": "classic",
+   "rank": 13,
+   "headline": "WSJ reports companies set up procurement war rooms amid memory chip shortage",
+   "summary": "Global memory chip shortage has companies scrambling, with some chip prices up 10x in a year, raising electronics prices.",
+   "urls": [
+    "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?st=Rx7QaC"
+   ],
+   "outlets": [
+    "wsj.com"
+   ],
+   "importance": 35.0,
+   "reason": "techmeme rank 13; single source (wsj)"
+  },
+  {
+   "arm": "classic",
+   "rank": 14,
+   "headline": "Avicena raises $100M+ Series C for microLED AI chip interconnects",
+   "summary": "Avicena, which uses microLEDs instead of lasers to link AI chips, raised a $100M+ Series C with SK Hynix, Samsung and AMD.",
+   "urls": [
+    "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai"
+   ],
+   "outlets": [
+    "thenextweb.com"
+   ],
+   "importance": 35.0,
+   "reason": "techmeme rank 17; single source (thenextweb)"
+  },
+  {
+   "arm": "classic",
+   "rank": 15,
+   "headline": "Shorter GRH Lean verification from Anthropic posted on GitHub",
+   "summary": "A GitHub repository offers a much shorter version of Anthropic's GRH Lean verification; it is a community reimplementation.",
+   "urls": [
+    "https://github.com/lsernau/grh-lean"
+   ],
+   "outlets": [
+    "github.com"
+   ],
+   "importance": 30.0,
+   "reason": "hn_front rank 22; 527 hn points; single source (github)"
+  },
+  {
+   "arm": "classic",
+   "rank": 16,
+   "headline": "Leopold Aschenbrenner's Situational Awareness fund lost 65% in Q3",
+   "summary": "WSJ letter says Situational Awareness lost 65% after fees in Q3 but is up 88.5% for the year through September.",
+   "urls": [
+    "https://wsj.com/finance/investing/aschenbrenners-situational-awareness-tells-investors-it-lost-65-in-third-quarter-de8e9797?reflink=desktopwebshare_permalink&st=AGLTi8"
+   ],
+   "outlets": [
+    "wsj.com"
+   ],
+   "importance": 30.0,
+   "reason": "techmeme rank 10; single source (techmeme, WSJ)"
+  },
+  {
+   "arm": "classic",
+   "rank": 17,
+   "headline": "FT reports institutional investors selling stakes in 2021-vintage VC funds to back AI funds",
+   "summary": "Pension funds and endowments are selling legacy VC stakes at steep discounts to fund new AI-focused start-ups.",
+   "urls": [
+    "https://ft.com/content/0278cbea-a0b6-4a30-80f2-f31ac6657f11"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 30.0,
+   "reason": "techmeme rank 14; single source (ft)"
+  },
+  {
+   "arm": "classic",
+   "rank": 18,
+   "headline": "NVIDIA publishes guide on fine-tuning and faster inference for Nemotron 3.5 Parse",
+   "summary": "NVIDIA's Hugging Face blog post covers open data, fine-tuning and faster inference for Nemotron 3.5 Parse; snippet gives no detail.",
+   "urls": [
+    "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin"
+   ],
+   "outlets": [
+    "huggingface.co"
+   ],
+   "importance": 30.0,
+   "reason": "single source (hf_blog); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 19,
+   "headline": "Google to make AI agents use Workspace MCP servers, Gmail MCP lacks send",
+   "summary": "A techstackups article says Google will push AI agents onto its Workspace MCP servers, but the Gmail server cannot send email.",
+   "urls": [
+    "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+   ],
+   "outlets": [
+    "techstackups.com"
+   ],
+   "importance": 28.0,
+   "reason": "hn_front rank 17; 125 hn comments; single source (techstackups)"
+  },
+  {
+   "arm": "classic",
+   "rank": 20,
+   "headline": "Command Code launches Moat as an OpenRouter replacement",
+   "summary": "Command Code's Moat page presents itself as a replacement for the OpenRouter model-routing service.",
+   "urls": [
+    "https://commandcode.ai/moat"
+   ],
+   "outlets": [
+    "commandcode.ai"
+   ],
+   "importance": 25.0,
+   "reason": "hn_front rank 19; 206 hn points; single source (commandcode)"
+  },
+  {
+   "arm": "classic",
+   "rank": 21,
+   "headline": "Four arXiv papers explore recursive self-improvement for coding and robot agents",
+   "summary": "Papers propose evaluation-free self-improvement for coding agents and self-evolving robot manipulation via execution knowledge and co-evolution.",
+   "urls": [
+    "https://arxiv.org/abs/2611.21056",
+    "https://arxiv.org/abs/2611.28244",
+    "https://arxiv.org/abs/2611.33915",
+    "https://arxiv.org/abs/2611.34675"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 25.0,
+   "reason": "hf_papers tier 2; primary source present; 4 items from one source"
+  },
+  {
+   "arm": "classic",
+   "rank": 22,
+   "headline": "Sage-Med paper studies scaling laws for medical multimodal LLMs",
+   "summary": "Paper reports existing medical MLLMs underperform frontier general-purpose models and proposes scaling approach; snippet is truncated.",
+   "urls": [
+    "https://arxiv.org/abs/2611.34575"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 25.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 23,
+   "headline": "Hugging Face blog explains building, training and evaluating multi-agent systems",
+   "summary": "Hugging Face blog post covers how to build, train, and evaluate multi-agent systems; snippet gives no further detail.",
+   "urls": [
+    "https://huggingface.co/blog/training-swarms"
+   ],
+   "outlets": [
+    "huggingface.co"
+   ],
+   "importance": 25.0,
+   "reason": "single source (hf_blog); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 24,
+   "headline": "Puzzling-Bench releases 23,777-puzzle benchmark with community-verified answers",
+   "summary": "Puzzling-Bench draws 23,777 puzzles from Puzzling Stack Exchange with community-verified answers, a third with images, to evaluate language models.",
+   "urls": [
+    "https://arxiv.org/abs/2611.34331"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 24.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 25,
+   "headline": "TT-RSI applies recursive self-improvement at test time for LLMs",
+   "summary": "TT-RSI re-solves questions with prior solutions and distills refinements into weights, reportedly beating self-consistency under equal test-time budgets.",
+   "urls": [
+    "https://arxiv.org/abs/2611.30965"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 24.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 26,
+   "headline": "Blog post argues OpenAI may be in cost control mode",
+   "summary": "Personal blog post speculating that OpenAI has shifted into cost control; opinion, not reporting.",
+   "urls": [
+    "https://micjm.com/blog/openai-is-in-cost-control-mode"
+   ],
+   "outlets": [
+    "micjm.com"
+   ],
+   "importance": 22.0,
+   "reason": "single source (hn_front); hn_front rank 14; 22 points at observation"
+  },
+  {
+   "arm": "classic",
+   "rank": 27,
+   "headline": "PyRUA-Dex framework lets coding agents learn dexterous bimanual manipulation policies",
+   "summary": "Coding agents explore and distill successful attempts into programs for dexterous bimanual robot manipulation, without demonstrations, with simulated and real-world results.",
+   "urls": [
+    "https://arxiv.org/abs/2611.33144"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 22.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 28,
+   "headline": "LiveVAE proposes causal window attention for streaming video VAE",
+   "summary": "LiveVAE uses causal window attention to address the video VAE latency bottleneck in interactive video generation and editing pipelines.",
+   "urls": [
+    "https://arxiv.org/abs/2611.34912"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 22.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 29,
+   "headline": "Integral turns pretrained vision-language model into unified image generator",
+   "summary": "Integral builds a shared visual representation space that lets a pretrained vision-language model generate images while preserving understanding.",
+   "urls": [
+    "https://arxiv.org/abs/2611.31237"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 22.0,
+   "reason": "single source (hf_papers); primary source present"
+  },
+  {
+   "arm": "classic",
+   "rank": 30,
+   "headline": "SlidesWeaver co-generates editable PPTX presentations with language and vision agents",
+   "summary": "SlidesWeaver combines language and vision agents with diffusion-based planning to generate editable, visually rich PPTX slide decks.",
+   "urls": [
+    "https://arxiv.org/abs/2611.28010"
+   ],
+   "outlets": [
+    "arxiv.org"
+   ],
+   "importance": 22.0,
+   "reason": "single source (hf_papers); primary source present"
+  }
+ ],
+ "wall_s": 23.8,
+ "peak_rss_mb": 426.5,
+ "cost_usd": 0.0123,
+ "searches": null,
+ "notes": {
+  "observations": 3825
+ }
+}

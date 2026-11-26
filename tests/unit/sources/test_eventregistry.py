@@ -122,7 +122,7 @@ def test_observe_maps_events(monkeypatch):
     assert a.published_at == datetime(2026, 11, 26, 9, 30, tzinfo=UTC)
     assert a.engagement is None
     assert a.extra["article_count"] == 314 and a.extra["event_uri"] == "eng-111"
-    assert a.extra["outlets"] == ["Example News"] and a.extra["url_is_event_page"] is False
+    assert a.extra["outlets"] == ["example.com"] and a.extra["url_is_event_page"] is False
     # no info article: event page URL, eventDate as published
     assert b.url == "https://eventregistry.org/event/eng-222" and b.extra["url_is_event_page"] is True
     assert b.published_at == datetime(2026, 11, 25, tzinfo=UTC) and b.extra["outlets"] == []
@@ -167,7 +167,7 @@ def test_top_articles_extra_call():
     top = obs[0].extra["top_articles"]
     assert [t["url"] for t in top] == ["https://example.com/model", "https://other.example/x"]
     assert len(top[1]["body_excerpt"]) <= 300
-    assert obs[0].extra["outlets"] == ["Example News", "Other"]
+    assert obs[0].extra["outlets"] == ["example.com", "other.example"]
 
 
 def test_observe_dispatches_eventregistry(monkeypatch):
@@ -217,10 +217,10 @@ async def test_ranked():
         "ai", AT, {"keywords": "AI"}, api_key="k", post=Poster(events_resp(EV_BIG, EV_SMALL))
     )
     assert [(s.rank, s.importance) for s in out] == [(1, 100), (2, 10)]
-    assert out[0].urls == ["https://example.com/model"] and out[0].outlets == ["Example News"]
+    assert out[0].urls == ["https://example.com/model"] and out[0].outlets == ["example.com"]
     assert out[0].extra == {"event_uri": "eng-111", "article_count": 314, "event_date": "2026-11-26"}
     assert out.meta["provider"] == "eventregistry" and out.meta["date_range"] == ["2026-11-25", "2026-11-26"]
-    assert out.usage == {"requests": 1}
+    assert out.usage == {"requests": 1, "tokens": 0.0}
 
 
 async def test_live_headline_tool_uses_adapter(monkeypatch):
@@ -237,3 +237,18 @@ async def test_live_headline_tool_uses_adapter(monkeypatch):
     ctx = ToolContext(mode="live", now=AT, budget=TokenBudget(input_tokens=1000), trace=TraceCtx())
     r = await tools["headline_source"](ctx, source_id="er_ai", at=AT)
     assert not r.ok and r.error.startswith("unavailable") and "EVENT_REGISTRY_API_KEY" in r.error
+
+
+async def test_ranked_counts_tokens_from_headers():
+    ev = httpx.Response(200, json={"events": {"results": [EV_BIG]}}, headers={"req-tokens": "5.000"})
+    arts = httpx.Response(
+        200, json={"eng-111": {"articles": {"results": []}}}, headers={"req-tokens": "1.000"}
+    )
+    out = await eventregistry_ranked(
+        "ai",
+        AT,
+        {"keywords": "AI", "top_articles": 3, "top_articles_events": 1},
+        api_key="k",
+        post=Poster(ev, arts),
+    )
+    assert out.usage == {"requests": 2, "tokens": 6.0}

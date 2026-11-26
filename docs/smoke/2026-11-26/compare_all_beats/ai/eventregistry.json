@@ -1,0 +1,663 @@
+{
+ "arm": "eventregistry",
+ "beat": "ai",
+ "at": "2026-11-26T19:59:15.118708Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "eventregistry",
+   "rank": 1,
+   "headline": "US regulators approve SpaceX plan to send a million data satellites to space",
+   "summary": "US regulators have given SpaceX the go-ahead to launch a million satellites into Earth's orbit to help build data centres in space - the first approval of its kind. The company, which is owned by Elon Musk, wants to use sunlight to power satellites that will process data for AI and send the results back to Earth. The Federal Communications Commission (FCC) said on Wednesday that the project, known as Starmind, will \"support America's booming super intelligence economy\". Its approval comes as c",
+   "urls": [
+    "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo",
+    "https://eu.usatoday.com/story/tech/space/2026/11/25/fcc-approves-spacex-data-center-satellites/92959168007/",
+    "https://vinnews.com/2026/11/26/679594/",
+    "https://www.independent.co.uk/tech/spacex-data-center-satellites-fcc-starmind-approval-b3091649.html",
+    "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers",
+    "https://www.anews.com.tr/tech/2026/11/25/us-approves-spacex-plan-to-deploy-1m-data-center-satellites",
+    "https://techcentral.co.za/spacex-million-satellite-ai-network-fcc/288719/",
+    "https://articles.thelocalreport.in/fcc-approves-spacex-plan-to-launch-up-to-1-million-ai-data-centre-satellites-in-space-report/",
+    "https://timesofindia.indiatimes.com/technology/tech-news/us-makes-first-authorisation-of-its-kind-in-us-history-allows-spacex-to-deploy-1-million-satellites-for-/articleshow/136169110.cms",
+    "https://en.tempo.co/read/2124456/us-approves-spacex-to-send-1-million-data-center-satellites-into-space",
+    "https://www.centraloregondaily.com/fcc-approves-spacex-plan-for-1-million-data-center-satellites-in-space/article_ddcea93e-9c89-5318-bbf3-7b7cedbab978.html"
+   ],
+   "outlets": [
+    "bbc.com",
+    "usatoday.com",
+    "vinnews.com",
+    "independent.co.uk",
+    "cointelegraph.com",
+    "anews.com.tr",
+    "techcentral.co.za",
+    "articles.thelocalreport.in",
+    "timesofindia.indiatimes.com",
+    "en.tempo.co",
+    "centraloregondaily.com"
+   ],
+   "importance": 100.0,
+   "reason": "675 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 2,
+   "headline": "Elon Musk floats a truly wild figure for SpaceX's potential value: $128 quintillion",
+   "summary": "* Elon Musk says SpaceX could be worth around $128 quintillion, or 75 million times its value today. * It would have to colonize other planets and harness a tiny fraction of the Sun's energy, he said. * \"I recommend holding on to your shares,\" Musk posted on X. Elon Musk is going galactic with his latest claim of what SpaceX might be worth one day: $128 quintillion. That's 128 billion billions, or 128 trillion millions, or 128 followed by 18 zeros: 128,000,000,000,000,000,000. \"If SpaceX suc",
+   "urls": [
+    "https://www.aol.com/articles/elon-musk-floats-truly-wild-143842000.html",
+    "https://www.telegraphindia.com/business/elon-musk-vows-two-spacex-shares-for-every-us-child-under-trump-backed-savings-initiative/cid/2191344",
+    "https://www.deccanherald.com/world/us/elon-musk-says-every-child-in-the-us-will-get-two-spacex-shares-4231777",
+    "https://www.moneycontrol.com/world/elon-musk-makes-massive-share-giveaway-promise-every-us-child-to-get-two-spacex-shares-here-s-how-it-will-work-article-14089336.html",
+    "https://www.newkerala.com/news/a/spacex-give-one-company-share-millions-american-children-294.htm",
+    "https://www.theverge.com/news/1042593/spacex-and-elon-musk-say-they-will-donate-shares-to-trump-accounts",
+    "https://www.idnfinancials.com/news/72326/musk-and-spacex-plan-to-give-u-s-children-two-shares-each",
+    "https://www.riverineherald.com.au/world/musk-pledges-two-spacex-shares-for-every-us-child/",
+    "https://www.republicworld.com/business/one-spacex-share-for-every-child-elon-musk-spacex-announce-stock-gift-for-millions-of-american-children-through-trump-accounts-2026-11-26-141899",
+    "https://www.independent.co.uk/tech/elon-musk-children-kids-spacex-shares-b3091931.html",
+    "https://www.aninews.in/news/business/spacex-to-give-one-company-share-to-millions-of-american-children-through-trump-accounts20261126105807/"
+   ],
+   "outlets": [
+    "aol.com",
+    "telegraphindia.com",
+    "deccanherald.com",
+    "moneycontrol.com",
+    "newkerala.com",
+    "theverge.com",
+    "idnfinancials.com",
+    "riverineherald.com.au",
+    "republicworld.com",
+    "independent.co.uk",
+    "aninews.in"
+   ],
+   "importance": 64.0,
+   "reason": "435 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 3,
+   "headline": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+   "summary": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips. Nvidia has halted some sales of its most advanced A.I. chips to four countries in Southeast Asia as the Trump administration intensifies efforts to cut Chinese companies off from American computing power. Data center operators in Malaysia, Singapore, Thailand and Indonesia have had orders put on hold, according to two people with knowledge o",
+   "urls": [
+    "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://www.thejakartapost.com/business/2026/11/26/nvidia-halts-chip-shipments-to-southeast-asia-reports",
+    "https://theedgemalaysia.com/node/827396",
+    "https://www.asiaone.com/singapore/nvidia-halts-server-shipments-singapore-and-others-report",
+    "https://www.freemalaysiatoday.com/category/highlight/2026/11/26/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports",
+    "https://www.cnbctv18.com/technology/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports-20041900.htm",
+    "https://www.firstpost.com/business/nvidia-chip-exports-southeast-asia-jensen-huang-ceo-dell-supermicro-14062710.html",
+    "https://www.ndtv.com/world-news/nvidia-halts-server-shipments-to-4-southeast-asian-countries-report-12380116",
+    "https://www.business-standard.com/world-news/nvidia-halts-shipments-of-ai-servers-to-four-southeast-asian-countries-126112601562_1.html",
+    "https://timesofindia.indiatimes.com/business/international-business/nvidia-halts-server-shipments-to-4-southeast-asian-countries-amid-chip-scandal-china-not-on-list-report/articleshow/136185184.cms",
+    "https://www.straitstimes.com/world/united-states/nvidia-halts-server-shipments-to-four-south-east-asian-countries-including-singapore-report"
+   ],
+   "outlets": [
+    "nytimes.com",
+    "thejakartapost.com",
+    "theedgemalaysia.com",
+    "asiaone.com",
+    "freemalaysiatoday.com",
+    "cnbctv18.com",
+    "firstpost.com",
+    "ndtv.com",
+    "business-standard.com",
+    "timesofindia.indiatimes.com",
+    "straitstimes.com"
+   ],
+   "importance": 60.0,
+   "reason": "406 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 4,
+   "headline": "Gold Price Today on November 25, 2026",
+   "summary": "How much is gold per ounce today? As of Nov. 25, 2026, at 6:00 a.m. ET, the spot price of gold was $3,531.61 per ounce, according to the latest market data. That's down 0.55%, a decline of $19.60 from the previous close of $3,551.21. One year ago, gold traded at $4,133.41 per ounce, meaning prices have fallen 14.56% over the past 12 months. Key levels to watch this week: 52-week low: $3,533.11 52-week high: $5,518.21 Gold is trading 36.00% below its 52-week high. What is the historical pri",
+   "urls": [
+    "https://www.aol.com/articles/gold-price-today-november-25-110850000.html",
+    "https://bizwatchnigeria.ng/gold-steadies-after-2-drop-as-investors-await-us-inflation-data/",
+    "https://www.jordannews.jo/Section-112/Economy/Gold-Falls-Ahead-of-US-Inflation-Data-59327",
+    "https://yournews.com/2026/11/25/7282099/gold-prices-fall-as-investors-await-us-inflation-data-and/",
+    "https://economymiddleeast.com/news/gold-prices-fall-to-3541-36-ahead-of-u-s-inflation-data-as-markets-reassess-fed-rate-outlook/",
+    "https://news.az/news/gold-extends-losses-as-us-tariff-concerns-weigh-on-precious-metals",
+    "https://www.aa.com.tr/en/economy/gold-weakens-further-as-tariff-worries-and-rate-bets-pressure-bullion/4136660",
+    "https://www.saba.ye/en/news3843083.htm",
+    "https://mmnews.tv/gold-prices-fall-in-global-market-silver-and-other-precious-metals-also-decline/",
+    "https://www.investing.com/analysis/gold-tests-3550-as-tech-stocks-fall-and-investors-turn-their-attention-to-us-pce-200692307",
+    "https://www.samaa.tv/2087361066-gold-prices-fall-as-fed-rate-hike-expectations-weigh-nov-26-2026"
+   ],
+   "outlets": [
+    "aol.com",
+    "bizwatchnigeria.ng",
+    "jordannews.jo",
+    "yournews.com",
+    "economymiddleeast.com",
+    "news.az",
+    "aa.com.tr",
+    "saba.ye",
+    "mmnews.tv",
+    "investing.com",
+    "samaa.tv"
+   ],
+   "importance": 36.0,
+   "reason": "243 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 5,
+   "headline": "Was Miss Universe 2026 Rigged? The Internet Thinks So",
+   "summary": "Miss Universe 2026 winner Jennifer Barreto has come under scrutiny online, with some pageant fans alleging bias and questioning aspects of the competition The crowning of Miss Universe 2026 Jennifer Barreto has sparked controversy online. Miss Universe/ Instagram Miss Universe 2026 concluded in Puerto Rico on November 24, with reigning queen Fatima Bosch crowning Puerto Rico's Jennifer Barreto. She also scripted history by becoming the first mother to ever win the coveted title, following the",
+   "urls": [
+    "https://www.ndtv.com/lifestyle/was-miss-universe-2026-rigged-the-internet-thinks-so-12380061",
+    "https://depor.com/en/us-local/who-is-jennifer-barreto-the-first-mother-to-win-miss-universe-2026-miss-puerto-rico-nnda-nnrt-noticia/",
+    "https://aktualita.co/en/entertainment/who-won-miss-universe-2026-jennifer-barreto",
+    "https://www.silive.com/entertainment/2026/11/miss-universe-winner-is-first-mom-crowned-after-pageants-controversial-year-photos.html",
+    "https://www.newsamericasnow.com/miss-universe-2026-caribbean-winners/",
+    "https://sg.news.yahoo.com/jennifer-barreto-becomes-first-mom-155305488.html",
+    "https://www.citizen.co.za/lifestyle/fashion-and-beauty/puerto-ricos-jennifer-barreto-crowned-miss-universe-2026/",
+    "https://whnt.com/news/miss-puerto-rico-crowned-miss-universe-2026-first-mother-to-win-title/",
+    "https://wwd.com/pop-culture/culture-news/jennifer-barreto-first-mother-miss-universe-2026-1239465715/",
+    "https://www.tvinsider.com/1305764/miss-universe-winner-miss-puerto-rico-jennifer-barreto/",
+    "https://www.24newshd.tv/26-Nov-2026/jennifer-barreto-claims-miss-universe-crown"
+   ],
+   "outlets": [
+    "ndtv.com",
+    "depor.com",
+    "aktualita.co",
+    "silive.com",
+    "newsamericasnow.com",
+    "sg.news.yahoo.com",
+    "citizen.co.za",
+    "whnt.com",
+    "wwd.com",
+    "tvinsider.com",
+    "24newshd.tv"
+   ],
+   "importance": 24.0,
+   "reason": "164 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 6,
+   "headline": "Mark Cuban Says Someone Else Could Take Your Job if You Don't Do This",
+   "summary": "Mark Cuban gave his own daughter some blunt career advice ahead of her college graduation. On the April 29, 2026 episode of the Big Technology Podcast, hosted by Alex Kantrowitz, Cuban laid out a theory about who wins and who loses in the AI job market. The advice applies whether you're looking for work-from-home jobs or building skills in your current role. His point wasn't that software is coming for every desk job. It's that the person sitting next to you who knows how to use AI tools well mi",
+   "urls": [
+    "https://www.aol.com/articles/mark-cuban-says-someone-else-123000000.html",
+    "https://www.analyticsinsight.net/podcast/why-ai-adoption-is-not-enough-nalin-agrawal-dynatrace-india-analytics-insight-podcast",
+    "https://itbrief.news/story/ai-innovation-only-matters-when-people-understand-how-to-use-it",
+    "https://www.computer.org/publications/tech-news/trends/enterprise-data-readiness-for-ai",
+    "https://www.miragenews.com/dislike-of-ai-doesnt-deter-its-influence-1784031/",
+    "https://www.colliers.com/en-gb/news/20261126-five-types-of-ai-companies-shaping-office-market",
+    "https://www.aninews.in/news/business/concierto-ai-is-now-live-sovereign-ai-for-every-employee-inside-the-enterprises-own-cloud-or-data-center20261126164734/",
+    "https://capitalfm.africa/kenyan-firms-risk-data-breaches-as-ai-adoption-outpaces-oversight/",
+    "https://thewillnews.com/10-common-misconceptions-about-artificial-intelligence-in-nigeria-and-africa/",
+    "https://tech-insider.org/ai-readiness-gap-enterprises-ready-tools-bought/",
+    "https://cstoredecisions.com/ai-trends-to-watch-in-2027/"
+   ],
+   "outlets": [
+    "aol.com",
+    "analyticsinsight.net",
+    "itbrief.news",
+    "computer.org",
+    "miragenews.com",
+    "colliers.com",
+    "aninews.in",
+    "capitalfm.africa",
+    "thewillnews.com",
+    "tech-insider.org",
+    "cstoredecisions.com"
+   ],
+   "importance": 16.0,
+   "reason": "110 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 7,
+   "headline": "Is Nvidia Stock a Buy After Dell's Record AI Backlog?",
+   "summary": "Dell Technologies (NYSE:DELL) has a record $132.3 billion in artificial intelligence (AI) server orders it hasn't shipped yet. The server maker reported that backlog with its fiscal third-quarter results after the market closed on Tuesday, Nov. 24. Three months before, the total was $95 billion. The report came after a tough day for Nvidia (NASDAQ:NVDA) shareholders. Nvidia's shares lost almost 6% on Nov. 24, giving back some of a 31% gain the day before, when the company said its board had rein",
+   "urls": [
+    "https://www.aol.com/articles/nvidia-stock-buy-dells-record-030702000.html",
+    "https://www.cambuy.tw/1941/dell-raises-revenue-forecast-to-202b-as-ai-server-sales-soar/",
+    "https://analyticsindiamag.com/ai-news/dell-lifts-fy27-outlook-for-third-time-as-ai-server-backlog-hits-132-billion",
+    "https://www.rte.ie/news/business/2026/1125/1600563-dell-quarterly-results/",
+    "https://money.usnews.com/investing/news/articles/2026-11-24/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand",
+    "https://www.billionaires.africa/2026/11/25/american-billionaire-michael-dells-dell-technologies-posts-record-54-94-billion-quarter-and-lifts-full-year-forecast-to-202-billion/",
+    "https://www.techrepublic.com/article/news-dell-ai-server-revenue-q3-fy27-backlog/",
+    "https://www.billionaires.africa/2026/11/25/american-billionaire-michael-dells-dell-posts-5-7-billion-third-quarter-profit/",
+    "https://www.vcpost.com/articles/131063/20261125/dell-posts-record-549-billion-quarter-revenue-doubles-ai-server-backlog-reaches-1323-billion.htm",
+    "https://www.tokenpost.com/news/business/62616",
+    "https://blockonomi.com/?p=220531"
+   ],
+   "outlets": [
+    "aol.com",
+    "cambuy.tw",
+    "analyticsindiamag.com",
+    "rte.ie",
+    "money.usnews.com",
+    "billionaires.africa",
+    "techrepublic.com",
+    "vcpost.com",
+    "tokenpost.com",
+    "blockonomi.com"
+   ],
+   "importance": 16.0,
+   "reason": "109 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 8,
+   "headline": "Brad Pitt's 'Cliff Booth' is back and still relentlessly cool - Review",
+   "summary": "Brad Pitt reprises his scruffy Tarantino role as an ex-stuntman but Elizabeth Debicki steals the show in \"The Further Mis-Adventures of Cliff Booth.\" Tooling around 1970s Los Angeles with Brad Pitt is a delightful way to spend two-and-a-half hours. In \"The Further Mis-Adventures of Cliff Booth\" (\u2605\u2605\u2605\u00bd out of four; rated R; in IMAX theaters Nov. 25, streaming Dec. 23 on Netflix), the A-lister again brings such an essence of his own inherent cool to the title character, this time exploring",
+   "urls": [
+    "https://www.usatoday.com/story/entertainment/movies/reviews/2026/11/25/the-further-mis-adventures-of-cliff-booth-movie-review/92913006007/",
+    "https://www.comingsoon.net/movies/news/2230964-likely-cant-see-brad-pitt-new-movie-theaters-week",
+    "https://screenrant.com/quentin-tarantino-the-further-misadventures-of-cliff-booth-roundtable-interview-netflix/",
+    "https://sentinelcolorado.com/uncategorized/movie-review-the-further-mis-adventures-of-cliff-booth-burnishes-the-legend-of-a-stuntman-hero/",
+    "https://skonmovies.ca/review/the-further-mis-adventures-of-cliff-booth-review/",
+    "https://www.slashfilm.com/2327639/brad-pitt-the-further-mis-adventures-of-cliff-booth-credits-scene-explained/",
+    "https://www.bostonherald.com/2026/11/25/the-further-mis-adventures-of-cliff-booth-aimless-fun/",
+    "https://slate.com/culture/2026/11/cliff-booth-brad-pitt-mis-adventures-tarantino-movie-netflix.html",
+    "https://www.slashfilm.com/2328724/the-further-mis-adventures-of-cliff-booth-once-upon-a-time-in-hollywood-controversy/",
+    "https://www.slashfilm.com/2327942/why-quentin-tarantino-not-direct-brad-pitt-cliff-booth-movie/",
+    "https://dailytimes.com.pk/1586821/brad-pitts-new-film-gives-macho-hero-a-modern-makeover/"
+   ],
+   "outlets": [
+    "usatoday.com",
+    "comingsoon.net",
+    "screenrant.com",
+    "sentinelcolorado.com",
+    "skonmovies.ca",
+    "slashfilm.com",
+    "bostonherald.com",
+    "slate.com",
+    "dailytimes.com.pk"
+   ],
+   "importance": 15.0,
+   "reason": "104 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 9,
+   "headline": "Surrendering Human Control To AI? Anthropic CEO Dario Amodei Calls It 'Absurd'",
+   "summary": "He has stressed the need for democratic oversight and warned against allowing AI systems to develop future generations of models without meaningful human supervision. Amodei said he does not believe in surrendering human free will to AI. Anthropic chief executive Dario Amodei has strongly rejected claims that he believes humans should give up their free will and decision-making powers to artificial intelligence (AI). Calling the suggestion \"absurd\", Amodei said AI must remain under human contro",
+   "urls": [
+    "https://www.ndtv.com/artificial-intelligence/surrendering-human-control-to-ai-anthropic-ceo-dario-amodei-calls-it-absurd-12379475",
+    "https://timesofindia.indiatimes.com/technology/tech-news/anthropic-ceo-dario-amodei-denies-he-wants-humans-to-surrender-free-will-to-ai-says-its-absurd-to-/articleshow/136186148.cms",
+    "https://www.newkerala.com/news/a/ai-governance-must-remain-democratic-humans-should-not-783.htm",
+    "https://www.financialexpress.com/world-news/are-humans-surrendering-control-to-ai-what-anthropic-ceo-dario-amodei-said/4394198/",
+    "https://www.etnownews.com/technology/ai-takeover-vs-human-control-anthropic-ceo-dario-amodei-challenges-silicon-valleys-ai-narrative-article-156570847",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ceo-pushes-back-axios-184139218.html",
+    "https://www.digit.in/news/general/anthropic-ceo-calls-surrendering-human-free-will-to-ai-absurd-takes-aim-at-rival-ceos.html",
+    "https://indianexpress.com/article/technology/artificial-intelligence/anthropic-dario-amodei-rejects-claims-humanity-ai-control-10979503/",
+    "https://www.analyticsinsight.net/news/anthropic-ceo-dario-amodei-rejects-claims-of-surrendering-human-control",
+    "https://www.storyboard18.com/digital/anthropic-ceo-warns-against-ai-autonomy-and-job-disruption-ws-l-115524.htm",
+    "https://www.businessinsider.com/dario-amodei-anthropic-calls-out-rival-ai-ceos-over-messaging-2026-11"
+   ],
+   "outlets": [
+    "ndtv.com",
+    "timesofindia.indiatimes.com",
+    "newkerala.com",
+    "financialexpress.com",
+    "etnownews.com",
+    "finance.yahoo.com",
+    "digit.in",
+    "indianexpress.com",
+    "analyticsinsight.net",
+    "storyboard18.com",
+    "businessinsider.com"
+   ],
+   "importance": 14.0,
+   "reason": "94 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 10,
+   "headline": "Rupee soars 65 paise to hit 8-month high of 92.20 against US dollar",
+   "summary": "Mumbai, Nov 25 (PTI) The rupee on Wednesday jumped 65 paise to settle at 92.20, the highest level this fiscal year so far, drawing cues from robust buying in domestic equity markets and unabated foreign fund inflows. Lower crude oil prices also helped the local currency pare its losses of the current financial year while investors worldwide preferred Indian equities over other assets, forex traders said. At the interbank foreign exchange market, the rupee opened at 92.65 and moved in the range",
+   "urls": [
+    "https://www.news18.com/agency-feeds/rupee-soars-65-paise-to-hit-8-month-high-of-92-20-against-us-dollar-10441013.html",
+    "https://www.thehindubusinessline.com/markets/forex/rupee-soars-69-paise-to-settle-at-its-eight-month-high-of-9216-against-us-dollar/article71742189.ece",
+    "https://english.metrovaartha.com/economy/market/rupee-soars-69-paise-to-settle-at-its-8-month-high-of-9216-against-us-dollar",
+    "https://timesofindia.indiatimes.com/business/india-business/rupee-recovers-fy26-losses-strengthens-to-92-16-against-dollar-on-equity-rally/articleshow/136166408.cms",
+    "https://www.deccanherald.com/business/markets/rupee-soars-69-paise-to-settle-at-its-eight-month-high-of-9216-against-us-dollar-4230736",
+    "http://brighterkashmir.com//news/rupee-gains-23-paise-to-trade-at-9262-against-us-dollar",
+    "https://www.ibtimes.co.in/rupee-rises-23-paise-92-62-against-us-dollar-sensex-nifty-rally-falling-crude-oil-prices-boost-908654",
+    "https://www.telegraphindia.com/business/rupee-jumps-56-paise-intraday-to-8-month-high-of-92-29-against-us-dollar-recovers-fy27-losses/cid/2191206",
+    "https://www.thehansindia.com/business/foreign-inflows-cheaper-crude-push-rupee-to-years-high-1145834",
+    "https://thesentimes.com/rupee-recoups-all-its-fy27-losses-climbs-56-paise-to-hit-eight-month-high-of-92-29-usd-intraday/"
+   ],
+   "outlets": [
+    "news18.com",
+    "thehindubusinessline.com",
+    "english.metrovaartha.com",
+    "timesofindia.indiatimes.com",
+    "deccanherald.com",
+    "brighterkashmir.com",
+    "ibtimes.co.in",
+    "telegraphindia.com",
+    "thehansindia.com",
+    "thesentimes.com"
+   ],
+   "importance": 13.0,
+   "reason": "87 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 11,
+   "headline": "Meta's India content restrictions jump 131-fold to 5.44 million in first half of 2026",
+   "summary": "Meta restricted access to more than 5.44 million pieces of content on Facebook and Instagram in India during the first six months of 2026 for alleged violations of local laws, a roughly 131-fold surge from the 41,400 items restricted in the preceding half-year, according to the company's latest transparency report. The sharp increase placed India second globally in content restricted under local laws from January to June 2026, trailing only Indonesia (20.6 million). Overall, India accounted for",
+   "urls": [
+    "https://www.hindustantimes.com/india-news/metas-india-content-restrictions-jump-131-fold-to-5-44-million-in-first-half-of-2026-101795411036627.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 12.0,
+   "reason": "82 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 12,
+   "headline": "Trump calls GDP data released before midterms 'fake', demands investigation",
+   "summary": "President says it was a deliberate decision to release 'fake' growth numbers before US midterm elections. United States President Donald Trump has accused his Department of Commerce of purposely issuing incorrect economic growth figures before the midterm elections and says he wants to launch an investigation. Trump made his comments on Thursday when offices and stock markets were closed for the Thanksgiving holiday. The US Commerce Department's Bureau of Economic Analysis on Wednesday revised",
+   "urls": [
+    "https://www.aljazeera.com/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation"
+   ],
+   "outlets": [
+    "aljazeera.com"
+   ],
+   "importance": 11.0,
+   "reason": "76 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 13,
+   "headline": "How Norway and Canada can work together, from sea to space",
+   "summary": "A submarine program, satellite cooperation and Arctic research might once have occupied separate files in the Norway-Canada relationship. Today, they form part of the same conversation: how two northern countries can strengthen security while building industrial, technological and scientific capacity. Prime Minister Mark Carney's visit to the Norwegian Arctic to observe the NATO exercise Cold Response and to Oslo in March launched coast guard cooperation and new research initiatives, and was fol",
+   "urls": [
+    "https://ca.finance.yahoo.com/news/norway-canada-together-sea-space-183800103.html"
+   ],
+   "outlets": [
+    "ca.finance.yahoo.com"
+   ],
+   "importance": 10.0,
+   "reason": "66 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 14,
+   "headline": "EA adds AI-generated John Motson to FC 27 video game",
+   "summary": "EA has exclusively revealed to BBC News that the latest edition of the world's most popular football game, EA Sports FC, will feature the digitally recreated voice of the late BBC commentator John Motson. Motson, who died in 2023, was the main commentator for BBC Sport for decades - and performed the same role for the video game series during the 90s and 00s. It is the first time the hit series, formerly known as Fifa, has featured a deceased commentator. With the permission of his widow and h",
+   "urls": [
+    "https://www.bbc.com/news/articles/c65y10j841jpo"
+   ],
+   "outlets": [
+    "bbc.com"
+   ],
+   "importance": 9.0,
+   "reason": "59 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 15,
+   "headline": "Government financial crime unit hit by \"cybersecurity incident\"",
+   "summary": "The Treasury's Financial Crimes Unit has confirmed it is investigating a \"cybersecurity incident\" after an intruder gained access to a limited number of systems. The Financial Crimes Enforcement Network (FinCEN), which collects the financial industry's suspicious activity reports, disclosed the incident on Tuesday. A FinCEN official told Newsweek the incident \"resulted in unauthorized access to a limited subset of its systems,\" which caused it to take some systems offline as a precaution. The",
+   "urls": [
+    "https://www.aol.com/articles/treasurys-financial-crime-unit-hit-080147000.html"
+   ],
+   "outlets": [
+    "aol.com"
+   ],
+   "importance": 9.0,
+   "reason": "59 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 16,
+   "headline": "Vivo X500 Pro Max's photography masterclass, and also welcomes Apple loyalists",
+   "summary": "The smartphone camera, as an idea, is in an astonishing place. Not just the leaps in overall capabilities, but the smartphone space is defined by two very distinct approaches. Within that, there is a clear course correction happening as well, something I'll illustrate, as we assess the latest flagship from Vivo, the X500 Pro Max. A 200-megapixel telephoto camera and the optional 200mm and 400mm equivalent lens options if you need that for long-range photography, offer good versatility to build wi",
+   "urls": [
+    "https://www.hindustantimes.com/india-news/vivo-x500-pro-max-s-photography-masterclass-and-also-welcomes-apple-loyalists-101795687050850.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 8.0,
+   "reason": "57 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 17,
+   "headline": "S&P Global warns Nvidia's credit rating could be downgraded over governance risks",
+   "summary": "* S&P Global Ratings put Nvidia on watch for a credit downgrade on Wednesday. * The ratings agency cited concerns regarding the chipmaker's corporate governance. * Analysts revealed plans to meet with Nvidia's board and management to discuss its concerns. The drama at Nvidia in recent weeks has landed it on the watchlist for a potential ratings downgrade by one of the major US credit rating agencies. As Nvidia stock tumbled again on Wednesday, S&P Global Ratings announced that the company's c",
+   "urls": [
+    "https://www.aol.com/articles/p-global-warns-nvidia-credit-205320000.html"
+   ],
+   "outlets": [
+    "aol.com"
+   ],
+   "importance": 7.0,
+   "reason": "49 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 18,
+   "headline": "Did Trump Consider Using A 1950 Wartime Law To Bring Back Nvidia CEO Jensen Huang?",
+   "summary": "Senior Pentagon officials, including Defence Secretary Pete Hegseth and his deputy Steve Feinberg, discussed using the Defence Production Act as leverage against Nvidia The Trump administration reportedly considered invoking a Cold War-era law to pressure Nvidia's board into reinstating Jensen Huang as the company's chief executive, arguing that his return was critical to US national security amid the escalating artificial intelligence race with China. According to a report by The Washington Po",
+   "urls": [
+    "https://www.news18.com/world/did-trump-consider-using-a-1950-wartime-law-to-bring-back-nvidia-ceo-jensen-huang-ws-l-10441267.html"
+   ],
+   "outlets": [
+    "news18.com"
+   ],
+   "importance": 7.0,
+   "reason": "46 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 19,
+   "headline": "Blade Runner 2099 - Story, Timeline & Characters Explained",
+   "summary": "Sean is a senior writer for ScreenRant and has been writing about new TV releases since December 2023. He has received multiple advance screenings of popular shows and ideated his own coverage read by hundreds of thousands of readers. Sean is a self-published author of a Western novel. Sean has also written award-winning opinion pieces related to local politics while getting his Bachelor's degree in journalism. Warning! This article contains SPOILERS for Blade Runner 2099 season 1.Though it is",
+   "urls": [
+    "https://screenrant.com/blade-runner-2099-story-characters-timeline/"
+   ],
+   "outlets": [
+    "screenrant.com"
+   ],
+   "importance": 7.0,
+   "reason": "44 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 20,
+   "headline": "Q3 GDP Revised Sharply Higher To 4.3% As AI Capex Sparks Biggest Investment Surge Since Covid",
+   "summary": "So much for the slowdown. With Wall Street expecting a token upward revision to Q3 GDP, from 3.4% to 3.5% (Goldman was at 3.7%), this morning the Bureau of Economic Analysis reported that in its second estimate the US economy grew at a 4.3% annualized rate in the third quarter, almost a full point above the advance print, nearly double the 2.2% pace of Q2, and, well, nowhere near what anyone was expecting. It was also the strongest quarter since late 2023, and it arrived with oil still elevated",
+   "urls": [
+    "https://www.zerohedge.com/markets/q3-gdp-revised-sharply-higher-43-ai-capex-sparks-biggest-investment-surge-covid"
+   ],
+   "outlets": [
+    "zerohedge.com"
+   ],
+   "importance": 6.0,
+   "reason": "43 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 21,
+   "headline": "OpenAI calls GPT 6.2 Astra and Sol price drop a mistake, users hit back for not getting discount",
+   "summary": "OpenAI says it made a mistake with GPT-6.2 Astra and Sol usage and has now fixed the billing error. However, users are unhappy as they will now hit their usage limits faster. OpenAI says it made a billing mistake that unintentionally made its latest GPT-6.2 Astra and Sol models cheaper to use for most subscribers. The company has now fixed the error, but that may leave users with a disadvantage. Many users are now unhappy with the fix because they will now hit their usage limits faster, even whe",
+   "urls": [
+    "https://www.indiatoday.in/technology/news/story/openai-calls-gpt-62-astra-and-sol-price-drop-a-mistake-users-hit-back-for-not-getting-discount-3047660-2026-11-26"
+   ],
+   "outlets": [
+    "indiatoday.in"
+   ],
+   "importance": 6.0,
+   "reason": "42 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 22,
+   "headline": "EU Seeks \u20ac50 Billion for Frontier Tech to Rival US, China",
+   "summary": "The European Union has proposed creating a sovereign fund to invest in cutting-edge technologies, seeking to funnel \u20ac50 billion ($54.7 billion) in public and private money into areas such as AI, quantum computing and chips. \"No company should be obliged to leave Europe due to a lack of finance,\" said Henna Virkkunen, the EU's executive vice president for tech sovereignty, security and democracy during a press conference on Wednesday. The EU is still working out how the fund will be endowed an",
+   "urls": [
+    "https://www.bloomberg.com/news/articles/2026-11-25/eu-seeks-50-billion-for-frontier-technology-to-rival-us-china"
+   ],
+   "outlets": [
+    "bloomberg.com"
+   ],
+   "importance": 6.0,
+   "reason": "42 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 23,
+   "headline": "Alice Huang-Linked Firms Listed $270 Million In AI Servers In China: Report",
+   "summary": "Alice Huang formerly controlled Megaspeed, a major overseas buyer of Nvidia processors. Beijing: Companies linked to Alice Huang, the Chinese businesswoman whose affair with Nvidia CEO Jensen Huang triggered his short-lived exit, raised financing against powerful computing equipment for major AI data centres in China, previously unreported records reviewed by Reuters show. The central-bank documents identify up to 764 AI servers and modules valued at $270 million, along with $31 million in equ",
+   "urls": [
+    "https://www.ndtv.com/world-news/alice-huang-linked-firms-listed-270-million-in-ai-servers-in-china-report-12373872"
+   ],
+   "outlets": [
+    "ndtv.com"
+   ],
+   "importance": 6.0,
+   "reason": "42 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 24,
+   "headline": "Bank of Korea hikes interest rates to 2-yr high By Investing.com",
+   "summary": "Investing.com-- The Bank of Korea on Thursday hiked interest rates to a two-year high as expected, its third such move in 2026 as the central bank continues to move against increasingly sticky inflation. The BOK raised its benchmark policy rate by 25 basis points to 3.25%, as expected. The raise was the BOK's third such hike this year, and took rates to their highest since October 2024. The bank also hiked its 2026 gross domestic product forecast to 3.9% from 3.3%, and forecast a 4.1% jump next",
+   "urls": [
+    "https://www.investing.com/news/economy-news/bank-of-korea-hikes-interest-rates-to-2yr-high-5051846"
+   ],
+   "outlets": [
+    "investing.com"
+   ],
+   "importance": 6.0,
+   "reason": "41 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 25,
+   "headline": "E&O's 2Q net profit rises 35.4% to RM68mil",
+   "summary": "KUALA LUMPUR: Eastern & Oriental Bhd's (E&O) net profit rose 35.4% to RM68.02mil in the second quarter ended Sept 30, 2026, from RM50.24mil a year earlier, supported by stronger contributions from its property development segment. Revenue increased 35.8% to RM277.61mil from RM204.36mil, while earnings per share rose to 2.73 sen from 2.02 sen previously. The property developer declared an interim dividend of one sen per share, payable on Jan 19, 2027, with an entitlement date of Dec 21, 2026. I",
+   "urls": [
+    "https://www.thestar.com.my/business/business-news/2026/11/26/eo039s-2q-net-profit-rises-354-to-rm68mil"
+   ],
+   "outlets": [
+    "thestar.com.my"
+   ],
+   "importance": 6.0,
+   "reason": "41 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 26,
+   "headline": "Air India, AI Express To Operate As 'One Group, Two Brands': Here's What That Means",
+   "summary": "The proposed integration, spoken of by the new CEO, comes as Air India examines a potential workforce surplus of 8,000-10,000 employees. Air India is lined up for a turnaround ever since the Tata group bought it from the government. NDTV File New Delhi: Air India is considering a major organisational restructuring, integrating key functions across Air India and Air India Express under the \"One Air India\" Model, as new CEO Tewolde Gebremariam looks to streamline operations, cut costs and impro",
+   "urls": [
+    "https://www.ndtv.com/india-news/air-india-ai-express-to-operate-as-one-group-two-brands-heres-what-that-means-12377449"
+   ],
+   "outlets": [
+    "ndtv.com"
+   ],
+   "importance": 6.0,
+   "reason": "41 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 27,
+   "headline": "Rakesh Ranjan's journey from ISB to Uber president for India and South Asia",
+   "summary": "Uber has appointed Rakesh Ranjan as its President for India and South Asia. The position had been vacant since June 2026, when Prabhjeet Singh left Uber to take charge of OpenAI's India operations as managing director. Ranjan, who is currently the chief executive officer of Allen Online, will take the helm as President, Uber India and South Asia, effective January 4, 2027. In this role, he will report to Dom Taylor, who is Vice President and Regional General Manager for Rides/Mobility in the Asi",
+   "urls": [
+    "https://www.hindustantimes.com/trending/rakesh-ranjan-s-journey-from-isb-to-uber-president-for-india-and-south-asia-101795666878980.html"
+   ],
+   "outlets": [
+    "hindustantimes.com"
+   ],
+   "importance": 6.0,
+   "reason": "40 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 28,
+   "headline": "ams OSRAM and Samsung Display strike microLED deal with \u20ac210 mln investment By Investing.com",
+   "summary": "Investing.com -- ams OSRAM (SIX:AMS) announced today a strategic partnership with Samsung Display Co., Ltd. (SDC) to jointly develop and commercialize next-generation ultra-small microLED technology for display applications. As part of the deal, SDC will make a \u20ac210 million equity investment in ams OSRAM. SDC will subscribe to 9,984,439 newly issued ams OSRAM shares at \u20ac21.00 per share. Upon closing, SDC will hold approximately 9.1% of ams OSRAM's issued share capital. The transaction is exp",
+   "urls": [
+    "https://www.investing.com/news/stock-market-news/ams-osram-and-samsung-display-strike-microled-deal-with-210-mln-investment-93CH-5049794"
+   ],
+   "outlets": [
+    "investing.com"
+   ],
+   "importance": 6.0,
+   "reason": "39 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 29,
+   "headline": "Apple pulls MiniMax AI chatbot from App Store over child safety concerns",
+   "summary": "Apple this week removed MiniMax's popular chatbot app Talkie from its App Store worldwide after media reports alleged that the product's AI-generated characters sent sexualised messages to minors. Launched in 2023, Talkie offers a wide array of companions for users to chat with, often with romantic undertones. Shanghai-based MiniMax also has a Chinese version called Xingye. ABC News and the Bureau of Investigative Journalism on Wednesday reported the app's characters had sent sexually inappr",
+   "urls": [
+    "https://indianexpress.com/article/technology/artificial-intelligence/apple-pulls-minimax-ai-chatbot-from-app-store-over-child-safety-concerns-10979117/"
+   ],
+   "outlets": [
+    "indianexpress.com"
+   ],
+   "importance": 6.0,
+   "reason": "38 articles in the event cluster"
+  },
+  {
+   "arm": "eventregistry",
+   "rank": 30,
+   "headline": "Not Tesla. Not Nvidia. This \"Magnificent Seven\" Stock Could Be Overdue for a Big Rally.",
+   "summary": "No one could have predicted the eventful past few weeks that Nvidia just went through. From visionary founder Jensen Huang's resignation on Nov. 12 to the board's announcement of his reinstatement as chief executive officer on Nov. 23, investors have been on a roller coaster. Shares have still skyrocketed almost 7,000% in the past decade (as of Nov. 23). Missed AI's \"Act 1\"? Act 2 Could Be 15x Bigger. Most investors think they missed the AI boat because they didn't buy Nvidia in 2005. But accor",
+   "urls": [
+    "https://www.aol.com/articles/not-tesla-not-nvidia-magnificent-102500000.html"
+   ],
+   "outlets": [
+    "aol.com"
+   ],
+   "importance": 6.0,
+   "reason": "38 articles in the event cluster"
+  }
+ ],
+ "wall_s": 15.5,
+ "peak_rss_mb": 57.0,
+ "cost_usd": null,
+ "searches": null,
+ "notes": {
+  "meta": {
+   "provider": "eventregistry",
+   "beat": "ai",
+   "window": [
+    "2026-11-25T19:59:15.118708+00:00",
+    "2026-11-26T19:59:15.118708+00:00"
+   ],
+   "date_range": [
+    "2026-11-25",
+    "2026-11-26"
+   ],
+   "hindsight": false,
+   "params": {
+    "concepts": [
+     "http://en.wikipedia.org/wiki/Artificial_intelligence",
+     "http://en.wikipedia.org/wiki/Large_language_model",
+     "http://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+     "http://en.wikipedia.org/wiki/OpenAI",
+     "http://en.wikipedia.org/wiki/Anthropic",
+     "http://en.wikipedia.org/wiki/Nvidia"
+    ],
+    "lang": "eng",
+    "count": 30,
+    "top_articles": 10,
+    "top_articles_events": 10,
+    "min_articles": 3
+   }
+  },
+  "usage": {
+   "requests": 11,
+   "tokens": 15.0,
+   "tokens_source": "usage endpoint, 62 -> 107 over the 3 beats"
+  }
+ }
+}

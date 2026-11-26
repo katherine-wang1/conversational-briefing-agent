@@ -1,0 +1,457 @@
+{
+ "arm": "editor",
+ "beat": "energy",
+ "at": "2026-11-26T19:59:19.305863Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor",
+   "rank": 1,
+   "headline": "US AI chip curbs stall billions in Asia data center deals and financing, Compass delays $380M ABS after outage",
+   "summary": "Bloomberg reports US chip curbs have halted billions in data center deals and Asia financing, with Fitch saying the curbs will slow Asia investment. Compass reportedly delays a $380M ABS after a data center outage; BBVA weighs an SRT on about $500M of data center loans.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOM1NqcVAyc3pLNlJUeTAyWTh3QjdHQllfWEZxQ3FkQ25FLTlnQUVhVm05eTc0MkxETm1yS3JYcUxvQW51ZVpxQ1d5VkpiQmdfbXQzdTFyaWlpb0tvQnU0U1VpX2xsQm5aemJUNXdabzlZMkhXN0p1ZENfUjZkOWxEVHJUanpXNl9TLWJmTVdUMHROekt4a0VTYk95REl3YkpFYjdZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPN3hTMVNHM2dualh4VzlyNXFCV2ZJS0lsSkNUTWFHdERmUWdSbGk2RW50b1lGTnRjV0RvREw5bFZxelFjOGtYVG9XajZRUUFDd1Z5bHR2UWtDRXBCNjl4Q1VDckpqRG8xMmFfejN5aGl1cTVXV0hTRUgxTFQxWnFVZzBWRTA1bkU3MURtQzVfd0tIOWdOYm9ZVk9jcVE0VXRjSVFj?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNak51OWx3VkJ4V2NoMU12QTBXYXIzN0ZXRWEzWHoxY244aEdyUmtUTzFYaGZvUU9icEQtYlNMX2lHYnV6R19JakpnRExkaElFODBGeEpGbWtXcjU1bnVXbTFNSlFMa19KZU9rR1ZHU1JvS0cyMHlzQXNXaXV3MUhUQk9jVUE3YUJPSFJxNk1RelJtTjhHdXV3Rl81enlIXzNxdzZDYjJ0Y3JOUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZzNtOUdnTHJCQ2FCUGIyOXp4STRoQ2p4NTduYVNjYzF6eGFTUTE4LUFTRUZUUjlFZ0cyWVV0enBBNDNHazJIWTdiZUs3VHg3ckw3bjhhYndIN1g2Q21vcUh2RkFKcHp1TW1NQmpPS0VfQy1uMnBRZ1FTMzg1akN2UlVZUkVqRnh5OHFfWElYNWVnazFfSXV0WTlPclFNOUdEcU9Dbmg3c2xacldjNHpZZjFJYWM?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOenRUdXZfdWoxbWpzMTQ4dk9xWWxtMlR0ZWxva1Z3bUZDN0NZVmM3d0RwYjM2RG1kZHhSQjlWTXdUV2tPZnAtY3BtWk5JSU0yZ3BVSHhGUWpSZVhkT1lKWkJsRWtPVThRcFRDY1lyT2FybEFBNGcxQlIwaUgxRzZCOHVGSXMwNExmdkRFRVlyYmtYSDFyRUpPQUFva202Zlc2ZlkwblNpaS1OUm8zckd6MWhSWkc?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZFVpdE9oSXNXbl90bmNha3ZhcE1zcUwwdWVhX2NrV0g1b1VTeHZ0LWZxNF9mX0pFbmNFU2Q1Mk45c04wdlZvNS1NSUhnU0Z6TGZOTXdnS3FoTnNJVWYtNy1VUk1JZmJKRlcwaWY0UGZ0alFwN0wzUm9sSld4MzduVk9yZEJDNHlYSXpQd1FuamZoR3YyUjVwNHdkN3hsclJ1bDNXV2FBcnRndzFmeVJWOWx5RzVBNGM?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "Reuters and Bloomberg coverage; multiple Bloomberg items on the same development"
+  },
+  {
+   "arm": "editor",
+   "rank": 2,
+   "headline": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+   "summary": "The FT reports fierce opposition to the $67bn NextEra-Dominion tie-up as anger over electricity bills spreads to dealmaking. Separately, Microsoft and Chevron reportedly signed a 20-year power deal for a Texas data center.",
+   "urls": [
+    "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNmtOMnRJVnZpV0VpVE1FdDZhSGJtLWtoY0Q0ODhXaVpfdzBmQU16X3A3MUw5TEo2T0VoRTBwZXlvX19kLXcyMFVXUE9yNGpxekRWcG4wOFQzYVJiMHJVWTEtY0JiOVhyeXlhaS1EX1ZaRDhPN1Q4S2tCOTlNT216eVl5WnhBeFpNa2RDOVBhWk1CdElYMWZ6eHZqSFBjN1k?oc=5"
+   ],
+   "outlets": [
+    "ft.com",
+    "news.google.com"
+   ],
+   "importance": 70.0,
+   "reason": "FT primary reporting; EnergyNow coverage of Microsoft-Chevron"
+  },
+  {
+   "arm": "editor",
+   "rank": 3,
+   "headline": "Nvidia halts server shipments to Malaysia, Singapore, Thailand and Indonesia after new US export rule",
+   "summary": "A report says Nvidia paused server shipments to four Southeast Asian countries following a new Department of Commerce export rule, with no timeline for resumption. Fitch separately says the curbs will slow Asia data center investment.",
+   "urls": [
+    "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+   ],
+   "outlets": [
+    "datacenterdynamics.com"
+   ],
+   "importance": 66.0,
+   "reason": "datacenterdynamics report; Reuters on Fitch view"
+  },
+  {
+   "arm": "editor",
+   "rank": 4,
+   "headline": "US authorizes SpaceX to deploy 1 million satellites for data centers in space",
+   "summary": "Reuters and Bloomberg report US approval for SpaceX to deploy up to 1 million satellites for space-based data centers. Coverage also notes a separate Musk share pledge that is not energy-related.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE82WmZ5Q09QdlRvTFdtSFcwLWx2cTEwbnBkX0JLUV9laTQxQURvSENwR1dvZkVoTl84dVh4dXd6OEFRcEh0MnJIRFB2emptQTd6cWkwODhhUl9mS3UzaG9HM0hacjN2cmM?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVk5uRnprd285MEw5V2prcHR6bXljVGN4cUZuOHA4eHJUZkFzOVFnS1QtYnZaal8yYUYxa0t1cW84WjVzQWpub0czSGxUblh3STB6WnZxcThWZUxNRDk2emliZ0tfTmk5U3YxY3FZRXdEYWNyb2VMTmlkZE5RNWZHOS12OWdjSkpNdzhGU0Z4NWo3VmpSZHNXWGNJZUFpZjl2T2xuUkRKRXBpOTFqVFdFLXFvV0xHd1czWDFKbFU3OWFGU21B?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRzBFdjlHbEpoQ3pNX0Qtc2N5WTlHTzVrRmtQbG5zOEJOWTAxTzNiSlU2VDhnNW5oOWtWU2ZDM2VVWlMtLThUNjREWW9wQzhiNjNubC14bzJRM21JU0R0NXhNaG1DbXN5V3pLSmZkRUc3M0VPd0pjVFlFNFlOa3Z2ZC05Z1RwVlhvZ3p4Q0FxYlA0c0IzY28xaDRnRW0xN085Ym1hRGkxYXpvRGxHTkxKdjFB?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMVVHT0RrcFA5ZTBDVVhtcHdtNEdyTWswVGdocnhkX0JGYXljVEtWSGppeHNRSHRPUFBPZTBfLXpSeXVrM2RsdmJ0bnJlcFlmNkFiNUxqWDQtblFzcjdVSDNiRThEbEdtRzlSOW9URDYxYUZPMDlFZ0h0Zk1RSUN4YWE4Tk9CV1E2ekdQODVHSktDMXdKejdJNzl4cEUyVUlnQnItaE1XRkgwRVdrT05FYUY5dU4zZw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "Reuters and Bloomberg coverage; New Hampshire Union Leader"
+  },
+  {
+   "arm": "editor",
+   "rank": 5,
+   "headline": "UK grid operator makes record number of balancing calls as cold snap strains supply",
+   "summary": "The FT reports National Grid ESO made a record number of calls for extra power amid cold weather and wind-farm transmission constraints. Bloomberg reports a third day of strained UK supplies.",
+   "urls": [
+    "https://ft.com/content/21a1331c-c201-4333-b312-ab87b7fd994f?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJWFVtc1BvNXp5TFMzbWtqVTdzc3JVM3pmY1hkR09YMi1WV3k3TzZ4VzFDQUpkcGJHVEZ2R0NqVnRNNmZsTThQZ0V3SlNzUmY1dUFURGtVckNOTXVQamlqSnVxTG5NVy1UVVR1dnlaNFE1MTluNFdUOTZzSHg2eHYzYTF1emwxMjZKUVIxcWhqYzhxTUdYZ0VZU3BsV1UxRHp3RTZnc2lyS2U5SDAydW5vcjVqaFFz?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcF9XSks4a3prSHMwSUlVaWJydXp0ZTlZREdGNXFGS3JyeFBibjNCMUFiR0lhQi1zME9pcE5Sdm9YbWV3X1NWaUZEbk9MMmRFbXFYRkUtV01WSE9mRDlSUGk5Y1pYXzY5Wmh1VDFJcmJiOUM5UnRqSTRudkNzUVFkWHNKcTdodGJObGE0Y01KN0dEVzlJZHc?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQX2ZfNXdXdHh2Z0pJLUp1alQxbDFiUTFodGZTNWkzYVZUV2ItT2twZ3Q2b0sxOWJ1RkNueHlKQmQ5OUxibzE5OGhSSWtPV1hDcUtGTG82Q1NVRklRYVIxRFdjSm9mbUJmQ3Q3RU9YVFdtOEtQeU1mZzQ4R3RseXJhOHJlNF80M01JQUhCRVJOS3dCT1VSLUR1NjNLZHJFTDhnbFRacUJRRVExbVVJNXZuRXBwdGVGYWZSbFo2MkF0X3pNUHFHWHlBMVc1X3ZaRmxXcUE?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb0NGOHVKakF2RnNCZ0o1QzQ2WHdqM2xRUGdTQnJ3bWJ6N2hXN09TOExHbzQzcUNWYjBKRVU1UWp1dE1yTi1fdG9mb05aVVF5SnJ3ZDJGRkZScEMyZVl2MkNSZXVYRElKTTlfZE1meW1wa0JWLURUVXc1ajhVeU5EWVM3R0hlRXNaazkyNHVnUkVkOEVEcFU1TjFtN1RpUjVwUGhxOGdWWi1kUVVLMnEyY0Jha2F4Zw?oc=5"
+   ],
+   "outlets": [
+    "ft.com",
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "FT and Bloomberg coverage"
+  },
+  {
+   "arm": "editor",
+   "rank": 6,
+   "headline": "Ohio approves gas plant for data centers despite local voter backlash",
+   "summary": "Canary Media reports Ohio approved a gas plant to serve data centers over local voter opposition. EnergyNow reports data center gas plants could raise US power emissions about 20%.",
+   "urls": [
+    "https://canarymedia.com/articles/data-centers/ohio-oks-gas-plant-for-data-centers",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZlZvSjJVZkFiS2NiUDFPX1kycjRvb29pNjRnWVVYelBQUFBYc1dnNjg3Q3VtcXlIMEdyVTl6c1ZUZDdRRWFjOXlTZkVYajVDNzlEMkJvV0ZfXy1iOUlkOFZDZlJRM29WOUIxZmt0b2VyNDc0bHBaZk11WVBURlF3VEtjY3podFMtZGpfUHB6T0Y?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaW9tTFZMZG95TEVIbzNUT3JVQ1E0NnBob1ZXc1hfWUpjbVFzRDJINFBCTlpBakp0MW9NTmV1dnI1MVlkTENycFdNdUJyeHR5b3BzUk0waUZVaWlVUFo2dF96ZEY4NWFaZlBzeFloWGRiX2QtQlZSS1huWmR2ekdfNUFnWnBQM3AyQTUxZ2cxLTBVN1JzZWVPajBtRQ?oc=5"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "Canary Media #2; EnergyNow coverage"
+  },
+  {
+   "arm": "editor",
+   "rank": 7,
+   "headline": "Google's grid deal in Ohio tests faster path to data center power; Google bets on superhot geothermal for Oregon data centers",
+   "summary": "Latitude Media reports Google's Ohio grid deal as a test of faster data center power access. Canary Media reports Google is backing superhot geothermal to power Oregon data centers.",
+   "urls": [
+    "https://canarymedia.com/articles/geothermal/google-superhot-geothermal-oregon-data-centers",
+    "https://latitudemedia.com/news/googles-grid-deal-in-ohio-tests-a-faster-path-to-data-center-power"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "latitudemedia.com"
+   ],
+   "importance": 55.0,
+   "reason": "Latitude Media #1; Canary Media #19"
+  },
+  {
+   "arm": "editor",
+   "rank": 8,
+   "headline": "Texas resumes data center permitting before incoming governor takes office",
+   "summary": "The FT reports Texas is resuming data center permitting before Democrats take over, after incoming governor Gina Hinojosa pledged during her campaign to rein in new construction.",
+   "urls": [
+    "https://datacenterdynamics.com/en/news/pennsylvania-police-arrest-suspects-over-threats-to-olyphant-council-after-controversial-data-center-vote",
+    "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1"
+   ],
+   "outlets": [
+    "datacenterdynamics.com",
+    "ft.com"
+   ],
+   "importance": 55.0,
+   "reason": "FT primary reporting"
+  },
+  {
+   "arm": "editor",
+   "rank": 9,
+   "headline": "Norway pauses data center grid connections; Massachusetts to require new data centers use clean energy",
+   "summary": "Rystad reports Norway is pausing data center connections as requests outgrow its power system. EnergyNow reports Massachusetts will require new data centers to use clean energy.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdHN0Y2Q2OUJ2TFNNVWNQZ05vZEMxOVdKaXQ5RjFteXVONGFLcFROSmZuQ1JrRTNRT0FIS19GTm9BaFphRnZRb0VTREpsbG9sUXJvZ29ZamFYVU1iX25PZ2lDSzltY3hWcHdNWW1Gb1lwdzMxMFJRdWRWdGVPT2lwbDFlZF9Db2ZyMi1Mc2llTlplcVVBYy0tQ21B?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTmtUTnNiMEZsRlhTTVJLbkFBS3NOanRMZ3hOTmpud0xCNDZhei1Bc09YUC1mbE5aaGdDUlRfbmhsdjFfTm5FcmpqTWtfTHZQSUc5NUM2SC1tMHgwa1gyUXJnb2hUVTdCQzgtSFk4NWY5TGtLN201UXMtT1hZcHdfNmFVVklaUDNrOG4yRFpNWHhHVy03NWJvcWF0RlU1U21aU2pPS204SE1lZTFMaHNwRm5n?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 54.0,
+   "reason": "Rystad Energy; EnergyNow"
+  },
+  {
+   "arm": "editor",
+   "rank": 10,
+   "headline": "US feds back $4B project to connect eastern and western grids; Cheyenne Light seeks approval for Microsoft transmission",
+   "summary": "Factor This reports federal backing for a $4B project connecting eastern and western US grids. Construction Review and Data Center Dynamics report Wyoming grid expansion work tied to Microsoft data centers.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOa3NBUnRIcHhHSkRuOHhKZ0M5VnVTRjJLU1N4dnZvaldURmhrRWI3TlpPcTI2YUM2d3c2ZmREcnRpZ2piemFGeGZ3Mm5ab1dIblMtN0JIN1Y4ejFBdFlOTGNVUTB5OWVRZnNOS0U5Vk92ZktnT2ZKcjJqaURGcGtrUVRzem5Md1R0X0tKdFdqcGRqbURfeGlHTDZha0lQMWwwTkplclJWc3VQMGN0NkJ2bnVTUGtiSzBLYTk1YkpaYTNQYlZVa3lGbWhBX2lhdWl0T0NyeThoaVBOWWJMVWw4MQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQkxTX0Vtdk9JTXlCeG5wendxNWR0dm90RXpXYzNzSmM5WXhvQVVZQnJOaUdaTzJ0OHVSa0g5YTQzcEVqTjV3OGZvNUxCWi1nR1ROX0ZoVGwwcFN6Rk9weXhPU2dKaC0wbElPNHphN0JrUHpUOXpHLXd3MDRjZDR3STFhREU1Yi03X3NPNTVUa2hkbC1sQldVZnFwMXB1cGEtOVp6ZTNXWkgxUHBJSE1rQlpKN1NKYWVJUmszQUhYZVE1b1ZRaURzMjZUSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbmdOb3p4cXpiWkd5c3BVdzN5RHNNeXE1RVNOLVczTXNqUHZoOHVtVW9zUmtFQXkzUkFwTVVSNkxneHBHYnY5NGlUTXJzb0lRRjNRdUtCYTBWVTIxdVBiUVdYSnJmMjROOGVPX25UQVNqQXM1SjlBeXkzcEg4d3puUldPU3lvVURwVUhtbVFVd18zeG1TRE5tZGMzQUhVc0dWcm1BSXEwbFgzdFMxWGFDckNQWUY5ckR3MlpERDBSZkdRd0dNVFRCYjhoQzdSMVk?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "Factor This; Data Center Dynamics"
+  },
+  {
+   "arm": "editor",
+   "rank": 11,
+   "headline": "Global solar buildout slowing; Chinese solar exports surge to Kenya; US tariff scrutiny on solar",
+   "summary": "Bloomberg reports the global solar buildout is starting to slow. Business Insider Africa reports Kenya's Chinese solar imports jumping from $5M to $576M. China's newly registered solar projects fell again in October, and PV Tech reports solar under scrutiny in a new US tariff move.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTFBKMVRad0VMdmdhMUt1RENTMU1kd2VaSnEyVEFWQ21EYU5fZzA5dXNqV2N5UXNwbDlUNEVES1FfaVprSmhhQTBKcTRSbVpLWXpNR3Y3WjBjV0NZaGtFeG1za0hVRGo5SktQN1I1RjNpVE04Q2oyV0g0MjBZOTE0RUk?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTmFhR3J3bEI4dGpWRFIwcGhtNDc5aTNQaVAza2tTN0dkdEk2enhaWUo4a2otRmpQVFduNmtjUFpHWE53QmVUci04QzVFcGhjcGFXS29KWWh3S3BaR25Fc182TmJMTThIdWJqamRCamJCNFg5bGNrQS1HWUZxcFRiNDRQOVZtd0tZdUZBWDRkWFdWVGk2M2h3UjlzbC0?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRENja0JkWDdhN1IxV05MWGpJc1laZGVDQ09BMjl4MjBJVEVFTmNUeEE2V2FGWWhQazBaN2F1cy1jTzUxOHIxaHNJTmQ1bUtyZWhsRlVZMVlXWkFCbG1rRDJkaU1mUHhkNlJwdGxCSnBCbFpUbkNEeGZta2lhLVJPbW9vVl9vS0RVMG1Ha3I5Uk1PTndYVzRUcmdBZV94bkUzaGVTYjNBa08?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYTMwdFFNR3ZkUzJ5LUcxWkFpRDQ2UHllRWY5RW9Jam5nWVh4bGVsQTJTNk5EZWc2eEJaMnlRaE4yYUx6VWNVeVNFNjROSjEyM3FVYmNDNmtsUENLN1hDWTZadjBPTVo2SGtWLXJBYjFGU3FFVHEwZ1FNOUExb25JMHFhdlV0emNGZDNyektsOVR0eDVfenJRVGlRUTJsc1lnQ1VQOFlGX2RHUEVsN0ZEWTNB?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVTVpUXY3ZzlzZmZiMDhXTWFIdWpqSXdjZW13MkJJaTJQcFlOaEFwUEFITFdiY2lNckFBd3Ewc1lraG1DRjBzcEI1djhTUHNycWxTU1YtaHpqcXVrSUtBNjVmMTlTOWRhSUlHVDZDU19Xc1J4YlpIX282MG1IWkFHUzY4dFVVTU9zYk1Lc0Rfd2NhMVREeDZMa3czUXltMTIxcVBncm82Wm1rQmV1dHBpRDlR?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxOY1pCbVQwel8tM1p1bzgxYnNJMTAzaHUySjFaa3J0THcwNU9kaDVHdEVIWm9TZnpNRWtubGI5MFBZTm9nQmRSUEhtY1JRcXdpWXRzMzJDMXFUM0Z0TEJqVnRaRVl6RUJ2RE85SVRrcmpWckdHNGg4bGpUS18wZE9UZFY5NmZlZXFJYXlxWWYwbDR2MG5BRVlhakFSTng0b0xralBzazYzQ3BDSlg5bFYzX1Q5aTJpWkdDWTVYbU1BbTAydnJfNlE?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQOEVHM1B5T3pvUEZnRTMtR1RiZnBTa3VmeE1aX1lDVjFHOXBUV2xzTGZUSF9vTUowWFdUdUtVaUw2MUNWNktMQkhGQzV2WENwRFRMRmV5UEtpbGQ0RUpza0pzX1ZNMVlFQmF6TjJuUWl2SjBQd3BPMEgxNUJoSkxyWVJOZVpmWkJDeGNZNkdNY2Uyd3ZnVU10aWw0eFRscy02UlhkeGFwc3BTZEI3Q1ZMSmt2bGpBb201UGM5aWYtbW85dmpQRUVmRjk4dmh5c05fQ0Vz?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Bloomberg; Business Insider Africa; Renewables Now"
+  },
+  {
+   "arm": "editor",
+   "rank": 12,
+   "headline": "UAE raises clean energy target to 35% by 2031",
+   "summary": "Zawya and multiple regional outlets report the UAE raising its clean energy target to 35% of the electricity mix by 2031, up from 30%, with solar aiming at 23 GW.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZ2FqZGZCb2duemdBN0NFY0RKRG52UkFKSWFNUVgtUUUxeWh6NHVGbThjRWNoYTdzR0xqWkNoazZuNGNLWTNUWWR1T0dzc2xuM0owSUFNZUdvcmFyT1p5RW9yb25jZU40SWVoUFhXUkphcFlfQk53eHVsSlptdmNhcXRYNW1aRFZTUGJtczl3N1JxeThGblVwa0E0cjdKNnhsX0g0QS1yd1B2dHl6eTYtcGFXSngyM1lXd2h6VFZWREZ6QlllWWhUa0x3aWp0WXV0cEk1eQ?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWEFPODdYNDhmVEp5dTU2dXVjOXFxc3BVZVdCMndjV1I0eUluTjM5SmZhaFhXNTFQYTZndDBpSWxjS0dRTVY3RHMtM1lWeE5zNW14MkE3NkZtWVFYUkgwaExrX0RjTnNVVi1ZSUNJNmhyaHVqdGtfb2ZsWnpDZU43VUhucHd0YWFIZE1WTmR4ZFo0dWtNaFVFWg?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMm0wVGpRRVI4WV9fRXdKLVlobThDQUpLWm9sVUhwdTE5NURaU0l4SFBZY1FMelRGRUVEam1vSjF2OVd2NEVGbVVWby1ZSUpJNl9iRzdUbFU0ZkZ2cGhSbVIxMkRpUXBVXzE3Wml0Tm1Pc1dlRHNwS3JTNGpnbHMxakJvSlR0aGxzQ25jbm9fTTFUOEpYTVBLOTIzeDJCZlVpTHpLQUVyM24?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNb0xPcWQ4ZHFwckhmNGRxY3Y2d28zcEFpQXJaTlI0eElNdDVvQVYyZ3V4eEc5NkR4My1IVlNTNEVKZGNSTnpQVUFGNk9LX1JPT1Y1RG5tcHA3OUNCY3V2UHdWY2czUjcwSjQwYUM2T0dQbzBEazdSajVTWFhKUklOZGhscExubjRNdWJ6SHA2QUstcVIyY2JOVjE0d25aU2R4bk1UbERqV1RiaGcyWngwYTdfUTA1T0tz?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaURHbnRMWEJiRms1ang2U1JFbUYyZ0k2Rld6RF9kemJrZVhWOEs4UDB3dXJIdWN2UTlKVDU4clMyQ3VtVm5pSnZLOElYN0l2NXRna2FqOEoyLURZUTV4Z1FoSnM1UmloeXAyVHJOaVc5dUpNQzcxeS04RHEza1dnNGNNYVV0SjlVTzlpOE1VYkFQM2preC1fX0pZajYxRmp4SGlUMm02ak5LUld2Y0FZdnVWSDJOU1BwSDVNY9IBvAFBVV95cUxNaURHbnRMWEJiRms1ang2U1JFbUYyZ0k2Rld6RF9kemJrZVhWOEs4UDB3dXJIdWN2UTlKVDU4clMyQ3VtVm5pSnZLOElYN0l2NXRna2FqOEoyLURZUTV4Z1FoSnM1UmloeXAyVHJOaVc5dUpNQzcxeS04RHEza1dnNGNNYVV0SjlVTzlpOE1VYkFQM2preC1fX0pZajYxRmp4SGlUMm02ak5LUld2Y0FZdnVWSDJOU1BwSDVNYw?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNkMzLXRCelhwZE8yd2hVUFRjMkhfbXg1RXhEempZc3RYeUtLYTJFS3JKWEFBd0NEcFVkb0M0eXFYWlBfUHNFWDFySnZHZUp3bk8yTVVsUEZHTms0eXViR0NCSm1zcTY3eTlPaEtERnd4NDFhc2hQWWZEeGpZUjhhMm9zSW5ITm8xMXV6Z3ZEeDlkU3A2QVg4UFh1RlJNU2JWeTNCdm9ORkZwZmF1Y291eXNpZlVVTHpVWWd0OVV3?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Zawya; TradeArabia; IndexBox"
+  },
+  {
+   "arm": "editor",
+   "rank": 13,
+   "headline": "Feds approve BlackRock acquisition of Indiana and Ohio power company; OMERS and Blackstone-backed TDI pursue Toronto underwater transmission",
+   "summary": "WKRC reports federal approval of BlackRock's acquisition of an Indiana-Ohio power company. Markets Group reports OMERS partnering with TDI on a Toronto underwater transmission project.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wJBVV95cUxOQUU2Y1dxUVY3ZGc3UFR3eV9RUEJfb2ppQ202ajBXLXhjNnY2TUJqSlJhR3JoWVBidGdaMmRZWmVNMUJEdUxHZDRyV25QZ2xFeHVvcmJ5d0hGN2xuVDc0MnpMaVZDTkFvZ3EzT3prejFKNnliUk5Xd3dPcXJtbmd2QlVzTnltZWQzamRld3c4QjltdkpENjVBbnJPd2RBeG1Uc0J2Z2ZkNU5EaWFiVXJGTDNJN1F5NUt3Mk50Qk55Y1NIOFUwZHhuR0I0T1RPd3lGUFprMGRRZkRLOVJEd1VNOHBsb29oVUhCMGwyZnJzcTFIUFRITDI0Y29TeUdjYkVUUFhQcE1wV0FudF9IRnNMZU95SFBaRzJudTZRLTVRNzhkbEg4c0NqZ0hLQy02OVAyX2FraXZRNENYTVJ3Zk0tdGk1bVBNVmN6WVdsbGtGQ2dxVmh6OUZr?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSGk3d2tmZXc3REF2bXNkUVY2LTJLOV82c3RTMEVUM3RyTEdCUVRBMGhuNHI5cnZXb2pUdWtSTzlLdzhrUXg5enluSVhfZ0o5Y3g2aFVESHpETVJiTXVZalRFRERPMzN5R185MGJ5ekVVOVpoaE96dVlXRzBPVlhTMWxpX192M1JMMjNpTUlwcHZ1M1QyYW5xamZuZUFrdUVUUlpQU2YtUHpCY1dXaTZ3R1N0YV93NDJqelBjUEpDQXVPX0U?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "WKRC; Markets Group"
+  },
+  {
+   "arm": "editor",
+   "rank": 14,
+   "headline": "Trump EPA keeps trying to kill Solar for All despite court losses; $83B in clean energy projects delayed or canceled",
+   "summary": "Canary Media reports the EPA continuing efforts to end Solar for All despite court losses. EnergyNow reports Trump cuts linked to $83B in delayed or canceled clean energy projects, and New York awards ports $230M in offshore wind grants.",
+   "urls": [
+    "https://canarymedia.com/articles/offshore-wind/new-york-ports-get-230m-boost-for-offshore-wind-other-industries",
+    "https://canarymedia.com/articles/solar/2026-year-of-lost-solar-north-carolina",
+    "https://canarymedia.com/articles/solar/trump-epa-solar-for-all",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSDJEbE1xejFGYkFlQnlEbWJuX0JCcDgwSExfbGFtNlhyOE9nOTA5QlU0eC1zMWUzcm5iYlNSQURYYWdkS181QloyVUowQ3dGeWY3dnB0akpIa3hzNzlRdDJXdEtmMXJoZkNoTm5YcndpT2t0Ql9MV3VZTEZEUm1xeU5mOVVwbDZjVG83ZDlVdThHbjBBdGs5VnU4MkY5S0N3WWFYeV9MYWFvRlV4T1l3?oc=5"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "news.google.com"
+   ],
+   "importance": 49.0,
+   "reason": "Canary Media #8; EnergyNow"
+  },
+  {
+   "arm": "editor",
+   "rank": 15,
+   "headline": "Alabama Power proposes $160M rate cut, citing data center growth",
+   "summary": "Local outlets and Yahoo Finance report Alabama Power proposes a $160M rate cut attributed to data center load growth.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOR19XLTlpaEVEa0Z0Z1BBZXlybk1KeVpmTVNnZUZDRjlxRjlTYUMxbTQtVjFmM2VqM2JmcjliVGpSQTlyaE1ZWnFzOVFKSDE3SGtRNnFFMTBtYzZqOWFlRGJuZ0h0NjZqa0lsYWtheFEtYUYwMTV3V3NzZDc3Z0xESktIU0g2WGdUbDNyQkQtT2s5WWJUTHJZWHh2cENCSFlvN1RSeERvX1R3TGZzckJzYUljMHg2U2o2dmFIZFNWYzBPN0FTckVGellxdWtkandjZG5TSWlxZDNuNFVUYlppVnB3?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxOOW15eFFtYzljdXZzMEp4dTNuelI5UlJyNy1SXzBlSkM3WU5pS01nUlhtUUtjY2RRdTFyaFh6NENGM0U5Qmx3RWRYa2d3ZHhIZTEzajRnSVc4M1gxNkNZVm9QUUZYXzdUWkozaFpzQXppa3FzeXpVSllVUFdsOVdNS1NJN3ljbi1jMFZqVWRsalFFbFk?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWkJUSmZiTUZDbU5KTlhTbHQ5LTJIcGE5VXdkSEt6S0pZRmw5NVQ4S3A2WU15VUQ5cG9SelJ3YjRNc21QczhJMEhRNGF4RmU5cVVPWW9DWHdfaFdSaTNGLVhITmFvY0VHNlhDNmFhSjJYbS0wX1ZJVU9qN09fMks2OURzUW91TUhaSXVvSk1ZaUxYT1dsQW5MQ2ZR?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaE80MGxvZFptemhqVURRVUFfWk5TZTd0eFlZQzhGVXFfeWZ1ZUxKaERYTUFranNkeE5jTjdTWkcwM0lWdVZxSXBLOEdDb3VNQnVxRjEyZHk2ZU5CTHRLSnJtR25oS3RKVW9NRmFrVnV2ZUZMWGROOHFZMXpJaDNEcTNZTmpnOVlMQjlOV1YtS29GcFJac3RGTERMQWpqeWJoN01B?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 48.0,
+   "reason": "multiple regional outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 16,
+   "headline": "Senate passes permitting bill that would boost clean and dirty energy",
+   "summary": "Canary Media reports the Senate passed a permitting bill that would expand both clean and fossil energy, with tribal rights emerging as a debate point. Canary Media separately covers tax credit preservation steps for solar and wind developers.",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "https://canarymedia.com/articles/land-use/tribal-rights-energy-permitting-debate",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZkt5SmthSWJabHBDUWdxeUJZa19oUFZxNmhsNDRoYzBrS3hwREtLLWUzdmUzN3Z6dDg5MjZOWERIVHBuRE1WNFNhSzlIQkNUTmJxekZjNm1OaUFtN19LR2NnUjZyWGY0Vi1OVENPTjNKRE04TUtZY1kyVUN3VWVzbkpjeFlhUUprRUpZQnpLQ3ZRa1lQajRDVHhvWmIwdXk2enlqZ2VZMVdoQ1BY?oc=5"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "news.google.com"
+   ],
+   "importance": 47.0,
+   "reason": "Canary Media #10"
+  },
+  {
+   "arm": "editor",
+   "rank": 17,
+   "headline": "Fusion progress: Japan awards Kyoto Fusioneering consortium JPY 23.3B; Japan accelerates largest fusion reactor; Samsung C&T joins Korean fusion project",
+   "summary": "Energies Media reports METI awarding up to JPY 23.3B to a Kyoto Fusioneering-led tokamak demo consortium. Laodong.vn and asiae report Japan accelerating a large fusion reactor, and Samsung C&T joins a Korean next-gen fusion project. Pacific Fusion received a radioactive materials license.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWURRYklHaG9EYlZVT2s1Z3Q1Z2d6RHc3Y0owQTdYUUppaGFzbXFDR2lKUEp2VkRwWllTRHBpRWhvSmkxY0U2N3NHWVVCY3h1ZGx6cFJGUGlOMEI5NWNEWk9DWWlnSzBiZXAzOXlCaFEyZUwtOTBfYWQ1b0VWZFRyVlZvN0hhLTRyV1BCd2FiaUY3b1N5NzlwZkFndFBOU1U5X05DeGJmRlFnTmRpNEJMTUM0RQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1aZFZBRE1kNUFnU1p4NklmUmN3R29QdnNzTHl5VzZnc3d0U2QwQ1NMZE4zMHYyTnFSck9md3VEOW0xQW03bXdtbmcwaw?oc=5",
+    "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0MGlWQVMwek94SG9wSVNfcXFjTE1nR1NkNHhmZVpHa3F2TWpmZkRtdVlBTHdYeFhBQ0lTdmk1SklFbGlLdzJub0ZIUzgtakpQZm5Xc0NR?oc=5",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTFB2QzlvbVlRMXcxOHFyVmJOd3dYX0RRVnQ4c1ZtdzM1cEdnTUlWaXZSWE1GSjdvZkh4LXc2NDJSZHpKQk9TLTBkNGIwQVZaRENsWkpnLW1MWFFYcFpfZXpaTno2NjluWkw5bDFHSF9TLWg0UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTXl4dDR2VTc1VXNwSGdGZjNxODZFMWNpNk5wb0dKMUJfR1lEOGNjZjlNYmRTSk1ybXZQWHFqRW5VbjVqN3c2YmJRWEhralRWNE1hMFJ5LVNrT1ZHZGdlY1RXYXlSZ25KR0FLQWpUTGFfRThfb0RJZGZmQVJONV9LMWdNWVlzd0t0U0stcC12cS1yVUJndVlfWmcxZHduVVczSGZ0MUotTjBkcmt6eVk0N0Rn?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxQQnBqbVB0bWJzT2dZeDd2VGc5Z2dkam9lUy1jcTExMFBJM3EzZS1mbUtwNmhYdGZjejRsMF84Y1djNHNZclRIeXFaWmZsVWxCWG5OajQteldkMGhDSFlUMGlJc2NjOEMyYjFfYW44R0xyTkRZNXkwYkg2TEFBWkNTOVFKU2wzTXJVRnlXVzZzSmpjZE5aczR5V3ZLV1BPbGpFenBmbERSX0s1bFZuaWRVU2lFakRtSjFYMWhHbjNJUkUzNW9tVXZkSkFDd3o?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 46.0,
+   "reason": "Energies Media; Business Journals; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 18,
+   "headline": "Vietnam weighs delaying nuclear plants beyond 2035 target under revised energy plan",
+   "summary": "Bloomberg reports Vietnam is weighing delaying nuclear plants beyond the 2035 target, and Construction Review says Ninh Thuan's timeline has slipped past 2035 under the revised plan.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaGdmcUtqLWtoVmNGWVJUczdNUUFPTWFSNjY1Q1ZTTzNtaExWZUdUOU5EdzRDUHBGQW1oejRXNE11QWNNaXFMeFR5REFrc19jeDFDbXoxbGYxVFJ3MFZvdzRNX0t5aGxPZWNIbmJaVWVuM3VzaDUxTFlzSG4yLVpMYWxRb0dnQnF3SXFMeHFETFRnT244dElKYTBzclV4SFIxV1p6MTE2djJCOXdBMmFoWFNiTWY?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 46.0,
+   "reason": "Bloomberg primary; Construction Review"
+  },
+  {
+   "arm": "editor",
+   "rank": 19,
+   "headline": "MIT finds excess wind and solar could meet growing US data center demand; Goldman sees 52 GW more data center capacity by 2028",
+   "summary": "Yahoo reports an MIT study finding excess wind and solar could help meet US data center demand. BigGo Finance reports Goldman Sachs projecting another 52 GW of US data center power capacity by 2028.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9SejJ4RUJNN2xIcUN0LUxSazgzZGplUmZKbVZTQk51VjhwWngxZG5DTGx6UjRIQ2FQV2NRMWk1b0FYUnd2M0tGMVRmTTZFNHE4Y05kQnE2U3BGd2czLWhnZmlGaEVseHc1OFNQZ0JFNGRtbThzaWc?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSU5vV19UdFZLd21mcDUyTjJmak5PUk1STXVsVF9iY0ZxSTE3MHR4Z29FcUtLT1ZYcEtUaG9uMW1fMGpFZkFZYkhSZkZvVl90NF9VWEZLWE16Uy1OLU1JZXV5blhVRUFpdlQyV1hMZm43MlJwbFpkMDA1WGN4Z0dRbDRCR1RFTklPcHVUNGZMQi1Ydw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "Yahoo; BigGo Finance"
+  },
+  {
+   "arm": "editor",
+   "rank": 20,
+   "headline": "Nuclear buildout news: PLN targets first Indonesian plants in 2034; Vietnam's Ninh Thuan delayed past 2035; South Africa eyes SMRs",
+   "summary": "World Nuclear News and regional outlets report Indonesia's PLN targeting first nuclear plants in 2034, Vietnam delaying Ninh Thuan past 2035, South Africa considering SMRs for 5.2 GW, and Tianwan unit 8 hot tests done. Tajikistan and Uzbekistan also discuss nuclear projects.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/Tianwan-moving-step-closer-becoming-worlds-biggest-nuclear-power-plant",
+    "https://world-nuclear-news.org/articles/additional-partners-join-nuclear-powered-lng-ship-project",
+    "https://world-nuclear-news.org/articles/nuclear-industry-calls-for-new-approach-to-very-low-radiation-doses",
+    "https://world-nuclear-news.org/articles/twice-recycled-fuel-loaded-into-bn-800-fast-neutron-reactor",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMDJzQkpfRHc5ME5TUGZFV2JCUXJORkYzYy15dVEwY2M4Y3NEUnNVYXlzdFFkLV9JaHpNNVBKY2s2UU16ZVpJbTl3NHdqT3JaV3F4X0kyLS1sTFp2S3lnaDNhQ3VXZURaY2NBekx0TXI4bDd5M1AyZ1JmREwyMFI0ajVmZlM0WnBIM19obkNxRU90NndWM0NodEdscW90dG1PS1dON0RaM3o3d2pIYWUzRUV6SGU0Vm5DbFFXa2p2eUYyZFpkRm5FLUFvUG1CTEdndTFV?oc=5",
+    "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9wZXI4aXZIZmhJWGNZS1pmS3VFbUhiYlMtYzBxZzJTaXZfYzFzU2s0SUgzLTNCaUpOS2JDd0RCUWVkajBWV1VyLU1jeGdHZ3J2aDEyZTRPaEUxMndfR1Nr?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNHVBdWN4bDRaT3JHREc0RkRyeHY0SEg4a0M2aDBvSjNBNm5aWDhnTEJ4N24xX3RfMzZpaEZGVEduSVFsdWZkZzZTNUo0Z0YxWEhodXZYZzU3cTFweVlTTTV4eU9kc2lhTEpNc2xtbEl4anJUcV9aY2xEZWJZQS1tU0hyc1k5dGt6OVE?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQaHJ3T09NSDRJWFBOYjhDM3ZlM0trRDN2aVhlUjJ2OXBNekNtOFhnT3IzODdQWGxpVklKVFNESHBaT1FDYUwxb1o2NEVyVmtCaDVYdTlwd2RDRGsyd20tS3N3NHNnQ1hrdllQZnhPVjVyTGJmc2N4VlJWcURHRmxVTTUxT0o4Q2NQVVZSZnJ5djFOek5XSjNmTDBWbkxUZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOR0pQN3hNalRlbVhFUmVFcjRrSGZvbkh4X01mdHZ5NFI0bUdRc1o1WGxyeUlqS0hCVHd4OUowV3Ffem1ZT3ZodTNLeHA4dllNSXdtVnpBc2dSV2NFaG9QWHNrZ2JkYS1CTS15eXdXa1F3ZlRzc1FxcDdjN09pYi1kVm5EbzRmcXF6enhhMlEtZzQtVHlzWEs4SDk4Rl9USzBoRWxpcTljVVpneEM4QlhsLXpoMm8yOFBEUGQySmVKc2rSAcABQVVfeXFMTkdKUDd4TWpUZW1YRVJlRXI0a0hmb25IeF9NZnR2eTRSNG1HUXNaNVhscnlJaktIQlR3eDlKMFdxX3ptWU92aHUzS3hwOHZZTUl3bVZ6QXNnUldjRWhvUFhza2diZGEtQk0teXl3V2tRd2ZUc3NRcXA3YzdPaWItZFZuRG80ZnFxenp4YTJRLWc0LVR5c1hLOEg5OEZfVEswaEVsaXE5Y1VaZ3hDOEJYbC16aDJvMjhQRFBkMkplSnNq?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUTJlT0JOSlNPS3BOcXh0MmpnLXJSempHY0xXV1BvUTJGNjd3Ul94RTZGMHpmNWFiVmdmMGo5RWF4MmF2eXNLSXEyaFcyTS1LYlE4N3RnMXRtUllsc1BMaHF6Q3BlWE9RV0toTXdIZ2ZUVFpMWkNQNjJaMHBhcElQemVaTFkybWpNOWsxVW1QYks0dy1ZdTFEUldkTVYwQTM2ZXZUT29ndVQ2cmViNjdVWEpWS1JqZFpsb2RrbjU0dXJuSzE3ejVNag?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkt6LUNJVDYtM2RnTkxUX2czbTU5STNJaWR2OUhwd2NlbFVRajl5RjJGRU9XbmM2S2w1QzB1M2RYTk9vVkZVdVV1TG1pRTVTWGVwWERXWXZxOFh4UGsxZWRDck4xdGlyN0JHbVJadnFIaUxPcmNkVkpQcGhUUUQwVnFtQ01qOUp2STBsaEU0ZXFXSXJ2enZVbnVFa2taT2ZKN3ZrWWRhMkNnZmplWWpiN1h0cTZkLUx3NmF1dldRbFBGWXJtV0UzVnBNMVo?oc=5"
+   ],
+   "outlets": [
+    "world-nuclear-news.org",
+    "news.google.com"
+   ],
+   "importance": 44.0,
+   "reason": "World Nuclear News; Bloomberg on Vietnam"
+  },
+  {
+   "arm": "editor",
+   "rank": 21,
+   "headline": "Battery storage deals: Zelestra and Statkraft 8-year Italy BESS toll; Actuate orders 1.5GWh from Sungrow for Spain; Energy Vault backlog $2.3B",
+   "summary": "Energy-Storage.News reports Zelestra-Statkraft BESS toll in Italy, Actuate Energy's 1.5GWh Sungrow order for Spain, and Energy Vault closing financing for a 150MW Texas BESS with a $2.3B backlog. European Energy delivers 88MWh of batteries in Australia.",
+   "urls": [
+    "https://energy-storage.news/actuate-energy-orders-1-5gwh-bess-sungrow-2027-2028-pipeline-spain",
+    "https://energy-storage.news/energy-vault-backlog-hits-us2-3-billion-as-it-closes-financing-for-150mw-texas-bess",
+    "https://energy-storage.news/european-energy-88mwh-battery-storage-australia",
+    "https://energy-storage.news/zelestra-statkraft-8-year-italy-bess-toll-bilateral-market-develops-parallel-macse",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeUJ3S0RueGpTWnliTkt4b0JTbkdpVU1iNEdUX1k4VEFSczFGLTdLM1cwV1BzVlNnd3Fhb2pvaTIza1c3cVVOWXVwNmt6Z2d6Z1lCQ3ZyNHJhX1RJZHpJQVlCdGtDWm1ndzcyUktZYmJmT2s4My03V3F2WEJQUGtRR2dIaVNJYWM?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxONWdhYXlFcUotUFZfY2QyencwcUszLTdVVFZ6UEROVmEzM2VMQ1hhY2d0S0p0VS1nQ1VDZGFWdGd6UFktYmZLbEFvblBUeUh0VFNhWkdUWXdtbGtvMUJaNzdpRW9jZkxZZkVLdmpIYXZkTFlqU0lIRW1sZm5CN3BQSmY4dDdWdGd0QnQ4MFRhU2NPeGpEZU81Q1paZ3FHUDlBR1Ztag?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUWVaOWxJYllvLUU0amdsSVdSQzE1RDhWVzBMb2R5ZXhIQjZFQnJSZFNGSlc1em81NE9pQl9QeVVjV1gyd2JOdzNlNjJlQnhEb0lSbmp0X2dnMThQWkRlQlF5RkE4SmpoWUQtYXhCaXhnUlJJWlpZU0FjbXNzZ2ZyaDdmNi1DUHhOTzRrVGFlRVFaWTdqVmlwOHd1b1FtOFpnaGpZd21icEJSVF9vcGxpaVFJSldscHFVZXdOVVlhbmt3LWdS?oc=5"
+   ],
+   "outlets": [
+    "energy-storage.news",
+    "news.google.com"
+   ],
+   "importance": 44.0,
+   "reason": "Energy-Storage.News; ESS News"
+  },
+  {
+   "arm": "editor",
+   "rank": 22,
+   "headline": "Renewable auctions and PPAs: France tripling tender to 1.5GW; Netherlands opens 2GW offshore tenders; Gambia signs 232MW solar PPAs; Ireland awards 188MW",
+   "summary": "PV Magazine and Wind Power Monthly report France increasing its tech-neutral auction to 1.5GW, the Netherlands opening 2GW offshore wind tenders, Gambia signing four solar PPAs totalling 232MW, Ireland awarding 188MW of wind, and Scatec withdrawing a 288MW South African project.",
+   "urls": [
+    "https://pv-magazine.com/2026/11/26/france-triples-planned-renewable-energy-auction-volume-to-1-5-gw",
+    "https://pv-magazine.com/2026/11/26/gambia-signs-four-solar-ppas-totalling-232-mw",
+    "https://pv-magazine.com/2026/11/26/mexico-conditionally-approves-621-mw-solar-project-in-veracruz",
+    "https://pv-magazine.com/2026/11/26/norwegian-ipp-shifts-south-african-solar-project-to-corporate-buyers",
+    "https://pv-magazine.com/2026/11/26/switzerland-raises-incentives-for-solar-below-100-kw",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNekZkVlgtUGZibExyaUIxRTdwNHRvdklYcHpoUURMLU04QUtJOEFXcl9jUmhFM1oySEJKXzZVTE1ZdFQ2aW12b1UtYWZjSHVNdWk4VGQyaTVRQkpMNl9hTG93WHRXSlFfTWktVlVWbW9ubWt1X2l3NHR3Tk1tUGxIbWlOMkpHbjVVbTAwTzFn?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUUd2X0pDc2phQTBsMG4xR2g2TzljeVl2dkV3c3Zwdk1XYzgtdXM2S1o1LVZvUVlUTEFRUU1FUk9RMVJuZUVhWDhqenA3dC1TZDJ3cWtsajVuRGpXRmZxVmMwNWFTOHl2RUZCb3ZQcDA5bFFLQS1QSHF5WlR3cEIyREVfcTdjYmJJR181S1YzYVRNakRibDEw?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNenFOSnBOUnZyZUMwOUhaLTVVWFVBRktaVThlRXlYYmF6UjNWUlY4aDBEU3d5SENFRWhBeG5jenBTRnh1RlZRbmJsdjJUNF9odzFOS240SGhOeERYWFVzUlNZYkZWM2tUejRWU18wdVVER2g2TkV2Z0VpdnpZUTdCYk1EdXFnalRtTS1QdmVkbjhjLUxMMWN1WFdn?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPN3hsWUptZUlMbVFVSllVQ05URGRPLW9lajFPdllTcU9Edkdsc3ZCQXZxY09kRUpzMFVQbWpoUWhEdlBGSmYzT3YzT2hPbUtqcXJiTlJLb280RlpMbEt5OC00NHpPbVJWOW5qa1RFZ1pUUjN2eUFkVUFqOS1uekpqdnM5NzNMZnI3Z1VCQUVTWjdEUTV1eXVINzVkVlZDWmFicUE?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxOY1JsenNKVlFnQWNpYS1lNEVhQzhsTnJDTG1IbUg0cW55YjNWdW1GVGNjX3FKdWVwT2poVjFydVJqUTFYUHcxVjZZSlk0Y2RtcGZHdEdyeVM4NEI2VTd4ei1wa3JRQ0x5RTVjZ3hhbDZnOEJDMTNKTjV6N2F2WDFsNm9QTldlMVRlLW91d0UtUWh5NzNyR2taZDVPVTFQd2N1OUxlZQ?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTHphWkEyc3Y4eEtuSGM4WHhoVTFkQzhUbGRIcm5YQVJDRFA2T3Z4OUk4WHExTGZnTDRHWEFDQkNJc2FzaWN5dzJKMUJoRlFQOVVZYnIzS3Vyc1FUZ2d1NkVYa003UEQxZlltYWRZSDB1QzA0ZjQ5SVpFNEs0STBobDF5VFhHVGxQNFRmVUs4bG9oZy05Y0FFS05BaDFYa1N0WnJydlRlcjZlUDlr?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPaExFN3c3cVk1TDlfV1RGTkEySGsxWGtORVFiZmpHY2FDWFU3UEM1WGlSbk1FQWQ3VzdwazRMQWdoeFpkTzBuMzc5X2hOREc5cmpjTGJsN19IQXZuNmpQcGVOSlVVal80azJnaFRxdFgzQWctSUloZ200UkVNRHBxcDQ2Y2ROak9SYVVZYnhBVjhFSmozeXhmN3FQV2xDVFNUN2FuNFVILTZCSU1UTldfM09YTS1EemlITjJhSTdYUktLZ3NS?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVHlUWG1xeGVTYmRad19Rd05jcnB2cnpTdDNWRzR6cC1qdFg2VjMtMjBjeEFpcXZKN2xjLXZ0QnFEX0VZWUdiM3g0QkJLMEVHRXlxTzNITkktbDQ1X0FIWkt4bF94RnZfY2xPS19aZGZobzdxeUZ2eC1taFIwVl9ORkRtc0M3NkVnOEJxcFloY2xEdWhFS19wZTBVbTBodWtHS1plaEdhc2tCUkdzbTVDMDFTSWJPdG42Vmd5QkJDaGhqeXBGN1I4RA?oc=5"
+   ],
+   "outlets": [
+    "pv-magazine.com",
+    "news.google.com"
+   ],
+   "importance": 42.0,
+   "reason": "PV Magazine; Wind Power Monthly"
+  },
+  {
+   "arm": "editor",
+   "rank": 23,
+   "headline": "Sabah east coast blackouts persist as transmission tower collapses; airports on generators",
+   "summary": "Multiple Malaysian outlets report another Sabah east coast blackout after a transmission tower collapse in Ranau. Sabah Electricity targets six days to restore the 275kV line, and Tawau, Sandakan and Lahad Datu airports run on gensets.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNb0s4Nm0tSzdWTGxMaElpVUlKT0FMdHhZeGFYSU5IbHhvdDI5X18xaU9KN3U4aFJxVzRxOWVkTG5DUk5ld3kxOXgydUdGd2xBMnotVE9RcGhKRFhiT3VhdVhPU3lKWFZndTY2aDlNU2NoTXc4bHotM1ZjU3ZLZHNFQ1lhejBhaFNuMGJVZTNsLWtkTS1hTTk2Q3lwLXZtOU9aMzU0SENMZ3hzWXNrdzVlZng5WUxNeFBK?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR21RYWJUU204ZnZmODFmNFVUSmI2UzlLdHdIM1I4T1ByempWRXRoRjV1bGJxQzVwWjNBdE1uQWwwMGs5ZTJtb3E5R2xkWHkwS3M2VUZONHNaTmJDV180S2JINy1KdnJIaE91cjMzR3RaTDJSbTZkajV1OW1OZDVfdHRBZTgtRnR4bXRQTVRxaWNIZHNSNVVhZzB3SjNlR212M28tMkJvZHU2bHFWUzlnaTV3SVNTak9Bb0V6M29jcEFvNUU?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVkVncDZ5bHg3Y3U4SDJVcWJXNkdQNW1sd3BfbE5pWTBpb2hGYWEyend5cWJXeFA1Q1hLVkJZWVFOZndsT3gwMHJQWHYyTWlsWjZHdTBtOU9VUmZOZDlEckR0Z2tKLTR1aFM4T2pLOGtKbmJpNDlPSW01RnVnWnNMMlFRLUg5TTlwbzF5ZDBPemppWHFKTnFyV0RoNEpPYU90bldmOGhOd0M1V1phTDhNeV9hbGVLOUdVNmpXMHJwNmQzbWN2WXc?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUzlpV2U0Mi1jVi1iNUJxeTE2OXlfcV91UFhhcTdLVG5hS19qazh4VWVDZzAwdER6WFRlSzhQQ3pJRDlmVG83UV92SmVTSG5DR2Vhc0ZjdEdhTUdEYnRLWlJ5ZUpjM1p5Sy1NYkNfd25XU01FdExVRjF6Y1lMcEU3X1JOdEd2UXhFR3B6bzNZUVFERE90YzZoaGFyNjJ3MTRnOWMtdk5oOUQzMlhSdVczcEUtUm5VS3ZpSFJGcHJwYUxZUHgwVy0xNktzenbSAcwBQVVfeXFMUFM5aVdlNDItY1YtYjVCcXkxNjl5X3FfdVBYYXE3S1RuYUtfams4eFVlQ2cwMHREelhUZUs4UEN6SUQ5ZlRvN1FfdkplU0huQ0dlYXNGY3RHYU1HRGJ0S1pSeWVKYzNaeUstTWJDX3duV1NNRXRMVUYxemNZTHBFN19STnRHdlF4RUdwem8zWVFRRERPdGM2aGhhcjYydzE0ZzljLXZOaDlEMzJYUnVXM3BFLVJuVUt2aUhSRnBycGFMWVB4MFctMTZLc3p2?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 42.0,
+   "reason": "multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 24,
+   "headline": "COP31 talks stall as countries and companies rally around electrification",
+   "summary": "Reuters reports COP31 stalling while countries and companies rally around electrification. Albanese urges COP31 to deliver practical results, and Southeast Asia's fossil fuel reality is weighed against ambitions.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxQTTJEY0Z4a0lZRlEyVVhxSVhIeElySkdGYlEwWTUyRkpBaTRILTRGN2JxdGdGR1pmOVUwRWVVTXBIRmx5SXR6ekxGQlFzR3BkeElFaTBBcUNWLWRMUVZ5S2NHUDNtdWRrZFp2aDQ1b1hVcUZXOWw1cHV2SlF0aEg1dmFFNF9LSFpNbmozODJmUE1sci1wMkk3S0Rrc3VhZTRDQ0JpYjZDRk12WXFYMlVoVGxJbmhybzhFMW1ycDF3cVFzSlhWZW4ydnV1X005eTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAxTk05aGJ4NkQ4czJNLUg4bkZ4SDFEdk9Rd0hoNTZmVnZkN0RjOGtsN0NTbjl5RFI3WWYyUWZZaVViWU1JN2d6MTNWZkZDWHVZdm5OUnh3Z3U?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMVFybHFWdFB3dnZDNnpfbzNMS1NKYmFLLWM5djV4UkI0TVBNbkdnSGlHYzhQdkcxZmJFS1p6em5mM2hCQTQ1S0tVVS0zRGpxSlV6ME92RGVrMkhCVFJGUEh4Nkg5cTF4VTZVTFNRUVpWU0pvX1U0WFVMb2U1U2RMX0J0R1hyRnpZdXc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "Reuters; TRT World"
+  },
+  {
+   "arm": "editor",
+   "rank": 25,
+   "headline": "Trafigura closes Dutch zinc operations citing power costs; Iberdrola scraps \u20ac427M green ammonia project in Portugal",
+   "summary": "FT reports Trafigura closing Dutch zinc operations after calling for government help with power costs. Reuters reports Iberdrola scrapping a \u20ac427M green ammonia project in Portugal.",
+   "urls": [
+    "https://ft.com/content/bece6b13-2af4-4704-8511-ac460985582f?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNnhCNXhwa3JXQkpfZllsUXJHdzVDVUVBYnJKeTFKc1JBR0Z2OTFkdzlueEQ1dW0yQThCRVpSbkNxWlIwWXc1S0paTEpKRHZ2ZWR0SlVEWE1kQVdDWU5OcmpvcW12X0JsTl90V3JPcU9NU1FjMHhwS1NFM3ZPQXFQNURFbkc2WFVMX09jQTBacWlfaGx0dFNPV21BNUNxbFhmR2N1eHR4Z0twTG5RS2VTV2FOV29EVE0?oc=5"
+   ],
+   "outlets": [
+    "ft.com",
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "FT; Reuters"
+  }
+ ],
+ "wall_s": 33.8,
+ "peak_rss_mb": 86.9,
+ "cost_usd": 0.0074,
+ "searches": null,
+ "notes": {
+  "observations": 1400
+ }
+}

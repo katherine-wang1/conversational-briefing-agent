@@ -1,0 +1,118 @@
+{
+ "at": "2026-11-26T19:59:19.305863+00:00",
+ "sources": {
+  "utility_dive": {
+   "n": 10,
+   "s": 0.33
+  },
+  "latitude_media": {
+   "n": 26,
+   "s": 0.58
+  },
+  "dcd": {
+   "n": 20,
+   "s": 0.61
+  },
+  "dc_frontier": {
+   "n": 25,
+   "s": 0.62
+  },
+  "canary_media": {
+   "n": 37,
+   "s": 0.97
+  },
+  "heatmap": {
+   "n": 3,
+   "s": 1.0
+  },
+  "carbon_brief": {
+   "n": 12,
+   "s": 0.99
+  },
+  "pv_magazine": {
+   "n": 10,
+   "s": 0.68
+  },
+  "electrek_energy": {
+   "n": 150,
+   "s": 1.01
+  },
+  "eia_today": {
+   "n": 32,
+   "s": 0.48
+  },
+  "hn_front": {
+   "n": 0,
+   "s": 0.71
+  },
+  "energy_storage_news": {
+   "n": 300,
+   "s": 0.76
+  },
+  "power_mag": {
+   "n": 10,
+   "s": 0.44
+  },
+  "politico_energy": {
+   "n": 30,
+   "s": 0.46
+  },
+  "nyt_climate": {
+   "n": 43,
+   "s": 0.47
+  },
+  "ieee_energy": {
+   "n": 30,
+   "s": 0.82
+  },
+  "ft_energy": {
+   "n": 25,
+   "s": 0.86
+  },
+  "ans_nuclear": {
+   "n": 50,
+   "s": 0.62
+  },
+  "inside_climate": {
+   "n": 10,
+   "s": 0.51
+  },
+  "guardian_energy": {
+   "n": 20,
+   "s": 0.95
+  },
+  "world_nuclear_news": {
+   "n": 50,
+   "s": 1.23
+  },
+  "gn_reuters_energy": {
+   "n": 55,
+   "s": 0.86
+  },
+  "gn_bloomberg_energy": {
+   "n": 100,
+   "s": 0.87
+  },
+  "gn_en_grid": {
+   "n": 48,
+   "s": 0.85
+  },
+  "gn_en_datacenter": {
+   "n": 100,
+   "s": 0.85
+  },
+  "gn_en_nuclear": {
+   "n": 26,
+   "s": 0.75
+  },
+  "gn_en_renewables": {
+   "n": 100,
+   "s": 0.93
+  },
+  "gn_en_policy": {
+   "n": 78,
+   "s": 0.9
+  }
+ },
+ "observations": 1400
+}

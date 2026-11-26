@@ -218,6 +218,55 @@ def test_generic_front_page():
     assert obs[0].rank == 1
 
 
+def test_front_page_card_dates_real_page():
+    # The featured grid is undated; the same links appear again in a dated list below (with a
+    # category link inside each card), and that is where the date is read.
+    obs = parse_frontpage(
+        read("anthropic_news.html"),
+        page_url="https://www.anthropic.com/news",
+        observed_at=NOW,
+        source_id="anthropic_news",
+        beat="ai",
+    )
+    s1 = next(o for o in obs if o.title.startswith("Anthropic files S-1"))
+    assert s1.published_at == datetime(2026, 10, 26, 23, 59, 59, tzinfo=UTC)
+    assert sum(o.published_at is not None for o in obs) >= len(obs) // 2
+    assert obs[0].extra == {"page_newest_date": "2026-10-28T23:59:59+00:00"}
+
+
+def _card(slug: str, title: str, date_html: str = "") -> str:
+    return (
+        f'<li><a href="/topics/grid">Grid</a><h2><a href="/news/{slug}">{title}</a></h2>'
+        f'<div class="info"><a href="/authors/jo">Jo Writer</a><div>{date_html}</div></div></li>'
+    )
+
+
+def test_front_page_card_dates_synthetic():
+    at = datetime(2026, 11, 26, 20, tzinfo=UTC)
+    html = (
+        "<html><body><ul>"
+        + "".join(
+            [
+                _card("a", "Today's grid story is here", "Nov 26, 2026"),  # text glued to the author name
+                _card("b", "Yesterday story about batteries", '<time datetime="2026-11-25">Nov 25</time>'),
+                _card("c", "Webinar about robots next month", "Dec. 09, 2026"),  # future: ignored
+                _card("d", "An undated story about solar"),
+            ]
+        )
+        + "</ul></body></html>"
+    )
+    obs = parse_frontpage(html, page_url="https://ex.com/", observed_at=at, source_id="x", beat="energy")
+    by = {o.url.rsplit("/", 1)[-1]: o for o in obs}
+    assert by["a"].published_at == at  # end of day, capped at fetch time
+    assert by["b"].published_at == datetime(2026, 11, 25, 23, 59, 59, tzinfo=UTC)
+    assert by["c"].published_at is None and by["d"].published_at is None
+    # only 2 of 4 dated (needs >= 3 and at least half): no page date
+    assert all(o.extra is None for o in obs)
+    html3 = html.replace("</ul>", _card("e", "Another dated story on wind", "24 November 2026") + "</ul>")
+    obs3 = parse_frontpage(html3, page_url="https://ex.com/", observed_at=at, source_id="x", beat="energy")
+    assert obs3[0].extra == {"page_newest_date": at.isoformat()}
+
+
 # ------------------------------------------------------------------ bodies
 
 
