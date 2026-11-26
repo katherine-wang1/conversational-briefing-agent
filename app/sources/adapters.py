@@ -12,7 +12,7 @@ import httpx
 
 from app.config.loader import HeadlineSourceCfg
 from app.contracts.sources import HeadlineObservation
-from app.sources import arxiv, hf_papers, hn, rss, techmeme
+from app.sources import arxiv, eventregistry, hf_papers, hn, rss, techmeme
 from app.sources.frontpage import parse_frontpage
 from app.sources.util import USER_AGENT
 
@@ -33,9 +33,16 @@ def _keyword_filter(obs: list[HeadlineObservation], kw: str | None) -> list[Head
 
 
 def observe(
-    cfg: HeadlineSourceCfg, beat: str, at: datetime | None = None, fetch: Fetch = http_fetch
+    cfg: HeadlineSourceCfg,
+    beat: str,
+    at: datetime | None = None,
+    fetch: Fetch = http_fetch,
+    post: eventregistry.Post = eventregistry.http_post,
 ) -> list[HeadlineObservation]:
-    """Fetch and parse one configured headline source now. `at` defaults to the current time."""
+    """Fetch and parse one configured headline source now. `at` defaults to the current time.
+
+    `post` (url, json body) -> httpx.Response is used by API sources that need a POST (eventregistry).
+    """
     at = at or datetime.now(UTC)
     kw = cfg.params.get("keyword_filter")
     common = {"source_id": cfg.id, "beat": beat}
@@ -71,6 +78,8 @@ def observe(
         obs = parse_frontpage(
             fetch(cfg.url or ""), page_url=cfg.url or "", observed_at=at, provenance="live", **common
         )
+    elif cfg.type == "eventregistry":
+        obs = eventregistry.observe_events(cfg, beat, at, post=post)
     else:  # pragma: no cover - the config loader restricts types
         raise ValueError(f"unknown source type {cfg.type}")
     return _keyword_filter(obs, kw)
