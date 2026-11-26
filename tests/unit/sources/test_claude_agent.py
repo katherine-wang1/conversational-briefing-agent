@@ -180,6 +180,7 @@ async def test_refusal_raises():
 
 async def test_missing_key_is_unavailable(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("CLAUDE_API_KEY", raising=False)
     with pytest.raises(ToolError) as e:
         await claude_agent_digest("ai", AT)
     assert e.value.code == "unavailable"

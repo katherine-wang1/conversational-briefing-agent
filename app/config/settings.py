@@ -5,7 +5,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -36,7 +36,10 @@ class Settings(BaseSettings):
     archive_path: str = "eval/data/archive.sqlite"
 
     # Anthropic (direct SDK, server tools): `anthropic` search provider + Claude news-agent reference arm
-    anthropic_api_key: str = ""
+    # ANTHROPIC_API_KEY, else CLAUDE_API_KEY (Claude Code cloud sessions don't pass ANTHROPIC_API_KEY through)
+    anthropic_api_key: str = Field(
+        default="", validation_alias=AliasChoices("anthropic_api_key", "ANTHROPIC_API_KEY", "CLAUDE_API_KEY")
+    )
     anthropic_search_model: str = "claude-opus-5-5"  # exact model id, no date suffix
     anthropic_search_max_uses: int = 3  # web searches per `search` call
     anthropic_search_effort: Literal["low", "medium", "high", "xhigh", "max"] = "low"

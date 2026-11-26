@@ -125,10 +125,23 @@ def record_usage(ledger: Any, usage: AnthropicUsage, *, role: str, ok: bool = Tr
     )
 
 
+# ANTHROPIC_API_KEY first. CLAUDE_API_KEY is the fallback name for hosts that keep ANTHROPIC_API_KEY for
+# themselves: Claude Code cloud sessions don't pass it through to the container, even when the
+# environment lists it.
+API_KEY_ENV_VARS = ("ANTHROPIC_API_KEY", "CLAUDE_API_KEY")
+
+
+def api_key_from_env() -> str:
+    for name in API_KEY_ENV_VARS:
+        if value := os.environ.get(name, ""):
+            return value
+    return ""
+
+
 def make_async_client(api_key: str | None = None, *, timeout_s: float = 600.0, max_retries: int = 2) -> Any:
-    key = api_key if api_key is not None else os.environ.get("ANTHROPIC_API_KEY", "")
+    key = api_key if api_key is not None else api_key_from_env()
     if not key:
-        raise AnthropicUnavailable("ANTHROPIC_API_KEY is not set")
+        raise AnthropicUnavailable(f"none of {', '.join(API_KEY_ENV_VARS)} is set")
     try:
         import anthropic
     except ImportError as e:  # pragma: no cover - depends on the environment
