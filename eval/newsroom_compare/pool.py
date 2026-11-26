@@ -14,12 +14,31 @@ GAIN = {"must": 2, "nice": 1, "skip": 0}
 POOL_DEPTH = 15  # top-N per arm that go into the blind pool
 
 
-def _same(a: CompareStory, b: dict) -> bool:
+def _same(a: CompareStory, b: dict, urls: list[str] | None = None) -> bool:
+    """Same story: a shared URL, or a headline similar to any headline already in group `b`.
+
+    `urls` overrides `a.urls` (see `_story_urls`); `b["headlines"]` (if present) holds every member's
+    headline, so a group is not matched on its first member's wording only.
+    """
     from rapidfuzz import fuzz
 
-    if set(a.urls) & set(b["urls"]):
+    if set(a.urls if urls is None else urls) & set(b["urls"]):
         return True
-    return fuzz.token_set_ratio(a.headline.lower(), b["headline"].lower()) >= 82
+    heads = b.get("headlines") or [b["headline"]]
+    return any(fuzz.token_set_ratio(a.headline.lower(), h.lower()) >= 82 for h in heads)
+
+
+def _story_urls(stories: list[CompareStory]) -> list[list[str]]:
+    """Each story's URLs without the ones the same arm cites for two or more stories.
+
+    Those are roundup, index or live-blog pages (claude_agent cites e.g. an "AI news today" page for
+    several stories); matching on them would chain unrelated stories into one group.
+    """
+    counts: dict[str, int] = defaultdict(int)
+    for st in stories:
+        for u in set(st.urls):
+            counts[u] += 1
+    return [[u for u in st.urls if counts[u] == 1] for st in stories]
 
 
 def build_pool(days: list[str], beats: list[str], depth: int = POOL_DEPTH, seed: int = 7) -> Path:
@@ -27,9 +46,9 @@ def build_pool(days: list[str], beats: list[str], depth: int = POOL_DEPTH, seed:
     for day in days:
         for beat in beats:
             for res in _arm_files(day, beat):
-                for s in res.stories[:depth]:
+                for s, own_urls in zip(res.stories[:depth], _story_urls(res.stories), strict=False):
                     same_slice = (it for it in items if it["day"] == day and it["beat"] == beat)
-                    match = next((it for it in same_slice if _same(s, it)), None)
+                    match = next((it for it in same_slice if _same(s, it, own_urls)), None)
                     if match is None:
                         match = {
                             "id": f"{day}:{beat}:{len(items)}",
@@ -37,13 +56,15 @@ def build_pool(days: list[str], beats: list[str], depth: int = POOL_DEPTH, seed:
                             "beat": beat,
                             "headline": s.headline,
                             "summary": s.summary,
-                            "urls": list(s.urls),
+                            "urls": list(own_urls),
                             "outlets": list(s.outlets),
                             "found_by": {},
+                            "headlines": [s.headline],
                         }
                         items.append(match)
                     else:
-                        match["urls"] = list(dict.fromkeys(match["urls"] + s.urls))
+                        match["urls"] = list(dict.fromkeys(match["urls"] + own_urls))
+                        match["headlines"].append(s.headline)
                         match["outlets"] = list(dict.fromkeys(match["outlets"] + s.outlets))
                         if len(s.summary) > len(match["summary"]):
                             match["summary"] = s.summary
@@ -162,13 +183,14 @@ def _groups(runs: list, depth: int) -> list[dict]:
     """Cross-arm story groups over each arm's top `depth` (same matching as the blind pool)."""
     groups: list[dict] = []
     for res in runs:
-        for s in res.stories[:depth]:
-            g = next((g for g in groups if _same(s, g)), None)
+        for s, own_urls in zip(res.stories[:depth], _story_urls(res.stories), strict=False):
+            g = next((g for g in groups if _same(s, g, own_urls)), None)
             if g is None:
-                g = {"headline": s.headline, "urls": list(s.urls), "found_by": {}}
+                g = {"headline": s.headline, "headlines": [s.headline], "urls": list(own_urls), "found_by": {}}
                 groups.append(g)
             else:
-                g["urls"] = list(dict.fromkeys(g["urls"] + s.urls))
+                g["urls"] = list(dict.fromkeys(g["urls"] + own_urls))
+                g["headlines"].append(s.headline)
             g["found_by"].setdefault(res.arm, s.rank)
     return groups
 
