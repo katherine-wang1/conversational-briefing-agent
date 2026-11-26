@@ -239,7 +239,7 @@ This is a course project in building agents, so **the agentic system is our own 
 
 | ID | Requirement |
 |---|---|
-| BUILD-1 | **No hosted agent platforms or agent frameworks that own the loop** (for example vendor-managed agents, provider-side "server tools" like built-in web search). These would hide the parts we're meant to build and can't be replayed (RG-5). |
+| BUILD-1 | **No hosted agent platforms or agent frameworks that own the loop** (for example vendor-managed agents). *Amended 2026-11-26:* a provider's search, including a model provider's built-in web search, may sit **behind one of our tools as a live backend** (like Tavily or Exa), so the agent code is the same live and in replay (TOOL-1, RG-5) and replay uses the archive backend. A provider-run agent (for example Claude with web search ranking the news by itself) is allowed only as a **comparison arm**, never inside the evaluated research config (RG-1). Reason: the product should use the best off-the-shelf discovery, and the report compares it against what we built (`docs/architecture-revisit.md`). |
 | BUILD-2 | **Provider-agnostic model layer:** every role calls models through one thin interface. Swapping a role's model is a config change. |
 | BUILD-3 | Thin libraries are fine where they don't own the agent's logic (an HTTP client, a schema validator, an article-text extractor, a BM25 index). |
 

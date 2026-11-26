@@ -47,6 +47,38 @@ retrieve from that store; live search only fills interests the store doesn't cov
 | Exa | No ranking; news category, full text in the same call | Already wired up (`SEARCH_PROVIDER=exa`) |
 | Tavily | No ranking; `include_raw_content` would skip the fetch | Current provider |
 
+### Decisions (2026-11-26)
+
+- **Balance:** the evaluated research config must stay replayable and reproducible (course rubric:
+  results 10/25, reproducibility 5/25; final report Dec 11, demo Dec 9). The live product should use
+  the best off-the-shelf discovery. Both are tested side by side.
+- **BUILD-1 amended** (PRD §6.0): provider search, including Anthropic's built-in web search, may sit
+  behind our `search` tool as a live backend. A provider-run agent is a comparison arm only.
+- **Keys stay optional**, with a fallback, so the README quick-start keeps working for graders.
+- The evaluation hasn't started, so the newsroom can still change before the research config is frozen.
+
+### Comparison arms
+
+| Arm | What it is | Replayable? |
+|---|---|---|
+| `classic` | The current newsroom, sped up (no change in what it decides) | Yes |
+| `editor` | Wide headline collection (major outlets, Google News topic feeds, Techmeme, HN) → dedupe → one LLM editor call that groups and ranks | Yes |
+| `editor+search` | `editor`, plus a bounded gap-fill search ("what important news isn't on this list?") through the `search` tool, Anthropic backend live | Core yes; gap-fill live only |
+| `claude_agent` | Claude with web search + web fetch ranks the beat's news by itself (what a scheduled task does) | No |
+| `eventregistry` | Event Registry's own events ranked by article count | Past dates via its API, if the free plan allows |
+
+**Measured per arm and day:** top-10 overlap, stories found only by that arm, outlet mix
+(including paywalled outlets), run time, peak memory, cost.
+
+**Blind rating:** top stories from all arms are pooled, de-duplicated, shuffled and shown without
+the arm. Kate rates each one must-know, nice-to-know or skip. This can be done daily, or in one
+sitting at the end over the collected days. Arms that can't be replayed must be collected live on each
+day, so the daily collection runs even if the rating happens later.
+
+**Keys:** `ANTHROPIC_API_KEY` and `EVENT_REGISTRY_API_KEY` are environment variables, not
+proxy-injected secrets: Anthropic's hosts don't take network secrets, and Event Registry takes the
+key in the request body.
+
 ## 2. Storing news for live questions (parked)
 
 **Problem:** the voice agent sees only the 4–6 brief stories' packs (passages cut to 700 chars,
