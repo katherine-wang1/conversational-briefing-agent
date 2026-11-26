@@ -1,0 +1,4 @@
+id: n1_editor_newsroom
+extends: full
+description: Editor newsroom (wide candidate list, title dedupe, one editor model call that groups and ranks) instead of the classic cluster-and-score pipeline.
+flags: {newsroom_impl: editor}
