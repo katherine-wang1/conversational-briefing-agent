@@ -30,6 +30,10 @@ class FeedEntry:
     updated_at: datetime | None
     guid: str | None
     position: int
+    # The item's `<source url="...">Outlet</source>` element (RSS 2.0), as in Google News feeds,
+    # whose links are redirect URLs: the outlet is the only record of who published the story.
+    outlet: str | None = None
+    outlet_url: str | None = None
 
 
 def _struct_to_dt(st) -> datetime | None:
@@ -63,6 +67,11 @@ def parse_feed_entries(payload: str | bytes, base_url: str | None = None) -> lis
         title = one_line(e.get("title"))
         if not link or not title:
             continue
+        src = e.get("source") or {}
+        outlet = one_line(src.get("title")) or None
+        outlet_url = src.get("href") or None
+        if outlet and title.endswith(f" - {outlet}") and len(title) > len(outlet) + 3:
+            title = title[: -len(outlet) - 3].rstrip()  # Google News appends " - Outlet"
         out.append(
             FeedEntry(
                 url=normalize_url(link, base_url),
@@ -73,6 +82,8 @@ def parse_feed_entries(payload: str | bytes, base_url: str | None = None) -> lis
                 updated_at=_struct_to_dt(e.get("updated_parsed")),
                 guid=e.get("id"),
                 position=pos,
+                outlet=outlet,
+                outlet_url=outlet_url,
             )
         )
     return out
@@ -110,7 +121,9 @@ def parse_feed(
                 published_at=e.published_at,
                 external_id=e.guid,
                 provenance=prov,
-                extra={"feed_position": e.position},
+                extra={"feed_position": e.position}
+                | ({"outlet": e.outlet} if e.outlet else {})
+                | ({"outlet_url": e.outlet_url} if e.outlet_url else {}),
             )
         )
     return out
