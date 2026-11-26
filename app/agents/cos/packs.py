@@ -12,8 +12,12 @@ fails, the search-result snippet (verbatim from the search provider) is used whe
 
 from __future__ import annotations
 
+from collections.abc import Iterable, Sequence
+from dataclasses import dataclass, field
 from datetime import datetime
+from functools import lru_cache
 from typing import Literal
+from urllib.parse import urlsplit
 
 from pydantic import BaseModel
 
@@ -23,7 +27,10 @@ from app.agents.cos.pool import PoolItem
 from app.agents.cos.prompts import load_prompt
 from app.agents.cos.text import canonical_url, hn_item_id, jaccard, tokens
 from app.agents.cos.tooling import ToolUnavailable, fetch, hn_comments, tool_ctx
+from app.agents.cos.trace import RunTrace
 from app.agents.cos.untrusted import sanitize, wrap
+from app.common.concurrency import gather_bounded
+from app.config import loader
 from app.contracts.agent_io import ShownStory
 from app.contracts.brief import CandidateScores, Fact, Passage, RelatedStory, SourcePack
 from app.contracts.common import BudgetExceeded, Mode
@@ -188,6 +195,54 @@ def related_stories(item: PoolItem, history: list[ShownStory], limit: int = 3) -
     ]
 
 
+@dataclass
+class _UrlOutcome:
+    url: str
+    trace: RunTrace
+    good: bool = False
+    budget_exceeded: bool = False
+    passages: list[Passage] = field(default_factory=list)
+    facts: list[Fact] = field(default_factory=list)
+
+
+def url_host(url: str) -> str:
+    host = (urlsplit(url).hostname or "").lower().rstrip(".")
+    return host[4:] if host.startswith("www.") else host
+
+
+def domain_in(host: str, domains: Iterable[str]) -> bool:
+    """True if `host` is one of `domains` or a subdomain of one (`asia.nikkei.com` in `nikkei.com`)."""
+    ds = [d.lower().strip(".") for d in domains]
+    return any(host == d or host.endswith("." + d) for d in ds if d)
+
+
+@lru_cache(maxsize=1)
+def primary_domains() -> frozenset[str]:
+    """Hosts of primary sources (labs, companies, agencies; arXiv): the beats' headline sources listed
+    in `newsroom.primary_sources` (config/agent.yaml) plus arXiv feeds."""
+    by_beat = (loader.agent().get("newsroom") or {}).get("primary_sources") or {}
+    primary_ids = {sid for ids in by_beat.values() for sid in ids}
+    out = {"arxiv.org"}
+    for beat in loader.beats().values():
+        for s in beat.headline_sources:
+            if s.url and (s.id in primary_ids or s.type == "arxiv"):
+                out.add(url_host(s.url))
+    return frozenset(h for h in out if h)
+
+
+def order_urls(urls: Sequence[str], *, paywall: Iterable[str] = (), primary: Iterable[str] = ()) -> list[str]:
+    """Fetch order for a story's URLs: open (non-paywalled) before known hard paywalls, and within each
+    group primary sources first; otherwise the original order is kept (stable sort). Paywalled URLs
+    are only tried last, never rewritten: no archive mirrors, no user-agent tricks."""
+    paywall, primary = list(paywall), list(primary)
+
+    def key(iu: tuple[int, str]) -> tuple[bool, bool, int]:
+        host = url_host(iu[1])
+        return domain_in(host, paywall), not domain_in(host, primary), iu[0]
+
+    return [u for _, u in sorted(enumerate(urls), key=key)]
+
+
 async def build_pack(
     cc: CallCtx,
     item: PoolItem,
@@ -198,6 +253,7 @@ async def build_pack(
     now: datetime,
     cfg: CosConfig,
     history: list[ShownStory],
+    concurrency: int | None = None,
 ) -> SourcePack:
     dive = scores.dive_likelihood if scores else 0.0
     depth = depth_for(dive, cfg.packs, cfg.flags.prefetch)
@@ -205,39 +261,70 @@ async def build_pack(
     n_docs = max(1, min(dcfg.docs, cfg.budget.fetch_per_story))
     max_chars = dcfg.tokens * CHARS_PER_TOKEN
     per_doc_chars = max(400, max_chars // n_docs)
-    urls = [u for u in dict.fromkeys(item.candidate.urls) if hn_item_id(u) is None][:n_docs]
+    urls = order_urls(
+        [u for u in dict.fromkeys(item.candidate.urls) if hn_item_id(u) is None],
+        paywall=cfg.packs.paywall_domains,
+        primary=primary_domains(),
+    )[: max(n_docs, cfg.packs.max_fetch_attempts)]
+    limit = concurrency if concurrency is not None else cfg.concurrency.pack_fetches
 
-    passages: list[Passage] = []
-    facts: list[Fact] = []
-    for url in urls:
+    async def one(url: str) -> _UrlOutcome:
+        sub = cc.child()
+        out = _UrlOutcome(url=url, trace=sub.trace)
         ctx = tool_ctx(
             mode=mode,
             now=now,
-            run_id=cc.run_id,
-            user_id=cc.user_id,
-            budget=cc.budget,
+            run_id=sub.run_id,
+            user_id=sub.user_id,
+            budget=sub.budget,
             role="cos.extract_passages",
             step="C6",
-            job_id=cc.job_id,
+            job_id=sub.job_id,
         )
         doc = None
         try:
             doc = await fetch(tools, ctx, url=url, max_tokens=dcfg.tokens)
-            cc.trace.add("C6", "tool", tool="fetch", url=url, ok=doc is not None)
+            sub.trace.add("C6", "tool", tool="fetch", url=url, ok=doc is not None)
         except BudgetExceeded:
-            cc.trace.degraded("C6", "fetch budget exceeded", url=url)
+            out.budget_exceeded = True
+            sub.trace.degraded("C6", "fetch budget exceeded", url=url)
         except ToolUnavailable as e:
-            cc.trace.add("C6", "tool", ok=False, tool="fetch", url=url, error=str(e)[:200])
+            sub.trace.add("C6", "tool", ok=False, tool="fetch", url=url, error=str(e)[:200])
+            out.budget_exceeded = str(e).startswith("budget_exceeded")  # the tool's own budget refusal
         if doc is not None and doc.text.strip():
-            ps, fs, _ = await extract_document(cc, doc, max_chars=per_doc_chars, step="C6")
-            passages += ps
-            facts += fs
-        else:
-            hit = item.snippets.get(canonical_url(url))
+            out.good = True
+            out.passages, out.facts, _ = await extract_document(sub, doc, max_chars=per_doc_chars, step="C6")
+        return out
+
+    # Fetch + extract in waves (concurrently within a wave): each wave tries as many further URLs as
+    # good documents are still missing, so a failed or empty fetch (paywall, 403) moves on to the
+    # story's next URL until `n_docs` good documents or the URLs (or the fetch budget) run out.
+    outcomes: list[_UrlOutcome] = []
+    good, pos = 0, 0
+    while good < n_docs and pos < len(urls):
+        wave = urls[pos : pos + n_docs - good]
+        pos += len(wave)
+        done = await gather_bounded([lambda u=u: one(u) for u in wave], limit)
+        outcomes += done
+        good += sum(o.good for o in done)
+        if any(o.budget_exceeded for o in done):
+            break
+    # Snippet fallback (verbatim from the search provider) only for the documents still missing.
+    shortfall = n_docs - good
+    passages: list[Passage] = []
+    facts: list[Fact] = []
+    for o in outcomes:
+        cc.trace.merge(o.trace)
+        if o.good:
+            passages += o.passages
+            facts += o.facts
+        elif shortfall > 0:
+            hit = item.snippets.get(canonical_url(o.url))
             sp = snippet_passage(hit) if hit else None
             if sp:
+                shortfall -= 1
                 passages.append(sp)
-                cc.trace.degraded("C6", "fetch failed: snippet passage used", url=url)
+                cc.trace.degraded("C6", "fetch failed: snippet passage used", url=o.url)
 
     reaction, reaction_ids = None, []
     hn_urls = [u for u in item.candidate.urls if hn_item_id(u)]

@@ -25,6 +25,7 @@ from app.agents.cos.selection import ScoredItem, k_from_length, select, select_i
 from app.agents.cos.text import short_hash, tokens
 from app.agents.cos.trace import RunTrace
 from app.agents.cos.write import DEFAULT_OUTRO, assemble, est_duration_s, followup_sentences, write_brief
+from app.common.concurrency import gather_bounded
 from app.config import loader
 from app.config.loader import ExperimentCfg, ExperimentFlags
 from app.contracts.agent_io import OpenQuestion, ShownStory, UserContext
@@ -159,6 +160,7 @@ async def run_cos_daily(
             max_searches=cfg.budget.searches,
             lookback_days=cfg.search_lookback_days,
             max_rounds=cfg.max_refine_rounds,
+            concurrency=cfg.concurrency.cos_search_queries,
         )
         trace.add("C2", "code", searches_used=sstate.used, finds=len(finds))
         pool, notes = build_pool(
@@ -200,11 +202,12 @@ async def run_cos_daily(
     )
 
     by_ref = {it.ref: it for it in pool}
-    packs: list[SourcePack] = []
-    for s in result.selected:
-        packs.append(
-            await build_pack(
-                cc,
+    # Packs are built concurrently, each with its own trace, merged back in selection order.
+    subs = [cc.child() for _ in result.selected]
+    packs: list[SourcePack] = await gather_bounded(
+        [
+            lambda s=s, sub=sub: build_pack(
+                sub,
                 by_ref[s.story_ref],
                 scores.get(s.story_ref),
                 tools,
@@ -213,7 +216,12 @@ async def run_cos_daily(
                 cfg=cfg,
                 history=history,
             )
-        )
+            for s, sub in zip(result.selected, subs, strict=True)
+        ],
+        cfg.concurrency.cos_packs,
+    )  # type: ignore[assignment]
+    for sub in subs:
+        cc.trace.merge(sub.trace)
     pack_by_ref = {p.story_ref: p for p in packs}
 
     answered = [

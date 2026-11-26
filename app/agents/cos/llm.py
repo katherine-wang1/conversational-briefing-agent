@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Any
 from uuid import UUID
 
@@ -51,6 +51,11 @@ class CallCtx:
         return TraceCtx(
             run_id=self.run_id, user_id=as_uuid(self.user_id), job_id=self.job_id, role=role, step=step
         )
+
+    def child(self) -> CallCtx:
+        """Same client and (shared) budget, own trace: for concurrent sub-tasks whose trace events are
+        merged back in a deterministic order with `self.trace.merge(child.trace)`."""
+        return replace(self, trace=self.trace.child())
 
 
 def render_payload(payload: str | dict | list) -> str:

@@ -32,6 +32,19 @@ class SelectionConfig(_Cfg):
     min_beat_share: dict[str, float] = {}
 
 
+DEFAULT_PAYWALL_DOMAINS = (
+    "wsj.com",
+    "ft.com",
+    "bloomberg.com",
+    "theinformation.com",
+    "nytimes.com",
+    "economist.com",
+    "asia.nikkei.com",
+    "washingtonpost.com",
+    "barrons.com",
+)
+
+
 class PackDepthCfg(_Cfg):
     docs: int
     tokens: int
@@ -43,6 +56,16 @@ class PacksConfig(_Cfg):
     light: PackDepthCfg = PackDepthCfg(docs=1, tokens=800)
     deep_threshold: float = 0.6
     light_threshold: float = 0.25
+    max_fetch_attempts: int = 6  # per story, when fetches fail or come back empty
+    paywall_domains: list[str] = list(DEFAULT_PAYWALL_DOMAINS)  # tried last; never bypassed
+
+
+class ConcurrencyCfg(_Cfg):
+    """`concurrency:` in agent.yaml. Performance only: results are merged in input order."""
+
+    cos_search_queries: int = 6
+    cos_packs: int = 4
+    pack_fetches: int = 3
 
 
 class CosBudgetCfg(_Cfg):
@@ -71,6 +94,7 @@ class CosConfig(_Cfg):
     search_lookback_days: int = 2
     max_refine_rounds: int = 4
     write_reserve: float = 0.25  # share of the input-token budget held back for C7 + C8
+    concurrency: ConcurrencyCfg = ConcurrencyCfg()
 
 
 def _merge(base: dict[str, Any], over: dict[str, Any]) -> dict[str, Any]:
@@ -107,4 +131,5 @@ def cos_config(
         packs=PacksConfig(**agent_cfg.get("packs", {})),
         budget=CosBudgetCfg(**budgets.get("cos_daily", {})),
         followup_budget=FollowupBudgetCfg(**budgets.get("followup", {})),
+        concurrency=ConcurrencyCfg(**(agent_cfg.get("concurrency") or {})),
     )
