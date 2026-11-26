@@ -80,6 +80,8 @@ class ExperimentFlags(_M):
     hn_signal: bool = True
     session_ctx_weighting: bool = True
     claim_check: bool = True
+    # Newsroom implementation override (None = config/agent.yaml newsroom.impl); see newsroom/__init__.py.
+    newsroom_impl: Literal["classic", "editor"] | None = None
 
 
 class ExperimentCfg(_M):

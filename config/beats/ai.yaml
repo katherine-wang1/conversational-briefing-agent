@@ -40,3 +40,29 @@ headline_sources:
   - {id: mit_tr_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", verified: true}
   # expert curation
   - {id: import_ai, type: rss, tier: 2, weight: 0.4, url: "https://importai.substack.com/feed", verified: true}
+  # ---- wider headline net (2026-11-26, editor newsroom). Paywalled outlets are fine: only headline +
+  # summary are used for discovery and ranking. `verified: true` = fetched and parsed live on 2026-11-26.
+  # Dropped (2026-11-26): Reuters' own feeds (gone), WSJ feeds.a.dj.com (stale since 2025), AP hub .rss,
+  # CNBC and Axios section feeds (403/404), VentureBeat (429), SemiAnalysis (403), Semafor tech (404).
+  # major outlets' section feeds
+  - {id: nyt_tech, type: rss, tier: 1, weight: 0.7, url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", verified: true}
+  - {id: wsj_tech, type: rss, tier: 1, weight: 0.7, url: "https://feeds.content.dowjones.io/public/rss/RSSWSJD", verified: true}
+  - {id: bloomberg_tech, type: rss, tier: 1, weight: 0.7, url: "https://feeds.bloomberg.com/technology/news.rss", verified: true}
+  - {id: ft_tech, type: rss, tier: 1, weight: 0.7, url: "https://www.ft.com/technology?format=rss", verified: true}
+  - {id: the_information, type: rss, tier: 1, weight: 0.7, url: "https://www.theinformation.com/feed", verified: true}
+  - {id: guardian_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.theguardian.com/technology/artificialintelligenceai/rss", verified: true}
+  - {id: bbc_tech, type: rss, tier: 2, weight: 0.4, url: "https://feeds.bbci.co.uk/news/technology/rss.xml", verified: true}
+  - {id: wired_ai, type: rss, tier: 2, weight: 0.5, url: "https://www.wired.com/feed/tag/ai/latest/rss", verified: true}
+  - {id: ieee_ai, type: rss, tier: 2, weight: 0.4, url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss", verified: true}
+  # outlets without a working public feed, via Google News site: searches (links are news.google.com
+  # redirects; the outlet comes from each item's <source> element -> extra.outlet)
+  - {id: gn_reuters_ai, type: rss, tier: 1, weight: 0.7, url: "https://news.google.com/rss/search?q=site:reuters.com+AI+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ap_ai, type: rss, tier: 1, weight: 0.5, url: "https://news.google.com/rss/search?q=site:apnews.com+%22artificial+intelligence%22+when:2d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_axios_ai, type: rss, tier: 1, weight: 0.5, url: "https://news.google.com/rss/search?q=site:axios.com+AI+when:2d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  # Google News topic searches over the beat's core topics (any outlet; broad recall, weak signal)
+  - {id: gn_ai, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ai_labs, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=OpenAI+OR+Anthropic+OR+%22Google+DeepMind%22+OR+%22Meta+AI%22+OR+xAI+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ai_models, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22AI+model%22+launch+OR+release+OR+unveils+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ai_chips, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22AI+chips%22+OR+Nvidia+OR+TSMC+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ai_policy, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22AI+regulation%22+OR+%22AI+policy%22+OR+%22AI+safety%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_ai_funding, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22AI+startup%22+raises+OR+funding+OR+valuation+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}

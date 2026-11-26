@@ -25,3 +25,24 @@ headline_sources:
   # not verified: eia.gov robots.txt disallows /rss for all agents; Wayback copies only
   - {id: eia_today, type: rss, tier: 1, weight: 0.5, url: "https://www.eia.gov/rss/todayinenergy.xml", verified: false}
   - {id: hn_front, type: hn_front, tier: 2, weight: 0.3, url: "https://news.ycombinator.com/", params: {keyword_filter: energy}, verified: true}
+  # ---- wider headline net (2026-11-26, editor newsroom). Paywalled outlets are fine: only headline +
+  # summary are used for discovery and ranking. `verified: true` = fetched and parsed live on 2026-11-26.
+  # Dropped (2026-11-26): Bloomberg Green feed (404), CNBC energy (403).
+  - {id: ft_energy, type: rss, tier: 1, weight: 0.7, url: "https://www.ft.com/energy?format=rss", verified: true}
+  - {id: nyt_climate, type: rss, tier: 1, weight: 0.5, url: "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml", verified: true}
+  - {id: politico_energy, type: rss, tier: 1, weight: 0.6, url: "https://rss.politico.com/energy.xml", verified: true}
+  - {id: ieee_energy, type: rss, tier: 2, weight: 0.4, url: "https://spectrum.ieee.org/feeds/topic/energy.rss", verified: true}
+  - {id: power_mag, type: rss, tier: 2, weight: 0.5, url: "https://www.powermag.com/feed/", verified: true}
+  - {id: world_nuclear_news, type: rss, tier: 2, weight: 0.5, url: "https://www.world-nuclear-news.org/rss", verified: true}
+  - {id: ans_nuclear, type: rss, tier: 3, weight: 0.3, url: "https://www.ans.org/news/feed/", verified: true}
+  - {id: guardian_energy, type: rss, tier: 2, weight: 0.4, url: "https://www.theguardian.com/environment/energy/rss", verified: true}
+  - {id: inside_climate, type: rss, tier: 2, weight: 0.4, url: "https://insideclimatenews.org/feed/", verified: true}
+  # Reuters / Bloomberg via Google News site: searches (outlet from <source> -> extra.outlet)
+  - {id: gn_reuters_energy, type: rss, tier: 1, weight: 0.7, url: "https://news.google.com/rss/search?q=site:reuters.com+electricity+OR+%22power+grid%22+OR+%22data+center%22+OR+%22nuclear+power%22+OR+solar+OR+%22wind+power%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_bloomberg_energy, type: rss, tier: 1, weight: 0.6, url: "https://news.google.com/rss/search?q=site:bloomberg.com+electricity+OR+%22power+grid%22+OR+%22nuclear+power%22+OR+solar+OR+%22data+center%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  # Google News topic searches over the beat's core topics (any outlet; broad recall, weak signal)
+  - {id: gn_en_grid, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22power+grid%22+OR+transmission+OR+utility+electricity+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_en_datacenter, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22data+center%22+power+OR+energy+OR+gigawatt+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_en_nuclear, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22nuclear+power%22+OR+%22nuclear+reactor%22+OR+fusion+energy+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_en_renewables, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=solar+OR+%22wind+power%22+OR+%22offshore+wind%22+OR+%22battery+storage%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_en_policy, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22energy+policy%22+OR+FERC+OR+%22Department+of+Energy%22+OR+%22clean+energy%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}

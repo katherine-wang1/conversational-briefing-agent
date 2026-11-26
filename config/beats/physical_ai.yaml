@@ -21,3 +21,16 @@ headline_sources:
   - {id: hn_front, type: hn_front, tier: 2, weight: 0.4, url: "https://news.ycombinator.com/", params: {keyword_filter: robotics}, verified: true}
   # not verified: reddit.com robots.txt disallows generic crawlers (incl. this UA); Wayback copies only
   - {id: reddit_robotics, type: reddit_top, tier: 3, weight: 0.3, url: "https://www.reddit.com/r/robotics/top/.rss?t=day", verified: false}
+  # ---- wider headline net (2026-11-26, editor newsroom). `verified: true` = fetched and parsed live
+  # on 2026-11-26. Dropped (2026-11-26): Wired robotics tag feed (404), Electrek AV guide feed (404).
+  - {id: ieee_transport, type: rss, tier: 2, weight: 0.4, url: "https://spectrum.ieee.org/feeds/topic/transportation.rss", verified: true}
+  - {id: techcrunch_transportation, type: rss, tier: 2, weight: 0.5, url: "https://techcrunch.com/category/transportation/feed/", verified: true}
+  - {id: robotics_business_review, type: rss, tier: 2, weight: 0.5, url: "https://www.roboticsbusinessreview.com/feed/", verified: true}
+  # Reuters via a Google News site: search (outlet from <source> -> extra.outlet)
+  - {id: gn_reuters_robotics, type: rss, tier: 1, weight: 0.7, url: "https://news.google.com/rss/search?q=site:reuters.com+robot+OR+robotaxi+OR+%22autonomous+vehicle%22+OR+humanoid+when:2d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  # Google News topic searches over the beat's core topics (any outlet; broad recall, weak signal)
+  - {id: gn_pa_robots, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=humanoid+robot+OR+robotics+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_pa_av, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=robotaxi+OR+Waymo+OR+%22autonomous+vehicle%22+OR+%22self-driving%22+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_pa_physical_ai, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22physical+AI%22+OR+%22robot+foundation+model%22+OR+%22world+model%22+when:2d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_pa_drones, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=drone+OR+drones+autonomous+when:1d&hl=en-US&gl=US&ceid=US:en", verified: true}
+  - {id: gn_pa_automation, type: rss, tier: 3, weight: 0.4, url: "https://news.google.com/rss/search?q=%22warehouse+automation%22+OR+%22industrial+robot%22+OR+%22robotics+startup%22+when:2d&hl=en-US&gl=US&ceid=US:en", verified: true}

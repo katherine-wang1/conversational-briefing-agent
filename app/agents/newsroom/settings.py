@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict
 
@@ -36,6 +36,7 @@ class RulesWeights(_M):
 
 
 class NewsroomSettings(_M):
+    impl: Literal["classic", "editor"] = "classic"  # which newsroom runs (see newsroom/__init__.py)
     window_hours: float = 24
     update_gap_hours: float = 12
     score_candidates: int = 80
