@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
 
-from pydantic import ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from app.agents.newsroom.clustering import TiebreakPair
 from app.agents.newsroom.features import SourceIndex, rules_evidence
@@ -53,8 +53,29 @@ class TiebreakOut(Strict):
     decisions: list[TiebreakDecision]
 
 
-class ScoreBatchOut(Strict):
-    entries: list[DigestEntryLLM]
+class ScoreEntryOut(BaseModel):
+    """What newsroom.score writes per story (prompt v2): only the fields code reads downstream.
+
+    `is_update_of` is code-owned (story identity) and `notes_for_editor` is only ever set by code, so
+    neither is asked of the model. Unknown keys (e.g. those two, from v1-style outputs) are ignored
+    rather than failing the whole batch.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    story_id: str
+    headline: str
+    summary: str  # one sentence
+    subtopics: list[str]
+    entities: list[str]
+    importance: int = Field(ge=0, le=100)
+    evidence: list[str]  # 1-2 short strings naming features / sources
+
+
+class ScoreBatchOut(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    entries: list[ScoreEntryOut]
 
 
 FETCH_SPEC = ToolSpec(
@@ -88,7 +109,7 @@ def estimate_tokens(messages: Sequence[Message]) -> int:
     return sum(len(m.content) for m in messages) // 4 + 16 * len(messages)
 
 
-def _parse(resp: ChatResponse, schema: type[Strict]) -> tuple[dict[str, Any] | None, str | None]:
+def _parse(resp: ChatResponse, schema: type[BaseModel]) -> tuple[dict[str, Any] | None, str | None]:
     raw: Any = resp.parsed
     if raw is None and resp.content:
         text = resp.content.strip()
