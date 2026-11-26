@@ -43,6 +43,15 @@ voice:
   idle_end_s: 90
 schedule:
   cos_lead_min: 60
+# Bounded concurrency (asyncio). Performance only: results are merged in input order. 1 = sequential.
+concurrency:
+  headline_sources: 6         # newsroom_run: N1 source collection
+  newsroom_score_batches: 4   # N5 batches in flight. >1: each batch gets a fixed share of the run's
+                              # fetches and is admitted on estimated tokens; 1 = the original loop
+                              # (differs only in fetch- or token-budget-limited runs)
+  cos_search_queries: 6       # C2 plan queries (refinement stays sequential)
+  cos_packs: 4                # C6 packs built at once
+  pack_fetches: 3             # C6 fetch+extract per pack
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
 # Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
 newsroom:

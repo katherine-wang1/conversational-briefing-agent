@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 import httpx
 
+from app.common.concurrency import gather_bounded, limit_for
 from app.config import loader
 from app.contracts.brief import BriefScript
 from app.contracts.digest import Digest, DigestEntry, StoryFeatures
@@ -143,6 +144,31 @@ async def save_digest(s: Any, digest: Digest) -> None:
         )
 
 
+async def collect_observations(
+    deps: Deps, ctx: Any, beat_id: str, sources: list[Any], at: datetime
+) -> list[HeadlineObservation]:
+    """N1: call every headline source of the beat (bounded concurrency), merged in config order.
+
+    A source that returns an error result is logged and skipped. A source that raises still fails the
+    job (as the sequential loop did), after the other sources have finished.
+    """
+    tool = deps.tools["headline_source"]
+    results = await gather_bounded(
+        [lambda src=src: tool(ctx, source_id=src.id, at=at) for src in sources],
+        limit_for("headline_sources"),
+        return_exceptions=True,
+    )
+    observations: list[HeadlineObservation] = []
+    for src, r in zip(sources, results, strict=True):
+        if isinstance(r, BaseException):
+            raise r
+        if r.ok:
+            observations.extend(r.data.observations)
+        else:
+            log.warning("newsroom %s: source %s skipped: %s", beat_id, src.id, r.error)
+    return observations
+
+
 @handler("newsroom_run")
 async def newsroom_run(deps: Deps, job: Job) -> None:
     beat_id = job.payload["beat"]
@@ -154,13 +180,7 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
     async with deps.db.system_scope() as s:
         await s.newsroom_runs.insert(id=run_row_id, beat=beat_id, at=at, status="running")
     ctx = deps.tool_ctx(budget=budget_for("newsroom_run"), job_id=job.id, role="newsroom")
-    observations: list[HeadlineObservation] = []
-    for src in beat.headline_sources:
-        r = await deps.tools["headline_source"](ctx, source_id=src.id, at=at)
-        if r.ok:
-            observations.extend(r.data.observations)
-        else:
-            log.warning("newsroom %s: source %s skipped: %s", beat_id, src.id, r.error)
+    observations = await collect_observations(deps, ctx, beat_id, beat.headline_sources, at)
     if not observations:
         # Don't publish an empty digest over the last good one (e.g. source adapters not wired yet).
         async with deps.db.system_scope() as s:
@@ -168,8 +188,8 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
         log.warning("newsroom %s at %s: no observations from any source; digest not updated", beat_id, at)
         return
     async with deps.db.system_scope() as s:
-        for o in observations:
-            await s.headline_observations.insert(id=new_id("ob"), **o.model_dump())
+        rows = [{"id": new_id("ob"), **o.model_dump()} for o in observations]
+        await s.headline_observations.insert_many(rows)
         history = await newsroom_history(s, beat_id, at)
         prev = await s.digests.latest(beat_id, at, real_only=_real(deps))
     digest, trace = await deps.ports.run_newsroom(
