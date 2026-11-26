@@ -103,13 +103,17 @@ class JobQueue:
             row = await s.fetch_one(q, params)
         return int(row["id"]) if row else None
 
-    async def claim(self, worker_id: str, types: list[str] | None = None) -> Job | None:
+    async def claim(
+        self, worker_id: str, types: list[str] | None = None, exclude_types: list[str] | None = None
+    ) -> Job | None:
+        """Claim the next due job (optionally only of `types`, never of `exclude_types`)."""
         q = """
             update jobs set status = 'running', locked_by = %(w)s, locked_at = now(), attempts = attempts + 1
             where id = (
               select id from jobs
               where status = 'queued' and run_at <= now()
                 and (%(types)s::text[] is null or type = any(%(types)s::text[]))
+                and (%(ex)s::text[] is null or not (type = any(%(ex)s::text[])))
               order by priority, run_at, id
               for update skip locked
               limit 1
@@ -117,7 +121,7 @@ class JobQueue:
             returning *
         """
         async with self.db.system_scope() as s:
-            row = await s.fetch_one(q, {"w": worker_id, "types": types})
+            row = await s.fetch_one(q, {"w": worker_id, "types": types, "ex": exclude_types or None})
         return Job.model_validate(row) if row else None
 
     async def complete(self, job_id: int) -> None:

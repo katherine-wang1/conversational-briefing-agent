@@ -16,12 +16,13 @@ from typing import Any
 
 from app.agents.newsroom.clustering import Embedder, FastEmbedEmbedder
 from app.agents.newsroom.features import SourceIndex, compute_features, importance_rules
-from app.agents.newsroom.llm_steps import LlmTiebreaker, RunCtx, Scorer
+from app.agents.newsroom.llm_steps import BatchLog, LlmTiebreaker, RunCtx, Scorer, split_quota
 from app.agents.newsroom.normalize import normalize
 from app.agents.newsroom.prompts import load_prompt
 from app.agents.newsroom.settings import Settings
 from app.agents.newsroom.stories import build_stories
 from app.agents.newsroom.trace import NewsroomTrace, Trace, TraceStep
+from app.common.concurrency import gather_bounded, limit_for
 from app.config import loader
 from app.config.loader import ExperimentFlags
 from app.contracts.common import Mode, TokenBudget
@@ -77,6 +78,61 @@ def digest_version(
     return hashlib.sha256(blob.encode()).hexdigest()[:16]
 
 
+async def score_batches(
+    scorer: Scorer,
+    batches: Sequence[Sequence[Any]],
+    features: Mapping[str, Any],
+    rules: Mapping[str, float],
+    budget: TokenBudget,
+    trace: NewsroomTrace,
+    concurrency: int | None = None,
+) -> list[DigestEntryLLM]:
+    """N5 over all batches; entries and trace records always in batch order.
+
+    `concurrency` 1 runs the original sequential loop: each batch sees the fetches and tokens the
+    earlier batches actually left. With more than one batch in flight, what each batch may use is fixed
+    up front so the result does not depend on timing: batch i gets a deterministic share of the run's
+    remaining fetches (`split_quota`) and is admitted against the token budget as if the batches
+    before it had used their estimated input. The two differ only when a run is fetch- or
+    budget-limited.
+    """
+    if not batches:
+        return []
+    limit = concurrency if concurrency is not None else limit_for("newsroom_score_batches", 4)
+    if limit <= 1 or len(batches) == 1:
+        out: list[DigestEntryLLM] = []
+        for n, b in enumerate(batches, 1):
+            out.extend(await scorer.score_batch(b, features, rules, batch_no=n, n_batches=len(batches)))
+        return out
+    quotas = split_quota(scorer._fetches_left(), len(batches))
+    before, used = [], budget.used_input_tokens
+    for b in batches:
+        before.append(used)
+        used += scorer.estimate_batch(b, features)
+    logs = [BatchLog() for _ in batches]
+    results = await gather_bounded(
+        [
+            lambda n=n, b=b: scorer.score_batch(
+                b,
+                features,
+                rules,
+                batch_no=n + 1,
+                n_batches=len(batches),
+                fetch_quota=quotas[n],
+                tokens_before=before[n],
+                log=logs[n],
+            )
+            for n, b in enumerate(batches)
+        ],
+        limit,
+    )
+    out = []
+    for log, entries in zip(logs, results, strict=True):
+        log.merge_into(trace)
+        out.extend(entries)  # type: ignore[arg-type]
+    return out
+
+
 async def run_newsroom(
     beat_id: str,
     at: datetime,
@@ -94,6 +150,7 @@ async def run_newsroom(
     embedder: Embedder | None = None,
     settings: Settings | None = None,
     budget: TokenBudget | None = None,
+    score_concurrency: int | None = None,
 ) -> tuple[Digest, Trace]:
     """Produce one beat's digest at `at`.
 
@@ -105,6 +162,8 @@ async def run_newsroom(
     - `embedder`: defaults to fastembed with the configured model.
     - `settings`, `budget`: default from config/agent.yaml (`newsroom`, `clustering`,
       `budgets.newsroom_run`).
+    - `score_concurrency`: N5 batches in flight; default `concurrency.newsroom_score_batches`.
+      Not part of `Digest.version`; see `score_batches` for the one case where 1 and >1 differ.
     """
     at = _utc(at)
     fl = flags if isinstance(flags, ExperimentFlags) else ExperimentFlags(**dict(flags or {}))
@@ -279,9 +338,7 @@ async def run_newsroom(
     )
     size = max(1, st.newsroom.score_batch_size)
     batches = [candidates[i : i + size] for i in range(0, len(candidates), size)]
-    scored: list[DigestEntryLLM] = []
-    for n, batch in enumerate(batches, 1):
-        scored.extend(await scorer.score_batch(batch, features, rules, batch_no=n, n_batches=len(batches)))
+    scored = await score_batches(scorer, batches, features, rules, budget, ctx.trace, score_concurrency)
     trace.steps.append(
         TraceStep(
             step="N5",

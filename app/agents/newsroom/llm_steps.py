@@ -11,11 +11,11 @@ from __future__ import annotations
 import json
 import re
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
 
-from pydantic import ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from app.agents.newsroom.clustering import TiebreakPair
 from app.agents.newsroom.features import SourceIndex, rules_evidence
@@ -53,8 +53,29 @@ class TiebreakOut(Strict):
     decisions: list[TiebreakDecision]
 
 
-class ScoreBatchOut(Strict):
-    entries: list[DigestEntryLLM]
+class ScoreEntryOut(BaseModel):
+    """What newsroom.score writes per story (prompt v2): only the fields code reads downstream.
+
+    `is_update_of` is code-owned (story identity) and `notes_for_editor` is only ever set by code, so
+    neither is asked of the model. Unknown keys (e.g. those two, from v1-style outputs) are ignored
+    rather than failing the whole batch.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    story_id: str
+    headline: str
+    summary: str  # one sentence
+    subtopics: list[str]
+    entities: list[str]
+    importance: int = Field(ge=0, le=100)
+    evidence: list[str]  # 1-2 short strings naming features / sources
+
+
+class ScoreBatchOut(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    entries: list[ScoreEntryOut]
 
 
 FETCH_SPEC = ToolSpec(
@@ -88,7 +109,7 @@ def estimate_tokens(messages: Sequence[Message]) -> int:
     return sum(len(m.content) for m in messages) // 4 + 16 * len(messages)
 
 
-def _parse(resp: ChatResponse, schema: type[Strict]) -> tuple[dict[str, Any] | None, str | None]:
+def _parse(resp: ChatResponse, schema: type[BaseModel]) -> tuple[dict[str, Any] | None, str | None]:
     raw: Any = resp.parsed
     if raw is None and resp.content:
         text = resp.content.strip()
@@ -229,6 +250,34 @@ class LlmTiebreaker:
 # ---- N5 score -------------------------------------------------------------------------------------
 
 
+@dataclass
+class BatchLog:
+    """Trace records of one N5 batch, kept apart so concurrent batches merge in batch order."""
+
+    llm_calls: list[LlmCallRecord] = field(default_factory=list)
+    tool_calls: list[ToolCallRecord] = field(default_factory=list)
+    degraded: list[str] = field(default_factory=list)
+    fetches: int = 0
+
+    def add_llm(self, rec: LlmCallRecord) -> None:
+        self.llm_calls.append(rec)
+
+    def merge_into(self, trace: NewsroomTrace) -> None:
+        for rec in self.llm_calls:
+            trace.add_llm(rec)
+        trace.tool_calls.extend(self.tool_calls)
+        trace.degraded.extend(self.degraded)
+        trace.usage.fetches += self.fetches
+
+
+def split_quota(total: int, n: int) -> list[int]:
+    """Split `total` (e.g. fetches) over `n` batches deterministically: earlier batches get the remainder."""
+    if n <= 0:
+        return []
+    base, rem = divmod(max(0, total), n)
+    return [base + (1 if i < rem else 0) for i in range(n)]
+
+
 _EVIDENCE_VOCAB = (
     "domain",
     "outlet",
@@ -349,7 +398,8 @@ class Scorer:
         b = self.ctx.budget
         return 0 if b.fetches is None else max(0, b.fetches - b.used_fetches)
 
-    async def _fetch(self, call: ToolCall, allowed: set[str]) -> str:
+    async def _fetch(self, call: ToolCall, allowed: set[str], log: BatchLog | None = None) -> str:
+        log = log if log is not None else BatchLog()
         url = str(call.arguments.get("url") or "")
         args = {"url": url}
         rec = ToolCallRecord(step="N5", tool="fetch", arguments=args, ok=False)
@@ -360,7 +410,7 @@ class Scorer:
                 rec.error = "url is not one of the URLs in this batch"
             else:
                 self.ctx.budget.charge_fetch()
-                self.ctx.trace.usage.fetches += 1
+                log.fetches += 1
                 result: ToolResult = await self.fetch_tool(
                     self.ctx.tool_ctx("N5"), url=url, max_tokens=self.fetch_max_tokens
                 )
@@ -373,7 +423,7 @@ class Scorer:
             rec.error = "fetch budget exhausted for this run"
         except Exception as e:  # a tool failure must not fail the run
             rec.error = f"fetch error: {type(e).__name__}: {e}"
-        self.ctx.trace.tool_calls.append(rec)
+        log.tool_calls.append(rec)
         return rec.result_excerpt if rec.ok and rec.result_excerpt else f"error: {rec.error}"
 
     def _render_doc(self, url: str, data: Any) -> str:
@@ -397,6 +447,18 @@ class Scorer:
         body = f"title: {doc.title or ''}\npublished_at: {doc.published_at}\n\n{text}"
         return wrap_untrusted(doc.url_hash, doc.url, body)
 
+    def estimate_batch(self, drafts: Sequence[StoryDraft], features: Mapping[str, StoryFeatures]) -> int:
+        """Estimated input tokens of a batch's first call (same estimate as the budget pre-check)."""
+        stories_txt = "\n\n".join(
+            render_story(d, features[d.story_id], self.sources, hn_signal=self.hn_signal) for d in drafts
+        )
+        header = "x" * 200  # run time, beat, batch number and fetch line
+        msgs = [
+            Message(role="system", content=self.system_text),
+            Message(role="user", content=header + stories_txt),
+        ]
+        return estimate_tokens(msgs)
+
     async def score_batch(
         self,
         drafts: Sequence[StoryDraft],
@@ -405,27 +467,57 @@ class Scorer:
         *,
         batch_no: int,
         n_batches: int,
+        fetch_quota: int | None = None,
+        tokens_before: int | None = None,
+        log: BatchLog | None = None,
     ) -> list[DigestEntryLLM]:
+        """Score one batch.
+
+        Called alone (defaults) it behaves as the sequential loop: fetches left and token usage are read
+        from the shared run budget, and trace records are written straight to the run trace.
+        For concurrent batches the caller passes, per batch, a deterministic `fetch_quota` (this batch's
+        share of the run's fetches), `tokens_before` (input tokens used before N5 plus the estimated
+        input of the batches before this one; the budget pre-check then counts only those and this
+        batch's own calls, instead of the live counter that concurrent batches race on) and a `log` that
+        it merges into the trace in batch order afterwards.
+        """
+        own_log = log is None
+        log = BatchLog() if log is None else log
+        fetches_at_start = log.fetches
+
+        def fetches_left() -> int:
+            left = self._fetches_left()
+            if fetch_quota is None:
+                return left
+            return max(0, min(left, fetch_quota - (log.fetches - fetches_at_start)))
+
+        def tokens_used() -> int:
+            if tokens_before is None:
+                return self.ctx.budget.used_input_tokens
+            return tokens_before + sum(r.tokens_in for r in log.llm_calls)
+
         stories_txt = "\n\n".join(
             render_story(d, features[d.story_id], self.sources, hn_signal=self.hn_signal) for d in drafts
         )
         allowed = {it.url for d in drafts for it in d.items}
+        # Same wording with or without a quota, so the request (and its cache key) does not depend on
+        # the concurrency setting whenever the numbers agree.
         header = (
             f"Run time: {self.ctx.at.isoformat()}. Beat: {self.ctx.beat}. Batch {batch_no} of {n_batches}. "
-            f"Verification fetches left for this run: {self._fetches_left()}.\n"
+            f"Verification fetches available for this batch: {fetches_left()}.\n"
             f"Score each of these {len(drafts)} stories.\n\n"
         )
         msgs = [
             Message(role="system", content=self.system_text, cache_breakpoint=True),
             Message(role="user", content=header + stories_txt),
         ]
-        offer_tools = self.fetch_tool is not None and self._fetches_left() > 0
+        offer_tools = self.fetch_tool is not None and fetches_left() > 0
         raw: dict | None = None
         reason = "no valid output"
-        for _round in range(self._fetches_left() + 2):
-            if self.ctx.budget.used_input_tokens + estimate_tokens(msgs) > self.ctx.budget.input_tokens:
+        for _round in range(fetches_left() + 2):
+            if tokens_used() + estimate_tokens(msgs) > self.ctx.budget.input_tokens:
                 reason = "token budget"
-                self.ctx.trace.degraded.append(f"N5 batch {batch_no}: skipped (token budget)")
+                log.degraded.append(f"N5 batch {batch_no}: skipped (token budget)")
                 break
             req = ChatRequest(
                 role=SCORE_ROLE,
@@ -441,17 +533,17 @@ class Scorer:
             try:
                 resp = await self.client.chat(req)
             except BudgetExceeded as e:
-                self.ctx.trace.add_llm(_record("N5", self.prompt, None, ok=False, error=f"budget: {e}"))
-                self.ctx.trace.degraded.append(f"N5 batch {batch_no}: budget exceeded")
+                log.add_llm(_record("N5", self.prompt, None, ok=False, error=f"budget: {e}"))
+                log.degraded.append(f"N5 batch {batch_no}: budget exceeded")
                 reason = "token budget"
                 break
             except StructuredOutputInvalid as e:
-                self.ctx.trace.add_llm(_record("N5", self.prompt, None, ok=False, error=str(e)[:300]))
-                self.ctx.trace.degraded.append(f"N5 batch {batch_no}: invalid structured output")
+                log.add_llm(_record("N5", self.prompt, None, ok=False, error=str(e)[:300]))
+                log.degraded.append(f"N5 batch {batch_no}: invalid structured output")
                 reason = "invalid structured output"
                 break
             if resp.tool_calls and offer_tools:
-                self.ctx.trace.add_llm(
+                log.add_llm(
                     _record(
                         "N5",
                         self.prompt,
@@ -462,18 +554,35 @@ class Scorer:
                 )
                 msgs.append(Message(role="assistant", content=resp.content, tool_calls=resp.tool_calls))
                 for tc in resp.tool_calls:
-                    result_text = await self._fetch(tc, allowed)
+                    if fetch_quota is not None and fetches_left() <= 0 and tc.name == "fetch":
+                        err = "fetch budget exhausted for this batch"
+                        log.tool_calls.append(
+                            ToolCallRecord(
+                                step="N5",
+                                tool="fetch",
+                                arguments={"url": str(tc.arguments.get("url") or "")},
+                                ok=False,
+                                error=err,
+                            )
+                        )
+                        result_text = f"error: {err}"
+                    else:
+                        result_text = await self._fetch(tc, allowed, log)
                     msgs.append(Message(role="tool", tool_call_id=tc.id, content=result_text))
-                offer_tools = self._fetches_left() > 0
+                offer_tools = fetches_left() > 0
                 continue
             raw, err = _parse(resp, ScoreBatchOut)
-            self.ctx.trace.add_llm(_record("N5", self.prompt, resp, ok=err is None, error=err, output=raw))
+            log.add_llm(_record("N5", self.prompt, resp, ok=err is None, error=err, output=raw))
             if err:
                 reason = err
             break
-        return self._finalize(drafts, features, rules, raw, reason, batch_no)
+        out = self._finalize(drafts, features, rules, raw, reason, batch_no, log)
+        if own_log:
+            log.merge_into(self.ctx.trace)
+        return out
 
-    def _finalize(self, drafts, features, rules, raw, reason, batch_no) -> list[DigestEntryLLM]:
+
+    def _finalize(self, drafts, features, rules, raw, reason, batch_no, log=None) -> list[DigestEntryLLM]:
         by_id = {d.story_id: d for d in drafts}
         got: dict[str, DigestEntryLLM] = {}
         for e in (raw or {}).get("entries", []) or []:
@@ -518,5 +627,6 @@ class Scorer:
                 missing += 1
                 out.append(fallback_entry(d, features[d.story_id], rules[d.story_id], reason))
         if missing:
-            self.ctx.trace.degraded.append(f"N5 batch {batch_no}: {missing} stories rules-only ({reason})")
+            note = f"N5 batch {batch_no}: {missing} stories rules-only ({reason})"
+            (log.degraded if log is not None else self.ctx.trace.degraded).append(note)
         return out

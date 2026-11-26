@@ -31,6 +31,14 @@ class RunTrace(BaseModel):
     def degraded(self, step: str, reason: str, **detail: Any) -> None:
         self.add(step, "degrade", ok=False, reason=reason, **detail)
 
+    def child(self) -> RunTrace:
+        """An empty trace for one concurrent sub-task; `merge` it back in a fixed order."""
+        return RunTrace(run_id=self.run_id, user_id=self.user_id, job=self.job, arm=self.arm)
+
+    def merge(self, other: RunTrace) -> None:
+        self.events.extend(other.events)
+        self.prompts.update(other.prompts)
+
     def of(self, step: str, kind: str | None = None) -> list[TraceEvent]:
         return [e for e in self.events if e.step == step and (kind is None or e.kind == kind)]
 

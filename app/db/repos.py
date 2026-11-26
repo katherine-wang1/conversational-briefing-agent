@@ -88,6 +88,29 @@ class Repo:
         assert row is not None
         return row
 
+    async def insert_many(self, rows: Iterable[Mapping[str, Any]]) -> int:
+        """Insert several rows in one round trip (psycopg pipelined executemany). Returns the row count.
+
+        Rows with differing column sets fall back to one `insert` each.
+        """
+        raw = list(rows)
+        if not raw:
+            return 0
+        prepped = [self._prep(r, for_insert=True) for r in raw]
+        cols = list(prepped[0])
+        if any(list(p) != cols for p in prepped):
+            for r in raw:
+                await self.insert(**r)
+            return len(raw)
+        q = sql.SQL("insert into {} ({}) values ({})").format(
+            sql.Identifier(self.table),
+            sql.SQL(", ").join(map(sql.Identifier, cols)),
+            sql.SQL(", ").join(sql.Placeholder() * len(cols)),
+        )
+        async with self.s.conn.cursor() as cur:
+            await cur.executemany(q, [list(p.values()) for p in prepped])
+        return len(prepped)
+
     async def upsert(self, conflict: Iterable[str] | None = None, **values: Any) -> dict[str, Any]:
         vals = self._prep(values, for_insert=True)
         keys = tuple(conflict or self.pk)
