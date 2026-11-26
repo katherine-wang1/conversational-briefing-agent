@@ -41,6 +41,9 @@ class Settings(BaseSettings):
     anthropic_search_max_uses: int = 3  # web searches per `search` call
     anthropic_search_effort: Literal["low", "medium", "high", "xhigh", "max"] = "low"
 
+    # Event Registry / newsapi.ai (headline source type `eventregistry`; docs/sources/eventregistry.md)
+    event_registry_api_key: str = ""
+
     # speech
     tts_provider: Literal["openai", "openrouter_audio", "fake", ""] = ""
     tts_api_key: str = ""

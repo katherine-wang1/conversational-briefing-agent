@@ -34,7 +34,9 @@ class Taxonomy(_M):
 
 class HeadlineSourceCfg(_M):
     id: str
-    type: Literal["techmeme", "hn_front", "hf_papers", "reddit_top", "arxiv", "rss", "frontpage"]
+    type: Literal[
+        "techmeme", "hn_front", "hf_papers", "reddit_top", "arxiv", "rss", "frontpage", "eventregistry"
+    ]
     tier: int
     weight: float
     url: str | None = None

@@ -7,7 +7,9 @@ from collections.abc import Callable
 from datetime import datetime
 from typing import Any
 
-SOURCE_TYPES = ("techmeme", "hn_front", "hf_papers", "arxiv", "rss", "reddit_top", "frontpage")
+SOURCE_TYPES = (
+    "techmeme", "hn_front", "hf_papers", "arxiv", "rss", "reddit_top", "frontpage", "eventregistry"
+)
 
 
 def _make_adapter() -> Callable[..., Any]:
