@@ -54,6 +54,7 @@ def build_tools(
     http_client: httpx.AsyncClient | None = None,
     doc_cache: DocumentCache | None = None,
     check_urls: bool = True,
+    ledger: Any = None,
 ) -> dict[str, Tool]:
     if settings is None:
         from app.config.settings import get_settings
@@ -62,11 +63,22 @@ def build_tools(
     if archive is None and settings.archive_path and Path(settings.archive_path).exists():
         archive = settings.archive_path
     reader = ArchiveReader(archive) if isinstance(archive, str | Path) else archive
-    provider = build_provider(
-        settings.search_provider if search_provider is None else search_provider,
-        settings.search_api_key if search_api_key is None else search_api_key,
-        client=http_client,
-    )
+    provider_name = settings.search_provider if search_provider is None else search_provider
+    if search_api_key is not None:
+        key = search_api_key
+    elif (provider_name or "").lower() == "anthropic":
+        key = getattr(settings, "anthropic_api_key", "")
+    else:
+        key = settings.search_api_key
+    options: dict[str, Any] = {}
+    if (provider_name or "").lower() == "anthropic":
+        options = {
+            "model": getattr(settings, "anthropic_search_model", "claude-opus-5-5"),
+            "max_uses": getattr(settings, "anthropic_search_max_uses", 3),
+            "effort": getattr(settings, "anthropic_search_effort", "low"),
+            "ledger": ledger,
+        }
+    provider = build_provider(provider_name, key, client=http_client, **options)
     cache = doc_cache or (DbDocumentCache(db) if db is not None else InMemoryDocumentCache())
     tools: list[Any] = [
         SearchTool(LiveSearch(provider), ReplaySearch(reader)),

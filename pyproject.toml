@@ -24,6 +24,8 @@ dependencies = [
 [project.optional-dependencies]
 newsroom = ["feedparser>=6.0", "trafilatura>=1.12", "rapidfuzz>=3.9", "fastembed>=0.3", "numpy>=1.26"]
 eval = ["duckdb>=1.0", "pandas>=2.2", "pyarrow>=16", "streamlit>=1.37", "scipy>=1.13"]
+# Claude web search provider (SEARCH_PROVIDER=anthropic) + Claude news-agent reference arm; built on httpx2
+anthropic = ["anthropic>=1.0"]
 dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "ruff>=0.5", "mypy>=1.10"]
 
 [build-system]

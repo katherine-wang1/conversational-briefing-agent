@@ -31,9 +31,15 @@ class Settings(BaseSettings):
     dev_auth_bypass: bool = False  # accepts "Bearer dev:<uuid>[:<email>]"; refused when app_env=prod
 
     # tools
-    search_provider: Literal["tavily", "exa", "brave", ""] = ""
-    search_api_key: str = ""
+    search_provider: Literal["tavily", "exa", "brave", "anthropic", ""] = ""
+    search_api_key: str = ""  # tavily | exa | brave; SEARCH_PROVIDER=anthropic uses ANTHROPIC_API_KEY
     archive_path: str = "eval/data/archive.sqlite"
+
+    # Anthropic (direct SDK, server tools): `anthropic` search provider + Claude news-agent reference arm
+    anthropic_api_key: str = ""
+    anthropic_search_model: str = "claude-opus-5-5"  # exact model id, no date suffix
+    anthropic_search_max_uses: int = 3  # web searches per `search` call
+    anthropic_search_effort: Literal["low", "medium", "high", "xhigh", "max"] = "low"
 
     # speech
     tts_provider: Literal["openai", "openrouter_audio", "fake", ""] = ""

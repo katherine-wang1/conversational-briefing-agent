@@ -104,8 +104,9 @@ def check() -> int:
             return 1
     except Exception as e:  # noqa: BLE001 - offline is not fatal here
         print(f"  (couldn't reach openrouter.ai to check the key: {type(e).__name__})")
-    search = s.search_api_key and s.search_provider
-    print(f"  Web search      {s.search_provider + ' key …' + s.search_api_key[-4:] if search else 'off'}")
+    skey = s.anthropic_api_key if s.search_provider == "anthropic" else s.search_api_key
+    search = skey and s.search_provider
+    print(f"  Web search      {s.search_provider + ' key …' + skey[-4:] if search else 'off'}")
     print(f"  Speech          {s.tts_provider or 'off'}   Agents  {s.agent_ports}   Spend cap  "
           f"{os.environ.get('LLM_SPEND_CAP_USD') or 'none'} USD")
     if not s.dev_auth_bypass or s.app_env == "prod":
