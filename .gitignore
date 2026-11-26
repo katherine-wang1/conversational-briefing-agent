@@ -18,3 +18,4 @@ eval/cache/
 *.sqlite-journal
 briefing_agent.egg-info/
 var/
+.claude/worktrees/
