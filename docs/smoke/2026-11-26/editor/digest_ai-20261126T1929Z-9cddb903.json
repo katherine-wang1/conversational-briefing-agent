@@ -1,0 +1,1172 @@
+{
+  "digest_id": "ai-20261126T1929Z-9cddb903",
+  "run_id": "smoke-editor",
+  "beat": "ai",
+  "at": "2026-11-26T19:29:54Z",
+  "version": "14582ff8c010ced9",
+  "entries": [
+    {
+      "story_id": "ai-9cfa11742fc9",
+      "headline": "Anthropic files for, prices and closes its initial public offering, then trades as a public stock",
+      "summary": "Anthropic filed an S-1, launched a roadshow, priced its IPO and closed it including the greenshoe. Coverage notes the stock has since dropped and has been a bright spot on some days, with analysts split on its outlook.",
+      "subtopics": [
+        "business-and-funding"
+      ],
+      "entities": [
+        "Anthropic"
+      ],
+      "importance": 88,
+      "evidence": [
+        "primary source (anthropic.com)",
+        "covered by NYT, Bloomberg, FT, Reuters, WSJ"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 54.23,
+      "features": {
+        "n_items": 11,
+        "n_independent_domains": 5,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 3,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 11,
+        "has_primary_source": true
+      },
+      "urls": [
+        "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+        "https://anthropic.com/news/ipo-close",
+        "https://anthropic.com/news/roadshow-launch",
+        "https://anthropic.com/news/s1-sec",
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMmpFZUNudkVlYUlreHZmQ2gzVnNMZXFIWlRyY3gtUmRma2MxN0RWZW5VOE1nUTNmYzNEbThON0QtTE10WHFERVJaS3ZOVUhzX2lTSGVlY3BadF9oQkVDbVFqZzM4OXkxSklGdWtGZktrbV8wcElfY3N0SkY0RU5Sbm1sYVdkSktIY1otajM3NnpaU21tOEctWGo1SGVQY2IzdC1CZGFQSHdZQjliYzA2QU5oNzdjZzY4Zjg0Z3piU3BCanBaNWlsb3laU3JoNmZDcVktX21fOEhSSVZnWkZn?oc=5",
+        "https://news.google.com/rss/articles/CBMikgJBVV95cUxQbVNkNXNBOElhX0NoV05iZUNEdkhjeDlGRVdHUWhxRkRhN0ZvUWxldlZmdlNoRFIwUG5jWTVKOThTcGdmZUJTa0xrUlRKOTNZNExNM1lZN0hyNmR2eWdmLTI2TFlETS1TYjBfOWttMkM3OTJ4ei03NFdFV2ItSVg3eS1wSE1FcENJMlZMRlN2VzR4RXZqZVNyMlBqTnJOa01wRlJhcW5kOW1MeV83LV9HSjdUWTN0VXVJVGNLNXoxTjZkZ3JkeHVkem5kSlpPNWFKN1hlWU03MllxOVh0eXVGbUtsenM4ODlaQlp3TmFfU3A5dW0tbGN6Q3VDbHVKOTgwNEU3TVlHMkRTdC1JcEFLUUpR?oc=5",
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQmF5RGYyWXcxVUlrNTg5N21SMU5uNTVSdVhPdUhBR0ltV3NLWUVyWXlscjJtcW5USEJWRmFkcmdUMFdfRTRGSklTdjR2M3FsUnBDNHR1d0hSTFp5SHBVN0J6LVhlN2tUVnlLWkhzR3B5UUdlUm51aWV0cnJJWWVmUTh2bmxPdjg1QXRYbFZ2VmFZcm9iU0hiOVFn?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUDFjSVMyZlBQdmhPeE5sRFhfTm1rcUNxd3dZS1hHNjRFR0tIaExIS2huVzdNZzNidGxpV0VyeGhIRy14ckxBRzJ3ZkVma3pOSW51ZHgzazlSNklaNVQybXUybm9RUlpGSS1Oa3UxdzBDd2NtZTI0Wk1iaFBhUjNrVHp0YzFJZUZMNmtNallGVGlHMFlaRXBRY2NNa3M?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdGtMMTM4bDg3T2dUeGprQ2plUzdtd0x4Xy1zWXRTWlowVVJpd0Z5VFphZTJ0VExwam9RdnFNeXJRY2xWTy1kcGxVR2dnaG9TNG5LdjRLb09RazFyRTRnWS1WbldiOTI2V0dvNTFTeTJjc0RqdVJfY1ZheFNCRkctaVNSZE1fWTJSWmtIUjJ5WHhOWTJzaW1Ga0x1eC1OSFE?oc=5",
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWXotWmhsTEN6dnZfVklNTTZvQmllWGxYRlJzdC1pUnI2RV91OVdnN0JGOXFLY2tTT0ZKYnVSYTNrdG8tcGtrVVFCOGV3LWpSR2dDZkFkMEpWM0hJekJoS3NuVEJ1QUx3ZllsMmFndkpEZV85Um0yakJCd1NFTDlpZzFPVzFRZXZSd0x5d29iQkZ5akxJb0pxeDlaVDZmWjRnYzlfRlVYTkpWdXlkVXRtMUpNYWtaZkszZWRNU1J6STFLM1NwMUtwZUp5WHdVWmc?oc=5",
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTE5wZUY2RGdBQ2Y5Z09jenpzdk9FVzY3Qnl2THFESlJyTmJLS0xFdERrTXViYVJjVWd2U3BWSmxCS0NYTXQtZzBpN0hhZ2tGYnQtakwxNHl1ckdsbTBwLTNPOXFmUm5ENUk3dVNOWUZTZnRBNUVzRWNDZk1qMk1uZw?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-5166002f4d42",
+      "headline": "Nvidia halts AI server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+      "summary": "Multiple outlets report Nvidia told manufacturing partners to pause shipments to four Southeast Asian countries after a new US rule requiring licences for advanced chip purchases there.",
+      "subtopics": [
+        "chips-and-compute",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Nvidia",
+        "Malaysia",
+        "Singapore",
+        "Thailand",
+        "Indonesia"
+      ],
+      "importance": 86,
+      "evidence": [
+        "covered by FT, Reuters, NYT, Forbes",
+        "techmeme #1"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 48.33,
+      "features": {
+        "n_items": 7,
+        "n_independent_domains": 4,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 1,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 7,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://ft.com/content/33772353-35dd-4e5a-89e4-b75dccbd9eca?syn-25a6b1a6=1",
+        "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902",
+        "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?syn-25a6b1a6=1",
+        "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOM1ZtZ1FmQ3d0Nk9xZzFmaDNtd3ZURjZ1cm1sWkptUktqcm1aOUc3eWpIYjVpUGoxWGxWd2FjRTZiTzBGRGtaTTA3ZUFsTEJLNk5BV3VfV2VKNHJVbk1mTDJqYkZkdEFPQ09jdzVHRzBHazlKVko5bVp4WDZMSUpUaEpyZk5ZUUUxbm42MjBIRWJCaGZzVXRkNklKN2dfdDRES3RwazQ1UU55Q3Bf?oc=5",
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNT2IzeDRBUHdXNi1LQjBNUEl3S21Va0NyeGN6eFZQZmdHUU5STk5FRXZTSFVhd2tYbTBHNjRfUkNDS29yNDlXYXdYMXZGMVZOZzE1STd1dEdVdk1iM0szN3B4ai1QWkpHTDlnVGZzZzNlQ09acXRCRklnWTgwMGV2Q3MtbWtYbkg0SnV1bjNCMV9tbW5zMUVEUU1IOTBNRHdDZUpGWXZuaG1MLWlSV3p2UkZFQVhoeF94RDY3Yzh6MkdtamtCVGQzamRsQ1VkbTU3X1huQ3NJTQ?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbDFtRGxaSmJxdndYb1VMbTBjLWJGOExCdUdULWNlRXF6RG90SDQzQkdYb29GbmI3Q1J5UHp2Yk80N3R1Wkl4UXlfWFdFd0VmQ2FEYUZXdnFpbnR3SndRWkh6dVJYQlY1cHhQMWVkTEpJaV9lbHJteGc1ai0tS0ppYWxuWVI?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-6b5d8d763b8d",
+      "headline": "US closes remote-access loophole and restricts Chinese access to Nvidia chips, hitting China's AI development",
+      "summary": "Washington closed a loophole letting Chinese firms use Nvidia compute in Southeast Asia and reportedly told GPU buyers to rule out Chinese renters. Reports say curbs threaten Chinese model development.",
+      "subtopics": [
+        "chips-and-compute",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Nvidia",
+        "US government",
+        "Chinese AI firms"
+      ],
+      "importance": 84,
+      "evidence": [
+        "covered by WSJ, CNBC, Reuters, Businesskorea"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 38.75,
+      "features": {
+        "n_items": 8,
+        "n_independent_domains": 5,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 8,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://wsj.com/tech/a-game-changing-move-just-gave-america-the-edge-over-china-in-ai-53492e2c?mod=rss_Technology",
+        "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU05FY1hvQmJod19oM3p3aTZQaS1CdktCWEZsSnk0TmVWREE1a0tmVW5kVnBxdG5VNU1TX2FmWnZ1aTc1UEQyblFkSklCZ3NlcU1XQUZQVDUwTXZ6R3BoVjlRb1RPY0pTNGdmUUdNZkw0Zi1oanJOcXFieGlBdzRTN05pa3FsaVhUWVk0UWpzc0hkN2kySGF6bGRpU1Y1a2IyNi1iaUFQZThLNVZON0E?oc=5",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGFER2Vpbl9JMXo5TFF1MFdQemdLcWFENFE0eGhwRS1pWkVyVTJvMFQ3RnRxUURGSjBxbHVMVVlyYzk0N3ZVU0tfb0tJa3NJREFmSzNmbkVWd0xxdDlvLUlqNzQ1bnBmUExWNWxmVTczRG1UNEQzd3NReXh5N2xTU3IwbkRwcDJFT1BXYzExU3NLMVNkZ3RR?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-66eacebf7a9f",
+      "headline": "Scott Aaronson says leading AI labs hold unreleased algorithmic breakthroughs that could threaten deployed cryptosystems",
+      "summary": "Aaronson argues the magnitude of current AI progress is under-described and that labs have undisclosed breakthroughs whose nature is unknown. Bank regulators and FT coverage echo encryption worries.",
+      "subtopics": [
+        "research-methods",
+        "evals-and-safety"
+      ],
+      "entities": [
+        "Scott Aaronson",
+        "AI labs"
+      ],
+      "importance": 82,
+      "evidence": [
+        "hn_front #17 1907pts",
+        "techmeme #2",
+        "related FT coverage of encryption concerns"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 49.75,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 2,
+        "best_rank": 2,
+        "hn_points_at_observation": 1907,
+        "comments_at_observation": 1744,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://scottaaronson.blog/?p=10379"
+      ]
+    },
+    {
+      "story_id": "ai-abc3b7717e5f",
+      "headline": "Anthropic releases Claude Fable 5.2, Mythos 5.2, Haiku 5.5, Opus 5.5 and Sonnet 5.5 model family",
+      "summary": "Anthropic's own blog announces a new set of Claude models across several tiers. Titles give no benchmark or pricing detail.",
+      "subtopics": [
+        "frontier-models"
+      ],
+      "entities": [
+        "Anthropic",
+        "Claude Fable 5.2",
+        "Claude Mythos 5.2",
+        "Claude Haiku 5.5",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5"
+      ],
+      "importance": 80,
+      "evidence": [
+        "primary source (anthropic.com)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 41.08,
+      "features": {
+        "n_items": 4,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 1,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 4,
+        "has_primary_source": true
+      },
+      "urls": [
+        "https://anthropic.com/claude-fable-and-mythos-5-2",
+        "https://anthropic.com/claude-haiku-5-5",
+        "https://anthropic.com/claude-opus-5-5",
+        "https://anthropic.com/claude-sonnet-5-5"
+      ]
+    },
+    {
+      "story_id": "ai-c715d2397e21",
+      "headline": "SAP weighs at least 10,000 job cuts to remake its software business for the AI era",
+      "summary": "Bloomberg and FT report SAP is preparing to eliminate roughly 9% of its global staff.",
+      "subtopics": [
+        "business-and-funding"
+      ],
+      "entities": [
+        "SAP"
+      ],
+      "importance": 70,
+      "evidence": [
+        "covered by Bloomberg, FT, Reuters",
+        "techmeme #7"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 37.13,
+      "features": {
+        "n_items": 3,
+        "n_independent_domains": 3,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 7,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 3,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring",
+        "https://ft.com/content/ef05b4ab-7944-44ae-ad00-15475f8c1ec9?syn-25a6b1a6=1",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-b33dcdccbe86",
+      "headline": "Z.AI's GLM-5.5 flagship reportedly delayed as US curbs and distillation crackdown bite",
+      "summary": "Sources say Z.AI's 3-trillion-parameter GLM-5.5 missed its November target and could slip into 2027; Moonshot says release intervals are lengthening.",
+      "subtopics": [
+        "frontier-models",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Z.AI",
+        "GLM-5.5",
+        "Moonshot AI"
+      ],
+      "importance": 68,
+      "evidence": [
+        "techmeme #3",
+        "Reuters-sourced"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 39.73,
+      "features": {
+        "n_items": 3,
+        "n_independent_domains": 3,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 3,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 3,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+        "https://verticalslice.news/rockstar-workers-vote-against-historic-union-recognition-deal",
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVENaTUJjQ0trZ2NQMG1FdkQwT0ZkcXNHbGhHVmstbjRBbXFPQnhOUVZvNVlOWXo2UGxybkI0NXRjZ3JQbXg1azUzM1ZBQTFmZzVpVnQ1bzgxUHMyZHlqbW5LZW9hREptN05jLWhxOUxkQVpNUGtXalk0OTNVS09LWTBuSkpwelVxczJjQ29oNHVqT3owWk9sU2dNS1FQS0taaXpibkkwVEowZ282MzRCS0plakpiejUwcXQxVWJfeDBEOXdRUGRDMVctSzE?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-aae1cefa63c7",
+      "headline": "Apple pulls MiniMax's Talkie chatbot from the App Store worldwide over sexualised content",
+      "summary": "Apple removed the chatbot after reporting showed AI characters sexualising children; a MiniMax data-access report also surfaced.",
+      "subtopics": [
+        "evals-and-safety",
+        "products-and-apps"
+      ],
+      "entities": [
+        "Apple",
+        "MiniMax",
+        "Talkie"
+      ],
+      "importance": 66,
+      "evidence": [
+        "Reuters",
+        "techmeme #14"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 36.36,
+      "features": {
+        "n_items": 4,
+        "n_independent_domains": 3,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 14,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 4,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYXlXQVE4enJyRWstWjJvUGdBczBMWHdfZHRmYTNSN3I0eFpqeXBfVU5tN3NRSERpcjBPeE1rV1kwWTBwWnY3U2s1TnlpY2EtakM5TmItUW1UdnVFZXJWTWVRQk1paVhJeTBpSlB0eHJyWERRdnZ1bVctUmctdGJZOXpZMnFMdkxYVlZ3UHI4OE1wZEhocHBGNW0wU1Z3S2VxQ0x6a1pablJOUzlTOXlMSkxUYjRFcWtIc2tB?oc=5",
+        "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNU9tZmh6STA3Ui1FY1FQaE9LMDgzQjJjV2xoZ3Q1Znlvbk5wdll2OXoyOUdxUHp2WEYteFpvTFBhVDZYbFozTXp5T0RpaE4zUUhBaDhiVDAxUkY2RURGQWFFaE1BRTVmdmdXTDh3UEdReDM5N0pjSjBzUXB3UEpPa05ma2ZoWDZhTzhJbTNFeDBfQllEWS02eHhST1FPRWI0VlRMOEhHanpvUjZpWkNPWEJLS1BlSllaZ25XeTRGUXF3bUZEcE5n?oc=5",
+        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxONzBhSnpoeFJjZnFKY3ZmTGRiSlBNN1J0NWUxVHpLSnVPYlFDZmc2S0k4LWZJaTFVZTFPM0NfY0lVcVl0Z2NCTXI4dHZPSjhGVXREV3huaE50TERIaEM3SUtRNDdCN1JRODR3SmZ3cTNPdHpDOVYyaGZES1BJY0FQVUtaWUF1U0wzRFlqUmxQWnNWUHJjSlM1NTFIbnNqdy1uelpVOVUyWmRlR3JPcWpfakp6T3NuVjg2ZTlYQ0picTFSTHhPN3c2cjRQQ1NkTlV4RlhBYnpIaGd2aU55X1gyZEhfQ0N1NjhOc3hPb2x3dVgzOFUwX1A0TjRDcTV2d9IB_gFBVV95cUxONzBhSnpoeFJjZnFKY3ZmTGRiSlBNN1J0NWUxVHpLSnVPYlFDZmc2S0k4LWZJaTFVZTFPM0NfY0lVcVl0Z2NCTXI4dHZPSjhGVXREV3huaE50TERIaEM3SUtRNDdCN1JRODR3SmZ3cTNPdHpDOVYyaGZES1BJY0FQVUtaWUF1U0wzRFlqUmxQWnNWUHJjSlM1NTFIbnNqdy1uelpVOVUyWmRlR3JPcWpfakp6T3NuVjg2ZTlYQ0picTFSTHhPN3c2cjRQQ1NkTlV4RlhBYnpIaGd2aU55X1gyZEhfQ0N1NjhOc3hPb2x3dVgzOFUwX1A0TjRDcTV2dw?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-a4393582cd6a",
+      "headline": "S&P considers downgrading Nvidia credit over governance and key-man risk",
+      "summary": "S&P may cut Nvidia's rating to AA-, citing governance lapses tied to Jensen Huang's brief removal and reinstatement.",
+      "subtopics": [
+        "business-and-funding"
+      ],
+      "entities": [
+        "S&P",
+        "Nvidia",
+        "Jensen Huang"
+      ],
+      "importance": 64,
+      "evidence": [
+        "covered by TechCrunch, The Information, Moody's commentary"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 35.0,
+      "features": {
+        "n_items": 6,
+        "n_independent_domains": 4,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 6,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it",
+        "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
+        "https://theinformation.com/articles/s-p-discovers-nvidias-governance-lapses",
+        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOa2tIellfWlVfWkFzR0tnaVFlLUdvd3U3NHlNMEtWT0x6SHA0RVJOMGNFN0ljLUgyWU1wN0lWbE0tQ3lNOUNyVVNGaTdDYVlIZ1dDWDVDRWtwMENzOGNMbmJ1OGpwUHVhLWRneDltcWNCaUVuOTFjcy10aGkxekc4aUJaUWV2RjFONGlZQmRrSE44U1o4T1hlSjQwTkoxLWJnSjc0WG9LVFFuR3FYQmcyR3BkeVRrMHZXcV9nRFRaNEV4ZS1fRWFsYUsxMmE0UnEwc3VCZkgzTUZBM29JcnRCYTI0WS0?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxON3BILVhfUlhTUXBIWVQ3THFMX0s4OWpnd0g0M1VBMnZJeDdYOHBTaERHcWM1Vk82cXdSY1dGamp1VWo0WnlTYVkwUkM2SkpOcEJrZWM3V2NHSEl6T0dLQnVHRC1lYnVuVEx6VEVWSzVJakVUR25oM1ZSTURYdEloSC00UDRJM1dqT3liaGk0TG5wbHhmVmJPU21Fd1EzNlU?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSnFCZTJhQkQzR25PLTNfcWRtdFdUVENhU184c3RraWp0M0g4NGw0NXRVOU5sSFBsR2tnRktxYjBBcUlGRzNJVnEtaVh5Zk82NGY2WVQ2VFdBUkIwZ294SjdHR0trM0k5dTl0MTg2OURCOW9RNklVczNVa0VkZU8tV0tXWDVHY1NxUG1aUXZFdUVzazhJTDlYRHBfaGc2VEFEUHNOOFAwbjI?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-42991f666b85",
+      "headline": "Meta launches Muse Spark 1.1, Muse Image and Muse Video models",
+      "summary": "Meta announced new Muse-family models including an image and a video generator; the FCA has criticised Meta for declining joint testing of its Muse agent.",
+      "subtopics": [
+        "frontier-models",
+        "products-and-apps"
+      ],
+      "entities": [
+        "Meta",
+        "Muse Spark 1.1",
+        "Muse Image",
+        "Muse Video"
+      ],
+      "importance": 63,
+      "evidence": [
+        "primary source (meta.com)",
+        "Wired coverage of FCA complaint"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 40.08,
+      "features": {
+        "n_items": 3,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 1,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 3,
+        "has_primary_source": true
+      },
+      "urls": [
+        "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication",
+        "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl",
+        "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api"
+      ]
+    },
+    {
+      "story_id": "ai-de14ee895dd0",
+      "headline": "OpenAI merges ChatGPT Chat and Work with a single usage meter; GPT-6.2 billing error corrected",
+      "summary": "OpenAI says heavy users will hit limits sooner after combining its two experiences, and it admitted a billing mistake that had discounted GPT-6.2 Astra usage.",
+      "subtopics": [
+        "products-and-apps"
+      ],
+      "entities": [
+        "OpenAI",
+        "ChatGPT",
+        "GPT-6.2 Astra",
+        "GPT-6.2 Sol"
+      ],
+      "importance": 62,
+      "evidence": [
+        "TechCrunch",
+        "techmeme #4"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 39.83,
+      "features": {
+        "n_items": 4,
+        "n_independent_domains": 3,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 4,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 4,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+        "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbmRxTnhtQkxYcU00d2FHQWtJX004TXBUMk1fTkpQTEJHWW9sM2xiMllvSFI5Zkh2Z25PenJIRWJnNllGMW5NdVlteGxjbTMzODVhclo4NE1McnRNYl9Pa1JScnBpMnllZk8td09Zdk9SRW9XRTVYV0dFSDFIdUNRd25PbWF4UG5CNnhZd0RxYVRMeVd6U2pmYmt2U00xNWJtdnRjajlNVW40V2p2eElGRw?oc=5",
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQWZET3dOcDNPZ1c3bnhSaGh6SkdXeGItdEl0dUNmbzVVZlhhSV8wZ1p0OTN5RDlfUXRZV3NMSXNnV2FxYXdVRWY5UnJZZ2FxbkVXNlFkWFFabHNfRTl2ZXJ5ZFVRd0prUkE0OFRYYktyVGNBemZkSGJZbXUzOVljaEtBdEhIT2Vydkhab2h1cFc0NDJyNVZMb29BQ3U2bUh3N2NETVpyenBmVVpRclBCWnpscjUwUQ?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-651cc167b0ad",
+      "headline": "Bank of England's Bailey says unreleased AI models raise encryption concerns; BoE cuts bank capital requirements",
+      "summary": "Bailey warns mathematical breakthroughs in AI threaten financial encryption, while the BoE moves to lower capital requirements and flags AI cyber risk.",
+      "subtopics": [
+        "evals-and-safety",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Bank of England",
+        "Andrew Bailey"
+      ],
+      "importance": 60,
+      "evidence": [
+        "FT coverage"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 20.75,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
+        "https://ft.com/content/cf30cef5-0e35-4ebd-a456-797dbd1ad132?syn-25a6b1a6=1"
+      ]
+    },
+    {
+      "story_id": "ai-16b0900dd66d",
+      "headline": "Microsoft says China and North Korea state hackers use AI pentesting tool ARTEX",
+      "summary": "Microsoft's report says state-backed groups including Salt Typhoon have added the AI penetration testing tool ARTEX to their operations.",
+      "subtopics": [
+        "evals-and-safety",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Microsoft",
+        "ARTEX",
+        "Salt Typhoon"
+      ],
+      "importance": 58,
+      "evidence": [
+        "techmeme #8",
+        "The Record"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 27.25,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 8,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+      ]
+    },
+    {
+      "story_id": "ai-4a3ee95ec597",
+      "headline": "Pentagon discussed Defense Production Act to pressure Nvidia's board to reinstate Jensen Huang",
+      "summary": "The Washington Post reports Pentagon officials floated using wartime law to reappoint Huang; officials dispute national-security concerns around him.",
+      "subtopics": [
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Pete Hegseth",
+        "Jensen Huang",
+        "Nvidia",
+        "Pentagon"
+      ],
+      "importance": 57,
+      "evidence": [
+        "WaPo",
+        "techmeme #19",
+        "Reuters"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 35.76,
+      "features": {
+        "n_items": 4,
+        "n_independent_domains": 3,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 19,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 4,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://washingtonpost.com/technology/2026/11/25/hegseth-pentagon-officials-floated-using-wartime-law-reappoint-nvidia-ceo?itid=gfta&pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzk1NTgyODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzk2OTY1MTk5LCJpYXQiOjE3OTU1ODI4MDAsImp0aSI6IjZiNDI1NjE3LTkzZDQtNDY5MS1hZjMxLTJmNjdhMWU2MGIwYyIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS90ZWNobm9sb2d5LzIwMjYvMTEvMjUvaGVnc2V0aC1wZW50YWdvbi1vZmZpY2lhbHMtZmxvYXRlZC11c2luZy13YXJ0aW1lLWxhdy1yZWFwcG9pbnQtbnZpZGlhLWNlby8ifQ.IC587f-ZsvMSTdejz3SE90kzYZs7rK7qFb57vH6USNU",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWXpxVzdFTDlLUzR0Q1I5dzFrMDFIS0VJSUlBMk9qYllCSWNENGFiX2p6N3RzOC1aTjFNT21WdVBnNXFxRUhpMlVYMlZ4alZocS1mVXRHV2lOMTlZMzlHc1BwQ0FxcDAxZnpNdVpHb1pzQlF5MUYwT3VRT0lwb2oxZGpxMkJSS2NVVFgteTlaOFUzcWQ0OENlUFFTWXg3YjJtNVE?oc=5",
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZ0IzSk1IWkpMeGFmZWlDR2RseE11U3ZSbXlIOGdQalJyOS1rakJjUUxYZDYwd2ZYZERTQTdNNTQzR1dVMmRwVU1KNmhxc2ZtOXhwczJJckVxT0dUSHJnZEJpUnp0MXVVX1VqSElzQkJLc25neHJEZEYzZ0R5LXdnb01hNGZaTFFrbEc3c1haRVZpUUFldnRZY3NqVmlSRGVNVEloQ1Q2Q29VQzlRSWxtSUdnVHNIUGVwZ2VuekdHS1I1UQ?oc=5",
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcDJ0UmNqUTc2UWNoaVh0STB6ZHRZTnV6WGVPX2Q0VDhmRWU4Wk5hV2lZMTZOZUV4ZEwzOVBnVmVtbnB0eXlpekIyMVF5cG91WmVxLTNIeWx1MzhLN3czOHFLbFRuVTdYRUIwdk4zMTlfcEtLb2J3Y1lQM0l1OTREU2p5UzBxaXI5aExoOGlyUVctZlJZcllacVRzTU9zVXlNaVVMNThZRE85NWdlaEo2WUJKd3FtTVBRZ00xU0l0V2tMLTRiLUE?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-82e1ff53b024",
+      "headline": "Anthropic publishes a wave of policy, science, partnership and governance announcements",
+      "summary": "Anthropic's blog posts cover public-benefit investment, AI for Science, drug development, the Cyber Mission, government and Singapore deals, Barclays rollout, and a usage-policy update.",
+      "subtopics": [
+        "business-and-funding",
+        "products-and-apps",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Anthropic",
+        "GSA",
+        "Barclays",
+        "Singapore government"
+      ],
+      "importance": 55,
+      "evidence": [
+        "primary source (anthropic.com)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 40.42,
+      "features": {
+        "n_items": 21,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 2,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 21,
+        "has_primary_source": true
+      },
+      "urls": [
+        "https://anthropic.com/features/claude-on-mars",
+        "https://anthropic.com/features/making-of-claude-code",
+        "https://anthropic.com/features/project-deal",
+        "https://anthropic.com/institute/econ-scenarios",
+        "https://anthropic.com/news/2026-us-midterms",
+        "https://anthropic.com/news/2026-usage-policy-update",
+        "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+        "https://anthropic.com/news/an-update-on-independent-evaluators",
+        "https://anthropic.com/news/anthropic-cyber-mission",
+        "https://anthropic.com/news/barclays-scales-claude",
+        "https://anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+        "https://anthropic.com/news/claude-frontier-academy",
+        "https://anthropic.com/news/cyber-verification-program",
+        "https://anthropic.com/news/distillation-defenses",
+        "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+        "https://anthropic.com/news/expanding-partnership-gsa",
+        "https://anthropic.com/news/genesis-mission-commitment",
+        "https://anthropic.com/news/open-call-guest-investigators-life-sciences",
+        "https://anthropic.com/news/public-benefit-fund",
+        "https://anthropic.com/news/singapore-office-opening",
+        "https://anthropic.com/research/early-progress-drug-development"
+      ]
+    },
+    {
+      "story_id": "ai-404c6bdd6fca",
+      "headline": "Netherlands will resist proposed US curbs on ASML chip sales to China",
+      "summary": "The Dutch government says it will oppose further US restrictions on ASML and may not enforce the MATCH Act.",
+      "subtopics": [
+        "chips-and-compute",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "ASML",
+        "Netherlands government"
+      ],
+      "importance": 55,
+      "evidence": [
+        "Bloomberg",
+        "Reuters"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 24.5,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 2,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGdjRUN5YTg3WHZsaVA3dk9EVHB3TzkybFUwc2cyS29EOTBueVZIVjhUOFlqZzl6T2xpNER5aW53a2plOWdIaG1icGNfQWUxd01yVjJ5Vm10dVR4QTNGb1VoQS11SWRhNlJJb3ZoQmtrVGZMcUlxWjhjYXpjNmVBNV9kdGdhZnJMTW9vd3lqV2ZPUnFGN0tUczEtTTk5TVBWbWl3?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-a86b28f34721",
+      "headline": "New York and California move on AI safety laws: Hochul vetoes bill, NY AG creates enforcement unit, California seeks action",
+      "summary": "New York's governor vetoed an AI safety bill while setting a chatbot-toy ban; the state attorney general created a unit to enforce the RAISE Act; California's governor has 30 days on AI safety bills.",
+      "subtopics": [
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Hochul",
+        "NY Attorney General Letitia James",
+        "California Governor"
+      ],
+      "importance": 55,
+      "evidence": [
+        "Crowell & Moring",
+        "Black Chronicle",
+        "Broadband Breakfast"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 18.75,
+      "features": {
+        "n_items": 3,
+        "n_independent_domains": 3,
+        "best_tier": 3,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 3,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUlNXeGJOdjYxcmY5T3VWcG93N2JpQUYzUmtnSUw1cVpKaG9BVm5qeFROb2Q3dTBjTXAzbFV6ZkZlcFYxeVl1MmRGeWxyUXUyXzItOURfM0xwbjBPY1JPQ21TQTJUZEItMEExbmNnRUpzUUxUMTZOQk1nVUJ5bUhfT2JiTmlIeGN5eUdUd2xtVGRZd0hCSG1BMllYTk15Z1E?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaHBQZFlGWVpWd0xhdnNPV3pFTmxybW5zeGdLMUF5SWhfcmdWRExqazVpMmVfRjNJOExmUFowU2dMbmhOYl9RTXFNYnQ3RmxhZGU2Q3FLT0N2bTVIVkJHVXJNekVHMEI3ZVM2WDFYT3dBUDgyMW4xNGYwNnNfTURtcWF1X01Qd3NpaE9XWDYtQ3lqNGVGdm9XRjNITEpyRHdnaGc?oc=5",
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcHF0VmtTdmlyajVmNjVlcVk5dTJfNjE3Z0VBcGVMXzRyMG1uRmhOVUVxeFlZVlAxNV9hSlI3a2p1Z0VmZTNXZ1RRaEhQUVZsU0VQOWtZUnRsRlI5VnV3SDN5aXJtR0tGX3VLbWx0cmozNmZpb2dnY3BZQXpwdDRzQUFXUXlXV2MzalB5cFc4TUFvMWtxTXlrMEp6SW9DQUtBaTVpbXg3MkM2X1pYcGJoeENIaWlYcVRod2xZMVVRZ2RoZ0U?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-7a95dc621582",
+      "headline": "Switzerland reports AI agents used in five cyberattacks",
+      "summary": "The Swiss government says AI agents were involved in five attacks, and retailers face rising AI-driven cyber threats before Black Friday.",
+      "subtopics": [
+        "evals-and-safety"
+      ],
+      "entities": [
+        "Switzerland government"
+      ],
+      "importance": 52,
+      "evidence": [
+        "Reuters"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 20.75,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQXpGTVZodUxhM09Jb0ZEQ1JXcmt0VkoxUndncmc3cXhoSWNmWlduNlJmRlA3VzhuRktZT2F6ZjJoTGZ5eVZEa01xZ3A2OHBaVjA4dDJkUTR4TkNNUnc5ay1XazlBcHAzSkVuQVpEVGtsMGlPVlNzLVM0X3F3WnJMZklqMTJnMWszSkxBMEZRLWx5cXgyRE9aSEJtSDlELWRCVjByTGhqT0hPQ200Ui03TUJfaGd1NXRjLUVVM21ObUlSSWd0bEktdmtua0VMWlpoRHFadg?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxObHJoZUpFSGFNc09VMDVnYmkxbEhyaUdhN0J1ZHc5c1BWbGxmb3VOZ1NWbGI5cVZ0MG1oMG9TMThva25SLXhBTlN1cnpjeXFfYnBhVEtzUHdZVi1pSDJWS2dvdXlkanBQdUU3dUNLT1VPUnNGb05UeE1VVzhYVktfR0ppdGJ3UFg0OERkaVhyRFFkcFRUa09fM1BGMUxpQXl4dldoWlI5bXBsNldXVnBUMU5pQXU?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-a1f0fd985710",
+      "headline": "GPT-6.2 Astra beats Googlers' code golf records",
+      "summary": "A community post reports OpenAI's GPT-6.2 Astra as the first model to beat human code golf records.",
+      "subtopics": [
+        "frontier-models"
+      ],
+      "entities": [
+        "OpenAI",
+        "GPT-6.2 Astra"
+      ],
+      "importance": 50,
+      "evidence": [
+        "hn_front #30 455pts"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 38.67,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 30,
+        "hn_points_at_observation": 455,
+        "comments_at_observation": 129,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://bjin.github.io/go-codegolf-benchmark"
+      ]
+    },
+    {
+      "story_id": "ai-ea87a67b443d",
+      "headline": "Memory chip shortage sends prices up tenfold and prompts procurement war rooms",
+      "summary": "Reports say memory chip prices have risen sharply, pushing up electronics costs worldwide.",
+      "subtopics": [
+        "chips-and-compute"
+      ],
+      "entities": [
+        "memory chip makers"
+      ],
+      "importance": 50,
+      "evidence": [
+        "WSJ",
+        "techmeme #13"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 27.02,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 13,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?mod=rss_Technology",
+        "https://wsj.com/tech/memory-chip-shortage-ai-electronics-prices-e58a065a?st=Rx7QaC"
+      ]
+    },
+    {
+      "story_id": "ai-2dfd28e5a6d6",
+      "headline": "Trump to lead TSMC Arizona expansion groundbreaking on December 4",
+      "summary": "The President will attend a ceremony for the expansion of TSMC's Arizona chip factories.",
+      "subtopics": [
+        "chips-and-compute"
+      ],
+      "entities": [
+        "TSMC",
+        "Trump"
+      ],
+      "importance": 50,
+      "evidence": [
+        "AP",
+        "The Information"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 24.5,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 2,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://theinformation.com/briefings/trump-lead-tsmc-arizona-groundbreaking-ceremony-bringing-huang-back-nvidia",
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbVFCZEVvMWJxMnFTWE96SjlweXVka0V5WC1FVTF4R0IzX3lpODRfTzM5dDhfSWNrRS1iNXdzRWJZME1odmRCY2JMUXJMOENabjBUNzJKMS1lYW5SN1A2bTRrU2hOTXpOUEszSEQ2aTZMeG95VXNMVFltUzNJWHNxbVpKZnAwOFVMQk1KNVFyRFJ4NmctZUMzYw?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-8402f6f03f95",
+      "headline": "AI startups raise funding: Avicena, Lute, ElevenLabs talks, Mawj",
+      "summary": "Avicena raised a $100M+ Series C with SK Hynix, Samsung and AMD participating; ElevenLabs is in early talks at a $33B valuation; Lute and Mawj raised smaller rounds.",
+      "subtopics": [
+        "business-and-funding",
+        "chips-and-compute"
+      ],
+      "entities": [
+        "Avicena",
+        "ElevenLabs",
+        "Lute",
+        "Mawj"
+      ],
+      "importance": 48,
+      "evidence": [
+        "TheNextWeb",
+        "Bloomberg"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 48.33,
+      "features": {
+        "n_items": 6,
+        "n_independent_domains": 6,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 16,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 6,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai",
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZWJWYWZWa1hlTE1pTHYxSFg5YmlmRHpyOFdhVjZ3ZDRyMXZXbUhFZ1BCY3NBT0Z5T1AwVmt2RVhyT0ZQNjVsbm1YR3dScVQzSWpiQ0x4WVVrc2wtRDhNWkozQllJUDhzV1N6MVdackF2R0NRdkNMRVVSeGRCcDlyQUtnSFl6cWZCZnlBUHBGVThJUldOc253TA?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcVR2dmd5d0ZWMnJfN2pSRm5HM040d2FVazlaR2szbzZVanVQdlFVSGVjY0lQNy0teEtyekVLaDN6Y3Vwclc4WENNMjRBN0I0dlBVOWtRSG9CdS1NUWNRbmM1UzVWVXc2ME1yckpLNmZua1I4bGcyTFNzc0txdTVEd1kzSEU3R2p1UWFxMnRzSThkSmNGMnZyMWpyNXA1OE5ZN0xB?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZnh2di1rYVYzTnB6TVI5ZjBhMXdIQ250RWNzNC1hQUNFRjdNQVBaU3BtSDVtTFhPVTNZYmRvdFVGOEw4R3h2T2dnZHh1TnhpWXRjYWVmVlkwanNlbklyZmZZRU1wYjdLdG5rVm1IdlZFMUFRRDJVY295RXQtNEpGQ1REM2VNeHFCNy1Hdi1scHNELVZFMHhIRXpOMzhiaVVoNjVLRndWZnY?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYkhhVHR1a1Jha0dHX2dwbm9CWjBwc3pmWjc1U1Raa2pIU3lxWW8xMW1oQjB1a0NTTkN3WmtUb3F2UHRNaXYyNTdlaTBYcHplaUVvendoMGZsUUZFSW1wUkxpekdOR21GcmZncVdZWVpOc3NlUlkxZFVfQ1hRaFFlYnV4aDhsZ2UtZEVRSnlRbFhrQzNqMnV0Y254eVN2QmdZcTc0b3lmcjBydnA0SGJCemRR?oc=5",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUltYUdhWDRYMWtMTjZYUjdKa3ZpdnJNckF1ZU5lSjdVaENvZFBmRVZZWEkwVU1GV0NfMzlLZnJGcTJRSTE3TGhDYWN5RVRBM2FOUHNSYXdnWnJCSktzYWdCMVpMV0Y4X1ZLRjNxRVBaVVlEYm0yMGFNaWZGcVROZnVQUWdsUEx1aHlrSXFhT1U4aW1HRWEwbE93ZzZIbFRVSVR1ZGhNbXg0UGlaT2M4TUJyN001T1FmOXc?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-5c0b43708f7f",
+      "headline": "Musk pledges two SpaceX shares to every US child, worth about $18.4B",
+      "summary": "Musk doubled an earlier pledge, routing the shares through Trump Accounts.",
+      "subtopics": [
+        "business-and-funding"
+      ],
+      "entities": [
+        "Elon Musk",
+        "SpaceX",
+        "Trump Accounts"
+      ],
+      "importance": 45,
+      "evidence": [
+        "covered by Bloomberg, Reuters, Guardian, Axios"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 41.18,
+      "features": {
+        "n_items": 4,
+        "n_independent_domains": 4,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 9,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 4,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://theguardian.com/technology/2026/nov/26/elon-musk-pledges-to-give-two-spacex-shares-to-every-child-in-the-us",
+        "https://bloomberg.com/news/articles/2026-11-26/musk-says-every-us-kid-to-get-two-spacex-shares-doubling-pledge",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE9maHp6OXN1a3ZmMDR3a3F6amFwaVF2RnZKRkd0NlMtQmEySkY5LThsd19mNDRsb2VfQjlSWkNzbC01dHd0Vkhqb18yMkFzUm9Kck9TMzZRUFVxRUlNNEdHMU5BNnBFN0FjMTdRc0xXWGpOX0tD?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNklmekFZWmFURnFwVlBHa2FlTGZwYkxaSkNSRUxMV2lsanFDc2hkdGF1RGhHWlJoUTBicHFXY1B3dWxHa0xmdU5mYzFBbGpYN3Z5N2xTS2U1bVBJeVZQVHRucldkRVhsVlVfNldnTWpRclIzSjJQa0tMMnBFVGhDTS1HYzdwVlctaXowdDJtdVJaNkxLcXo2Tk9Odi1XZnI0c1JScHZycXhWRUNUZmQ4?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-bdcebfa861d6",
+      "headline": "US authorises SpaceX to deploy one million satellites for orbital AI data centres",
+      "summary": "Federal regulators approved the Starmind constellation for space-based data centres.",
+      "subtopics": [
+        "chips-and-compute",
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "SpaceX",
+        "Starmind"
+      ],
+      "importance": 45,
+      "evidence": [
+        "Reuters",
+        "Guardian",
+        "BBC"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 24.5,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 2,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVk5uRnprd285MEw5V2prcHR6bXljVGN4cUZuOHA4eHJUZkFzOVFnS1QtYnZaal8yYUYxa0t1cW84WjVzQWpub0czSGxUblh3STB6WnZxcThWZUxNRDk2emliZ0tfTmk5U3YxY3FZRXdEYWNyb2VMTmlkZE5RNWZHOS12OWdjSkpNdzhGU0Z4NWo3VmpSZHNXWGNJZUFpZjl2T2xuUkRKRXBpOTFqVFdFLXFvV0xHd1czWDFKbFU3OWFGU21B?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-eb13a71bd94a",
+      "headline": "Congress faces obstacles to bipartisan AI regulation as Democrats demand new restrictions",
+      "summary": "NYT and Axios report bipartisan interest in AI rules but stalled legislative progress.",
+      "subtopics": [
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Congress",
+        "Democrats"
+      ],
+      "importance": 44,
+      "evidence": [
+        "NYT",
+        "Axios"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 24.5,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 2,
+        "best_tier": 1,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVXpKRVJxZXhKY0lFc2JUUVhrNUZhek5tVVQxUmxlS2oyTUFvOTUxWWhJeF9XSmVlTkg0S3U0NDFUbDBfODF6MWlWUFZtY051eE1uNS02SjEyMTZBa2pXUWdoNkZMZi1wa1E0bTVob0dUTDN5SHZRbU9wQnd5MUVFaTkyZ296TXFBakR3VklFaVFlQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdm5vVlNYSU1RdnJub1pDc2hpOHhGZWNRWDBubnlHTURaQ3FHSEdXcjFyVkdkLTJyeWJWWHNzU3F0ckdTcHBqcUhtR2tyd3ZXSDVVWHlEVUctRThyLUFmS1FtWnpUYTlKWF9LOGRhR2VobFVVQy0xY0szVEpheHBhZm9kVHhvTjNW?oc=5"
+      ]
+    },
+    {
+      "story_id": "ai-947dd25e203a",
+      "headline": "Thariq Shihipar leaves Anthropic to join OpenAI",
+      "summary": "A former Anthropic engineer announced he has joined OpenAI.",
+      "subtopics": [
+        "business-and-funding"
+      ],
+      "entities": [
+        "Thariq Shihipar",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "importance": 42,
+      "evidence": [
+        "techmeme #12"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 26.21,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 12,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://x.com/trq212/status/2125675533761671405"
+      ]
+    },
+    {
+      "story_id": "ai-8a159faf85ce",
+      "headline": "llama.cpp adds AMD-specific patches and a Ryzen/Radeon benchmark dashboard",
+      "summary": "Community and Hugging Face posts bring AMD optimisations and benchmarks to the llama.cpp inference stack.",
+      "subtopics": [
+        "open-models",
+        "chips-and-compute"
+      ],
+      "entities": [
+        "llama.cpp",
+        "AMD",
+        "Hugging Face"
+      ],
+      "importance": 40,
+      "evidence": [
+        "hn_front #1",
+        "huggingface.co"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 53.61,
+      "features": {
+        "n_items": 2,
+        "n_independent_domains": 2,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 1,
+        "hn_points_at_observation": 118,
+        "comments_at_observation": 33,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 2,
+        "has_primary_source": true
+      },
+      "urls": [
+        "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+        "https://devnull.land/amd-specific-llama-cpp"
+      ]
+    },
+    {
+      "story_id": "ai-3d86a8546e15",
+      "headline": "Anthropic's Claude marketplace experiment and Claude Code origin story published",
+      "summary": "Anthropic published Project Deal, an experiment in a Claude-run marketplace, and a behind-the-scenes look at Claude Code.",
+      "subtopics": [
+        "agents-and-tools"
+      ],
+      "entities": [
+        "Anthropic",
+        "Claude Code"
+      ],
+      "importance": 40,
+      "evidence": [
+        "primary source (anthropic.com)"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 38.22,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 23,
+        "hn_points_at_observation": 363,
+        "comments_at_observation": 75,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://aresluna.org/ui-style-guides"
+      ]
+    },
+    {
+      "story_id": "ai-29ee2e9e0cee",
+      "headline": "42 state attorneys general move to block Character.AI from selling user chats in bankruptcy",
+      "summary": "A coalition of AGs is trying to stop the sale of user data during Character.AI's Chapter 11 case.",
+      "subtopics": [
+        "policy-and-regulation"
+      ],
+      "entities": [
+        "Character.AI",
+        "state attorneys general"
+      ],
+      "importance": 40,
+      "evidence": [
+        "The Verge"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 13.75,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 2,
+        "frontpage_hits": 0,
+        "best_rank": null,
+        "hn_points_at_observation": null,
+        "comments_at_observation": null,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats"
+      ]
+    },
+    {
+      "story_id": "ai-0bee9a1e9ba6",
+      "headline": "Google will make AI agents use its MCP servers, Gmail MCP server cannot send email",
+      "summary": "A report notes Google is steering AI agents to its MCP servers, with the Gmail one lacking send capability.",
+      "subtopics": [
+        "agents-and-tools"
+      ],
+      "entities": [
+        "Google",
+        "Gmail",
+        "MCP"
+      ],
+      "importance": 38,
+      "evidence": [
+        "hn_front #14 104pts"
+      ],
+      "is_update_of": null,
+      "notes_for_editor": null,
+      "importance_rules": 37.53,
+      "features": {
+        "n_items": 1,
+        "n_independent_domains": 1,
+        "best_tier": 1,
+        "frontpage_hits": 1,
+        "best_rank": 14,
+        "hn_points_at_observation": 104,
+        "comments_at_observation": 118,
+        "first_seen": "2026-11-26T19:29:54Z",
+        "velocity": 1,
+        "has_primary_source": false
+      },
+      "urls": [
+        "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+      ]
+    }
+  ]
+}

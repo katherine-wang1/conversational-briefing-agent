@@ -1,0 +1,456 @@
+{
+  "beat": "ai",
+  "at": "2026-11-26T19:29:54+00:00",
+  "collect_s": 5.7,
+  "newsroom_s": 30.0,
+  "observations": 4689,
+  "sources": {
+    "techmeme": {
+      "n": 19,
+      "error": null
+    },
+    "hn_front": {
+      "n": 30,
+      "error": null
+    },
+    "hf_papers": {
+      "n": 50,
+      "error": null
+    },
+    "reddit_ml": {
+      "n": 0,
+      "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/MachineLearning/top/.rss?t=day'\nFor more informat"
+    },
+    "arxiv_cs_cl": {
+      "n": 208,
+      "error": null
+    },
+    "arxiv_cs_lg": {
+      "n": 459,
+      "error": null
+    },
+    "arxiv_cs_ai": {
+      "n": 487,
+      "error": null
+    },
+    "openai_news": {
+      "n": 1430,
+      "error": null
+    },
+    "anthropic_news": {
+      "n": 29,
+      "error": null
+    },
+    "deepmind_blog": {
+      "n": 100,
+      "error": null
+    },
+    "meta_ai_blog": {
+      "n": 6,
+      "error": null
+    },
+    "hf_blog": {
+      "n": 918,
+      "error": null
+    },
+    "nvidia_blog": {
+      "n": 18,
+      "error": null
+    },
+    "techcrunch_ai": {
+      "n": 20,
+      "error": null
+    },
+    "verge_ai": {
+      "n": 10,
+      "error": null
+    },
+    "ars_ai": {
+      "n": 20,
+      "error": null
+    },
+    "mit_tr_ai": {
+      "n": 10,
+      "error": null
+    },
+    "import_ai": {
+      "n": 0,
+      "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://importai.substack.com/feed'\nFor more information check: https://developer."
+    },
+    "nyt_tech": {
+      "n": 33,
+      "error": null
+    },
+    "wsj_tech": {
+      "n": 40,
+      "error": null
+    },
+    "bloomberg_tech": {
+      "n": 20,
+      "error": null
+    },
+    "ft_tech": {
+      "n": 25,
+      "error": null
+    },
+    "the_information": {
+      "n": 20,
+      "error": null
+    },
+    "guardian_ai": {
+      "n": 20,
+      "error": null
+    },
+    "bbc_tech": {
+      "n": 21,
+      "error": null
+    },
+    "wired_ai": {
+      "n": 10,
+      "error": null
+    },
+    "ieee_ai": {
+      "n": 30,
+      "error": null
+    },
+    "gn_reuters_ai": {
+      "n": 100,
+      "error": null
+    },
+    "gn_ap_ai": {
+      "n": 100,
+      "error": null
+    },
+    "gn_axios_ai": {
+      "n": 48,
+      "error": null
+    },
+    "gn_ai": {
+      "n": 100,
+      "error": null
+    },
+    "gn_ai_labs": {
+      "n": 100,
+      "error": null
+    },
+    "gn_ai_models": {
+      "n": 12,
+      "error": null
+    },
+    "gn_ai_chips": {
+      "n": 100,
+      "error": null
+    },
+    "gn_ai_policy": {
+      "n": 47,
+      "error": null
+    },
+    "gn_ai_funding": {
+      "n": 49,
+      "error": null
+    }
+  },
+  "steps": {
+    "N2": {
+      "observations_in": 4689,
+      "observations_kept": 800,
+      "dropped": {
+        "other_beat": 0,
+        "out_of_window": 591,
+        "future": 0,
+        "hn_ablation": 0,
+        "stale": 3298,
+        "undated_over_cap": 0
+      },
+      "freshness_dropped_by_source": {
+        "ars_ai": 20,
+        "arxiv_cs_ai": 221,
+        "arxiv_cs_cl": 104,
+        "arxiv_cs_lg": 238,
+        "bbc_tech": 20,
+        "bloomberg_tech": 1,
+        "deepmind_blog": 100,
+        "ft_tech": 2,
+        "gn_ap_ai": 31,
+        "gn_axios_ai": 35,
+        "guardian_ai": 15,
+        "hf_blog": 915,
+        "ieee_ai": 30,
+        "mit_tr_ai": 10,
+        "nvidia_blog": 17,
+        "nyt_tech": 28,
+        "openai_news": 1430,
+        "techcrunch_ai": 15,
+        "the_information": 18,
+        "verge_ai": 8,
+        "wired_ai": 9,
+        "wsj_tech": 31
+      },
+      "items": 788,
+      "google_news_items": 583,
+      "unresolved_aggregator_links": 4
+    },
+    "N3": {
+      "items": 788,
+      "candidates": 764,
+      "multi_item_candidates": 23,
+      "threshold": 90.0
+    },
+    "N4": {
+      "shown": 400,
+      "cut": 364,
+      "calls": 1,
+      "signal_min_shown": 0.3429,
+      "signal_top": [
+        {
+          "id": "c1",
+          "signal": 1.7501,
+          "title": "Sources: leading AI labs are sitting on major, unreleased algorithmic breakthroughs that could break deployed cryptosystems, but their exact nature is unknown"
+        },
+        {
+          "id": "c2",
+          "signal": 1.4583,
+          "title": "Sources: SAP is preparing a plan to eliminate at least 10,000 positions, or 9% of its staff globally, to transform its software business for the AI era"
+        },
+        {
+          "id": "c3",
+          "signal": 1.4403,
+          "title": "EXCLUSIVE: Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says"
+        },
+        {
+          "id": "c4",
+          "signal": 1.2778,
+          "title": "Elon Musk says he and SpaceX plan to give every child in the US two SpaceX shares via Trump Accounts, doubling his pledge; the donation is worth ~$18.4B"
+        },
+        {
+          "id": "c5",
+          "signal": 1.0894,
+          "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work"
+        },
+        {
+          "id": "c6",
+          "signal": 1.0833,
+          "title": "EXCLUSIVE: US chip curbs, distillation crackdown threaten Chinese AI model development, sources say"
+        },
+        {
+          "id": "c7",
+          "signal": 1.0306,
+          "title": "AMD Specific Patches for Llama.cpp"
+        },
+        {
+          "id": "c8",
+          "signal": 1.0081,
+          "title": "Nvidia Tells Partners to Pause Shipments to Southeast Asia"
+        },
+        {
+          "id": "c9",
+          "signal": 1.0,
+          "title": "Sources: Nvidia tells its manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand, and Indonesia, as the US steps up export controls"
+        },
+        {
+          "id": "c10",
+          "signal": 0.993,
+          "title": "Anthropic\u2019s Stock Debut Could Hurt Tech Start-Ups"
+        }
+      ]
+    },
+    "N5": {
+      "calls": [
+        {
+          "call": 1,
+          "candidates": 400,
+          "ok": true,
+          "stories": 45,
+          "invalid_stories": 0,
+          "unknown_ids": 0,
+          "repeated_ids": 2
+        }
+      ],
+      "stories": 45,
+      "cross_call_merges": 0,
+      "grouped_candidates": 177,
+      "rules_only": false,
+      "input_tokens_used": 33203
+    },
+    "N6": {
+      "digest_id": "ai-20261126T1929Z-9cddb903",
+      "stories": 632,
+      "entries": 30,
+      "below_floor": 0,
+      "floor": 20,
+      "digest_size": 30,
+      "prior_matches": [],
+      "continued": 0,
+      "updates": 0
+    }
+  },
+  "usage": {
+    "tokens_in": 33203,
+    "tokens_out": 7715,
+    "tokens_cached": 0,
+    "cost_usd": 0.007238825,
+    "llm_calls": 1,
+    "fetches": 0
+  },
+  "llm_calls": [
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "tokens_in": 33203,
+      "tokens_out": 7715,
+      "cost_usd": 0.007238825,
+      "latency_ms": 28892,
+      "ok": true
+    }
+  ],
+  "degraded": [],
+  "entries": 30,
+  "top": [
+    {
+      "importance": 88,
+      "rules": 54.23,
+      "headline": "Anthropic files for, prices and closes its initial public offering, then trades as a public stock",
+      "domains": 5,
+      "evidence": [
+        "primary source (anthropic.com)",
+        "covered by NYT, Bloomberg, FT, Reuters, WSJ"
+      ]
+    },
+    {
+      "importance": 86,
+      "rules": 48.33,
+      "headline": "Nvidia halts AI server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+      "domains": 4,
+      "evidence": [
+        "covered by FT, Reuters, NYT, Forbes",
+        "techmeme #1"
+      ]
+    },
+    {
+      "importance": 84,
+      "rules": 38.75,
+      "headline": "US closes remote-access loophole and restricts Chinese access to Nvidia chips, hitting China's AI development",
+      "domains": 5,
+      "evidence": [
+        "covered by WSJ, CNBC, Reuters, Businesskorea"
+      ]
+    },
+    {
+      "importance": 82,
+      "rules": 49.75,
+      "headline": "Scott Aaronson says leading AI labs hold unreleased algorithmic breakthroughs that could threaten deployed cryptosystems",
+      "domains": 1,
+      "evidence": [
+        "hn_front #17 1907pts",
+        "techmeme #2",
+        "related FT coverage of encryption concerns"
+      ]
+    },
+    {
+      "importance": 80,
+      "rules": 41.08,
+      "headline": "Anthropic releases Claude Fable 5.2, Mythos 5.2, Haiku 5.5, Opus 5.5 and Sonnet 5.5 model family",
+      "domains": 1,
+      "evidence": [
+        "primary source (anthropic.com)"
+      ]
+    },
+    {
+      "importance": 70,
+      "rules": 37.13,
+      "headline": "SAP weighs at least 10,000 job cuts to remake its software business for the AI era",
+      "domains": 3,
+      "evidence": [
+        "covered by Bloomberg, FT, Reuters",
+        "techmeme #7"
+      ]
+    },
+    {
+      "importance": 68,
+      "rules": 39.73,
+      "headline": "Z.AI's GLM-5.5 flagship reportedly delayed as US curbs and distillation crackdown bite",
+      "domains": 3,
+      "evidence": [
+        "techmeme #3",
+        "Reuters-sourced"
+      ]
+    },
+    {
+      "importance": 66,
+      "rules": 36.36,
+      "headline": "Apple pulls MiniMax's Talkie chatbot from the App Store worldwide over sexualised content",
+      "domains": 3,
+      "evidence": [
+        "Reuters",
+        "techmeme #14"
+      ]
+    },
+    {
+      "importance": 64,
+      "rules": 35.0,
+      "headline": "S&P considers downgrading Nvidia credit over governance and key-man risk",
+      "domains": 4,
+      "evidence": [
+        "covered by TechCrunch, The Information, Moody's commentary"
+      ]
+    },
+    {
+      "importance": 63,
+      "rules": 40.08,
+      "headline": "Meta launches Muse Spark 1.1, Muse Image and Muse Video models",
+      "domains": 1,
+      "evidence": [
+        "primary source (meta.com)",
+        "Wired coverage of FCA complaint"
+      ]
+    },
+    {
+      "importance": 62,
+      "rules": 39.83,
+      "headline": "OpenAI merges ChatGPT Chat and Work with a single usage meter; GPT-6.2 billing error corrected",
+      "domains": 3,
+      "evidence": [
+        "TechCrunch",
+        "techmeme #4"
+      ]
+    },
+    {
+      "importance": 60,
+      "rules": 20.75,
+      "headline": "Bank of England's Bailey says unreleased AI models raise encryption concerns; BoE cuts bank capital requirements",
+      "domains": 1,
+      "evidence": [
+        "FT coverage"
+      ]
+    },
+    {
+      "importance": 58,
+      "rules": 27.25,
+      "headline": "Microsoft says China and North Korea state hackers use AI pentesting tool ARTEX",
+      "domains": 1,
+      "evidence": [
+        "techmeme #8",
+        "The Record"
+      ]
+    },
+    {
+      "importance": 57,
+      "rules": 35.76,
+      "headline": "Pentagon discussed Defense Production Act to pressure Nvidia's board to reinstate Jensen Huang",
+      "domains": 3,
+      "evidence": [
+        "WaPo",
+        "techmeme #19",
+        "Reuters"
+      ]
+    },
+    {
+      "importance": 55,
+      "rules": 40.42,
+      "headline": "Anthropic publishes a wave of policy, science, partnership and governance announcements",
+      "domains": 1,
+      "evidence": [
+        "primary source (anthropic.com)"
+      ]
+    }
+  ]
+}
