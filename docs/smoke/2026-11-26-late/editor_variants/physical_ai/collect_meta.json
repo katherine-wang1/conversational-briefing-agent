@@ -1,0 +1,74 @@
+{
+ "at": "2026-11-26T22:10:02.013079+00:00",
+ "sources": {
+  "techcrunch_robotics": {
+   "n": 20,
+   "s": 0.25
+  },
+  "reddit_robotics": {
+   "n": 0,
+   "error": "HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/robotics/top/.rss?t=day'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web"
+  },
+  "robot_report": {
+   "n": 15,
+   "s": 0.4
+  },
+  "hn_front": {
+   "n": 0,
+   "s": 0.56
+  },
+  "robotics247": {
+   "n": 24,
+   "s": 0.61
+  },
+  "arxiv_cs_ro": {
+   "n": 210,
+   "s": 1.13
+  },
+  "techcrunch_transportation": {
+   "n": 20,
+   "s": 0.77
+  },
+  "ieee_robotics": {
+   "n": 30,
+   "s": 1.18
+  },
+  "nvidia_blog": {
+   "n": 18,
+   "s": 1.18
+  },
+  "ieee_transport": {
+   "n": 30,
+   "s": 0.93
+  },
+  "robotics_business_review": {
+   "n": 15,
+   "s": 1.04
+  },
+  "gn_reuters_robotics": {
+   "n": 100,
+   "s": 0.88
+  },
+  "gn_pa_robots": {
+   "n": 100,
+   "s": 0.97
+  },
+  "gn_pa_automation": {
+   "n": 27,
+   "s": 0.81
+  },
+  "gn_pa_drones": {
+   "n": 48,
+   "s": 0.82
+  },
+  "gn_pa_av": {
+   "n": 64,
+   "s": 0.87
+  },
+  "gn_pa_physical_ai": {
+   "n": 74,
+   "s": 0.84
+  }
+ },
+ "observations": 795
+}

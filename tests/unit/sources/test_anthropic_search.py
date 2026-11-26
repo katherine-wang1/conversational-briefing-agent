@@ -228,3 +228,11 @@ def build_search(fake: FakeAnthropic, **kw):  # noqa: ANN003, ANN201
     from app.tools.search import ReplaySearch, SearchTool
 
     return SearchTool(LiveSearch(provider(fake, **kw)), ReplaySearch(None))
+
+
+def test_provider_dates_are_timezone_aware():
+    """Tavily gives e.g. "Thu, 26 Nov 2026 14:00:00 GMT" or a bare date; both must compare with feed dates."""
+    from app.tools.search import _parse_dt
+
+    for v in ("Thu, 26 Nov 2026 14:00:00 GMT", "2026-11-26", "2026-11-26T14:00:00", "2026-11-26T14:00:00Z"):
+        assert _parse_dt(v).tzinfo is not None, v

@@ -85,6 +85,8 @@ class EditorSettings(BaseModel):
     max_stories: int = 40
     min_stories: int = 30  # ask for at least a digest's worth (beat digest_size is 30)
     max_output_tokens: int = 10000
+    # Prompt file under app/agents/prompts/ (a variant, e.g. newsroom.editor_v3, is a config change).
+    prompt: str = EDITOR_PROMPT
     snippet_chars: int = 160
     merge_title_threshold: float = 88
     identity_title_threshold: float = 88
@@ -663,7 +665,7 @@ def editor_version(
             "impl": "editor",
             "settings": settings.model_dump(),
             "editor": editor.model_dump(),
-            "prompts": {EDITOR_PROMPT: prompt_hash},
+            "prompts": {editor.prompt: prompt_hash},
             "hn_signal": flags.hn_signal,
         },
         sort_keys=True,
@@ -703,7 +705,7 @@ async def run_editor_newsroom(
     es = editor_settings or EditorSettings.from_config()
     beat = loader.beats()[beat_id]
     budget = budget or TokenBudget(input_tokens=st.budget.input_tokens, fetches=0)
-    prompt = load_prompt(EDITOR_PROMPT)
+    prompt = load_prompt(es.prompt)
     version = editor_version(st, es, prompt.sha256, fl)
     trace = NewsroomTrace(
         run_id=run_id,
@@ -712,7 +714,7 @@ async def run_editor_newsroom(
         version=version,
         flags=fl.model_dump(),
         settings=st.model_dump() | {"impl": "editor", "editor": es.model_dump()},
-        prompt_hashes={EDITOR_PROMPT: prompt.sha256},
+        prompt_hashes={es.prompt: prompt.sha256},
         embedder=EMBEDDER_NAME,
     )
     sources = SourceIndex(beat, st.newsroom.primary_sources.get(beat_id, []))

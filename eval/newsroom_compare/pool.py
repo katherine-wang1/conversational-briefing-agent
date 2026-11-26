@@ -186,7 +186,8 @@ def _groups(runs: list, depth: int) -> list[dict]:
         for s, own_urls in zip(res.stories[:depth], _story_urls(res.stories), strict=False):
             g = next((g for g in groups if _same(s, g, own_urls)), None)
             if g is None:
-                g = {"headline": s.headline, "headlines": [s.headline], "urls": list(own_urls), "found_by": {}}
+                g = {"headline": s.headline, "headlines": [s.headline], "urls": list(own_urls)}
+                g["found_by"] = {}
                 groups.append(g)
             else:
                 g["urls"] = list(dict.fromkeys(g["urls"] + own_urls))

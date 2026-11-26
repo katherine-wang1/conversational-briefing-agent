@@ -6,16 +6,16 @@ one collection, one process per arm (`python -m eval.newsroom_compare run`). Mod
 editor: Haiku 5.5 through OpenRouter (dev_default). The first run (ai only, 19:34) is in
 `../compare/results.md`.
 
-**Not run: `claude_agent` and `editor_search`.** `ANTHROPIC_API_KEY` is listed on the cloud environment
-but wasn't set in this session's container, which had started before the key was added. Anthropic
-keys can't be passed in as proxy secrets either, so this session couldn't reach the Claude API.
-Nothing was mocked. The fallback-beta check and the real cost per call are still open; they need a
-session started after the key was added. Two notes for that run:
+**`claude_agent`: ai only. `editor_search`: not run.** A later session (key read from
+`CLAUDE_API_KEY`, since cloud sessions don't pass `ANTHROPIC_API_KEY` through) ran `claude_agent` for
+ai against this collection's time (19:59 UTC). Energy and physical_ai were held back on cost; see
+"claude_agent (ai)" below. `editor_search` needs this day's observations, which weren't in that
+container. The follow-up on why the agent's picks read better is in
+`../../2026-11-26-late/editor_variants/results.md`.
 
-- The Anthropic client is now pinned to `https://api.anthropic.com`. Cloud agent containers set
+- The Anthropic client is pinned to `https://api.anthropic.com`. Cloud agent containers set
   `ANTHROPIC_BASE_URL` to their own endpoint, and the SDK would otherwise read it. Override it with
   `ANTHROPIC_API_BASE_URL`.
-- Without the key, `editor_search` would have been identical to `editor`.
 
 Files:
 
@@ -33,11 +33,41 @@ them gzipped.
 |---|---|
 | OpenRouter (classic, classic_all, editor: 4 passes × 3 beats) | about $0.39 |
 | Event Registry | 15 tokens per beat and run (45 for three beats). 107 of the free plan's 2,000 used so far, checks included |
-| Anthropic | $0 (not run) |
+| Anthropic (later session) | $5.06: one search smoke test $0.18 (Opus), `claude_agent` ai $3.24 (Opus) then $1.64 (Sonnet) |
 
 Event Registry tokens, read from the `req-tokens` response header: 5 per recent `getEvents`, plus 1
 per `getEvent` article call. That's 10 article calls per beat, to get outlets for the 10 biggest
 events. At the cheapest paid tier (5K tokens for $90), one beat's run would cost about $0.27.
+
+## claude_agent (ai)
+
+Claude with Anthropic's web search and web fetch server tools ranks the beat by itself, live, in one
+turn (`app/sources/claude_agent.py`). Run at 21:20 UTC with the window ending at 19:59, so it saw
+about 80 minutes of hindsight. The server-side fallback beta (`server-side-fallback-2026-07-01`,
+`fallbacks: "default"`) was accepted with both server tools; no request fell back.
+
+| Model | Time | Peak MB | Input / output tokens | Searches / fetches | Cost | Stories |
+|---|---|---|---|---|---|---|
+| Sonnet 5.5 (default now; `<beat>/claude_agent.json`) | 144 s | 104 | 637,819 / 16,376 | 20 (limit hit) / 11 | **$1.64** | 27 |
+| Opus 5.5 (`ai/opus/claude_agent.json`) | 169 s | 104 | 676,628 / 16,482 | 20 / 10 | $3.24 | 28 |
+
+One Anthropic `search` call (search tool, Anthropic backend, Opus): 36,920 input / 1,334 output
+tokens, 1 search, 14 s, $0.18. About 84% of the agent's cost is input tokens (search results read back
+into the turn); no tokens were served from cache.
+
+With the matcher fix (below), on ai the agent shares 1 top-10 story with each other arm (the Nvidia
+halt). By hand it's about 3: the matcher misses the Reuters chip-curbs story, Huang's reinstatement
+and the Amodei quote, which are worded differently. Its top 10 has 23 outlets and no paywalled ones;
+it cites secondary coverage and round-up pages instead. Stories only it has in its top 10: the AI
+stock selloff (#2), S&P's rating watch on Nvidia (#3), the AI-written math papers and Aaronson (#4),
+Amodei (#5), the GLM-5.5 delay (#6), CBS on Nvidia's Chinese-owned partners (#7), ASML and the MATCH
+Act (#8), Cisco Talos on OpenAI agents escaping sandboxes (#9), and Sen. Kelly on AI oversight (#10).
+It cited 24 URLs that never appeared in a search or fetch result; those were dropped.
+
+**Matcher fix** (`eval/newsroom_compare/pool.py`): the agent cites the same round-up page (e.g. an
+"AI news today" page) for several stories, so matching on a shared URL chained 8 of its top 10 into
+one group. URLs an arm cites for two or more of its stories no longer count, and a story is compared
+with every headline in a group. The other arms' overlap numbers below are unchanged.
 
 ## Per beat (after the fix, same collection)
 

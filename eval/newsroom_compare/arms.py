@@ -25,6 +25,21 @@ from eval.newsroom_compare.common import (
 )
 
 ARMS = ["classic", "classic_all", "editor", "editor_search", "claude_agent", "eventregistry"]
+# Editor variants (not in "all"): same code and observations, only the editor model and/or prompt
+# change, all through OpenRouter. `editor` itself uses config/models.yaml (dev_default: Haiku 5.5).
+SONNET_EDITOR = {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-5.5",
+    "params": {"reasoning": {"effort": "medium"}},
+}
+EDITOR_VARIANTS: dict[str, dict] = {
+    "editor_v3": {"prompt": "newsroom.editor_v3"},
+    "editor_sonnet": {"model": SONNET_EDITOR},
+    "editor_sonnet_v3": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v3"},
+    # Gap-fill search through a plain search API instead of Anthropic's web search (SEARCH_API_KEY).
+    "editor_v3_search_tavily": {"prompt": "newsroom.editor_v3", "gap_search": "tavily"},
+}
+NEWSROOM_ARMS = ("classic", "classic_all", "editor", "editor_search", *EDITOR_VARIANTS)
 TOP_K = 30
 
 
@@ -156,6 +171,25 @@ async def _run_newsroom_arm(arm: str, beat: str, day: str, ledger: Path) -> tupl
     else:
         from app.agents.newsroom.editor import run_editor_newsroom as fn  # editor arm (W: editor newsroom)
     kw, tools, notes = {}, {}, {"observations": len(obs)}
+    variant = EDITOR_VARIANTS.get(arm, {})
+    overrides: dict = {}
+    if "prompt" in variant:
+        overrides["prompt"] = variant["prompt"]
+    if "model" in variant:
+        m = variant["model"]
+        client = client.bind(m["provider"], m["model"], m.get("params"))
+        overrides["max_output_tokens"] = 32000  # room for reasoning tokens
+        notes["editor_model"] = m["model"]
+    if "gap_search" in variant:
+        from app.tools import build_tools
+
+        overrides["gap_search"] = True
+        tools = build_tools(search_provider=variant["gap_search"], ledger=_ledger(ledger), check_urls=False)
+        notes["gap_search_provider"] = variant["gap_search"]
+    if overrides:
+        from app.agents.newsroom.editor import EditorSettings
+
+        kw["editor_settings"] = EditorSettings.from_config(overrides)
     if arm == "editor_search":
         # Gap-fill through our `search` tool with the Anthropic web search backend (live only).
         from app.agents.newsroom.editor import EditorSettings
@@ -218,7 +252,7 @@ async def run_arm_inproc(arm: str, beat: str, day: str) -> ArmResult:
     t0 = time.monotonic()
     res = ArmResult(arm=arm, beat=beat, at=collected_at(day, beat))
     try:
-        if arm in ("classic", "classic_all", "editor", "editor_search"):
+        if arm in NEWSROOM_ARMS:
             res.stories, res.notes = await _run_newsroom_arm(arm, beat, day, ledger)
         elif arm == "claude_agent":
             res.stories, res.notes = await _run_claude_agent(beat, day, ledger)

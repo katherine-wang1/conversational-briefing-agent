@@ -1,0 +1,403 @@
+{
+ "arm": "editor_v3",
+ "beat": "energy",
+ "at": "2026-11-26T22:09:58.856605Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor_v3",
+   "rank": 1,
+   "headline": "Backlash over AI power costs threatens NextEra-Dominion $67bn deal",
+   "summary": "The Financial Times reports fierce opposition to the $67bn NextEra-Dominion tie-up as anger over soaring electricity bills spills into Wall Street dealmaking.",
+   "urls": [
+    "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 85.0,
+   "reason": "ft.com single source, major outlet; covered as deal-risk story"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 2,
+   "headline": "New US export rule halts Nvidia server shipments to Southeast Asia and stalls Asia data center deals",
+   "summary": "Nvidia reportedly paused server shipments to Malaysia, Singapore, Thailand and Indonesia after a new Commerce Department rule; Fitch says chip curbs will slow Asia data-center investment and Bloomberg reports billions in deals stalling.",
+   "urls": [
+    "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJWFVtc1BvNXp5TFMzbWtqVTdzc3JVM3pmY1hkR09YMi1WV3k3TzZ4VzFDQUpkcGJHVEZ2R0NqVnRNNmZsTThQZ0V3SlNzUmY1dUFURGtVckNOTXVQamlqSnVxTG5NVy1UVVR1dnlaNFE1MTluNFdUOTZzSHg2eHYzYTF1emwxMjZKUVIxcWhqYzhxTUdYZ0VZU3BsV1UxRHp3RTZnc2lyS2U5SDAydW5vcjVqaFFz?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcF9XSks4a3prSHMwSUlVaWJydXp0ZTlZREdGNXFGS3JyeFBibjNCMUFiR0lhQi1zME9pcE5Sdm9YbWV3X1NWaUZEbk9MMmRFbXFYRkUtV01WSE9mRDlSUGk5Y1pYXzY5Wmh1VDFJcmJiOUM5UnRqSTRudkNzUVFkWHNKcTdodGJObGE0Y01KN0dEVzlJZHc?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOM1NqcVAyc3pLNlJUeTAyWTh3QjdHQllfWEZxQ3FkQ25FLTlnQUVhVm05eTc0MkxETm1yS3JYcUxvQW51ZVpxQ1d5VkpiQmdfbXQzdTFyaWlpb0tvQnU0U1VpX2xsQm5aemJUNXdabzlZMkhXN0p1ZENfUjZkOWxEVHJUanpXNl9TLWJmTVdUMHROekt4a0VTYk95REl3YkpFYjdZ?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZzNtOUdnTHJCQ2FCUGIyOXp4STRoQ2p4NTduYVNjYzF6eGFTUTE4LUFTRUZUUjlFZ0cyWVV0enBBNDNHazJIWTdiZUs3VHg3ckw3bjhhYndIN1g2Q21vcUh2RkFKcHp1TW1NQmpPS0VfQy1uMnBRZ1FTMzg1akN2UlVZUkVqRnh5OHFfWElYNWVnazFfSXV0WTlPclFNOUdEcU9Dbmg3c2xacldjNHpZZjFJYWM?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZFVpdE9oSXNXbl90bmNha3ZhcE1zcUwwdWVhX2NrV0g1b1VTeHZ0LWZxNF9mX0pFbmNFU2Q1Mk45c04wdlZvNS1NSUhnU0Z6TGZOTXdnS3FoTnNJVWYtNy1VUk1JZmJKRlcwaWY0UGZ0alFwN0wzUm9sSld4MzduVk9yZEJDNHlYSXpQd1FuamZoR3YyUjVwNHdkN3hsclJ1bDNXV2FBcnRndzFmeVJWOWx5RzVBNGM?oc=5"
+   ],
+   "outlets": [
+    "datacenterdynamics.com",
+    "news.google.com"
+   ],
+   "importance": 82.0,
+   "reason": "datacenterdynamics citing report; Reuters; Bloomberg multiple items"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 3,
+   "headline": "Google signs 3.6-GW power deal with Constellation Energy",
+   "summary": "EnergyNow reports a 3.6 GW power agreement between Google and Constellation Energy for data center supply.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMXpnVFk4Z0tyY2NKSlNfNWxxSEJqdExwWjlYSWdDZmVBaEd0RzQ1ZEtzRVd1ZXlsc3EwWUo4VERLZTVmMGJSbGNENmVwZTloM2dQdWI3MEVHSi1kWEFSVnFMZExtd3ZGb3FnNGZVcDk3ZTlWZmg0UGw5Tmp1RGl3NmN3YWZOYWV1bUJTWmZGbk9JNUEtOXc?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeXRoQ2ZLWk1oemNaN2ozYkdBdTAyV2VjbGNEOGZxMDEyVTBCQndvTmxWQU5ESkdKcVBGSTVmcHhBOWwxbzRGZFpmekF0YzVhNnVDcnhIcHFQUjNhcWVMZWlmNXQydUlsQU5kMnFjejVnODJnaHhBLU83MThTbzByTVFJdXFkR1dTTzdhcExFVURkUm5BYV84dWlFUWI?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "single source (EnergyNow), large deal"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 4,
+   "headline": "Poland nears construction deal with US consortium for $50bn nuclear plant",
+   "summary": "WSJ reports Poland is close to a construction agreement with a US consortium for a $50 billion nuclear plant.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxORV9KbWp6SnZ2NF8zUzg5d3FucHFtSWZXa0FsaGF2SERCcnpwdzY5T3ZNZlhmTkhsRlhRWDFkcUw5ZjUwY1dlRVRZLXM5aEN4dDlWeTlPc1RXMGVoTnFDdEZWTHgxRVRnM1VVek9Ya1NfNlNXRjlXVGJFbm5nMVNfTWQ4QnowTTVwS0hKdXg2eFNVSkFwU3M2QnFaYUpCTmg1NHNGdC12LUtORU1pMnd2UkhVX1lnWW8?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "WSJ exclusive"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 5,
+   "headline": "Britain's grid operator makes record number of calls for extra power",
+   "summary": "FT reports National Energy System Operator made a record number of balancing calls amid cold weather and wind curtailment constraints between Scotland and England.",
+   "urls": [
+    "https://ft.com/content/21a1331c-c201-4333-b312-ab87b7fd994f?syn-25a6b1a6=1"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 70.0,
+   "reason": "ft.com; corroborated by Bloomberg UK strained supplies item (c74)"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 6,
+   "headline": "Data center backlash grows across US states and abroad",
+   "summary": "Texas resumes data center permitting before Democrats take office, Kansas City blocks a high-rise data center, and local opposition spreads in Japan and the US Midwest; US energy chief urges backers to push back.",
+   "urls": [
+    "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPd0o0TDRhcmpxQlY4UVFzdVE3WExqbWJTZXBZY085QjVKZEJkRlg2RzhHV2MzM212ejlPaldXV2gtN05wTV9PV0x2N2NuTm10WjBoRm5IT2ZaWjdVYXhkanl3d0U2MzF4SHVqX2xweWpJZEM2ZWJiV0dvYXlIVjBEQ29vblBQbXdnUlpNdVBibmVNQzY1M3BvTWJDa29sZTJ3VlBZc0VBbTZUQzVYbEhfajVWVEs1cU9wMk9LZV9YOVNicWI1Y0tXQ2RjeGhDUHhhRTdJWDM0dm1sWURveEE?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1kbmNSRllBNmVDVXR4MUVzU05hRU9PemVRaXJmVmVrTFhDSDVVUjVIUDNKbUdDaVV3SG1XUzlQWmdUeXNXeE5neG1uTGN0OXZnNGM0X0xiS0E2SjBaRzVaSXJuOG9ybmM?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWEF3ajZxTUNWdU1yUmZvX3RycTEyWVdibjdBenRXY2I4aEU1NW51TWQyQTNoems0UVB2ZWdwVjBSUG8tS1V3Z1pwTU45eVZsLURzcU04bkNZR3RJSDdJYVpHVlpvU2NZdWRsajlwc0REUWxvZFlHX1lPYWx1VmN6QzJWSVhBYXBKenRDNU1adlpFdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVm5sVzVMMFhJWFlQLW9icXAycl9udnI4cXdhbzVkcUlFMm5JWFBrOG0xVDRDMjk0TGd3cldSM0NISGRNN1RVdkMzVlVUUVRiWndpSDUwR0VZTzM1V3ZsVHJuQTZsb0xQWWpqUGRuaUs4WEVTb0tza1Y2NUlpT0NFM1ZxbWxxSVkyMk1UcFFlU2RSckJSYVc1WE15TTkyZXd1LTVGTEhIUXE?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxObG02Rk5peWpqSDZHTTItcDc4QmF6NTZuRVNzZjZVS1dBc1FYY3BvX1FBQTNHeHZzSUJBOXhPVHdWWlZlSTVsb0dDZVpCNDlZODBBY2dsYlNJeFVGeXF3VXNxZzZ2MlZ1ZTlKTnRFdU5ibzNzZ0FBSGhzc3JRRmJhWjBUTmlQcGlEUHJKVExSMUVBWXU3OU96alBfTUNUVWNteXBuZWhiQ1FXak82bF9KNW9lbEhmaFhQY0FkOGs3Tk41NHlv?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMmhNeTZvN3VieDZRZENibXFzUl9Sa1NwVHJOYmszMHFZSmM2UXh6QjdxZ2ZnLUJhUk5zZnlhZHo0dXZja01DeWFWNW14THQ3SWtOV0FnUmxsOEZNOVplZ0pFakpPLVlFYk1qMUs1ajY2UGNZNDZtVnhPNE5rdU85ZkJYVHpyYUdneE1ES1BiR0k3WWxtcDl3SW9WVnA4MWdZV2c?oc=5"
+   ],
+   "outlets": [
+    "ft.com",
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "ft.com; NYT; EnergyNow; Reuters Japan item"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 7,
+   "headline": "UK faces third day of strained electricity supplies during cold snap",
+   "summary": "Bloomberg reports a third straight day of strained UK electricity supply on a cold snap, alongside FT coverage of record balancing calls.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQX2ZfNXdXdHh2Z0pJLUp1alQxbDFiUTFodGZTNWkzYVZUV2ItT2twZ3Q2b0sxOWJ1RkNueHlKQmQ5OUxibzE5OGhSSWtPV1hDcUtGTG82Q1NVRklRYVIxRFdjSm9mbUJmQ3Q3RU9YVFdtOEtQeU1mZzQ4R3RseXJhOHJlNF80M01JQUhCRVJOS3dCT1VSLUR1NjNLZHJFTDhnbFRacUJRRVExbVVJNXZuRXBwdGVGYWZSbFo2MkF0X3pNUHFHWHlBMVc1X3ZaRmxXcUE?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb0NGOHVKakF2RnNCZ0o1QzQ2WHdqM2xRUGdTQnJ3bWJ6N2hXN09TOExHbzQzcUNWYjBKRVU1UWp1dE1yTi1fdG9mb05aVVF5SnJ3ZDJGRkZScEMyZVl2MkNSZXVYRElKTTlfZE1meW1wa0JWLURUVXc1ajhVeU5EWVM3R0hlRXNaazkyNHVnUkVkOEVEcFU1TjFtN1RpUjVwUGhxOGdWWi1kUVVLMnEyY0Jha2F4Zw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "Bloomberg; ft.com"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 8,
+   "headline": "JERA plans AI data centers beside its power plants, in talks with Anthropic, Meta, Amazon, Microsoft and Google",
+   "summary": "Nikkei reports JERA aims to build Anthropic and Meta data centers near its power plants; other outlets report JERA talks with Amazon, Microsoft and Google and a plan with Dell and RHAELM.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUTRHSm0wQmRiS1I2VjZCcjVnVkN5RmVRVFFlaVI3d2h0b0dRS21OUWNSdF9KbFZxOFhXNHJ5QUZqSnAxSnZIWXNuMm4zMGtvS0Z2YjdZbXFWWEN2bkdHZ21UNjhEUnJmOGhmcE9STzYwSm9pLVJwdnpIaDloSzdLWlR3?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMG04VjdqTnc0bmZjLUw4V1dGTUpoNkljMVZwc2pHdGIySFN5OXN3NGhuaWlEOEZqWWxGTkRhTXZISTVlVjlYdDFqRGo0SUdiUUF4MzZtOFJPU1V1bmROM2JVZXRGSEN1Y2EzZ0wxMzlodThVSlpCSG01Tzk3M0k3T2s3ZC1sb29vbE16eE5CalM3ZjNGM3FYWVZHSlc3WHN0Q2xhbGhjZ1NTbHVz?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 64.0,
+   "reason": "Nikkei Asia; Crypto Briefing (two items)"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 9,
+   "headline": "Norway pauses data center connections as requests outgrow its power system",
+   "summary": "Rystad Energy reports Norway has paused data center grid connections because requests exceed what its power system can supply.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTmtUTnNiMEZsRlhTTVJLbkFBS3NOanRMZ3hOTmpud0xCNDZhei1Bc09YUC1mbE5aaGdDUlRfbmhsdjFfTm5FcmpqTWtfTHZQSUc5NUM2SC1tMHgwa1gyUXJnb2hUVTdCQzgtSFk4NWY5TGtLN201UXMtT1hZcHdfNmFVVklaUDNrOG4yRFpNWHhHVy03NWJvcWF0RlU1U21aU2pPS204SE1lZTFMaHNwRm5n?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "Rystad Energy"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 10,
+   "headline": "Trump's new tariffs spark global anger; China braces for hike and 40% threat",
+   "summary": "Trump unveiled new tariffs after midterm defeat; Singapore, Japan and US partners protested, China braces for a hike and a 40% tariff threat is floated.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWVpxOWliaXNJc2F3RlhTekRtdndDQ2htZjlmb1Q0NFdUSHFvQ2NMS3ZiMWl0bTVoV0RrejRIX0FjcFJVa1FmMzZkWmZwVWlkS2Q2eHhHWEVHU3puV0JrX0tEUlU1VUhvWnBkeWd3WS16UTI0bDZxQ2RsNjExbGZwN3hNeTN0Sl9CblhxTjZTMndrLUx0dXRPNksxZkpKZXF4YzFsV21yb3U0YmlhUnZuSg?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTTAzSnF0UXZLcGIzQnV0VXoxU2x5UF9Vb1JqNGtuVENiTGg0Z1FMNno4dTZRcVNFR1BHUE81QTg4QWpZOXdxbnhUb2RDT0VWbTBBM1dVVUUwTUh5M20zNHp0SmNkS0hMYUZBazZ2c09pNWdvMTdQa0NCRWNpZDdZRGFXME8zcnU1akZOWmNxcVZhOS1LS0pkdnpiaHdBa20yWVVtcWJfNlBwU0VGeGtXNHV3?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcEFJT2Zub3ZRREtTOXc3QzQxNGpfRXhrSXpITkpTWm96NVhqZ3Q4dU1aMms1bUc4Uk8tazdTbTNtVHE5UXB4Z1Zlb0R3Tm0xU29yeDhSeUxUOGxEQzJTejJXMDJGOW1YU2ZIVHpvS2R1SEo4eWNxSUJtdHp1ejZNMWthTUZTSlMzYVZlZ2JCOEFKbk8zT2Z4UkJMM3JJZnNjMzZyRjBYd2Y1OXdYRWd3UFlxMA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Reuters; Bloomberg multiple items"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 11,
+   "headline": "Goldman Sachs projects 52 GW more US data center power capacity by 2028",
+   "summary": "Goldman Sachs forecasts US data center power capacity adding 52 GW by 2028 and data center-driven natural gas demand growth.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9SejJ4RUJNN2xIcUN0LUxSazgzZGplUmZKbVZTQk51VjhwWngxZG5DTGx6UjRIQ2FQV2NRMWk1b0FYUnd2M0tGMVRmTTZFNHE4Y05kQnE2U3BGd2czLWhnZmlGaEVseHc1OFNQZ0JFNGRtbThzaWc?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS3F4Z2dhY1kxa3RfY3c1WThpaHhUTUIxdDBIUWRmSFNydWx5R2FEME1mWmtfcS1VVzVCSUdsX3N6dG9Fc2RzaERkNXo1NllJOFpXNDNsa1pBdzNnMnl2c0lJeVB1VHBtSjJVODhNdmd5MXlxaG4yNEVFYzllU1ZXczN6UUtvYVBGS3B5NDAyOUNEV2pQUHM3VQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOM2VYeW5DVndOZEJRT0JXSmxYTkttc2RvQmJPQ09oS0NtVmI0TVJ0dGxmZDJOV3c0eUhmUUVLV09IZHo4bGRIOUk2dWtpWkh2ZHRjYUhvUTBiUllFQVBOTXJDYVlIQU1GZ1oyR0JlcGlRdVBpbGFMUXFnY3pVREp0Q2t6SlF0SjBhcmg2OEdKSFJlbUE3eW96enV5ZVROdHJQU202dl9FTUtkMkU?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "secondary aggregators citing Goldman research"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 12,
+   "headline": "Microsoft and Chevron sign 20-year power deal for Texas data center",
+   "summary": "EnergyNow reports a 20-year power supply agreement between Microsoft and Chevron for a Texas data center.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNmtOMnRJVnZpV0VpVE1FdDZhSGJtLWtoY0Q0ODhXaVpfdzBmQU16X3A3MUw5TEo2T0VoRTBwZXlvX19kLXcyMFVXUE9yNGpxekRWcG4wOFQzYVJiMHJVWTEtY0JiOVhyeXlhaS1EX1ZaRDhPN1Q4S2tCOTlNT216eVl5WnhBeFpNa2RDOVBhWk1CdElYMWZ6eHZqSFBjN1k?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "single source (EnergyNow)"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 13,
+   "headline": "Senate passes permitting bill that would speed clean and fossil energy projects",
+   "summary": "Senate approved a permitting bill that would boost clean and dirty energy projects, raising fast-tracking concerns for fossil fuels.",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNU53NnNVbjlTREM4a3pmSjdyVXp0OW5xXy13a2VuTlMyWmZxZDN6N1BsbUdRVEcwV1BCdmRheHJhRzVPV0tVRFZmSlNCVnJFcksxcHM1OUVHZGZES0NCc203VS14Y1NyaXJodXlIaFlmczdrLWJNSmdINVJRSGN5SnFEUzItbHJCVUpIQWFiZkZydE1sQkpMRUs0aUtJMWRuZmk2dzZsa1ZGaG15VkRnaG9ZRFZRMEtS?oc=5"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "canary_media; Mongabay"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 14,
+   "headline": "Compass may delay $380m ABS after data center outage investor rout",
+   "summary": "Compass could push its $380 million ABS transaction to 2027 after an outage triggered investor selloff.",
+   "urls": [
+    "https://datacenterdynamics.com/en/news/compass-could-pause-380m-abs-transaction-due-to-investor-rout-after-outage-report",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNak51OWx3VkJ4V2NoMU12QTBXYXIzN0ZXRWEzWHoxY244aEdyUmtUTzFYaGZvUU9icEQtYlNMX2lHYnV6R19JakpnRExkaElFODBGeEpGbWtXcjU1bnVXbTFNSlFMa19KZU9rR1ZHU1JvS0cyMHlzQXNXaXV3MUhUQk9jVUE3YUJPSFJxNk1RelJtTjhHdXV3Rl81enlIXzNxdzZDYjJ0Y3JOUQ?oc=5"
+   ],
+   "outlets": [
+    "datacenterdynamics.com",
+    "news.google.com"
+   ],
+   "importance": 56.0,
+   "reason": "datacenterdynamics (report); Bloomberg"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 15,
+   "headline": "Vietnam considers delaying nuclear plants beyond 2035, Ninh Thuan timeline slips",
+   "summary": "Bloomberg reports Vietnam is weighing a delay of nuclear plants beyond 2035; a revised energy plan pushes Ninh Thuan past 2035.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBteWFBNURpV1ZubUxGZ1BCb3ZjZDFhQ0xxMjNvVWV2YUNoRDBCNEc5YU5SUkRtR2F6cHFUZ2RMcUNBU0p6VTZuUFR3eS1MSnEw?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUTJlT0JOSlNPS3BOcXh0MmpnLXJSempHY0xXV1BvUTJGNjd3Ul94RTZGMHpmNWFiVmdmMGo5RWF4MmF2eXNLSXEyaFcyTS1LYlE4N3RnMXRtUllsc1BMaHF6Q3BlWE9RV0toTXdIZ2ZUVFpMWkNQNjJaMHBhcElQemVaTFkybWpNOWsxVW1QYks0dy1ZdTFEUldkTVYwQTM2ZXZUT29ndVQ2cmViNjdVWEpWS1JqZFpsb2RrbjU0dXJuSzE3ejVNag?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaGdmcUtqLWtoVmNGWVJUczdNUUFPTWFSNjY1Q1ZTTzNtaExWZUdUOU5EdzRDUHBGQW1oejRXNE11QWNNaXFMeFR5REFrc19jeDFDbXoxbGYxVFJ3MFZvdzRNX0t5aGxPZWNIbmJaVWVuM3VzaDUxTFlzSG4yLVpMYWxRb0dnQnF3SXFMeHFETFRnT244dElKYTBzclV4SFIxV1p6MTE2djJCOXdBMmFoWFNiTWY?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "Bloomberg; Construction Review"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 16,
+   "headline": "BOE warns AI firms' $4 trillion web amplifies market risk",
+   "summary": "Bloomberg reports Bank of England says AI firms' roughly $4 trillion in interlinked commitments amplify market risk, as Wall Street shifts to gloom.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiV0FVX3lxTE05elNZWi0zaXlObHRpZ2M1UGhManFaSE1WdU94MHZNenZPZ2QxUkZBNGRYYzhZSTJBdWVUa0w1bTk1amhIXzlhelV1enF4c1VRYkN1ZmN4MA?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQZ3dMUTlPVV9IdUJTQ0NWSjV2ZEZLbmNnWWtoMEpQT05KdzZSX0d5cjRtNzBCYTZMdzBVZmQ0QU14a3B3dnRncGxPMmMyR0I3djQycmp0VWtWV0NqY3NQdHdPQlhDZGZuX2MwSHFFRmI2N3NydV9Bb3BRR1ZzUUs5NWNucklfOEZVNzczamJQdEY1OHRzRGdNdGZjb2ZYdw?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQT1lUYXU1Y3ViSk9EZjJSZXBCcmtnTGNYM1g3TVJMQURPRkpNWVNCSkVSZGlRX3JET3FVdERWcDVpbHl4QkdpNkRPazJNVXJXNkVSOE5zblBib0ZvNzlxTGJiWERDTlkzREtXRVFZelp4SFNHajBXT0N5OURreDdNZ0NHY2lwUkhEOGV4UmhYdjhhMkRRaWxJV25BMDBIMWtLSVo2ZkFCOXFhbGs4aUVYVw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "Bloomberg"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 17,
+   "headline": "Trump clean energy cuts tied to $83bn in delayed or canceled projects",
+   "summary": "EnergyNow reports Trump-era clean energy cuts are linked to $83 billion in delayed or canceled projects; EPA keeps trying to kill Solar for All despite court losses.",
+   "urls": [
+    "https://canarymedia.com/articles/solar/trump-epa-solar-for-all",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSDJEbE1xejFGYkFlQnlEbWJuX0JCcDgwSExfbGFtNlhyOE9nOTA5QlU0eC1zMWUzcm5iYlNSQURYYWdkS181QloyVUowQ3dGeWY3dnB0akpIa3hzNzlRdDJXdEtmMXJoZkNoTm5YcndpT2t0Ql9MV3VZTEZEUm1xeU5mOVVwbDZjVG83ZDlVdThHbjBBdGs5VnU4MkY5S0N3WWFYeV9MYWFvRlV4T1l3?oc=5"
+   ],
+   "outlets": [
+    "canarymedia.com",
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "EnergyNow; canary_media"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 18,
+   "headline": "Chinese nuclear builds advance at Tianwan and Taishan, Fuqing unit 6 enters operation",
+   "summary": "Tianwan unit 8 completed hot tests, CGN began Hualong One unit 3 at Taishan, and Fuqing's sixth unit entered commercial operation.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/Tianwan-moving-step-closer-becoming-worlds-biggest-nuclear-power-plant",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMDJzQkpfRHc5ME5TUGZFV2JCUXJORkYzYy15dVEwY2M4Y3NEUnNVYXlzdFFkLV9JaHpNNVBKY2s2UU16ZVpJbTl3NHdqT3JaV3F4X0kyLS1sTFp2S3lnaDNhQ3VXZURaY2NBekx0TXI4bDd5M1AyZ1JmREwyMFI0ajVmZlM0WnBIM19obkNxRU90NndWM0NodEdscW90dG1PS1dON0RaM3o3d2pIYWUzRUV6SGU0Vm5DbFFXa2p2eUYyZFpkRm5FLUFvUG1CTEdndTFV?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQM0Y1cUxYYjRjdVNjN1J1RDVYaml5bnR3MmxFdERLb0o2Y1dCUWVaZmRCcVA2OXh2ZV83ejVDZnk3MTlXTFFhVGJsbFdYbXpDUGFFYWdNQzU5VndMVFlxT1BNb3lNTEZpaXdaeVZxNGhWYjFGT3BQT0lIVmdDX056d0FVUm1OUXFRenc?oc=5"
+   ],
+   "outlets": [
+    "world-nuclear-news.org",
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "World Nuclear News; energynews.pro; oEnergetice"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 19,
+   "headline": "Trump administration pressured Intel into accepting government stake, lawsuit alleges",
+   "summary": "Lawsuit documents allege the Commerce Department pressured Intel into a government equity stake, with a lawyer warning of unpredictable consequences.",
+   "urls": [
+    "https://datacenterdynamics.com/en/news/trump-administration-pressured-intel-into-accepting-govt-stake-in-company-lawsuit-documents-allege"
+   ],
+   "outlets": [
+    "datacenterdynamics.com"
+   ],
+   "importance": 52.0,
+   "reason": "datacenterdynamics citing lawsuit documents"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 20,
+   "headline": "Japan's METI backs Kyoto Fusioneering consortium with up to JPY 23.3bn for tokamak demonstration",
+   "summary": "Japan's trade ministry awarded up to JPY 23.3 billion to a Kyoto Fusioneering-led consortium for a tokamak fusion power demonstration.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMickFVX3lxTFB2QzlvbVlRMXcxOHFyVmJOd3dYX0RRVnQ4c1ZtdzM1cEdnTUlWaXZSWE1GSjdvZkh4LXc2NDJSZHpKQk9TLTBkNGIwQVZaRENsWkpnLW1MWFFYcFpfZXpaTno2NjluWkw5bDFHSF9TLWg0UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTXl4dDR2VTc1VXNwSGdGZjNxODZFMWNpNk5wb0dKMUJfR1lEOGNjZjlNYmRTSk1ybXZQWHFqRW5VbjVqN3c2YmJRWEhralRWNE1hMFJ5LVNrT1ZHZGdlY1RXYXlSZ25KR0FLQWpUTGFfRThfb0RJZGZmQVJONV9LMWdNWVlzd0t0U0stcC12cS1yVUJndVlfWmcxZHduVVczSGZ0MUotTjBkcmt6eVk0N0Rn?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "Energies Media; Laodong.vn related coverage"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 21,
+   "headline": "Feds back $4bn project to connect eastern and western US grids",
+   "summary": "Federal officials are backing a $4 billion project linking eastern and western electricity grids.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQkxTX0Vtdk9JTXlCeG5wendxNWR0dm90RXpXYzNzSmM5WXhvQVVZQnJOaUdaTzJ0OHVSa0g5YTQzcEVqTjV3OGZvNUxCWi1nR1ROX0ZoVGwwcFN6Rk9weXhPU2dKaC0wbElPNHphN0JrUHpUOXpHLXd3MDRjZDR3STFhREU1Yi03X3NPNTVUa2hkbC1sQldVZnFwMXB1cGEtOVp6ZTNXWkgxUHBJSE1rQlpKN1NKYWVJUmszQUhYZVE1b1ZRaURzMjZUSQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "Factor This"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 22,
+   "headline": "Japan's nuclear restarts delayed at Kashiwazaki-Kariwa 7 and Tepco building issue",
+   "summary": "Japan's nuclear restart programme hit delays at Kashiwazaki-Kariwa unit 7 and Tepco postponed a restart over a building issue.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSkFFek03WFQ5elRibWhtRkZGS1hTZ2VSZDVzTlJ6QUd6STlZaE1FN3Nwc2w0T09GeUpXSm5mTmJQa2ZSTzBkdkh6dERpQ3I1LUp3YlRXTWRLQ3Z4TTFOcmxFSWFUM2dvTGNmYXFwdE9CdmxBdlAtM0h2b0FMRnUwR2hGSnVKR0ZqbVdkbGVGVzFmeTludmlVSlpGYXR2VUhCVy1ud0ZSaERyQnFoWS0yMFpES2RENkk?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZGNMMkhLY2VERnJQSldVcFJZTTE4djRCUVFRb1JUWE5SdGUxOXZvY0gtM0pDSHAzc1c4c2xyVHN4bzZwLUItdDV1Yi1uTUttVVZxbVNsX2FvNmdaYUVCMXFISlZZd2VGM3hzMGE3eUp0Y3JFYkpTYlEydTNib283d3N5Z2FORng0Y2JMckZNNlktZmdjc3hwVkt2Zk5iTlZSNURycExxUDNTa3BJaTg4cy1JOA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "NucNet; Bloomberg"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 23,
+   "headline": "Japanese residents push back against data center boom",
+   "summary": "Reuters reports growing revolt from urban residents in Japan against the data center boom.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE1NaTI3SVR6VnJzLVhiTGNJR2k5Nk0tMmVCcG9ZXzBNM2tvNndkWExWWEt3LWczX2RxZHdTWnNmVUpBRWRpckg5ckx6aHN5d0N5N1h2V0dZQktEY0ZYWWxyNnlvN1pQQUQ1dlFHcjNCWjB5Vm5MckFZZjN2bzRsdw?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdlVCUVVnb3Y5Yl9xbDVqMG5uX2Vtb2NEVWhlQTE5MHkwT1dsNDlVSUl1b0NmWVAxR3k5MFJJdk01WEtta2tCQWc5M1BhUGY3MUpXNlliWlVyaldFTUpCdmFDdVpNYWpqTTNuS1BxcE5HWkNkUkZmMi1oOTZJdjhOWm00bms2M0xaeUdnaS1EZjU1b3RPZW45WTFpU3B5dDRaZVdWTTZ2ZE9HZ2xCUjI2VUFfVzBUM0Q5Z1JtQVFSN01zaG9o?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Reuters (two items)"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 24,
+   "headline": "Lance uranium operations suspended after cybersecurity incident",
+   "summary": "Peninsula Energy suspended operations at its Wyoming Lance uranium project after a cybersecurity incident.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/lance-operations-suspended-after-cybersecurity-incident"
+   ],
+   "outlets": [
+    "world-nuclear-news.org"
+   ],
+   "importance": 50.0,
+   "reason": "World Nuclear News"
+  },
+  {
+   "arm": "editor_v3",
+   "rank": 25,
+   "headline": "US data centers set to burn more natural gas than most nations",
+   "summary": "EnergyNow reports US data centers will consume more natural gas than most countries, per the projection.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaW9tTFZMZG95TEVIbzNUT3JVQ1E0NnBob1ZXc1hfWUpjbVFzRDJINFBCTlpBakp0MW9NTmV1dnI1MVlkTENycFdNdUJyeHR5b3BzUk0waUZVaWlVUFo2dF96ZEY4NWFaZlBzeFloWGRiX2QtQlZSS1huWmR2ekdfNUFnWnBQM3AyQTUxZ2cxLTBVN1JzZWVPajBtRQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "EnergyNow"
+  }
+ ],
+ "wall_s": 52.3,
+ "peak_rss_mb": 79.5,
+ "cost_usd": 0.0076,
+ "searches": null,
+ "notes": {
+  "observations": 1407
+ }
+}

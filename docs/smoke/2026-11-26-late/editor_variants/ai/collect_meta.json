@@ -1,0 +1,150 @@
+{
+ "at": "2026-11-26T22:09:54.302433+00:00",
+ "sources": {
+  "reddit_ml": {
+   "n": 0,
+   "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/MachineLearning/top/.rss?t=day'\nFor more information check: https://developer.mozilla.org"
+  },
+  "hf_papers": {
+   "n": 50,
+   "s": 0.51
+  },
+  "arxiv_cs_cl": {
+   "n": 195,
+   "s": 1.01
+  },
+  "hn_front": {
+   "n": 30,
+   "s": 1.09
+  },
+  "deepmind_blog": {
+   "n": 100,
+   "s": 0.65
+  },
+  "arxiv_cs_lg": {
+   "n": 435,
+   "s": 1.42
+  },
+  "anthropic_news": {
+   "n": 29,
+   "s": 1.05
+  },
+  "techmeme": {
+   "n": 16,
+   "s": 1.45
+  },
+  "openai_news": {
+   "n": 1430,
+   "s": 1.51
+  },
+  "hf_blog": {
+   "n": 918,
+   "s": 0.72
+  },
+  "verge_ai": {
+   "n": 10,
+   "s": 0.51
+  },
+  "techcrunch_ai": {
+   "n": 20,
+   "s": 0.62
+  },
+  "nvidia_blog": {
+   "n": 18,
+   "s": 0.9
+  },
+  "ars_ai": {
+   "n": 20,
+   "s": 0.85
+  },
+  "arxiv_cs_ai": {
+   "n": 460,
+   "s": 2.31
+  },
+  "mit_tr_ai": {
+   "n": 10,
+   "s": 0.8
+  },
+  "import_ai": {
+   "n": 20,
+   "s": 0.73
+  },
+  "wsj_tech": {
+   "n": 40,
+   "s": 0.5
+  },
+  "nyt_tech": {
+   "n": 29,
+   "s": 0.6
+  },
+  "meta_ai_blog": {
+   "n": 6,
+   "s": 1.75
+  },
+  "guardian_ai": {
+   "n": 20,
+   "s": 0.45
+  },
+  "the_information": {
+   "n": 20,
+   "s": 0.45
+  },
+  "ft_tech": {
+   "n": 25,
+   "s": 0.61
+  },
+  "bbc_tech": {
+   "n": 21,
+   "s": 0.37
+  },
+  "wired_ai": {
+   "n": 10,
+   "s": 0.41
+  },
+  "bloomberg_tech": {
+   "n": 20,
+   "s": 0.99
+  },
+  "ieee_ai": {
+   "n": 30,
+   "s": 0.59
+  },
+  "gn_axios_ai": {
+   "n": 41,
+   "s": 0.95
+  },
+  "gn_ai_models": {
+   "n": 20,
+   "s": 0.77
+  },
+  "gn_ap_ai": {
+   "n": 100,
+   "s": 1.06
+  },
+  "gn_ai": {
+   "n": 100,
+   "s": 0.96
+  },
+  "gn_reuters_ai": {
+   "n": 100,
+   "s": 1.1
+  },
+  "gn_ai_labs": {
+   "n": 100,
+   "s": 0.95
+  },
+  "gn_ai_policy": {
+   "n": 48,
+   "s": 0.82
+  },
+  "gn_ai_chips": {
+   "n": 100,
+   "s": 0.91
+  },
+  "gn_ai_funding": {
+   "n": 29,
+   "s": 0.69
+  }
+ },
+ "observations": 4620
+}

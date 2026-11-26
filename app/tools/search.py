@@ -26,15 +26,18 @@ SNIPPET_CHARS = 300
 
 
 def _parse_dt(v: str | None) -> datetime | None:
+    """Provider date string -> aware datetime (naive values are taken as UTC), or None."""
     if not v:
         return None
     for fmt in (None, "%a, %d %b %Y %H:%M:%S %Z", "%Y-%m-%d"):
         try:
             if fmt is None:
-                return datetime.fromisoformat(v.replace("Z", "+00:00"))
-            return datetime.strptime(v, fmt)
+                d = datetime.fromisoformat(v.replace("Z", "+00:00"))
+            else:
+                d = datetime.strptime(v, fmt)
         except ValueError:
             continue
+        return d.replace(tzinfo=UTC) if d.tzinfo is None else d
     return None
 
 
