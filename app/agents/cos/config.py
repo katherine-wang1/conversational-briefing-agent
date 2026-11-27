@@ -95,6 +95,12 @@ class CosConfig(_Cfg):
     max_refine_rounds: int = 4
     write_reserve: float = 0.25  # share of the input-token budget held back for C7 + C8
     concurrency: ConcurrencyCfg = ConcurrencyCfg()
+    # Per-user stored set (app/contracts/notes.py): the brief's stories plus the next best by the C5
+    # ranking, up to this many. The voice agent can discuss any of them.
+    stored_set_size: int = 20
+    # Light source packs (1 document) for the top non-brief per-user finds ("u:..." refs, which get
+    # no shared newsroom note). 0 = none; docs/stored-set.md explains the cost/latency choice.
+    stored_set_extra_packs: int = 0
 
 
 def _merge(base: dict[str, Any], over: dict[str, Any]) -> dict[str, Any]:
@@ -124,6 +130,7 @@ def cos_config(
     agent_cfg = agent_cfg if agent_cfg is not None else loader.agent()
     selection = _merge(agent_cfg.get("selection", {}), overrides)
     budgets = agent_cfg.get("budgets", {})
+    stored = agent_cfg.get("stored_set") or {}
     return CosConfig(
         arm=arm,
         flags=flags,
@@ -132,4 +139,6 @@ def cos_config(
         budget=CosBudgetCfg(**budgets.get("cos_daily", {})),
         followup_budget=FollowupBudgetCfg(**budgets.get("followup", {})),
         concurrency=ConcurrencyCfg(**(agent_cfg.get("concurrency") or {})),
+        stored_set_size=int(stored.get("size", 20)),
+        stored_set_extra_packs=int(stored.get("extra_packs", 0)),
     )

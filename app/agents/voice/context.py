@@ -2,6 +2,7 @@
 
 [system]  voice role prompt (stable)                        ┐
 [system]  BRIEF (all sentences + story ids + aliases)       │ cached prefix (cache_breakpoint)
+          STORED STORIES (today's wider set, one line each) │
           CORPUS (source packs, compact)                    ┘
 [user/assistant]  transcript so far (compact)
 [user]    POSITION + open questions + the latest utterance
@@ -15,11 +16,13 @@ from pathlib import Path
 
 from app.contracts.brief import BriefScript, SourcePack
 from app.contracts.llm import Message
+from app.contracts.notes import StoredStory, StoryNote, UserStorySet
 from app.speech.sentence_splitter import strip_citations
 from app.tools.untrusted import wrap_untrusted
 
 PROMPT_PATH = Path(__file__).parent / "prompts" / "voice.turn.md"
 PASSAGE_CHARS = 700
+STORED_LINE_CHARS = 140
 TRANSCRIPT_TURNS = 12
 
 
@@ -52,6 +55,73 @@ def render_brief(brief: BriefScript | None) -> str:
     return "\n".join(lines)
 
 
+def _one_line(text: str, n: int) -> str:
+    t = " ".join(text.split())
+    return t if len(t) <= n else t[: n - 1].rstrip() + "…"
+
+
+def render_stored(story_set: UserStorySet | None) -> str:
+    """L1: one line per stored story. Detail for any of them comes from `get_story` (L2)."""
+    if story_set is None or not story_set.stories:
+        return ""
+    lines = ["STORED STORIES (today's wider set; [in brief] = covered by the spoken brief)"]
+    for s in story_set.stories:
+        flag = "[in brief] " if s.in_brief else ""
+        line = f"  story_id={s.story_ref} {flag}{_one_line(s.headline, 120)}"
+        if s.summary:
+            line += f" — {_one_line(s.summary, STORED_LINE_CHARS)}"
+        lines.append(line)
+    return "\n".join(lines)
+
+
+def note_cite_id(story_ref: str, i: int) -> str:
+    return f"note:{story_ref}:{i}"
+
+
+def stored_cite_id(story_ref: str) -> str:
+    return f"stored:{story_ref}"
+
+
+def render_note(note: StoryNote) -> str:
+    """get_story result when a shared note exists: cited facts plus context, wrapped as untrusted
+    (it was written from fetched web text). Fact cite ids are `note:<story_id>:<n>`."""
+    out = [f"Headline: {note.headline}"]
+    for i, f in enumerate(note.facts):
+        out.append(f"- fact: {f.text} [p:{note_cite_id(note.story_id, i)}]")
+    if note.entities:
+        out.append("Involved: " + ", ".join(note.entities[:12]))
+    if note.context:
+        out.append(f"Context: {note.context}")
+    if note.why_it_matters:
+        out.append(f"Why it matters: {note.why_it_matters}")
+    for q in note.open_questions[:5]:
+        out.append(f"- not known yet: {q}")
+    if note.status != "ok":
+        out.append(f"(note status: {note.status}; some sources could not be read)")
+    return wrap_untrusted("\n".join(out), tool="get_story", id=note.story_id)
+
+
+def render_stored_fallback(story: StoredStory, *, in_corpus: bool = False) -> str:
+    """get_story result when no note is stored: only the headline, summary and links (plus a pointer
+    to the CORPUS when this run built a source pack for the story)."""
+    body = [
+        f"Headline: {story.headline}",
+        f"Summary: {story.summary or '(none)'} [p:{stored_cite_id(story.story_ref)}]",
+        "Sources: " + (", ".join(story.urls[:3]) or "(none)"),
+    ]
+    if in_corpus:
+        body.append(
+            f"No detailed note is stored, but the CORPUS has passages for story_id={story.story_ref}:"
+            " answer from those first."
+        )
+    else:
+        body.append(
+            "No detailed note is stored for this story. Say only what the headline and summary support;"
+            " for more, call quick_search or offer to bookmark the question."
+        )
+    return wrap_untrusted("\n".join(body), tool="get_story", id=story.story_ref)
+
+
 def render_corpus(packs: list[SourcePack]) -> str:
     if not packs:
         return "CORPUS: (empty)"
@@ -77,13 +147,14 @@ def render_corpus(packs: list[SourcePack]) -> str:
     return "\n".join(out)
 
 
-def prefix_messages(brief: BriefScript | None, packs: list[SourcePack]) -> list[Message]:
+def prefix_messages(
+    brief: BriefScript | None, packs: list[SourcePack], story_set: UserStorySet | None = None
+) -> list[Message]:
     prompt, _ = voice_prompt()
+    parts = [render_brief(brief), render_stored(story_set), render_corpus(packs)]
     return [
         Message(role="system", content=prompt),
-        Message(
-            role="system", content=render_brief(brief) + "\n\n" + render_corpus(packs), cache_breakpoint=True
-        ),
+        Message(role="system", content="\n\n".join(p for p in parts if p), cache_breakpoint=True),
     ]
 
 

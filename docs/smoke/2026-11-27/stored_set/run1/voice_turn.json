@@ -1,0 +1,87 @@
+{
+ "utterance": "Before we go, what's the story with XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027?",
+ "answer": [
+  {
+   "text": "This one wasn't in the brief, so I'll look up the details.",
+   "citations": [],
+   "sources": []
+  },
+  {
+   "text": "XPeng showed its IRON humanoid robot, which has about 1,500 tactile sensors, alongside its Turing physical AI stack, at its AI Day.",
+   "citations": [
+    "stored:physical_ai-2af40820bf64"
+   ],
+   "sources": [
+    {
+     "passage_id": "stored:physical_ai-2af40820bf64",
+     "source": "news.google.com",
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+     "title": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027"
+    }
+   ]
+  },
+  {
+   "text": "Reports say mass production starts in January 2027, and the company said the robot may be priced close to one of its electric cars, though some sources say no price was named.",
+   "citations": [
+    "stored:physical_ai-2af40820bf64"
+   ],
+   "sources": [
+    {
+     "passage_id": "stored:physical_ai-2af40820bf64",
+     "source": "news.google.com",
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+     "title": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027"
+    }
+   ]
+  },
+  {
+   "text": "If you want more detail on the Turing architecture or the store-assistant trials, I can look into that and bring it back in the next brief.",
+   "citations": [],
+   "sources": []
+  }
+ ],
+ "debug": [
+  "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1887 ms (first token 1540 ms) \u00b7 11778 in (0 cached) / 83 out \u00b7 $0.0015 (session $0.0015) \u00b7 1 tool call(s)",
+  "say #1: This one wasn't in the brief, so I'll look up the details.",
+  "tool call get_story(story_ref='physical_ai-2af40820bf64')",
+  "get_story physical_ai-2af40820bf64: no note stored; headline and summary only",
+  "say #2: XPeng showed its IRON humanoid robot, which has about 1,500 tactile sensors, alongside its Turing physical AI stack, at its AI Day.  [news.google.com]",
+  "say #3: Reports say mass production starts in January 2027, and the company said the robot may be priced close to one of its electric cars, though some sources say no price was named.  [news.google.com]",
+  "voice.turn round 2: anthropic/claude-haiku-5.5 \u00b7 1402 ms (first token 673 ms) \u00b7 12878 in (11594 cached) / 181 out \u00b7 $0.0003 (session $0.0018)",
+  "say #4: If you want more detail on the Turing architecture or the store-assistant trials, I can look into that and bring it back in the next brief."
+ ],
+ "s": 3.3,
+ "signals": [
+  {
+   "type": "dive",
+   "story_ref": "physical_ai-2af40820bf64",
+   "explicit": false,
+   "strength": 1.0,
+   "turn_id": "t_01m8dtp15ewg6esk8szbjr002k",
+   "payload": {}
+  }
+ ],
+ "target": {
+  "story_ref": "physical_ai-2af40820bf64",
+  "rank": 4,
+  "headline": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027",
+  "summary": "XPeng showed its IRON humanoid with about 1,500 tactile sensors alongside its Turing physical AI stack, and said it may be priced near an EV. Reports say mass production starts January 2027, with store-assistant trials in Q1 2027 and sales around Q2 2027; some sources say no price was named.",
+  "beat": "physical_ai",
+  "urls": [
+   "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+   "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5laktIWWlkWURXRWIzamdEcThwUWVCVExCdzBWM1pIM1J3ZEtfb1hEVGd3T2NwREUyUUdWV1NudE1KdFFUQ3lxVjJqTQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTE9wZ2VHNXUyc3g0SHNqazFSU1NMZXBxX2IweFhvMDIwUktQTjlTSTdiLW1ycnUtMjNvMWJqWUxyX0Z2eUJENW54aFpqX3ZMU3pyOS1IN1dpd0JiQUJRV21OYllvblJLYnNrRHNNS1VuN3RYdw?oc=5"
+  ],
+  "in_brief": false,
+  "relevance": 0.35,
+  "importance": 90.0,
+  "why": [
+   "big news",
+   "cut from the brief",
+   "i-agents"
+  ],
+  "note_status": "shared"
+ }
+}

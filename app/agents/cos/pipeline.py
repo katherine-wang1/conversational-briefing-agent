@@ -1,5 +1,8 @@
 """Chief-of-staff daily run (TDD §8): `run_cos_daily` → (BriefScript, source packs, trace).
 
+The per-user stored set (brief stories + the next best by the C5 ranking, `stored_set_size`) comes
+back as `trace.story_set` (a `UserStorySet`), so the return shape stays the same for every caller.
+
 Steps C1–C8 (C9 audio render and C10 persistence belong to the job handler). Experiment arms:
 - `personalization=false` (B1): no C1–C4; digest stories by importance only (`select_importance_only`).
 - `slots.outside_usual=0` (B3): via `selection_overrides` in the experiment config.
@@ -21,7 +24,14 @@ from app.agents.cos.plan import plan_searches
 from app.agents.cos.pool import PoolItem, build_pool
 from app.agents.cos.score import score_pool
 from app.agents.cos.search_loop import run_search_loop
-from app.agents.cos.selection import ScoredItem, k_from_length, select, select_importance_only
+from app.agents.cos.selection import (
+    ScoredItem,
+    k_from_length,
+    rank_beyond,
+    select,
+    select_importance_only,
+)
+from app.agents.cos.stored_set import build_story_set, listening_order
 from app.agents.cos.text import short_hash, tokens
 from app.agents.cos.trace import RunTrace
 from app.agents.cos.write import DEFAULT_OUTRO, assemble, est_duration_s, followup_sentences, write_brief
@@ -121,6 +131,20 @@ async def run_cos_daily(
             cc, user_ctx, memory, tools, max_searches=cfg.budget.searches, k_target=k
         )
         script = script.model_copy(update={"brief_id": brief_id(user_ctx)})
+        # The naive arm has no pool or ranking: its stored set is just the brief.
+        trace.story_set = build_story_set(
+            user_id=user_ctx.user_id,
+            brief_id=script.brief_id,
+            local_date=user_ctx.local_date.isoformat(),
+            created_at=user_ctx.now,
+            brief_stories=listening_order(script),
+            selected=[],
+            extra=[],
+            pool={},
+            scores={},
+            size=cfg.stored_set_size,
+        )
+        _trace_story_set(trace, [])
         _finish_trace(trace, [budget], cfg.budget.input_tokens)
         return script, packs, trace
 
@@ -145,9 +169,8 @@ async def run_cos_daily(
             pool_max=cfg.pool_max,
         )
         scores = {it.ref: importance_only_scores(it, cfg) for it in pool}
-        result = select_importance_only(
-            [to_scored(it, scores[it.ref], beats) for it in pool], cfg.selection, k=k
-        )
+        scored = [to_scored(it, scores[it.ref], beats) for it in pool]
+        result = select_importance_only(scored, cfg.selection, k=k)
     else:
         plan = await plan_searches(cc, memory, open_questions, history, followed)
         trace.add("C1", "code", queries=[q.model_dump() for q in plan.queries])
@@ -181,9 +204,8 @@ async def run_cos_daily(
             batch_size=cfg.score_batch_size,
             newsroom_separation=cfg.flags.newsroom_separation,
         )
-        result = select(
-            [to_scored(it, scores[it.ref], beats) for it in pool], cfg.selection, k=k, followed_beats=followed
-        )
+        scored = [to_scored(it, scores[it.ref], beats) for it in pool]
+        result = select(scored, cfg.selection, k=k, followed_beats=followed)
     trace.add(
         "C3",
         "code",
@@ -201,22 +223,38 @@ async def run_cos_daily(
         scores={ref: s.model_dump() for ref, s in scores.items()},
     )
 
+    # The stored set's ranking beyond the brief (same C5 ranking; see stored_set.py).
+    extra = rank_beyond(
+        scored,
+        result.refs,
+        cfg.stored_set_size - len(result.selected),
+        importance_only=not cfg.flags.personalization,
+        lam=cfg.selection.mmr_lambda,
+    )
+    # Optional light packs for the top non-brief per-user finds (no shared note exists for them).
+    extra_pack_refs = [c.story_ref for c, _ in extra if c.story_ref.startswith("u:")][
+        : max(0, cfg.stored_set_extra_packs)
+    ]
+
     by_ref = {it.ref: it for it in pool}
     # Packs are built concurrently, each with its own trace, merged back in selection order.
-    subs = [cc.child() for _ in result.selected]
+    # Brief stories get packs at their scored depth; stored-set extras get light packs (scores=None).
+    pack_jobs = [(s.story_ref, scores.get(s.story_ref)) for s in result.selected]
+    pack_jobs += [(ref, None) for ref in extra_pack_refs]
+    subs = [cc.child() for _ in pack_jobs]
     packs: list[SourcePack] = await gather_bounded(
         [
-            lambda s=s, sub=sub: build_pack(
+            lambda ref=ref, sc=sc, sub=sub: build_pack(
                 sub,
-                by_ref[s.story_ref],
-                scores.get(s.story_ref),
+                by_ref[ref],
+                sc,
                 tools,
                 mode=user_ctx.mode,
                 now=user_ctx.now,
                 cfg=cfg,
                 history=history,
             )
-            for s, sub in zip(result.selected, subs, strict=True)
+            for (ref, sc), sub in zip(pack_jobs, subs, strict=True)
         ],
         cfg.concurrency.cos_packs,
     )  # type: ignore[assignment]
@@ -291,8 +329,38 @@ async def run_cos_daily(
         sentences=sentences,
         est_duration_s=est_duration_s(sentences),
     )
+    trace.story_set = build_story_set(
+        user_id=user_ctx.user_id,
+        brief_id=script.brief_id,
+        local_date=user_ctx.local_date.isoformat(),
+        created_at=user_ctx.now,
+        brief_stories=listening_order(script),
+        selected=result.selected,
+        extra=extra,
+        pool=by_ref,
+        scores=scores,
+        size=cfg.stored_set_size,
+        beats={c.story_ref: c.beat for c in scored},
+        extra_why="big news" if not cfg.flags.personalization else "for you",
+    )
+    _trace_story_set(trace, extra_pack_refs)
     _finish_trace(trace, [research, writing], cfg.budget.input_tokens)
     return script, packs, trace
+
+
+def _trace_story_set(trace: RunTrace, extra_pack_refs: list[str]) -> None:
+    ss = trace.story_set
+    if ss is None:
+        return
+    trace.add(
+        "stored_set",
+        "code",
+        size=len(ss.stories),
+        in_brief=[s.story_ref for s in ss.stories if s.in_brief],
+        rest=[s.story_ref for s in ss.stories if not s.in_brief],
+        per_user=[s.story_ref for s in ss.stories if s.note_status == "per_user"],
+        extra_packs=extra_pack_refs,
+    )
 
 
 def _finish_trace(trace: RunTrace, budgets: list[TokenBudget], total_input: int) -> None:

@@ -239,7 +239,7 @@ class MemorySignalsRepo(UserRepo):
 
 class BriefsRepo(UserRepo):
     table = "briefs"
-    json_cols = frozenset({"script", "selection", "audio_manifest"})
+    json_cols = frozenset({"script", "selection", "audio_manifest", "story_set"})
     default_order = "local_date"
 
 

@@ -1,0 +1,30 @@
+{
+ "digests": {
+  "ai": 30,
+  "energy": 25,
+  "physical_ai": 25
+ },
+ "at": "2026-11-26T22:10:02.013079+00:00",
+ "cos": {
+  "s": 65.0,
+  "brief_stories": 3,
+  "packs": 6,
+  "stored_set": 20,
+  "per_user": 9
+ },
+ "notes_loaded": 0,
+ "voice_target": "physical_ai-2af40820bf64",
+ "cost_usd": {
+  "cos": 0.0157,
+  "voice": 0.0018,
+  "by_role": {
+   "cos.plan": 0.0005,
+   "cos.search_loop": 0.00355,
+   "cos.score": 0.00741,
+   "cos.extract_passages": 0.00186,
+   "cos.write_brief": 0.00151,
+   "cos.claim_check": 0.00086,
+   "voice.turn": 0.00184
+  }
+ }
+}

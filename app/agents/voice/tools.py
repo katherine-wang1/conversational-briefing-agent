@@ -1,5 +1,6 @@
-"""Voice tool specs (TDD §12.4). The voice agent can only search, bookmark, save, note
-preferences and navigate: it can't send messages, edit memory directly, or browse."""
+"""Voice tool specs (TDD §12.4). The voice agent can only search, read a stored story's note,
+bookmark, save, note preferences and navigate: it can't send messages, edit memory directly, or
+browse."""
 
 from __future__ import annotations
 
@@ -15,7 +16,7 @@ PREFERENCE_KINDS = [
 ]
 NAV_ACTIONS = ["resume_brief", "skip_story", "next_story", "repeat", "end_session"]
 
-_story = {"type": "string", "description": "story_id from the brief's story list"}
+_story = {"type": "string", "description": "story_id from the brief or the stored stories list"}
 
 VOICE_TOOLS: list[ToolSpec] = [
     ToolSpec(
@@ -25,6 +26,20 @@ VOICE_TOOLS: list[ToolSpec] = [
             "type": "object",
             "properties": {"query": {"type": "string"}, "story_id": _story},
             "required": ["query"],
+        },
+    ),
+    ToolSpec(
+        name="get_story",
+        description=(
+            "Details (cited facts, context, why it matters) for one story from the STORED STORIES list,"
+            " especially one the brief didn't cover. Call it before explaining such a story."
+        ),
+        parameters={
+            "type": "object",
+            "properties": {
+                "story_ref": {"type": "string", "description": "story_id from the STORED STORIES list"}
+            },
+            "required": ["story_ref"],
         },
     ),
     ToolSpec(

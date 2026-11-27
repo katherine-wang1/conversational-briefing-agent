@@ -26,6 +26,10 @@ packs:
   paywall_domains:            # known hard paywalls: tried last (never bypassed: no mirrors, no UA tricks)
     [wsj.com, ft.com, bloomberg.com, theinformation.com, nytimes.com, economist.com,
      asia.nikkei.com, washingtonpost.com, barrons.com]
+# Per-user stored set: the brief's stories plus the next best by the C5 ranking (docs/stored-set.md).
+stored_set:
+  size: 20                    # stories kept per user per day; the voice agent can discuss any of them
+  extra_packs: 0              # light packs for the top non-brief per-user finds (they get no shared note)
 memory:
   eta_explicit: 0.30
   eta_implicit: 0.15

@@ -280,6 +280,36 @@ def select_importance_only(
     )
 
 
+def rank_beyond(
+    items: list[ScoredItem],
+    taken: Iterable[str],
+    n: int,
+    *,
+    importance_only: bool = False,
+    lam: float = 0.7,
+    similarity: Similarity = feature_similarity,
+) -> list[tuple[ScoredItem, float]]:
+    """The next `n` stories after the brief's picks, by the ranking C5 itself uses to grow past its
+    slots: `allocate_slots` puts every extra story in `for_you`, and unfilled slots are filled by
+    for-you score with MMR against what is already chosen (`importance_only`: big-news score, as in
+    `select_importance_only`). Used for the per-user stored set; carry-over limits don't apply since
+    these stories are not spoken."""
+    base = big_news_score if importance_only else for_you_score
+    items = sorted({c.story_ref: c for c in items}.values(), key=lambda c: c.story_ref)
+    by_ref = {c.story_ref: c for c in items}
+    chosen = [by_ref[r] for r in taken if r in by_ref]
+    done = {c.story_ref for c in chosen} | set(taken)
+    out: list[tuple[ScoredItem, float]] = []
+    for _ in range(max(0, n)):
+        r = _mmr_pick([c for c in items if c.story_ref not in done], base, chosen, lam, similarity)
+        if r is None:
+            break
+        out.append(r)
+        chosen.append(r[0])
+        done.add(r[0].story_ref)
+    return out
+
+
 def _enforce_beat_share(
     picked: list[tuple[ScoredItem, Slot, float]],
     items: list[ScoredItem],

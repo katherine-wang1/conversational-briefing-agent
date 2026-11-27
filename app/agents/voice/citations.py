@@ -63,6 +63,11 @@ class CitationIndex:
         for h in hits:
             self._by_doc.setdefault(h.doc_id, (h.url, h.source, h.title))
 
+    def add_source(self, cid: str, url: str | None, source: str | None, title: str | None) -> None:
+        """A citable id that isn't a passage: story-note facts (`note:<story>:<n>`) and stored-story
+        summaries (`stored:<story>`), registered when `get_story` returns them."""
+        self._by_pid.setdefault(_clean_id(cid), (url, source, title))
+
     def resolve(self, cid: str) -> CitationSource:
         pid = _clean_id(cid)
         e = self._by_pid.get(pid) or self._by_doc.get(pid) or self._by_doc.get(doc_of(pid))

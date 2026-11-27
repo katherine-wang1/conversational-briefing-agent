@@ -1,0 +1,73 @@
+{
+ "utterance": "Before we go, what's the story with AI leaders push back on Anthropic vision; OpenAI and Anthropic researchers warn new models may be too powerful to release?",
+ "answer": [
+  {
+   "text": "That one isn't in the brief, so I'll pull up the detailed note on it first.",
+   "citations": [],
+   "sources": []
+  },
+  {
+   "text": "The stored note on this one is thin.",
+   "citations": [],
+   "sources": []
+  },
+  {
+   "text": "Based on its headline and summary, Axios reports that rival AI leaders are disputing Anthropic's vision, and that Dario Amodei has pushed back on reporting about free will.",
+   "citations": [],
+   "sources": []
+  },
+  {
+   "text": "It also reports warnings from researchers at OpenAI and Anthropic that some new models may be unsafe to release.",
+   "citations": [],
+   "sources": []
+  },
+  {
+   "text": "I don't have the details of those arguments, so I can look for more if you'd like, or I can bookmark the question for the next brief.",
+   "citations": [],
+   "sources": []
+  }
+ ],
+ "debug": [
+  "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2664 ms (first token 2279 ms) \u00b7 12587 in (0 cached) / 88 out \u00b7 $0.0016 (session $0.0016) \u00b7 1 tool call(s)",
+  "say #1: That one isn't in the brief, so I'll pull up the detailed note on it first.",
+  "tool call get_story(story_ref='ai-1109dc2af8f5')",
+  "get_story ai-1109dc2af8f5: no note stored; headline and summary only",
+  "say #2: The stored note on this one is thin.",
+  "say #3: Based on its headline and summary, Axios reports that rival AI leaders are disputing Anthropic's vision, and that Dario Amodei has pushed back on reporting about free will.",
+  "say #4: It also reports warnings from researchers at OpenAI and Anthropic that some new models may be unsafe to release.",
+  "voice.turn round 2: anthropic/claude-haiku-5.5 \u00b7 1362 ms (first token 665 ms) \u00b7 13768 in (12411 cached) / 146 out \u00b7 $0.0003 (session $0.0019)",
+  "say #5: I don't have the details of those arguments, so I can look for more if you'd like, or I can bookmark the question for the next brief."
+ ],
+ "s": 4.0,
+ "signals": [
+  {
+   "type": "dive",
+   "story_ref": "ai-1109dc2af8f5",
+   "explicit": false,
+   "strength": 1.0,
+   "turn_id": "t_01m8dtv5zrk5t44fd7jd0wd3s9",
+   "payload": {}
+  }
+ ],
+ "target": {
+  "story_ref": "ai-1109dc2af8f5",
+  "rank": 10,
+  "headline": "AI leaders push back on Anthropic vision; OpenAI and Anthropic researchers warn new models may be too powerful to release",
+  "summary": "Axios reports rivals disputing Anthropic's vision, Amodei pushing back on free-will reporting, and warnings about unsafe-to-release models.",
+  "beat": "ai",
+  "urls": [
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxOLVR2OXI5dkJUZ2U5UXNvWllBeTJXVGVyaG9ZZmhqLWFXcXVGNFdoRE9sTnhLaXVyZkZLQWZQVndpNnJtRzJiWmRiLWRKNThfQlZCRXd4dWliUndRVzV3M3Jib0hFc2tIUjhpMEdKLWJhcmpWV1UxdHFXRWlTNU9UN2dn?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTFlLeVdXV0Q3U2lsUlVFNmtzekFOd0xLQ092OExYRzlCckFRb0RZVTJuWXdQQVpFNG1Td1ZaZHIyYy1RbGY1WTJIUDlLYWx1R2c4aDRqUERmZkNweW16NUk4a0tTajZhSF9pSUtBVG43VkxVcG1Qc0d1azlhSlliSV9wZ1VOeVcz?oc=5",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxNejlpTmhzNmw3aWRaNkZ4SXJjZDN3UzdRbEFHMm1lZml6MGlaM3ZOTFdabXlLQ3E0eTRvbnJxLW9wa09NaVZObVAxUVFSbE81SXBjdlZESGtjS2tCa0oxYzFfaXZUQ2RuN2VBNlZxcTM4TzVXZDlVV1Y1bjlUUHQyNDJkN05PamE3TTQ2TjBjd2pOd3lTenR0bUJWUzlsOUhsOFdQQzRiTE84Mk9MbHhicNIBrAFBVV95cUxPMWl4NlA0eEpnVVA5TG03eDE1R1JSOHo0NTRyUW9VUVJ1aTRNMTE2SEVQMWhkTUtNUlZEZVRHOERZeXNTVE5SS21naTdRVndoRXhyX0RENlByX0lWMEFUbXhfcTAwRHU0d1RiWWxCTEZqQjBCeW5iVjQ4TVhRXzAxc1Zxd2xOelZUQW1zeVgwaHllcWpvS3ZrWDJ3Y1J4NWNpbGw3NDFfN0tZRF9S?oc=5"
+  ],
+  "in_brief": false,
+  "relevance": 0.6,
+  "importance": 60.0,
+  "why": [
+   "for you",
+   "digest",
+   "i-agents"
+  ],
+  "note_status": "shared"
+ }
+}
