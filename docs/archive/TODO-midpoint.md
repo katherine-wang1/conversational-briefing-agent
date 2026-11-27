@@ -1,4 +1,6 @@
-# TODO
+# TODO (midpoint, archived 2026-11-27)
+
+> Archived. Open items moved to `docs/plan.md` (the "was" column gives the T#.# number). Kept for the done items and their evidence.
 
 Two tracks. **Track 1** is the working agent for the midpoint demo; **Track 2** is evaluation and can wait.
 Owner: **Kate** = needs your accounts, keys, decisions or phone; **Claude** = code or docs work; **both** = Kate supplies something, Claude does the rest.

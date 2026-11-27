@@ -1,4 +1,6 @@
-# Architecture revisit: open tasks for thought
+# Architecture revisit: design rationale
+
+> Since 2026-11-27 this file is design rationale only. Its open items are tracked in `docs/plan.md` (IDs in brackets below).
 
 Started 2026-11-26. A review of three parts of the system: how we find news, how we store it for
 live questions, and how we prompt for audio. Part 1 (finding news) is being worked on first. Parts 2
@@ -22,21 +24,21 @@ when deployed, and returns mediocre results.
   and in one run both big-news stories were dropped because of it.
 
 **Quick wins:**
-- [ ] Run collection, searches and fetch+extract concurrently, each behind a semaphore.
-- [ ] Cut the scoring output down to id, score, subtopics and a short reason.
-- [ ] Remove fastembed: dedupe with shared URLs and rapidfuzz title similarity, and let the scoring call flag duplicates.
-- [ ] Run one newsroom job at a time in the worker.
+- Done: run collection, searches and fetch+extract concurrently, each behind a semaphore (7c729c6, 86e1ce8).
+- Done: cut the scoring output down to id, score, subtopics and a short reason (094b296).
+- Moot: remove fastembed (dedupe with shared URLs and rapidfuzz title similarity, and let the scoring call flag duplicates). The default editor path never imports it; only `classic` does.
+- Done: run one newsroom job at a time in the worker (63291ba).
 
 **Bigger change: gather news once for everyone.** A scheduled shared job every 1–3 h: collect,
 dedupe, rank, fetch full text once for the top ~100 stories, and store them. Per-user briefs
 retrieve from that store; live search only fills interests the store doesn't cover.
 
 **Questions still open:**
-- [ ] Buy ranking and clustering from a provider (NewsCatcher, Perigon, Event Registry), or keep our
+- Closed 2026-11-27, keep our own feeds plus the editor: buy ranking and clustering from a provider (NewsCatcher, Perigon, Event Registry), or keep our
   own feeds and Techmeme/HN ranking? See the provider notes below.
-- [ ] If clustering goes, the importance "coverage" signal and the eval's hindsight labels
+- Open [EV-5]: if clustering goes, the importance "coverage" signal and the eval's hindsight labels
   (TDD §16, "covered by ≥ k independent domains") need another source.
-- [ ] Paywalls: prefer a free outlet or the primary source from the same story; don't circumvent paywalls.
+- Done (D9, `docs/smoke/2026-11-27/paywalls/results.md`): paywalls: prefer a free outlet or the primary source from the same story; don't circumvent paywalls.
 
 **Provider notes (2026-11-26, not yet tested):**
 | Provider | Ranking / clustering | Notes |
@@ -85,25 +87,25 @@ day, so the daily collection runs even if the rating happens later.
 proxy-injected secrets: Anthropic's hosts don't take network secrets, and Event Registry takes the
 key in the request body.
 
-## 2. Storing news for live questions (parked)
+## 2. Storing news for live questions (mostly built 2026-11-27)
 
 **Problem:** the voice agent sees only the 4–6 brief stories' packs (passages cut to 700 chars,
 `app/agents/voice/context.py`) plus 2 quick searches with a 3 s timeout. It can't answer "what else
 happened?" or give background.
 
-- [ ] Four levels of access:
+- Four levels of access (L0, L1 and `get_story` done; `search_news` open [VO-6]):
   - L0: brief stories as full story notes and full text, in the prompt.
   - L1: a compact list of every story in today's digest, all beats (headline, 1–2 sentences, id), in the cached prompt.
   - L2: `get_story(id)` and `search_news(query)` tools over the last 7–30 days (Postgres full-text search, pgvector later).
   - L3: web search.
-- [ ] Story notes, written once per story at collection time and shared by all users: facts with
+- Done (8e93960): story notes, written once per story at collection time and shared by all users: facts with
   citations, people and companies involved, context, why it matters.
-- [ ] Store more stories per user than the spoken brief covers (Kate, 2026-11-27). The brief reads
+- Done (81b41d2, `docs/stored-set.md`): store more stories per user than the spoken brief covers (Kate, 2026-11-27). The brief reads
   4–6 stories aloud, but each user's run should keep a larger ranked set (their top N across beats,
   with story notes and source packs) so the live conversation can explain and discuss stories that
   weren't in the intro. Today only the brief's stories get packs (C6), and the voice agent sees only
   those.
-- [ ] **Decision:** may the agent use background knowledge for stable context (what a company is,
+- **Decision [D11]:** may the agent use background knowledge for stable context (what a company is,
   what a term means) while news claims stay cited? Leaning yes.
 
 ## 3. Prompting for audio only (done 2026-11-27, see `docs/smoke/2026-11-27/brief_audio/results.md`)
@@ -113,7 +115,7 @@ intro doesn't preview the stories, internal labels are spoken ("a story picked f
 change with no transition, and the rule of one citation per sentence with sentences under 25 words
 makes it sound like a list of facts with no context.
 
-- [x] Rewrite `app/agents/prompts/cos.write_brief.md` for a listener with no screen (v2):
+- Done: rewrite `app/agents/prompts/cos.write_brief.md` for a listener with no screen (v2):
   - Spoken rundown in the intro: the writer gives a cited teaser per story; C8 checks the teasers and
     code builds the rundown from the stories that survive (`app/agents/cos/spoken.py`).
   - Signposts between stories, a spoken headline sentence first, sources named aloud, one sentence of
@@ -122,14 +124,14 @@ makes it sound like a list of facts with no context.
   - Code: every story keeps an introducing sentence (C8-dropped lead → its checked teaser, else the
     story goes); adjacent near-duplicate sentences are dropped (rapidfuzz); uncited lines with numbers
     are dropped.
-- [ ] ~~Write each story as a spoken paragraph and cite at paragraph level.~~ **Not done, by decision.**
+- ~~Write each story as a spoken paragraph and cite at paragraph level.~~ **Not done, by decision.**
   The listing sound came from the prompt's rules, not the per-sentence contract; v2 gets the flow
   with sentence-level citations. Paragraph citations would give each sentence every passage of its
   paragraph (a weaker and costlier C8, and the voice agent loses which passage backs which sentence),
   would send framing lines (signposts, hooks) through the claim check, where they fail, and need a
   sentence splitter whose mistakes move audio segment boundaries ("U.S.", "34.3"). Revisit if C8 starts
   finding its own supporting passages.
-- [x] Rewrite `app/agents/voice/prompts/voice.turn.md` the same way (v3): always name the story,
+- Done: rewrite `app/agents/voice/prompts/voice.turn.md` the same way (v3): always name the story,
   four to eight sentences for "tell me more", never assume a screen, sources aloud.
 
 ## Order

@@ -135,7 +135,7 @@ session transcript).
 Design documents: product requirements in [`docs/01-PRD.md`](docs/01-PRD.md), technical design in
 [`docs/02-technical-design.md`](docs/02-technical-design.md), decisions in
 [`docs/02a-technical-design-options.md`](docs/02a-technical-design-options.md), current status in
-[`docs/status.md`](docs/status.md) and [`docs/TODO.md`](docs/TODO.md).
+[`docs/status.md`](docs/status.md) and [`docs/plan.md`](docs/plan.md).
 
 ---
 
