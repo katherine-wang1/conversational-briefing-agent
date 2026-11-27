@@ -11,6 +11,15 @@ IDs are per area (NR, SN, BR, MEM, VO, APP, COST, EV, DEMO); "was" gives the old
 still resolve (F# and D# from open-decisions, Q# and task numbers from next-session, T#.# from TODO, A1–A3
 for the three parts of architecture-revisit).
 
+## Current goal (Kate, 2026-11-27)
+
+**Kate runs the whole system live on her computer and gets a feel for it before anything else moves.**
+Steps: (1) the real app path (server, worker, DB, web) works end to end with the new pieces; (2) podcast
+brief (BR-1..BR-6, no segment names but real bridges between stories; 6 stories at ~4 min) plus the
+off-beat scope fix (NR-3); (3) `./scripts/dev.sh` checked on this branch, with a short run-it-yourself guide.
+Ledger, requests store and newsroom ranking wait until after. OpenRouter budget for this stretch: aim
+$5, hard stop under $8. Raw headline collection is free and runs daily; rebuilds and comparisons wait.
+
 ## Deadlines and target
 
 | Date | What |
@@ -102,7 +111,7 @@ Decisions: D10 licensed full text, D5 note model, D16 free-coverage search provi
 
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
-| BR-1* | Rewrite `app/agents/prompts/cos.write_brief.md` as a podcast-style narrative: no anchor signposts, never name segments or slots ("now to energy", "outside your usual beat"), connect stories where they connect | open | Claude | Kate: too disjointed, more news anchor than podcast | task 1 |
+| BR-1* | Rewrite `app/agents/prompts/cos.write_brief.md` as a podcast-style narrative: no anchor signposts, never name segments or slots ("now to energy", "outside your usual beat"), but every move between stories gets a real spoken bridge, tied to content where stories connect | open | Claude | Kate: too disjointed, more news anchor than podcast | task 1 |
 | BR-2* | More context per story (what happened, why, background): give the writer the shared story note as well as the C6 passages | open | Claude | The writer only sees passages; GTA VI got two sentences | task 1 |
 | BR-3* | Context scales with what this listener has heard: mark each story new, follow-up ("since we last talked…") or repeat (skip or one line) from the user's history | blocked on MEM-2 | Claude | History today is headline-level only, see MEM | task 1 |
 | BR-4* | Claim check for longer narrative sentences: context sentences cite the note or pack; allowed background knowledge (D11) is marked so C8 keeps it. Also: dangling references after a dropped sentence (F13), unchecked story-end hooks (F14), pack citations that don't state the fact (F15) | open | Claude | Longer sentences fail C8 more | task 1, F13–F15 |
