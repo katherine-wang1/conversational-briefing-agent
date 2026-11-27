@@ -121,9 +121,9 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
 | MEM-1* | Memory audit and test: a script that runs two or three simulated days for one user (brief → session with signals → `memory_update` → next brief) and prints the memory snapshot, story history, open questions and what changed each day; plus a short design note | open | Claude | Kate wants to see and test the memory design | Kate 2026-11-27 |
-| MEM-2* | Story history the brief can use: record every story the user was given or discussed (brief stories, stored-set stories opened with `get_story`, voice answers), with what was said (the facts or sentences), not only the headline; link across days by story identity (`update_of`) | open | Claude | "New information" needs to know what they've heard; today only brief headlines, 14 days, no `update_of`, no subtopics | F8, task 1 |
+| MEM-2* | Conversation ledger (D19), outside memory; the brief checks it to avoid repeats. Story history the brief can use: record every story the user was given or discussed (brief stories, stored-set stories opened with `get_story`, voice answers), with what was said (the facts or sentences), not only the headline; link across days by story identity (`update_of`) | open | Claude | "New information" needs to know what they've heard; today only brief headlines, 14 days, no `update_of`, no subtopics | F8, task 1 |
 | MEM-3 | Fill `ShownStory.interest_ids` from the scorer's `because` (and subtopics), so a skip or dive teaches the right interest | open | Claude | Always empty: `shown_from_script` never sets them | T1.6 |
-| MEM-4 | Specific asks as first-class memory: "keep me posted on X", "less of Y", bookmarked questions; check each reaches the next brief (keep_posted interests, `open_questions`, `topic_requests`) | open | Claude | Asks are spread over three stores; only onboarding text reaches `topic_requests` | Kate 2026-11-27, T1.23 |
+| MEM-4 | One store for specific asks (D20). Specific asks as first-class memory: "keep me posted on X", "less of Y", bookmarked questions; check each reaches the next brief (keep_posted interests, `open_questions`, `topic_requests`) | open | Claude | Asks are spread over three stores; only onboarding text reaches `topic_requests` | Kate 2026-11-27, T1.23 |
 | MEM-5 | Apply interest decay before each run, not only after a session | open (low) | Claude | Today decay runs inside `memory_update` only | T1.8 |
 
 ### Stored set and voice
@@ -142,7 +142,7 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
-| APP-1* | Redesign the web app to be fully voice-forward: talking is the main interface (start, interrupt, ask, navigate by voice), screens are secondary | open | both (Kate: design calls) | Kate 2026-11-27; the demo should show a voice product | new |
+| APP-1* | Redesign the web app to be fully voice-forward: talking is the main interface (start, interrupt, ask, navigate by voice), screens are secondary | open, separate session | Kate (own session) | Kate 2026-11-27; the demo should show a voice product | new |
 | APP-2 | MP3 instead of WAV for brief audio (~8× smaller; ffmpeg in the image) | open | Claude | ~23 MB per 8-minute brief | T1.19 |
 | APP-3 | Stream answer audio as it arrives (each sentence waits ~1.4 s today; target ≤ 1 s) | open | Claude | Voice latency | T1.20 |
 | APP-4 | Brief build trace (C1–C8) in the live log next to the session events | open (low) | Claude | Good for the demo and debugging | T1.27 |
@@ -197,12 +197,12 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 | D10 | Licensed full text (was Q6; absorbs D3 Exa and F12) | Snippets and free coverage cut stories without note text from 21 to 3 of 80 (`docs/smoke/2026-11-27/paywalls/results.md`); 7 of 80 in run 4; summary-level notes are thin. Options (unverified): NYT Developer API (free, licensed abstract and lead paragraph), Event Registry article bodies (free 2K tokens, $90 for 5K), Guardian Open Platform (non-commercial), Exa (no key here), enterprise wires | Try NYT API and Event Registry bodies before paying; probably after Dec 4 |
 | D11 | Background knowledge in the brief (was Q4) | `docs/architecture-revisit.md` part 2 leans yes for stable context (what a company is, what a term means) while news claims stay cited. Notes already allow it in `context` | Yes, marked as background so C8 keeps it (BR-4) |
 | D12 | Should the "outside your usual" slot stay? (was Q2) | Kate doesn't want it labelled; it brought in the energy stories along with the SMR interest | Keep the slot unlabelled, one story at most; revisit after BR-1 |
-| D13 | Brief length and stories (was Q3) | `length_s` is 180 s; six stories with real context won't fit | Fewer stories (4) with more context at ~4 min; the rest go to the stored set for the conversation |
 | D14 | Statements vs news (was Q5) | Closed into v5 (D4); keep in any newsroom prompt | Keep (NR-4) |
 | D15 | Do source links matter? (was Q8) | Kate: not much | Keep citations internally for grounding; don't build link display (VO-7) |
 | D16 | Free-coverage search provider (was Q10, F22) | 57% of Tavily news hits are google.com/url redirects that mostly fail (403/429); Exa or Brave return direct links | Stay on Tavily until Dec 4; note as a known limit |
 | D17 | Evaluation scope for Dec 4 | 7 days; Wayback archive out of reach; rebuilt days are thinner | Evaluate on rebuilt plus live days of Nov–Dec only; drop the Aug–Oct Wayback replay; state it in the report |
-| D18 | Voice-forward UI: what the voice controls and what stays on screen | New (APP-1) | Kate to sketch the must-haves; Claude proposes a layout |
+| D19 | Conversation ledger, separate from memory (MEM-2) | Kate, 2026-11-27: store exactly what was said about every story referenced anywhere (brief and whole conversation); the brief builder checks it so nothing repeats. Proposal: a per-user `story_mentions` log (story id + cross-day identity, date, brief or voice turn, the exact sentences and the note facts or passages they used), built from the brief script and voice turns; interests stay in memory | Build as proposed; awaiting Kate's OK |
+| D20 | One place for the user's specific asks (MEM-4) | Today: `open_questions`, `keep_posted` interests, `topic_requests`. Proposal: one `user_requests` store (kind: keep_posted, question, more_like, less_like, stop_covering, delivery; the user's words; scope story/topic/entity; status active, fulfilled, expired; source turn). Interests stay as the weighted, inferred profile and can point to the request that created them | Build as proposed; awaiting Kate's OK |
 
 ### Closed
 
@@ -224,6 +224,9 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 | 2026-11-27 | Paragraph-level citation (F17) | Not done: listing sound came from the prompt rules; v2 keeps sentence citations (`docs/smoke/2026-11-27/brief_audio/results.md`). Revisit if C8 finds its own passages |
 | 2026-11-27 | Audio prompting (A3) | Brief prompt v2, claim check v2, voice turn v3 (`docs/smoke/2026-11-27/brief_audio/results.md`) |
 | 2026-11-27 | Midpoint video and report | Done (Kate) |
+| 2026-11-27 | D13 brief length (was Q3) | 6 stories at about 4 minutes (`length_s` 240): gives the listener a wider view of what to dive into; context scales with novelty so repeats stay short |
+| 2026-11-27 | D18 voice-forward UI | Kate redesigns from scratch in a separate session (APP-1); this session stays out of `web/` and keeps API changes additive |
+| 2026-11-27 | Research-config freeze date | Mon Nov 30 (EV-6) |
 
 ### Done since the architecture review (evidence)
 
