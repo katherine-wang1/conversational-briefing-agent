@@ -15,6 +15,7 @@ the date and outcome.
 | D5 | Story-note model | Haiku: $0.0008 per note, about $0.09 per run of 80 once Google News links resolve; Sonnet about 20× (estimated, not measured). Live notes read well on Haiku (`docs/smoke/2026-11-27/story_notes/`) | Keep Haiku; compare Sonnet on ~10 stories after Google News resolution |
 | D6 | Story-note reuse (`story_notes.reuse_ok_hours: 6`) | Story ids persist across runs, so a recent ok note is kept instead of rewritten | Keep; set 0 to rewrite every run |
 | D7 | Notes inside the newsroom job vs their own job | A separate job would get its own retries; today a notes failure is logged and never fails the newsroom job | Keep in the newsroom job for now |
+| D8 | Mix of the per-user stored set (20) | It continues the brief's for-you ranking, which favours the user's own finds (no shared notes): in the smoke run 13 of 20 were the user's finds, 7 shared stories. Important shared stories with low relevance drop out (XPeng, importance 90, relevance 0.15, was in only because it was in the brief) | Rank by the higher of the for-you and big-news scores, or reserve about half for shared stories |
 
 ## Follow-ups
 
@@ -26,6 +27,11 @@ the date and outcome.
 | F5 | Re-run the story-notes smoke after Google News resolution merges (15 of 24 notes had no text, 13 because of Google News links) | `scripts/smoke_story_notes.py` |
 | F6 | reuters.com returned 401: consider adding it to the paywalled domains | `config/agent.yaml` |
 | F7 | Story notes' quote check proves a phrase is in the source, not that the fact paraphrases it faithfully; consider a judge check in eval | eval |
+| F8 | `memory_update` learns only from brief stories, so a `get_story` dive on a stored story is ignored | memory |
+| F9 | Google News resolution uses Google's undocumented batchexecute endpoint; a format change makes it return `failed` (never a wrong URL). One cloud IP may hit Google's 429 page. Its JSON cache is on local disk (lost on Railway restarts) | `app/sources/google_news.py` |
+| F10 | The title-search fallback for unresolved Google News links needs title hints passed from the observations | `GoogleNewsResolver.hint` |
+| F11 | Stale items in the energy digest: three Google-News-only stories resolve to energynow.com articles from June–September (freshness filter misses them: Google News dates are re-index dates) | newsroom freshness |
+| F12 | 9 of 46 Google-News-only stories still get no text (single outlet behind a paywall or bot block: energynow, Axios, Reuters 401, WSJ, Bloomberg, Nikkei) | story notes / C6 |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed
