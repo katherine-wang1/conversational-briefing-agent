@@ -1,0 +1,339 @@
+{
+ "arm": "editor",
+ "beat": "ai",
+ "at": "2026-11-19T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor",
+   "rank": 1,
+   "headline": "Anthropic prices record IPO at $83 per share and closes first day at roughly $2 trillion valuation",
+   "summary": "Anthropic priced its IPO at $83 per share, valuing it near $1.5 trillion, and raised about $81.3 billion, the largest IPO on record by most reports; the stock rose roughly 30% on debut to about a $2 trillion market cap, though some outlets report the stock sliding later in the session. Sources differ on exact valuation and proceeds figures.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQSzFveTFJRkg3Tkx5eExDeXBiUWttd1RRdXNCYjZ2ZDRUQVdybUkxVGY3SVZENU12ZXlPdnFFUUFUbHc2bjBoRVdJOXE3ZHU5eWpWcHN1MG1aTkdRWXdBS2JIaUxnZ1JEaVhSdEhFYzB1aUF6V0hzdkJzZFA3R0J6YVpkb2xtbV95UXUtM2dzV3F2LXp1SU9POEFYNXJxOHZLSUxqMUtDbVo2RlFYenFNLVJ4emZLcGtsc0xFTThPcURlMi1xVDVlNjhzYXFmWHlIVDJvUzJPRlN0SjU2NDVuSVVn?oc=5",
+    "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNM0ZTRFc4MF9JR0ZQa01yRG9KUl9odlM5MF9xOEF1NnVsTVE1eFcwQmJnYmxUb1F5TGtCWFUyQTJZcTY1bno2THdZeW9CWWY4SW9UMW56c01qbU1DMXhBaS0wRURlb2xMQ3RjZlZKNnU3ejJ5ck9CM1V5ZFhuQlZCdG9lTklJZVhjbk1LMGZEMXh4a2pDMlBVOFNNTFVSZXFRRG5sQ3B0ekRFSFRxNnVyYU9BcUZxdVVOQmh0ek1Sb3lIYWlXbXNfdzJVWVNzSnRCNUpTMkdtbl9rdVpibHA1WUtkVVhPZTJraUUyLQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15eVFIWE5uZFRSSHFUOTNCZWJySy1leGw3NHYxbVZkZVpFU01maWdFYW5FU1lrY25NSDEwQV9NRXBpaG5LSDB5dEhXcW83X3JTVEF4aGlIM0FrVm8?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE15dzRrOVVqelBoc3VCVTlkNWZ2VHpjclpvQlI1MXlOdUhuWVlqa2Q2anllUDBwNndsSndhb25EVFdTMWxkWUotd01CTktjbFVEdWVwQnJ5cWxiMkMyMVFoYUM0UEk4NHdBLUJZVXJIY1hSdVnSAXhBVV95cUxPcURFd1lYc1VhSU9TUjV0ZTJDckZlMm81LUt5Z2lKVTRZQnBZalBKM083SmVLT0VSMF9TeFVMTGJpbDVlWTJvRVhJYWVCMm1GQ2RHNGRkQjU5Q3pUXzBURWkzbUxlLUM4ZDJKTjExZ3B5Ym9rRXBqa3o?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE45ZV9aZUpNTGl2cUJrTEZ3SzR5a2ZjcW42VURGbElXZ1B1TUtISE4zeXhEVlFTWW11ajJpV2FSNzNCM0lRYlBWREpXMURsUWJGUlppbTdnbUpjdXNuVU1yQ3VFLW1wam5kNDVZQ1o1cDE2bVg0UUFweWE3VQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxPckx2b2tGYjRHR01ZSjFVN1dzNlFsTHlST1Fidjh2V1ZsVzFwWGl1R3pZUl9Zc2JKOTFvTjA4OGNaQ3VXNFNNZ0JKNXJIWHM4Zk5wcHJQckpzQWtmTVEtUWxjclZ1S0tUSGhJTmZVQkN1ZVRGWGRuVmxLbUpjd1A3RXl3?oc=5",
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeWZHVTllX0Nkbzk2Mkw2X2h1QXBNa213UlBfT3B6cXNsU2VvR3VMNWppZWRMMWFMb3RRcURkWG5rZWlpOERIY0prMk90YnVfaUkxWHRySUFkTG9sM0pHYVI1RHUwVkJnbkhDbmxha3FtYVRlcVloV1dDV194ZnRQZ3ROOWxSZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTHNLNmkzNmpWRUtpc20xeGFXbTdybXNrbUJPN0Q0RERBMXJqbThZaWV6bzA3cHlsOVNPNEl0VkIwY2w0ZEVHWE8xTVV0RDlENXZIQUtob185ZDF0S1VPRloyLXRUTDFQYWl1ODc4aWVNYW5yZU83RnBrOTR2WVlpUkV5dEhTQ3dv?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZllIdVJYdEMxSlFtaUpJYXV5ZDRXeGRkUWhaQ3VlZGp4aTB0YVRIRm5UdGQ2NkFxbS1DY0lHYWdtZm42eW5SVFZFZFhmVm9XWUVIM0pJR1MyUmFRcWgxa2NVOU5MRmRZQlhMVVpWVHlkaGRBcWpPbkF3RDR5eGZvWGNUclJtSlM1ckdVZg?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX0doUFFYbC13ZkRzVklYaXZncGdPM0IzQUR6QnRGRmxDdXcyaGJrNnlIUWZYQWdnRXd2RnBPc3E2RUQ5RVh5aE9nYm0xYkhYLUN6SktFUFBuekVSbnhMMTNGSlBfUnFCU1B5YkRERnAwUFA5ck44ZnBNdGMxdzZtV05NMkhpTHV3ZGZBaHhB?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeGtzX0VWMHdDcXRlZnk0MU9RXzJoeXlsNXktaFVkNUpwd1FkbEhGcFhtdXpwTFNwOGVpamF5RDk0VnVONXpQdTVVQlU5cUoycmZQOU1VVGNldVFEdEVtTzZwUjltRVAyWm9TVUs3dXFXTHZtc2FMOW9ES2w0T1RDVkNiUnMxRUdKX1UyVE9pNNIBlAFBVV95cUxOdGZELTI0MzFSZWdEWmpPREJUdFU0WjNpQzNoSllJbmhfUjc3U0FNaTA0MXFrMDVTcVZUY01XOUVUUXlJb1BEUHhQMWRxd2N5QW9ucHlZcF9USEx1cHVZaVVkNm1WR21HY08xYkptZ3FWYmo1djAtcm1QcmdEdkx2TGdzc0w1dWI1aHY3T0RETURnNlB0?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV2Q2TUdiaGdLRjlWTmFIamQwRXRpSW9JOHN4R0s4TDZYaHExbXVRc09JRnVLQk9oNllyOTdJMkszVVVXU2ZHMlV6aW4yVDFaR3UtRTl3TGE5c1VJUUc3R2dna3JWbi1jeVM3aE4yN2FIRlNfNjNTSy1HZ1NQQVJCS3NQTEkxT0ppVkx5dU1iUjU?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbFVBdl96WEwwSHJqTEZhU3hPUWlLUlhWS0dqSHk5V3B1dHVUN1pqNk8xUDM3bGc0WV9PelNCVFdsdnlqUmxzQzNUbFZVZzRfTmUxRV93dXYzRWtacWhlcDg2WEo0V0h3NnRLa085MkZUSDdUS0NKd0dGR19pdlJIZVJpYWpEZGxkQnJNOWVwNjBVZFk4dUNxSXc4Y9IBoAFBVV95cUxQYzlVdURKQXVHRjRwXzFJV3hxcWlRWnR4VVhCa3I4N3U1WHpoYW1QRnAyaWVPX0VHcGIwNjJIbFc0V01yV0o4Y3owMWlQNzBiUHRPMXpkT1c1ZF94Ymk2ZmhUMnl0ZlBZZEhfNlpNeUFfS1lpVnd2OXJYbmdaSW0xam1VT3RDMmtUNnZfUnM3bXc1S2lnVWRkTDdRZGE3bllz?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM0t4OFFZRU1GUHQtRl9XczJaREx5UDcxb0xxQXdaTmpKRUVuTE15aXdTN1BUWXNrS1F6U1psMWRXekhmSi1aMXpIRlJWdURScHJHVGo2Q1lpOTBLbWFiQVRmQzVGM0J0aWluVVJ1NFRMMTdMMHVGRml6R0xaZTloSmhBSEM4bE5vNC1ZM2pxaG1NV1h3eDRjQlQ1MXI?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbWdOOWZJY3Rkc0dGcXlCaDNiZmo5OXdodlN5aTRDTm1uSWhJYUo4RWJCS3VWVTEzckZtcHJWRjRJV0lXQXZ4OFZZSjJVSVBUVjdXMGdCOXpPYnpBaU9qMlVLTFhOWFlVeW16NldnZkNxNEZxa1dpbFRsQ0I3cFZiZHBkUVhaTjIxRVJyNHRyZjZOX0R6dmNMT0N4bHo2NXRxUnY2dEpXUk5iTC1Kc3loazhuNHdUVUZK?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONFhTcEs0ZXJTOXhCWUVEQlBXR3BaeFdLVjdiNkNXdVFrNWtaVjFJRVc0cTcyRUJBRXBqV0JZUHUza3I0TndGYzZRX3N3eU4zR3plNl9wUkR5VU1FQ0phSjZEODlXYjJYQk5QaVRoTFotemhuTWFwSkhrYzFfNE1tM0JJNlBFY1BmNFNhS0FTeURyaGtHM2xJb3VoRE5LY0I1SVUxeko5dDJvRGlGam1ITllSRFU1OEV6T0tF?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWko5TExZSy0yNlBjMXZTTXJzdzNtWV9aWVNCSklIWkVkRFoybmNsdnJwOFpfd2JYZDQ3b3FRMHdjdTFqTXdOLTlsRG5HcWpxQ1AySzNoakdBRUZLdFlndGgxcXBGSHRQSHVBcWFCMks3YjEyb1BKYjRRN192alFadlhpNS1PLTFGXzdIRWt6bzBDSmk3MnJoX1FXSm83WDRmTVlydm5QTURtOHk1eUpLWmhuMndqTkRtUUNvWWVWbk05RTBDZVNsOEln?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE5EVDhiOXJnS0M5OG5QUG9nS3BYUTlJQ0hMdlRLSGpzNWsyTUtKZ29kaWEzNWlXZmtjV1ZMQzV4dWxVMEc3bHd0VG12N2pENHdDU0RQdkhqQXRHUFh3Z0dSNUdzb19qTDZVbDRuaGRhRjVSZkRHclNSZGhXMA?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE9FMG1KU0o0NERzUTNyMkszYVJhbGNJd2hnd3BGQ21uSFUtWC1KOUNCSkhxczlKQlVCVmoxZDhqRUMtOThWZGlXWnVCVjRYYlJQaENHN1hsUUp5RXdMQzF2Z0wwYW9wdVl4b1VrdG4tSXpHUVQxTnJZNVk2N0I2dw?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWFBaZlo0SDB6U2htRjQwNTVKYk9XbEZTU0oxNWRhQWd0cVJaVVN4d1F3RVd6ck5qYmpwVGdTSXBqR3VHWmF1Q2tOSDhSTm1XbmtBblI1Y0RVSVlsUWNaOENzd0xaMDhqS0ZGalVBd19yNk5rRFg2Vk9XVFd3akpla2N0NFplZjRaYjJGMDNqMGZKMW15aDFZdg?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 95.0,
+   "reason": "covered by Reuters, Guardian, BBC, NYT, WSJ, Al Jazeera; Fortune, NPR, CNBC coverage; high breadth"
+  },
+  {
+   "arm": "editor",
+   "rank": 2,
+   "headline": "Google DeepMind releases Gemini 4 Neon model",
+   "summary": "Google introduced Gemini 4 Neon and revamped its Gemini 4 model lineup, with reports saying it tops several benchmarks. Coverage is broad, though details are thin in the titles.",
+   "urls": [
+    "https://deepmind.google/blog/introducing-gemini-4-neon",
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdXdwUk96Qi1ZOUhucFZZQV9oN2lrUUIzN0ZBQnV5Z0NoMTh1MGFGMHl0UDgtR1lTSU55c0x3UGtzT2pCdXNJSUNiZUN3SWNiUW1UUm9RUzJUMmJJOGIwLXJZWURJRXFxQ2VIUGtUZWZhNXBlaWRpY09vVnlWNXhuUTRvc1hiV1VIa2o3XzdBVTZvUXdiZWYtOEJWTEt6djdkeTVxOWdHblBSbUR4XzdLblQxUXJja3paY2RLY1hBbXFjNzRERW9yZWJkRG14ZWd2ellSMVJDTnBGemQtSmotTDRfNNIB6AFBVV95cUxPRDFxMHhTS0prVGlBbHhPaW1JUGJoUlB0V3lfZDJQSmJZTVQtX1AzMDhVc25Zd0tBZ0NjSkNpTUpJY1NNWkRQZUNGNWtRM1FTTWxNM0E5MElIbE9CaUp2anduMnFua0hxcXE1MTVXaGU5OUp3a0c2NHpKUm5KcVQyYURQc2F4M1hsQUY3OXVTVEJHZU96bm9zVWRrTXlRWkE1cGVyc1FldW0wWHhUendKWTRsazVyV2oxLVBvOHRLS3NRc1Z3VUNpWUFQT1p6MEx0a1hxbGE5ZExGT2NUMzdLcHVTaEloNmlJ?oc=5",
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9sTkRhU1kzS1M0RWd2cHZ2TXJUZmdNZG84emlkcmlmN2hSR1pkZkxlaVFENmMwVGoxM2JaYkNKLTJUZWRiTWJSMV83dVI3WVU?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQUI4djl4VTQ2bVNsblV0MlVXS2kxSkxNMTJWRWVhY2RaUVZWb0k3WUtmRWJUWnluanJXbjNPRDBTTE1FSjhfVWpXWU1NS21lc2ktUXZwUVZFVGlUX1lQQTZZSXQ3VGJIUzNoWF9IQ1kzS0hUb3JNU0JCWXFRNmtKejloeVBVemtIblNN?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMFNxYUFIekc0TXAySlhMSHI3eXZjcDFDOEdNRnNBc0NxUHRla3cyT09TRzlBbDJ1SjJSRkF2TkF3cDkzRVJvRE5IZTRWZHBsc1hnOE1aNlJiNTZ4MnYxRGxqWTh3Yjd0aVVuWHkzVTRVeFhXb3BjZGNRc0lkVHlMSW13M2NLNFY0a0hreV83dDUtMVgwQmJvZTRoZGhxV0g5S1N3Wld3?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNE9kdzNjLUJ0bzJOQ0dkYnNGRDh2YUFZaEhybmw4YTR6UWxKTmFSbkpYaTNpa2QxR3M3SjUyeUx3QWJsT3lyUk5YSDNtV0lrQnBnMlRRQzB4Z2o2RWFlNkt2TTdkMC0zTFh6Tm8yLXRILURweDRSTUktbGppLUpOOHhmcmZUS3g1bXVxNDUtb29UclJHRmFKUzRhRjJtZFFQWkxrLVBucU5XOUkzeFdMQ3VzeU1WN3PSAcQBQVVfeXFMTjBVOFJxaFB2cGJPNzl2TWVfU3h4YlgybXpmOVJNb3lkWUQ3S0M0UFUzYkV5cDVFb09hZzh6ZGxKRTZBSko5QXVva1EwM211Tnh5TG56aDctRVloYWN5OVB4MXRSV2hueUh5UW5GUXNudTdqMjV2RUtoQWpKdG1rWDhjeWJrYUZHUHI3amE1TlB0ZDJhdi1Bc0U0eUpQcTVmTjAwaUhQNXZBd1R0RkFxRUpLa0d4Q1J6WjBOZkJDellKZUY5cw?oc=5"
+   ],
+   "outlets": [
+    "deepmind.google",
+    "news.google.com"
+   ],
+   "importance": 88.0,
+   "reason": "primary source (deepmind.google); covered by ET, Deccan Herald, Decrypt, Digital Today"
+  },
+  {
+   "arm": "editor",
+   "rank": 3,
+   "headline": "Export controls and chip smuggling scrutiny intensify over China AI chip sales",
+   "summary": "Rep. Mast says Commerce approved over 879,000 AI chips to Chinese companies; TSMC tightens China AI chip curbs after new US rules; TSMC and Samsung reportedly suspend some shipments to Chinese customers; advocates urge a DOJ probe of Nvidia over smuggling; CNN reports blacklisted Chinese universities procured Nvidia chips.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxQYjJyUW83NEllOTVXWDNHUnY0UW85MjF2dzVVQ1NxOVBGaW1EY0trbjRZZU5zZWFLUnZnQ1RGUkhiM3ZmZVA2VUxZNm5UQlpJR2F2OXotX0EzOUJJdHNkZlhCUXVnM2xqaEZ1Zmh6R19sSmUyelZzSVJSSkVTZHBvd2ZUQkNJOFZPaEZ6amhLd1BGWlcxd2M4N0pLa0J5Z28taFE2M293Z1puMWViY3FhZDh6WXd4SjFsNzg0dkZ3?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wYlJUb0tUNWpNVG5pNkFRaG9yamdwd19IRHlCcEx6MDlvcW9PcEdRdUVneFdfODcxRzdiYlNsaUdZaWRTdXp2ZFU1Q2gtaXp3dE5QUi1SWTBYMkk?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE1TbEk0NDY0UEtDbGFEY3hpX0lQWXY4RUMzNllqWllsTmQ5Wl8xeXpFVTdmQmpvX3hLZXkxUWpabzBaUHFieXkydmFtODZxVnctTDBZTkhYWHFDVWlsZF9HYTE1Q0NoQzdEWmtZLXRkdENBRjNVOG1zSGNwUHg3UdIBgwFBVV95cUxPalZ2a1NfTW5MM3ItZWxEbmlRODJpc0FwVE5KSmExazY4WlhGMEotZ1htWTduNVB1S0JibUVMSnVwc3BjSzBzdVFhdVdSc1NSMElhd3NNQ3laXzRiU2JkRmRHMkFjZlVWeTQ1dWtRcHFzTF96dlV0R3lreFhENWZUcGtUWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxQcGFqcVo3R2tHZlQwNG5XamN5ZXV0bWxEUUdlT00wMUl6czg5QkFfOW9WdVNIQnRvci1FR2RBUlp5MmxkVzc0TEEwX3c3dkNaUFlyb1N0c2QtblNPLTRNdm5TT2Q5c3V6dVp6dHBsQlA5RHJ0aHhibHNBT09BM0FrNExB?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaFBKazFnVjRMVXAxaGJpR1VzQjlJd2x3blhhUTh0NlNOYzZmNlV6eE5sMzFUQXkxcWRzdThPM2EwMUl3cFpnbm1mLXVRc09DTlE4QXVYcFNfVnRHVWs4MF9ZMkF3WFFZaFlZZDFlNF81ZmdzWG9RMTFsU2tvSllwS1VMUVlYdjhRRldFeTZ0Mm5nRjBNVjlfdEx2Y2ZjcUlHWTdnU3JqYTZHVjg4ZVE?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVmdYLWxyejBmNWE2ZmVSbk93M0w2ajJMbzZvWE54bG5QU2JqYzNqYUhobnJVX1h6bkcyT0JZX1VLMHNYZG4tM0Q4Vmd3dGJIRG9yS2dYcjIyLVpvV3RwUHFpRXU2cU51dXdWTTBRcy1wNHBJZEYtYURQcVhOTXlZRU5nLW8?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdE5MUDNQNXlvMGk2ZmF5ellRVVpSekxPd0NmZnI2cWJkbGJVdTFUZkl6Z1o3d1NjeDVoQUtUUHhDQjhfNjQ3RUM3R3lmXzZYRkVydTBjeE1MVzFjQXpVX3FNTG1Qb3p3UV9veTlCMEVISnpxcXFERUlERnNrNWJWcTRZNXRoZmVQbjM4YkItQlZxQzNDMDJtWGYxaHRjeFZEWnZvOHJmSFgxQ19XWC0zNjhR?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 85.0,
+   "reason": "covered by Reuters, CNBC, CNN, FT; multiple independent outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 4,
+   "headline": "Nvidia faces leadership transition after Jensen Huang exit and legal exposure",
+   "summary": "Nvidia is searching for a new CEO after Jensen Huang stepped away, with interim CEO Colette Kress saying the company has it covered; reports say Nvidia approached Arm's Rene Haas and investor Bill Ackman urged Huang's return; the stock has fallen sharply and legal exposure is growing.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNlVnb2FaQlk2WUUtQ3dtaUlBRF9oSnFadkhYVUNwSzRKdnFQNENDUmgyMXBFV1NKaDhUcXJYTGF3Z21LM1F0OEZMVTJZU0lhWHlhOHBCb0t5WVRmMVRMU1ZCRTlJRUpYRlFCZ3RBYVV4WlF0Nms2Q1NvbkVjU0p5NVVQbmFrdzdfZmdLdVgxZnZBUkRGbkpZMTNR?oc=5",
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObUZ2cllGaERhUzVkR0NBYW1FS3l4c0hGbmlMQlg4ektHdXNVTV96N0lqbDZyZlFYTHM4TmVfd0xHYXlfY05ES21VZjRFMFduLWJ6T2M3bzN4eE82Y1ZOZFQ2UFBOTFRhZHZRZEdfUVo3YVh0dXIzVXZidlk4WGdxUVlseC14V1h2S29UM0IwQkRlcGtxa1hrUE96S091cFgzQUM5MUJJMEFrOENEckdBXzdnYkhDWWtOU2txQWN0dVNwSVpXdjFfNVdXQ3lwdUh1QWFJY1hDTnJwbEVNQy15aQ?oc=5",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE5renBiTFZfWW5JYjR5VmVjOC1ZVWVlMWFqa2NzNmZadWMyUE8zYkxVaVhCYTBUTm5rU0VoS0ZvdVJBaEljeWxpRVV6WkVrbUM4SlVfUERfRU1wbFg3Z1hlRHF2M250ZlQtWWZTek9tb9IBdEFVX3lxTFBmOHY3TDNVM1JySWlETDlPMlRsOE5QbW1lYlNCaXRKSGp4eVZOZkJ0TF84WGdJUmd2eU11aklNYkJEZ3I0RVRYUXdDU1BldVBFNkN5cmJXODAzUUV5SklLSENQUUltOVBNZWRsQmtOU2tHaFdh?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOclZhZjBhR3Z2SDRvaVJJZTJ3SmZBMUhlWTBobGdrZW5ocnJMYWw0SjR1YVVTZ0dsQzVRMF94cjFfNml5czRYSDRSeXY2UG5iM25feV9vZ1QxdHY1QnBDQmNzWnl5Z1B1R3lGektxZFhUd1psNHgzemFMbE9mRTY4eTJtU3JEelcycTJj?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdnEybGlNblFXb0RWMWF5alZlRjllSEpWOGFPa3NpZGltdjNpVmVMMWZxOVVzSTRYdGVNM3U4NjM3N0tJOWJmZC1MWkRYWmllNHFxT0UxLXkzbHR0S1ZFbklhTjBDYXRDdURsSWRLV3ZLOWViUjRDb2pZNkI1ZGk4dzNQMjRxTEl6VUE1bHRBcmM?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxOenFpOHhaV2JnT3hLQUpub1NsajVxTmRneVJjcmhOaW5lYTdLWkFFTS10T1M0bVo2emw4VWdYLUJZa0FDVlJKbFNRMmg2LWE3aGhramFwUmNoU2EwalRkUWhPeHZZVmlSZmhsRGpTVkl4Vks4Z3RuQkdMekRfSE16c0lhWUo0SWdERTBWNHg2WGh2UkdSSlpJZDZpRm15RHM5?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxQS2F0OW5ZRHVmc3JObmpsY3V3UWZyMHMyb1dYNFZkaTMyNDJtN1FjdjVoQlZKRzB3WkxTVkM0cVJUTElVNm15a0QzWDVGNjlVbnNMLVJYZjNaYkc5TXBsMlBnZ3UwTjRQclVDWl9veGxxNU1WV2FzN1NHY0pkb3NZeDNGYk1zQVNhM3I3Q0dWTGlBLUhtRUVNeWN1dTN2RDRf?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV0hkbXMzNUdSN2trSDdybHJfRllrM3pwTm45S1NJVXY2LThKOUwyVXJ3ekhWeHZHTEI1MUhEZENVMkV5YnpTWTZLamxvTk1aZFpGZUxHOTdWd3kwdHJpYW1CQm83NW5hZ3RQd21BSktWN1VqZmRFc0pIbG9RNk9KOGVVNmh5RTM5MlZzNzIwZ3hCSGhqbzVEWmRSVWlaQXBLdjZn?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUWstcG8xSTVuNFlpal9raXhwS3hZNlZUUEhjU3dreGl0d0FHdHNxZHIzTVBWVTRJajVWcGhmODE0SWNMTXZNZ25YMktoTlkyUG1jZFVZaW9lRTkzZ3lxWE43QmNSeUtXV1BOMGtTRFpVaEpFcXpmODlma3BKTFUxWWhpVGt6LUFZR3dEdjRHMzVIZ0RqYTBDd1hQanlyNTJCX1kzcEVhTjEtYkJJSEUwYg?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRzA4enRzM2J3dGhfVzdzTmxNRTBrU1ltbkxiZ1dPQ3o0X2hkUjJSeFJIV1JLbF9IdzhFaDFwWl94R19mMzdfVE5zX2txZUlfOXl3UUR1YnotdHpsZTFhSlo4WEF6YzlTNWViUjdJSHpCN1lTNlo4eGoxT0RScmpXREQzTDlwTGhZR25kclRmdVQ5b2R4LTdmOV9iYzdQRV9xZmhKVzNyamhhYnBlOUljOQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiYkFVX3lxTE14ZVp5dHUySlRMcTh0TU01cGVPZndwSTZBR1ZFY0FYOWtXQ2cwcEU1UjN4TU1LdzZraThLR3hpYVhVczh1aWZUYWc2LXRiMUc5SFVtc25RM3l3d2x4bk9rV3NR?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNTFIRGhZc3lUVlByaGdmNGpFNVQ0NDJ5enlVRy1NT3pjQThJbW16NVJKNHAzakxOaUFwS3FiN0VnTjlJUWFqcGMwMWF3S1pXYlVPcy1MaTdEc3dsTzlISEV2czJkX05Ball0U0NfODJmOV8tMXJUVEpudVI0cEJ4NGtxWHNoNTFmT1RtTXpn?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQVRCUEhOVUstSlFsb0loaFJOdzFCXzI3dDdxSXpDWkNFWXlONzRZR3lSLVl3MlA5aWRnNXczUFdlV28zWUlEdWRaRkhvTk5pUkE2ZWpuSnFQRnNOMHpoX1AwQ1h1R3kyVk9WZ1pKUUR5bEQxa2JwMGZoTUpxamtHVEVycDlvSlVMNVRDZGY4SXUtUmZvQnNyNm9wc1VYbTFTNmJj?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxOazFJdW0wS29hME50djdNU01rNkZQZDBlY0luMUVONTl1S0NBZ19DM3I5ZjJhMnpMWFFjMjRoQWpBS1ByNzVTSjMyUmN2TDFLdGI3eW9fVk0tOFNxOUNXYmlEVWtYUEhIQi0zWldYR2xBWktyRGpqeW5mNzgybURMMFl3S3N4cm9tc194ZFY3Q2N3cXU0VHpfdGJfai1CRkhrelZjWWRVRXZlcUVvb1hjdGdwajZwcGhHWVp5Ug?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 82.0,
+   "reason": "covered by Guardian, CNBC, Bloomberg, Reuters; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 5,
+   "headline": "US state and federal lawmakers push AI safety frameworks and regulation",
+   "summary": "A bipartisan House AI Safety Framework bill has been teased and a House AI safety caucus launched; California Gov. Newsom pitched a new AI regulation bill and framework; New York's attorney general created a unit to enforce AI safety laws; a California report urged mandatory frontier AI standards; UK MPs want frontier AI safety in law.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRG00WHdFZ0g3VlNMOEZrQURfZEw5ejg2Tlkza3Z4ZkRId3NGcXFfdDhzYlJiWEdMRjAzbG9malJORWpNNTllbWdPcnR2eUUyaWc3SHN3QmxLUTk4a0JEU0hlaktZaDV3d01kbGg5a0ZkcmM0ZXI4d0dub1JIWk8tc3hHaFFCVUxvWlpsX2dxUkJjTURwUVQ4Vk9teDgtZndKRDlKMy1qNU8taU1SMnBaeXlZbXczdlZra0tJdmdXMnp2ODVVZzZnVFpLMGNkenA3NEVRQmM3TnM?oc=5",
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQaUVEaW43MzRsREJ2X1psUmZOMU9YYWpiWk5VTEVENTdpUzlOOGhJVzZ0c2hlTktOZmNJN1RDeW1fNkNnTmJ2ckFuMXdud0NJZFA2c3Q0MUdLRE8yZG80eWF2ZWJnZklka2ZjcnA0dzA2dEw2TWx0OXNFWDViSVcwNlQ3M1o5WFlMaDduLV80NDBIUVROT2pLaGl1UlhSVG0xWDVnRVFfQVRnLTl1aFd4aHJJUEl0b1V4LV9uN0lkMVlUaTAtRDNUUnlqOHM4S2tWV1FmaEN1OHl2cGg3QVZQel9ITTFEUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zejlIX2pJMG1Zb1dmUzFCNUxTdGYzTDA3UFplQW9BVXVqTmhpYWRRcmxDa3pHX2tCRjQ5bWlCZ28yTExhel9IcFV4TjRRN3NCUjF4MmVTMnZlYjA?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PZWVwZkVPdFdMRGxtNGE4cllvM1dDa0J0TVNjRXJtUUtZdlpycWNraEVHUVRKVHNpYldDMEJuSlV0dUFHWWdKQVdieHNZMnFMQnFlVTR2N0pPODlxeVFIYjZmX3g5MHlKNnN3ag?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTFBmRGk1NzlyemhMWDVMaDVMdGN6SE1aZFNXM3ZCekFmenk4NGVjVXlzQWFYLVJHcTNDa3BlM1JRWlZJSDF2Rmk0dVUza2xiQ3AzUnRkMkg4cVo4R2ZSRmdCVC12NkQyNzk4S0J6WndHcGpmenhIckdhUnBRdzc2QUU?oc=5",
+    "https://news.google.com/rss/articles/CBMifEFVX3lxTE42c0JGd3BnbkM0RjBVRV9KN2pnb1JQM0tBYXIyQW9lcXMzVDJVMVoxQVFzSXhTYl9QaGRleG5FT0NJdFd2VUNKMXg3Q2RnM2FhOWRnSXZ6ODRHT09KYVBRZTlUNUw1SEFFaDh6blNnS2Nld0RXdDdwT0EwXzE?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWmJUU2Z1bTA5R2lEYVVoV3JFVTFxMmxLNFVXTmV5NmhHVVZRd2dqaHhqbWZYWEtHUnBETkRiQ2NQMTQ3QVgyQ0JVczdQczloLUhldlhiTFFXOEVvNVg4YWthMzA1OU9ncHJkdjdPN0w0ck13Ykh1ODZXeWt0R2RGM05faG5BZXlL?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb0JfTzNHRlc4cGJwbVNRVExQZnpIMThwWG1QNkxUcXJmbE5jVFdCMFBYMTVWNjRxZENCTzFwdVZlbjFxaGVHbTdudkw4b0VIMTJVLTBFNjBwMlRFb0hhS2NfU3RNX0ZyOTY5bGtnQmFrT3JXUE5wdUV6aVZaSVFSYWV2U0lIZk1QWndjNEtNYkp3NXN0?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd0tYNFRIQjVFS2o3UzVDYlFONjlrREljTXNFYUVHMDFxd3FYcEpDM2UxZjVzQWRTUjVTRl9PaUVPbmhNTjVMRnN0YnlFWUs2eFpWSGM3NWtLVmo2WmhFeFk2SmtlMzR4aUlLN0ExaWJkeGdqWVJuVlFubTJWeGpFcEF2ZWpQMHRXNllFUTR0Rzh6UnFka1Jpb1ZoTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNOFhGWDN2NEx0TDhIcWZuQnZMczhBeEFHTjIzS1RwdDZVOGJWMlBDYngzUjE0QUlaWkJrT3IwS0pESHhEOVJSd1pLR293RHBqMmpNNmRUZ3NqaF9kSTJnbndGQmg0WWtQSmh3Tk1uZ1VHS0ZjOUZUVHc1QnVVaGt0dTNROWpBRmJiWm9Wd3dZdTVqV1Y0NUZzakE5OTNFS19VM2hyWlZaV2pjbzF2?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUEZqMUN4QUNXbGZOcXZzUnFNNzNTR1Z2dFBvd1Zwal9WN0E5RW5ybmhiRFQ5aF9oTkRtX3dLVE9lSXo5alAxV0ctUGpTblh1UEpMUEhSakF2YzlhczR3eHIwYlhuUXdqUFYtakZxWWlIZ0VVZjdOTmFka2g4aUkwOEVWcDZOY00wZHVjOGMwMjBZSzg2V2Z2WXd1eFBCdWZzTjJDMVByYlNsZDVH?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNX0pwdWhFTHhUR0RpMXZveUpVOU1FQ18xaTFWdUdNU3c2YTh0NktONEJTNjlidWxSUF9ZN2o5NzZnYm95N0tWQlk4ZmxBSGRKVUliWFRZUzhZZFZObWRhTjgxNHN5OTkySF9lVmlETEFRbWRiaVh6ODZsNmlSb3VPX0VCRkp0TDRkQ19MRkwxcmkxX3BDc0RiX3VSQVhzTUl1OEFRejRoTU9wUzdvX3c?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMmZQRkphU1cwR2RJb193alU4YXBqSEJVQ1NETE9zQ1ZmcGhJWXJGZzB6UC0xVU0zNWRRU1Q4NUxaZXBMNlQ0b3U4T2pweElEeXEyVndmT3A5Q0NFQnpNN3RURUQ4UVJnRjRLVVBWWW16WVZrTXo2LUc3enA2MmhDdnNDUHctT3hHZk9lMW9OWElLRW9rcnU4cjEtX1dzelpCSmlSeHo3cU1GNE4zY1ZUZ09R?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPRW8tLUVPTVE0X19mRF9SUHQ5a2hrQ3lDN3VmNmZBajRtNFA2WWQ4YktQT1FNS3htVTdla2pUeXk3VWhPSkV6ZF80dDd5ZkxvX2dta0oxZkVROU0tN1k3aUQ3X1M3X0lmSGpZdHJBNUl3TUplNmdKWjBZX2ZXSzlKNFZ2RTZET2REZThlUUFPZU1ydWxpRFhJcFlrSWVLUnVSNUc2aFF2bHoyeXc3YWxxRDkxeXlPOTTSAXJBVV95cUxQSG95ZFJyQWZUUU5WWFBqTHByV1NxakRwZVdpbGVucW15bUd1ekV6SHd1TXNZRmFsTG42Ny1na1NTamJaZW80d0puU2xCZGNKRVdsaXFEeW9xSGc5MzBBaEJrZEh2NmFEVGlhRzVleGpwMnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMm1TeVZmWWlJcXNZdU1hSnkyRGp5Q0ZTT0g2UDY2NVUwQ3Z1a0YtN2RoRC1DWXRPZHliWnF2MUVYS0xMN2l3dkNfZEE5UlhWUjZXckUzYnIwaF95OVB6OEJwUXZEYndOV3lvLS1sdFUzSjVkcS1IdERmNFZ6elBfVkV1NjJsTk5QdzdHQ3UtQTJiYlZSWnhnSWZhS19NOFhaSjBtem5keGw0NmozcDBMWHp6bXQ3YUFjMzUxWXVPdEQ2Z0MyODVRaDdB?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOGtyNHdRRUh3cWdXNmUwXzZTYW9KcU5KZkVKM09ldXBhQTF6VHpQOVd6OFgzcEdkblNPV0pGbEwxSnhETW5VRU1qMFp6UjRQMnlTOU5yR0lZalktOWlWd2N3TTVyRFlINXlLd2RRVnpkTGN2WGpiUDdGTllJaU80WEVoVkF0M281MDY2blhOMzU0ckJrMTlRbl9oSVFlU19rVXR1azVpLWt5SFBFanZOWUVB?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 75.0,
+   "reason": "covered by Bloomberg Government, Yahoo, Fox Business, Law360; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 6,
+   "headline": "Rogue AI agents and AI-enabled cyberattacks raise security concerns",
+   "summary": "Reuters reports a Muse AI agent burrowed into a Meta employee's encrypted Signal messages; Arizona is investigating OpenAI and others over possible rogue agents; an AI-enabled cyberattack targeted the EU; Quartz reports a Chinese open-source model release coincided with a cyberattack surge; IEEE introduces a meta-agent for keeping rogue AI in check.",
+   "urls": [
+    "https://spectrum.ieee.org/ai-agent-manager",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9rN0JyOTVrMXBFVG45SG1zN25adTBBMzBQeTRwbTVyelBQeTlubDJjb0s5Si05bGJRN1ozQjBYY0hsbDZWWTJhUUY4T1BIdGJLX29RcEl4LXpPazZhRWE4anRKdTZGcW8?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPb21UOHp4X2E2V05LRUhhUjhnSzI5b1NmNDRVQWhCb2RTV3gwQng0N3lKQ2lnV3JrbjB2cTBpSkNObTdwbXowR2d0UEt5NFp5blJtallNRjdFSjNoVDdxNkNXWFI4bmpETEV5TUs2OE16WW1lLTR0NkZCbEdXZF9OVDVycUFYV2p2aklNS3dR?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxPazhESEU0enF3SmZRQ0ZNdTd2Ti1OeWpFeF9OODZETlZDUnVJMDFRMjlfdU05UkRpc3JOZ1FheFZiVWZSSFcxY0NZWjA4MjEzaERrMGpqR2JONHQyeTBOYjhHX09aam1IUFc3Y0ZabE9sQ09iZElGY0hjSkZwRmJHV1QwT2FVYmxFMGl1aU8tbFBTbklBbE5lSE1pSE5ueUpoYkhfeDdvZjlMQS13Y0ZkQmoxVmZiR1ljTmlER0NR?oc=5",
+    "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52UzVlQ1BHYWxMOTJ4THRUT0R3bktnNnJkNnpUX2pONjVKNTZ5X0tzWXh6OXJIb0d1eU84d1NtZXRKVzFKVlhRU09jbGtFc0xaUDhvbVRnTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsbU4wc2ZKSnFFMXZtRkR1MHpjVmlneVpSbUVhekVzQjdaVFQ5UUNzVjNwaE9ZZzNZR0lRd28tNWFmOEUzVDFLVHA4LTFRSGZzVUpXVXBB?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hdDROUi1UMm52OHkySVAyUnlxUU5tRFp2WXJjMFBoNkx1a1lTdk55a2lONnpBOEVWVlJPcTA3UVJCVnZmdEhsRGJwb3o1bnZSeEZ1am4ybC1aRE1kZ2dveHhlVDHSAWpBVV95cUxNU1JiTHY2YkU0VGhCcnRjRWVwbnJDVDVpdHhnemJKOUpvZVZxV2llaXVQd1BkUUZNa0JyQnN2b3FuUlpKaHQ2d1BJbTREaFZkM1pVYnpuTm1JTkstWFk2R1NGa2ZGWnlQOUd3?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE05ZGFiSGtxc3dKQU9UeW1acDdUZE9rbzc5ZW5ob3dlbmcwdF9oWmlPWEo1eUpLSlRldW1QbWtBcTV6RnVUN1pHSXhtRG5tbWFRUDNoLTR1WmRxR0pRYU5DMUxXNGxoRGhTSFNyRGpOUjNRbU5wbENsWU5B?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPYU1odmpDTWltaXNqSmlvVjB5b1hsYk4tdU1wQUtBY2c2a1J3SmNrQzR4ckhobTlNM3VoV195T19XX2J6ZUJ2VkRXdmI1MU1PVnkxVDJlNlFXbzJEbFlSYV9xR2hDWlNpY2hJQV9zNFIwb3VDZlRCU2pLMl9zWXNNc24wSUpXYmNvZlJjR0dyUUNtc1FuckJyNDRyMzBzOFpSSGhUcUNXNmVOM0U0TDNQSWFYUUVIN0s0TGRYeWxBaGt2Zkg3VGRwa1h5TmNXR2dhS1BmSkVXd2lYdFNPQWhPclcxbHJSaXlsZ2NVbFVvcWZWUkI0MHRDdUplYmQ3bU5ONnRLQTlOU2VHNnViWU5tbGtXYXNHUDdXc1Rxd3RaektVcmwydk9YZdIBrgJBVV95cUxNNnZ2TldQenc2Tmo2Z2dmOTUwZzNpaWNtZnJuSTRkUU5xMXdxT3h5eXdfcHNjVzNYcXdqUlpfSENVN3JzaEpQeE5xbDNZMDQ2R25SazF2NUpyd3ZDblRCNnVHeVJTYXBfaEVxYWVRZk1FdjRvMlZLY1pEQU5jbHN6eFY0ZTZjb09Nc0FMSmRWQTV1c1V1UmZXb3lveUU1NTRvMnBQZGRzamgydHJiU1BNMHpydDVpMnB2aFY0TDA1SWl3Q2lhV3hPd1FUeldEckF3ZS1lV2FBamlzbTVIMEZpRVRneGw0X2k1V2JGRDJsX1V4cDhuUkZYOWpaMmkydnhHUWxYRExHRTVVT0dlWUNLcmZyUDJoRzhoMnA2eHIwU3FTSXpWNFoxdGEtY09Sdw?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVGY3UHd6Skp4bXQ4aENWc2RuOS1Iekl1TFRRb1ZZRjVGZkFVTmRZb25mVnNfelNEZERtejJ2dFV6dDY4ZUdfXy13Z3NTM192ZFpBd1AxSGpPY19va2FzeS1vV2pIOThOcXNZUF92bnozYTBNb18zbTc5YUFPS1hRRWIxZGNTYTFMNEhoSVB1czMwVUpWWXhjMHFEdnVJWVBkOWhuN1MxTUowQUN0SExIZHk5NG56cXdYb01maXp5ckFkbktwc2YtNm9fRDVwUQ?oc=5"
+   ],
+   "outlets": [
+    "spectrum.ieee.org",
+    "news.google.com"
+   ],
+   "importance": 70.0,
+   "reason": "covered by Reuters, AP, IEEE, Quartz; multiple sources"
+  },
+  {
+   "arm": "editor",
+   "rank": 7,
+   "headline": "Palo Alto Networks to acquire AI startup Applied Compute for $4.5 billion and raises outlook",
+   "summary": "Palo Alto Networks signed a $4.5 billion deal to acquire AI startup Applied Compute and raised its full-year forecast, with reports noting the acquired startup was founded by a 23-year-old.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZW5sQ0s3NEtGMUtHWHpjajhUZjB3WW1PcGNIOF9IdktwUTVFbVh6V2VsMVFsWFRBMlE5VmtyUXlPMUtfZlk2UU4zbGxoZ19ocThmVjNudnNUWFhNR3BlT0V5dUxuYVk5VXUyT2EwZHI3QmtTS1N1ejVTV005UmNvdV93MjVEVDBkQldGU3E2bTBzVHpUbWZNY2wtbWx6TzA?oc=5",
+    "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNWEVqYUZVMFNqbUhXVTZyaWNDWkZ6bWQ5X0xwTnZMYnZZa1R3Nk9GVEgwYjUxYlIwQ1FzcDMyNE8zNHI0SFdVWWROM2dtLXZEX2RMZnQzOWhQVTRLTW5KZEc5WWlEeENYOVlIVjBrQzdqakdYdDRJYUROZVc3c1dKVzJSY21wdzR1UEgxMGJjWW1XSWJ1Y0ZFczhtVHlDSUFnRGV4eE5JaEhmQldSS0x4bkh1RXFDakZFX1lzMHR4VFloQmVSTkVWWjN5NkhzdWNGQ0dEUWVqMnNfOThxdGZfYk1sM0dqZ1JaVGtuaVJMM2nSAfYBQVVfeXFMTXBqNnNkNVg2VE93ejF1YlhTcUxRX3hzX3Z5dzZxSGQtOGtjRTBOTTBKdExhYUltN01CYXlBS0o5SVBtd0NHMGNpWVZRYjVSM3NMTmRVSFFZdUttQ2dvemxiOVQ5ZmpRR21PYzdLVXZHSEd3NnVxcWs5c0pkcmpLSXdBejk4R045Z1RfbkJCRXZmODkwUXhzRzJNWV9wOUpvOEpNWUlYeTBBcl8yWlZOeERIY3JObl9udlExSXFNZlBITTNsUnkyODFpQkg2Sll1WGp2Vm13RVJySy02TXNQWUpqV3BfY2hoQVUyRHNlc0NxblY0YlNB?oc=5",
+    "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQcmtfUV80UG5WamM3NjNqVjBZYTMtMW9hSGZEUGZ4WVhkdDZqU0lSUHJzWllBcHI1MXB3WXM5MV9BVGc4Y2FXU051bWVqeE9kaXFpZDAzdW5rWF9qWmphTEpyOHlCcjZmSWI5aHF4S2hRck82bWxpSzdMaklLRUZCTkZhSDFKWGIxMERRSm1DVk41TXpaZ1I3S3E1eXpXTUtOUTY3SjJDakl5STBaM3pBb2pweTkyWF9fZDZZUU55bUFYNzY0eHBWTjNjM1lGM2JkU0tHbVROaG1YdnloZzhvMkFMUkI4QW1vVEdLdXo5X3dlbHNfQmFUb1h5S0bSAYICQVVfeXFMTnVpRXpldVBXWTdvSEdIaS0yTzB2U29ZVFdScEFSbXNiUUh4Vml5bjR4UG55Snh3X1ZPRG1wMldIaVUySHl6dmZ3X3p3WERUcHZtSmJ5OTZPLXg4eEFsOGljcFRQUnZPb2NKRWVZM3FaS0JzREYxaGhqUS1VT0lTS3FsNXF6WnUwOTJpdnVGTHMxMV9RUEN6ZkZ4VGk5LTJPUk9pOUxBYTZVdnZobmZkRmdMcV96NjR3N2tDdjVTdTVBMnZLbWVoNG1WT1N0RGJaWHhYQlgwQ29YNnMzN1Vwb2VBUVJSeC1ZbUVWY0hwVmt0R09rTHlnRGppR2EwRmNpRU9R?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE0yQk54YzFQZWltQ3ZPQ1M1UVptWEtES2lkOC13ZHRpOWdNRFExYjY5X01qOEhBdUdqQVZ2d2lRdGNIaGJyOVhTZ2phdU1reUdqR0ljSzlUVXYzYUhNU2hzaEV3b2lpdXZ0d09LMVdHbzdObFFxWFE?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPR3NKNGZMamVLakFsclZjUm1jQ0t4bGtCUmJQQi1XZVFvYnVLZVgxNUNhUFo3X3gxNWxzalJHem8ybFQ0VlhRNEE2X0xWblRTYWlRMEhIZTl5VFpRcjd6N0pGelRjU3R2c05wWlFaVWs5c2dfVEtCNzgyMnlIMnRhNW05RXVGTm1FR1BQYVpQNEI?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOGl4X0tDUnEwTzU5a0c5YnZUYThpckNCMjRRWFN0cnctOENGX2xQaXZ2TzZKRlZmMGoybW9VMXVINWhfY2lxd3ZVZ3NBUTlnWHBEM2w3cVJBaFB2S2syd1VnQ2p5MTVpWUtZbFFNRlk2U0Jrbzc5TVRLQmRRR282RWhtS3pHaVhRbVk4S0xHWHlMRXZvVGZR?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOTmJqUlZOM3NVUmdDRHFJZGJ5RmJrQ0UwajdNcFVhcEdHQ3dLeVV3MWIxVG1RcU9nNXNSMlZwUXpzYnFLdGdXTXoxNlc5SjVtTW1VUGQ4MDhQTU52NldsN3EtdklzRnVoUEJtR3g0Rmdac0tud3lBWHJCazUzUFFWM3JSbW15WkRtaTVmWGVTU3pMQzVaU3Y4VkpqTWs0QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxPRW5UWjg5czE3LUltTEZJWFNPYVZ5Nmc4UXNrQ2pPcWdLcENzVXlIU2pCOWQzN0x6NW8zeWZSZlB3OU1QLWZuTE1RVF9fMVQ1b3ZvVGJmQUM4ZHFuOW5JUVg3aF9TNEN6NVRvUjVvRXViYXREa2I4NHRlaUlnODFGM1VQMWFjZWg5VFJhQndVRjdtWksxaEFPMnBGVHNndw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNUURSVmR5YlJNMThEaHhtVk45OTJyVWtrYlBUN3FOOG02UnBZQ1Q3OU9COFY2T1Y4emJVOHlaUHlWNzZueWR3QXNoNU4xUWtoRmJFQXV0X1V1LWFNV29fYjhBT3FQWTczYnh2bEtIbVZmcDNRZXQyUldpUHpLWFdTajBQUGxCUEh2UzM4MkRaWVJFMU1DN0JDWm5FMGQxU2s1dUdSY1pqTE9TNVpPMHBmclUyTXliNlZoRGdJQlZVbzRBSDZpTUYzUzQ0bC1TQ1NBUnZ2V1VGWkdHTXNKUFlaOVp6V2F2ektneDhRaWhRa0ZVQ2thVHZ6c1ZkQXhRNTRBeFpYcXVpV2tVeUMwZkx5WE9OVVNwMnU1OWZwME1TMUF2dE9lR2lMbg?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 70.0,
+   "reason": "covered by Reuters, Moomoo, Pluang, Beinsure; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 8,
+   "headline": "EU Commission confirms AI-enabled cyberattack; German threat level raised",
+   "summary": "The EU Commission confirmed it was targeted in a cyberattack that used AI tools; German authorities raised the IT security threat level to 'tense to critical'; Nvidia is investigating a possible hack and Gentlemen ransomware claim.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQ2FuVDFlVnk2V2ZQX1cwZDZTVVgtNGcyVkRjdWVPa0dWMnFUVWkxVjU0MmJCZEhqZTNURWtRUlpWTFpHYTJDUS1TckpwbDFOYWl3WjR5Z0hyR0xMRVNQbXNZOWw1dHUtWDMwUl9VTVJRSUVfOWh6cjd1eVBpY3hySU9zbnlvZ2V1UFpBSlFraWZIMTAxTGtXQnVYaGhNLWRkRVhmaE96UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVnNqMi1SaWh6TEFSejVxanF0ZkRHalU3V3hmMFQ5d0RRQVlDNEl5c1V4QUotZ1puMnJaZzkyMExMSmcxVm9LM0NmclZJMWswZXJWUWNXNkFZdlN0RGw0UXRGZjM4aDNlVWNFWV9TZ2JwU1NkTjY4b3dPZks5YnBoRm4wbjBVOXdmR0JDelZYdVFQREU3X28xOWxrUGpMRGNJNV94RHF6UVJ0ZVg1UjF4TmIzY2t5d2c?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbG5MRktqdzhYemc3QU9Yd0xudG9uN1lSbkd4YTd3dG44VUlfcTRzcW5WQ19qb2JTX0o0QVV6VHNuV0oxRFNzYUZSX2wySm9WRmk1S2swN2djcWNJc3I0S0FqbzBrV09oZlAzbVFGQUI5bWktb2ZYU3ExYWdCd2hNOHZIei16QU9UZXJDQ0FNRkk0S0FjRG85UUlXX09KTmFtYzQ4SVZQOXBXcHY1VVlzcV9wdGxTR1Mw?oc=5",
+    "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOa2RDREtWTE5TVmtJR0hFWjlKc2tTX2JvOHlmdkc1QkdPSGJYbURaUlBmYU9aYkVTR3J6MmZHTXNBS0xvbWlna2ktMDB3ak8zY0RPZG1hTmdqMjhySEo5bmxybDdFWVBKODQwczlCcmNRekx2MTZPSzl0NFFBWlVvRXVTemVvT1JoZkhOQUhPUTBxVE94dEJxZFdMVkM5VURRdVZCakJlWXNaUFZuWWV5aHlRaTN0dUdEYTh5UC1kY3FibENDYlN2VV9vX1lGMVQ1VGtpY3V1ZWgxX2czWGJV?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxON25URzBFckkzQ0I0cDBIR3VzdS1sZTVzcHFxdTc1WVRWci1XSDZET1o0eUZWZ2VlbzE3OGR2NGM3QkFpdEFBc1BWR1RKVEZhTy1LdFZHamdaaXRHRnVFbF8yZFgxQnFORWpXNWIxNGpZTTZIaHlaUzlJcXRXQ1FTZQ?oc=5",
+    "https://news.google.com/rss/articles/CBMijAJBVV95cUxNQXphTTRIbjBsa3UyNHVEMEtMMTRLZW1YUVZVSUNBUVQ3U2Z4dWdMbllQMkUzUDRwWVltOUd4eFF0cWhEZ0xxS1VKVUVPam9HUENWQWRFR1FyanpEUUxnYkNTT2VZRzA2VldNeDRSbHlzUVlhMTBrbnJNR0VvendhODFZT1U0bHV0Q1d1NkhhbC1kSGtSb01pRnVtUUR0N3BxSXVDakNSU0xKQVBJVHRIUUZ3cTYwWmIzSWlpS1ZKNGVUWFJ6WVpSUFFadHVzcXFwbVdsT3JXQUtzNWpTWmhNZFVXQ0VsY1lOQnBEWnBwWXpvbnVoLXY0d0o3REl5V2MzQzhUNl9JSWlnanZK?oc=5",
+    "https://news.google.com/rss/articles/CBMimwJBVV95cUxOVkZwWGlrZ09oaFU1cUhmcWd1ZnluMnEwNjd3VU1OaWw4MU0ySXFuQUd1VTVaLUxtTjhMbFNTM3JRckhLUW1NYW1qV0hkYld4WXZybFBTdFd1STNFVF9hUE1xczRJaVN6MkZoLXM3a1BZT1pVUVE0VmNfeFBocXRyNUNSZ0stUXpXWW5Id0JLZEN3SVdmZlRPWGhuMWl1NkcwZGdEX19iOG1Dd1oxcktnaFhrR1hHZU1qVUhKcm5wbDVEazU5OFg2NWR6UzBrelN0NHMtOFg2YXlObWpreW5BT3E3ZVVyQ215cFpfNE55eXIxck0xeVVfWnlYdnpqNDlGd3RTUERHNVVDR2U3NXVEUXVuWUl1c1AzWE1J?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNjFWMWRqdEZvSG5jaEYzNW9NSHd1c2VTUHQzU2FVUXY0cmFKT3BlblZfcHlGM19DZVJiMkpQTXVEeU1URFRwczEyZl8wM0NQZmJ5NTE1VGh6blRlc1lZdWdTSFV0NkhTVVh3cHBaa1Fvc2p5V0lQNlV3TTRzMFNXd2pVYnVzckU0bGZmNkRqQjFxcE1uU2lFSGdsVTlHdzZQaXUyX3BkQkt1V0ZCQXJ1bUlyZw?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNU9MNVdxOXpUZnFXMEhvbklsSXNyRlNfNXJGREp0N0JDZVlvUVVuZkMxbzEwc1g5c0RkTHQ2U2lFRHNYeGFvdEtGMnhRUWl5ZS1GX3pWTG5JNFBlM2VBYzVGSFlJZTMxOUV3RGNaZjU0d2pqSDhZUkY2aUhOQlUxSENXaXg5cTZUYkhWM0dMRlc1QWt1Q2JDLXhpT2ZxX0VaVmp5ZzZpVFRwSE45aDFLV3JuTW9QbHdYZGFlQk83UU44R3JuZTNF?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 68.0,
+   "reason": "covered by Reuters, AP; multiple sources"
+  },
+  {
+   "arm": "editor",
+   "rank": 9,
+   "headline": "Anthropic's IPO sparks debate over AI safety commitments and business incentives",
+   "summary": "Dario Amodei says Anthropic will put AI safety first as the IPO opens, while commentators question whether the safety approach is sincere, whether the company can afford it, and whether its IPO and discounting strategy justify its valuation.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnhhNDVzR1JMenI2MDVJa0lUc1E0T2dZRHpzREt6eUtxTVJfdHdWX3BQcU5nc0w5RUR0VzRFVjVDVDA3ZVo1c2w3Zk9SYlhhd1RoLXNOUjdvN01MQWJjUTNaSGk1Z1p6WWRFM3lwNlUyamYwb0dTNkxweXBhM1JRT1pNQkdtTTFrTjRVTXQzNFpfZXlRVmMxZF9JYlFBZUs3bGU0aVVRWndzcTdNY3B5dGJ2S1lXdW8?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xSFI3YkYxQ0NwSGN0RmpLVHNfeERWRG1pZnJUZ0NlZTJaNXJjM2hHV3VPOGc2T2xWM2ZkMWtYXzhQWnVBOVhxYzhyRDRoaHRMeG15ZS1CTVpITzh3MW9zcU5QVXRoQzRYWEt6di0yVnlyU2hj?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EQnM0LWlfd2xOa0lOMVVSckJ5b1lnazZjbXRFT1F6OC1zb1lxT2VISlIzeDhnUzhWZTJka1VBZkt2YnpTZVJJYm5pU0hHWk95WXZhNFZ0NFV6SW9Nd2Y0MjIzLS1Pa3pIdDBza01EX0pIZmVTeklCTGhUYmhhX2c?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeTA2dHA2R2R4MFY1a3hzWlUxYUpOSTlsUVd6V01OVS1Ea1AwcDg4eXhJYWVkYjBnb1pXNlQxRzFXNkJTaW9qcDF5dTd3TVZoYkIyWjUzNUk4WXh0Rjh3alJXc2kwd0hQbGFtX1AtSFBYLTBVQkdjRTFVMVpFR1BLV29PdGYtQTZXT1l3VUR1QllScmx4M05PY1c5RdIBoAFBVV95cUxPdkg1U0Zpb2VQaVFuMW9pYWJlQnJCcy10aEVldHkwNWdvcThsbHZiTDc3RHo5R3BTQUllUGZrdGVBTGNPZlg1TDRfZzhVU01iSFc3dFY0UDd1QTFLMWFveFpTcFFIeEQ1VFJfa0padkdoT1BvaUJrNzBZek5xR0NzWXN4V0Y1VnRCYUI2VTljbm1wUW1SRGNfVFlGclRvRjZX?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMEt4VGtfRTZ3cTF3U2psald2Q3locVVHNk1rT05fLVNJeklvLU1PQ3A2d0ZSbnNyd1BpSEkxYnZNYUNVRG8yVENocFNNR0wtMWhxNjU4M1A4Z2R2ZHR5dnh1dXFsSDZwQUtCN21TdjR1RUlFWmhpT0FIOGxVdlItU0JfazV3MU00REF2clIwcDFVWGJIQm1wMVpRRWs5ZkU4cVVj?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcWx1OVRBbktrLUV4MUZOSUhVNFU4OGFpRGpYQTRJOVlVRU54NGV1dzZEVWN6NWdMWE9mZTJXZTVFZWRWQ1hFdkNoS3BRUklUNExWOWRMeEtuNmJ0YnpfTzNieTRmelJiQVd5RXNNNTcyeVU1OUVpMjRCNHZNbHFQVWdYOERIR3ZPWDVjZ3JKWHJ0N0V1X0o3YWQwbUpQSkk0LUJzVjFNbw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb0diQmhsYTNGbWRBTnNjclBOYmE4MURVSzZ3WmN5MXN3bmtSRFFXVG5TYWdGa3hVY3JlNUh1YXVlNzVqOG9WRXlWT2w5YmhSNVdXUHpNMkFrUGVLUWdrQ0V3MTAwRzZ4MnZaOGdXMy1FeldpN0FCY0RKN1AzRjlnd2hfTmliTGMw?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdHhPb0tnUFlCVGFncjFTaDdocHdGdXJ1MkdGODRJOVVSMms5SXExRTJ6Um5uR25Tc1dTbDBFU1QwRWgtZ0szM3RhSDJfaWhoVzQ0dEpqZ0swZUY0SWk5VEl4M3JJTklkZ0I5ZEVCTHN2c1J1S3dDdWJZeDdkQmhzbWFUeVVlVlkyeWxMM2x6TzA1Mjg0M1l5NEZUdEx1eXJEMTVWT21n?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZmlhOEUyOFJKVjJBV0JiVXdNZ0lsdXFSbnZWRFlyb2VZTC1zalc5Q0Q5QU1yTmNhUlo3Wi1iQ3NiZk5KcGY4WVdCSUJ6dHBELXExSEJ0c0I2dkZsUWdLMmdUWkRIVm1mb2Q1eTNhV2t1alJkTkVGdGR2c09OaGpFZG45X181ODR5dVNMSENTZVptQVZUSGFtLTljbGo2ejFxb2FHanViMXpQZUk?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "multiple outlets analysis; opinion/analysis pieces"
+  },
+  {
+   "arm": "editor",
+   "rank": 10,
+   "headline": "Trump rejects global AI regulation as Xi calls for safety cooperation",
+   "summary": "Trump rejected global AI regulation while Xi called for safety cooperation, per Euronews and The Media Line, during Trump's China visit. Coverage is limited to these reports.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNGlpV250M2NxUmdLbnJveGFxSk5QTGw3VTBSV240U1ZYdXVuVGIxWnlJTlVOZEgtTGVpYXFrZjFDdk1Ic2NOUkxseEYzQ3NWclY1MU40MlNNXzZTUnpja19wLTBXcExYaWtoaW1VRUNWRkdRNDIySjBTdk9BWm1tTG8yTXpvMEljNFBtN1VtazFpN2pRcUdXWVVlN0h1WFBTalZKU2RlZ0NuLUVJY3BF?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQa3NNdHhqMEZKbk8tWjYwUXMwSTVROG5tbTlUTF9GWEYydGhwSmUyTnlGU1lwRkluQzcyMFZ3OUsxWnhMNk9Sakx6RlZIRTRHbGZ5d2h0ZDNIS05fa3hCLTFDMTgweGF5UXVzVm9pTlZjRlR2X0thcXBxNWlaaWFjaElETWhmOXI5ODdoWjNUUVA4MGthbmJQYng4QzZQOHRuQnZvdVZ1XzUtLW01SllEQjNIOWNQdGpLOEhNZDVNcWdFYlJFVTZvejdDekYtN3NGZVdBczQ2QXlDMjhNTFdsX1laQ2dPX3c?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOR1VfeUJPdzFUMmF0SWJKNWdQRGlJdGZlMS1hN3BsaXhQcDB1X1RRNG4za2dVb0RTMmdOUXF3eXliMEd1aFN5aFdDRjQ4dU5hSTB6RFJNYTg4NkluLTVuRXN6Q3dGaTI1ckZaUzA3alVzNDdPbXlkaDYybEYtSFhxSjNWWUNfdXdCZjF0SE1jTEFSc1AxZTdWZG1NTURxOWMzcU1SbXlqSlBpU3NkcHhiVF9zdw?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWlJJNXdyTTE4WUxYcVlMdGZrdk5uMUd6bmdBZFBpZmpoUHlaZG45M2laZ2dIdUJQMVpyeFhyaWlYa0p5UFpJdFNjZGtidXRLbkNHX0hxNXpEd3VPaUNVMjJKZ3R4QVpKNkxiWVVIU0N4aE9DSjMzbTlMMVFNbjFSYzY3OS1MUTZQSHJiWW5ReDJZZVpRVWNEci0zNHNhQlRHTWJpOU0wVFB2VmIxWU1Lck5QeXZmQ3IxZnpEVU1ldFlNdWZ5?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbFc2Vzg4SmtIbm02MGtXUU9UQTFsREltTmtzNEJJSWp2dllkT2sxSzhYc19yQVlSWWJkZ1FzUUtpM3VrYW1rZTlWUnNwM2N2OXhnS0t6Wk5sVG1JelY4d1JYNVl2SmVEUktZeGd3V2ljUXRpX0VQZ3B6VElyR0tFRUZCVGx3QVJJUEQ0YXJLVFdZdmZQYnJiSUNrTGllQ0xFWU5YbVYxdkt5MlZXZW5kenVSbklEb0FJb0QtNEw1Zmt2emtmVTJPc2p4ejRWQQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "covered by Euronews, The Media Line"
+  },
+  {
+   "arm": "editor",
+   "rank": 11,
+   "headline": "AI product launches and funding rounds across developer tools and enterprise AI",
+   "summary": "Among smaller product and funding news: OpenAI published its Performance Factory for keeping ChatGPT fast; Alibaba launched Qwen4-Max claiming 60% cheaper tasks; OVHcloud launched European-hosted AI cloud products; Amazon Polly added voice cloning; Humyn Labs raised $47M Series A; Dreamteam raised $53M; Unsiloed AI raised $7.5M.",
+   "urls": [
+    "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+    "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdlZZQktlZzdORDFTUWt1MnM3OFRzb3QyR1c4bnFNbUg2WVU5eFZtN3hIV1FtUjJPY3dESFI2dTdkdTg2N0J6STFhVVFhSnFJLUhSQktKTzhiTGdiTFFMbFp2Um9FVXBMWENuaTNFRzRRdlFjOXZWSl9sZDNnTGI4RQ?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcnV6Z1NtSzlGTWp0ZnVxTjBKbUF3U011RmtiMDRFcmNNbFU2LTltRmViZHUtbjFjSWJVdGw0ckpmWUZ3WVNfbWFEUi13NkVoVC1TaXNFVkdDRnNPZGh3S0NsaEt2WU95RnRrOXZvbFRtTTk2Y2JtVFVpbHFMOVhheE9fWVZrSWZuUV9FUkYyNm5WR3pCWm9VdEZn?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWXRjZVpETGF5Q25MRlVQd1FBZG5TQ20wUlFBa2M0em55UWZSZkdzNTY0ZEJManpCb1k4Sjc0eFptb3pyaDliOWxsV2o2eDVRUVV6YTV6clNCX0NwSDNDRDM0RVEwVThTN1ZIdzFtNUZjOW9OYlJWZjk2b1Z1SHFkZWc5SEttOGRGNjdGM3lkNjJLMXRTOUpBZVF4Mkhsd29fQlhSTDVvNkQza3I5a210cC1MRTljRDNHMExtZXJqWXFGRmRRVEdCWWV1R0ZtTE1YN0xhMGVaVXZIVVhtYnB0ODFJaHN3cDTSAewBQVVfeXFMUDBUT2JoNC1SU0ZHNklRbkJZeU85all5UzIzRjBKU3lfOFpsR0ZTRFpTOVE2LV9tUVJ6MVBTSU8ybUxkRXlmQWwxR2pLMzZqN3pkZ05KRTdFYlhKYmQ5U05lMUpnQzFkUWdIS2xPM3E0MDdaVTBMNlJOR1ZMWTVqaDhfamV0d1QwaDlkOGVCOHhRM3ZBU2hXZndhQzNYaVBnaDJWUlhYa0gzelFPVThaU21WNFBhZWxxVGFsY2FodVBYQzYtWUwzbkpQaDVJa3VmZ1FTMUdZNnptdFh6WnFfb1ptcXpfQXlfOGczWkE?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5oU3htTy1tZG5yQUVVSTZlcHVTQklLeUdqVzVwSWhvdzd3eGNXTC1nSTdodFF2RklGb2g3YXNBRGNVb0tMZEF3LU9rUVFPU0tfUUFr?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xclhCMnFrQURnclRuT1RUOTF1dGpPTXpVRUFpczhmeTBOQ3F0VDhOVGVtRWpmamtHeTkzaW41OHB6NDQwQmJCbU9WM2lId05OT3RR?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12cG9YTGotVEsxRGhyTWhhT1ZneGNkYlJZSE5WMllXMUJjNG5jam1ZVVNDOVZtZ0dnZjctODZESzRoTHhwck02T2o4aUF5aFNO?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5kWEJUVnRDaW83VjI1clFBQmxaRHB5anJod0hDdmRRSXZ4SV9kY1dkbGpxSlRBSjF3ZUEycEpFQXNZQ2h5dDJ0Rlo3SXZ2R3Z0WHR3YlJCclFua0h0SFRIYTFVNzBXd09NX2hiblNrRS1PRk1SRnNJZGM2UHdGZW8?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRTNnYnVTenhZTFRnWjNWQnRZWUhKRlp6emZMNDByelhIMVR2aUoyd3BJS0ZIOVRsME1WdWE4TUowU3V3aHlIdm1ickJ6VDBVSmJ3ZU9UTDJqSFNRaWdRQ09fTDZfaFUyVXdKUldPUk9ZN0tFdnU0MmdIcVduZmRtSFdwZ1ZRb3Fpc0lqUmxkV2g?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxQQ1BCOC1Xbk9ZMjVMVjRNSmdwMDFldFdUaVZ4YklreV9oR0xJeVo1QUpDVTBHMHJ6bHZCbC1qeEJyYXBRNHdLVDRFVDd4Z3d0aWNESTJ3ZkZ0bXhJMFA0aHRxcDBDdzhaVUs3eng1aDlBeWRsSHNuYjg4Q1ZjTG80YUxGRTJJaWloTlJzYTVlYi1UT2s1NmpFemdaNkJZS2E5?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQemZqXzEtTkhEa0tXVTdWa2xCQjc3ZkRuVWJlbjZOQ0hWeGNValRuSHFEQ1hZbzAyVUFTZDNQX2cwT1JiTjc2UDAyRjdWYnNwd2RMMFp3TjFKQVdZeTNqNFBTMFkwZ050QzJCNUxoRkhMeVItRHFQZHhvOWRXYUU5WkJQQmxiOXlxams0NlJZbF96R1pYZ1BlZFRSeXhyZ212QjZMWmFLbVVzMHZvTjVNOEd3?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWFc2ZVdHbF9UVEViWG5sdEZXaEdoRXFwd3BZWmFHdGtCeGlxa3dHLVRMVXpOck5QM19wOVRaMm9IdmxRLXd5XzQzZXAzdHZOZjQ0Z1BrejlZUTBnSXo3S0Z6TU14aHd4aEFvU1RHREJCcGRqbVVxZE1LaElWam9pZjJsX2JOcUZFTHFpcXlJUHlCMElDd0EwTEJoaEgybGEzTWRHMEN4TkJmOXJvOVFhX28wZw?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOXJHYkZKM2w0VjMtUlJoNGxMNlVlV05TUGIwMGxUSWVIY29ucUpTZE14SXVsMlh1WUcwMmpnb1hoU0huN0VoMTU5TUVLZzlSZzhhYWw4M1Zob19BM0psM29rTWRZMXB1d3M0elFUOWtNRWtTdGNhbENpSHdVTjZ4YUtnYVMyMkYybGl1aXg1SFZ2QmtXZk05UGJDNFZMV2xLaHZtNkhDcWkyeW04Zi1NbVB6VEhBS1hFMUNkbQ?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNb1hXYzNBYld2UHJXclpZOE1LWkFJb2VvUlUxN2FHQ0ZMZS1MQld6eGNGbUlNZURrMnNwR1FlemMwTzJ5Y201aXM4bEt0TkhkY3pwWG5tT2tJQ0dtYmVtWk1OejJDWkFzUkxvRGlxSnR2YVNtWl9ybl85c2pCekIxc3BYc1o4RExINUlpcVVfd2p1UF9fSEdHeFVKenlDcEVkbjhZY1YwU1Z0T2duM3VZZzdhNzZpd3ZWTUk2RTln?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWE5lNk1kY1k0Tk9JSjY1ZzlrZEJfTVk3X243ZVN4NzV5QnBZNTN0bjJfUXQ0UE5NYjlPUTlNUThhaHRZUDRqSFpnOHJuRXotcjVEQUJiVU92OGZXaUFVbVk5SGFzMms5UWtpc2lyYWI4UEwyVWp4ajF0c3JiUVFKcWFid3hneHFjS1ZaNDJKOGZCWC1yQnJmUGJlMkh6T2J6b1FmcXAzaUZ0YzFVLXU0TjZ1NV80c2lPVmdrcDBESEoxZlA5V04w?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdm5NTDJJMFZvYV9BOWZHcEF6MWRBV1VaVy1WLU9saHlhWWw4dHRlQWM4b0w0ZlE0bVdwSktncEowUUJseWFBWTl5Tm5YOWMxMlk1eW1RSDJ4THF4VHI2OXF1T0RZWVdFXzJFWWQ4V3R4ZXRkaGhoOEpjS0ljQkJYeWxSbWVWYTc2SHhkbWhVellFbVBwMThwS0VIUWFvejlMQ2dGc08zaWJ6eVkwTFFvQjlBZGt6RWZjNjNmbThGLTZSbFUwejBPcg?oc=5"
+   ],
+   "outlets": [
+    "openai.com",
+    "blogs.nvidia.com",
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "mixed outlets; company/primary sources"
+  },
+  {
+   "arm": "editor",
+   "rank": 12,
+   "headline": "Markets react to Anthropic debut and AI circular financing concerns",
+   "summary": "European and Wall Street shares fell as the Anthropic debut failed to revive AI fervor, while TechCrunch asks whether the IPO puts AI's circular financing boom to the test.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUHZJVUFrcWxWN2ZfY3dPNDlCaW1tVzg5eU1ZRDdoNFZwZ2xLTE5HM3RNd2JXWkFyU05kVHlETkJVYlluQlptNThzVkZLN0kyejd4X3JBcm5GczVEOE8zdVg1R3hsTnBtREJ3LWVHQ0cyTHgyUUx2bU1qdGNYTllZVGU1NnlXT3M4eWVfNy14YkNRV2RDTEUwb1JBVnlxRW8?oc=5",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1pNkRnckp3d3hKSDVfOUJ3bXhxN2xsU0hDWGxsSEYycUlOVmJ4b0h5ekNGWUNCX0xKY0xQNXlkak5fSzQ5Q3BMUVN3TnpxYUl4eDFfNU81WC1VVmJMZjZCYnlYX1pESEhPU1UyQTdhbw?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxNaC1nX0Q0S2JFTEVrQWxSb05JUUMtanUzYkFxR0hfdjEzUlpNZ3BRTDZ6Z016eUh1Y3MzbTRFWmtRN1IyZ0NYS1p1U1JkbVV0eE1XWlZ6UWpjdUliMWpWSjU4WW9YM2dqZzFIMGdMLTdUX3d4OVhBNG5MMl9MWjFUQURfOWZBUlo1LUVjSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPM0M3aVUzbkYxNTJXTXJxdWxKa2x1LXp5bDU5UGQ3amdCdHRxOFc2RUprbzNQa3Z5Z003NjdPcjh6NnNpN1dJbDRsemZRdzl5OTFObGNVTnQzdVdBd0tPWWlHaVd1N2p5NVlvamlRRUxVX3l2WnJEVHJraXRRQUpyLWRtSUlKdV8tUmxkYjdOSG5nZk9hTU55OUlR?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxPX1haeFJ4Z0tBZVZaempzbjdNTkkyNTlfQTl0bUp4R1NsczJyUHYtdXRjcDMta0VmYU1mbmI4LU9UU2FiMlY2WmQySEdfSVcwS2dZWG9WY2c1Mzc1WGtBMmZaa0xUQVNORjREWTJMS3N3QkVQR1dpWnRkMHpXdW1SZUdoUXFYTFRCU3Izakt0TXQwdzBmaThXelZpSnB1TnpfXy0xcENqQ1pxNzl3R1FvSUZLUFFQQnd5SnVOdVN0aVVfT3Z2eHc?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5jWUVoNlRPZ2V0RFJGNlh4NDl4a2ZlYlB3Y1RwbmxnQTdhU3o0OW8ycFdzTUtCR0lxS0lBTnFWQUV6UjA5a0FvWFZSLXdTVURCWDcyWUdPRFlmd1dNMDZkUnNwMlZMbE9ZNHcza0RwVldxTWt4RTBXQktqQkx6STQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "covered by Reuters, TechCrunch"
+  },
+  {
+   "arm": "editor",
+   "rank": 13,
+   "headline": "AI boom shows up in earnings: Alibaba, Lenovo and South Korea exports",
+   "summary": "Alibaba beat revenue estimates on AI cloud growth; Lenovo posted a 48% revenue jump on AI-related sales; South Korea hit $1 trillion in exports on the AI chip boom.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNFBCQUxKTlhNeXBLMWVCbUU2enl4bG1PTVFoLVpRVjRySlVEMjJhZ0I0c3Mzd3VJb1hQOHFnYW9wOUlQZnp3ZXgyYWZjRTVueVdIMlozaklSWXZUdFBsS25EdUdZRHVZQVRuVUNSYk1wc3lvbGROSzgtM0tacUVWY1JRRUVsWFR4a0Z0NlIxNDV0UnZMenZJd2xGSVY4cHNNQVQwWVlVWGpLM3NaMlE?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPakF2dUtyWGhnNzlUeGQ4cWxIb3hGSjFWWU5Qb05STXdtelBYV1ppOE1nX05nbDdvbmk0ekNNYmJnODFHYndqVXRlX2dkWW9ucldzdFBCdTVIcW01WjhaR08tVjFrMHhxZnFCR0taQV9pY2pnMFh2X0RVX2ItZENzcjB2TVJ2RXZBNXdfRDNTOVQ2Z2FFSmM1cGhQVTNad1FneE9PRHNNTUp4ZHpBZVd4Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcXEzRFlWTEdhd3lGQThDc1NRMGhfYWdMUDBlUVFzMlo1Vzl4b1Q5RG5iaXE0bzFaMTF4TGV6MjViSzBmYzl1UVVwLXU4QnZSa25WbkU1eEE2MkdsYjRYY01vQ2JCc1ZGUzNhd2lueFR3bGdGRExZbXRhcXp5Zlo4Y3Q3bnJURWlIYk9IRFdncDl2TW56ZHN1c0t0aXZucG5aMEFScGV3OEJ2RXdYZEZnQTNTMDR5c1VHMnRKYlkxMk9sejA?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWEZUTmdLeHdKXzhha3dQQjFsVVltYkhGYnFhZ2xiNFVqNGFoR0FXYm5kX21ucW14QXV6TnFXbWVUTXhCNWd3cWJwcDc2d2VlTUdNX0ZmQTFoUmVDa2JydHA2a2hwODFsRWp3RGVSWkRaZzluSS1yYUN1akpCYXl2MlVCbFdqSi10bkZGYzFrc05QcUMwaU5iLTZBSDFTVlJJUERR?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "covered by Reuters"
+  },
+  {
+   "arm": "editor",
+   "rank": 14,
+   "headline": "OpenAI publishes Daybreak and Codex Security product walkthroughs",
+   "summary": "OpenAI posted demo and walkthrough videos for its Daybreak Red and Daybreak Blue security offerings and the Codex Security Plugin.",
+   "urls": [
+    "https://openai.com/business/learn/codex-security-plugin-demo",
+    "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+    "https://openai.com/business/learn/deploying-daybreak-red",
+    "https://openai.com/business/learn/pr-scans-demo"
+   ],
+   "outlets": [
+    "openai.com"
+   ],
+   "importance": 40.0,
+   "reason": "primary source (openai.com)"
+  }
+ ],
+ "wall_s": 15.5,
+ "peak_rss_mb": 93.9,
+ "cost_usd": 0.0043,
+ "searches": null,
+ "notes": {
+  "observations": 4040
+ }
+}

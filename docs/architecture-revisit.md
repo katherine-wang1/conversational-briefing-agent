@@ -92,6 +92,11 @@ happened?" or give background.
   - L3: web search.
 - [ ] Story notes, written once per story at collection time and shared by all users: facts with
   citations, people and companies involved, context, why it matters.
+- [ ] Store more stories per user than the spoken brief covers (Kate, 2026-11-27). The brief reads
+  4–6 stories aloud, but each user's run should keep a larger ranked set (their top N across beats,
+  with story notes and source packs) so the live conversation can explain and discuss stories that
+  weren't in the intro. Today only the brief's stories get packs (C6), and the voice agent sees only
+  those.
 - [ ] **Decision:** may the agent use background knowledge for stable context (what a company is,
   what a term means) while news claims stay cited? Leaning yes.
 

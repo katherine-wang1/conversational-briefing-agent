@@ -22,6 +22,8 @@ def main() -> None:
     c = sub.add_parser("collect", help="fetch every configured headline source now and store it")
     c.add_argument("--beat", action="append", choices=BEATS)
     c.add_argument("--day", default=today)
+    c.add_argument("--at", help="ISO time to collect for (default now); a past time implies --backfill")
+    c.add_argument("--backfill", action="store_true", help="rebuild a past day (see arms.backfill_source)")
 
     r = sub.add_parser("run", help="run arms over a collected day (one process per arm)")
     r.add_argument("--beat", action="append", choices=BEATS)
@@ -62,7 +64,10 @@ def main() -> None:
     if a.cmd in ("collect", "daily"):
         day = getattr(a, "day", today)
         for b in beats:
-            meta = asyncio.run(collect(b, datetime.now(UTC), day))
+            at = datetime.fromisoformat(a.at) if getattr(a, "at", None) else datetime.now(UTC)
+            at = at if at.tzinfo else at.replace(tzinfo=UTC)
+            backfill = getattr(a, "backfill", False) or (datetime.now(UTC) - at).total_seconds() > 3600
+            meta = asyncio.run(collect(b, at, day, backfill=backfill))
             bad = [k for k, v in meta.items() if v.get("error")]
             print(f"{b}: {sum(v['n'] for v in meta.values())} observations, {len(bad)} sources failed {bad}")
         if a.cmd == "daily":

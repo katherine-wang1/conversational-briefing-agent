@@ -1,0 +1,75 @@
+{
+ "at": "2026-11-19T20:00:00+00:00",
+ "backfill": true,
+ "sources": {
+  "robotics247": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "hn_front": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "reddit_robotics": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "techcrunch_robotics": {
+   "n": 20,
+   "s": 0.36
+  },
+  "techcrunch_transportation": {
+   "n": 13,
+   "s": 0.37
+  },
+  "robot_report": {
+   "n": 4,
+   "s": 0.47
+  },
+  "nvidia_blog": {
+   "n": 15,
+   "s": 0.9
+  },
+  "ieee_robotics": {
+   "n": 28,
+   "s": 0.92
+  },
+  "ieee_transport": {
+   "n": 29,
+   "s": 0.93
+  },
+  "arxiv_cs_ro": {
+   "n": 189,
+   "s": 1.17
+  },
+  "robotics_business_review": {
+   "n": 4,
+   "s": 1.29
+  },
+  "gn_reuters_robotics": {
+   "n": 0,
+   "s": 0.95
+  },
+  "gn_pa_robots": {
+   "n": 91,
+   "s": 0.93
+  },
+  "gn_pa_av": {
+   "n": 87,
+   "s": 1.06
+  },
+  "gn_pa_automation": {
+   "n": 0,
+   "s": 0.67
+  },
+  "gn_pa_physical_ai": {
+   "n": 0,
+   "s": 0.69
+  },
+  "gn_pa_drones": {
+   "n": 49,
+   "s": 0.89
+  }
+ },
+ "observations": 529
+}

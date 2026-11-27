@@ -1,0 +1,75 @@
+{
+ "at": "2026-11-23T20:00:00+00:00",
+ "backfill": true,
+ "sources": {
+  "robotics247": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "hn_front": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "reddit_robotics": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "techcrunch_robotics": {
+   "n": 20,
+   "s": 0.37
+  },
+  "techcrunch_transportation": {
+   "n": 16,
+   "s": 0.36
+  },
+  "nvidia_blog": {
+   "n": 17,
+   "s": 0.61
+  },
+  "arxiv_cs_ro": {
+   "n": 0,
+   "s": 1.09
+  },
+  "robot_report": {
+   "n": 10,
+   "s": 1.12
+  },
+  "ieee_transport": {
+   "n": 30,
+   "s": 1.29
+  },
+  "robotics_business_review": {
+   "n": 10,
+   "s": 1.3
+  },
+  "ieee_robotics": {
+   "n": 29,
+   "s": 1.32
+  },
+  "gn_reuters_robotics": {
+   "n": 0,
+   "s": 0.97
+  },
+  "gn_pa_robots": {
+   "n": 48,
+   "s": 0.97
+  },
+  "gn_pa_av": {
+   "n": 81,
+   "s": 1.05
+  },
+  "gn_pa_drones": {
+   "n": 26,
+   "s": 0.64
+  },
+  "gn_pa_automation": {
+   "n": 0,
+   "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://news.google.com/rss/search?q=%22warehouse+automation%22+OR+%22industrial+robot%22+OR+%22robotics+startup%2"
+  },
+  "gn_pa_physical_ai": {
+   "n": 0,
+   "s": 0.85
+  }
+ },
+ "observations": 287
+}

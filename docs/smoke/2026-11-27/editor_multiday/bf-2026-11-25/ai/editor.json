@@ -1,0 +1,542 @@
+{
+ "arm": "editor",
+ "beat": "ai",
+ "at": "2026-11-25T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor",
+   "rank": 1,
+   "headline": "S&P Global places Nvidia on CreditWatch Negative over governance risks, warns board may be compromised",
+   "summary": "S&P Global put Nvidia's credit rating on CreditWatch Negative, citing rising management and governance risks tied to the Jensen Huang reinstatement; Reuters and The Information report the same action.",
+   "urls": [
+    "https://theinformation.com/briefings/s-p-global-puts-nvidia-creditwatch-negative-due-governance-risks",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb1ZBby1iVDJnTmJwX3hDYWJpU2lxTUdLTHdlWHFqRHJUcmtTOWFuQkFRTlUyZTJBcGdNMWR3N3d1YlJIV05kWk1mU21JSDZmSVpZR1BlanpqRzFXSkg3NkxkeElWcHM0Q2Y4eFJKb3Fha29XakxYNFJ4cXExZHo4MFVDOHdDbENrQWs0d0lqQ3Z5cEVDRVBQR1hNNWZxSmhiUll4NFg1amZlU01oWm9fN2hkUFBBNkdKT21v?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQ2cwWG1mYkVmSG5oSTgwZmcxcVY5SWg2ak5aTHBtbG1qWHVvcGxjOGQzTFZKZkNSdWgtOHJtbW1BenVtTWc2UmFrOFpHbTV1Mnh5MWgxWk00R0NrVG5PX0hkNWxmczRRLWdnRUtvRFBhMzVzZUlRN0FXRFVJYlNTVUJaT1U3eVY4SUwtNFd2a1MweTlBZW1ReG9mU0pQa2ZUd3RnaEZtMXNyQmhxeDV0SGN1eWRGcDN2UExZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQamtqRVI0MHhzRTB5Tk1wMDNXRGhEYi1zVzFJT3hBMFNzUmt1RWptQnpTNWR1QTllclluaW50Z0tmSWVIbW5DWXJoaVJlblRoN2puUGFjbEtkOTZ6VUk5ZGEtLU9vYnJOMm53Tm5Idzg0dzNJSlRXVEI1b2xIQ1BBaVVuQmthNFlremtLRnNFY2RWdjNGcHNPV3ZrQ2JOTGhNMTdKbWpfWGtRMjBEekpJS0lmejFMSUxUakFYS1FvUnVxckk?oc=5"
+   ],
+   "outlets": [
+    "theinformation.com",
+    "news.google.com"
+   ],
+   "importance": 82.0,
+   "reason": "covered by Reuters, The Information; S&P Global primary action"
+  },
+  {
+   "arm": "editor",
+   "rank": 2,
+   "headline": "Anthropic shares fall below $83 IPO price, wiping out large paper value",
+   "summary": "Anthropic stock dropped below its IPO price on its fourth trading day and kept sliding, with Reuters estimating a loss of nearly $200 billion in value and analysts debating the fallout.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMHBNOVY5RDc1NmxUUjNnZkNhLWROQkhUOFZpVmQ0SEI0UG9aSUpTTjhpV3EydTNkdW8xYm1KOWF6OXg2Z3BMaUJCWTE3WnFCM0hCZGNuQ3ZKUklsYUROVWQzdExOamNKVlJLRTgwYWpoYVdOUjlDY0pxTmxZajlvckJ4cHc0TG1hbW1ZUkszaDZ2M2Rvd3RqTWRFaVRENXVWT0pr?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZE1sRHlKd3Y1aUpqaUVpeFQ3QjFmX191blVmM1gyS0hidW81RjFjSXJjQndnODAwQU9qb3VkYkJfZ3ppYzdBQ1J5cTRUaDMzamxvZVNsYzB6RUpiVzd2RlhxV2hKaDRjTFdhamRKZ3g3MXZDY1c5c3NMalpmc09aQ3JnNGEyQTR5NG85OW9VTEE1NW9md1VKdFYxeTlnbWNjd25UcjVwamhDX1pIaXc?oc=5",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMkZ3R2JqVlJwZllwVm5BckhhSHZLNDlLVmVZNmpOVmxEVjVKYkk4T1lidzVyTWk2XzJ1LWREQlZRckVlUTMzUl9CVG02OGZXUHNWUmhfTzVlMFlTSWdhbnBYQkdhZ19IQTFmRXhpUTIwTFozTy1LSUpmeTVDM1M0c05DVnlYaUFGLWZuUHFKSjREM2pEYzN0UFY4SDhjLTFnLXJVOU1WVW50Qk80dllwdUZtSnc2Uk9ST1RscXJ4UDlXdDIwYXpzMUtrWjRTRlUtNE91WnE5UWVVUFZONndUbkhB?oc=5",
+    "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNOEM0WEVMMTRDNFR1Mm5RNVctQWlnejMtYzFFcFVWREdpWVBNVzFNV0FHbFdhR1g2SlZfZUY0aE00eTVnaUxpWkNlVlNPaGQ3LWxic25wZFFMaDd4Zl9kMVU5MDRDNjJtRERLV3lHdXJrREsxam1TVlN3Y0NMM0VHeVVoeUNTRS11NVpWS1BVUG44cE0ydHhtR3J4RnBoLVd6Si1VMnJGUDZRT0lEWDJkYlRUUklGRko1OU8yVzV1MnplcHVQdEJ1Q09adUJfQ1RudkNMeWRlQlpUS0o5b1JwSDdaWkQ2dDBhUUdUbWtn?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE1MS01wSHJ0d1J3eDhpZk1OYUk4ZWpWanhRYkU1OGhtV3lhODJib3hxOGkzNUJNVjdBVHN3U3NwOHZVcTBLa3I4cm5fVl9tak9OSHhPTlVxUEhGcHJuYjZYN3BwVC1RUzFmN2F1ZFhvSERxenPSAXhBVV95cUxNMk9GalFIT19DZThwZ3hGd3BjVkh2TGQtOGVOdkFoUjZjZnBURm0tTFBhb29nX3ppX0w5Y0xLV3p2S25QekdRVlRrcHo4OXlYaEFmYVNPY25JeFNpNldQbHprSkpmUVNBS0JvMmw1VkxtV0ViMnI4aWU?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNREl1MEtaQk91dF9Sa1Y2bTE1cUpkanhjbDF3U2ZEbGNZNTdlQ3pSYTFTSjhmSGw0bkx4dFZNT3JRNEZUSUlxVXQzdjdJZHAyQjBlT2FIXzVDNWVWS01Ya21ZZXFwZ3BvY1FZTG9wa2hhTWFJSjNGR196bldXNVRnQzRNTWVhWW9XM3VWYUVBMA?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOM2M1WU82eDJsRTN0X1ktRzFZd3o5OFcwQTAzR0E1U05uLWl2VmZ6Q1hoVnpVakl4TXdJanExcWVHQmpMbUZrYUt5VDBqUVczdE9iMEtwYmRYdFZjTFBUQzhtU291N0xuWC12RktRdXJJMFg1Z3FldHhyUlByb056TkdBX0p2dkxMSDdPa3BXSXFVZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaUpkLXo2VHY0Zm5CRlMzdmpnSFFCTnpJVTJ4LW5COTR4WW1SczUyRHc3UGJ3VHliWFduQVVQa2puX1p0eE95UktWbEMzNU54WHMyNzNsOVE0bGFFSjR0Q1NoVkozTWExNmpwcXRfUFR4MnVTLW9DYXFRTkJKUXEwSktmczlzdzVpRE1QOTctNERIRlA4bS1MQTgzblNqakJqUm5wYjQwTS0?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOektPLXJMckFNYmxjODRTeG1GZVpnaUt2WEExV001WGZiUWNFaHNUNENmem8xUWswWXF0OTljVEtZX1FIOW9WT2QwX3NyS0FsNXpOWXppWFdLbDVDVFlzUHNxV0NkRVFyLWdHXzN5MmE0eTJFU3hQaWRhcXBPd3Y2MUxMYXlibG5XZ3BVdlR6cFZQS25lSXRUd25GZmFxTzh3Q2ttbWMtVnE5dw?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLThxNV94UWsxY1pzMlNGek4zSENubkxpU3V3RjVJLVVPbm1zN01ManBrM0Y4bFY2TjBGNHE4WDl6SzZINHRDR1hNeXloMXBCaXJVTkx6anZOajFpMmFSYkgyUGk3WlBvU0lGUmRKTmlKY0lCYjlOQ2hoeXBZa29NTktaSUZocDNLYlBfeTlGdk5xSFNBajVwT1ZsN0U5d3ZpXzJBY0ZPLWlVTm1tWndaTVVzczNoSlVncnAtbXM2Z3k0bUprN2VRMw?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9KdHZJbkxYV2FmUGlZcFVTV2NZVFU3VVk3QllMWEotczVZLUIzY1FBdzZKM2piUkN6czFHY1pXTEd1SHJqbkxiN3pxVFQzM1BlM1ZmeFkwbnQ4ZTRQQ2dlOU5mNi1ob3Q3SXB4R2Nial9KT1pTZHc?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPal9tdUdZVTJvVTB5aGJHZ0FwTk1GVW8zRWFzNlFEdU9YTERXNlNPcGFzbHUyaXd5U3I4WlMzTGNFUUtPVlA2VmpYSW94TFZKMFhGOFlsU19WV09kVkFGRk9IQ3h3MkRLUGlqWms3akdWTUNaR1hxX2VXakFVMm1tNWk0MW8?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPb0pyWndTN2d0MkpuNlBaQXFQS3g3Z0cwWHRVY281ck1FaTRGNnFLUTFRWC10b1NFRmZqSjVXX2NlRHRRY0FaVlVzcmlaUWdIQmgzQklyQjJxNElqM2xMS3ByV0JOaWh5WWRydnVsSllPTlQ0VVpfbjJhcmJWVlVYeU5raWEzc0Zq?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0hkbFdEeDFKTWo1UXlkenJzS3l0QWpGSDdIWGxpbTdiMkpzVkl0bFN0d2RUSGxJS3FxNFNjeEVOeE9qUlB6X1ZKNldQdFA5b2NUam1pZjQzXzFZSFZYQ21mUXJlSzVvOWs5dS1lc3A2NG5zeGQ1RXlQR0c4QkxOUVNQUzNyYzBMT1A5emhvX2VNc2thcUJoSjhqYzZjM0Y2ZmdQellESkczaXc?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNHY3ODVIbFVMbGZSZ0tSd0p0YTZQTVRESWQxYW9UZ193WHc5N3JQNXJ6bVNEM3VWVEd5aFhlSURsaVJLMG9RZGFCQmdjbEFpc29tNTFvTkNxaTJJV29EQ3JFMUZXNmxZaF90TDM2VUJsNTRJdXotSmdRM09FS0wyMnk2dzBsRkppZHZRcFpKcThpeVVWX0lpemg1MkU4U1ZvQ2swazM1T0JEMS1nNmEw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 80.0,
+   "reason": "covered by Reuters, Bloomberg, FT, CNBC, WSJ, Forbes"
+  },
+  {
+   "arm": "editor",
+   "rank": 3,
+   "headline": "Justice Department and congressional investigators probe Nvidia chip diversion to China and Huang's Megaspeed ties",
+   "summary": "Investigators examine evidence of Nvidia chips diverted to China via Megaspeed and other firms; officials briefed Congress that there is no evidence China orchestrated Huang's affair, while the attorney general declined to answer questions.",
+   "urls": [
+    "https://bbc.co.uk/news/articles/crpdw1qx7jgxo",
+    "https://nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html",
+    "https://wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE95MDQ2enUzdlIwVHpBQTRKRG9Gek5jcTVtdGNaclcyRVpzSVVnWUIxRl90OFZoSGpaNS1HZ0N1bGw3TFNqazVDS1JMVVNvOEpRVWgzbnFPZUNfUm8ydVl6cnlkLWJ1M2wxWkNTQk5n?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZWlOOHhscFJnY2NOWWYxR21rTzRubEFQOG93MDFiQjlJbFlxUV9JemdHWnlsamZyTXNRS0pkN1VTMlBLUzFpYlAtMUxBblFhV0xHR01IMnhTaFN4b2dfajdlVlNRTHVQZy02SDRadHpqeGpEMFRud2o1UnNMS0RJcGVqcWNFa1l0?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdDBtR1FfWU5YMzBKWUlXWmc3YVotaWZ2eHBQTEdLd1ZJN0duSzA3RFNkQnFFM29rSXVrdnlzMk1ZYzJLbUd5dnJhYUQxb1pVYU9DT0wzMmlfSk84NW03TUZqTEtQNDNDRzQ0OWIyOWJ4OHNEdUV6c0hIWDNtRlk3WGFkbl9LbkpwNExRSS13SjFnQ0o2b0JrbjZKNHZJQmpmZ0VYMw?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWFFDQm5ERWNWTXg2VE1aUkUxdkRMcmhyZExSMlJJS2xtVjAwZ3RtRHZXeUhBQ1p3VVNnUi1XZXI4S05oV1dKcHptYTM2cThGN1ltU3BNMm1PSnpFTHRsN1RYQVNoSkhsM1dXUGJ2c2xGUlZFbl9DVEtOYkpXT2ZDN1ZTM29hQU1hYUtBdHJ4YkQyTkxodm9yNW5jTzAzWTNUSTRBNGZybkp5SzQy?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNX0I5bmdoZGlmd19QdGNNbG5mRnF1ejlpZ04xNG9iWFd5VFFwM1dYN0dSNC1pOUJkV2dGRnRTSnF5ejRRbHFNd0liMm5leHNfNFBWY01wQjRhNkRYSlRidWJTcENQSFJsOGhUcUlfZkJhajhfTjVMUzZiaHAtcGkxVjJIdG4?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQS2ZEeXZNNGRycUluN3RIa194bkhMV29Edy1UbzRJc0RzOG5iRWF6QmlwNldoUURnaHZNazlQZU9ZaWtnX0k2QWI0OTRYSzY2TmdUVVlYTmpwTkJFN3AxRkszOWZuQXhYUmtyQXNUUUd1S3BEdWdtQlktX0ZxRGtna3JfaGNaU1hUeFg1cjAyeENUdE5D?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaDI2MUVaY1NkUWpVOWRFMXJUQW9McW5HSDUtZlZtTlNjQVFoQzU3TE92WlB4c04wenRXZWpmamRibm0xc1pzM29WU0tHMGt2N05kQVV0b01QTTduTGxRX2EzWmZCNmRtV3F2SXp4aGZZZVJSbmNUd3F5SWhZdDhQLXBuUkZVdzZ6cnJuN1ROOWlQNmRnMGlrZHZ6bjVJUkF2WGZz?oc=5"
+   ],
+   "outlets": [
+    "bbc.co.uk",
+    "nytimes.com",
+    "wsj.com",
+    "news.google.com"
+   ],
+   "importance": 80.0,
+   "reason": "covered by NYT, WSJ, CBS, Reuters, FT; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 4,
+   "headline": "Google announces Gemini 4 flagship AI model after months of delays",
+   "summary": "Google announced its Gemini 4 flagship model, following a period of reported delays.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOLUs2Q2JnR3E0NUQxRmVnSGxNUXh1UnNVTExaQ085Y1dxNml3Q2JBN0ZocDNQZkRYZkFJc09hTzAxYWVSQ3FEWTRDdE5Md0xkaE5aeDYtTWJ2enNWVWtoRXEtNGsxbFlPSnlJWDQzcUE4dUlKRDJfdlJpYTJ1eXFOWGpxSkZINm1hNUtQUTBYZGl2OVFROE93?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 80.0,
+   "reason": "single source; flagship model launch"
+  },
+  {
+   "arm": "editor",
+   "rank": 5,
+   "headline": "Jensen Huang apologizes to Nvidia staff, says he violated code of conduct and is in therapy after reinstatement as CEO",
+   "summary": "Huang acknowledged violating Nvidia's code of conduct and making serious mistakes at an all-hands meeting the day after returning as CEO, while denying that Trump got him rehired.",
+   "urls": [
+    "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy",
+    "https://theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+    "https://nytimes.com/2026/11/24/technology/jensen-huang-apology-nvidia-ceo.html",
+    "https://wsj.com/tech/huang-tells-staff-he-is-in-therapy-apologizes-in-nvidia-town-hall-b79647f0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOREIyb09ET2cwa3ZHekpYQnpBWFo5YlBseEduVVpKTUJsM3UzWXhCVHk2SFlNempwczc3NFpjWWtsLTBuQzkwX01DSWowcUFhaVVxOVZrNEh1YXJLcHJwenRhc3VyQWVkSW1zRll3NXRKTWhlTnhwZ1Y3RXhaNl9wakY0OGNid0x4RkdjNThHSGZMdVVVYTgxV2xZZDR5NVZzNXk3RXczTU1RUThya1JrRFV5Wnp3a3V3bzVDaWljbnlWN20t?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQmhlWk90SmZVWUllcWFBTGNHbWs3SUhBUXNEWUh1ei1tQUd0eFQxSHN5RnJHcFZyRENZS3VCaVdLalFqZzZpd29NcjRJU3BuSGlEVGZULXJJRVN3VlVJeXE4RGM2VVBIcFNPaC1ielpmaWd2YjZzZkxWU195YWNyQmlvTXVmQ1hFelNzcGtabU0xUGtUUlItTXhhYnBjX3NsQm1BajRtRWhwblFubjhqLVg5eV8tbW9wU2JWWWMybVpPQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVzhmUDdZT0JqSVhGX0lxazBhcUFaM2pIS2I0UHJOMVVUa1JOWFhVeGVrREVocmdyRWhQVzlGOEVpWDJXSGZxU1hkcEJ1TElmbXFXZXZnZVk5RmdBeEl2WGljdG1GTFl4SHVraWZfdjRsVFcxMWlBUWpCM2JaSHBhZ2wxRV9hSHk1R0hQcmRhNzAwcmEtYmc4bUtpOU9jbG10?oc=5"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "theverge.com",
+    "nytimes.com",
+    "wsj.com",
+    "news.google.com"
+   ],
+   "importance": 78.0,
+   "reason": "covered by NYT, Reuters, TechCrunch, WSJ, The Verge; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 6,
+   "headline": "Reports detail how China accessed Nvidia AI chips despite US rules as Washington tightens chip and token access",
+   "summary": "Reuters and Le Monde describe networks diverting Nvidia chips to China, while The Information and CNBC report Chinese AI firms facing tighter US chip access and Nvidia sellers seeking buyers.",
+   "urls": [
+    "https://theinformation.com/articles/chinese-ai-firms-confront-dire-future-u-s-tightens-access-chips-tokens",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU05FY1hvQmJod19oM3p3aTZQaS1CdktCWEZsSnk0TmVWREE1a0tmVW5kVnBxdG5VNU1TX2FmWnZ1aTc1UEQyblFkSklCZ3NlcU1XQUZQVDUwTXZ6R3BoVjlRb1RPY0pTNGdmUUdNZkw0Zi1oanJOcXFieGlBdzRTN05pa3FsaVhUWVk0UWpzc0hkN2kySGF6bGRpU1Y1a2IyNi1iaUFQZThLNVZON0E?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcE80eU84aDZfY24tLUhfMURrVFZHdkt3UHZuNjcxOXA3MUdWU0ZXUV9Od0d2QUJUWVFtZEN4X19BekxhdUFzcUNlVFYtZVdiMHgtTEFPQWtxU2xIS2NwUW1HVzJkUjNRS2tiMkJEa1ltcG42enk0czYyQXNjN0xibUd1SFNGU3pzd1diLWxDcFlmUVVqUmRoNVJ5VzVDNUVmMDJNRmxTY2dJSjJ3MGk4UUNhTk9DaGNLQ1E?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNV3BLV01MMXl1a2FaazhNYWFseVlPZ2g0ZnBwdnI5aFdkV1pHR19QdzZQWDk4YlJMOFZtZk9PbVlwbmU1WXpXWjFHaHVfX3c0SVd5WHFRM0s3eW9EcUE1S1RTYUFxLXBvQmthZFFNYkFNRy1EeHNyM2gyT0prRzNPWEVPaGVGMFo2c1E1eTljc212bU5qY3EtdnlDN01WSTdnRjZOYkZKdW1lcmttSlcwazFrSFlidExMay1iTHlXaW1TQVBIUVE?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE1IN1pwRHJFN1ZiXzJpeXpsLWI5RGJNMTNUU3VSNFY5Q21iUkVkNDhneFg2VFg4TTI3R3k5RXUtb0hBRGRhYkVXdXZablA3dG4zSF9yc3Q5YmVDTjBBZjAxMXJFWUdCUFFwZHQ3dm9QWG5uSWhXdS1KRGRVY9IBgAFBVV95cUxPYW9MbXdwMWFTZFd6dmhZLVNGYzdHUmNDaF9VQk5jN2lMdDFfU010WUdOX2t1ai1qNXYtZi1TbnVTbEt6b0pvejRsdjJoYmZuWXJwZjl4TkpuZHNpeHNIbEpFZkxuc3RnNExQZGRWZ0ZQTy0xYU9wYnhCT3k5a2tBUA?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxNb0VKandzcUtJaXdEWTFQUHJaTEkwbkFWU01xUnVKQmd0a0VWRGFUQXlCR25QS09uOUhleEhQek5jaFpiMkR4MmhrYnA0NVRsUzNGZ0dZQWtWMkdlbjg4WlZjUWRWMEQ3TDlQY2xmWUdJOG9QcTFFVk5Od05Xck5sMHlaX2gwQmFWOHNoYVRhR3RSNnNuaTdQWXBYM1o4TjVYWWc0eVVQYXJpN1l2ODhXOXB6OWExT1J1MUx0a1hNcTZoV0xxVzhIX2x1Nl9KYVU?oc=5"
+   ],
+   "outlets": [
+    "theinformation.com",
+    "news.google.com"
+   ],
+   "importance": 76.0,
+   "reason": "covered by Reuters, The Information, CNBC, Le Monde"
+  },
+  {
+   "arm": "editor",
+   "rank": 7,
+   "headline": "OpenAI and Anthropic employees reportedly alarmed that unreleased frontier models are too powerful, clashing with leaders",
+   "summary": "Reports from Decrypt, Business Today, Gizmodo and Tom's Hardware say staff at OpenAI and Anthropic worry unseen frontier models are too dangerous to release; The Information reports AI safety advocates souring on Anthropic.",
+   "urls": [
+    "https://theinformation.com/articles/ai-safety-advocates-sour-anthropic",
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPY2Rrandac3l6T3lFcFBvT0JVN0VhOEFvZmJ5T1FtWmI1M1JyZzVKcmEwUHNyZHhwVk5XcjVqZUVkLTlQMW1rRjlLR3JkUVVURExJLTJZYjhzWWMxZUJlNWJoX2xVcjdJREpZTWduNlhpNjFCcEVtTE05dUdaUGdRT0l1aG1YaDQwOHdKSE1fcVlmdGswZlMwVlh5Wk9ScXdwYmhNeHZCR2hvMDFrQ2xaV0RfcW9mOVdyZmUyTEIwblBUbEh6R1ItVzJwbUF2dmJiV1FIQjF0cWtRZTJtOEZWNtIB5gFBVV95cUxPTEFLNDJZeE9xc2F5aFhPeTFRa0dxcXhZazl2Q0M0R3hfMEF6QW12SDFuaUVyVjZrS2xEWF9xOTRFX3ZKMHRMdzlOd3lBeHNRdkRNUWVSa2xqN210UEpiS0N2Ri1jVHVkY0RaNGZwdDNFeE1mVXRudHdPby02S2VfVXZnSUFIN09PLUJTQVltZXpfeThaTWZjcW1KakI4YlpwdXkxYXZiNnBGOEs5MDdkWHpOWjBLVVhvMmRFTU1TdHp6WEZkUF9JeVE4Z011OUk5SDNFWlcxbEFTWnlUakxNUWlXQWdUUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPUWY0eGxvOFkzMjQwN2NORDRoX2Q1QzdzVDZCSlZNSHBDU0VmcThYVDREejJKWjhIMTdMVVZJbFBEM3NBZnhKTFFfYmhteXMzeFFCLVV0cEVUUW5CdWRDXzNIUTFiLUhkTW5vaXlPLWdrbUFjQXdLeHlIY1JsQ2dZdnBSSUt0U3VCZjBsS3FHTlMwNFNybWNaZldZeWlValdITE1Xcm01eF9BczdSYjJMcDA1dHJWUmZpQXhmUng5Z0JEYThBZVlMQzRWb0NSRHZBcVI2clVQOGRfd0hkMWxYWk5CRDNFQdIB6wFBVV95cUxOcVBSRFN3cGxiMzlfdUhTTnFLS2FTZG8tcl9YMHcyZ19GeDlHLWltdld3WE5xdDAtX1VQN0k5Y0VRX193MGw0cXZ4OGxvSW16Y0E1eWUtVVZYX3o5NXFIVzMwUE93Qk93c3R5bkctNS03czA4RXNLc1E4ekk2Xy1qb2RwbXNEU096OGxSZW96a3FVeFVHUTJUV0pIY1p1VkRJSXhOcVJqT3FaR1JfRzB6bURHTlVwUzBuWWNyTVJjcUcxUURhV1J3RjBVNlM5c1QzVWRqTFRpc1FGWTJOSEs2RGhDNktMQWVxSDFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE9kaTdMdzU2Ulc5TTNQQzM1N3llbkg3dEdlNHJSN2d4RHdNaWc2UHA5NV9taWloNDhWS0p5ZVpUcnA3TUNEUGRNdWM0c2lROEsyTS1YWXAtc1hzd0VnVGtuX2I2Rm56Z2x1UFlr?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcnkzb3R3VlF2RnJLRlRVUnV6LWFqM0RjRHRPcENHd3I2aDNZc2ZyRUhXbVB2aDVoaDZTQWtWUUtZdGJIZmEyektwVENxYWs3UGs4SkpBMm45S2prR3hKVlRPNUZtem1GUDJUR29jbW03SmMtVVg0cThMV1U3T2h6ZThSYTROTXozWWNqZTVQcHZxRm8?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQY2dQRmtPU3l3THRRYUhvWWt0VjNpeFFlNkNKSERjZnQ1UE1RNGp2RnRzRFB4YzNsa2tPNmRzbFR2TzlUSXlXaF9jYzJZQUVzV2hOSnFzVVpZWXpjeVk0MTV0c043VEhubFBJNG5KNFlqelFzRGNCVllYWWJOYmpxSHRJV3ZfY2E0QWNWYklFclhVdjlMWDcxMVQ5VXhSdGdzekdTYg?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNmxIZ2xSRGlpZFozVG90cXZ6WENQUFlTakxfRFNYT2ZsSFRtOWVzeDQ0SS1TNnJrSW9aSDM4bmdiX0drNW9Nb1k5b0VGQVFPX3VOVnJaay1jU1lpRFcxQXNEazZZRU4yVVlMemF6Q1dDQnZLUzJrUC16STNzdGhXMkNpVWNVYWhVWjNTLWRweW03OWgtaXZfSE9XWWtRLTZUcjZKa3hVY2l3Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNY2d6Tkh0dTFIMEJ0QW80OHlCZWRoWGtBN3Z1cUdTQV9rM3ZTU0JWdVBhM3NYcnJJaFlkcjYwaG5nczA2RHczQ2FpcXNMWDRyTFRYMFZ4dkZCaXdmaEdvU3dQb1B1d1N3RjZyX3ZRQS1rX3dDdzd4THlpYWJkeXh5dlB3ZXBqT01PeU0ycUdHUUpJaW9meThYTEY3NHRhUVdUYU55b2lpZGtiVFVpeFNPcVdCVXdwSVJaakRBcmx3?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOa3ZodFhQOUxtRVlOZjVrOXdVU3c5V0Z2QU1NVXQ2RFhaUllvcEtYa2x2X0s2QmVicWRzbmhxSG5wVmQ5WmlwNHdTZUVBTW9pb0R1TVoxT0pIbjJaYWkxUjBXbDRJLUJnVXp5UDNFZkhQc3FHNkU5LUtXSlpHV0t2NzVKSzJSdm12Z2JDNXpCZWo?oc=5"
+   ],
+   "outlets": [
+    "theinformation.com",
+    "news.google.com"
+   ],
+   "importance": 74.0,
+   "reason": "covered by Decrypt, Gizmodo, Tom's Hardware, The Information; multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 8,
+   "headline": "OpenAI proposes 'perplexity' as a measure for AI safety limits, UN chief urges global AI safety framework",
+   "summary": "OpenAI's chief scientist floated perplexity as a coordination metric for an AI slowdown, and UN Secretary-General urged talks on a global AI safety framework at the Bridgetown summit.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxPSGNaS2NOMk5aX0JXZEhGaDJPdHVVWW41LTFpSk1zREhablpSaTlpQmxXeldKRkwyQmZRNXAzRHBsRGU0ek9ZX1ZSQmhVRHdOQTBaM0d0YzN6LXJQcWZFT3JQMkdEdXV1dWtlc1FuY0xPTTZ6NmVLNTc4ZDJFQ3FXckwwT3VTZw?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxNa3JyU0FfaXI3UUlMTUQtYmxEckVQXzlINUlQb0FBcFB2OGdMWGRZOExWUmtxY0JJNXhYaS12OG1saGlqZnVXSmVMTXdIRTc2T3AwOW5SRGpRMUFycjdBYzlDajZtUV9sLWtqd3FZOVFqcXhEQk12V3cxU2VvZHpTSXpibzE3ZVBrYVdvODBmcG5IQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUkpCamJ5MHVzeGRrcXFhUnNGbTlIUmdyeFdPaC1tcERKSnZSU28xRjU3WnFLWFhOMko0alNzcEUtTy1EeUlBakhyOE1oZzc2dUVYdk5uYU41TmxhMzVDX2RrdnlCZ1o3WDBHaThmY2w2TWQ4eV9rZWpHZTFfV21KUDZMZVN2ckw2REt5WTdqUXBHQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMinwJBVV95cUxPeDhHbjV2QVkwWlpFZzdxNE5aYlM3TlNjdVpSSlZ1UVBGSmFLaHljc01vdFhjRS1Yams0WE9PMUhKRUJvZGJmVXlHQ3ItYXo3MTJoajNIQWZmSTBiWDRMWUwxWl9xVVNJbF9mTGY1dlZlSVVnajladzhwc1VGVjU3bVJkLXhLMy00SHBUa2Y0aVl2aVN0T19fN1RCM3VaelMzTDRHRUxOUXRtTU5EOWhycFVDUjQ4WWRYTnBnNUFFeFVEdFFvVGVNcXVYWDlfSG5QOWpUYTczY1FVamFudmJWd1FxOUxCYnNqQkg3a1kwYWdnR3BCWkRZN081NzNOSXUwN3JZc3FaSlVRSHg1R24zUUYtVGIwSGhOaEF1VkM3Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxNekltRmYwR2l5VG1sMi1pRXhPM1RDTndLVG5LYzkyazZRV1BreF9SRFNGUmIta1FtQy1VM1B4M2hjOVByNWhPYkZMNU1SMHB2Ni1Ed2RFcjBiN2loelcyLVI3ZHMyMUp2Q04tckR5ZTdmUmZwaFdPUEZ3MWR6eFJXQVpKdGlvY3M1WnRyN1RjMjlSN3dWZGRPUWk5Z0EzQldWbnJyaUw2ZVdzWUprQVRMcGNCUnE5cEpKc0tMXw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcEdDeTJ0UG1ma2F6RExBZ0JuN3NtSXJSOUdiU3ZJRjVRNjZLcFljRGpvQUpTUk52ZWZSbTJCR3BOVGFvRTAxMzVreDQ3c2FfOXdoMWZLbFRVZzNMRW50Ym5GMkUxb1dZYldadWhWWUNydk95eEstRy1iZjJEb01mUlJPTVF3ckJ2Z2t5TWhpV3ZFeng4OGlfRFFqNFJuOGtZU25lb2V6VEdWbFBzZzQtNVpMZVk3TnFqLTM5Umx4Ni0wUQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 68.0,
+   "reason": "covered by Fortune, NeoTeo, RTTNews, Rappler"
+  },
+  {
+   "arm": "editor",
+   "rank": 9,
+   "headline": "New York bans AI chatbot toys; state AGs challenge Character.AI bankruptcy sale of private chats",
+   "summary": "Hochul signed a five-year ban on AI chatbot toys while vetoing an AI safety bill, and state attorneys general challenged Character.AI's plan to auction user chats.",
+   "urls": [
+    "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb2g1bERMSlZJUWZRQ0hCcURVVUJnUXRxZWlGNDVORlE0Yko1RkNXZE10VW1EUnpsQUxUOXl0Ulg0bjlzUXRNcGpleDdDWXJoVEJuUld2ZHRrb3prOWdQMnI4ZUVPZ1JyeGprUG5nNmFxMENkckE5amRqbkxkZ1Rid2VfUmrSAYoBQVVfeXFMT0pGcEgwaDgwQU9OVUh3R0QyWGNTVXVIVVJkbEY5Yi1qMG1vS3d2b1dva3pJRzE2YUdpUEVsa3Naalc0ZXJfTmpxZTNEZnRyVFk1V0dPeW9MSHNJdEJhUjhnV3IyVWZQVWdXQlo2aUU5Q21VQTB4T0R3RDJ4c2RKQVVXbGc2cGVacjRB?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQUVfLUtEeWswaEhGOHFkWVFXbVRKMlp6ZXlwZFRiTDE3bWQ0blJqbnBnbkxVUUhJaE5PV2hmZGlvVXFXVV9tNl9IRWw2d2hsM082aWNSWG5pa1hocnZsbXdHcmZZVktFYm5Hb3NlZ1hnWGhHeVJEN1JramtQdTVTd2NJT3VVa2M5NlJsOHliM2JjNEVWcVA0QmJB?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxObFYtTFJubk1fbE52RjhRRWVEc3dvLXYtOURuMkk4MDMwa2xiVVhxanJnSmxacng0VUxpb2k0cUxCUUdQNzhXdGQ3VXNjSldhZlNaUDNxaXllYTZfT3VZQzZBUmlEM1NjQ0lNSmRtWnVLb1BJUUFHc3gtdUZoMGNFZHRkZm05M1J4M05aYzVCU3RTRDg1ODUxX1hZZkMxTXlKcUVPaQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdFZTVlNSU29YQTR3QjJheUJHVHNUaDZSYUNuRkdkMmFWUHIwXzg4RVBEdDBKZUNXQ1RiQ25nZ2xhQVI0bVFiMkdkaEpFZmRUUHJvZko2VUpyQ2ZhRk40Q3ZPZVhkWUQ2dTA4U0lzTnAwT2tlNFI2bEkxNVZERVhWMVdQczZQTTZOekJ2bjduZTlBdGFycTNuWWRCX2tyWEhmZ2dlZlF2enZtTWdtV1hRMzBSWVRVcjRVY0hiZTNmN0h1bkd3Q1ZhS2VJT1rSAcwBQVVfeXFMT3RWU1ZTUlNvWEE0d0IyYXlCR1RzVGg2UmFDbkZHZDJhVlByMF84OEVQRHQwSmVDV0NUYkNuZ2dsYUFSNG1RYjJHZGhKRWZkVFByb2ZKNlVKckNmYUZONEN2T2VYZFlENnUwOFNJc05wME9rZTRSNmxJMTVWREVYVjFXUHM2UE02TnpCdm43bmU5QXRhcnEzbllkQl9rclhIZmdnZWZRdnp2bU1nbVdYUTMwUllUVXI0VWNIYmUzZjdIdW5Hd0NWYUtlSU9a?oc=5"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "covered by TechCrunch, Guardian, Just The News"
+  },
+  {
+   "arm": "editor",
+   "rank": 10,
+   "headline": "OpenAI reports GPT-6 models show intrinsic protein-design capabilities",
+   "summary": "OpenAI published a post claiming intrinsic protein-design capabilities in its GPT-6 models.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaUdETW1TNzZiLWl5Z2lOUkhpRmtFMGNxY2dRVV9URkpQX3RVRGpVZGk5Q055WEY4elV1X2VHWlVCYzZTQUMydEk4YThidXZUOUh4dlBZVmpfZ21jaTZIeVRQaEFmdFN5MDNkNDhhYU5qdTJEN3ZQeGRXNG5NS215c3hxa2hFbEFjWW1DVE93UXFkdw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "primary source (openai.com)"
+  },
+  {
+   "arm": "editor",
+   "rank": 11,
+   "headline": "OpenAI claims a 57-year-old matrix multiplication bound advance, a 9/4 exponent preprint",
+   "summary": "OpenAI reported a preprint giving a 9/4 bound for matrix multiplication, claimed to resolve a 57-year-old problem at the heart of AI computation.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ndTNOTkpnUWNFdndMc2ZEMUdKM0hsc3NVTGtwUU5BVVJYVGxwZ29TUDZENkU3OEdpSzhxNGhWaDVCbjlBU3VOX09idUk3WDFYaWN2VmtHZWdRYzRJTGl3RURqb3owdlZwTE1NMTZB?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYWRNRlNVNGxxX1RZX2ZBTndVM3Jqa1Jtbm5VNlQxZFJZNVBiaVNTR2JqbXpWXzFYdlZ0NWQyVFNHQnRIUUJrWlh0Ny01WU5QbkpVMzh4M0dLbWgtcDlUUVlsN2RqZ1FJU0k2UU12UkpJSVc5M0lMY3N6cWl2RFZhTkZ3bUVFdkZN?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "covered by The New Stack, Unite.AI"
+  },
+  {
+   "arm": "editor",
+   "rank": 12,
+   "headline": "Huawei convicted of fraud and trade secret theft in US criminal trial, acquitted of racketeering",
+   "summary": "A federal jury convicted Huawei of fraud and other offenses over its Iran business and trade-secret theft, but acquitted it of racketeering conspiracy.",
+   "urls": [
+    "https://bbc.co.uk/news/articles/cmy49ngydqzpo",
+    "https://wsj.com/business/telecom/chinas-huawei-convicted-of-fraud-in-u-s-criminal-trial-20e17ac3?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSmhBaGpBTEdjQXR4UmRuMy1KVWY0anJiNkxHQ2NVTjBFbWc4RE5MRk5KU1lzZ1BKMVNKVUNRV3hlRmxtYWc0cmlpSlAxWkJDXzBhdjFqY0RfbE54clBNU1hDODJjbEk2ZENVMWtuM3F6VVZjWGpDZXNhZGowZW1UNUlLWGJSU0tYbXhlYU8xRkYweTJrd1JsM0pDdzd3UkM1ZkpTSXdHYTkxQjNzNlhfU2pTcXExSlFJ?oc=5"
+   ],
+   "outlets": [
+    "bbc.co.uk",
+    "wsj.com",
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "covered by WSJ, Reuters, BBC"
+  },
+  {
+   "arm": "editor",
+   "rank": 13,
+   "headline": "Meta relaunches Muse and Amazon, Walmart and Meta discuss ending the Muse agent blockade",
+   "summary": "Meta launched an adapted Muse, Walmart added Black Friday deals through it, and Amazon and Meta reportedly discuss lifting a two-month block on Muse agent shopping.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQa3dIeGlGcm82OGVfY2ZzWWFXY3FWZ3RVTWFyZV95dlN2a1NWTWhiV19OX1A2OVBTNFI5dGF2dzVMQVhmNjdxa2taQkpHeUpJZnVxTlNZYmZPVFJXYkdxYTNzLTVxTHVfSVVOU1pNbFBUU3BMYzNCZ290d3RIN0RzbE8xekZxNGRBTVdYZlY5UlVpMnJFMFdSNlE5WkpENThvSlVCZjE3eXdMY0ZqUkNSYkxQeGxLMlVJZ19XaGg4NkVDcVU?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZlNkMWNvLVAzZW81Um1Gd0I5clAyOW5kb2t3SWVDekxlcTZpSlQ0Si1ZVVgxWHUxdldyTmVET203WUoxMVFRRUJuUjZJMVpRSkUtTTlxWlRoWHdIRVFoZ01Sb0tVNWpYaGdOYkljekltZW5mUFo1UHJOd2d6UHhTbDk2MG55TGZNeGZ2Y25aZ0hZZw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "covered by Reuters, TechCrunch, The Verge"
+  },
+  {
+   "arm": "editor",
+   "rank": 14,
+   "headline": "ElevenLabs in early talks for funding at $33 billion valuation",
+   "summary": "Bloomberg reports ElevenLabs is in early discussions for a funding round at a $33 billion target valuation.",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-25/elevenlabs-in-early-talks-for-2027-funding-at-33-billion-value"
+   ],
+   "outlets": [
+    "bloomberg.com"
+   ],
+   "importance": 60.0,
+   "reason": "covered by Bloomberg"
+  },
+  {
+   "arm": "editor",
+   "rank": 15,
+   "headline": "Meta unveils first AI model from its superintelligence team",
+   "summary": "Meta released the first model from its costly superintelligence team, per DD News.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOb1VfUjJhOVYteFBVM1ZfZ2Y5UXZSY0hJUG5ZSlMwdXo2dmhGNFJILUJKekN2UFBJWWkxeDJJV2VEUXFQTTFLZndoQmxWVWpwaVlteGt6dzFMMDMtV05kS0luQ1RWc3VwZzFtdzhZZ0t1YUpfRmRldkdVR2Q2UktSYjdsUi1NbmlsNmZuVUtSQXp0TU9Ia1E?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "single source"
+  },
+  {
+   "arm": "editor",
+   "rank": 16,
+   "headline": "FCC authorizes SpaceX plan for up to 1 million AI chip satellites",
+   "summary": "The FCC authorized SpaceX to deploy up to 1 million AI chip-equipped data center satellites, while investigators scrutinize Megaspeed's red flags.",
+   "urls": [
+    "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed",
+    "https://theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE93WlFCbktVYXh3SVU5bFhhdWtYSTZwNDcxRWNiSkk3YzZRSk1HZTN0LS1hMWJ0WE9seUEzNENZTWxxaDV5ZDlMOHdCOWs4NkVSSkVpclBvTTRUNENqb3NCY0NJWFFlZXZ1TkdjSXZGZkVlM3UwSWVrUHJB?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5nVmJ5QVZMNlVaUlpCTHJJeGNKMHRWZWttZ1c2TlhTZWFFZ3JnaWxBOUNIQ3poSVljOEtzR3R5ZllZY0JHbV9wWVhrYzZJREk2alVqc0drOVdETHlUMUNXVjVINWJRZVptSjEwY1UtTnp4Wk1tM1hLZHRZR3dtaUk?oc=5"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "theverge.com",
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "covered by The Verge, TechCrunch"
+  },
+  {
+   "arm": "editor",
+   "rank": 17,
+   "headline": "OpenAI prepares 'Athena' data tool to make its enterprise agents more accurate",
+   "summary": "The Information reports OpenAI is preparing an Athena data tool to improve the accuracy of its business analysis agent.",
+   "urls": [
+    "https://theinformation.com/articles/openai-preps-athena-data-tool-make-agents-accurate",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVGUxS1JOMUQ2NExpN2pkYVEzcEVkZkJLRkxGb08yeFF5WEFpRXV5V09WSTJTZEJtMkZYS04wdGlMa193Y0NBcjBtVzJma1pBcHRCSUtFMHJyOFZEaDdYMnhvbndoTjUzU3QtVmE0Q2dOSUNEY3NySW1OWWlEbndvU2xjVHNPNlQtcnpOdGtpZFMwMVE5SGt0c2djWnAxcmp1ajVreHJESQ?oc=5"
+   ],
+   "outlets": [
+    "theinformation.com",
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "single source"
+  },
+  {
+   "arm": "editor",
+   "rank": 18,
+   "headline": "Amazon and Meta in talks to lift blockade on Meta's Muse shopping agent",
+   "summary": "Amazon and Meta are discussing a deal that would end a two-month block on Muse shopping through Amazon.",
+   "urls": [
+    "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse",
+    "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse",
+    "https://theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "theverge.com"
+   ],
+   "importance": 55.0,
+   "reason": "covered by TechCrunch, The Verge, Fortune report"
+  },
+  {
+   "arm": "editor",
+   "rank": 19,
+   "headline": "Nvidia shares remain volatile after Huang's return, with the stock falling below its earlier levels",
+   "summary": "Nvidia stock stumbled again after Huang's comeback rally, with analysts warning of a death cross and asking whether the company is too central to fail.",
+   "urls": [
+    "https://bbc.co.uk/news/articles/c3rrgqj2zx5yo",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRjhpLUVxeElZVDJYWkRuMEZkMmFOUW85NDlnZjVKTnRxTHRvZlZHQlZwRjZGNmZPaUdVdlkycC10RzQzSm1nZ0taalgzajJLRzNIb0lGd3RCb183WGhJMlN1Ul9QTEQ5a2VhcVdYM0ZNWnFHOG9JT29tc1FtMzlzTm5DZmVHTUpSQWdIc2pMaFBnN29TUEpzSlZPeHVBZ3Q1VDBKRUJYczl2ZGNmMjgyUVZIT1R1NkYtM0EwRzF0X0ZDNWRqT2VZM0g2Um8xVU5SaTZzNQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE52c3JDajhQZ1R2d0RKejhxZDhrZ0QyXzBvWDVNSHFaMzFiV2dGZGZKbjdvZHNUZ3N2U3RGOVV3NHg2bm1CZUpkaEgwUkI4cHlhNmMwa3VDV0liSVluaVZZMnNpbnFRQTNaenc?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxObl9Ka3VoZkFDaFdjUXNRQTYzVkwySUZXbEozZF9XRE9ISlZ5WUZpZ19YWEZQem9tRlgxclJ1M2NSdDQ5MnlBLTFqS0h1M19rT3pZdk1jZjY1ZmxzYTBpc2RNcUxMYW54QTFnVUhsWHlxTi1uMEZBdmRzdXMzUGlLVmZB?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYzJQc181blpIMUkyd3RZYWttempSdDljMjV4VnJDMlJPRlRnUFNtd1V1YVN3aDNsYkMxbG5QeUQzb2szSXJSVmo4OGZ0T1BUWkE0M0dRNVRiQU93czdWUXBDcW5KUjdXeV90bmFuNEVXeGFsanlsTXZiQkhGcGQzSndGRGNsek1yMUtwUHlrZ2FHMDQ?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbUtXWTRwbjJyUHJSeW96c01xRU5wT0hINTlCU0hhRXpIc2dQa2hhSkpSRkwyeW9YSFhHOGpPVVRTb0Z4Tzd1Z3cyaWV0NWM2emR1Qk5lTktDdnhwYVBsTWdnOXFsbDVnV2hMVDNQbVNvNFJGeUVrTno2eDZSZExtWjZfZVRKMGNjT3czM2xHSm1OUEtnSG1SN0F3?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZmRHMHVySEliZmRiMVVKS1E4a1lsSDVSVUN2RmZ3b05RaFM5ZkZ5SmdVdDdFWmppOVdpTmFRQXZ2RUVETjFMc1AzY290V3BEMjdsb1pJVFlRRWcyMjVza2ZjQ3IzQzFFVWFYZl9EZmNLMGJYcndQRWVoMkdCbndpVXRjTVlTQXp0a2lNejNkaUVUS1RNSnYwNEV0Wk16ZmJTbFhoVTdiR0tETkRJRkw5RTFpZ1hOWmhrSlRaVndPQTZqUDZFMkVrd0RaUi1ERU0?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE1qNE95d05EdUt4VmhtanBHWXZjaEZhUktJLXRZaUNqejRZWk1lRW5lRUdUbFhMOGM5OUZBVUNYOVAwZTk0LURzQ3RSZHJTU29QT3dGdWhyTjdaMzJUcUdFaUFMMktvUkx3aWE4LTRvUnYtN3NYZHU0TTJR?oc=5"
+   ],
+   "outlets": [
+    "bbc.co.uk",
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "covered by CNN, Barron's, MarketWatch, Futurism"
+  },
+  {
+   "arm": "editor",
+   "rank": 20,
+   "headline": "Sebastian Thrun's Dulo raises $130M seed for hardware design AI",
+   "summary": "Wowtale reports Dulo raised a $130 million seed round to build AI for hardware design.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rTjFOV0FPUGdDZEwwc3E0bHRSSUY2UDZZeHA3ZklaaTlqSTZ4UHRNOC0yR0hGaXpkbUFhZXBlVWZ3cEx5MktzNU94N1E0Q1R0ZFZr?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "single source"
+  },
+  {
+   "arm": "editor",
+   "rank": 21,
+   "headline": "AI data center construction delays hit neoclouds as Nvidia won't backstop unfinished builds",
+   "summary": "TechCrunch reports neoclouds facing construction delays, Nvidia declining to backstop data centers before they are nearly ready, and Goldman sees US data center power demand booming through 2028.",
+   "urls": [
+    "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOc3FXeU1sR0Jwb3R5UUpxWTFidWtqTk9aUC1iNGd5Q1NWbDVxa010VmJOei1pQ2RTREJUTjYyMHZ3RFFJVTQzMkl2el9xUlhSZTRGWkpYOW9xZlB0SElCTFEwT2hPbUtGM0ItWUZ6SkdzeUw1SEs5Tk5ydk5iSWxuZWROSEVQNHg0TGk2TGtHbi1BNHlDUnQ0OFlSN0UwNDMydVF2R3Rmd18wWHFBaVJyeW1PdXAxU1NqaFliVG1ZRF8xQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE56eC1rNEgtamFWQ0kzWWw0bVZObjZqMDdkZE9XOU91aVdST0RtYk91U0EtNEFYWEo0RWFDVklpaTUtZjFVc2FyM2paTk5nMWhDOHFBRkNHOWdVdmpiZTBKVkJoWFlSN1NWTUVPeEhQcm1wbXdveGtrWNIBfkFVX3lxTE9DVkFsbFdUOEk3YmRtWHR2bmJYRXFCbXNpMHZBeHd2X21MRFFBRGxXdXdOT05wRm9ISWhkRzZSVDI4Q0pSWEJ3MlZDTS1saXNpVm8tU3NIVnIzWkRxcWdGZE5SbGdOVEVaZURnNnRIcGRKTERfMllaaW9xQTBxUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5nS1FDUS1xNTd6cWFBUE9JbUxkUnZUSnJFck82RHlqeEZOVTBUenpqYWJHbjd0VldkNEI4b3NFalZXTXhRTVFpQ042V2FVQ0g2SXNHeUlYOU1yQnVDWE5FaDFFUWNIUXB3UFpzbm9PcDNNb0Vrc19wV0RKZ2ZwWjjSAYQBQVVfeXFMUERIbXJUSm81dUY0YV9wRlo2YkpfNTBtY3JCOGFsSFM1ODBzU1ltLVFnaHZyRkhmZURkY3dCX1RKVjc3MUd0RVZGR0dtZFZFZjc0LTczZmIwVm1sTjBsaUNZSEo5MEhTWXdMcXU2aHVXTHNRWXJLZnd6VUU0cmxEUHdHZGRp?oc=5"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "covered by TechCrunch, Reuters, CNBC"
+  },
+  {
+   "arm": "editor",
+   "rank": 22,
+   "headline": "Anthropic's Claude output can be installed as software",
+   "summary": "WSJ reports that Claude's output can be installed as software.",
+   "urls": [
+    "https://wsj.com/cio-journal/anthropics-claude-output-can-be-installed-as-software-e840ac45?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLUJxLW9ZUWtVc0pTOVo1N3NOOExIUU5SQXJmQ2tsMEJOek4zdmFjWHFLM25FWW1scWRSaThpYkFhSjBaYVRYUmFzWFUwcW8tck1hellEMDRvTGN4TFlLemFCZ1FLellGRDZhSlFHWU1zUXQtdmw5SWI5UmlEcTJRVUpISENrMHVZZExSalJSLVBMMTdONk9yeGtB?oc=5"
+   ],
+   "outlets": [
+    "wsj.com",
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "single source"
+  },
+  {
+   "arm": "editor",
+   "rank": 23,
+   "headline": "Australia passes online safety law exposing Big Tech to multibillion-dollar fines",
+   "summary": "Australia passed an online safety law with fines for Big Tech that could reach billions.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQb0VmbVBBdkFRU29MMjl2RmM1bDgtcFI1ZlpKN2lJV2JocVppeS1zbzJPSWhvVjVSNnExam1KMHhDSTgtdVpSR2RMV0dhOFEyRTJzQnI0eW1lNGxkWDUxZ2V1a2JNX0pkcWFtT1VCVWtKNE5IY3plZHRabVJySThIekJkVmFJNGlRVUFjNS1INHR4WHk4WVM0aEFUbklvMEpyVm1R?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 48.0,
+   "reason": "covered by AP"
+  },
+  {
+   "arm": "editor",
+   "rank": 24,
+   "headline": "Google DeepMind applies mass spec skills in Google Antigravity for molecule identification",
+   "summary": "Google DeepMind described identifying molecules from mass spectra using skills in Antigravity.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxPV3EzakZvZ2lKbGk1aU5fb19xdGFSeXJfcHFsaG1mYXZtVmhCOUFCVzhwMEF0YzIyLVFaQVYxQWFybXFxeENKdlNRUXFKV1hHRG9xOEtZSnlzN2JHeUFOVEhaYXFVSFpSVEVNeUhNbHJDaVNTbHg3aGp0UDczSTBUV0p1VndLZw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "primary source (deepmind.google)"
+  },
+  {
+   "arm": "editor",
+   "rank": 25,
+   "headline": "Benchmark finds even the best AI agents struggle with everyday tasks",
+   "summary": "TechCrunch reports a new benchmark showing top agents often fail everyday tasks reliably and safely.",
+   "urls": [
+    "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life"
+   ],
+   "outlets": [
+    "techcrunch.com"
+   ],
+   "importance": 45.0,
+   "reason": "single source"
+  },
+  {
+   "arm": "editor",
+   "rank": 26,
+   "headline": "India says AI regulation papers are nearly final; Pennsylvania introduces data center legislation",
+   "summary": "MeitY Secretary said AI regulation papers will be released shortly, and a Pennsylvania state senator plans data center legislation.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPTFRUVnFrVEZ3cVZLYkZBS053TnZ2VEx6YTJ6TUo4WVIxRXJBb3QyVkVsWHlZMnlWdFEtNHVwajF2T3Bac2UwNXp1aGMxWnNmbXF2X2R1cjU1Q0hsVUF3cG9ZcENQcjdDUFhucmVoTGVUbk9iVmpoWHdLTXdaYXRJRVg2QW02WHdGWmk4ZlVwOFpiYUxCMWFLR01pcnp0OVhfYy01MnNyWVJfVHRlbm1QczB4bTZtcWtyMXhSQVh3eHlPVF9EOEVLS1cxZldFZGp2WHRYTERJcHM3VVpicDVRWnUwRmdKZDBMQzJmVUotOG54ZkNkNlHSAfYBQVVfeXFMT0xUVFZxa1RGd3FWS2JGQUtOd052dlRMemEyek1KOFlSMUVyQW90MlZFbFh5WTJ5VnRRLTR1cGoxdk9wWnNlMDV6dWhjMVpzZm1xdl9kdXI1NUNIbFVBd3BvWXBDUHI3Q1BYbnJlaExlVG5PYlZqaFh3S013WmF0SUVYNkFtNlh3RlppOGZVcDhaYmFMQjFhS0dNaXJ6dDlYX2MtNTJzcllSX1R0ZW5tUHMweG02bXFrcjF4UkFYd3h5T1RfRDhFS0tXMWZXRWRqdlh0WExESXBzN1VaYnA1UVp1MEZnSmQwTEMyZlVKLThueGZDZDZR?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVk54N0Nvek9Fekg0ai1pNUlNRWp3Y2FRRUNRa0RWTm1fUi1jeGpMdk9jdTUwOUt2aUlzVFNLYkRkQXVxUlc4aXpSRE9wbnlMM0NyZkJzQ25WTlE5bFNrY0E3Y3c2TDRNclhqc011bDVfMnp4dkdvaVk1T28wQ0dGemdEbzR4UmxSMG9ETXBURlF4U0FqNnRta3NVbnF2enFvOGhPaE5SY9IBrAFBVV95cUxOSXg5cnRYLWZzV1RFOUdXbkt1cFQ2UlFmcUFDSko1Sm50SHZEWDQ5aDhTVEhueG5IenJSTXh5MDVyeHVrMHFDak5Ub2NNZ2pZaDl3cGNTMHZYNGZsWlEzY0ZPdGU4Yi1fMFU4RW0zbFItTEFmMzJoWmpyY0hodm5XTm1BNTFLWFcydUdQZDVCMWlvb3RxMmh2Qm12ODU0NnZBWWJ4NnlicU9YYWxw?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeHg1bkRCLTVWTGdqcHhxRG1CV0tTdHdWRFBiQkNpaXAyUVhfR2txRE54RVRYc0gwMktZVm14Y1RCYkdmWnVXMlRUU3JTUEdzanUybkdWUURXQTBMV0d3YVlHMkRMejdNUThPcjl1Wkk5OFlpU2p2RDZkbmdRV1FCMXc4TURCR1l6Z1psTVhMRERlaEVlcmNiVEthS0dJSHdiNGlKZk1weHNtRzBxTDFnWQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 44.0,
+   "reason": "covered by Tribune, Lokmat Times, GovTech"
+  },
+  {
+   "arm": "editor",
+   "rank": 27,
+   "headline": "Anthropic migrates its Messages API to Rust",
+   "summary": "Anthropic published an engineering post on migrating its Messages API to Rust.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91blh2eENvd0hsR25fTlhrSkktUlc3djUxb3NYdGo2dm1maGJfZlhvU3NhSS1rWk45WDczZnpiUzVrOEFWVVA1aDRfSXo3YkpfY0RuSzdESDVlU1FqN1VBV1N3Mm5ZdTQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 42.0,
+   "reason": "primary source (anthropic.com)"
+  },
+  {
+   "arm": "editor",
+   "rank": 28,
+   "headline": "Commentary and reporting on what Huang's return means for Nvidia governance and succession",
+   "summary": "Analysis pieces debate Huang's succession stance, the code of conduct breach, and whether Nvidia is out of the woods after his return.",
+   "urls": [
+    "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy",
+    "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTE9QNXNXc0t6RHVRUWJzQl9icTJlY05LREd1X1AtVko4eU8wYTgxeFFHVTU0MmlSdmJCdXdudzZDVURlSlNYbWJGM3htaW1Na1NKZ0p3cllfc0dsT3NFS3dHTjB4VFByOWtEejF0b2xTUnIwQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdkdPNTNDeHhfUjQwRmdDN3E2UjBSdjZRRWdlTHMxWkQ0ZEljM3BYZWFPdW9iWURWaEIzblFSQmdab0JmN0c1NXlMcUZsanV5YkdQeUlXajZSb2lRVkxWUjFHdFR5ZzFtWWVXMmx3aUcxN3pOS0NaeEtnR2J1bnU2YTl5dnJTeTBscHczNVNFaGdpaTVKc0E5Ylllb29yUDJ5Sm10YU9HVm5JUV9IMmduZ2NQOA?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSnk0UjI4Ry1BSTdRMlhyMHp6Z1ZUS3lvV1dSalhYTjdFVlljRlRtLUVhQi1KZHF6LUR6SWREYmpNN0pSZWt5TlpXVjlfcWt0NHllVlFaelBMTmxteWZTVi1kUHVVZXY4dVJtUHJwdXkxWGFmbC1RanRPdmJBSk5DZ0FFdXpxZHVwQ0hQQm9zV1BCUXJSWG13NndZQlRBVDZhY2RqT1VlX2tDQ0s2Z3ZTOA?oc=5"
+   ],
+   "outlets": [
+    "techcrunch.com",
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "analysis, multiple outlets"
+  },
+  {
+   "arm": "editor",
+   "rank": 29,
+   "headline": "NVIDIA publishes technical posts on NVFP4 attention on RTX Blackwell and inference on RTX PRO 6000",
+   "summary": "NVIDIA Developer posted a technical guide on NVFP4 attention optimization and a Hugging Face post on Inkling 2 Mini inference on one RTX PRO 6000.",
+   "urls": [
+    "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNmJ4SEtfa1duOFdhTE94WkhpVkt6VGVpa1hHMWlmZEI3S3hMZnRrSEZQeGRTQktiSTZ6Qi1Cd3FUc0h4NVB4RFRsc1FXRXJZdnpzWlhmMjhwLWlELU5uNEFheGgtNVg0Nl90QTJtSkc4bTFOUzMtV2VsWDlMOXVEYlQ2bk9XN1R3WG9IMnBLS3lnOGE2NU9lRVRvMW1ZdEtUOVZjZEJVSkJXTmtUREhWTS12SHIxOUFP?oc=5"
+   ],
+   "outlets": [
+    "huggingface.co",
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "primary source (NVIDIA)"
+  },
+  {
+   "arm": "editor",
+   "rank": 30,
+   "headline": "EU plans \u20ac50B sovereign tech equity fund as Trump sets new tariffs",
+   "summary": "The EU is reportedly planning a \u20ac50 billion tech fund to compete with US and China, while Trump prepares new sweeping tariffs.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQTFzTldwZVpKU1hPWDd1VXY3VExEaW9PMy13VGwzbnM4S2d6dFcwTGhtRUlIVTh5QWtTQzFmNFNseS15b2Rfcmd4eTd0cGUzZlduVGoxRnJsLU9HVXJ2bFAzMTE3MUs2RUZGc1V2d3FjVm5SVnlJY01BcnRZcWtXVkppUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUUNwSjZLMGhnbjRUT3dCanR4NUNvbFlkOHpleklINGJuU3p4X1dqQlpTZHYtYm85OTBLSlQ2ZjVudXJrQ2xvazBWN3lydjZXOUdzdjJ0amJ0Ulh5X3dXVEszdTM5QTdlMU9PbkszRmd4djFaLWh1M0FxQ1E5NzJQeDY5QTdSN2lvSGJpNUlUTGlSeVJjeGFzX0xpdlFzbS1GNzlfdDZLMTIwY0E?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNklFaE54bEV6OGdKT29ScUxHUlZwRDNyREJ0MzBSZzZGdnptTkVxaXNHeWx2WjFWYVMzMzdMeU92dC1PVmYyZ1BTT3lCTWVRVnJ5ODFEb0NXYWpDd1ZQUlg4bkZ5QVAyck9KQUhMbldjY2FqMmtsZGs3MTFUY0xLZm9wMWRRTFAyS3VvZUZ6Wnk0VzlxTjR3VS1GSkJ1S3VCU2xmZ09FX1E5dUVjTUhfR21wMG1pcktxdGc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "covered by Reuters, FT report"
+  }
+ ],
+ "wall_s": 22.8,
+ "peak_rss_mb": 96.1,
+ "cost_usd": 0.0062,
+ "searches": null,
+ "notes": {
+  "observations": 4273
+ }
+}

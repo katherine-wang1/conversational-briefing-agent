@@ -1,0 +1,33 @@
+{
+ "arm": "editor",
+ "beat": "energy",
+ "at": "2026-11-23T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor",
+   "rank": 1,
+   "headline": "Mitsubishi Heavy Industries CEO says off-grid data center power costs will push demand back to utilities",
+   "summary": "MHI CEO Eisaku Ito argues high costs of off-grid generation will bring data centers back to utilities, and that electricity demand growth does not rely solely on data centers. Single source.",
+   "urls": [
+    "https://utilitydive.com/news/data-centers-mitsubishi-gas-turbines-earnings/875146",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUUtMTEJCNFh6eVdXak12WWpLSXlJTzF3b3hPMGd4N1BzbWp4UEx4Z0VwZnZsekxrNWhaazlKX1kzWlBmRGM0Nk03Q0Q0T3E1ak45Q0xZVTdrNHVuY0psSFVydWVaS0JIcnNtMDlkT3pXaDJhRndTSFZSMWxManpoeG9KbGJ1NTVaTUgxcUNzbWdOTGk1SF9WZW9nWm5VbFRBSXI3M2hiQVBHQnhId0o0dDI0Vmd2QjVWeEpuYmJoYjVEdmc?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPR3dUc0hDeTFpS2xiTEFVTzlwS1lPZFRvQ3FQSVlfUnhqVUQxMUlic25qa3kxUmZNeHFvQUI0S28tVFdYQmgwZGJjMHVzaVBlRi1XYU1iWlRLbzByM3hYS0ZZdV9LcGRsQlBLbklhYlNRZjZXMkNZUnd1b3N2SjRyMzJQSFBUS1BQY1g2bG1MX1I5cEJXZ0RWdlNHUjQydFNCc0hKQ19Sa1VRb2c?oc=5"
+   ],
+   "outlets": [
+    "utilitydive.com",
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "utilitydive.com; single source"
+  }
+ ],
+ "wall_s": 2.4,
+ "peak_rss_mb": 78.5,
+ "cost_usd": 0.0028,
+ "searches": null,
+ "notes": {
+  "observations": 1064
+ }
+}

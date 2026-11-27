@@ -9,7 +9,7 @@ import os
 import subprocess
 import sys
 import time
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from app.config import loader
@@ -36,6 +36,8 @@ EDITOR_VARIANTS: dict[str, dict] = {
     "editor_v3": {"prompt": "newsroom.editor_v3"},
     "editor_sonnet": {"model": SONNET_EDITOR},
     "editor_sonnet_v3": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v3"},
+    "editor_v4": {"prompt": "newsroom.editor_v4"},
+    "editor_sonnet_v4": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v4"},
     # Gap-fill search through a plain search API instead of Anthropic's web search (SEARCH_API_KEY).
     "editor_v3_search_tavily": {"prompt": "newsroom.editor_v3", "gap_search": "tavily"},
 }
@@ -46,7 +48,45 @@ TOP_K = 30
 # ---- collection ------------------------------------------------------------------------------------
 
 
-async def collect(beat: str, at: datetime, day: str, concurrency: int = 8) -> dict:
+# Sources that only show the present (front pages, rankings): skipped when backfilling a past day.
+CURRENT_ONLY_TYPES = {"techmeme", "hn_front", "frontpage", "reddit_top"}
+
+
+def backfill_source(src, at: datetime):  # noqa: ANN001, ANN201
+    """The source as it can be read for a past `at`, or None if it only shows the present.
+
+    Google News search feeds (`when:1d`) get an explicit date range around `at` instead; the window
+    filter downstream trims it to the 24 h before `at`. Other RSS feeds are read as they are now and
+    filtered by publish date in `_backfill_filter`.
+    """
+    if src.type in CURRENT_ONLY_TYPES:
+        return None
+    if src.url and "news.google.com/rss/search" in src.url and "when:1d" in src.url:
+        rng = f"after:{(at - timedelta(days=1)).date()}+before:{(at + timedelta(days=1)).date()}"
+        return src.model_copy(update={"url": src.url.replace("when:1d", rng)})
+    return src
+
+
+def _backfill_filter(obs: list[HeadlineObservation], at: datetime) -> list[HeadlineObservation]:
+    """Keep items published at or before `at`; drop undated items (they can't be placed in the past)."""
+    out = []
+    for o in obs:
+        pub = o.published_at
+        if pub is None:
+            continue
+        if pub.tzinfo is None:
+            pub = pub.replace(tzinfo=UTC)
+        if pub <= at:
+            out.append(o.model_copy(update={"observed_at": at}))
+    return out
+
+
+async def collect(beat: str, at: datetime, day: str, concurrency: int = 8, backfill: bool = False) -> dict:
+    """Fetch every headline source for `beat` and store the observations under `day`.
+
+    `backfill=True` rebuilds a past `at` as far as the sources allow (see `backfill_source`): current-only
+    sources are skipped and items published after `at` are dropped. Recorded in collect_meta.
+    """
     from app.sources.adapters import observe
 
     cfg = loader.beats()[beat]
@@ -56,8 +96,16 @@ async def collect(beat: str, at: datetime, day: str, concurrency: int = 8) -> di
     async def one(src):  # noqa: ANN001, ANN202
         async with sem:
             t0 = time.monotonic()
+            if backfill:
+                bsrc = backfill_source(src, at)
+                if bsrc is None:
+                    meta[src.id] = {"n": 0, "skipped": "current-only source (backfill)"}
+                    return []
+                src = bsrc
             try:
                 obs = await asyncio.to_thread(observe, src, beat, at)
+                if backfill:
+                    obs = _backfill_filter(obs, at)
                 meta[src.id] = {"n": len(obs), "s": round(time.monotonic() - t0, 2)}
                 return obs
             except Exception as e:  # noqa: BLE001 - one dead feed must not stop collection
@@ -70,7 +118,10 @@ async def collect(beat: str, at: datetime, day: str, concurrency: int = 8) -> di
     with (d / "observations.jsonl").open("w") as f:
         for o in obs:
             f.write(o.model_dump_json() + "\n")
-    write_json(d / "collect_meta.json", {"at": at.isoformat(), "sources": meta, "observations": len(obs)})
+    write_json(
+        d / "collect_meta.json",
+        {"at": at.isoformat(), "backfill": backfill, "sources": meta, "observations": len(obs)},
+    )
     return meta
 
 

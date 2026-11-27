@@ -1,0 +1,438 @@
+{
+ "arm": "editor_v4",
+ "beat": "physical_ai",
+ "at": "2026-11-19T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor_v4",
+   "rank": 1,
+   "headline": "California bans Waymo robotaxis from state freeways over safety concerns, and Waymo suspends freeway rides across all U.S. markets",
+   "summary": "California regulators called Waymo's driverless taxis an 'imminent hazard' after a robotaxi rolled onto trolley tracks and traffic incidents, and pulled them off freeways. Waymo has suspended driverless freeway rides in all markets, while the company says its robotaxis crash far less than humans.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQenRKN0U1RGdfdVJyOHJ5VUprYmxlbERSc21GZXNJTnczUjUwbzhackxlVWJIQ2ZoQV9XcGo2N1ZXaFhQSC1PMEthc19IaGxGOWEtekEtSjFHVDR0NmNPRjM1d0ZWLUI0QlBwVV9CSF84bXA2UVBBTTlZdDdWVHA0ZV9UdG5vMVdobWN2ZXlOQ19Edy04MnRJVFk4WFRJelAxMm1LRUpkdFpfZ1JvMTkxTmI3RXNIbUVnVHh2V0FQUDd5c2hzbHNyXzBESktrRXFjTTNv?oc=5",
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPNmliS2toQXBpVE1SbE42U1V3SGowU3hyVkdnb0d4TER4ZlhLd0EzUW5DZVg3Y3puUEotZUU1OWhiRmZIS0s4cW5oamozMkM4MVl6dlRhc0lESGlyUmx4SDdCMzJvUllHQWVoVjJjeGJPSFNnU3RDUnZsbWV0OVJEVVExM2xCYTdEVEFVUnhFWUt4OVB5ZW90eGZsWHBmSldfSk1qci11ZG1GTFJsdk0zRVVPSkpuNXRhaVNtM1J4dWdkQXA5M2dZWWVBM1FXSWJmT3ZyZDVEYnhiZGFvZHpTcDRUazBqZw?oc=5",
+    "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOazhjNUN3UmlOVGRIemNFWUEwX0laRC1mQV9hTVM3S2NFU0N0ajlhSnViYUMxUnZsRzlOV1JlTUpfV0JTd1l0VzlldU5kUUFvd3ZYM3pCVUkwOXF4N3BpcUVMQUVWZy1VMXhLMFROYzNISEl2eEFfenY2RHo2ZC1TVjRTTUV5dnUtR3BKUEs5elprM2NHT2R5eldibDk2dUZaWnFnUnc2bkxhQ180M3RmMFJkbDBEUWtQYll0Q050anp6YXdjdmdJcFpUYTROdVNOTE02cFpQbTFJV1N3b0I1U3cxb1RYcHVm?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95eTVWb3B6c0JoN20xVXFJdUJQS2Voa3VjNldsNFhDODJrVmZoNEI2bU16ejA2X2FRWHp3dVM5Q25pSEVGQlFmdFh1a19haEtxVkFXZ3AwMVhSLVnSAWBBVV95cUxQYjk1LXctOWt6X3N0ZGhUMm10M2FNak5fZm1aeHpmc2p6Y1hlT18xckNoWmhxc0NPcUlHdXRGQy1VUDZoTVR3eGRPeHlTN2xEUnVHNExOSlJxbGkxLU92aVk?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOOXA4NFQwa3hEbU9JT0FqalBPeGE0a2N4b0VIbjZkZEd1aC10TE9GNWg3LXc4QzgtYmJZeGd4dlRfbk0xRGpiOHJLR0NXT3ZBdmxKSmdrZVpEUUU4MUY3bjNDd2JOTjZndVV3dS1fNUpNbHlQeURKdHpXT3AxM1FEUFRR?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxPX0tsYU9zVkFnTnFQSGN0dkgtVXBlNEd4bkVnd1hjMlJwUEcxbHJWZ1lTTlF1eUVWZFRFZFNfamJ0amhEWHFYcFBPR2RsejA0dEFvV01YR1RodVVoRHlpUm14aG9yVXJINnl1bHlfQXQwa0U1MGd0QWZTcUFMOXQ3dU1xTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUzlfUFBDQzVpcTdSTmVkWlUxSnN6NDZGQnRpYWtWWVRCNGllUGlHQmE5MXBPLWk5cEgxUmJlMDZYWGNwU2tQSjNxeklVWC1KTjYyMnFWMWZ3S1ozakRBc3h3ZGpELVJxR1pjZDkyWU5WVFZyR3ZaR2lHaEswU29PXzN4WHY?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdnFqb0hyUFRZNW54dkVyUTliWmlWSXMwb19Ka1VIVEpTUXhJaTZRbFdBMV9fVmRvd1RJN1U1Nl84TGZFOWFWa0tIZTdhR2k1aGM1Q2NjRzdCNWpxUmFxZEYtTmpuYmlfYVNRbjQyNDhEUWRZRjhNRldUbkJHMWx1S2JJNjdZVDll?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSXBOeG5xN1V0YjA0ZlFyTXRtTGNxeG9jSFM2Vzh2VmRhRUFKM3RaOXI5UHB5ZmdaYzJ1Y3EwMmNSRHdyX0E0OTRhRlBEZm9JaUg0T1hIbFhneFdVMTZhajZVeGRkNVZHLTMzX3hZMW5qaC1jeVNDZXd0d1NyYnZYLWFWVG5PQkRoT0E?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdUVmZGRmWnowTW51X2hhWndoRDl2ZnRFTzFNTXR6T3E5UWxJSWlrcXgtTDhNUjN4aWV2QWhRMUtKNkZRQXhmUUx4YzRDWmdFX1l5RmJ3X2VJS1g0cTUyblBMd1VMeDZOMGtrRmRNdVQ1QWk5a24zUTJKa1VKcThTTEUyeFRvU042OWc?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnVLb3JYUGN5czUzU0xRV2kwNUJZMnIwT2s4UFRiazFEM3FEcDAxUnB1Z25ObHYwLXdBbEMzajltTGVZUTJqX241cWRxNWNxdmdFMWlxbWhVUk1mVWQxSTZVUjJIbWVxWFFXOVlUd0tSYjBheWhINVQxLXRKY1JsNjRmQ3hrbERXMHc?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWjM2clFPZDAzMDdTVGZtVFpmMEpUaERQRXlTOTFjUm5jcEw2MWpEZlJIX2c0YVhxd3U5b0d6eWhOcENVRmROUlJ5S042TjdxYUg0ZFdGM2hsT0xPaEpwcXYyNFBNb3ZOcEpNUTYzUl9IcmdUZ3lVU1lJMzNYeDloU2tMc2FPQ1VVOWhv?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPWFUtYlV0T3R5aVQ1VHE2WFFMeG9hOGNGYW1ucG5FRXlRaXNSUWpMX0hteDR2eWlSYm5kYk9OcjBxOGMtekdqSWRNbUdabG9VYm9SVGxfaTVYOC15TU50MnVlNmt3Y3dtLUU2bmdXekN6SWJjWnYwWG5PdUFkSXVTSlFqUEx3UWh0ZWpOdzZRWXJRby02ZEsxSUhhMnJZSTctUmVKWjYxSEhFLUs0ODg1MlZPZUR1b05pMm95cGs3VURqazRyMlRMeGVhUl95TU96d3RWWVFWd3hkd0VhZzFNa3RUbUhwWkZiSXRkX2pnb2RNVlJIZ3lITEVGZWZKMXBfRnZmUEZ3eG40SXc?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxORzlfZU9haUFEUzJyZF9fUW9RbFA0Ty1NME43RER3dDhrRG5iLVBtSDdscGJWTF8zZUFqRTE3VmRJRjBiOWRKdUhIR1NHSmVrY1FNUEgwblN1U3A5US1GX1I5bWdySEQ5bjRjY3ZlR1BlTGlkSy05M0VsdDVvd0pVYldIdkNWdXBKVFBmS3VSSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxQd1owaXNxOGc4aXZDYjRTc3VheDZuUENyRDlGRERNbXc0LVl6RUNoM0ZQNkpUNjNOWWtJOVVEVXhmVU51TlZhSEhMSlpEbFpHOUNoN0REWnlXWFJNcGVtbVhsdU9xQkswazRjU3lfekhjb3lESjA3VDA2S283UkVqZEo2TXBuazMyd1FsNDJCMA?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOeGt0VXE1am1KYU82TTZSR3JadzFpSWJyeHRRa0xtSEp3dy1icjlKMkctRFBYU2VUZ0lVRmZCWHBSQXNBS0ZncFB5QmVEMXduLXVZczRLbVNLNEJtcGVyX0t1WDZ5aW1IQ0dpZUN0R21WS190QVUwN0E2bC0ydkx1b2tsRzY1YlVVQmhRajRDYUhicExRaHJn?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOTFFZWEpURk4yalhpMW84bmwwZ293ZmhuRXIyUkZVZERseUdnd3VZd0xtMVRUXzdpXzJUR0JYZDhvUDNNZ0ZYR1JvS2F4a01pODd2Y3o2bkRwUjR0VmpBNms0Y1pSMHd5d3BhdjhYSldtRmUwam1IdXJjN3BmdklnZlIwUzlQd0xadGlyTUNHRWs1SEItamt6VnYxSkNWQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQbmYyVFVyVXoxcDlHR2h6X0h3UHh0Y1JYd2Q0dnZFMlZDN0dYOURxNURKS05FazA0c1ZsbFI4T3Bac0oydTYyQms2dWxzNklIaFNyXzMzX0dJaVBZeXlmNUtneFNqbXdPV01DYmtLTC0tUFlEaFVaTlZHeHE3eDkyWS1SNFZEV1lNdEVoRjlUTU4xY21lMWlqREdvdXBZdw?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkY0X0pPODBKU0xwbHNkRDNqUjdoQmF1RUhrQm9SNWdCemx3cFM3b29rT0tZem9WYVdRNVg3Yko5WTRiaHozY0R1TGh6eHhrV0xtdEpXQ29hbDBpeU5LRXNvM0wxSXN6NGs3MXpYVm5OaWFoa2V4OG9WU20zc3A2SHhEZmYyX2J6QnFLd2xyQWN0ODZFeUlQT0Q4SktTbmdf?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUEROSkVrT1hjREM5SGo4dTk1X3pXM0RUSnpDUW9KWlNoajl0VHJXQ1J5cERtcmlSajZjdUkwRG5tVWFFdllwWTBQSUNTZU5yOGxqVm1BWUNHby14R1V2V19MVHhGZDFNZ3lxWU16OEgzNlllRldwWXdpZ0dvRnpBLU1PZGVMOVFGT0pKRFhBSlJrZzFIUDVYMGxKS0owOHZLLVMwYWxmTm1hNVcxQVpoMkxlSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQc1F3bVFTZHNjQ2VEQ3pxUkpiOExyQkFTZ1ZlczNJOUlQaVA1ejVNVDB3U2RId05jODZ3bGdiZFlqWGlvVFhzck11NW9abzA4SmNOOXZYRk5xWWVQWjdwSjRvMld2ZXE3UkNsNHJwZ3RFOWpFX010dEphT0M1NXdDMzJkQXl0dEpicDZVdWFWNjlVbmZwdWlfTmotT0E4YzJqd2N6b0FUcUxOUE4zWmJOd2I4VThhdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZ0RBc1pSRVY3M3VkblVjWnpYdFd4LS1BdE5jUmJaQlRPNmsxR19HUWdSVFFvM3MtRzJBTjctRXhpdWs4aGxJRHp2N3lOU2Z1SFd3WW52WDU2d3RSZ3otbUppNjdXSExYREZhZzdRZ21RVy1UQUh1RmtreTBMY3JkS0xwUVRjYndGUnZEZDZmbnFTV1NTakxyenFzMEoxZ2tkNzZVM2VQYnIyd1lNYlpBZldHQXFPSzd1TmhCZ3dtQTdXZFFjLW1oVg?oc=5",
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbldKa1dEUWkwU2k5X254WGpCS1RDbFlWcmZ4UktIdHY3OWhNNExnNXlTbDI5TVlVQXZ3b0pLcU1iRTJSZ2FMd3ZBWTFhd3JRVll4Z0MzcHY0TFRvb0E0NDVnTkw1OXI3SnJhdEt4S3ltNjZCaGNaYTdnN3ZfNTFZRjN4by1yS1ozZ3M3R3VsTXl6YS1IeWJNRnVZSl81QmhsY3FLSXNNSzdGSjJnYy03Z05jVnBYbmN6cE5hTl9ZdkF5ZlUyS3NsQWpnWQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 92.0,
+   "reason": "covered by Fortune, FOX, Washington Post, Yahoo Finance, Reuters-adjacent outlets; multiple outlets across the US; wide front-page coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 2,
+   "headline": "Genesis AI raises $500 million at $3.5 billion valuation for humanoid robotics",
+   "summary": "Robotics startup Genesis AI has secured $500 million at a $3.5 billion valuation to accelerate humanoid robotics development.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVlpvdTVpLVltYTBiRlJWZUd5SDhCTi0xb2Y5Q0dFYWVFWEs2UFF0WDliSElpeHF5RURLWjRweE0zdno3Q1hBNWJjUkZxVkhxTXV3M1pqdFJTeWt0eXlBMHJTd1ktSGhyZ3NiVGZMOERocGtackRvT19qTFptd2x2T0VxMXNJaXFpZTZGWE5EX1BqbHV2dmExNXhRYTFCbWs0XzJvWA?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVUFrVW15YnZwV0c3dV9OWGlQZjhmOW45ZVFraXgzMFpnQ1E1d2U0NDQ5dThYaXowV1U1Q2d2U2JyeGRWV1RTOGlvcUI0aHZaUWVJbEF2SUNaeXFEUzJWemo1aGxCOXJFMjFvWktORTB2NGk0Y1VMaXBmR1JOdTRBODExbWhKNERyZTNYaFVmOGljakpuX0xrWndxQUwtdWVsbHNSYXNIMENYLUh0YUMwVnpyXzF2cE12Ymc4d3RvUlpXa1VP?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 70.0,
+   "reason": "citybiz and BW Disrupt coverage; large funding round"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 3,
+   "headline": "Boston Dynamics to test Atlas humanoid robots at GlobalFoundries chip plants from early 2027",
+   "summary": "Boston Dynamics and GlobalFoundries are expanding their collaboration, with Atlas humanoids to be tested in chip fabs; the task is not named in some reports. Hyundai is also reported to be expanding Atlas into chipmaking.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNa2wxakczU1NUSkNscHEwU1E3bHdYeFAxZDNtcUMyS0pKQ0tlV2lGV0pXbi1jR3FLR3cyQ1NIWE96Ujk5eS15U2pyLWpzbVNUc1poYnhNLVB2QTkwMThUQk15ODBWN3BKdnZ2ZmlmZFZJOXJlMlRqWFJNSF8tWlByOU44TXRzb1BmWVkwenJFQkRGN0Vqa25rdHBLcFdGTHQ4TFZ6b0NkR3JyUXhwR0oyT1UwZmRLZEhBWl9xX29sNW5sdzBKQ0tib2Z2Tnd0LWhrZEE?oc=5",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE9LWlcySjZpcTlvWXJKS1FpM2NONzVZX1c4RXZQZW4td1dOWVQzUE5MdExWTk9SZnNYV2ZwNFVXYng2ZFJvTzdkampza1MzNDBPOXlDQjJrb3p2SUstSHZKTUliZExFc0UyN0JZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcVJ5VDIyemE3bHhoWmE2czlDb203RzZSSnlwTzFYNjBYT0gyZ1hUS3dBQURPVGN5bnNXb3I5VkNSZGJERmJQX2k5d0ZaeG4zU05MMll5ZkpZZ01HZmpKZVJyY1ptZzFHMERxd00yd3kwcGhMVUJaVXdEUy12UTNONy1tRFNseTJf?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZ0JfYnZCRU41N2xzQVBXUkNtZXJNclhJSVRId0d1V1l2VXVNV2wwV3AtaDNaVzdHa01sdi1kNThJVmRJd016VkpkaEtHMWNmMDdIWmxJQjIxWUV2X0FLV3ZvbkdyUWJpdmR1WlI0dUZSVjVsVjgyaFhNSG12M0RvNHNqd1JCMTdoUTBTaG4tU2xDc2cyVXBDM09PbUFqcHl3ajRqZER2aEhYZ3M?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTlhWdV9kUjhvSVJXNHBHN0lXc0YxVjZjLXlQR0xQTDdtZ1p0R1g3OC1kaFI0alk4YkpMdWtCMkxWa2NpOFZmbmVOV0ZJeTc4X1c3dTdrTTVnaU8wVDdXZHJKd0EzNE1qVVpMY0w2U2FUaE9qWVZoazZjQ3VxZ04tZ3hvbnZNcFlTZHdUWDQyQ3N5ZVlyQ1RqWnkyQTJZdzlUTExBRWM4Ri1FdkE0?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMW5Udk1uQUpUaWt2OUdjQ0RscU1xdXlPNm1tb05vbEhaY1Y5OGFpNU5KOWJGV0RTZE9ZY3pFRWZJSFRWSVQ1bVdhRG9IeXU1LV9LckI1SVR6YnRScU41OTk2Z09hWkxyYUFnZFZMOU5SZGxzOFJWYW5BOC1Yamt3S0dHM01pSkJmQWlpTFdRRk9LZjd6MXhXYzJfN2R5X2c1VFVrbUJaMGxtM0NTTExYUjYwX07SAboBQVVfeXFMTURjY2xfa01JZVZkM25NRWNqOU83d3RPLU1JY05OMUVMeC1qOHg5dTJITXpISWdCV3ozblFqY1NiTkdJT2dzWUxQckc0akN2eno4Q2V6MzcyWGJDVkVra1pfdlBHTG9aTnVvak5ONWwtX2Z6UlJhUmNUaF9EaVFYaU1hT3puc3V6cW1tNXk5bkFTYWhPZUNuU3Vka2dfbG9RcGMxMWM2dGYycW53bDV2MkZ6dEhpNmpXMW5R?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQcWE0OEdBX2k2ZHJFa2FkZnIyM3JDak1Zcl91YXRzc3pueUtRVjFJQ0k3aF9XcVhkSjBNMFJ2WThMY1BZZmR5LVJ0SW9CSHF0OTlxbkRpcS1qUFZhV2lTVkRlanFRWV94OFhKdGNoZVZ4YVFfbTc4R2xsUVZrTmFjMUVtVXlOM2NselhaZXh4cnh2REtNTy1RNGVETzJkOXc3Wk5ZUXgwMGhPVG54MWplQ0c0Qkl6Qk9jR0ow?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 68.0,
+   "reason": "digitimes, KED Global, Manufacturing Dive coverage; multiple outlets"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 4,
+   "headline": "Tesla opens Cybercab robotaxi availability in Dallas and offers private Cybercab purchases",
+   "summary": "Tesla's driverless Cybercab is now available in Dallas, and the company has opened the door to private buyers at $29,990 or $299 a month under strict rules.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE5FN29QYzJrdmwtRDQ0RUVQdU51ZmpqbmhzcjAyVXl1dzN4Y3N2a2UxbXh5bHpqMjhoOTREZmdTOTNVcXlsbHJLX1h3N215SWRiX0t1eFVNODJaZnFMejJ4ZENrSURGdThjMFRjUlY1YVlIOE1sR1E?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNR0xUcFpnaTlyN3FkaEtMR19iZ1I0aHRZa1E2Q2gtN2pkMThrWFhpMURkV3dOUTRua25OMW80TldrYWR1Vjd6bkM0ZC1zV0xZWEd0VjBabFJCUm5UajRqUFRranQyWnB6dTYyX1NDblV3TWotdHpiaDRXUTlVSWFzYkpR?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "InsideEVs and Automotive News coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 5,
+   "headline": "Agile Robots raises $500 million as Agility goes public, signalling momentum in humanoid sector",
+   "summary": "Agile Robots raised $500 million and Agility has gone public, which industry coverage frames as momentum for the humanoid robotics sector.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSXM0U2NHTDBqdHN3dDVDUFM2dDdtdDVrWlZjTEJOam1fTjMwaVF3aEV4ajV6X0VScC1VVnJYSEpUZ1NxNFVXQjdMOXN0Z0VHM1RISnA1NFU1cWdCSExsc3FEMjFWUlRSQ3Q5d2pxWjZESXFHeVdaWHE3djlRcENTXzFQclp2cjBXTHh5QXU1NVEyYkZPWlg3MVpJMGxfelpSZVMzUlNLMWRlVU1JYUtaMlB4dGpCZw?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYWlYYW0zV1NQX1RndndLREcxeDlGZnY4cnFGTC1OMFJyQkwwZThLTXItOGlmM1pBSzdSeEJtOVd3blpCUHJGbmJmQmxwYTBhQ1lnOHR3eEVqT3NXd1gwaFA0Unh1NktHUG1mRUw1RjJXdWJMb2FSdExTSGFsem1KSHh5ejQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "Metrology and Quality News coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 6,
+   "headline": "California enacts new requirements for autonomous vehicle remote operations and first-responder interactions",
+   "summary": "California has enacted rules covering remote operation of autonomous vehicles and how robotaxis interact with first responders, amid a push for local control of driverless vehicles.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYkZaajJ2M0QwRUtYbmZfWWRIaHA5eGcxNnpLUU05Z1J1YURfTjVWN1hPRUdIRXZfQzhhWXNHTW10MERLNzR4eTE3a2lremNNNHdOM3N0Z1VWbFd5SDc4ZTRiODdZTjJFRHI5ZTdXUjEzUGJwUFRyMWRMUHZfY2tBRWo2QkYyVTRqWkFXZVhsbDdVTTZ2bnlnSjZ0b3h0N2ZyVlgyamN5b2k4d0JuRmoxaW9zb2JlREZFVTlkcTlwQzFjdVotclJwSXRMRE0yUEhrVVpBa1ZZVFNYeG8?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQ29sLW5jenhWWVB0QTJaOWNRMl9LVG4zVFYxY2p0cjVqNmM4VEJLZjBkRTlmNlVVWWVkREdfYmFaSW5tRVRMb1FPdGlWRTA2TFNVNFpMeE96Vm9lai1rTDlZUWNjYlY2U2oxNnN0MWxzNzRadHdMWWQ2S1Z6bDdsdXBEcTVaNnpKZ0ZUekcwMUd0Zzlz?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUDdEVmRkcUlBcmkzQmljUDdjSzNEVGFzcE5MQnlUQ3M2V1ozbTIwaUlBTi1RemVRTGIxVGp3WG1PN1VVWGxRSk1rYks5OVVTMGhGNU9NY1JTMHhSZmppeTJJTTM4cjBZRktOcXp3Nmh2S1REZWFOUnhQb2F1cFpnRmhEeGZVYmZHSVpQV3F2UF9Xdml6SnhMdzZOeXhqWklNbnpReDQ1bnhLQQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Inside Global Tech coverage; local coverage of local-control debate"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 7,
+   "headline": "China's MIIT releases five humanoid robot industry standards with L0-L5 intelligence grading",
+   "summary": "China's Ministry of Industry and Information Technology released five humanoid robot standards, including an L0-L5 intelligence classification.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ndkN4M2RVdFZmdXRhRWZvZzhNMlNZQk56bElCVFJyWE1PMU8xZ04tOFN3VERseVhPT0lpTWFGVHlQZUdIRW9lbHIyLU1WMVQzdkc4?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1XOXdDOVJlUVZxb2FRZGd3VjE1WUlJcVdzYjJqMWkzcURKM2wtYVRHTGlIOWtUUUFxVE9oVlZtLXRGb3Vic2RNTXRiOXM2bHMwVk5wdnc4dGtvQTJhbGMtS3BmOU9FWXpnY1JYdVhXSldmWjl2Snc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "36kr and BigGo coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 8,
+   "headline": "Elroy Air lands $70 million deal for 20 autonomous cargo drones; Uber Eats launches Zipline drone delivery in Houston",
+   "summary": "Elroy Air secured a $70 million deal for 20 autonomous cargo drones. Separately, Uber Eats began drone delivery in Houston with Zipline.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Cb05MdXhqYURaLTZ1enVSQU15WkJHZzFrZGg1WXpXSnNNUGNzVWp1Yk5BVTZEdXdNd01IWkk3OTZLOExNMnMwd1M5YkRManF3emF0NWZKUEJkZm5kZ2F3TlZGLUlnMElY?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE83WUhITElIcjFNelRiVC1uZHNBZ09VWTVkdW1PQ1h0dklLNENDV3M5d0JoamdIYTlYT19ocFB5aWhzUFJoZG53T2ViM0xEd056TTVOdUZuSS1CeFBxT2F6bGEycU9qdWlCS05pRdIBckFVX3lxTFBQRmhDSWZRZXcxNWxvWVJwZjVseUlIZE5Fd3RQRmFOT2o3cmFqUUlXWFJrTnF2TlNPME1Rd1hCT2djMlBaTmgxUXlZRVFZNkc2NmJtRTR4Vkdlck9CMlQzTUZKNXJ5LTRPX1VTUnNMSUlIdw?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSjVHTGNzQl9sb3FYM0R4ZDNUenpOY0tpMFNRYnp2UGRjTEdMTW9OMmJ6cENCX2xoakJmaElWYW56SEZ4ZS1GYmxUT2RBQUFkX0wyb1JqNUk2ejIwWHJKWVdvUW5MUDQ5akdCNHRZNlh4V1VEODZLc0tZVU0xRW5UM1ktVEpRODI1QkJVRVpEcw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "DroneDJ, CW39, Verdict Foodservice coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 9,
+   "headline": "Humyn Labs raises $47 million to collect real-world data for robotics and world models",
+   "summary": "Humyn Labs raised $47 million to provide real-world operations data to frontier AI labs, robotics companies, and world-model developers.",
+   "urls": [
+    "https://therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics"
+   ],
+   "outlets": [
+    "therobotreport.com"
+   ],
+   "importance": 50.0,
+   "reason": "therobotreport.com coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 10,
+   "headline": "South Korean firm plans $150 million lifeline for Eric Trump-backed robot maker",
+   "summary": "A South Korean firm is reported to plan a $150 million rescue for a robot maker backed by Eric Trump.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPem04c0JKUzlhSkZGVHpVNkIzUGlwS2tXTTZESUp5NDBhczY1eHJsOC1RVFA1SnNqeG9iZW9lR2hqNXRzTXlEcEswNzUxZ1VsQXB6RlBmUmMzd1dBUFlvN1VrNm1NMm93VFV6VjVZdm96bjdYVXE5NmNHVnVDdVY0ekM2U25LMmJIVnRWR24xdzB5eWx1QnZsNkZjR282NEtEbHRaVjVtVndKcU8tSzRkQjVGOU1DTFk?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 48.0,
+   "reason": "Reuters exclusive"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 11,
+   "headline": "Musk says Tesla will release Optimus interaction video within two months",
+   "summary": "Elon Musk says Tesla will release an unedited interaction video of its Optimus humanoid within two months.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE4tMlBzalJScnVUSlZwOFExcXBfZkVaN2cyS1ZEcGFEWlJGWjdGYk93YUtmdTlMcWZKX0NmbGRiV1dhSFdrbWYyTjZKVVJCSEhUaUFYb1NSd1RBYmhaY0J6M3d6d3N0TDJ4Mjl6ZmRRNVFKak93d2c?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbUF4MzI2cXJvSFZ3T3g1UEpIWnhpbVNILVVlYUx2TGRzeXJXbm83Sy1TWkt4bFo1bVZQdG5VZXJvQm4xelc5cjJiYlNrSHZIZHFPMGVva1o1cHNJc2VjeUpZc3JCNzJaRDFWOHA0Vll1V3NuekNIa0pEZEJQVW9mU19WQTRVTEtSU0VRQVpvTmFKZXM1czZmemtoMjBENG1BSUNNaURGMA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 46.0,
+   "reason": "Moomoo and BigGo coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 12,
+   "headline": "Dronamics floats its Black Swan cargo drone on Nasdaq via SPAC",
+   "summary": "Large cargo drone maker Dronamics is going public on Nasdaq through a SPAC merger.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZGRBM1NnQ3g0OUV2QzlKdE9SUlJKU29zb2JNVDNjQXlEUS1FU25vM1ZhTFl2NjZtMDVZbUlob2N0RkE4T3p6UGRaUm83YW82MVFWZmpySld2bDJvTFZMSEtxY1dfQ29jX0VQWlp4VDdUbWEwc2NKbmRiNF9qNjZSY0s4MVRhdWVJTGlWOTE0Z0hGdHV1SDQxTTRKQVdBSzRIMWV3SA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "Aviation International News coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 13,
+   "headline": "20 billion yuan valued robotics giant faces cash crunch, unable to meet payroll",
+   "summary": "A Chinese robotics company valued at 20 billion yuan reportedly faces a severe cash crunch and cannot meet payroll obligations.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ZcUYtek5Zakg2aFdDeUxoTVdnWVZhdWZaQXdDb283WWJIYTYxZUJSVEJUMTZIS3ZpZFJRT2w1YU5JQzZiNGE4cHE3Q0ZJX0VJYmhj?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 45.0,
+   "reason": "eu.36kr.com report; single source"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 14,
+   "headline": "Toyota places larger bets on robotics and physical AI beyond cars",
+   "summary": "Toyota is expanding into robotics, physical AI, energy, and aerospace as it looks past the automotive business.",
+   "urls": [
+    "https://techcrunch.com/podcast/how-toyota-is-betting-on-a-future-beyond-cars"
+   ],
+   "outlets": [
+    "techcrunch.com"
+   ],
+   "importance": 44.0,
+   "reason": "TechCrunch feature"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 15,
+   "headline": "Xpeng to show IRON humanoid robot performing tasks without remote control at AI Day on Nov. 25",
+   "summary": "Xpeng will showcase its IRON humanoid robot at its annual AI Day in Guangzhou, where it will demonstrate tasks performed without remote control.",
+   "urls": [
+    "https://therobotreport.com/what-industrial-drone-deployments-reveal-about-real-world-autonomy-challenges",
+    "https://news.google.com/rss/articles/CBMigwJBVV95cUxQakNPOTNlUVBTbmF1bnZUNDV6TExVa0VUeUotcS1CcFJRX0dibHY0MWNqZ21PcmRna3hnT1NvTThIeU9CM043cUJuZGJwV1h0WnFJX0NmVGxTaEQ5TUYyZlFNWlRTNWdqTEZNdW54MHItckV1MFNJc0hzMGM3cXZIV3ZJN2pOVmYza3A2YVozdW10WGo5b1A4czNiQU9KV1RkYTNrY1NxVzZiektQSHd6TWlJeUk1YUQwbHhWQ2Z2UUExQkFuV1FXRlRvWEFmWl9yMEdxOVh3dXN0SnNBaWlFVks0TzZyd2NhanJTTFhBOGZNclhrTXZNVnotbmdjRWNnWTg4?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUVBvRklnaFBYS2d2RDNma2JYSTRyYnRGS3lUUlFJNmQ3c090OFRqZmZNTE0zZWhUSGxXN0N4SnpKWkwxZ21kZXV4Q3Z4VWVwZlJRbkRQcUFtc1g2T240bkQ5RHV4NVhvaUtQTDlzeVVRMGgyVklpVFE0bE9MOUhqNFFLQzFuMWkwc1pNTTZpM0EySnJ3aUViZlVBNU5vcE5LVnVlNDVaTW93S3hvTkE?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOazJrTG9mRmZkLWlRTk5qbGlNWUhtQW9aNk5vaHJXdThQVnFyYThkSzdpRVlHTmZhU1YwYjE3b1NpejBIcW5Kek13MnNwclhKalJPcjdaQVRKUkRBUEhkQXhLVm56QUVhU2FSLURqSjljNGViajJtZVBWNDVRaC14elRCc2wyMDd0SGdqbzhZSkRfdDFPYWUzcWwzZmMyTGpDeXU1T1lrVnZHY25GV3prTEtRcVJ3QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxQM1pMRGJlX3hHMW1NT0Y5X0FIMEs3WGVXaUNCSkVHOFJKYkJtbTQ3azV0bHR6RG1NenoyRFc5Z0p4UHFLRlVkX1BlaHV3ZjNnQlVhcm1CdEE3Q19UazZBdWR4U1dNU0dmUDlKWUZ0SmtxRkxZQ3FpM2NCS1dUbmNlYjFRUjBQZE5SSUtFdldaX2hGOHVJWEZKTW5CS3hOQUZwalNKc3pRVkdtRmVGUTg0VEJtQ2g3Qk8xNU1jYQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQndzWnI2Q2NpYkxuSFJPLW42QWk3NWhaRVFWQUQ3aTZrMERuSUJJYmJtV1pXdE52OC1iM3JDR2pGNW91ZVF4UWNRNEZ0Yy1TRjZDMTRoZmdEeVY3bDZNRGlvQnU0RmhHOVl0NURTMS14Z1JqYXFzOUI2VGxmcXN0NG9PeU54dktTcjJTc3k3M3NiNjlWZXpUamF2c3E2MUFnMGhjb1l2Rl9MVWNGYkdoUXJHcE5JVWFNV0k5cmV1YTBsQjg?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxOemh6a2R3dGZRdkhKMVZSWjFqVVRWUXI2N2g1ZllnVXVpTHJON0dGX2J5Z0VzYlRGZzFPNkNsT1RrcG1Odm9xb2RhcndNSGE2LXZtd1dRMC1YMGdSaGFnVW04eXVPemlmU0tDcnRZaklfdUw4U2d0ZTJEeFM0U2RCTUMzV1c2ekVwWGhpOS1JeURRV3hEN2doVGZranVKdjFlYmhVZlNjLXFBT1VfcFF1cjNWcDMtbkRFSFhPZ2dnNkdEY1RnVjM4?oc=5"
+   ],
+   "outlets": [
+    "therobotreport.com",
+    "news.google.com"
+   ],
+   "importance": 42.0,
+   "reason": "StreetInsider, Stock Titan, GlobeNewswire coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 16,
+   "headline": "US visa denials hit Xpeng and other Chinese robot makers ahead of CES",
+   "summary": "Chinese robot makers including Xpeng face US visa denials ahead of CES, months after an FCC ban on foreign robots.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi7AJBVV95cUxQSDZhSWtCQ2o1amVSQXlUU0hXR3UteC1zc2U2OFJWMEtBRWcyMUU5LVV1c0M2cnhmNWJvX0xZZE9YOGNhOWlmNHdaZUMteV9LV2VkOUZKTnY3SnlpT3dSSUZBV0Nmd0I2VUdtSlV2ZDU3bWlkMzNkZkpRbDdXVU5rbmtjZnRhcDBYc1NWN3ZIVVZINXhscEJkbWRfb1VGZmZSRkJtdElDYkdoc3JoNklCb0gzZzlxZTk2aXJSQ0VOWkhrUWFnSTBvNUNZN0pIR3MyNHMtU1E5blJJUU5LSlplSWV5WVdTZ1lpRGs4blA1OG5LdmU1ajYwRVhrRVp6SGl0cV9rWFBZSDl6S1RfY0RjMF9kU3VZM0NnV013TTJEaG9JenY5OFNqTGhlR3pMUmg4UnRpOWJRQ1BLY1E2WnFyTHVpVXBoYUFVYUxZaGxGSUdfVzVFbU9HTGpkZE02SFJrbm9WbHRnX21FTHQy0gHyAkFVX3lxTE9wb21RYkJMQ2NjRkg2OFV3cTBGalNwY21LVlZwU25fa0VfcWJjMVNCajMxOG1BZHV0UWRrVjhwSTJNbl9nR05zSjlIekoxNUVna2JqeWRoVG1FcVcwRFd4ekV1aFhWeDN5ZFN2LUxzYlVnUW9Ka2VXa2NwNFBBbzVnbmhycGVLSTFibzg4U0pUOEFNckR3YUZyREt2dEQ2Zjd2RUZxclNnNDhNalhKTkFDaUJvTW5TV0MwWWFyRXZlSzRRbkVIQ3V6NzA3UDVJUzRvUVlGaFU3NThWejhuR0NaazJfZ1BlSG5YMktXaUV4bERORWlGZ05kV2pIbDE2N0s2a2xLTXpZWkpHUTk3MTVOdW1lVm9Sc1NlZmlHanctRGdPeDFRVHZ4UUgzRlExbWh0Y3dIUEVJa0xFa3pNV0QyOExPVVdXVmVMVnpaMThSMUNDRl9INzJBbGdPSlkyR2VPbFlqemZvMVVyRFEwNERyakE?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSFN3OHpuZ0Vrc0RELVVmaElIWjNqRW5odFpUM2ZidGRkTjN0ZGlqOEFhTTV1NDFGMTN3RUpSdXpOVS1Dc19tSEdmOTMwajR2Qy1YZnlxdW1zU3BaVUJ4anhmdld4WXhEb1dTVmRtMjZqZU40anFEOU51dGxDc0N4d25VNk53YWVvdHNQeWpYaEQ5bDl5dTBlemtpellaVi15VVByajdxaTdrQXQ4Z1E?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "Nikkei Asia and Times of India coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 17,
+   "headline": "US companies turn to humanoid robots to ease labour shortages",
+   "summary": "Financial Times reports US companies are turning to robots to ease labour shortages, while other coverage examines whether humanoids can earn their keep on factory floors.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQWnd1Y01Jb05OMUZtZTlRVEd5NkxWV2o2b1pRV296VUc2QVRuTEx3ZDNid29XMXUtVGFDSmVwaUxQcTZZbjhteWpWS1NPanBlcmxwV0R2clpGYVZlZlB6aEJEZTFPeEJ3TU5oeE9jc0lhc21kVmtKTWVuVzcwTG40dTJCM01Jc01NX2JSMGhvUlQyNTVPWWg1Sjl2X0lNdw?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMHZxYlNrWkdBWDBjSlJKR3pHeGltUUk2R0loMjdQMENnSFFSZG5TZ1NuaExZcXA2c2ZrSXNaN2hIQ0hnUEwtSWhudU56MTdYdlhnTmZvSXNiLUhIckR1T0xRRzRBb3RSSm5sQzVHRk9YMm9yaEUtVVdQMEVhWGJrR2JEVHVNeUxIS0pORHM2bFJDcDdQV0Rqdm1Pb1NUTzRtLWo2cHdIakcxakxmeEhycW00WEdHZ2pBSU9OTGQ3Q1VISEpp?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 40.0,
+   "reason": "Financial Times coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 18,
+   "headline": "Waymo robotaxi caught in San Francisco flooding and blocks traffic on Oak Street",
+   "summary": "During a storm, a Waymo robotaxi was caught in flooding and blocked traffic on a flooded Oak Street in San Francisco, prompting a suspension in the Bay Area.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxPSXJPaUUyUVk1dEx4STBRZkJRalhqWVZVNW4teTJiWEtCQ1ZsZTcybEhYdGdOT09nWGp1cEdjNkI2ckxFNmd6RnBFaXRBNFhCTDB2amhTMUZ0NHdxME5UVE8zbVVLQnJ6Q1Q4dmVFOEpvTURrbThJNDJfNmVNV0FuY09NaEpUeFUxbC1hYm5LMU1YTWRkcGQ3OXlFLUp1Rjg2M1B0dG5kNzYxU3FyUmV1SnA0N1BPcHJRMDgycA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 38.0,
+   "reason": "CBS News, KTVU, SFist coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 19,
+   "headline": "REGENT signs first production deal for Squire seaglider drones; Reach Power signs Army CRADA for beamed power to drones",
+   "summary": "REGENT has signed its first production deal for Squire seaglider drones, and Reach Power signed an Army agreement to beam power to small drones.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPU1hfS3MwYlJxUnpHay1vZDRDWXJXSWJuOThKZkJlRGwxV2txSXVXREZXNlRYamU1X2ZaVE9VcnNVQ2U0VXZJM0NrTGgyVUxIVE1YdzI3QjBlVWx6SlZBa01MeE93YkJJRTRKc2tVbGRnV2NLNnczTGtEYjNfZ1JzNW52RDI?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQ0YtOU5uVmxmOFFlbkdoR25OZTdhQjIwODcxdFEtd1BFMHNNenZ6MTZxM0JqU3hGVXM3eXRUQ3plSm5WYTJseFV6emlyZkxoNFhvNDJMMl95MVVhbElNU2ZUSWtiVWxhSG1VaU1PRmYwa1hQU0dwaVNKYl9jR2hyTjdzWmtNRnRNYWo0cy1FcmwzUdIB5gJBVV95cUxPQTNPWU1aMnloU0VIcS10dG5zZ244dzB4RWt4MXNDSUljRUxraEFGSHBxcjN1VV9fekMycHZDanRuN20zVVA4LUplcl9qb1ZnX1ZONl8wRUowWE1GQXpMLTQ0aFlsZVVHaVp3WXhvU2Y3SGkwTml1bG0tX0EtYWwzMnozT3d6SFpjWEp3bjNpRXpZTThLdDZYTTdGN3JtazdNaUtSVkFOdFpLWVFIZGhWRWxVTGZ1MlZSSkpfV1k0TFdaZEY3SVBBMUNSTlNGUjUxcW1TOXlJUGR5bkZTdGNObW9yMXZpN3ZrVnBpZGQyRFZxR002dHg3bE90RjBNVndia3NveXZfQmNUcFlHdFhuOGFJQThibFo5NkdSbkoyVW5JNXdva3djQ3JsUWNuV0hxdVA1UTZBa1N3RmxoaTNLX2VYQndOb3BUSU5WNTV4cHFxT3RqOE5pS2tRNWV2RVFqN0hZejBn?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 36.0,
+   "reason": "The Defence Blog and DroneXL coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 20,
+   "headline": "Drones and autonomous systems deployed in public safety, infrastructure inspection, and military testing",
+   "summary": "Autonomous drones are being used to inspect bridges and rail lines, support police and sheriff programs, and test counter-drone and swarm systems with US and Moroccan forces.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNYUREbTloRURFZUFxbTFMelQzazFHRUI0TEUzWC1nT05RQnJIaG96cXdTd05XNlREUU1DWXkxaFptN2ItblBlLURnakxpdWxwTldVNi1vV3g1X2pDWWoxRlN1VlN1bjRqSkwzV1R6X0QtSzNUa3Y2TTFJUVBIZVgtYkpmbFBKNS1JQW0xb0JfRVBGcGVYS01rTWMxQ1djTk5WWmNQVjR1cFoxalM1WjVaMWJHSzh0ZmdfbDJjUGYxa3c5YXhPUUxXOERjLUJBeE1tM1I2NG9tR0p5RTIzcmcxYWt5YVJSZ3c?oc=5",
+    "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNOEZSYkU1cmdUanNtZEllb09qQlQ1aHYtNF9zYnhhUUM3U2dnMjd0dDhURGVJU21PMXU0WFlzQnBzRjNBb3gzVVdiWTZqb3NKVmhhRF9HOVdJLVZQVk5lcHVCVXlYbGZVT3c1OEZRWnd1Q2tpWmo1U0JSQzljUDV4S0lMRkFiUDV5U1pLelRUeXBxMmM3Q1BSVnJuaU5RMUlNZkp6NEwwMVNBQ3A5OGhOOEtiNlpwS3pHWjBKeUtuSHFydlFYOG9CTThJVW9qdjU0amZmQmdnQl93MFQ2X0ZqNHkzVlQ3QnF3dHJZZGxJSjJDWmQxT2fSAfsBQVVfeXFMT0V3UjVkQ2Z3dU1GME5xZUluYTJFY3Myc2o3N29Ndmt6ZVo2Y1dyNWZkZzc0Z1AxSldGSlpnTld6QTRVU0N0emZhVHFNUy03UDkwLUduZFIwTVA2NWRTbTQ4elU3ZHBwU3BFM3E4WjU4TDdXeXF4TmYzYzNsLWJuRlcxTmNKMEpBMmdET21lVzY1RzQ1aEl2NXNqUVFSSGRqcGZkNVhia0ZDcmpEd0k5QzhOcjJ3V2VsMzZLNnVRVGVGbndEUkduLUtSRUtjbkZGMWZMbmhSUTlJRHczR3BINlRiV01DV3dKOXFXZWsyRC14TmU1UERXYVVLdEU?oc=5",
+    "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBmSnA4UUUtRDJEeTdVRHM1c0RXdWdJTWZ5ZUI0VGVzZTZDTU40ejFRNU55SUhYaTdQemVEd01IZTdiOUJMYVM3ZVdtU3lEdFlMWTFZM2R2YjNaaDI5dUZPbkhn?oc=5",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTFA2TWNVdmxKeDJnSmhIaGRZY0hKOUhBa0FiM2VoN2w0QVFYLXo3Zmo0ZktUeVFLQWlwRV9DVzhFcHMwMGlGTWxocms0cTNidDZ5cnNOOTRIdGlFN3lCSlJvVXNqNkFXNTZMZVFFcmg1QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE9oTlBkWlNvS3Jodkw3M1pySW9LM0dENldNcDRHNkhEOFpvdWwzSy1vOUR0cUZhd3ZvcDQtd3p0T3FJN0k1Z3FKMzU4WDlBNlBfZG1RYjd6cFlRb2ZGTGtfS0g2dmJkMDlHLUxIWU1sQmpCSHdONkdkaHlOQXVNVzQ?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSlo4UmYxQ3RRMnB6UjNmNUhoQ3VUTlVjNmF1MWJJZjNYX0R0ZkxPNDZXLWdYeUR0eGhPaHBIWk9CVXdGNVdmSDV5VU9ZXy16d3k3dHBFTTlaTTdlazNsS1lXM1RzTHJiSVktSnA2b0toR2xhTl9GRnNvWlF6N1JDY3dsZmVqQ2lxNzBaaA?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUm9VeThnM1k5dHdRQkNIbk9hVlpPZVNWNGVIcXhuelVsWTEtb2RGTE5uTjdUWkg4Ym1nU00tWEI5RlNxaWF2MVhfeVNFVDRlM3Vnd2lBY3l4YndUN1kxM1phcnlkNHNxWTRyNndKa3dIWm9OZUxZLVljQnRtUDZncnM1WW0yckRVOXdiQU1wZVg4UDZoUFFZdGZn?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPckJnVFFMY3RRUWowTkRrbkRUdFktVnBUWUR4eG9BSkRlaHFMbGFhdGRuRmV2LTJGWU9Nbnk1aHd6Q2xqZFBIclozMUpwRGJzTGEzRThBWnRGQXF0U1ViNXJkZHFtRTRnRFJtQmtnb0FuT05xclQ3N2tkR1JoUzhSQXBlOWVkWWVncTd2a0hqaDNjUjRVNE9CSjAxUHJyVWVCOE5NX1VB?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNG1hZTI5aWY2bmJfNDBaQzdfaTZJRmRTMXhTVU5KcTRKd3czTTVvbXV5YkJiTDlhM294VldlVlNxWVVxeHlULWVmLXl1VDJWVWRPZWhka2NnQUppc1FxZ1N6NHV2bTJOSkpuQnRSbzh4ZUt2SlFobWtEb3UxUUxXT1luRi1NZlNzcTJiN25MbzR5QnMxR2gxM3dKelZTS18tSFpzblJCQ3lVR1FXRmhCLVpOUHNoNjVxMTVpRVZocm8wNE0?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXNVTU16aGc1ZDVVVElFYUxDeml5bVktaFpVNnJPUXppYlJvdjdQQTRBSnhpSmhoTDhvaTI4U1pCV0Zhd3JGZnVlUENwYkVqS0c5aHA5am91RUNmRGVUT1hMcFdWWE51cFZ3VjEyNjEtbHd1em9IQjNtTkctVGhna3hSVnRTZ3prU0ZFVTBWcklxU2VTZGZ2UVRSaGowZTFrQnVnYTB3X3BPLXN6ekJaRVE2cWROUDVPZ0RVSUpGSmVWQXBfdkE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 35.0,
+   "reason": "multiple outlets and DVIDS military releases"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 21,
+   "headline": "Tactilia and GENTO unveil new robotics hardware: tactile gripping and 21-DoF robot hand",
+   "summary": "Schunk spinoff Tactilia is developing tactile grip for humanoids, and GENTO has launched a 21-degree-of-freedom robot hand.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHZzNsTUxuVWl3TzFUQ1hTaUc1ZGR3dmlGZFVxN1RQZFJaVDlBSTRJb3E0YWdMcHRYQ2xpaVJXLUtKaDItdnNMcm1SaHlxQXpjdXRySzZ4bF90M19CdW9qOS01SzI0VWVQVkNLSENEejlKTkRxMmc?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xbjc2RlRoeVBjRTNNNmhaQldUd3lHZWtKOURWUEI2UHVjTENCREJ4b2RWd1JVa3N3Z0IyQ3RyS2ZoVVNqYWVnZ2c1dTlnS1c4VDFVUklFWDN3ZmN4ZGF6a200aGZNQ3J1OXNHaHRsdHhyMHFTX3BRXzFvdw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 34.0,
+   "reason": "trendingtopics and Interesting Engineering coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 22,
+   "headline": "Lyft and Waymo prepare Nashville expansion; Zoox joins Uber's robotaxi ecosystem",
+   "summary": "Lyft and Waymo are preparing a major Nashville robotaxi expansion, and Amazon's Zoox has joined Uber.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTHpVN1dDMHdTdnR0d3dqY054YjlYS3hDLWFqMTRKREEyZE1nOWZ2RFhGT0w1b2ZTVDRaRW50a0RuZkI5ZzIwOFF2TDg5dWdlX2xQdjBScmtYMkpsWlU4aXJ3N0xXQlpwaENfZkk0bWh2cFQ4enBNd2JVWFgtNlJoYw?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOTZnanNmNklKdlh0Rlp4QUZxTUg0eElQUFUyWmNia1dSWjZXRmFMVG5SeGxmZWhIa0kwX0JaT0hRSEFZWl80MlBxVGZLS3k1Tmoya1ZweVVhaGxrVW54T1htQkpxNEhJYzhENGVPZzhDZ1Rsd3hhMXdDdWxRYXFzUTY2U21ObU1TR1MtTzBpLVJBVVYwb0FpU2t3?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 34.0,
+   "reason": "Tennessee Tribune and Yahoo Finance coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 23,
+   "headline": "Nvidia shows developers building simulations with frontier AI agents in Omniverse",
+   "summary": "Nvidia describes how developers can assemble assets, physics and rendering into simulations using frontier AI agents in Omniverse.",
+   "urls": [
+    "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1nbnBPalZiaTNhN1NOcEZxaHJDbFBxNzJLeUZnS2phOFNpcXhGdVgwd2s5V1JJN2tVTVdvVHN1UUp6aktiMzdJQmRWa1hOcFVfS25EQjVUbWhsQURQMjRvcDFGYTFlUmhJ?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOTNqa2tMUzFKVGduRlFZT2xVTXpSYk56SzR2Z1k2Rm9sSFdhcE5Kb25vcUtWYUcyOTZtbldBdldDeGN6VUtSWUhDNEl0YUtkTFhYUlRRcHRCWU4yYV9qOFNHaTJpS3d3ZzlUQWo3Q1JjQTdBbk1tYjNMRUN4a3IxTjlnelFwT013bUtCMjI2eGNlcFFjMjk2ck45eWtNc2x3WTFXQlVIV044dEE0NUs1ZHlaZU94dw?oc=5"
+   ],
+   "outlets": [
+    "blogs.nvidia.com",
+    "news.google.com"
+   ],
+   "importance": 33.0,
+   "reason": "nvidia.com primary source"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 24,
+   "headline": "Humanoid and service robots shown at industry events: Mitsubishi Electric CNC cell, Multiway, KEENON, Realbotix, Roboterra",
+   "summary": "Several companies showcased industrial, service, and humanoid robots at recent trade events, including Mitsubishi Electric's AI and humanoid CNC work cell.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZmZ3Vi1uNjJOUnlaYVZfVFpSVy1LUW9KbTZ0UE41QmNXb09jX2psY0VQbWFpa1cwanhuQk1OSFdkb200WDZJV01LallIUmFnR2hLZ0swSWl2d2FIQVFMbkZOcl9tc0lTTjVIdnZfOHQwX1I3dlZGZmV4aFBmclVTZlFHbzZjQnhJelRCZWJtSUpjZHhVS2JZWl9tVUltakRQQWFHZVNxMi1hdU9SXzhmNFgySFhMSUVQQU1ZYU9oQVYwWkplZG9sZGhhamwwTk1Cc3lv?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOG5rWFdXbHkzWTcwZEl3WTgyOEVYbTczWXBkekoxWjN2U3VrQkRSX3JrbkxSb2VnWnNuS0hkUzgwbDBwQWRjS2lXN1BiUkpYQlVKeHl5UHBPRVFpckZTUGhzVU5FY2lxOVlNRHNmc0Ryd1hYRHRCendTMzdFZmFsQUhMSjg?oc=5",
+    "https://news.google.com/rss/articles/CBMihwJBVV95cUxQczd3blR1RWZaS2J0QjQ1bWJiVHE3bXZjenpJYVJKS093eFJ5ai00Z3NkMm5Ja3pSUG90LXFvLW5lX1g3VjNCdXR6UVZhQ0RJMHp4cHRnWlBsZ1pkUFJTZjQxTHhEcFd1RGE3bFJsdEdqcGgwREwzMWdqU1JvejlQdFAwOEpSVWdvY05weHFWblpCdVZKaHd6cjloVFR4ai1lUU02ZlpRUURoRXZSVHh1amJFRTczZ0xjdUdvTU1LRmRxT3lkTUtGbkQteDR0NTlXQ0lEX1poM1EzQnF3bVJFcERicFE3dW13TGtRVE5FcnNpcF9aTkk1OVFlRGlVbXVPTVhfUHlna9IBjAJBVV95cUxQUTN2aGRsd1JheWxSczV4UG5CTy01Zkw3aGI2SXIyVjlFeFFZMF9vZW96b0RPYnNaU2REZFU1MnRSbjg5dWV3MENvM3g4RjNKQkQ5R2Fwa0E5b0ZDRE1kRVZDSl9YRHRHWEpseVFoNjBMOXpnSEJZY0k0WW5mMDNHOHhPWVBKbUFfY0FMZUxnbUR2aVNlZ0RobTlyOXdFRU1KQmdHX1pDNEZQWmhWU0wwYW8tb2hUZmZVNndJbkdHSnU4U2k2ZU9OOXFUYkYzN1pYblIwc21nUnhRTS1IOXVuS29mTFNMVDZiN2pjVVBSd1FqeUZ2Y1FtUUxwdnVrZnlEZU1xWkx4V3c5U082?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcWRKdzZ1TGhwRTJTWDVmQ0FDTHFuVHBtV2RjU0YzcmlScEpoUEtMVGphWTFUVm9xa2ozYS1Va0lQLVFORkRaaXI2WVNKb0FxZE5OTkJnd0pQY0ctTzV6Q1ItYkZiLUpuQVV6UFFYNGl3cWpIbUxVM28wMmgxY01wNkRlLXdnRjRHcFBpOU9ucXhHT3Jx?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQUtyRjhoc1oyUGRGUkdKdks2WU9sMFVMRjZQVzdxbDUwVnhGNF9QZHQwNzI0QWlPS2ZiWlRiLVJhYUNIMUJZM3pJMFBPRXowMnlTdWhyWXlXWEVIc2JvZnpBNmNrZ09PV1B1T1dDQ2N6MW5YYk8yRGdoSHlLVHNIQXRabmdtR29oMnpINHh1NlBtWUwy?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaFg0LWFfUk1TaE9BT2U0MVdjZV9vaDA0aF8tMV9CRm1WMVk0R1FsOHVwOGlYNGlURjQ0ejZRUlRKRl9XUVdjZWZfbURubXVZalhzUGU0cjVROFNUMjB3a3RhLUYzUnJ3R0VGZUdGX1NEMVJXNlBNLVNsbUpOTUVZZTliMHFheHNSZUhCN05DRFdZWUdlOWJiS052ZGRRS0owMmdIcmpkUXlwRHpPSzBoXzV5QUtKUDdKNnQ1WEtDZjh3dw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 30.0,
+   "reason": "trade press coverage"
+  },
+  {
+   "arm": "editor_v4",
+   "rank": 25,
+   "headline": "Humanoid robots set Guinness record and appear at APEC events; Toborlife to show Unitree platform at IEEE Humanoids 2026",
+   "summary": "151 humanoid robots danced in sync to set a Guinness record, humanoids served at APEC in Shenzhen, and Toborlife will show its platform for Unitree robots at IEEE Humanoids 2026.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQYS1HdUU3XzlKNFNXZmF6MzNoazh4am5fTy1iR3N4dThJUnEtRy1EQ0x6QlI4T3FfT2FGdTViSE1pYVM4dzVRZHZkNFpjVE9ZcmtieUdmWWJPQnMtTlVaZjhqcGxNRXJkXzJOazE2N0JjV3k2NjY1czh1aWh6eGFJZjhSUHZPUVBsaDJkYVJqd1NpZnprQkJWT2w1SUJVS0tScEMtWEhXRXJxU094X2EySnNPYWpSUGgzY1Q0UFNmNG9CeVU3NkVtT2gtVlFWTWtQRnFvaA?oc=5",
+    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQWk5TNl82ZDZOWXZZTWc2NmtRRWI2cHEwOTRDejRON2Y2Z2FfcFBZeWJaYXJKb2JlQjVkajZKQVRaRDk5Zk5yTzh3U2c2QnNKQkFtSDlBUC1mN0FYbWI1clZYUEl5OVVGaWkxQi15WVhFSDFpbVRNblp1NUo4SFdvOXc2d0o2c2xsY2JVbTByZmhIOG5jZUE5cXFPUkZTNTNHeTRaeF9TSHpGUk42NU9KMUFjVUVwR3Nsbl9GcjZtM01KZFFhRFNIcXJBSnE4Y2I5a0xLYzdn?oc=5",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQXhmQ3hYNGV2T2ZPZXNfZDVJd1hGVXktOTB5aWQ4aUdIbjVkSURkckVLR05EZkF6Z2tTQjVySWU1b0hqM19Pb3JYWHF0MU5iNFBMbnZ2X3oxQVRWbUtZRnNseUF1UGg0TEpqX2JqeHVhZVRWNEpaYkltd19wanMwMkZCTFBDZU1DZDlLMktRaG1pbE9tR1FwMTVQWFYxYjBLdzhZR0hfZ1pWa3dfa0lfQlNaYXFreklDQl84bmhkbmJBQWdaLWtZYVh4RG9uWGp2czMyeFBWcWRFVDVMeGppUXN3?oc=5",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOV0xXVkEzLWZ2Ykl4cVdweXBKWEdqNmhKY25vQkFpUzlabTQzRmZBSzFKWkVyREVTRXdFbnVxam4tQWZiYUctcjBySFI2WGtMRDdmTmV5ZXhOM3d2aXBZbUtCUzhBcE94TlFtVk5uVV9mdC1ldWJtQzl2TmZ0c3c3OFZCMGxQb29pTklWVjRNSjExcTBRR3NjZUJWbVc0Y25VWWpLaWdpYXg2M2pJMUkzOGZ4OFNUdV9KbFAxbUhUYjRNME13UVZ2bVpwZDMwR2FjZlBySFF0aGsxOHFFU1FITXh3?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0yR3hIcmdGLXRHYnA1dFQzRjBpVzZNcFBwcGRLS1U2WlU4UHVTdXprOUpRcFVfY28zM2kwSlBtMnJJRVJ5X1U5ZTJ1SWJ0cTFJYnpV?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVVpUSDlFdi1ZVTlKRUxCdUJLakl2eFhrMXZIczZWLUJUdjhGQUZtZmlhcVNfblVaWDN2QTBKR0dibmp2RmVBT2ZKLXdJc2IxMjY5M2lwUTBTQXc3c3ItWmpHNlp1TG1mdFlMNHRIVmdDVEpFeDhXRUFDR0hJWDFRVUdEbFB5akN5TTBidk9RNXBKUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOR3JkdUlrYzhLb0JMbmtNN04tSHZLbG5IaE5aLXdTTlN6dkpZTk5Hdm83cVdjd0I5LWNyMmNaQUpCcmp1RU9wOTFNMDI3bExiNVZfcEI1WXk3aDB5aURaWG1WbG1XaEFKQ1Rlb0ZjZV9lUlh0VFRQZGY1aEczdmZfTVlTaUNaN1pfRC1nVUNPTGZveUFX0gGcAUFVX3lxTE1iSi1HR3pYUTJqQXczZDZObkxGd2tTOWZZWVoxdE9DekRTZ21sZDZhN0EwMnYwemNNRzZqbEtOOC1JSE9ObTdzdzc4WkdjRXRYUS15UzE5c21mNWFRbDUzZDRIeGFmTkhTWmtwTExiR1FqSHRwYUMxU2JENmVoTWlNN2ZNSHB2OUlNRjNObTFEXzlCaEVNOGQ3R1VZOQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 28.0,
+   "reason": "Interesting Engineering and Facebook coverage"
+  }
+ ],
+ "wall_s": 17.0,
+ "peak_rss_mb": 74.0,
+ "cost_usd": 0.0031,
+ "searches": null,
+ "notes": {
+  "observations": 529
+ }
+}

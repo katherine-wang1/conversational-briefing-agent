@@ -121,3 +121,34 @@ def test_groups_ignore_urls_an_arm_cites_for_several_stories(nc):
     assert len(groups) == 3  # Nvidia, S&P, ASML: the roundup URL doesn't chain them
     assert sum(1 for g in groups if "claude_agent" in g["found_by"]) == 3
     assert groups[0]["found_by"] == {"editor": 1, "classic": 1, "claude_agent": 1}
+
+
+def test_backfill_rewrites_google_news_and_skips_current_only_sources(nc):
+    _, arms, _ = nc
+    from app.config.loader import HeadlineSourceCfg
+
+    at = datetime(2026, 11, 24, 20, tzinfo=UTC)
+    def src(**kw):  # noqa: ANN003, ANN202
+        return HeadlineSourceCfg(tier=1, weight=0.5, **kw)
+
+    gn = src(id="gn_x", type="rss", url="https://news.google.com/rss/search?q=grid+when:1d&hl=en-US")
+    out = arms.backfill_source(gn, at)
+    assert "after:2026-11-23+before:2026-11-25" in out.url and "when:1d" not in out.url
+    assert arms.backfill_source(src(id="tm", type="techmeme"), at) is None
+    assert arms.backfill_source(src(id="fp", type="frontpage", url="https://e.com"), at) is None
+
+
+def test_backfill_filter_drops_future_and_undated_items(nc):
+    _, arms, _ = nc
+    at = datetime(2026, 11, 24, 20, tzinfo=UTC)
+
+    def ob(pub):  # noqa: ANN001, ANN202
+        return HeadlineObservation(
+            source_id="s", beat="ai", observed_at=datetime(2026, 11, 27, tzinfo=UTC), url="https://e.com/x",
+            title="t", published_at=pub,
+        )
+
+    kept = arms._backfill_filter(
+        [ob(datetime(2026, 11, 24, 10, tzinfo=UTC)), ob(datetime(2026, 11, 25, 1, tzinfo=UTC)), ob(None)], at
+    )
+    assert len(kept) == 1 and kept[0].observed_at == at

@@ -1,0 +1,151 @@
+{
+ "at": "2026-11-25T20:00:00+00:00",
+ "backfill": true,
+ "sources": {
+  "techmeme": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "hn_front": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "reddit_ml": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "anthropic_news": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "meta_ai_blog": {
+   "n": 0,
+   "skipped": "current-only source (backfill)"
+  },
+  "deepmind_blog": {
+   "n": 100,
+   "s": 0.4
+  },
+  "hf_papers": {
+   "n": 50,
+   "s": 0.53
+  },
+  "hf_blog": {
+   "n": 915,
+   "s": 0.64
+  },
+  "nvidia_blog": {
+   "n": 17,
+   "s": 0.84
+  },
+  "techcrunch_ai": {
+   "n": 16,
+   "s": 0.48
+  },
+  "verge_ai": {
+   "n": 8,
+   "s": 0.72
+  },
+  "arxiv_cs_cl": {
+   "n": 190,
+   "s": 1.52
+  },
+  "ars_ai": {
+   "n": 20,
+   "s": 0.88
+  },
+  "mit_tr_ai": {
+   "n": 10,
+   "s": 0.85
+  },
+  "arxiv_cs_lg": {
+   "n": 420,
+   "s": 2.31
+  },
+  "arxiv_cs_ai": {
+   "n": 491,
+   "s": 2.38
+  },
+  "bloomberg_tech": {
+   "n": 1,
+   "s": 0.96
+  },
+  "import_ai": {
+   "n": 20,
+   "s": 1.6
+  },
+  "nyt_tech": {
+   "n": 24,
+   "s": 1.24
+  },
+  "ft_tech": {
+   "n": 1,
+   "s": 0.8
+  },
+  "wsj_tech": {
+   "n": 27,
+   "s": 0.98
+  },
+  "openai_news": {
+   "n": 1430,
+   "s": 2.58
+  },
+  "guardian_ai": {
+   "n": 15,
+   "s": 0.37
+  },
+  "the_information": {
+   "n": 18,
+   "s": 0.45
+  },
+  "bbc_tech": {
+   "n": 18,
+   "s": 0.3
+  },
+  "gn_ap_ai": {
+   "n": 21,
+   "s": 0.29
+  },
+  "wired_ai": {
+   "n": 9,
+   "s": 0.36
+  },
+  "gn_axios_ai": {
+   "n": 22,
+   "s": 0.31
+  },
+  "ieee_ai": {
+   "n": 30,
+   "s": 0.51
+  },
+  "gn_reuters_ai": {
+   "n": 67,
+   "s": 0.8
+  },
+  "gn_ai_funding": {
+   "n": 29,
+   "s": 0.45
+  },
+  "gn_ai_models": {
+   "n": 23,
+   "s": 0.81
+  },
+  "gn_ai": {
+   "n": 37,
+   "s": 0.84
+  },
+  "gn_ai_policy": {
+   "n": 91,
+   "s": 0.9
+  },
+  "gn_ai_chips": {
+   "n": 73,
+   "s": 0.96
+  },
+  "gn_ai_labs": {
+   "n": 80,
+   "s": 1.07
+  }
+ },
+ "observations": 4273
+}

@@ -1,0 +1,408 @@
+{
+ "arm": "editor_sonnet_v4",
+ "beat": "energy",
+ "at": "2026-11-23T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 1,
+   "headline": "PJM proposes plan to regulators to cut wait times for data center power",
+   "summary": "The largest US power grid operator has filed a proposal with regulators aimed at shortening waits for data center power connections.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxQczNyUkpaS1IwM25aSkxoV1IxOEl5dnktOEhUazhobVNWOGNJdkdyckg0TG5NVmEyUG11b3Frbzk0YXU2cFdDNmdCc3hUWjdkZXN3aVVxQURTWTgyVjJmX2ZFbHNERm9nSUpmVC13dHpiVkdxaUIwbXRtSzhRdl81ZHRJRWJ1TU5qamFjWDMyR1RUdHIyVUNPVGUwLTRiVUoxb084Vnl4Y3VDTFN3YmpaM0VobFRjdUg5eGxJcVBoLThjWEZFd1NWdEFFREM?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 82.0,
+   "reason": "Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 2,
+   "headline": "US and Saudi Arabia reach nuclear power deal; Houthi attacks add to worries",
+   "summary": "The US reached a nuclear power agreement with Saudi Arabia, while Houthi attacks are raising concerns over the pact.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmNoNGFQY1hnSmFSaGF2eUNXYTdjYzIwdnNKTDF6cHVLeGg1UXdHYVk0UkhLUFVRYzF2LVVPc0toR2JzS2V2Q1BZR2JCcU1FUGFfTjFHU3ZzVlpZcUV2T09oaTZtdEp6cHdzZmdoQW1jckU3RjRZbnFfY1AxeTRpUXFRQXEyTV85ejNndHRTNFdJbHlNa2xDQkU3VEhkTUR0dXNrdHZmUGZUanl3N1d2aE1Ncw?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeERTd2VXX21mYUpEQUFyRjN2dk5Hdkl3RTZLTDUzbV9HRzE5cy1CcThnQkF3WVNsMDR0bWsxZDMxTlI1d0o2dFZwNjEtX0ZKSVBYQmFycVN2dGNYaXVTRnh3a2Y2M09uM0RkQU4wSDdGWEo3TF94ZlVySy1RNTNEaGhjZmlQZFJ4VjNzM094Rmp4Y0RJZHJZZG5MZVB1VHBkUjJxTmUwUlpBc1JFa2NhQkdGTVhOcGc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 80.0,
+   "reason": "Reuters x2"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 3,
+   "headline": "COP31 climate talks in Antalya collapse over fossil fuel phase-out language",
+   "summary": "The summit failed to reach a keystone agreement for the first time in 17 years after Saudi Arabia and other oil producers blocked mention of phasing out fossil fuels.",
+   "urls": [
+    "https://carbonbrief.org/cop31-key-outcomes-agreed-at-the-un-climate-talks-in-antalya",
+    "https://theguardian.com/australia-news/2026/nov/23/difficult-geopolitical-times-albanese-defends-bowen-after-cop31-deal-failure",
+    "https://theguardian.com/australia-news/audio/2026/nov/23/cop31s-big-fossil-fuel-failure-full-story-podcast",
+    "https://theguardian.com/commentisfree/2026/nov/23/the-guardian-view-on-cop31-a-just-transition-needs-more-than-fine-words",
+    "https://theguardian.com/commentisfree/picture/2026/nov/23/ben-jennings-failure-cop31-cartoon",
+    "https://theguardian.com/environment/2026/nov/23/cop31-left-chris-bowen-stuck-between-petrostates-and-climate-reality-but-the-failure-to-say-the-f-word-is-not-his-alone",
+    "https://theguardian.com/news/audio/2026/nov/23/cop31-collapses-why-did-climate-talks-fall-apart-the-latest",
+    "https://ft.com/content/08f218f7-6e9a-4267-b9cf-6aab727b8e14?syn-25a6b1a6=1",
+    "https://ft.com/content/32f7f678-1037-4922-860b-4b7f3c9f6de7?syn-25a6b1a6=1",
+    "https://nytimes.com/2026/11/22/climate/cop31-climate-summit-ends-climate.html",
+    "https://nytimes.com/2026/11/23/climate/cop31-collapse-what-next.html",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNa2VUOVgtMFphNXRJdWdqdnNDT0t2dDVISWstZTFSbGk1eVlEdXRoeWl3bk01OE9IQjRiN0ZLek5vdXEwQUhtN2RlZThmV1RIdERCWmtsaFphSGYwRnlrM0VId2h4R1cyUHJGaXc1THVXcUVTNnJpQlc3VUxmT1NEQ25DYUhlNk44OXdwc0l6Smc0OGwxMk9zQjU4VzdENFZt?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTlIwMm16SERFRUIwTHpnYXA5RE1pZDIyd3hSM3YxZUVDZTVkOVU0bnl6emlESm1ja0dEaFptdXN4V3FwZzFDNWN0ZE9iSS02ZDIxTFFkTXJsek5RX2duZjdrVk1CUnhXRkhjbTBEWG1WeWR6R0k0T2VVTFVSamJubUxfZi1lY2g1NXpvTmZiMllacVFfR21fbEVfbG1scTBzTUNybkF5cHpWUnBwV0RYOGdUaWg?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBGOXg3QUIwYTBEMm9sQTdLcWJaLUlDYUQ1bkZFNEg4SzBMT0lVbGxwSUllZDh6TlpFWjlvWlpXZjhyM05vcWQxd3pKbkloVE1WeUVNbE4zUF90ZFBES0RBekZTYUV0ZW9STGpOWUphQmtqZGtLZXI4a2xWZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQajRsWC1OWmdTWmxvUi0xVTF2UVFYNXliTUFlbmNBN0Y3ZXZ1QXVLRjNnMDdOVG1yNFdUTldBdXJiS3AxZkZWdHBnajFtQWEzODRZU3VEZnZLYzJ3VXZ5a1NKdGp0QWxhMnJJZHJ6dVVkZlRFY1BJM1QyRzJUbEtSMnRaeUJJbDFETVNzc2RSUm5tTDV0QVNUOGhMYzM5M0RiYjBXbmZFcG1TMmNjY25kMXE3dw?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOa1RTQ0dNM2FaaTJRb3RVLVZQTWgzTGM0WENLZjBxLXc2SE5xcGstcG1nbC1PZ0JNUnVMVklJQjNnMzgzWDducGc1dzRqeTBVWG9PMjNqNVVWNjliRjRYMVczV0hCQUx1aXdrVHNtQjEzM1ZUX29lMGY0YXZFMDRQTENnVE1rYWhJTmlZMjd0ZmlldmpUdDhfUXpwaklEUDQ?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQV0wzQ193NFdYNG82RGhFYVl4MG4tSHpNT2xENDRqOW5pb3NLLVhUcVlFSm5WbjFCbzd5dWYxMVJ1UXNJcEZXUDV2M1Y4VVFDVDZZWkFfUnVacWd2bEhyNUNhZzdYcXZHQlM3b0hDVHZfX3BHVjY2WmJzalNaLUVuR21NR0ZDd0tONTFpZGdjd0VCUEFGM1U1VGk1ZlBSNHpVWWdCWDZrVnl5Yl91?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxON21HdDk1MHE2TUpvMmJnWUxCNGY0NVk4cmV5YUMxQ0QtdlpESl9KSjRnc25WRkU3NjNkUUpxYnREOENFN1JaSFFlRnliMWtuT3cyRE9GOFJEanBmNnEzZUtOTDVvWHZBZEduNzFjbUlGYWtSTTF3TXFrV29Db2hvbmtIdEtjdEV3b3dpNl94cTlEVXU0dmJFNmJiQVhwYUgwbGN1Z1ZPQTU5VUNEbjQxR0gzUlY?oc=5"
+   ],
+   "outlets": [
+    "carbonbrief.org",
+    "theguardian.com",
+    "ft.com",
+    "nytimes.com",
+    "news.google.com"
+   ],
+   "importance": 78.0,
+   "reason": "NYT, FT, Bloomberg, Guardian, Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 4,
+   "headline": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "summary": "The decision followed a utility promise to let ISO-NE's market monitor examine proposed plant retirements.",
+   "urls": [
+    "https://utilitydive.com/news/doj-closes-nextera-dominion-antitrust-probe-as-state-hearings-continue/875489",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTWtfVXFJOVZmZVJYWE9PbTZTS1RVZUNWUENCUjNLcWhVMFVUTTV5RWJLNmZ2VnNVLWs3VmxNTjRaNl9OR0FvbE82bjNsVGhTQTFIbE5mWG5fcjNGNF9XYVZfLVBBS0l4a2Zham9mM3laSGxfWEJ6clhmWFFHUUJCT3llMy11UVMxd3ZDbU43Nkh5OEVIaEtFdEZIWUstSnhYMGtwTmRBcjJhWjNCakE?oc=5"
+   ],
+   "outlets": [
+    "utilitydive.com",
+    "news.google.com"
+   ],
+   "importance": 74.0,
+   "reason": "Utility Dive; Daily Energy Insider"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 5,
+   "headline": "Applied Digital signs $5.4 billion AI data center lease with hyperscaler",
+   "summary": "Applied Digital has signed a $5.4 billion lease for AI data center capacity with a hyperscaler.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNenpuUVUwRHpJUWw3X3cxb1dCdk9tcGxNSDdIaGFHNFRRNEs5NUo0N0hNcnp0TmNmaUtOWEUwcmJGT2ktTDBDWEZLbFlNUW5KQnJheUJLb2JVajBqUi1JVDRIbWw0XzNJT0xhOXlINzc0TDlWMnRCNzVEVGQ3SG83ZWtIN0ZvY3FqN3RCd002SjUzd210SE1aRGNlSXZTbEJGbHlxVnlGaWpxdm9ITEpYNllkQWpsUQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 6,
+   "headline": "Energy permitting overhaul bill before US Congress; Senate reported to pass bipartisan energy bill",
+   "summary": "Reuters explains the energy permitting overhaul bill in Congress, while another outlet reports a bipartisan Senate energy bill passing.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSlExaFNuSk5sZFRMTEJRTzIxanN4bjAxOHNZY0hROHE5V2lzUm0taTdkUGNNOHFmQW9WQUhsY3MzbHpwUi1vQ0pDTVEwZVBmR1VCYzhodEpKOEZRaG01OUhQUHA3cmVySDdEQ2d0TXRwNEFXUnhOVWVDMTRtRUt1QmJMT29HZ2YycDg5YkNrdmY4aUxYc2pEU0VJTGpDcWZ0Q3BvX1BSNGQ3MU5YTmZnZ05VbC1lOGJLV2Qw?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQVl2cTEyU08yR1JkcnZCa0U2NHpEN1J6dWRySWhUVS1VR2hFTnIwN1RSMFk3eks1YVNwbXpLUks2RGhjVXVTbkg1NGowQi1EYzkwczdXbFVyYlItUlMzUDduRUZrM0Y5UUNQU2VjOHR4eVJoWDBUMWFBdGxoODI2U1FFakNhbHgzVXFETDBFSWFIWVlrSm5KYXdNUF9HdVhiX1lWX2ZZSGxPOEFs?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 70.0,
+   "reason": "Reuters; EBONY"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 7,
+   "headline": "US data centers cut electric bills with brief demand cuts, raising who-pays questions",
+   "summary": "Data centers are lowering power bills through short demand reductions, prompting questions over who bears costs.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxNOWNQR2NtWXhrdGVscW14OVhXNTdfd243QWJXV3VEZVp1N3laZEdwS0VPS3o4MTU3XzM0WmsxMDhQLTNkVGNNcm5NUDhXdnZva1R0Sm1NblJCQUZZcGJ6SjJCUnhHU2FLTS1wdE02T0tNU0htbkxBX3ZtU1o5M19OTVFERTdnaktMSlQtazJsbUg1dzVwU2ZUbU1VUGVPeUFsNko0TnRxVVFtQkdaamFpcE5XbldXc1p5NGJ4a3kxS0owOWlCX2FnVE53?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 68.0,
+   "reason": "Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 8,
+   "headline": "EDF nears investment decision on new nuclear reactors",
+   "summary": "Sources say France's EDF is close to an investment decision on new reactors.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQV1ZvQWhEWTNGNENvLVNNLVk0R3VCc2NkRmFzby1mS0ZuSlpocVFKMl9tLTRjcGVDVm9DcmgyUm5sT042dGpKMU9zRGNyRm1BemVQTzI5OC1lS0RzRkIyY0oyOHQ0UUhwMUNlSGlpWE5RWmdyNGZ6YTdwdWJRREQxQUlmU0FhNFpoam4ydTFwVWJzaVNYZmNnYkFGbWtodDUyNDlWQS0xZG5TYUllNWZTbzNFNm9SRXVkbWRBUTlyOA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 9,
+   "headline": "Trump threatens tax on US firms building AI data centers abroad",
+   "summary": "Trump seeks to penalize US companies building overseas AI data centers; Microsoft's Brad Smith pushed back.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQUhJeEZydjBJNFd2dkpkME9BaG9icGdJaEFsWGI4Y1d5RzJOSHlwQ3ZkSXQ0Ty0zX2ZMc0VNU2ZTQUdIWXlHTE14MWVBckVKSHR0cDZZcWxBMld4OTdYSGpfUzBDZmdmeU1BbzRNR0JfLTNCTzZLcFZENlB3Z1p6TTIzSHA3ajY2VFlkV3BWd3pBTU1aUE1CLWE2MzAyOHlRLUFESzFablp3NnpZSGpwTXRVR0QyQ0JoZS1WUzZQUFd0THdkUnNhcTJvQXpTaHlmc19IMDl0ekpXTWNYcVh5Y0FheUdkQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPZXBPMDVXTFF0RGQ4Zktka3UwV18xRjZZRW91SlpTblJqR096eHdtb0Z6b3dSYWJld2E2YnZuTHBaTDVBRUNtdHlzSzBJSDNwRHprU2NCUlBWOWI5NjFaSTFFRkNpY0VSQ0dUQmozRzBfVUhBZGxPVXVocHZQTTZyOXFYX0JVLWE5cXVKUE40anBEVkhMQkZmVlUwOVAwcGdSVUFfeWpGSDczYjNVZmxTbXlRNEtJdnNaQldwRWxLU2NDR3RKalBnbUY5ZHpmRnpPUFVqVE1XWmdmNXZJQVR6aHpvcVNDY3o3dC1MNTd5aDkxVk5acE9aUUNUX1diNmNSY090X2g4WXloM0HSAYsCQVVfeXFMT2VwTzA1V0xRdERkOGZLZGt1MFdfMUY2WUVvdUpaU25SakdPenh3bW9Gem93UmFiZXdhNmJ2bkxwWkw1QUVDbXR5c0swSUgzcER6a1NjQlJQVjliOTYxWkkxRUZDaWNFUkNHVEJqM0cwX1VIQWRsT1V1aHB2UE02cjlxWF9CVS1hOXF1SlBONGpwRFZITEJGZlZVMDlQMHBnUlVBX3lqRkg3M2IzVWZsU215UTRLSXZzWkJXcEVsS1NjQ0d0SmpQZ21GOWR6ZkZ6T1BValRNV1pnZjV2SUFUemh6b3FTQ2N6N3QtTDU3eWg5MVZOWnBPWlFDVF9XYjZjUmNPdF9oOFl5aDNB?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxPSVlnYzZjZ29oVDJTLXBoN0VtOUxXaHk4eDJNX1A0LXgxR3NGeVBTNUZKYnNwYUFtU3pnTlcyaEdBRkhCYTVrdUg1TkFFR1lRNEJ2czNYb2R6emdWeTVUYjVQYThiaGF0NG15UDBLbXNYZFlJMml4dGxZWXJEZGdzTmpuU0lSWkJkLXZLYnhhODhiX05MUmNDWFRGdUdOc3J4RkVvamtWYl9RX1ZZbWxCU2FBZkoyc09oVFRCd2liMmVkRlZvRHc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "GeekWire; 24/7 Wall St."
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 10,
+   "headline": "IEA outlook sees US data center power use quadrupling by 2035",
+   "summary": "IEA's World Energy Outlook covers data center demand and nuclear's future; other estimates say AI demand could double by 2030.",
+   "urls": [
+    "https://ans.org/news/2026-11-23/article-8611/ieas-world-energy-outlook-2026-looks-at-nuclear-powers-future-amid-global-turmoil",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxNakwwTjRuQnBNZE1OSFRoNFZqOHdPN21tZ0t2V3NXV19nS3NSaEZfSUM4OFE3aDdwSzdqS08zcGRBcllWRGUzbk1lTGkyckpkN09Razh1dkZGVk95M3RIbkxqMXFhM3BPY3lXUHpwaVRaYlNKeTdsUkkxZUkxV0plWkNvU1hWWFllRFdnWg?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLTBRNVhvQ1ZHR1ZzSWtRU1J0LV9LWjlueGlmRnUwNnhxdmRERHdRMWkyWVlQOHJVSTZuYzdUaEF4QUg3YUp3M0xYU3ZNQm1PQndjRVM5ZVNZZTVZN0FOR3doOHhMbDRCRC14cDBiWUw0a0FIUHgybHhJY2VRN3JDMEZiTldwQVRpaXJxUDFsdElpNW8?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc1BNMG40d2dSQjNRaWU3bmsxUkhINllxUDVPQW1NTlVxTHRvU3h2c3ZDcmh5aXBFS1AzY0tpTWhyaGlydTIyR2pSLXVub1lOeThqWjVsSWVFMXR6WFhlMTlkS0hFOU5TRkhFZ052SVdRbjVwc3hPb1laUGNPUmZwYUlnbVFGbmR4R2N0MnowdGNZM3UxbWZ0NmdLM3NTWE1oM1ZZbTZyNHlab040RVA4WXhNdllGUlQ1MlM0VA?oc=5"
+   ],
+   "outlets": [
+    "ans.org",
+    "news.google.com"
+   ],
+   "importance": 64.0,
+   "reason": "The Well News; ANS"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 11,
+   "headline": "FERC approves MISO plan to speed legacy interconnection studies",
+   "summary": "FERC approved MISO changes to clear its 35 GW 2022 interconnection study cycle faster.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPY3ZuU1RTaHY3WVJNSjFqN1pybVRsSldqV2ZwTU1OLUw1SE1PbnJqNzR0Z0cxa0dwVlFPamV0cDR4a1RockJWVkRhZG9LRDYtV2pBNS1TZ1ExYWFfbFVnYzZ3d2pnQktOV25NWjZrUlpWUUJ0R2cxRU9DbGZzM0hmVkhfVFY?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcmdKNHVUUXBFZ3VnakZ6d2pSYW5XcDNXY0JXN1UwUXBNQTh2dFZfZVdsczV4MWlEZm1LMmxROENKOVdFTUFwNnV0R3dHVE5XZG1JYjRLclZkRmhTeEhxb2tVYV90M2pNUThhUVBGOXFNZUZ0ekVJZ3BoaDdRZXFEYzdiUW5iTzl0WHR4SXlZaHIxWWhjZnVMMlQ1LVJ2ekl6VFN0eUs4b1VJdw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 64.0,
+   "reason": "Utility Dive; MLQ.ai"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 12,
+   "headline": "Plug-in 'guerrilla' solar goes mainstream as more US states allow it",
+   "summary": "More states allow plug-in balcony solar; Nevada proposes legislation and British Gas launches a kit.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPR092R3hralFjcC1nVXNyT1pnMTRkaHZHcXpHWnlaUFZUaC1XSmhxZHZzWlRqWmNTVW04MGtydnc5ZEVnek9RWEpRY2lqS0cxY01iWU81bEExZ1pldEZOcE9aUlVHZk5wM0o1RmFsdldaVVFoSXN3eVBndWRtSjhTZkRGeE5lVGtjQ2xWMjQ3amRLcVBMdFFINTBRczFKVUZ1ZlBZamhLTnlfMm5MejZ5S3BRMk0yUEdUZUZ6S21LVVFKaWNlcGhWWkhnS3RHSGNJS3g1ek1pSGhaRWZRajhCb2F6WQ?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTFBZRWRzbGxQRzFCb1ZNaWtZQ2REZ21QYWtIZWxWYk43R1FVQkdpdmNxOU5PT2l2MHY1UkxaSUFKQS1sLWxwQ2lhdk0xaDZoS2swQ3dCVHpsNVBUV25sOEVhTUJxM2xBcU8xS0lkam93?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOM0lWeHJsODljYmlwcmo1LWxjRWtOYm5HZTM5el8wci13cEpzYUdBemJhUm05cXJRa3pSRFdKU2J5N0VwWXJuWFlONksyS0o0MUtubnY2blIzcENjcmVobHJYN3ZSRWhpNHhTalpZa0xCOUg3WjZKWWhxOXAxbjZWdHFhbGp2QkJmamhvOTZXUXBKMVNTamtVTEdMeUo3Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQ1BfSHBGTXdOdml4N0c0VFMzcFRoODY0M2xmTkc1TXB0Y05uTzZYMGVsaGt1UWV4MUZnVzdwSlR1U3dyOXFvMEg0eGdNTE5SRTBMbHNndHE0RVVSMHBaZHFrejN0RzIyWHVsaDBQdVpZd20wQW9oTFRtOU5kUmJsdEdxQ3JFRGRJcG9FMkhkS0ZpNG81RVdLQ3dMbUktRWM?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxOajN3aC1jdWFCU0xLNTRoQ1ptX0pxeXE1NlVaU1phTjRseWtkdkNOU2YzVVB6M0pzWlZORkVNdURILUZwNjNEWEk1QWV2MDFtaXU4bHFFbjJYRTIyekI3bmIzaFlqN21ZdWdsZURBZFpKbmhqMWtKQmxDcENUcENtMF83SDR0R2preFpPTHc2ckZKSlpsT3Y2X201NnRtS0tIM0JVWHZCa2Q0Y3ZH?oc=5",
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxQN0pMWDJZYUVyNzZjRkU2d0dLQjB0cThqaExyaWpBVFQzMEd4ejFseWEyUTRHSXU0Wmt5ZnhGaXJLNERZQnJoMXpKUi1CWi1pbFpKR2p6azZXcExYdm44TmFaRWZtR2UwWXNleGRfYUs1bjNiYzNGYTI1b2pSMF83QWxoRjJ1clRCY3RhRmdOeG9HQlBETFNKeE8yaExZQWxKRzIydkJPSzltT1ljU05rSFVuakdTTzVENERtRzllLV91NWtJLXEySVpQSQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "Bloomberg; Spokesman-Review"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 13,
+   "headline": "DR Congo reimposes cobalt export ban to shore up prices",
+   "summary": "The top cobalt producer cut off supply for the second time in two years.",
+   "urls": [
+    "https://ft.com/content/7421ec30-dde5-409a-971c-64359c21ea3d?syn-25a6b1a6=1"
+   ],
+   "outlets": [
+    "ft.com"
+   ],
+   "importance": 62.0,
+   "reason": "FT"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 14,
+   "headline": "ABB buys German cooling firm Ziehl-Abegg for $2.2 billion",
+   "summary": "ABB agreed to acquire Ziehl-Abegg in a $2.2 billion deal.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPR3dUc0hDeTFpS2xiTEFVTzlwS1lPZFRvQ3FQSVlfUnhqVUQxMUlic25qa3kxUmZNeHFvQUI0S28tVFdYQmgwZGJjMHVzaVBlRi1XYU1iWlRLbzByM3hYS0ZZdV9LcGRsQlBLbklhYlNRZjZXMkNZUnd1b3N2SjRyMzJQSFBUS1BQY1g2bG1MX1I5cEJXZ0RWdlNHUjQydFNCc0hKQ19Sa1VRb2c?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Bloomberg"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 15,
+   "headline": "New York unveils advanced nuclear master plan",
+   "summary": "Gov. Hochul announced the Master Plan for Responsible Advanced Nuclear Development.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/new-york-unveils-advanced-nuclear-master-plan"
+   ],
+   "outlets": [
+    "world-nuclear-news.org"
+   ],
+   "importance": 60.0,
+   "reason": "World Nuclear News"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 16,
+   "headline": "Poland targets early 2027 for final contract on first nuclear plant",
+   "summary": "Poland plans to sign the construction contract for its flagship nuclear plant in early 2027.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbUtVZDVxVW9Mb1dadDNwTllwa0NtU1FnV01Vb3JwRDg5N0U2Z00wZGNxMnBidW1GTGh1RFo4bGpodS1UbjExV3hNQ2FTR0NzRUNhWWJINWVENXhuWV9EMnVnaEU1ekh2R1ZVbzMwaHJLUURvUW8yNUNRZ0s4Tzhod284d1B2c25IZDBSQ2RiVVB4ZlZOcWpwaWNWbllIaVVwS3AtX01JWnh0azdBN0NoSW5iRlpGWEZsWnVrY29EQUYwRC1QbnZtTmpLb0Nzcl9f0gHWAUFVX3lxTE1JSWlSZXZGR3c1cTAzUjAxazRKRF82b1NwdHVKdkE1QnBIckdfZkpzZmVSMW52MjNaMEoxMElEdk16QklXd1poYkV6T2E5VUZndFFvRktFdmhiVlZURV9HNldBYjVQV0cxSzhORVU5WW9LaDdNSDAtWl9pQTh2QVVKem1MUktWTHlfT3cydGtORmpPQWFmTmUyX2FsaVhHYVdpeHgxZktIekNfdjFfaWVqYzRfNHJPLXpjdzZyTmtpWVlHWl9zQ2o5VkY1ZVVaazk2clhSM3c?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOd0tTdzFnVVpmQkQ5Xy1yYTNkRnFab2d4R2tIVEJJT19zWmMwMDF5bWJHcnJqc0dUdGxieHBIa3pfVW9IZjA1cVhqb3IwdEJfelcwWTNSQ1p0MUhiQzhmRHhNbU44blVQOEprNzluVHZ5OGlKc0hSLUpEei02MF95VEpKVUR1MTYyd29SVUJESUZQZ2tWbWt2Q1RYNDFvZmV5dzVRQnpzWm5sRVZidy1iTmtPMUVMZw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "Bloomberg; LIGA.net"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 17,
+   "headline": "DOE order halts Orlando's Stanton coal plant phase-out",
+   "summary": "OUC's coal retirement is on hold after a DOE federal order citing demand.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQUVsaXlicUVRRGdxUVd2cnNlZ09ZZnBfWTNIcVNRSUZFOXJtRWZpLWNzalphdHBaZ0R1aklqMzNkXzhuSDh1bktsRDdYelZSbzBXUm1DaEZaalZhYmNHdHlGT3hESl9iSjdYeXF1dy14bE15RTNKU3l4aG9lNlZSYUNTdEhQajFXck5ESjlqQVJ2QjZTUHJaNFlVSUZsdk5GUzBLWElTUUw0RWhMYzFJSjBrc25hNFpfcFZMOXNKenpHMFUwcm1yd1lPUFpHLTExaDVUeTNWOXhndw?oc=5",
+    "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPMURQa3M2Q1NZdDIwRExSb3lpY2UzSlJTRTYyUzY4N0RXTF8zanlka2tGZ1Y2c0xnZWo1SnZjdWJyVGc5aGV3Rk1EVDJPOTZ2cWhnajR4ZEdINTRlRXNpMUJxUnFwRVNkODJxaUFCMm9JTVRqMDB1LTIxb3NEaFJfNm14SldxNkkxOVV2c1lkNjFVSFMzTnc1cVNLcVRaMU1iSExVNGhwMkMxQ3o3Wmlna1NOei1PWFA0a2VCWW9zamxEYjV6TXJjY1ptZE1CaUlOemFuS1JqRUJDRjQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "WKMG x2"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 18,
+   "headline": "Ohio approves gas plant for data centers despite local backlash",
+   "summary": "Ohio regulators OK'd a gas plant to serve data centers over voter opposition.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPY2x4bVlvQWprOWZ1MW0zWVBOYl8wU01Ca3A1cGFVc1c5bUVUS3hqcWhoNV84TzV4enhFamJUbEtRa1BRcmZNQW5NX19ENUk0bjRXdmxtMTBuWGk0eW9MSEwzbGx1RG90cERRX2M0QktyRUFzeURXT3BKWUlzaTQzcmdLejlvUUthV2kyYUNR?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "Canary Media"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 19,
+   "headline": "Pacific Fusion gets tritium licence for $1 billion New Mexico facility",
+   "summary": "Pacific Fusion secured a key licence for its Albuquerque demonstration campus.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxNUUVMS2ZiNk9veHZ5WFR1bUJCZTJZTXhTY0MwdmJEN1EtLVVSSE1sV1FGMm14Wkh2clBOOWdSR1VjU0ZnZng2aW4wS2NlR1Q5dHFSTi1XaHpoaTlfQ0VMUEZjVU9qWUdhTlgwNU1JaXZxbXlSVkhVc1ZONXJHZWhYUE9aQ1ZWYkJ4UFY1OExyM29ObERvdEE?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYzU5XzByb3VJS29FS0p1VS10cE1yamxYdXhSWS1jd2NMb0ZxS1NNS082R1BWcHhib0NKNXBkTXF6bWlweEVRZjZudDlYaDlpZXV2T0lHOUtuNW8yb3ZQd19HeHlJVHJUSk5tdVhkdkVqUWc1NE9Ybm9YckJBVURKSk5JcVM3UnBsUzFrTktBUGJscnpuaXdPZlJGVzZEOUZISEN1ZlJBanNldElueDhCS1lWcS1ma0Iwem5CeQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 56.0,
+   "reason": "NucNet; energynews.pro"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 20,
+   "headline": "Meta power provider urged regulators to exempt data center plants from acid rain rules",
+   "summary": "WIRED reports a power provider for Meta sought exemptions from acid rain rules for data center plants.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTjZhN0Fjb2pJRnVoUTBOZ3VheTBFQWhmNWhQOFViMHI2elZLbXhxdTJSOU10eFpOYU5ya3lYckl4cXVxaXNxLXNhY2Y4VjBSQWtzU1JlOWpsR3FLaVpTVTd2WXRPeERDN1R0X0tIZmFzb1J3RWplZWhUc3NTSHg1V0tWaDhrWHg2NnlXQ3lsWDJ1azFJa0xvTEt5N0NHcjlQdFFhNXZfZ3Rjc3BxalcxTzRmS3RveDR2N2g1cGFn?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 56.0,
+   "reason": "WIRED"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 21,
+   "headline": "Regulators say nuclear accident risk in Ukraine rising this winter",
+   "summary": "Atomic safety regulators warn of higher risk this winter.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRjlIbUpKS3NfVi1Oai13Y213OWJ4S0FkU0RIa1hDU1o2ZHBBN05zUXRKQnFZUDlXZ1hhbUxGS2wwUUJIbEVRSmNsSXFRNk10dEhIS0NuWVFHSHBPRFNxUUluT0ZZRlByUVhGajRMcWUxQlBkazFwU0hvYUthYlZGRzdEQTdrNnl4cDJWeEIzZWtaYnc0UUFMTk03QldsOHZiZGNTRTlmRWNrcVpIWHg5UGMzcDRINkF4cG1ZTExsZktQSjlTNm91Vg?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "Reuters exclusive"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 22,
+   "headline": "Data centers could pay $55B toward grid upgrades under bipartisan proposal",
+   "summary": "Grid Strategies analysis of a bipartisan proposal on data center grid costs.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQzcxSjBleDJzUzJmajVVMzVTdUlBY1piNmgyQjZwdzRUc2xrYU91MFUxakdwaVMyYkM3UnNQTjc2bHNZYUMxS2pfUGNOaGtnbGRSdDBZN0JEWDNJampFTXVRSEZ0Y3pTMUMzemNqTTBZTzlxdFhuMUptWVNHZlV5NUhQb0RUc0hLcFRBdTdnblNwVVJybFM0cWlUMkpyelhoclRJVHhtdVVCcXlKU2JPeVJFM3lwbjYyQ0Q2V3AxRHBjekVic3ZQX0QzQVVla3gwRlNyM2N4SQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "Daily Energy Insider"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 23,
+   "headline": "Bangladesh connects Rooppur nuclear plant to the grid",
+   "summary": "The first reactor at Rooppur was connected to the grid.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxOb0l2ZHJhQUY3MndkcEY0QUVMVVFEQnlUcFVlYU1ZQ1lTbFFnXzQzME1ENUR6UC1FNUxrZnNzNzRjbzhNZE9vZDZwc1FxR3REdUNLRk5pUk9VNEdsc2xKY051VEFtZFBMWkRrajhtLWl5QUZqamZYRmZwYnpnUXJfQ2hrRlQ0RExNcG5lV19yT1FFT1VmZHBZNUpmamhqMWFpeFl5djhqcFE3SkJVNlE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "oEnergetice"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 24,
+   "headline": "Three Wisconsin data centers account for 70% of peak demand growth",
+   "summary": "A report finds three data centers drive most projected growth in Wisconsin peak electricity demand.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hYkY3MUhLdng4cmJFZVpXb3FRbXYzRWY4WWU3YmVBSnlXeko0UnctbEtBVDVVYnhiX1lqUEVHR0luZnRXUVY1ekNCUGlhN2JUMVdtMVZLTjgybEduVTBlcHNOazZhUFBQV3RqLVFDSFB5d0lHNTJ4aWh4VTVsU3M?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcjhQZEYxbzlQU3Q2X2JqaFR1Y2ZhekxudmhiaXBUWjdDa3V0cExFMmFjYS1QSGY5aWkta3Q0dElXZFB6bWp6VERJbGxEU1l4ZUlLN2ZNTURsVGI1MkZ5NHVLbXV5cVJSOGtLaEpqOTBOQnI4YkVfdENTVmp2UGQ5b20wejlYU3BPOWozbmVCdi1Lb1hUdmk0c3dNbjJMYjRjdTdmZVZReGp6T3VtWlE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 54.0,
+   "reason": "WPR; Urban Milwaukee"
+  },
+  {
+   "arm": "editor_sonnet_v4",
+   "rank": 25,
+   "headline": "Spain approves data center decree to curb electricity costs",
+   "summary": "Spain adopted a decree on data centers aimed at limiting power costs.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRlpmNEVGQ3FTMGg2WllpcTEzMlNqZnpweXljVFBHS21wVFNwaEJtS3o0b1RnLVkyMUxrT0UtN09IeGlVNzJRTHBmbEFkNXdKRlJQTVlJMUJHU0ZWNDQtY3NHQ2dVMmN3d2F4ZExucmNGaW9neUQyTGNrQ0hnNGtoN203dnBPYjJucGdVY2NjeWExWThQRVJ0VGpmUnpxVHc0M1Nub1EtUFVQT1k?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "DCD"
+  }
+ ],
+ "wall_s": 28.2,
+ "peak_rss_mb": 78.6,
+ "cost_usd": 0.104,
+ "searches": null,
+ "notes": {
+  "observations": 1064,
+  "editor_model": "anthropic/claude-sonnet-5.5"
+ }
+}
