@@ -106,23 +106,31 @@ happened?" or give background.
 - [ ] **Decision:** may the agent use background knowledge for stable context (what a company is,
   what a term means) while news claims stay cited? Leaning yes.
 
-## 3. Prompting for audio only (parked)
+## 3. Prompting for audio only (done 2026-11-27, see `docs/smoke/2026-11-27/brief_audio/results.md`)
 
 **Problems** (see `docs/smoke/2026-11-05/brief_script.txt`): the headline is never read aloud, the
 intro doesn't preview the stories, internal labels are spoken ("a story picked for you"), stories
 change with no transition, and the rule of one citation per sentence with sentences under 25 words
 makes it sound like a list of facts with no context.
 
-- [ ] Rewrite `app/agents/prompts/cos.write_brief.md` for a listener with no screen:
-  - Spoken rundown in the intro.
-  - Signposts between stories.
-  - Name sources aloud.
-  - One sentence of context and one on why it matters to this listener.
-  - End each story with a hook for questions.
-- [ ] Write each story as a spoken paragraph and cite at paragraph level. Code splits sentences and
-  maps citations; the claim check stays per sentence.
-- [ ] Rewrite `app/agents/voice/prompts/voice.turn.md` the same way: always name the story, allow
-  longer answers for "tell me more", never assume a screen.
+- [x] Rewrite `app/agents/prompts/cos.write_brief.md` for a listener with no screen (v2):
+  - Spoken rundown in the intro: the writer gives a cited teaser per story; C8 checks the teasers and
+    code builds the rundown from the stories that survive (`app/agents/cos/spoken.py`).
+  - Signposts between stories, a spoken headline sentence first, sources named aloud, one sentence of
+    context and one on why it matters (only for interests the story matches), a hook at the end.
+  - No internal labels (slot names are no longer in the payload).
+  - Code: every story keeps an introducing sentence (C8-dropped lead → its checked teaser, else the
+    story goes); adjacent near-duplicate sentences are dropped (rapidfuzz); uncited lines with numbers
+    are dropped.
+- [ ] ~~Write each story as a spoken paragraph and cite at paragraph level.~~ **Not done, by decision.**
+  The listing sound came from the prompt's rules, not the per-sentence contract; v2 gets the flow
+  with sentence-level citations. Paragraph citations would give each sentence every passage of its
+  paragraph (a weaker and costlier C8, and the voice agent loses which passage backs which sentence),
+  would send framing lines (signposts, hooks) through the claim check, where they fail, and need a
+  sentence splitter whose mistakes move audio segment boundaries ("U.S.", "34.3"). Revisit if C8 starts
+  finding its own supporting passages.
+- [x] Rewrite `app/agents/voice/prompts/voice.turn.md` the same way (v3): always name the story,
+  four to eight sentences for "tell me more", never assume a screen, sources aloud.
 
 ## Order
 

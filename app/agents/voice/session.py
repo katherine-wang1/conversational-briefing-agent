@@ -515,7 +515,7 @@ class VoiceSession:
                     role="voice.turn",
                     messages=messages,
                     tools=VOICE_TOOLS,
-                    max_output_tokens=400,
+                    max_output_tokens=700,  # room for a fuller "tell me more" answer (voice.turn v3)
                     budget=budget,
                     trace=TraceCtx(run_id=self.run_id, user_id=self.user_id, role="voice.turn", step=turn_id),
                     cache_namespace=self.run_id,

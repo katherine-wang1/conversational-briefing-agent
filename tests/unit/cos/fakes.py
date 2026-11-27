@@ -141,22 +141,42 @@ def extract_handler(n_passages: int = 1, *, offsets_wrong: bool = False, invent:
     return h
 
 
-def write_handler(extra: list[dict] | None = None, *, bad_cites: bool = False) -> Handler:
-    """Intro, one sentence per story citing its first passage, outro."""
+def write_handler(
+    extra: list[dict] | None = None, *, bad_cites: bool = False, spoken: bool = False
+) -> Handler:
+    """Intro, one sentence per story citing its first passage, outro.
+
+    `spoken=True`: the v2 shape instead: per story a signpost, a headline sentence, a detail sentence and a
+    hook, plus a rundown teaser per story.
+    """
 
     def h(req: ChatRequest) -> dict:
         text = last_user(req)
         sents = [{"text": "Good morning, here is your brief.", "kind": "intro"}]
+        rundown = []
         for block in text.split("### story_ref=")[1:]:
             ref = block.split()[0]
             pids = _PID.findall(block)
             cites = ["nonexistent:0-1"] if bad_cites else pids[:1]
+            if spoken:
+                sents.append({"text": f"Next, about {ref}.", "story_ref": ref, "kind": "transition"})
             sents.append(
                 {"text": f"Story {ref} happened.", "story_ref": ref, "cites": cites, "kind": "story"}
             )
+            if spoken:
+                sents.append(
+                    {
+                        "text": f"The detail behind {ref} came later that week.",
+                        "story_ref": ref,
+                        "cites": cites,
+                        "kind": "story",
+                    }
+                )
+                sents.append({"text": "Ask me for more.", "story_ref": ref, "kind": "transition"})
+                rundown.append({"story_ref": ref, "text": f"the {ref} story", "cites": cites})
         sents += extra or []
         sents.append({"text": "What would you like to dig into?", "kind": "outro"})
-        return {"sentences": sents, "aliases": {}}
+        return {"sentences": sents, "rundown": rundown, "aliases": {}}
 
     return h
 

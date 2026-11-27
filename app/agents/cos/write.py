@@ -3,7 +3,10 @@
 The model drafts sentences; code enforces the rules it can check:
 - every `story` sentence must cite at least one passage from that story's pack (invalid cites are removed;
   sentences left with none are dropped);
-- intro / transition / outro sentences may not carry facts and need no citation;
+- intro / transition / outro sentences may not carry facts and need no citation (one that states a number
+  in digits is dropped: numbers belong in cited sentences; digits inside names like "GPT-5" are fine);
+- each story's rundown teaser must cite that story's passages (C8 checks it like a sentence; code builds the
+  spoken rundown from the teasers of the stories that survive, see `spoken.py`);
 - answered follow-ups (already researched and claim-checked) are inserted right after the intro;
 - the brief ends with an open prompt (a default outro is appended if missing);
 - stories left with no sentences are removed from the script.
@@ -11,6 +14,8 @@ The model drafts sentences; code enforces the rules it can check:
 
 from __future__ import annotations
 
+import re
+from dataclasses import dataclass
 from typing import Literal
 
 from pydantic import BaseModel
@@ -22,10 +27,12 @@ from app.agents.cos.untrusted import wrap
 from app.contracts.agent_io import OpenQuestion
 from app.contracts.brief import BriefSentence, BriefStory, SelectedStory, SourcePack
 from app.contracts.common import BudgetExceeded
-from app.contracts.memory import DeliveryPref
+from app.contracts.memory import DeliveryPref, Interest
 
 WORDS_PER_SECOND = 2.5
 DEFAULT_OUTRO = "That's the brief. What would you like to dig into?"
+# A number on its own ("24 percent", "1,000 agents", "3.5"), not digits inside a name ("GPT-5", "BWRX-300").
+_NUMBER = re.compile(r"(?<![\w\-.])\d[\d,.]*(?![\w\-])")
 
 
 class DraftSentence(BaseModel):
@@ -35,9 +42,25 @@ class DraftSentence(BaseModel):
     kind: Literal["intro", "story", "transition", "outro"] = "story"
 
 
+class DraftTeaser(BaseModel):
+    """A short spoken phrase previewing one story in the intro rundown."""
+
+    story_ref: str
+    text: str
+    cites: list[str] = []
+
+
 class BriefDraft(BaseModel):
     sentences: list[DraftSentence]
+    rundown: list[DraftTeaser] = []
     aliases: dict[str, list[str]] = {}
+
+
+@dataclass
+class Teaser:
+    story_ref: str
+    text: str
+    cites: list[str]
 
 
 def est_duration_s(sentences: list[BriefSentence]) -> int:
@@ -55,6 +78,17 @@ def followup_sentences(answered: list[OpenQuestion]) -> list[tuple[str, list[str
     return out
 
 
+def listener_interests(scores: dict, interests: list[Interest]) -> dict[str, list[str]]:
+    """story_ref -> labels of the listener's interests the scorer matched (C4 `because`)."""
+    labels = {i.id: i.label for i in interests}
+    out = {}
+    for ref, sc in scores.items():
+        matched = [labels[b] for b in getattr(sc, "because", []) if b in labels]
+        if matched:
+            out[ref] = list(dict.fromkeys(matched))
+    return out
+
+
 def _payload(
     selected: list[SelectedStory],
     headlines: dict[str, str],
@@ -62,20 +96,32 @@ def _payload(
     delivery: list[DeliveryPref],
     answered: list[OpenQuestion],
     target_s: int | None,
+    listener: dict[str, list[str]] | None = None,
 ) -> str:
     prefs = {p.key: p.value for p in delivery}
+    listener = listener or {}
+    if answered:
+        followups = (
+            "Answered follow-up questions (code inserts the answers right after your greeting; say in one "
+            f"intro sentence that you'll start with them): {[q.question for q in answered]}"
+        )
+    else:
+        followups = "Answered follow-up questions: none (do not mention follow-ups)."
     lines = [
         f"Delivery preferences: {prefs or 'none stated'}",
         f"Target length: about {target_s or 180} seconds of speech.",
-        "Answered follow-up questions (code inserts the answers after your intro; just mention that answers "
-        f"come first): {[q.question for q in answered] or 'none'}",
+        followups,
         "",
         "## Stories (in listening order)",
     ]
     for s in selected:
         pack = packs.get(s.story_ref)
-        lines.append(f'### story_ref={s.story_ref} slot={s.slot} why_tag="{s.why_tag}"')
+        lines.append(f'### story_ref={s.story_ref} why_tag="{s.why_tag}"')
         lines.append(f"working headline: {headlines.get(s.story_ref, '')}")
+        matched = (
+            ", ".join(listener.get(s.story_ref, [])) or "none (don't tie it to the listener's interests)"
+        )
+        lines.append(f"listener interests it matches: {matched}")
         if pack:
             for f in pack.facts:
                 lines.append(f"fact: {f.text} [cites: {', '.join(f.passage_ids)}]")
@@ -84,9 +130,36 @@ def _payload(
     return "\n".join(lines)
 
 
+def _transition_refs(sents: list[DraftSentence], known: set[str]) -> dict[int, str]:
+    """Story for each transition the writer left unattributed, so it goes with its story if that story is
+    removed. In a run of such transitions between two stories, the last one is the next story's signpost
+    and the ones before it are the previous story's closing lines (hook, why it matters); before the first
+    story they all lead into it, after the last story they all close it."""
+    out: dict[int, str] = {}
+    i = 0
+    while i < len(sents):
+        if sents[i].kind != "transition" or sents[i].story_ref in known:
+            i += 1
+            continue
+        j = i
+        while j < len(sents) and sents[j].kind == "transition" and sents[j].story_ref not in known:
+            j += 1
+        prv = sents[i - 1] if i > 0 else None
+        nxt = sents[j] if j < len(sents) else None
+        prev_ref = prv.story_ref if prv is not None and prv.story_ref in known else None
+        next_ref = nxt.story_ref if nxt is not None and nxt.story_ref in known else None
+        for k in range(i, j):
+            ref = next_ref if (k == j - 1 or prev_ref is None) else prev_ref
+            ref = ref or prev_ref
+            if ref:
+                out[k] = ref
+        i = j
+    return out
+
+
 def fallback_draft(selected: list[SelectedStory], packs: dict[str, SourcePack]) -> BriefDraft:
     """Deterministic brief when the model call fails: one grounded sentence per story."""
-    sents = [DraftSentence(text=f"Good morning. Here are {len(selected)} stories for today.", kind="intro")]
+    sents = [DraftSentence(text="Good morning. Here is your brief.", kind="intro")]
     for s in selected:
         pack = packs.get(s.story_ref)
         if not pack:
@@ -135,8 +208,12 @@ def assemble(
             for text, cites in followups:
                 add(text, "followup_answer", None, cites)
 
-    for d in draft.sentences:
+    transition_refs = _transition_refs(draft.sentences, set(sel))
+    for i, d in enumerate(draft.sentences):
         if not d.text.strip():
+            continue
+        if d.kind != "story" and _NUMBER.search(d.text):
+            notes.append(f"dropped uncited {d.kind} sentence with a number: {d.text[:60]!r}")
             continue
         if d.kind == "intro":
             add(d.text, "intro", None, [c for c in d.cites if c in all_ids])
@@ -153,7 +230,7 @@ def assemble(
                 continue
             add(d.text, "story", d.story_ref, cites)
         else:
-            ref = d.story_ref if d.story_ref in sel else None
+            ref = d.story_ref if d.story_ref in sel else transition_refs.get(i)
             add(d.text, d.kind, ref, [c for c in d.cites if c in all_ids])
     flush_followups()
     if not sents or sents[-1].kind != "outro":
@@ -178,6 +255,32 @@ def assemble(
     return sents, stories, notes
 
 
+def teasers(
+    draft: BriefDraft, selected: list[SelectedStory], packs: dict[str, SourcePack]
+) -> dict[str, Teaser]:
+    """Valid rundown teasers by story: a known story, non-empty text, cites from that story's own pack."""
+    sel = {s.story_ref for s in selected}
+    out: dict[str, Teaser] = {}
+    for t in draft.rundown:
+        text = t.text.strip().rstrip(".!?;,: ").strip()
+        if t.story_ref not in sel or t.story_ref in out or not text:
+            continue
+        own = {p.passage_id for p in packs[t.story_ref].passages} if t.story_ref in packs else set()
+        cites = [c for c in dict.fromkeys(t.cites) if c in own]
+        if cites:
+            out[t.story_ref] = Teaser(t.story_ref, text, cites)
+    return out
+
+
+def draft_leads(draft: BriefDraft) -> dict[str, str]:
+    """story_ref -> the text of the first `story` sentence the writer wrote for it (its headline sentence)."""
+    out: dict[str, str] = {}
+    for d in draft.sentences:
+        if d.kind == "story" and d.story_ref and d.story_ref not in out and d.text.strip():
+            out[d.story_ref] = d.text.strip()
+    return out
+
+
 async def write_brief(
     cc: CallCtx,
     selected: list[SelectedStory],
@@ -186,16 +289,17 @@ async def write_brief(
     delivery: list[DeliveryPref],
     answered: list[OpenQuestion],
     target_s: int | None,
+    listener: dict[str, list[str]] | None = None,
 ) -> BriefDraft:
     prompt = load_prompt("cos.write_brief")
     try:
         return await call_structured(
             cc,
             prompt,
-            _payload(selected, headlines, packs, delivery, answered, target_s),
+            _payload(selected, headlines, packs, delivery, answered, target_s, listener),
             BriefDraft,
             step="C7",
-            max_output_tokens=3000,
+            max_output_tokens=4000,
         )
     except (BudgetExceeded, StructuredOutputFailure) as e:
         cc.trace.degraded("C7", f"{type(e).__name__}: deterministic fallback brief")

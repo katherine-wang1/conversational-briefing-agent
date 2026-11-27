@@ -350,8 +350,10 @@ async def test_answered_followups_open_the_brief():
     script, packs, *_ = await run(
         open_questions=[q, q_open], client=FakeModelClient(handlers(**{"cos.plan": plan}))
     )
-    assert [s.kind for s in script.sentences[:2]] == ["intro", "followup_answer"]
-    assert script.sentences[1].cites == ["fq:0-20"]
+    # greeting, the code-built rundown, then the answers before any story
+    assert [s.kind for s in script.sentences[:3]] == ["intro", "intro", "followup_answer"]
+    assert script.sentences[1].text.startswith("You have six stories today")
+    assert script.sentences[2].cites == ["fq:0-20"]
     assert any(pk.story_ref == "followup:q1" for pk in packs)
     assert "Who funds Hooli?" in seen[0]  # open questions feed personal search
 

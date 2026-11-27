@@ -244,12 +244,12 @@ def test_pack_depth_and_offsets():
 
 async def test_write_reserve_keeps_tokens_for_writing():
     c = copy.deepcopy(loader.agent())
-    c["budgets"]["cos_daily"]["input_tokens"] = 6000
+    c["budgets"]["cos_daily"]["input_tokens"] = 9000
     script, packs, trace, client, _ = await run(agent_cfg=c)
     assert any(e.step.startswith("C") and e.step in ("C4", "C6") for e in trace.degradations)
     assert not [e for e in trace.degradations if e.step == "C7"]  # the writer still got its reserve
     assert "cos.write_brief" in client.roles()
-    assert trace.of("end")[0].detail["used_input_tokens"] <= 6000
+    assert trace.of("end")[0].detail["used_input_tokens"] <= 9000
 
 
 # ---- C4 scoring --------------------------------------------------------------------------------
