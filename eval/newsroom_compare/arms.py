@@ -47,6 +47,7 @@ EDITOR_VARIANTS: dict[str, dict] = {
     "editor_sonnet_v3": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v3"},
     "editor_v4": {"model": HAIKU_EDITOR, "prompt": "newsroom.editor_v4"},
     "editor_sonnet_v4": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v4"},
+    "editor_sonnet_v5": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v5"},
     # Gap-fill search through a plain search API instead of Anthropic's web search (SEARCH_API_KEY).
     "editor_v3_search_tavily": {
         "model": HAIKU_EDITOR, "prompt": "newsroom.editor_v3", "gap_search": "tavily"

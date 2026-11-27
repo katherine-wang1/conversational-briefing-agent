@@ -1,7 +1,7 @@
 # Agent defaults (TDD Appendix B). Experiments override via config/experiments/*.yaml.
 budgets:
   newsroom_run: {input_tokens: 80000, fetches: 5}
-  cos_daily: {input_tokens: 150000, searches: 12, fetch_per_story: 3}   # 150k since 2026-11-27: at 90k, C2+C4 (~63k) and the C7/C8 reserve left C6 ~9k, so 3 of 6 picks lost their packs (docs/e2e/2026-11-27)
+  cos_daily: {input_tokens: 300000, searches: 12, fetch_per_story: 3}   # 300k since 2026-11-27: one shared safety cap across all steps of a user's run (90k starved C6: docs/e2e/run1_budget90k). No single call is near a context limit
   voice_turn: {input_tokens: 30000, quick_searches: 2, quick_search_timeout_s: 3}
   followup: {input_tokens: 50000, searches: 8, fetches: 6}
   memory_reflect: {input_tokens: 20000}
