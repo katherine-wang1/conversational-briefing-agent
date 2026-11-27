@@ -1,0 +1,174 @@
+<title>Newsroom Blind Rating</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one story card at a time over a sticky progress bar; a filterable list below for revisits. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #17202b; --muted: #5d6877; --line: #dde2e8;
+  --accent: #2c5ea8; --must: #b4441f; --nice: #2f7a4f; --skip: #6b7380;
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #19202a; --fg: #e6eaf0; --muted: #9aa5b3; --line: #2a3340;
+  --accent: #7ea7e6; --must: #e7845f; --nice: #6cc08f; --skip: #9aa3ae; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #19202a; --fg: #e6eaf0; --muted: #9aa5b3; --line: #2a3340;
+  --accent: #7ea7e6; --must: #e7845f; --nice: #6cc08f; --skip: #9aa3ae; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--font); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 18px; }
+h1 { font-size: 1.35rem; font-weight: 600; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; max-width: 62ch; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: 8px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.track { flex: 1 1 200px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.fill { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+.count { font: 500 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px;
+  display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.meta { display: flex; gap: 8px; flex-wrap: wrap; font: 500 12px var(--mono); color: var(--muted);
+  text-transform: uppercase; letter-spacing: .04em; }
+.headline { font-size: 1.15rem; font-weight: 600; margin: 0; text-wrap: balance; overflow-wrap: anywhere; }
+.summary { margin: 0; color: var(--fg); overflow-wrap: anywhere; }
+.links { display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.links a { color: var(--accent); overflow-wrap: anywhere; }
+.outlets { font-size: 13px; color: var(--muted); }
+.actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 6px; }
+button { font: 500 14px var(--font); border-radius: 8px; padding: 10px 8px; cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--fg); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button[data-r="must"] { border-color: var(--must); color: var(--must); }
+button[data-r="nice"] { border-color: var(--nice); color: var(--nice); }
+button[data-r="skip"] { border-color: var(--skip); color: var(--skip); }
+button.on[data-r="must"] { background: var(--must); color: var(--surface); }
+button.on[data-r="nice"] { background: var(--nice); color: var(--surface); }
+button.on[data-r="skip"] { background: var(--skip); color: var(--surface); }
+.nav { display: flex; gap: 8px; justify-content: space-between; }
+.nav button { border-style: dashed; font-size: 13px; padding: 6px 12px; }
+.keys { font: 12px var(--mono); color: var(--muted); }
+.status { font-size: 13px; color: var(--muted); min-height: 1.2em; }
+.list { display: flex; flex-direction: column; gap: 4px; }
+.row { display: grid; grid-template-columns: 60px 1fr; gap: 10px; align-items: baseline; padding: 6px 8px;
+  border-radius: 6px; cursor: pointer; font-size: 14px; }
+.row:hover, .row.cur { background: var(--surface); }
+.pill { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.pill.must { color: var(--must); } .pill.nice { color: var(--nice); } .pill.skip { color: var(--skip); }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.filters button { font-size: 12px; padding: 4px 10px; }
+.filters button.on { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+h2 { font-size: .95rem; margin: 8px 0 0; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <h1>Newsroom blind rating</h1>
+  <p class="lede">Top stories from every newsroom setup we tested, pooled across five days and three beats, merged where they're the same story and shuffled. Setups are hidden. Rate each one for a reader who follows the beat closely.</p>
+  <div class="bar"><div class="track"><div class="fill" id="fill"></div></div><span class="count" id="count">loading…</span></div>
+  <div class="card" id="card" aria-live="polite">
+    <div class="meta" id="meta"></div>
+    <p class="headline" id="headline">Loading the pool…</p>
+    <p class="summary" id="summary"></p>
+    <div class="outlets" id="outlets"></div>
+    <div class="links" id="links"></div>
+    <div class="actions">
+      <button id="b-must" data-r="must">Must-know <span class="keys">1</span></button>
+      <button id="b-nice" data-r="nice">Nice-to-know <span class="keys">2</span></button>
+      <button id="b-skip" data-r="skip">Skip <span class="keys">3</span></button>
+    </div>
+    <div class="nav"><button id="prev">← Previous</button><button id="next">Next unrated →</button></div>
+    <div class="status" id="status"></div>
+  </div>
+  <h2>All stories</h2>
+  <div class="filters" id="filters">
+    <button data-f="all" class="on">All</button><button data-f="todo">Unrated</button>
+    <button data-f="must">Must</button><button data-f="nice">Nice</button><button data-f="skip">Skip</button>
+  </div>
+  <div class="list" id="list"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let items = [], ratings = {}, cur = 0, filter = "all", db = null;
+
+function setText(el, t) { el.textContent = t; }
+function render() {
+  const n = items.length, done = items.filter((it) => ratings[it.id]).length;
+  setText($("count"), `${done} / ${n} rated`);
+  $("fill").style.width = n ? `${(100 * done) / n}%` : "0";
+  const it = items[cur];
+  if (!it) return;
+  setText($("meta"), "");
+  for (const t of [`${cur + 1} of ${n}`, it.beat.replace("_", " "), it.day]) {
+    const s = document.createElement("span"); s.textContent = t; $("meta").appendChild(s);
+  }
+  setText($("headline"), it.headline);
+  setText($("summary"), it.summary || "");
+  setText($("outlets"), it.outlets.length ? `Outlets: ${it.outlets.join(", ")}` : "");
+  $("links").replaceChildren(...it.links.map((u) => {
+    const a = document.createElement("a"); a.href = u; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = u.replace(/^https:\/\//, "").slice(0, 90); return a;
+  }));
+  for (const r of ["must", "nice", "skip"]) $("b-" + r).classList.toggle("on", ratings[it.id] === r);
+  renderList();
+}
+function renderList() {
+  const rows = items.map((it, i) => [it, i]).filter(([it]) =>
+    filter === "all" ? true : filter === "todo" ? !ratings[it.id] : ratings[it.id] === filter);
+  $("list").replaceChildren(...rows.map(([it, i]) => {
+    const row = document.createElement("div"); row.className = "row" + (i === cur ? " cur" : "");
+    const p = document.createElement("span"); p.className = "pill " + (ratings[it.id] || "");
+    p.textContent = ratings[it.id] || "—";
+    const h = document.createElement("span"); h.textContent = it.headline;
+    row.append(p, h); row.onclick = () => { cur = i; render(); window.scrollTo({ top: 0 }); };
+    return row;
+  }));
+}
+async function rate(r) {
+  const it = items[cur]; if (!it) return;
+  ratings[it.id] = r; render(); nextUnrated();
+  if (!db) { setText($("status"), "Not saved: sign in to claude.ai to save ratings."); return; }
+  try {
+    await db.collection("ratings").doc(it.id).set({ pool_id: it.pid, rating: r, at: new Date().toISOString() });
+    setText($("status"), "Saved.");
+  } catch (e) { setText($("status"), "Couldn't save this rating (" + (e && e.code || "error") + "). Try again."); }
+}
+function nextUnrated() {
+  for (let k = 1; k <= items.length; k++) {
+    const i = (cur + k) % items.length;
+    if (!ratings[items[i].id]) { cur = i; render(); return; }
+  }
+  render();
+}
+for (const r of ["must", "nice", "skip"]) $("b-" + r).onclick = () => rate(r);
+$("prev").onclick = () => { cur = (cur - 1 + items.length) % items.length; render(); };
+$("next").onclick = nextUnrated;
+document.addEventListener("keydown", (e) => {
+  if (e.target.closest && e.target.closest("input,textarea")) return;
+  if (e.key === "1") rate("must"); else if (e.key === "2") rate("nice"); else if (e.key === "3") rate("skip");
+  else if (e.key === "ArrowLeft") $("prev").click(); else if (e.key === "ArrowRight") nextUnrated();
+});
+$("filters").onclick = (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  filter = b.dataset.f; for (const x of $("filters").children) x.classList.toggle("on", x === b); renderList();
+};
+
+(async () => {
+  try { items = await (await fetch("pool.json")).json(); }
+  catch { setText($("headline"), "Couldn't load the story pool. Reload the page."); return; }
+  render();
+  db = await (window.claude?.use ? window.claude.use("db") : null);
+  if (!db) { setText($("status"), "Ratings can't be saved in this view (sign in to claude.ai)."); return; }
+  const t = setTimeout(() => setText($("status"), "Still loading saved ratings…"), 10000);
+  db.collection("ratings").onSnapshot((snap) => {
+    clearTimeout(t);
+    const next = {};
+    for (const d of snap.docs) { const v = d.data(); if (v && v.rating) next[d.id] = v.rating; }
+    ratings = next;
+    if (ratings[items[cur]?.id]) nextUnrated(); else render();
+  }, (err) => { clearTimeout(t); setText($("status"), "Couldn't load saved ratings (" + (err && err.code || "error") + ")."); });
+})();
+</script>
