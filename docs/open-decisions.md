@@ -32,6 +32,11 @@ the date and outcome.
 | F10 | The title-search fallback for unresolved Google News links needs title hints passed from the observations | `GoogleNewsResolver.hint` |
 | F11 | Stale items in the energy digest: three Google-News-only stories resolve to energynow.com articles from June–September (freshness filter misses them: Google News dates are re-index dates) | newsroom freshness |
 | F12 | 9 of 46 Google-News-only stories still get no text (single outlet behind a paywall or bot block: energynow, Axios, Reuters 401, WSJ, Bloomberg, Nikkei) | story notes / C6 |
+| F13 | Brief: a middle sentence can keep a dangling reference ("that loophole") after the claim check drops the sentence it refers to; only opening sentences are protected | `app/agents/cos/spoken.py` |
+| F14 | Brief: story-end hooks ("I can walk you through…") aren't claim-checked and may offer detail the sources don't have | C7/C8 |
+| F15 | Brief: some C6 source-pack citations don't state the fact (a title-derived fact); the claim check then drops the story | C6 |
+| F16 | Brief: Haiku style slips in teasers (symbols like ≠, 9/4); the rundown runs 45–60 words with 4+ stories | `cos.write_brief.md` |
+| F17 | Paragraph-level citation for the brief: not done (weaker claim check, voice loses per-sentence sources, fragile sentence splitting). Revisit if the claim check finds its own supporting passages | part 3 |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed
