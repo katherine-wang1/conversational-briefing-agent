@@ -1,0 +1,20 @@
+Good morning. Here are your AI and tech stories for today, four in all.
+Nvidia has told its server partners to pause shipments to four Southeast Asian countries.
+The countries are Malaysia, Singapore, Thailand, and Indonesia, and the partners include Dell and Super Micro.
+Nvidia has told partners to pause shipments for an unspecified period while it assesses whether they are meeting U.S. export requirements.
+Chinese companies have been tapping Nvidia chips remotely from data centers in these countries, a loophole the U.S. Commerce Department closed earlier this month.
+The U.S. Commerce Department closed that loophole earlier this month.
+The Institute for Progress estimates these remote data centers supply about 24 percent of China's AI computing power.
+The run lasted about 30 hours and covered 60 statements in the proof of Fermat's Last Theorem in Lean.
+No human steered the solution, and no domain-specific harness was used.
+The agents had only Git and a SQL database to work with.
+Five minutes in, the lead agent built database tables to coordinate the team. Nobody told it to.
+Now, a story on nuclear power. The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.
+The project will use the GE Vernova Hitachi BWRX-300 reactor.
+Small modular reactors are miniature nuclear reactors built in a factory and assembled on site.
+Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.
+Next, a video story. Agentic LongLive is a memory system for generating long videos.
+A separate memory agent reads only the prompts so far, never the video itself, and tracks people, objects, and places.
+On LongStory-Online, a new benchmark of 25 stories, it improved protagonist identity by 44.9 points over its base generator.
+The full system streams faster than real time, at 34.3 frames per second on one node.
+What would you like to dig into?

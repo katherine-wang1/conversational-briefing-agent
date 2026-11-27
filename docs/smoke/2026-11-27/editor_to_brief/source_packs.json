@@ -1,0 +1,450 @@
+[
+ {
+  "story_ref": "ai-5166002f4d42",
+  "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+  "facts": [
+   {
+    "text": "Nvidia told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners meet U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely tapping Nvidia chips from data centers in these countries, a loophole the US Commerce Department closed earlier this month.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "physical_ai-2af40820bf64",
+  "headline": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027",
+  "facts": [],
+  "passages": [],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "u:ea4591aaee04",
+  "headline": "1,000 Claude Agents Formalized Fermat's Last Theorem \u2014 Lance Martin, Anthropic\uff5cAI Engineer \u2014 BigGo Finance",
+  "facts": [
+   {
+    "text": "A team of 1,000 Claude agents formalized Fermat's Last Theorem in Lean over about 30 hours.",
+    "passage_ids": [
+     "3514377c54bd884b0d4ecc657836f4ac:14-242",
+     "3514377c54bd884b0d4ecc657836f4ac:1597-1788",
+     "3514377c54bd884b0d4ecc657836f4ac:2249-2503"
+    ]
+   },
+   {
+    "text": "The 1,000-agent run used no domain-specific harness and no human steering on the solution.",
+    "passage_ids": [
+     "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+    ]
+   },
+   {
+    "text": "The lead agent created database tables to coordinate the team without being instructed to.",
+    "passage_ids": [
+     "3514377c54bd884b0d4ecc657836f4ac:2249-2503",
+     "3514377c54bd884b0d4ecc657836f4ac:2721-2881"
+    ]
+   },
+   {
+    "text": "The agents' only primitives were Git and a SQL database.",
+    "passage_ids": [
+     "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:14-242",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "Anthropic researcher Lance Martin shows 1,000 Claude agents self-coordinated over 30 hours to formalize Fermat's Last Theorem in Lean without a domain-specific harness, and that \"dreaming\" reflection plus wikis beats raw search.",
+    "char_start": 14,
+    "char_end": 242
+   },
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:251-517",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "Lance Martin, a researcher at Anthropic, argues that Claude models can now coordinate very long-horizon work with minimal scaffolding \u2014 a 1,000-agent team formalized a major theorem autonomously, and newer models manage their own memory far better than earlier ones.",
+    "char_start": 251,
+    "char_end": 517
+   },
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:1597-1788",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "The Fable 5 experiment stripped all of that away: 1,000 agents (one lead, 999 helpers), no domain harness, no human steering on the solution, and only two primitives \u2014 Git and a SQL database.",
+    "char_start": 1597,
+    "char_end": 1788
+   },
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:2249-2503",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "Five minutes into the run it created database tables to orchestrate the team: an announce table for global broadcasts, a table for assigning worker roles, a notes table for sharing progress, and a \"land\" table marking which Lean code had actually landed.",
+    "char_start": 2249,
+    "char_end": 2503
+   },
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:2721-2881",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "\"Agents now are sufficiently advanced that they can actually build primitives that they need to solve hard problems. We didn't tell them to build these tables.\"",
+    "char_start": 2721,
+    "char_end": 2881
+   },
+   {
+    "passage_id": "3514377c54bd884b0d4ecc657836f4ac:2651-2720",
+    "doc_id": "3514377c54bd884b0d4ecc657836f4ac",
+    "url": "https://finance.biggo.com/podcast/f39423827d7c5866",
+    "source": "finance.biggo.com",
+    "published_at": "2026-01-01T00:00:00Z",
+    "text": "The run lasted about 30 hours and covered 60 statements in the proof.",
+    "char_start": 2651,
+    "char_end": 2720
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:f81b8ae246e0",
+  "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+  "facts": [
+   {
+    "text": "The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial SMR, at the end of September.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+    ]
+   },
+   {
+    "text": "The TVA project will use the GE Vernova Hitachi BWRX-300 reactor.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2658-2793"
+    ]
+   },
+   {
+    "text": "Over 120 distinct SMR designs have been recorded globally, compared to 83 in 2022.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2173-2360"
+    ]
+   },
+   {
+    "text": "Many SMR designs have not achieved licensing.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2173-2360"
+    ]
+   },
+   {
+    "text": "Small modular reactors are miniature nuclear reactors built in a factory and assembled on-site.",
+    "passage_ids": [
+     "f3ffef0bc4c8236bd28588c5b22362fe:494-717"
+    ]
+   },
+   {
+    "text": "The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial SMR.",
+    "passage_ids": [
+     "f3ffef0bc4c8236bd28588c5b22362fe:2503-2657"
+    ]
+   },
+   {
+    "text": "The TVA project will use GE Vernova Hitachi's BWRX-300 reactor.",
+    "passage_ids": [
+     "f3ffef0bc4c8236bd28588c5b22362fe:2658-2793"
+    ]
+   },
+   {
+    "text": "Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.",
+    "passage_ids": [
+     "f3ffef0bc4c8236bd28588c5b22362fe:2173-2360"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:494-717",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Small modular reactors, commonly known as SMRs, are miniature nuclear reactors that can be built in a factory setting and then assembled on-site in varying numbers and configurations according to a particular plant's needs.",
+    "char_start": 494,
+    "char_end": 717
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2503-2657",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "At the end of September, the Tennessee Valley Authority (TVA) became the very first U.S. power utility to receive authorization to build a commercial SMR.",
+    "char_start": 2503,
+    "char_end": 2657
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2658-2793",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "The project will use the GE Vernova Hitachi's BWRX-300 reactor, representing the second-ever reactor construction granted domestically.",
+    "char_start": 2658,
+    "char_end": 2793
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2794-2956",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "\"Although TVA has not set a date to break ground, the decision represents a turning point for American civilian nuclear energy,\" Interesting Engineering reported.",
+    "char_start": 2794,
+    "char_end": 2956
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2173-2360",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Over 120 distinct SMR designs have been recorded globally, compared to 83 in 2022. However, many have not achieved licensing, and most are still on the long road to commercial deployment.",
+    "char_start": 2173,
+    "char_end": 2360
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:0-136",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Years of hype have been followed by years of fizzling and delay for what was supposed to have been the small modular reactor revolution.",
+    "char_start": 0,
+    "char_end": 136
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:494-717",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Small modular reactors, commonly known as SMRs, are miniature nuclear reactors that can be built in a factory setting and then assembled on-site in varying numbers and configurations according to a particular plant\u2019s needs.",
+    "char_start": 494,
+    "char_end": 717
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:2503-2657",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "At the end of September, the Tennessee Valley Authority (TVA) became the very first U.S. power utility to receive authorization to build a commercial SMR.",
+    "char_start": 2503,
+    "char_end": 2657
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:2658-2793",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "The project will use the GE Vernova Hitachi\u2019s BWRX-300 reactor, representing the second-ever reactor construction granted domestically.",
+    "char_start": 2658,
+    "char_end": 2793
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:2795-2921",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Although TVA has not set a date to break ground, the decision represents a turning point for American civilian nuclear energy,",
+    "char_start": 2795,
+    "char_end": 2921
+   },
+   {
+    "passage_id": "f3ffef0bc4c8236bd28588c5b22362fe:2173-2360",
+    "doc_id": "f3ffef0bc4c8236bd28588c5b22362fe",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Over 120 distinct SMR designs have been recorded globally, compared to 83 in 2022. However, many have not achieved licensing, and most are still on the long road to commercial deployment.",
+    "char_start": 2173,
+    "char_end": 2360
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "u:9ad8c83ad888",
+  "headline": "Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation | alphaXiv",
+  "facts": [
+   {
+    "text": "Agentic LongLive is an asynchronous agentic memory system for long video generation.",
+    "passage_ids": [
+     "292b44986b3f1eab9e020390933dae89:9-200"
+    ]
+   },
+   {
+    "text": "The memory agent reads only the prompts revealed so far and never the generated video.",
+    "passage_ids": [
+     "292b44986b3f1eab9e020390933dae89:502-680"
+    ]
+   },
+   {
+    "text": "On the LongStory-Online benchmark, Agentic LongLive improves persistent-state accuracy over its base generator LongLive-2.0 by 26.3 points.",
+    "passage_ids": [
+     "292b44986b3f1eab9e020390933dae89:1171-1481"
+    ]
+   },
+   {
+    "text": "Agentic LongLive improves protagonist identity by 44.9 points and revisited-place consistency by 40.4 points over LongLive-2.0.",
+    "passage_ids": [
+     "292b44986b3f1eab9e020390933dae89:1171-1481"
+    ]
+   },
+   {
+    "text": "The full system streams at 34.3 FPS on one 8xB200 node with the generator in BF16.",
+    "passage_ids": [
+     "292b44986b3f1eab9e020390933dae89:1482-1747"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "292b44986b3f1eab9e020390933dae89:9-200",
+    "doc_id": "292b44986b3f1eab9e020390933dae89",
+    "url": "https://www.alphaxiv.org/abs/2611.34907",
+    "source": "alphaxiv.org",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Real-time autoregressive video generators stream minutes of video and accept new prompts on the fly, but struggle to keep people, objects, and places consistent over a long interactive story.",
+    "char_start": 9,
+    "char_end": 200
+   },
+   {
+    "passage_id": "292b44986b3f1eab9e020390933dae89:502-680",
+    "doc_id": "292b44986b3f1eab9e020390933dae89",
+    "url": "https://www.alphaxiv.org/abs/2611.34907",
+    "source": "alphaxiv.org",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "A memory agent on separate GPUs reads only the prompts revealed so far, never the generated video, and keeps a text state and evolving images for every person, object, and scene.",
+    "char_start": 502,
+    "char_end": 680
+   },
+   {
+    "passage_id": "292b44986b3f1eab9e020390933dae89:1171-1481",
+    "doc_id": "292b44986b3f1eab9e020390933dae89",
+    "url": "https://www.alphaxiv.org/abs/2611.34907",
+    "source": "alphaxiv.org",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "On LongStory-Online, a new benchmark of 25 stories (857 shots) revealed one shot at a time, Agentic LongLive improves persistent-state accuracy of LongLive-2.0, its base generator, by 26.3 points, protagonist identity by 44.9, and revisited-place consistency by 40.4, at about 1% extra generation time on H100.",
+    "char_start": 1171,
+    "char_end": 1481
+   },
+   {
+    "passage_id": "292b44986b3f1eab9e020390933dae89:1482-1747",
+    "doc_id": "292b44986b3f1eab9e020390933dae89",
+    "url": "https://www.alphaxiv.org/abs/2611.34907",
+    "source": "alphaxiv.org",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "The full system streams faster than real time on one 8xB200 node with the generator in BF16 (34.3 FPS), keeps image quality stable over 14-minute stories, and improves identity on two MiniMax-H3 generators, one of which, LongLive-H3, also runs in real time with it.",
+    "char_start": 1482,
+    "char_end": 1747
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-651cc167b0ad",
+  "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+  "facts": [],
+  "passages": [
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:0-431",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "I feel like my previous posts (and post titles), and podcasts, and talks, have failed to do full justice to the magnitude of what\u2019s now happening, so I\u2019m trying again.\nLast night, we had friends and colleagues over for dinner. We were still trying to process OpenAI\u2019s and Anthropic\u2019s proofs of VP \u2260 VNP\u2014hot on the heels, obviously, of the Alp\u00f6ge/Anthropic proof of the Riemann Hypothesis, which already feels like last week\u2019s news.",
+    "char_start": 0,
+    "char_end": 431
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ }
+]

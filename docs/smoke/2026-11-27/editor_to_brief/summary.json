@@ -1,0 +1,39 @@
+{
+ "day": "2026-11-26-late",
+ "newsroom_impl": "editor",
+ "beats": {
+  "ai": {
+   "entries": 30,
+   "s": 32.5,
+   "degraded": []
+  },
+  "energy": {
+   "entries": 25,
+   "s": 26.0,
+   "degraded": []
+  },
+  "physical_ai": {
+   "entries": 25,
+   "s": 27.8,
+   "degraded": []
+  }
+ },
+ "cos": {
+  "s": 73.0,
+  "stories": 4,
+  "sentences": 20,
+  "packs": 6
+ },
+ "cost_usd": {
+  "total": 0.3428,
+  "by_role": {
+   "newsroom.editor": 0.3245,
+   "cos.plan": 0.0005,
+   "cos.search_loop": 0.0037,
+   "cos.score": 0.0084,
+   "cos.extract_passages": 0.0026,
+   "cos.write_brief": 0.0017,
+   "cos.claim_check": 0.0014
+  }
+ }
+}

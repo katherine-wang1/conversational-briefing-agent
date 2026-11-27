@@ -1,0 +1,231 @@
+{
+ "brief_id": "b_2c9a5e8e39308c2d",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:ea4591aaee04",
+   "slot": "for_you",
+   "headline": "1,000 Claude Agents Formalized Fermat's Last Theorem — Lance Martin, Anthropic｜AI Engineer — BigGo Finance",
+   "why_tag": "for you",
+   "aliases": [
+    "Anthropic",
+    "Lance Martin"
+   ]
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "slot": "for_you",
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "why_tag": "for you",
+   "aliases": [
+    "NuScale",
+    "Sargent & Lundy",
+    "ENTRA1 Energy"
+   ]
+  },
+  {
+   "story_ref": "u:9ad8c83ad888",
+   "slot": "for_you",
+   "headline": "Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation | alphaXiv",
+   "why_tag": "for you",
+   "aliases": [
+    "LongLive"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. Here are your AI and tech stories for today, four in all.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "Nvidia has told its server partners to pause shipments to four Southeast Asian countries.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s002",
+   "text": "The countries are Malaysia, Singapore, Thailand, and Indonesia, and the partners include Dell and Super Micro.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told partners to pause shipments for an unspecified period while it assesses whether they are meeting U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "Chinese companies have been tapping Nvidia chips remotely from data centers in these countries, a loophole the U.S. Commerce Department closed earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "The U.S. Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The Institute for Progress estimates these remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The run lasted about 30 hours and covered 60 statements in the proof of Fermat's Last Theorem in Lean.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:14-242",
+    "3514377c54bd884b0d4ecc657836f4ac:2651-2720"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "No human steered the solution, and no domain-specific harness was used.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "The agents had only Git and a SQL database to work with.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s010",
+   "text": "Five minutes in, the lead agent built database tables to coordinate the team. Nobody told it to.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:2249-2503",
+    "3514377c54bd884b0d4ecc657836f4ac:2721-2881"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "Now, a story on nuclear power. The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "The project will use the GE Vernova Hitachi BWRX-300 reactor.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2658-2793"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "Small modular reactors are miniature nuclear reactors built in a factory and assembled on site.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:494-717"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s014",
+   "text": "Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2173-2360"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "Next, a video story. Agentic LongLive is a memory system for generating long videos.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:9-200"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "A separate memory agent reads only the prompts so far, never the video itself, and tracks people, objects, and places.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:502-680"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s017",
+   "text": "On LongStory-Online, a new benchmark of 25 stories, it improved protagonist identity by 44.9 points over its base generator.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:1171-1481"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s018",
+   "text": "The full system streams faster than real time, at 34.3 frames per second on one node.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:1482-1747"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 126
+}
