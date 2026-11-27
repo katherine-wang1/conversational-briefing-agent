@@ -1,0 +1,31 @@
+[intro] Good morning.
+[intro] You have five stories today: Tesla moving to acquire German robot-parts maker EMAG, Sierra doubling its valuation to thirty billion dollars, NVIDIA's free autoregressive image model, The first U.S. utility approved to build a small modular reactor, and Nvidia pausing chip server shipments to Southeast Asia.
+[transition] First, the biggest story this morning.
+[story] Tesla is moving to acquire EMAG, a struggling German mechanical engineering company.
+[story] Tesla has filed with Germany's Federal Antitrust Authority for permission to buy the company.
+[story] EMAG is based in Salach, Baden-Württemberg, and makes machine tools used to mass-produce metal parts, including drive components for humanoid robots.
+[story] The company is reportedly facing significant difficulties from a prolonged decline in demand in the machine tool manufacturing industry and is seeking investors.
+[story] Neither firm has disclosed financial terms.
+[transition] I can tell you how Goldman Sachs views Tesla against its China robotics peers, if you're curious.
+[transition] Now to funding in AI agents.
+[story] Sierra has raised $1.75 billion in a Series F round that doubles its valuation to $30 billion.
+[story] Greenoaks and Lightspeed Venture Partners led the round.
+[story] Sierra says it serves nearly half of Fortune 50 companies and that its outcome-based pricing doubled run-rate revenue to $400 million in five months.
+[story] The new money will fund further agent development and expanded sales teams.
+[story] Co-founder Clay Bavor argues that most Sierra customers are reassigning contact center staff rather than replacing them.
+[transition] Next, something on open-weight models.
+[story] NVIDIA has released Nemotron-Labs-Image-30B-A3B as a free open-weight image-generation model.
+[story] Unlike most image generators, it uses an autoregressive method, the approach common in large language models, rather than diffusion.
+[story] The license only permits non-commercial use.
+[story] Reportedly, it scored higher than GPT-Image-2 and Nano Banana Pro on several benchmarks.
+[transition] Next, something on small modular reactor licensing.
+[story] Small modular reactors are miniature nuclear reactors built in a factory and assembled on-site.
+[story] At the end of September, the Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial SMR.
+[story] The project will use GE Vernova Hitachi's BWRX-300 reactor.
+[story] The TVA has not yet set a date to break ground.
+[transition] And finally, one from outside your usual beat.
+[story] Nvidia has told partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+[story] The pause is open-ended while Nvidia checks whether regional partners meet U.S. export requirements.
+[story] Chinese companies had been remotely using Nvidia chips in data centers there, a loophole the US Commerce Department closed earlier this month.
+[story] The Institute for Progress estimates such remote data centers supply about 24 percent of China's AI computing power.
+[outro] Which of these would you like to dig into?

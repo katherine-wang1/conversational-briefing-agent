@@ -8,6 +8,7 @@ from what you ask about, skip and finish.
 CS329Z final project (Fall 2026). Midpoint prototype.
 
 - [Quick start](#quick-start): one command, then about 5 minutes until your first brief
+- [Try it](docs/try-it.md): a short guided tour, including rebuilding a brief after a change
 - [What to try](#what-to-try)
 - [Architecture tour](#architecture)
 - [Manual setup](#manual-setup) (the same steps by hand, or with the hot-reloading web dev server)
@@ -23,7 +24,7 @@ CS329Z final project (Fall 2026). Midpoint prototype.
 |---|---|
 | **macOS or Linux** with Python 3.12+ and Node.js 20+ | On a Mac: `brew install python@3.12 node` |
 | **Postgres 16**, from any one of: Homebrew, Docker, or a server you already run | The script finds a running one, or starts it with Docker, or installs it with Homebrew. |
-| An **OpenRouter API key** (openrouter.ai → Keys) | Runs every model call and the text-to-speech. A full first run costs about **$0.10**; the script sets a $2 cap. |
+| An **OpenRouter API key** (openrouter.ai → Keys) | Runs every model call and the text-to-speech. A full first day costs about **$0.45** (the shared newsroom is most of it), each further brief about $0.10; the script sets a $2 cap. |
 | *Optional:* a **Tavily API key** (tavily.com, free tier) | Live web search. Without it, briefs use only the daily news digest and questions can't search the web. |
 | **Chrome or Edge** | For the microphone and speech recognition. Safari works for listening and typed questions. |
 
@@ -68,17 +69,17 @@ with one combined live log (also saved to `var/logs/`).
    Show what's happening** for a live log of the voice session: what it heard, model calls with
    time and cost, searches, and memory signals.
 
-Measured on a fresh database (2026-11-09, onboarding straight after startup):
+Measured on a fresh database (2026-11-27, onboarding straight after startup; `docs/smoke/2026-11-27/podcast_brief/`):
 
 | Step | Time |
 |---|---|
 | `./scripts/dev.sh` until "Ready" (dependencies already installed; reruns) | 3–18 s |
-| Today's news digest, 3 beats (`newsroom_run`, at startup) | 2–2.5 min |
-| Your brief (`cos_daily`: plan, search, select, write, claim check) after the news | ~2 min |
+| Today's news digest and story notes, 3 beats (`newsroom_run`, at startup) | ~3.3 min |
+| Your brief (`cos_daily`: plan, search, select, write, claim check) after the news | ~1.3 min |
 | Audio (`tts_render`) | ~10 s |
-| **Script start → brief ready to play** | **~4.5 min** |
+| **Onboarding → brief ready to play** | **~3.8 min** |
 | Spoken answer to a question | ~3 s to first audio |
-| Model + speech cost for the whole run | ≈ $0.08 (logged to `eval/runs/llm_ledger.jsonl` and the `llm_calls` table) |
+| Model + speech cost for the whole run | ≈ $0.45 (logged to `eval/runs/llm_ledger.jsonl` and the `llm_calls` table) |
 
 Example run outputs (real, unedited) are in `docs/smoke/` (briefs, source packs, traces and a
 session transcript).
@@ -104,17 +105,20 @@ session transcript).
             └─────────────────────────────────────────────────────────────┘
 ```
 
-- **Newsroom** (`app/agents/newsroom/`). Shared across users, one run per beat. Pulls headlines
-  from the source adapters (`app/sources/`), clusters them into stories with local embeddings
-  (and an LLM tie-break for close pairs), tracks story identity across days, scores importance
-  with an LLM, and writes a daily digest.
+- **Newsroom** (`app/agents/newsroom/`). Shared across users, one run per beat. Collects headlines
+  widely (major outlets, Google News topic feeds, Techmeme, HN; `app/sources/`), and one editor model
+  call groups and ranks them into a daily digest (`newsroom.impl: editor`; the older clustering
+  pipeline stays selectable as `classic`). Then one **story note** per digest story: cited facts,
+  background and why it matters, written once and shared by every user.
 - **Chief of staff** (`app/agents/cos/`). Builds one user's brief in eight steps (C1–C8): plan
   searches from the user's interests, run a bounded web-search loop, pool candidates from the digest
-  and the searches, score them, pick stories for each slot in code, build source packs of verbatim
-  passages, write a spoken script where every sentence cites a passage, and run a claim check.
+  and the searches, score them, pick stories in code, build source packs of verbatim passages (plus
+  the shared notes), write a podcast-style script where every news sentence cites a passage, and run
+  a claim check. It also keeps a **stored set** of the user's top 20 stories for the conversation.
 - **Voice session** (`app/agents/voice/`). A WebSocket state machine (playing → listening →
-  answering → resuming). Answers come only from the brief's source packs, plus up to two quick searches,
-  and are spoken sentence by sentence through text-to-speech (`app/speech/`).
+  answering → resuming). Answers come from the brief's sources, the stored set (`get_story` reads a
+  story's shared note) and up to two quick searches, and are spoken sentence by sentence through
+  text-to-speech (`app/speech/`).
 - **Memory** (`app/agents/memory/`). Interests with weights. Onboarding text is extracted into
   interests; explicit feedback and implicit signals (asked about, skipped, finished) update them by
   the rules in `config/agent.yaml`.

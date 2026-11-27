@@ -149,3 +149,10 @@ def test_stored_set_balance_reserves_shared():
     assert out == ["u:1", "u:2", "a", "b"]  # ranking order kept, half shared
     assert [e[0].story_ref for e in _balance(extra[:4] + extra[4:5], 4, 0.5)] == ["u:1", "u:2", "u:3", "a"]
     assert _balance(extra, 4, 0.0) == extra
+
+
+def test_rundown_says_among_them_when_first_story_is_not_named():
+    stories = [BriefStory(story_ref=f"s{i}", slot="for_you", headline="h", why_tag="w") for i in range(5)]
+    teasers = {f"s{i}": Teaser(f"s{i}", f"story {i}", [f"p{i}"]) for i in range(1, 5)}
+    s = rundown_sentence(stories, teasers)
+    assert s.text == "You have five stories today, among them story 1, story 2, and story 3."

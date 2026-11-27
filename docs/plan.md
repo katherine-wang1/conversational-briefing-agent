@@ -20,6 +20,11 @@ off-beat scope fix (NR-3); (3) `./scripts/dev.sh` checked on this branch, with a
 Ledger, requests store and newsroom ranking wait until after. OpenRouter budget for this stretch: aim
 $5, hard stop under $8. Raw headline collection is free and runs daily; rebuilds and comparisons wait.
 
+**Status, end of 2026-11-27: steps 1–3 done; ready for Kate to run it** (`docs/try-it.md`). Live app
+path checked end to end in a browser (14 of 14 checks), podcast brief v3, stored-set fixes. Evidence:
+`docs/smoke/2026-11-27/podcast_brief/results.md`. Spend for the stretch: $1.18. NR-3 (scope) not done.
+Today's raw headlines are collected (`eval/data/`, not in git).
+
 ## Deadlines and target
 
 | Date | What |
@@ -111,14 +116,16 @@ Decisions: D10 licensed full text, D5 note model, D16 free-coverage search provi
 
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
-| BR-1* | Rewrite `app/agents/prompts/cos.write_brief.md` as a podcast-style narrative: no anchor signposts, never name segments or slots ("now to energy", "outside your usual beat"), but every move between stories gets a real spoken bridge, tied to content where stories connect | open | Claude | Kate: too disjointed, more news anchor than podcast | task 1 |
-| BR-2* | More context per story (what happened, why, background): give the writer the shared story note as well as the C6 passages | open | Claude | The writer only sees passages; GTA VI got two sentences | task 1 |
-| BR-3* | Context scales with what this listener has heard: mark each story new, follow-up ("since we last talked…") or repeat (skip or one line) from the user's history | blocked on MEM-2 | Claude | History today is headline-level only, see MEM | task 1 |
-| BR-4* | Claim check for longer narrative sentences: context sentences cite the note or pack; allowed background knowledge (D11) is marked so C8 keeps it. Also: dangling references after a dropped sentence (F13), unchecked story-end hooks (F14), pack citations that don't state the fact (F15) | open | Claude | Longer sentences fail C8 more | task 1, F13–F15 |
+| BR-1* | Rewrite `app/agents/prompts/cos.write_brief.md` as a podcast-style narrative: no anchor signposts, never name segments or slots ("now to energy", "outside your usual beat"), but every move between stories gets a real spoken bridge, tied to content where stories connect | done (v3, 2026-11-27) | Claude | Kate: too disjointed, more news anchor than podcast | task 1 |
+| BR-2* | More context per story (what happened, why, background): give the writer the shared story note as well as the C6 passages | done: notes as `note_fact`/`note_context` passages | Claude | The writer only sees passages; GTA VI got two sentences | task 1 |
+| BR-3* | Context scales with what this listener has heard: mark each story new, follow-up ("since we last talked…") or repeat (skip or one line) from the user's history | partly: new vs follow-up (via `is_update_of`) and saved; full version needs MEM-2 | Claude | History today is headline-level only, see MEM | task 1 |
+| BR-4* | Claim check for longer narrative sentences: context sentences cite the note or pack; allowed background knowledge (D11) is marked so C8 keeps it. Also: dangling references after a dropped sentence (F13), unchecked story-end hooks (F14), pack citations that don't state the fact (F15) | partly: C8 sees the story's note passages; code accepts restatements; F13–F15 open | Claude | Longer sentences fail C8 more | task 1, F13–F15 |
 | BR-5 | Output limit: writer has 10,000 tokens (4,000 truncated run 3); longer stories may need more or one call per story | open | Claude | `docs/e2e/run3_write_truncated` | task 1 |
-| BR-6 | Rundown shorter and spoken (60+ words naming five stories today); Haiku style slips (≠, 9/4) | open | Claude | Run 4 reading | F16 |
+| BR-6 | Rundown shorter and spoken (60+ words naming five stories today); Haiku style slips (≠, 9/4) | done: names at most three stories | Claude | Run 4 reading | F16 |
 | BR-7 | A story without a news opening (X-Energy from the user's own search began with background) | open | Claude | Run 4 reading, item 4 | run 4 |
 | BR-8 | Quick fallback brief when the full run takes too long (TODO at `app/api/routes.py:257`, TDD §20) | open (low) | Claude | Demo safety | T1.9 |
+| BR-10 | Fact-check bridges: they carry no news facts by rule, but one claimed a link that wasn't there ("Nvidia also shows up…") | open | Claude | Bridges aren't claim-checked | podcast smoke |
+| BR-11 | Run-to-run variance: two rebuilds of the same day pick quite different stories (search results differ) | open | Claude | Hard to compare prompt changes | podcast smoke |
 | BR-9 | Run follow-up research live once (unit tests only so far) | open | Claude | Bookmarked asks (MEM) depend on it | T1.7 |
 
 Decisions: D11 background knowledge, D12 "outside your usual" slot, D13 brief length and story count.
@@ -139,9 +146,9 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
-| VO-1 | Stored-set mix: reserve about half for shared stories (they have notes), or rank by the higher of the for-you and big-news scores | open | Claude | 13 of 14 stories beyond the brief were the user's finds | D8, task 3 |
-| VO-2 | Filter low-quality personal finds before ranking: social posts, quote pages, near-duplicates | open | Claude | Voice stated an Instagram reel as fact; "Procedure Inference as Memory" twice; a Yahoo Finance quote page | F18, F20 |
-| VO-3 | Voice prompt: no narration of tool use, same podcast tone as the brief | open | Claude | "I'll pull up the stored note" | F19 |
+| VO-1 | Stored-set mix: reserve about half for shared stories (they have notes), or rank by the higher of the for-you and big-news scores | done: `min_shared_share` 0.5 | Claude | 13 of 14 stories beyond the brief were the user's finds | D8, task 3 |
+| VO-2 | Filter low-quality personal finds before ranking: social posts, quote pages, near-duplicates | done: social, quote/listing/event pages, no-headline pages, near-duplicate titles | Claude | Voice stated an Instagram reel as fact; "Procedure Inference as Memory" twice; a Yahoo Finance quote page | F18, F20 |
+| VO-3 | Voice prompt: no narration of tool use, same podcast tone as the brief | done: voice.turn v5 (one "the sources don't…" still seen) | Claude | "I'll pull up the stored note" | F19 |
 | VO-4 | Ask before bookmarking: the voice offered to look something up and saved it in the same answer | open | Claude | Found in T1.3 | T1.23 |
 | VO-5 | Check how often the meta-sentence filter fires (log line `dropped a meta sentence`) | open (low) | Claude | Haiku narrates its plan sometimes | T1.24 |
 | VO-6 | `search_news(query)` over the last 7–30 days of stored stories (L2 in the design) | open (low) | Claude | "What happened with X last week?" | A2 |
@@ -151,6 +158,7 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 
 | ID | Task | Status | Owner | Why | Was |
 |---|---|---|---|---|---|
+| APP-7 | Today screen still shows the slot label ("big news") on the story card | open | Kate's UI session | Labels are system categories | podcast smoke |
 | APP-1* | Redesign the web app to be fully voice-forward: talking is the main interface (start, interrupt, ask, navigate by voice), screens are secondary | open, separate session | Kate (own session) | Kate 2026-11-27; the demo should show a voice product | new |
 | APP-2 | MP3 instead of WAV for brief audio (~8× smaller; ffmpeg in the image) | open | Claude | ~23 MB per 8-minute brief | T1.19 |
 | APP-3 | Stream answer audio as it arrives (each sentence waits ~1.4 s today; target ≤ 1 s) | open | Claude | Voice latency | T1.20 |
@@ -210,6 +218,7 @@ How it works today (checked 2026-11-27, see the end of this file) and what to fi
 | D15 | Do source links matter? (was Q8) | Kate: not much | Keep citations internally for grounding; don't build link display (VO-7) |
 | D16 | Free-coverage search provider (was Q10, F22) | 57% of Tavily news hits are google.com/url redirects that mostly fail (403/429); Exa or Brave return direct links | Stay on Tavily until Dec 4; note as a known limit |
 | D17 | Evaluation scope for Dec 4 | 7 days; Wayback archive out of reach; rebuilt days are thinner | Evaluate on rebuilt plus live days of Nov–Dec only; drop the Aug–Oct Wayback replay; state it in the report |
+| D21 | Brief writer model | Haiku followed the v3 bridge rules unevenly; Sonnet 5.5 (reasoning low) follows them. Writer ~$0.06 per brief vs $0.003; per-user run ~$0.09 + ~$0.01 audio (`docs/smoke/2026-11-27/podcast_brief/results.md`) | Keep Sonnet for the writer while Kate listens; decide with EV-7 |
 | D19 | Conversation ledger, separate from memory (MEM-2) | Kate, 2026-11-27: store exactly what was said about every story referenced anywhere (brief and whole conversation); the brief builder checks it so nothing repeats. Proposal: a per-user `story_mentions` log (story id + cross-day identity, date, brief or voice turn, the exact sentences and the note facts or passages they used), built from the brief script and voice turns; interests stay in memory | Build as proposed; awaiting Kate's OK |
 | D20 | One place for the user's specific asks (MEM-4) | Today: `open_questions`, `keep_posted` interests, `topic_requests`. Proposal: one `user_requests` store (kind: keep_posted, question, more_like, less_like, stop_covering, delivery; the user's words; scope story/topic/entity; status active, fulfilled, expired; source turn). Interests stay as the weighted, inferred profile and can point to the request that created them | Build as proposed; awaiting Kate's OK |
 

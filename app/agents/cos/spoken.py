@@ -80,7 +80,10 @@ def rundown_sentence(stories: list[BriefStory], teasers: dict[str, Teaser]) -> B
     elif len(have) == n:
         text = f"You have {_number(n)} {what} today: {_join(phrases)}."
     else:
-        text = f"You have {_number(n)} {what} today, starting with {_join(phrases)}."
+        # "starting with" only when the named stories really are the first ones heard.
+        first = [st.story_ref for st in stories[: len(have)]] == [t.story_ref for t in have]
+        link = "starting with" if first else "among them"
+        text = f"You have {_number(n)} {what} today, {link} {_join(phrases)}."
     cites = list(dict.fromkeys(c for t in have for c in t.cites))
     return BriefSentence(sid="rundown", text=text, kind="intro", cites=cites)
 

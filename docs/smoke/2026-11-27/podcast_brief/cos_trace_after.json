@@ -1,0 +1,2765 @@
+{
+ "run_id": "live",
+ "user_id": "00000000-0000-4000-8000-000000000001",
+ "job": "cos_daily",
+ "arm": "full",
+ "events": [
+  {
+   "step": "C1",
+   "kind": "llm",
+   "role": "cos.plan",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.plan",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1615,
+    "tokens_out": 730,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:19:54.025404Z"
+  },
+  {
+   "step": "C1",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "queries": [
+     {
+      "query": "NRC SMR construction permit application",
+      "kind": "personal",
+      "rationale": "Keep-me-posted item on SMR licensing; tracks the latest regulatory filings and approvals.",
+      "memory_refs": [
+       "i_5e8f298031"
+      ]
+     },
+     {
+      "query": "NuScale Power licensing news",
+      "kind": "personal",
+      "rationale": "Prominent SMR developer whose licensing milestones directly track the keep-posted interest.",
+      "memory_refs": [
+       "i_5e8f298031"
+      ]
+     },
+     {
+      "query": "agent memory architecture release",
+      "kind": "personal",
+      "rationale": "Recent developments in agent memory systems from labs and open-source projects.",
+      "memory_refs": [
+       "i_8891910bfc",
+       "i_e6dc4a7eca"
+      ]
+     },
+     {
+      "query": "open-weight model release benchmark",
+      "kind": "personal",
+      "rationale": "New open-weight model launches and how they compare on benchmarks.",
+      "memory_refs": [
+       "i_d33d3ae42c"
+      ]
+     },
+     {
+      "query": "AI agent tool use framework",
+      "kind": "personal",
+      "rationale": "New frameworks and standards for tool-using AI agents.",
+      "memory_refs": [
+       "i_e6dc4a7eca"
+      ]
+     },
+     {
+      "query": "NRC Part 53 advanced reactor rule",
+      "kind": "adjacent",
+      "rationale": "Regulatory framework shaping how SMRs and advanced reactors get licensed, one step from SMR licensing.",
+      "memory_refs": [
+       "i_5e8f298031"
+      ]
+     },
+     {
+      "query": "HALEU fuel supply advanced reactors",
+      "kind": "adjacent",
+      "rationale": "Fuel availability is a key constraint for SMR deployment and often gates licensing timelines.",
+      "memory_refs": [
+       "i_5e8f298031"
+      ]
+     },
+     {
+      "query": "episodic memory reinforcement learning agents",
+      "kind": "adjacent",
+      "rationale": "Methods from RL memory research that inform how agents store and recall experience.",
+      "memory_refs": [
+       "i_8891910bfc"
+      ]
+     },
+     {
+      "query": "long-horizon agent evaluation benchmarks",
+      "kind": "adjacent",
+      "rationale": "Benchmarks testing whether agents retain and use context over long tasks, related to agent memory.",
+      "memory_refs": [
+       "i_8891910bfc",
+       "i_e6dc4a7eca"
+      ]
+     }
+    ]
+   },
+   "at": "2026-11-27T19:19:54.025545Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "NRC SMR construction permit application",
+    "query_kind": "personal",
+    "n_hits": 3
+   },
+   "at": "2026-11-27T19:19:55.901257Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "NuScale Power licensing news",
+    "query_kind": "personal",
+    "n_hits": 4
+   },
+   "at": "2026-11-27T19:19:59.139215Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "agent memory architecture release",
+    "query_kind": "personal",
+    "n_hits": 7
+   },
+   "at": "2026-11-27T19:19:59.139273Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "open-weight model release benchmark",
+    "query_kind": "personal",
+    "n_hits": 5
+   },
+   "at": "2026-11-27T19:19:59.139326Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "AI agent tool use framework",
+    "query_kind": "personal",
+    "n_hits": 6
+   },
+   "at": "2026-11-27T19:19:59.139369Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "NRC Part 53 advanced reactor rule",
+    "query_kind": "adjacent",
+    "n_hits": 3
+   },
+   "at": "2026-11-27T19:19:59.139402Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "HALEU fuel supply advanced reactors",
+    "query_kind": "adjacent",
+    "n_hits": 5
+   },
+   "at": "2026-11-27T19:19:59.139426Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "episodic memory reinforcement learning agents",
+    "query_kind": "adjacent",
+    "n_hits": 6
+   },
+   "at": "2026-11-27T19:19:59.139456Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "long-horizon agent evaluation benchmarks",
+    "query_kind": "adjacent",
+    "n_hits": 3
+   },
+   "at": "2026-11-27T19:19:59.139488Z"
+  },
+  {
+   "step": "C2",
+   "kind": "llm",
+   "role": "cos.search_loop",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.search_loop",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 17235,
+    "tokens_out": 125,
+    "tool_calls": [
+     "search"
+    ],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:00.373139Z"
+  },
+  {
+   "step": "C2",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "query": "X-Energy NRC construction permit issued",
+    "query_kind": "personal",
+    "n_hits": 4
+   },
+   "at": "2026-11-27T19:20:02.104755Z"
+  },
+  {
+   "step": "C2",
+   "kind": "llm",
+   "role": "cos.search_loop",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.search_loop",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 18527,
+    "tokens_out": 477,
+    "tool_calls": [
+     "finish"
+    ],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:05.062686Z"
+  },
+  {
+   "step": "C2",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "finish": true,
+    "dropped": [
+     "3d246229350967f77439077ca6b3a869",
+     "4b3c62e78af8d31768ec0feb39a2a796",
+     "656ab994374201b905f3258bcbb9897c",
+     "6ed806583b83819a697503638eeade36",
+     "8c9a0a5d7f48eb1887628262a60c351d",
+     "a77625bfa508241ca6cad5c59cfcca22"
+    ]
+   },
+   "at": "2026-11-27T19:20:05.062720Z"
+  },
+  {
+   "step": "C2",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "searches_used": 10,
+    "finds": 38
+   },
+   "at": "2026-11-27T19:20:05.062752Z"
+  },
+  {
+   "step": "C4",
+   "kind": "llm",
+   "role": "cos.score",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.score",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 6569,
+    "tokens_out": 2964,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:13.749700Z"
+  },
+  {
+   "step": "C4",
+   "kind": "llm",
+   "role": "cos.score",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.score",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 6553,
+    "tokens_out": 3006,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:22.316842Z"
+  },
+  {
+   "step": "C4",
+   "kind": "llm",
+   "role": "cos.score",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.score",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 5946,
+    "tokens_out": 2841,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:30.433436Z"
+  },
+  {
+   "step": "C4",
+   "kind": "llm",
+   "role": "cos.score",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.score",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 5964,
+    "tokens_out": 2776,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:38.427442Z"
+  },
+  {
+   "step": "C3",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "pool_size": 80,
+    "notes": [
+     "low-value find dropped (event or quote page): https://www.google.com/url?opi=89978449&q=CAESfAHEIkXXXPcbIC7VIA4kBuGtraVO-VaSSLVRLkNl1s-zRwg4UQqy5u4NRrlPY3C7CNfA3uPQn_159W_zf8eUzdkY_jMCCyVY7OdQ3egQGMIHmDWTRVZbT0L0nb212uFYXzi2SZNXX4QCO2pcmhA1YT9vTWbm988E15OIm6k&sa=U&uoh=3&ved=2ahUKEwiwp7qP76iYAxVgxOYEHZZABo4QxfQBegQIAxAC&usg=AOvVaw3pJduDbI7OaVzINMtdxAcZ",
+     "low-value find dropped (no real headline): https://tavily.com/knowledge/company/mCajoIGlh96I",
+     "low-value find dropped (event or quote page): https://www.google.com/url?opi=89978449&q=CAESYwHEIkXXL5K3HFO9qh4h3FN0rhVWRLmQ4EvQ4cGHMjmDUTxC80tqsbvQ4pY483KXh_mwciYElcNrWa0i_8KJPDTbFoCEprG9JHKi5ruhA87zITnKrZdRZhn7xlSNLAJR5gl9jw&sa=U&uoh=3&ved=2ahUKEwi92LiQ76iYAxWFM1kFHSR1BoYQxfQBegQIChAC&usg=AOvVaw0kt7ydEpe3EIUeCCK71ubm",
+     "low-value find dropped (event or quote page): https://www.google.com/url?opi=89978449&q=CAESYwHEIkXX8QIRw5ftF-qtDNrpXUuM-4R3OupfRfSdEKwhwWp-RNtY7jZEfac5X4s7U-2RZzpKorUkIgXSJ2GF2jVw4RoAnsHb1tTJ9cP4_BXGtx5SIQXrPOysWpsiC-hSrYf0bw&sa=U&uoh=3&ved=2ahUKEwi92LiQ76iYAxWFM1kFHSR1BoYQxfQBegQIBhAC&usg=AOvVaw3RcSD-v1R_vIjhvMd4Bh-s",
+     "low-value find dropped (event or quote page): https://simplywall.st/stocks/us/capital-goods/nasdaq-xe/x-energy",
+     "low-value find dropped (no real headline): https://tavily.com/knowledge/company/gM8Ui45snKuj",
+     "low-value find dropped (no real headline): https://skphd.medium.com/top-30-ai-agent-memory-architecture-interview-questions-and-answers-for-2027-bfae3984ceb9",
+     "pool truncated to 80"
+    ],
+    "origins": {
+     "adjacent": 6,
+     "digest": 69,
+     "personal": 5
+    }
+   },
+   "at": "2026-11-27T19:20:38.430319Z"
+  },
+  {
+   "step": "C5",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "k": 6,
+    "slot_targets": {
+     "big_news": 2,
+     "for_you": 3,
+     "outside_usual": 1
+    },
+    "notes": [],
+    "selected": [
+     {
+      "story_ref": "ai-19eb51ffe9c9",
+      "slot": "big_news",
+      "rank": 1,
+      "why_tag": "big news",
+      "mmr_score": 0.63
+     },
+     {
+      "story_ref": "physical_ai-16d882372ad7",
+      "slot": "big_news",
+      "rank": 2,
+      "why_tag": "big news",
+      "mmr_score": 0.616
+     },
+     {
+      "story_ref": "ai-f99042f8913a",
+      "slot": "for_you",
+      "rank": 3,
+      "why_tag": "for you",
+      "mmr_score": 0.3612
+     },
+     {
+      "story_ref": "u:b1f181e80256",
+      "slot": "for_you",
+      "rank": 4,
+      "why_tag": "for you",
+      "mmr_score": 0.35525
+     },
+     {
+      "story_ref": "ai-ea1083b5158c",
+      "slot": "for_you",
+      "rank": 5,
+      "why_tag": "for you",
+      "mmr_score": 0.28
+     },
+     {
+      "story_ref": "energy-d99c728a3c72",
+      "slot": "outside_usual",
+      "rank": 6,
+      "why_tag": "outside your usual",
+      "mmr_score": 0.429
+     }
+    ],
+    "scores": {
+     "u:f81b8ae246e0": {
+      "story_ref": "u:f81b8ae246e0",
+      "relevance": 0.35,
+      "because": [
+       "i_5e8f298031"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 40,
+      "importance_evidence": [],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "nuclear-fusion"
+      ],
+      "entities": [
+       "Sargent & Lundy",
+       "ENTRA1 Energy",
+       "NuScale"
+      ]
+     },
+     "u:d3aa11d5f12e": {
+      "story_ref": "u:d3aa11d5f12e",
+      "relevance": 0.35,
+      "because": [
+       "i_5e8f298031"
+      ],
+      "adjacency": "core",
+      "novelty": 0.85,
+      "importance": 40,
+      "importance_evidence": [],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "nuclear-fusion"
+      ],
+      "entities": [
+       "NuScale Power",
+       "Oklo",
+       "NRC"
+      ]
+     },
+     "u:43c22bce363c": {
+      "story_ref": "u:43c22bce363c",
+      "relevance": 0.55,
+      "because": [
+       "i_8891910bfc",
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 30,
+      "importance_evidence": [],
+      "dive_likelihood": 0.45,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Raspberry Pi",
+       "ESP32",
+       "MCP"
+      ]
+     },
+     "u:b1f181e80256": {
+      "story_ref": "u:b1f181e80256",
+      "relevance": 0.7,
+      "because": [
+       "i_d33d3ae42c"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 45,
+      "importance_evidence": [],
+      "dive_likelihood": 0.55,
+      "subtopics": [
+       "open-models"
+      ],
+      "entities": [
+       "GigaChat",
+       "ai-sage",
+       "Hugging Face"
+      ]
+     },
+     "u:f83b26de444d": {
+      "story_ref": "u:f83b26de444d",
+      "relevance": 0.6,
+      "because": [
+       "i_d33d3ae42c"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 35,
+      "importance_evidence": [],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "open-models"
+      ],
+      "entities": [
+       "Amini",
+       "Soma-1X Lite"
+      ]
+     },
+     "u:b11e56d62884": {
+      "story_ref": "u:b11e56d62884",
+      "relevance": 0.3,
+      "because": [
+       "i_5e8f298031"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.8,
+      "importance": 35,
+      "importance_evidence": [],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "nuclear-fusion"
+      ],
+      "entities": [
+       "NRC",
+       "10 CFR Part 21"
+      ]
+     },
+     "u:a508d798ddf7": {
+      "story_ref": "u:a508d798ddf7",
+      "relevance": 0.3,
+      "because": [
+       "i_5e8f298031"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.85,
+      "importance": 45,
+      "importance_evidence": [],
+      "dive_likelihood": 0.25,
+      "subtopics": [
+       "nuclear-fusion"
+      ],
+      "entities": [
+       "DOE",
+       "Savannah River Site",
+       "HALEU"
+      ]
+     },
+     "u:4ebb752045c8": {
+      "story_ref": "u:4ebb752045c8",
+      "relevance": 0.5,
+      "because": [
+       "i_8891910bfc"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 25,
+      "importance_evidence": [],
+      "dive_likelihood": 0.35,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Open Knowledge Format"
+      ]
+     },
+     "u:9b780e5528de": {
+      "story_ref": "u:9b780e5528de",
+      "relevance": 0.6,
+      "because": [
+       "i_8891910bfc",
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 30,
+      "importance_evidence": [],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "akitaonrails/ai-memory"
+      ]
+     },
+     "u:c766ba0c02a2": {
+      "story_ref": "u:c766ba0c02a2",
+      "relevance": 0.5,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.85,
+      "importance": 30,
+      "importance_evidence": [],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": []
+     },
+     "u:ea4591aaee04": {
+      "story_ref": "u:ea4591aaee04",
+      "relevance": 0.6,
+      "because": [
+       "i_8891910bfc",
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 40,
+      "importance_evidence": [],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Anthropic",
+       "Claude",
+       "Lance Martin"
+      ]
+     },
+     "ai-19eb51ffe9c9": {
+      "story_ref": "ai-19eb51ffe9c9",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 90,
+      "importance_evidence": [
+       "techmeme #2",
+       "Bloomberg investigation, CNBC follow-up"
+      ],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "chips-and-compute",
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Nvidia",
+       "Alice Huang",
+       "Megaspeed",
+       "Blackwell"
+      ]
+     },
+     "physical_ai-16d882372ad7": {
+      "story_ref": "physical_ai-16d882372ad7",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 88,
+      "importance_evidence": [
+       "Reuters",
+       "covered by multiple outlets",
+       "stock moved ~4.9%"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "robotics-business",
+       "humanoids"
+      ],
+      "entities": [
+       "Tesla",
+       "EMAG",
+       "Optimus"
+      ]
+     },
+     "ai-161cec450dc3": {
+      "story_ref": "ai-161cec450dc3",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 86,
+      "importance_evidence": [
+       "NYT, TechCrunch, The Information"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "chips-and-compute",
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Nvidia",
+       "Singapore",
+       "Malaysia",
+       "Thailand",
+       "Indonesia"
+      ]
+     },
+     "physical_ai-da5ac5330038": {
+      "story_ref": "physical_ai-da5ac5330038",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 85,
+      "importance_evidence": [
+       "wide coverage across outlets",
+       "investor day"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "humanoids"
+      ],
+      "entities": [
+       "XPeng",
+       "IRON",
+       "He Xiaopeng"
+      ]
+     },
+     "ai-7de52cd108ae": {
+      "story_ref": "ai-7de52cd108ae",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 82,
+      "importance_evidence": [
+       "FT, NYT, Bloomberg, WSJ"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "business-and-funding",
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Nvidia",
+       "Jensen Huang"
+      ]
+     },
+     "ai-5545fc6739ec": {
+      "story_ref": "ai-5545fc6739ec",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 80,
+      "importance_evidence": [
+       "techmeme #5",
+       "Bloomberg, Reuters, FT"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "SAP"
+      ]
+     },
+     "ai-dd6342649a4b": {
+      "story_ref": "ai-dd6342649a4b",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 80,
+      "importance_evidence": [
+       "Bloomberg, CNBC, Barron's, IBD"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Anthropic"
+      ]
+     },
+     "ai-19430ac3176c": {
+      "story_ref": "ai-19430ac3176c",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 78,
+      "importance_evidence": [
+       "techmeme #1",
+       "Reuters exclusive, Bloomberg, The Information, hn_front 230pts"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "US Air Force",
+       "Cloud One",
+       "Reuters"
+      ]
+     },
+     "physical_ai-386802ef471a": {
+      "story_ref": "physical_ai-386802ef471a",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 76,
+      "importance_evidence": [
+       "several outlets"
+      ],
+      "dive_likelihood": 0.25,
+      "subtopics": [
+       "robotics-business",
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "Nvidia"
+      ]
+     },
+     "energy-96a0cbbd7b50": {
+      "story_ref": "energy-96a0cbbd7b50",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 74,
+      "importance_evidence": [
+       "Canary Media, Heatmap, Bloomberg"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "energy-policy"
+      ],
+      "entities": [
+       "US Senate"
+      ]
+     },
+     "physical_ai-502278aae157": {
+      "story_ref": "physical_ai-502278aae157",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 74,
+      "importance_evidence": [
+       "many outlets"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "humanoids",
+       "industrial-logistics"
+      ],
+      "entities": [
+       "Volvo",
+       "Hexagon Robotics",
+       "Aeon",
+       "BMW"
+      ]
+     },
+     "ai-f99042f8913a": {
+      "story_ref": "ai-f99042f8913a",
+      "relevance": 0.6,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 72,
+      "importance_evidence": [
+       "ABC News",
+       "hn_front 363pts"
+      ],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "Anthropic",
+       "Claude"
+      ]
+     },
+     "energy-829fd24a4be4": {
+      "story_ref": "energy-829fd24a4be4",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 72,
+      "importance_evidence": [
+       "DCD, Reuters explainer",
+       "regulatory approval"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "data-center-buildout",
+       "energy-policy"
+      ],
+      "entities": [
+       "FCC",
+       "SpaceX"
+      ]
+     },
+     "physical_ai-07b37e8588c5": {
+      "story_ref": "physical_ai-07b37e8588c5",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 72,
+      "importance_evidence": [
+       "Reuters",
+       "robotics247"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "robotics-business"
+      ],
+      "entities": [
+       "Jensen Huang",
+       "Nvidia"
+      ]
+     },
+     "physical_ai-c84824720349": {
+      "story_ref": "physical_ai-c84824720349",
+      "relevance": 0.25,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 72,
+      "importance_evidence": [
+       "multiple sources"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "autonomous-vehicles"
+      ],
+      "entities": [
+       "Waymo",
+       "NHTSA"
+      ]
+     },
+     "energy-cf13fb7ed863": {
+      "story_ref": "energy-cf13fb7ed863",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 70,
+      "importance_evidence": [
+       "Tom's Hardware, Mezha, NOLA.com"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "data-center-buildout",
+       "energy-policy"
+      ],
+      "entities": [
+       "Greg Abbott",
+       "Gina Hinojosa",
+       "Texas"
+      ]
+     },
+     "energy-d99c728a3c72": {
+      "story_ref": "energy-d99c728a3c72",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 70,
+      "importance_evidence": [
+       "Reuters, Nikkei, DCD"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "data-center-buildout",
+       "power-markets"
+      ],
+      "entities": [
+       "JERA",
+       "Anthropic",
+       "Meta",
+       "Microsoft",
+       "Nikkei",
+       "Tokyo Electric Power"
+      ]
+     },
+     "physical_ai-8dbb94635762": {
+      "story_ref": "physical_ai-8dbb94635762",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 70,
+      "importance_evidence": [
+       "multiple finance outlets"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "autonomous-vehicles",
+       "robotics-business"
+      ],
+      "entities": [
+       "XPeng",
+       "WorldGPT",
+       "Bank of America",
+       "Morgan Stanley"
+      ]
+     },
+     "energy-a63f1889e17d": {
+      "story_ref": "energy-a63f1889e17d",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 68,
+      "importance_evidence": [
+       "DCD, EnergyNow",
+       "multiple outlets"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "data-center-buildout",
+       "storage-batteries"
+      ],
+      "entities": [
+       "SpaceX",
+       "Tesla",
+       "Starbase"
+      ]
+     },
+     "ai-eec310ea4128": {
+      "story_ref": "ai-eec310ea4128",
+      "relevance": 0.4,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 66,
+      "importance_evidence": [
+       "techmeme #6",
+       "NYT"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Huawei",
+       "Ren Zhengfei"
+      ]
+     },
+     "physical_ai-1ff10008efd0": {
+      "story_ref": "physical_ai-1ff10008efd0",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 66,
+      "importance_evidence": [
+       "single source, large funding"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "robotics-business",
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "Noetra",
+       "METI"
+      ]
+     },
+     "energy-629721327457": {
+      "story_ref": "energy-629721327457",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 64,
+      "importance_evidence": [
+       "Reuters, WNN"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "nuclear-fusion",
+       "grid-transmission"
+      ],
+      "entities": [
+       "IAEA",
+       "Zaporizhzhia"
+      ]
+     },
+     "physical_ai-909c3020c882": {
+      "story_ref": "physical_ai-909c3020c882",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 64,
+      "importance_evidence": [
+       "SCMP",
+       "MLQ"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "robotics-business",
+       "humanoids"
+      ],
+      "entities": [
+       "Goldman Sachs",
+       "Unitree"
+      ]
+     },
+     "ai-17289e3c05d7": {
+      "story_ref": "ai-17289e3c05d7",
+      "relevance": 0.3,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 62,
+      "importance_evidence": [
+       "techmeme #7",
+       "SecurityWeek, Reuters"
+      ],
+      "dive_likelihood": 0.25,
+      "subtopics": [
+       "other"
+      ],
+      "entities": [
+       "SAP",
+       "GitHub"
+      ]
+     },
+     "energy-a1f3918c65fc": {
+      "story_ref": "energy-a1f3918c65fc",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 62,
+      "importance_evidence": [
+       "pv magazine USA"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "solar-wind",
+       "energy-policy"
+      ],
+      "entities": [
+       "Section 232"
+      ]
+     },
+     "energy-c7346b489f79": {
+      "story_ref": "energy-c7346b489f79",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 62,
+      "importance_evidence": [
+       "Bloomberg, FT"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "grid-transmission",
+       "power-markets"
+      ],
+      "entities": [
+       "National Grid ESO"
+      ]
+     },
+     "ai-68b32bce8e2c": {
+      "story_ref": "ai-68b32bce8e2c",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "ABC News"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Donald Trump"
+      ]
+     },
+     "ai-daa1a846dd51": {
+      "story_ref": "ai-daa1a846dd51",
+      "relevance": 0.35,
+      "because": [
+       "i_d33d3ae42c"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "ET Telecom, ForkLog, Coinpaper"
+      ],
+      "dive_likelihood": 0.35,
+      "subtopics": [
+       "frontier-models",
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Z.AI",
+       "Moonshot"
+      ]
+     },
+     "ai-ea1083b5158c": {
+      "story_ref": "ai-ea1083b5158c",
+      "relevance": 0.5,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "AI Insider"
+      ],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "business-and-funding",
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Sierra"
+      ]
+     },
+     "energy-611ad9d66099": {
+      "story_ref": "energy-611ad9d66099",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "Canary Media #20"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "data-center-buildout"
+      ],
+      "entities": [
+       "Google"
+      ]
+     },
+     "physical_ai-951e6eb86247": {
+      "story_ref": "physical_ai-951e6eb86247",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "Benzinga",
+       "TradingView"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "autonomous-vehicles"
+      ],
+      "entities": [
+       "Tesla",
+       "EU"
+      ]
+     },
+     "physical_ai-d4067a16a11a": {
+      "story_ref": "physical_ai-d4067a16a11a",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 60,
+      "importance_evidence": [
+       "robotics247"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "industrial-logistics",
+       "robotics-business"
+      ],
+      "entities": [
+       "Rockwell Automation",
+       "AGILOX"
+      ]
+     },
+     "ai-44e8f081ddee": {
+      "story_ref": "ai-44e8f081ddee",
+      "relevance": 0.35,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "ABC News exclusive"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Anthropic",
+       "ABC News"
+      ]
+     },
+     "ai-bb2036aca6d3": {
+      "story_ref": "ai-bb2036aca6d3",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "techmeme #13",
+       "NYT"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Congress"
+      ]
+     },
+     "ai-c7e84e49d474": {
+      "story_ref": "ai-c7e84e49d474",
+      "relevance": 0.45,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "secondary report citing Axios"
+      ],
+      "dive_likelihood": 0.35,
+      "subtopics": [
+       "evals-and-safety",
+       "frontier-models"
+      ],
+      "entities": [
+       "OpenAI",
+       "Anthropic",
+       "Axios"
+      ]
+     },
+     "energy-82f4acb2fd88": {
+      "story_ref": "energy-82f4acb2fd88",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "Reuters, Business Standard"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "solar-wind",
+       "grid-transmission"
+      ],
+      "entities": [
+       "India"
+      ]
+     },
+     "energy-8357efca80c1": {
+      "story_ref": "energy-8357efca80c1",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "pv magazine, Canary Media #1"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "solar-wind"
+      ],
+      "entities": [
+       "China"
+      ]
+     },
+     "energy-85f90c620dab": {
+      "story_ref": "energy-85f90c620dab",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "Canary Media #2"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "data-center-buildout",
+       "energy-policy"
+      ],
+      "entities": [
+       "Ohio"
+      ]
+     },
+     "physical_ai-c8d1425b6894": {
+      "story_ref": "physical_ai-c8d1425b6894",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 58,
+      "importance_evidence": [
+       "many Korean outlets"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "robotics-business",
+       "humanoids"
+      ],
+      "entities": [
+       "Samsung",
+       "Rainbow Robotics",
+       "KOSDAQ"
+      ]
+     },
+     "ai-7dfcc6db4241": {
+      "story_ref": "ai-7dfcc6db4241",
+      "relevance": 0.3,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 56,
+      "importance_evidence": [
+       "techmeme #8",
+       "Politico Europe"
+      ],
+      "dive_likelihood": 0.25,
+      "subtopics": [
+       "policy-and-regulation",
+       "products-and-apps"
+      ],
+      "entities": [
+       "Meta",
+       "Muse",
+       "CMA"
+      ]
+     },
+     "ai-2ec5802f6ce1": {
+      "story_ref": "ai-2ec5802f6ce1",
+      "relevance": 0.3,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "WSJ"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "OpenAI"
+      ]
+     },
+     "ai-4c9b97b43ce5": {
+      "story_ref": "ai-4c9b97b43ce5",
+      "relevance": 0.25,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "Analytics India Magazine"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "ElevenLabs"
+      ]
+     },
+     "ai-e0cf53dd25c7": {
+      "story_ref": "ai-e0cf53dd25c7",
+      "relevance": 0.25,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "The Information"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "Apple",
+       "MiniMax",
+       "Talkie"
+      ]
+     },
+     "ai-fa34125a96ff": {
+      "story_ref": "ai-fa34125a96ff",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "The Guardian, Reuters"
+      ],
+      "dive_likelihood": 0.15,
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "Elon Musk",
+       "SpaceX",
+       "Starmind"
+      ]
+     },
+     "energy-5e2c89bf04c1": {
+      "story_ref": "energy-5e2c89bf04c1",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "NYT"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "energy-policy"
+      ],
+      "entities": [
+       "Fatih Birol",
+       "IEA"
+      ]
+     },
+     "energy-dc581d9825db": {
+      "story_ref": "energy-dc581d9825db",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "Canary Media"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "energy-policy",
+       "solar-wind"
+      ],
+      "entities": [
+       "EPA",
+       "Solar for All"
+      ]
+     },
+     "physical_ai-0574150001be": {
+      "story_ref": "physical_ai-0574150001be",
+      "relevance": 0.35,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "eWeek"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "OpenAI",
+       "Google",
+       "Anthropic"
+      ]
+     },
+     "physical_ai-7780a6369fe7": {
+      "story_ref": "physical_ai-7780a6369fe7",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "several outlets"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "humanoids",
+       "robotics-business"
+      ],
+      "entities": [
+       "Morgan Stanley",
+       "Horizon Robotics",
+       "Unitree"
+      ]
+     },
+     "physical_ai-8209745b5189": {
+      "story_ref": "physical_ai-8209745b5189",
+      "relevance": 0.15,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "trade outlets"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "autonomous-vehicles"
+      ],
+      "entities": [
+       "Zoox"
+      ]
+     },
+     "physical_ai-a3df99f782f6": {
+      "story_ref": "physical_ai-a3df99f782f6",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "robotics247"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "humanoids",
+       "industrial-logistics"
+      ],
+      "entities": [
+       "Boston Dynamics",
+       "GlobalFoundries"
+      ]
+     },
+     "physical_ai-ae1cdac27b57": {
+      "story_ref": "physical_ai-ae1cdac27b57",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "multiple outlets"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "autonomous-vehicles"
+      ],
+      "entities": [
+       "Tesla",
+       "Cybercab"
+      ]
+     },
+     "physical_ai-e712895804b0": {
+      "story_ref": "physical_ai-e712895804b0",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 55,
+      "importance_evidence": [
+       "several outlets"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "drones-field"
+      ],
+      "entities": [
+       "Terra Drone",
+       "Japan"
+      ]
+     },
+     "ai-3c303ff2db08": {
+      "story_ref": "ai-3c303ff2db08",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "Bloomberg, Reuters"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "business-and-funding"
+      ],
+      "entities": [
+       "Poland",
+       "Palantir"
+      ]
+     },
+     "energy-04bdc9e3bb99": {
+      "story_ref": "energy-04bdc9e3bb99",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "EnergyNow"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "data-center-buildout"
+      ],
+      "entities": [
+       "Microsoft"
+      ]
+     },
+     "energy-44801e67592e": {
+      "story_ref": "energy-44801e67592e",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "pv magazine"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "solar-wind",
+       "energy-policy"
+      ],
+      "entities": [
+       "Wood Mackenzie",
+       "EU"
+      ]
+     },
+     "energy-e17c806d85c3": {
+      "story_ref": "energy-e17c806d85c3",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "Yahoo Finance, OilPrice"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "data-center-buildout",
+       "grid-transmission"
+      ],
+      "entities": [
+       "Norway"
+      ]
+     },
+     "physical_ai-47a459f852d6": {
+      "story_ref": "physical_ai-47a459f852d6",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "BigGo Finance"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "robotics-hardware"
+      ],
+      "entities": [
+       "TDK"
+      ]
+     },
+     "physical_ai-a019f3368ebe": {
+      "story_ref": "physical_ai-a019f3368ebe",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "several outlets"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "robotics-business",
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "Neura Robotics",
+       "Costa Group"
+      ]
+     },
+     "physical_ai-e769e9f59d6f": {
+      "story_ref": "physical_ai-e769e9f59d6f",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 52,
+      "importance_evidence": [
+       "The Robot Report"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "industrial-logistics"
+      ],
+      "entities": [
+       "GXO"
+      ]
+     },
+     "ai-34f1f8155e68": {
+      "story_ref": "ai-34f1f8155e68",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "Guardian, NYT"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "research-methods"
+      ],
+      "entities": [
+       "Riemann hypothesis"
+      ]
+     },
+     "ai-7ae26e80a279": {
+      "story_ref": "ai-7ae26e80a279",
+      "relevance": 0.4,
+      "because": [
+       "i_e6dc4a7eca"
+      ],
+      "adjacency": "core",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "hn_front 158pts"
+      ],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "products-and-apps"
+      ],
+      "entities": [
+       "Kimi",
+       "Moonshot"
+      ]
+     },
+     "ai-7d17c63f7f05": {
+      "story_ref": "ai-7d17c63f7f05",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "Tom's Hardware, Gizmodo"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "evals-and-safety"
+      ],
+      "entities": [
+       "Anthropic",
+       "OpenAI"
+      ]
+     },
+     "energy-0cd88fdbdbca": {
+      "story_ref": "energy-0cd88fdbdbca",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "FT"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "solar-wind"
+      ],
+      "entities": [
+       "China",
+       "FT"
+      ]
+     },
+     "energy-a3fd753aab2c": {
+      "story_ref": "energy-a3fd753aab2c",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "Reuters, FT"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "data-center-buildout",
+       "power-markets"
+      ],
+      "entities": [
+       "Gazprom"
+      ]
+     },
+     "energy-c08d8dcd4dfe": {
+      "story_ref": "energy-c08d8dcd4dfe",
+      "relevance": 0.4,
+      "because": [
+       "i_5e8f298031"
+      ],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "TradingView, TokenPost"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "nuclear-fusion",
+       "climatetech-funding"
+      ],
+      "entities": [
+       "Trump Media",
+       "TAE"
+      ]
+     },
+     "physical_ai-6d762fec3ce5": {
+      "story_ref": "physical_ai-6d762fec3ce5",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "multiple outlets"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "autonomous-vehicles"
+      ],
+      "entities": [
+       "Momenta",
+       "Uber",
+       "Nuro",
+       "Lucid",
+       "Bolt"
+      ]
+     },
+     "physical_ai-c350933e8cbb": {
+      "story_ref": "physical_ai-c350933e8cbb",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "Yahoo Finance"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "robotics-business"
+      ],
+      "entities": [
+       "Eric Trump"
+      ]
+     },
+     "physical_ai-d1ab1adfd061": {
+      "story_ref": "physical_ai-d1ab1adfd061",
+      "relevance": 0.1,
+      "because": [],
+      "adjacency": "unrelated",
+      "novelty": 0.9,
+      "importance": 50,
+      "importance_evidence": [
+       "robotics247"
+      ],
+      "dive_likelihood": 0.1,
+      "subtopics": [
+       "industrial-logistics"
+      ],
+      "entities": [
+       "GM"
+      ]
+     },
+     "ai-dba42ab08a13": {
+      "story_ref": "ai-dba42ab08a13",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 48,
+      "importance_evidence": [
+       "Reuters citing Nikkei"
+      ],
+      "dive_likelihood": 0.2,
+      "subtopics": [
+       "chips-and-compute"
+      ],
+      "entities": [
+       "JERA",
+       "Anthropic",
+       "Meta"
+      ]
+     }
+    }
+   },
+   "at": "2026-11-27T19:20:38.430507Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "search",
+    "story_ref": "ai-19eb51ffe9c9",
+    "free_coverage": {
+     "query": "Bloomberg: Nvidia Blackwell chips installed at Shanghai data center linked to Alice Huang and",
+     "since": "2026-11-26T06:00:00+00:00",
+     "until": "2026-11-27T19:19:50.625532+00:00",
+     "searched": true,
+     "error": null,
+     "hits": 8,
+     "accepted": [
+      {
+       "url": "https://www.google.com/url?opi=89978449&q=CAESnwEBxCJF1w0PmbUD0xVm4PnjuJyEsJ8P3At0KF360ddGYlfwVW6Hp8nQj66sDfiN3mVP1okrpyKLqHAUjo3cLACf29BqKThXmcU_gNALwTwQ8d4J5m509YlxrOL-nrzlG0sXJkDNODBrr7Wxa1YjqoYS_ZeLArMyYxpsNr8kiiY6QePAyZ911Y-O6Ovsba0U7bE4WH16yzkWfMPO9VJA7GI&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQIBBAC&usg=AOvVaw26_j5EGNg1ym08MNJSWWSD",
+       "title": "Watch Nvidia Blackwell Chips Turn Up at China Site Tied to Alice Huang",
+       "match": "title 62, entities 3/4, published 2026-11-27 00:00"
+      },
+      {
+       "url": "https://www.google.com/url?opi=89978449&q=CAESqwEBxCJF1yJKs4GxhDDIFifyRLaZ-N-3CT57VjQxGW8V6C4FoQM-qjk-PfnyVNkro5H1Vv2havDmk11r6gmFlTfffRG43Pr4TF4IqY8-S85RB6xmGz_8HyQ8oC8B6ZClrXvhDhLLaGxBTEVYRL-WSADFSHmq2FyrjA7q8GoZXKaPBL7ydVojy9vFn4r_Wil7U4HTc2ebbe-XSTm1HVTrQy9d9UtvAZ5WFmxVuDY&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQICBAC&usg=AOvVaw2pw8x4FiqEkPBW6UNU3csN",
+       "title": "Watch Nvidia Chips Turn Up at China Site Linked to Alice Huang",
+       "match": "title 62, entities 3/4, published 2026-11-27 00:00"
+      }
+     ],
+     "rejected": [
+      {
+       "url": "https://www.google.com/url?opi=89978449&q=CAESuAEBxCJF1y1pv4F_HvQGLJ-pc32QqcBeKLHy98xIC0355HcwSOG7_ArkNOwOcsmJB57G3tkqcYIEmewjQu-IMUisXdf5EVAOY8PQU9lhieZDkEYlSbPZU6rwYmm3mtH4OqTXUCFAdjF7OrNgXR_TfU5I1ELnlzQ89tpexu8JTdwnIx8-6RYKc2UjBMWjac1Q2WdClKA7_2MQeDTkYZL74qXYnNYvHDSeIkV8XlUD0por3J3ifn-SRojx&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQIBRAC&usg=AOvVaw0Mz0Gl_piWyBi5wiHUDJje",
+       "title": "Nvidia GB300 Rack Found in Shanghai: Claimed vs Verified",
+       "reason": "low title similarity 41"
+      },
+      {
+       "url": "https://linkedin.com/in/alice-huang-ba9bb91",
+       "title": "Alice Huang",
+       "reason": "not a source (linkedin.com)"
+      },
+      {
+       "url": "https://linkedin.com/in/alice-huang-2571b721",
+       "title": "Alice Huang",
+       "reason": "not a source (linkedin.com)"
+      },
+      {
+       "url": "https://linkedin.com/in/alice-ksntiles-buildingmaterials",
+       "title": "Alice Huang",
+       "reason": "not a source (linkedin.com)"
+      },
+      {
+       "url": "https://tavily.com/knowledge/company/TXRhn2TKUD7t",
+       "title": "NVIDIA",
+       "reason": "not a source (tavily.com)"
+      },
+      {
+       "url": "https://digg.com/tech/ktp73f7p",
+       "title": "SAP confirms security incident as Der Spiegel reports source code tampering · Digg",
+       "reason": "low title similarity 39"
+      }
+     ]
+    }
+   },
+   "at": "2026-11-27T19:20:40.101274Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOekVEdHo2YjM3d3hkOEpLSWpIT2xTQTZHMVBHcUN0dlBUazhkelhhaW4tUlppT0ZvazlFVXdNWUFTTm5YNzZPZmhacWtfc3hRdUFLb3M3anYyZ0c0Q1BMZ1pWNDIzUnFnenVJZnlCVkJ0Z2FhUWdwZFJSeHN1X0JPOW5FUlg1ZWhyajZJeThCN1NnRWI4VDQ3YUk1b2M2d2dFaEYtaDJHSlotLTkxdFRlM1NyVlZFNm8tT2RRTXR4TQ?oc=5",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:38.968205Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOajRDYnpkT2kwWEdlR2REeG93cnBZdkdsYmo3dTFmaVp3enZYN3Jid0RYVWZwNXJvcE00OG5FNjdwd0MzQXpFV1gzeUxkdnhxTVNoaGVNRmpnRllMTGY4emNtNW9VYnc4RWZVX0I2WExQNy1Ha21aV0FNWWVUb0FacnFLM01rUWRudjBCdGJpbGxCVUx3dl9KMEtZb0pyYURCTG1iWW5xUmNpaDlnc0lsMVpldmV6QQ?oc=5",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:38.930210Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:39.631796Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:39.570398Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://bloomberg.com/news/videos/2026-11-27/blackwell-chips-found-at-alice-huang-linked-china-site-video",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:39.886424Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://bloomberg.com/news/videos/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-video",
+    "error": "unavailable: HTTP 403"
+   },
+   "at": "2026-11-27T19:20:39.871691Z"
+  },
+  {
+   "step": "C6",
+   "kind": "code",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "url": "https://www.google.com/url?opi=89978449&q=CAESnwEBxCJF1w0PmbUD0xVm4PnjuJyEsJ8P3At0KF360ddGYlfwVW6Hp8nQj66sDfiN3mVP1okrpyKLqHAUjo3cLACf29BqKThXmcU_gNALwTwQ8d4J5m509YlxrOL-nrzlG0sXJkDNODBrr7Wxa1YjqoYS_ZeLArMyYxpsNr8kiiY6QePAyZ911Y-O6Ovsba0U7bE4WH16yzkWfMPO9VJA7GI&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQIBBAC&usg=AOvVaw26_j5EGNg1ym08MNJSWWSD",
+    "rejected": "redirect did not reach a publisher"
+   },
+   "at": "2026-11-27T19:20:40.103956Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESnwEBxCJF1w0PmbUD0xVm4PnjuJyEsJ8P3At0KF360ddGYlfwVW6Hp8nQj66sDfiN3mVP1okrpyKLqHAUjo3cLACf29BqKThXmcU_gNALwTwQ8d4J5m509YlxrOL-nrzlG0sXJkDNODBrr7Wxa1YjqoYS_ZeLArMyYxpsNr8kiiY6QePAyZ911Y-O6Ovsba0U7bE4WH16yzkWfMPO9VJA7GI&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQIBBAC&usg=AOvVaw26_j5EGNg1ym08MNJSWWSD",
+    "found_via": "free_coverage_search",
+    "match": "title 62, entities 3/4, published 2026-11-27 00:00"
+   },
+   "at": "2026-11-27T19:20:40.103967Z"
+  },
+  {
+   "step": "C6",
+   "kind": "code",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "url": "https://www.google.com/url?opi=89978449&q=CAESqwEBxCJF1yJKs4GxhDDIFifyRLaZ-N-3CT57VjQxGW8V6C4FoQM-qjk-PfnyVNkro5H1Vv2havDmk11r6gmFlTfffRG43Pr4TF4IqY8-S85RB6xmGz_8HyQ8oC8B6ZClrXvhDhLLaGxBTEVYRL-WSADFSHmq2FyrjA7q8GoZXKaPBL7ydVojy9vFn4r_Wil7U4HTc2ebbe-XSTm1HVTrQy9d9UtvAZ5WFmxVuDY&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQICBAC&usg=AOvVaw2pw8x4FiqEkPBW6UNU3csN",
+    "rejected": "redirect did not reach a publisher"
+   },
+   "at": "2026-11-27T19:20:40.105220Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": false,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESqwEBxCJF1yJKs4GxhDDIFifyRLaZ-N-3CT57VjQxGW8V6C4FoQM-qjk-PfnyVNkro5H1Vv2havDmk11r6gmFlTfffRG43Pr4TF4IqY8-S85RB6xmGz_8HyQ8oC8B6ZClrXvhDhLLaGxBTEVYRL-WSADFSHmq2FyrjA7q8GoZXKaPBL7ydVojy9vFn4r_Wil7U4HTc2ebbe-XSTm1HVTrQy9d9UtvAZ5WFmxVuDY&sa=U&uoh=3&ved=2ahUKEwjb89GI7KiYAxWVK1kFHaZ9AWsQxfQBegQICBAC&usg=AOvVaw2pw8x4FiqEkPBW6UNU3csN",
+    "found_via": "free_coverage_search",
+    "match": "title 62, entities 3/4, published 2026-11-27 00:00"
+   },
+   "at": "2026-11-27T19:20:40.105228Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXoxNDRPU0NLUXo4bUVEaVZLZmMwN05BZ3RrS1FlVUxsQjhLUkttRTUycVhjaXJvQlBFeGN3UzV5TUNmMk16TEdWTzFfTzN6Z21Ra2JNZkcwbm5iRFIwZXAya296c29aQXp4U25ha1ljYWh2R2JCcENsRERiUlYteFBZcEFnZEFhWXZKaTJmTGxxbDZxaU5OdWN1X2szZw?oc=5"
+   },
+   "at": "2026-11-27T19:20:38.519777Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 2215,
+    "tokens_out": 488,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:41.269420Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPM1YtZzV1RXE5ZXJkYjREbmtlMjNuWXh1UEtUWHBMbEN4a2FRSWRqN2djRms0Smh1OTVfTFc2dTQ1ZzlFazQxTFJqZFQ1MG1IX1M2UjB6eGJrMGtkOUFFZ3k0UF9SMy1WUkVzVC1uZlhHWURjQ0ZTXzhCQ21pb3p5U0I1R0gxb2tURHNIV0E1Y1dkTTRMeE1ZOWE0TDNUOWpOYXc?oc=5"
+   },
+   "at": "2026-11-27T19:20:38.526027Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 2244,
+    "tokens_out": 804,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:41.773114Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://twitter.com/RealAstropulse/status/2126119408997466389"
+   },
+   "at": "2026-11-27T19:20:38.533124Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX3ZqRkZfWUw5X3dBbVVkUzh3NGVXTXdrOEIwOVRGUHdTeTRaaURSWS1DYVA3aXdUREVFeTM1ZnF0Mm91bzJTb0R6OWR3a0VwaFBPQmFqeVRuQjdrUFZSSFpmbjMzSGZEX2xCeE84c3A2Q3dpRnlEcVZ5MFhLVUE5b0lwUml2eWFacWZDVHJsaVh5VVJMZjZRdmlNSWlkQW1Wa2Rkb3Jn0gGrAUFVX3lxTE9RRnJFaXBvLVJUT0NMMXRtN0JscFBCQTIzRHlQUFdYMjJ2bnZkQ080WGZQYUtqTGNaZTZidWljbFhnNklKVGFaWXBLbXdtV0xkOTlYcnhFOUxMYU1vUnJMclpyR21nYTBLUDh5UURFTy1MbGRUQThiWXNLSVVMWkZJQlpwWTNJQUpGM3dyVGNHZmp6Y0E0R29FaWtkd25sczZ0RktJRTRXcGVkNA?oc=5"
+   },
+   "at": "2026-11-27T19:20:38.534285Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 2578,
+    "tokens_out": 161,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:39.897389Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://explainx.ai/blog/gigachat-4-708b-a41b-sber-open-weights-mit-1m-context-swe-bench-81-2026"
+   },
+   "at": "2026-11-27T19:20:38.511133Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1287,
+    "tokens_out": 95,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:39.649622Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPN0pwcnFxQ3lBZUJfT1pyNmZBSzNXNVpKcmZWYWNVUW1UMUZvb0ZONk9MRDFKOEEyTU9qLUtYM1VCYTZMOU1GX3RrUmp4NzkySXAxQkhmbWxLT3Q2U2l2MjZYdFI4Zkk3MmVQcVJxWWg3akdBdEdiRDMyY0VZUExzWU84R19oaW9RNGRvX0dYTU5kalZseE5qbVNvZGdOcEtBYnNCV243MVRxZmd1OWR5Y3hVMHZvMHpqUmxqQ2wzR21zb1dV?oc=5"
+   },
+   "at": "2026-11-27T19:20:39.652192Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1896,
+    "tokens_out": 469,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:41.623737Z"
+  },
+  {
+   "step": "C6",
+   "kind": "tool",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "tool": "fetch",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbFY5Q2Ftc2hLb1UxVUZrVkFSenhZR3NRclo5NnZqaXdkUlpUNjBMSURxNXJseVh1VlBmZWlhQmxJT0s1ZnUxdWptOGxKVlV3cXBiUjZzMm1ZSm1rSVNpVHlNazg4ejdYaUxBZXpQZnlnR3Z5MWprZllsUHJrd2tTMG05aFdQNUVaaFRxU1VRUlM3anl5OTBTNzF5VUFtMm03TzNiMmt3SDd1U3lHV01tOW9QdEhwZnNuaU9HQmJVb2RxWHNaNzFQZkItNV91cmdaWExrVFk2SEpjaWM?oc=5"
+   },
+   "at": "2026-11-27T19:20:39.899771Z"
+  },
+  {
+   "step": "C6",
+   "kind": "llm",
+   "role": "cos.extract_passages",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.extract_passages",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 2323,
+    "tokens_out": 725,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:42.536001Z"
+  },
+  {
+   "step": "C7",
+   "kind": "llm",
+   "role": "cos.write_brief",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.write_brief",
+    "model": "anthropic/claude-sonnet-5.5",
+    "tokens_in": 13173,
+    "tokens_out": 2665,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:20:57.989233Z"
+  },
+  {
+   "step": "C7",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "notes": [
+     "story u:b1f181e80256 has no grounded sentences: removed from script"
+    ],
+    "n_sentences": 25,
+    "teasers": [
+     "ai-19eb51ffe9c9",
+     "ai-ea1083b5158c",
+     "ai-f99042f8913a",
+     "energy-d99c728a3c72",
+     "physical_ai-16d882372ad7"
+    ],
+    "notes_added": 5,
+    "listener_history": {
+     "ai-19eb51ffe9c9": "new to this listener: give the background they need",
+     "physical_ai-16d882372ad7": "new to this listener: give the background they need",
+     "ai-f99042f8913a": "new to this listener: give the background they need",
+     "u:b1f181e80256": "new to this listener: give the background they need",
+     "ai-ea1083b5158c": "new to this listener: give the background they need",
+     "energy-d99c728a3c72": "new to this listener: give the background they need"
+    }
+   },
+   "at": "2026-11-27T19:20:57.989643Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 12647,
+    "tokens_out": 526,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:21:00.079067Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 4264,
+    "tokens_out": 175,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:21:01.158338Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 5675,
+    "tokens_out": 292,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:21:02.961678Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1805,
+    "tokens_out": 211,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T19:21:04.312986Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checked": 24,
+    "restated": [
+     "s001",
+     "s014",
+     "s017",
+     "s019"
+    ],
+    "dropped": [
+     "s002",
+     "s009",
+     "r:ai-19eb51ffe9c9"
+    ],
+    "rewritten": [
+     "s016",
+     "r:ai-f99042f8913a",
+     "r:ai-ea1083b5158c"
+    ]
+   },
+   "at": "2026-11-27T19:21:04.317986Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checks": [
+     {
+      "sid": "s001",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s002",
+      "verdict": "partial",
+      "rewritten": "Bloomberg reports that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed, according to serial numbers in Chinese filings.",
+      "dropped": true
+     },
+     {
+      "sid": "s003",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s004",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s006",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s007",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s008",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s009",
+      "verdict": "partial",
+      "rewritten": "Neither company disclosed financial terms, and Tesla shares rose 4.86 percent in Friday morning trading.",
+      "dropped": true
+     },
+     {
+      "sid": "s011",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s012",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s013",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s014",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s016",
+      "verdict": "partial",
+      "rewritten": "Sierra has raised 1.75 billion dollars in a Series F round that doubles its valuation to 30 billion dollars.",
+      "dropped": false
+     },
+     {
+      "sid": "s017",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s018",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s019",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s021",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s022",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s023",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:ai-19eb51ffe9c9",
+      "verdict": "partial",
+      "rewritten": "restricted Nvidia Blackwell chips found in a Shanghai data center",
+      "dropped": true
+     },
+     {
+      "sid": "r:physical_ai-16d882372ad7",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:ai-f99042f8913a",
+      "verdict": "partial",
+      "rewritten": "Anthropic models hacking organizations during tests",
+      "dropped": false
+     },
+     {
+      "sid": "r:ai-ea1083b5158c",
+      "verdict": "partial",
+      "rewritten": "Sierra doubling its valuation to 30 billion dollars",
+      "dropped": false
+     },
+     {
+      "sid": "r:energy-d99c728a3c72",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     }
+    ],
+    "dropped_text": {
+     "s002": "Bloomberg says serial numbers in Chinese filings reveal the installation, which was done by a pair of Chinese firms.",
+     "s009": "Neither company disclosed financial terms, but Tesla shares rose 4.86 percent on Friday morning.",
+     "r:ai-19eb51ffe9c9": "restricted Nvidia chips turning up in Shanghai"
+    }
+   },
+   "at": "2026-11-27T19:21:04.318190Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "spoken": []
+   },
+   "at": "2026-11-27T19:21:04.318645Z"
+  },
+  {
+   "step": "stored_set",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "size": 20,
+    "in_brief": [
+     "ai-19eb51ffe9c9",
+     "physical_ai-16d882372ad7",
+     "ai-f99042f8913a",
+     "ai-ea1083b5158c",
+     "energy-d99c728a3c72"
+    ],
+    "rest": [
+     "u:b1f181e80256",
+     "u:9b780e5528de",
+     "u:f83b26de444d",
+     "u:ea4591aaee04",
+     "u:43c22bce363c",
+     "ai-eec310ea4128",
+     "ai-7ae26e80a279",
+     "u:c766ba0c02a2",
+     "ai-c7e84e49d474",
+     "energy-c08d8dcd4dfe",
+     "u:4ebb752045c8",
+     "ai-44e8f081ddee",
+     "physical_ai-0574150001be",
+     "u:d3aa11d5f12e",
+     "ai-17289e3c05d7"
+    ],
+    "per_user": [
+     "u:b1f181e80256",
+     "u:9b780e5528de",
+     "u:f83b26de444d",
+     "u:ea4591aaee04",
+     "u:43c22bce363c",
+     "u:c766ba0c02a2",
+     "u:4ebb752045c8",
+     "u:d3aa11d5f12e"
+    ],
+    "extra_packs": []
+   },
+   "at": "2026-11-27T19:21:04.319455Z"
+  },
+  {
+   "step": "end",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "used_input_tokens": 112516,
+    "used_output_tokens": 19530,
+    "used_searches": 11,
+    "budget_input_tokens": 300000
+   },
+   "at": "2026-11-27T19:21:04.319475Z"
+  }
+ ],
+ "prompts": {
+  "cos.plan": "80945a9226d5",
+  "cos.search_loop": "bc3dadd3bea0",
+  "cos.score": "eaef063ecec0",
+  "cos.extract_passages": "fd0f2356094c",
+  "cos.write_brief": "76eb7838a644",
+  "cos.claim_check": "4b0605c577a2"
+ }
+}

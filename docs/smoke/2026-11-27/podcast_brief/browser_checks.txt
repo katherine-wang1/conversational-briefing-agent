@@ -1,0 +1,14 @@
+  ok   Today screen ready after reload 
+  ok   phase playing 
+  ok   brief segments play in order with no decode errors ({"playing":2,"ended":1,"errs":0,"segIndex":1})
+  ok   Media Session metadata set ({"title":"Today's briefing","artist":"Your briefing","state":"playing"})
+  ok   currentTime advancing (9718 -> 165)
+  ok   WebSocket: hello sent, server READY then PLAYING_BRIEF (ws=ws://localhost:8000/ws/session/se_01m8f7c9cg5hdz99nccedxr8zq?token=dev)
+  ok   interrupt -> listening (interrupt->pause 0 ms)
+  ok   interrupt frame has segment_id + offset_ms ({"type":"interrupt","segment_id":"s002","offset_ms":265})
+  ok   utterance sent -> thinking/answering (thinking)
+  ok   answer audio starts (phase answering) (end-of-speech->audio: client 4490 ms, wall 4499 ms)
+  ok   tts_chunks received and played ({"chunks":4,"fmt":"wav","seqs":[1,2,3,4]})
+  ok   resume_brief received and brief playing again ([{"type":"resume_brief","segment_id":"s002"}])
+  ok   brief plays to the end -> open_floor; completed playback sent; server OPEN_FLOOR ({"endPh":"open_floor","completedFrames":24,"states":["READY","PLAYING_BRIEF","LISTENING","THINKING","SPEAKING_ANSWER","PLAYING_BRIEF","OPEN_FLOOR"]})
+  ok   End -> ended (rating sheet) 
