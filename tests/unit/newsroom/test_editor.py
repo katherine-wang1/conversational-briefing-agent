@@ -507,9 +507,11 @@ def calls(monkeypatch):
     return rec
 
 
-async def test_dispatch_default_is_classic(calls):
+async def test_dispatch_default_is_editor(calls):
+    """config/agent.yaml newsroom.impl is `editor` since 2026-11-27; `classic` stays selectable."""
     await newsroom.run_newsroom("ai", AT, [], None, {}, ExperimentFlags())
-    assert calls == ["classic"]
+    await newsroom.run_newsroom("ai", AT, [], None, {}, ExperimentFlags(newsroom_impl="classic"))
+    assert calls == ["editor", "classic"]
 
 
 async def test_dispatch_by_settings_flag_and_env(calls, monkeypatch):

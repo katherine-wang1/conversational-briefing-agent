@@ -61,7 +61,7 @@ worker:
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
 # Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
 newsroom:
-  impl: classic                 # classic (N2-N6 below) | editor (newsroom_editor below). Overrides, highest
+  impl: editor                  # classic (N2-N6 below) | editor (newsroom_editor below). Overrides, highest
                                 # first: experiment flag newsroom_impl, env NEWSROOM_IMPL, this key.
   window_hours: 24             # observations in (at - window, at] feed one run
   freshness_filter: true        # drop items published before the window; aggregator front pages exempt (false = pre-2026-11-26)
@@ -99,7 +99,8 @@ newsroom_editor:
   max_calls: 3
   max_stories: 40               # stories the editor returns per call (digest takes beat.digest_size)
   min_stories: 30               # asked-for minimum (Haiku returned 15-30 when only a maximum was given)
-  max_output_tokens: 10000
+  max_output_tokens: 32000       # Sonnet 5.5 with reasoning: room for reasoning tokens
+  prompt: newsroom.editor_v4    # prompt file (app/agents/prompts/); chosen 2026-11-27, docs/smoke/2026-11-27/editor_multiday
   snippet_chars: 160
   merge_title_threshold: 88     # headline similarity that merges stories across calls
   identity_title_threshold: 88  # title similarity that matches a story to a prior one (no shared URL)

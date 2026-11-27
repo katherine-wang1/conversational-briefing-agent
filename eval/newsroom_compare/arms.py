@@ -26,20 +26,31 @@ from eval.newsroom_compare.common import (
 
 ARMS = ["classic", "classic_all", "editor", "editor_search", "claude_agent", "eventregistry"]
 # Editor variants (not in "all"): same code and observations, only the editor model and/or prompt
-# change, all through OpenRouter. `editor` itself uses config/models.yaml (dev_default: Haiku 5.5).
+# change, all through OpenRouter. `editor` itself follows config: Sonnet 5.5 with the v4 prompt since
+# 2026-11-27 (Haiku 5.5 with v2 before). The Haiku variants pin Haiku, so earlier results stay comparable.
+HAIKU_EDITOR = {
+    "provider": "openrouter",
+    "model": "anthropic/claude-haiku-5.5",
+    "params": {"reasoning": {"effort": "none"}},
+    "max_output_tokens": 10000,
+}
 SONNET_EDITOR = {
     "provider": "openrouter",
     "model": "anthropic/claude-sonnet-5.5",
     "params": {"reasoning": {"effort": "medium"}},
+    "max_output_tokens": 32000,  # room for reasoning tokens
 }
 EDITOR_VARIANTS: dict[str, dict] = {
-    "editor_v3": {"prompt": "newsroom.editor_v3"},
-    "editor_sonnet": {"model": SONNET_EDITOR},
+    "editor_haiku_v2": {"model": HAIKU_EDITOR, "prompt": "newsroom.editor"},  # the pre-2026-11-27 `editor`
+    "editor_v3": {"model": HAIKU_EDITOR, "prompt": "newsroom.editor_v3"},
+    "editor_sonnet": {"model": SONNET_EDITOR, "prompt": "newsroom.editor"},
     "editor_sonnet_v3": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v3"},
-    "editor_v4": {"prompt": "newsroom.editor_v4"},
+    "editor_v4": {"model": HAIKU_EDITOR, "prompt": "newsroom.editor_v4"},
     "editor_sonnet_v4": {"model": SONNET_EDITOR, "prompt": "newsroom.editor_v4"},
     # Gap-fill search through a plain search API instead of Anthropic's web search (SEARCH_API_KEY).
-    "editor_v3_search_tavily": {"prompt": "newsroom.editor_v3", "gap_search": "tavily"},
+    "editor_v3_search_tavily": {
+        "model": HAIKU_EDITOR, "prompt": "newsroom.editor_v3", "gap_search": "tavily"
+    },
 }
 NEWSROOM_ARMS = ("classic", "classic_all", "editor", "editor_search", *EDITOR_VARIANTS)
 TOP_K = 30
@@ -229,7 +240,7 @@ async def _run_newsroom_arm(arm: str, beat: str, day: str, ledger: Path) -> tupl
     if "model" in variant:
         m = variant["model"]
         client = client.bind(m["provider"], m["model"], m.get("params"))
-        overrides["max_output_tokens"] = 32000  # room for reasoning tokens
+        overrides["max_output_tokens"] = m["max_output_tokens"]
         notes["editor_model"] = m["model"]
     if "gap_search" in variant:
         from app.tools import build_tools

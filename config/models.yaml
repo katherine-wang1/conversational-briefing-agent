@@ -8,7 +8,7 @@ dev_default: {provider: openrouter, model: "anthropic/claude-haiku-5.5", params:
 roles:
   newsroom.cluster_tiebreak: {provider: openrouter, model: TBD}
   newsroom.score: {provider: openrouter, model: TBD}
-  newsroom.editor: {provider: openrouter, model: TBD}   # editor newsroom (newsroom.impl: editor)
+  newsroom.editor: {provider: openrouter, model: "anthropic/claude-sonnet-5.5", params: {reasoning: {effort: medium}}}   # chosen 2026-11-27 (docs/smoke/2026-11-27/editor_multiday)
   cos.plan: {provider: openrouter, model: TBD}
   cos.search_loop: {provider: openrouter, model: TBD}
   cos.score: {provider: openrouter, model: TBD}

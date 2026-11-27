@@ -56,6 +56,12 @@ retrieve from that store; live search only fills interests the store doesn't cov
   behind our `search` tool as a live backend. A provider-run agent is a comparison arm only.
 - **Keys stay optional**, with a fallback, so the README quick-start keeps working for graders.
 - The evaluation hasn't started, so the newsroom can still change before the research config is frozen.
+- **2026-11-27: the editor newsroom is the default** (`newsroom.impl: editor`), with Sonnet 5.5 through
+  OpenRouter (reasoning effort medium) and the v4 prompt (`newsroom.editor_v4`: one event per story,
+  general importance criteria). Evidence: `docs/smoke/2026-11-27/editor_multiday/results.md`. Haiku
+  returned short lists in 5 of 24 runs and bundled more; Sonnet costs about $0.09 per beat. Unrated so
+  far: the blind pool should still confirm it. `classic` stays selectable (`NEWSROOM_IMPL=classic` or the
+  `newsroom_impl` experiment flag) for rollback and as a comparison arm.
 
 ### Comparison arms
 

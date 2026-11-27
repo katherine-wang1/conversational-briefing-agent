@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 import random
 
-from app.agents.newsroom import run_newsroom
+from app.agents.newsroom import run_classic_newsroom as run_newsroom  # these test the classic pipeline
 from app.agents.newsroom.llm_steps import split_quota
 from app.contracts.llm import ChatRequest, ChatResponse
 

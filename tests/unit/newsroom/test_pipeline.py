@@ -4,7 +4,7 @@ import random
 
 import pytest
 
-from app.agents.newsroom import run_newsroom
+from app.agents.newsroom import run_classic_newsroom as run_newsroom  # these test the classic pipeline
 from app.agents.newsroom.llm_steps import wrap_untrusted
 from app.config.loader import ExperimentFlags
 from app.contracts.common import TokenBudget
