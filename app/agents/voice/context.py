@@ -86,8 +86,12 @@ def render_note(note: StoryNote) -> str:
     """get_story result when a shared note exists: cited facts plus context, wrapped as untrusted
     (it was written from fetched web text). Fact cite ids are `note:<story_id>:<n>`."""
     out = [f"Headline: {note.headline}"]
+    snippet = {src.url: src.outlet or "the outlet" for src in note.sources if src.status == "snippet"}
     for i, f in enumerate(note.facts):
-        out.append(f"- fact: {f.text} [p:{note_cite_id(note.story_id, i)}]")
+        tag = ""
+        if f.source_urls and all(u in snippet for u in f.source_urls):
+            tag = f" (from {snippet[f.source_urls[0]]}'s own summary)"
+        out.append(f"- fact: {f.text}{tag} [p:{note_cite_id(note.story_id, i)}]")
     if note.entities:
         out.append("Involved: " + ", ".join(note.entities[:12]))
     if note.context:
@@ -96,7 +100,12 @@ def render_note(note: StoryNote) -> str:
         out.append(f"Why it matters: {note.why_it_matters}")
     for q in note.open_questions[:5]:
         out.append(f"- not known yet: {q}")
-    if note.status != "ok":
+    if note.status == "summary":
+        out.append(
+            "(summary-level note: the articles could not be read; these facts are only the outlets' own"
+            " headlines and summaries. Attribute them and add no detail.)"
+        )
+    elif note.status != "ok":
         out.append(f"(note status: {note.status}; some sources could not be read)")
     return wrap_untrusted("\n".join(out), tool="get_story", id=note.story_id)
 
@@ -142,6 +151,7 @@ def render_corpus(packs: list[SourcePack]) -> str:
                     id=ps.passage_id,
                     url=ps.url,
                     source=ps.source,
+                    kind=ps.kind,
                 )
             )
     return "\n".join(out)

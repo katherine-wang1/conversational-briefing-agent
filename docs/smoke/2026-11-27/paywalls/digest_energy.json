@@ -1,0 +1,1272 @@
+{
+ "digest_id": "energy-20261127T0636Z-033b2e9f",
+ "run_id": "paywalls-energy",
+ "beat": "energy",
+ "at": "2026-11-27T06:36:58.401788Z",
+ "version": "74c6441c235ba9ee",
+ "entries": [
+  {
+   "story_id": "energy-9fa7f405d5db",
+   "headline": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+   "summary": "FT reports the tie-up faces fierce opposition as anger over soaring electricity bills spills into Wall Street dealmaking.",
+   "subtopics": [
+    "power-markets",
+    "climatetech-funding"
+   ],
+   "entities": [
+    "NextEra",
+    "Dominion"
+   ],
+   "importance": 85,
+   "evidence": [
+    "FT report",
+    "major utility M&A"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+     "snippet": "Tie-up faces fierce opposition as anger over soaring electricity bills spills into Wall Street dealmaking",
+     "published_at": "2026-11-26T11:00:06Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-96a0cbbd7b50",
+   "headline": "Senate passes permitting bill that would boost clean and fossil energy",
+   "summary": "The Senate approved a permitting bill that would speed both clean and fossil projects, and coverage examines its data center provisions and Democrats' 2027 prospects.",
+   "subtopics": [
+    "energy-policy"
+   ],
+   "entities": [
+    "US Senate"
+   ],
+   "importance": 84,
+   "evidence": [
+    "Canary Media #10",
+    "Heatmap",
+    "Mongabay"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 47.92,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 3,
+    "best_tier": 1,
+    "frontpage_hits": 2,
+    "best_rank": 1,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "https://canarymedia.com/articles/land-use/tribal-rights-energy-permitting-debate",
+    "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+    "https://heatmap.news/politics/baaja-data-centers",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNU53NnNVbjlTREM4a3pmSjdyVXp0OW5xXy13a2VuTlMyWmZxZDN6N1BsbUdRVEcwV1BCdmRheHJhRzVPV0tVRFZmSlNCVnJFcksxcHM1OUVHZGZES0NCc203VS14Y1NyaXJodXlIaFlmczdrLWJNSmdINVJRSGN5SnFEUzItbHJCVUpIQWFiZkZydE1sQkpMRUs0aUtJMWRuZmk2dzZsa1ZGaG15VkRnaG9ZRFZRMEtS?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+     "outlet": "canarymedia.com",
+     "title": "Senate OKs permitting bill that would boost clean and dirty energy",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://canarymedia.com/articles/land-use/tribal-rights-energy-permitting-debate",
+     "outlet": "canarymedia.com",
+     "title": "Why tribal rights have become key to the energy permitting debate",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+     "outlet": "heatmap.news",
+     "title": "Will Democrats Really Take Up Permitting Reform in 2027?",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://heatmap.news/politics/baaja-data-centers",
+     "outlet": "heatmap.news",
+     "title": "What the Permitting Bill Says About Data Centers",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNU53NnNVbjlTREM4a3pmSjdyVXp0OW5xXy13a2VuTlMyWmZxZDN6N1BsbUdRVEcwV1BCdmRheHJhRzVPV0tVRFZmSlNCVnJFcksxcHM1OUVHZGZES0NCc203VS14Y1NyaXJodXlIaFlmczdrLWJNSmdINVJRSGN5SnFEUzItbHJCVUpIQWFiZkZydE1sQkpMRUs0aUtJMWRuZmk2dzZsa1ZGaG15VkRnaG9ZRFZRMEtS?oc=5",
+     "outlet": "news - Mongabay",
+     "title": "US bill to speed up clean energy projects could also fast-track fossil fuels",
+     "snippet": "",
+     "published_at": "2026-11-26T18:04:20Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-4fba1fb1979b",
+   "headline": "PJM proposes plan to regulators to cut wait times for data center power",
+   "summary": "The biggest US power grid operator has proposed a plan to speed data center interconnection, and a separate piece describes an 'interventionist' regulatory pivot to speed data centers.",
+   "subtopics": [
+    "grid-transmission",
+    "data-center-buildout"
+   ],
+   "entities": [
+    "PJM"
+   ],
+   "importance": 80,
+   "evidence": [
+    "EnergyNow x2"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 10.25,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUnd3WmlXcVpnQ1UtYklyTGl4V3pZMVV4cjRXLW5VcnhWcjFTZDBfb1FDZl9qYUp6U19JV0lSb0Nac0YyYXNmUFVMaXNPUlU2ZmFUSjJsLVBYWjRLTS1PaW9XZ3h4Yng3YTM4ZW5kd0xKcnM1ZWdmbzItVzhHcWRiVUNpT2NncTZ3TWFqWTRzZ2hLSFkxcGJrag?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSmstaklUNVEtYkNIdlVhUVg2MTljX0VEamtnU25pMGgyUGxuQTBvOVNkVVdSdHVoQktua2pHQlFNdDdpR18xMWpKUUctREV4YVp0d3JsSi1LZXl3NVBmbnNFcGpMUmpNNEV4RmVpUVNYWEU0NEZURUt0NmpQaHpqYXI3QzhSNnZYRnBrV0ROV2lxbmtBNVNOZDEtZHd5d21pMWZXSG5HQ0pDNXUwNGJFVzF0Um5GdGNTeHBhLQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUnd3WmlXcVpnQ1UtYklyTGl4V3pZMVV4cjRXLW5VcnhWcjFTZDBfb1FDZl9qYUp6U19JV0lSb0Nac0YyYXNmUFVMaXNPUlU2ZmFUSjJsLVBYWjRLTS1PaW9XZ3h4Yng3YTM4ZW5kd0xKcnM1ZWdmbzItVzhHcWRiVUNpT2NncTZ3TWFqWTRzZ2hLSFkxcGJrag?oc=5",
+     "outlet": "EnergyNow",
+     "title": "US Regulator Makes ‘Interventionist’ Pivot to Speed Data Centers",
+     "snippet": "",
+     "published_at": "2026-11-26T16:59:46Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSmstaklUNVEtYkNIdlVhUVg2MTljX0VEamtnU25pMGgyUGxuQTBvOVNkVVdSdHVoQktua2pHQlFNdDdpR18xMWpKUUctREV4YVp0d3JsSi1LZXl3NVBmbnNFcGpMUmpNNEV4RmVpUVNYWEU0NEZURUt0NmpQaHpqYXI3QzhSNnZYRnBrV0ROV2lxbmtBNVNOZDEtZHd5d21pMWZXSG5HQ0pDNXUwNGJFVzF0Um5GdGNTeHBhLQ?oc=5",
+     "outlet": "EnergyNow",
+     "title": "Biggest US Power Grid Proposes Plan to Regulators to Cut Wait Times for Data Center Power",
+     "snippet": "",
+     "published_at": "2026-11-26T18:10:16Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-c7346b489f79",
+   "headline": "UK grid operator makes record calls for extra power as cold snap strains supply",
+   "summary": "Britain's grid operator made a record number of calls for extra power, driven by cold weather and wind constraints in Scotland; Bloomberg reports a third day of strain.",
+   "subtopics": [
+    "grid-transmission",
+    "power-markets"
+   ],
+   "entities": [
+    "National Grid ESO"
+   ],
+   "importance": 74,
+   "evidence": [
+    "FT",
+    "Bloomberg"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 25.5,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 2,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/21a1331c-c201-4333-b312-ab87b7fd994f?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQX2ZfNXdXdHh2Z0pJLUp1alQxbDFiUTFodGZTNWkzYVZUV2ItT2twZ3Q2b0sxOWJ1RkNueHlKQmQ5OUxibzE5OGhSSWtPV1hDcUtGTG82Q1NVRklRYVIxRFdjSm9mbUJmQ3Q3RU9YVFdtOEtQeU1mZzQ4R3RseXJhOHJlNF80M01JQUhCRVJOS3dCT1VSLUR1NjNLZHJFTDhnbFRacUJRRVExbVVJNXZuRXBwdGVGYWZSbFo2MkF0X3pNUHFHWHlBMVc1X3ZaRmxXcUE?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb0NGOHVKakF2RnNCZ0o1QzQ2WHdqM2xRUGdTQnJ3bWJ6N2hXN09TOExHbzQzcUNWYjBKRVU1UWp1dE1yTi1fdG9mb05aVVF5SnJ3ZDJGRkZScEMyZVl2MkNSZXVYRElKTTlfZE1meW1wa0JWLURUVXc1ajhVeU5EWVM3R0hlRXNaazkyNHVnUkVkOEVEcFU1TjFtN1RpUjVwUGhxOGdWWi1kUVVLMnEyY0Jha2F4Zw?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://ft.com/content/21a1331c-c201-4333-b312-ab87b7fd994f?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "Britain’s electricity grid operator makes record number of calls for extra power",
+     "snippet": "Issue driven by colder weather and constraints in getting electricity from wind farms in Scotland to consumers in England",
+     "published_at": "2026-11-26T18:36:59Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQX2ZfNXdXdHh2Z0pJLUp1alQxbDFiUTFodGZTNWkzYVZUV2ItT2twZ3Q2b0sxOWJ1RkNueHlKQmQ5OUxibzE5OGhSSWtPV1hDcUtGTG82Q1NVRklRYVIxRFdjSm9mbUJmQ3Q3RU9YVFdtOEtQeU1mZzQ4R3RseXJhOHJlNF80M01JQUhCRVJOS3dCT1VSLUR1NjNLZHJFTDhnbFRacUJRRVExbVVJNXZuRXBwdGVGYWZSbFo2MkF0X3pNUHFHWHlBMVc1X3ZaRmxXcUE?oc=5",
+     "outlet": "Bloomberg",
+     "title": "UK Faces Third Day of Strained Electricity Supplies on Cold Snap",
+     "snippet": "",
+     "published_at": "2026-11-26T07:05:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-483dfc504ecf",
+   "headline": "JERA in talks with Anthropic, Meta to build data centres beside its power plants",
+   "summary": "Japan's JERA is reportedly planning AI data centers next to Tokyo-area power plants and courting tech firms for direct power supply.",
+   "subtopics": [
+    "data-center-buildout"
+   ],
+   "entities": [
+    "JERA",
+    "Anthropic",
+    "Meta",
+    "Nikkei"
+   ],
+   "importance": 72,
+   "evidence": [
+    "Reuters",
+    "Nikkei Asia"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 35.0,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 4,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xMWN0T05YMVlyNGxRUE5jR2QwS2Rkb1JKYlhTU2M4dXFoMXBIWllxNVhHd0JqcUI2VnFqVlVvUVNqcE9sM0t5WjB1Q0VBZnRmTGRORmp3UVRRS2VmQzg2MUQya25pczAxRWFraGU2cXBZWjRjdEE?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUTRHSm0wQmRiS1I2VjZCcjVnVkN5RmVRVFFlaVI3d2h0b0dRS21OUWNSdF9KbFZxOFhXNHJ5QUZqSnAxSnZIWXNuMm4zMGtvS0Z2YjdZbXFWWEN2bkdHZ21UNjhEUnJmOGhmcE9STzYwSm9pLVJwdnpIaDloSzdLWlR3?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMG04VjdqTnc0bmZjLUw4V1dGTUpoNkljMVZwc2pHdGIySFN5OXN3NGhuaWlEOEZqWWxGTkRhTXZISTVlVjlYdDFqRGo0SUdiUUF4MzZtOFJPU1V1bmROM2JVZXRGSEN1Y2EzZ0wxMzlodThVSlpCSG01Tzk3M0k3T2s3ZC1sb29vbE16eE5CalM3ZjNGM3FYWVZHSlc3WHN0Q2xhbGhjZ1NTbHVz?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZTV4V1Uwcm12UjRESWc2c1RLT0lrS2p3d29wSW1SRWRDLUJySUV4eG9ZMW4zd3g0OEtCdkw5RkJkVUVVZFdUdDZmcGZXb0hEQVpTSE1XVHpOdzB3UnZVWVVYZUw5dHJuNkZkU2NKYlBtSXUyVnlWTEtxaUxEMmNPN2l3SWVpV1lOaUs5amZLU0VKZ0NOeHV4ajdlYzNRajExcWpyR01ORTFoaVpfWU5ablZnZWVsNVM3SHpKVF84cmdCUXU5a3NoUUFYRHU5dw?oc=5",
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xMWN0T05YMVlyNGxRUE5jR2QwS2Rkb1JKYlhTU2M4dXFoMXBIWllxNVhHd0JqcUI2VnFqVlVvUVNqcE9sM0t5WjB1Q0VBZnRmTGRORmp3UVRRS2VmQzg2MUQya25pczAxRWFraGU2cXBZWjRjdEE?oc=5",
+     "outlet": "BigGo Finance",
+     "title": "JERA to Build AI Data Centers Next to Tokyo-Area Power Plants, Courting Anthropic and Meta for Direct Power Supply",
+     "snippet": "",
+     "published_at": "2026-11-27T04:35:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUTRHSm0wQmRiS1I2VjZCcjVnVkN5RmVRVFFlaVI3d2h0b0dRS21OUWNSdF9KbFZxOFhXNHJ5QUZqSnAxSnZIWXNuMm4zMGtvS0Z2YjdZbXFWWEN2bkdHZ21UNjhEUnJmOGhmcE9STzYwSm9pLVJwdnpIaDloSzdLWlR3?oc=5",
+     "outlet": "Crypto Briefing",
+     "title": "JERA plans AI data centers beside its power plants with Dell and RHAELM",
+     "snippet": "",
+     "published_at": "2026-11-26T22:01:05Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMG04VjdqTnc0bmZjLUw4V1dGTUpoNkljMVZwc2pHdGIySFN5OXN3NGhuaWlEOEZqWWxGTkRhTXZISTVlVjlYdDFqRGo0SUdiUUF4MzZtOFJPU1V1bmROM2JVZXRGSEN1Y2EzZ0wxMzlodThVSlpCSG01Tzk3M0k3T2s3ZC1sb29vbE16eE5CalM3ZjNGM3FYWVZHSlc3WHN0Q2xhbGhjZ1NTbHVz?oc=5",
+     "outlet": "Crypto Briefing",
+     "title": "JERA in talks with Amazon, Microsoft, Google for AI data centers near power plants",
+     "snippet": "",
+     "published_at": "2026-11-26T22:00:10Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZTV4V1Uwcm12UjRESWc2c1RLT0lrS2p3d29wSW1SRWRDLUJySUV4eG9ZMW4zd3g0OEtCdkw5RkJkVUVVZFdUdDZmcGZXb0hEQVpTSE1XVHpOdzB3UnZVWVVYZUw5dHJuNkZkU2NKYlBtSXUyVnlWTEtxaUxEMmNPN2l3SWVpV1lOaUs5amZLU0VKZ0NOeHV4ajdlYzNRajExcWpyR01ORTFoaVpfWU5ablZnZWVsNVM3SHpKVF84cmdCUXU5a3NoUUFYRHU5dw?oc=5",
+     "outlet": "Reuters",
+     "title": "Japan's JERA enters talks with Anthropic, Meta to build data centres, Nikkei reports",
+     "snippet": "",
+     "published_at": "2026-11-26T22:47:52Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5",
+     "outlet": "Nikkei Asia",
+     "title": "Japan's JERA aims to build Anthropic, Meta data centers near power plants",
+     "snippet": "",
+     "published_at": "2026-11-26T21:51:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-a91b415a343a",
+   "headline": "New US chip export rule halts Nvidia shipments to Southeast Asia and slows data center investment",
+   "summary": "Nvidia reportedly paused server shipments to Malaysia, Singapore, Thailand and Indonesia after a Commerce rule; Fitch says curbs will slow Asia data-center investment and Singapore is talking to the US.",
+   "subtopics": [
+    "data-center-buildout",
+    "energy-policy"
+   ],
+   "entities": [
+    "Nvidia",
+    "Fitch",
+    "Commerce Department"
+   ],
+   "importance": 72,
+   "evidence": [
+    "Reuters",
+    "Bloomberg",
+    "DCD"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 35.0,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 4,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcF9XSks4a3prSHMwSUlVaWJydXp0ZTlZREdGNXFGS3JyeFBibjNCMUFiR0lhQi1zME9pcE5Sdm9YbWV3X1NWaUZEbk9MMmRFbXFYRkUtV01WSE9mRDlSUGk5Y1pYXzY5Wmh1VDFJcmJiOUM5UnRqSTRudkNzUVFkWHNKcTdodGJObGE0Y01KN0dEVzlJZHc?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOTF6RUh5d1BiSVM4cDdTQUxicmQ2alpjS2l0V2hQWWUwbGlTalB3dlByQXhkV0hRd0FsSnduSkVHY0J1VFByMFFvWTN6SV9nT1NNYUloME9TLXV1d05Yb3dGSi1sQ19sRTg0eXJhemxPM2xIYWpwaDduTlFhd2daVWpnOWt4SmJEenU3ZkRnd0Y5MV9lN0tQS1FBazYwb21GSGJpNWswd1M2WFRza1Q3cC1R?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZFVpdE9oSXNXbl90bmNha3ZhcE1zcUwwdWVhX2NrV0g1b1VTeHZ0LWZxNF9mX0pFbmNFU2Q1Mk45c04wdlZvNS1NSUhnU0Z6TGZOTXdnS3FoTnNJVWYtNy1VUk1JZmJKRlcwaWY0UGZ0alFwN0wzUm9sSld4MzduVk9yZEJDNHlYSXpQd1FuamZoR3YyUjVwNHdkN3hsclJ1bDNXV2FBcnRndzFmeVJWOWx5RzVBNGM?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJWFVtc1BvNXp5TFMzbWtqVTdzc3JVM3pmY1hkR09YMi1WV3k3TzZ4VzFDQUpkcGJHVEZ2R0NqVnRNNmZsTThQZ0V3SlNzUmY1dUFURGtVckNOTXVQamlqSnVxTG5NVy1UVVR1dnlaNFE1MTluNFdUOTZzSHg2eHYzYTF1emwxMjZKUVIxcWhqYzhxTUdYZ0VZU3BsV1UxRHp3RTZnc2lyS2U5SDAydW5vcjVqaFFz?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report",
+     "outlet": "datacenterdynamics.com",
+     "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia in wake of new Dep’t of Commerce export rule - report",
+     "snippet": "Unclear how long the pause will last for",
+     "published_at": "2026-11-26T14:17:50Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcF9XSks4a3prSHMwSUlVaWJydXp0ZTlZREdGNXFGS3JyeFBibjNCMUFiR0lhQi1zME9pcE5Sdm9YbWV3X1NWaUZEbk9MMmRFbXFYRkUtV01WSE9mRDlSUGk5Y1pYXzY5Wmh1VDFJcmJiOUM5UnRqSTRudkNzUVFkWHNKcTdodGJObGE0Y01KN0dEVzlJZHc?oc=5",
+     "outlet": "WHBL News",
+     "title": "US chip curbs will slow Asia data-center investment, Fitch says",
+     "snippet": "",
+     "published_at": "2026-11-26T11:56:25Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOTF6RUh5d1BiSVM4cDdTQUxicmQ2alpjS2l0V2hQWWUwbGlTalB3dlByQXhkV0hRd0FsSnduSkVHY0J1VFByMFFvWTN6SV9nT1NNYUloME9TLXV1d05Yb3dGSi1sQ19sRTg0eXJhemxPM2xIYWpwaDduTlFhd2daVWpnOWt4SmJEenU3ZkRnd0Y5MV9lN0tQS1FBazYwb21GSGJpNWswd1M2WFRza1Q3cC1R?oc=5",
+     "outlet": "Bloomberg",
+     "title": "Singapore Talking to US to Keep AI Chip Access, Deputy PM Says",
+     "snippet": "",
+     "published_at": "2026-11-27T05:00:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZFVpdE9oSXNXbl90bmNha3ZhcE1zcUwwdWVhX2NrV0g1b1VTeHZ0LWZxNF9mX0pFbmNFU2Q1Mk45c04wdlZvNS1NSUhnU0Z6TGZOTXdnS3FoTnNJVWYtNy1VUk1JZmJKRlcwaWY0UGZ0alFwN0wzUm9sSld4MzduVk9yZEJDNHlYSXpQd1FuamZoR3YyUjVwNHdkN3hsclJ1bDNXV2FBcnRndzFmeVJWOWx5RzVBNGM?oc=5",
+     "outlet": "Bloomberg",
+     "title": "US Chip Curbs Cause Billions in Deals to Grind to a Halt",
+     "snippet": "",
+     "published_at": "2026-11-26T10:49:41Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-bda410da229d",
+   "headline": "Texas resumes data centre permitting before Democrats take over",
+   "summary": "Texas resumed permitting before incoming governor Gina Hinojosa, who pledged to rein in new projects, takes office.",
+   "subtopics": [
+    "data-center-buildout",
+    "energy-policy"
+   ],
+   "entities": [
+    "Gina Hinojosa",
+    "Texas"
+   ],
+   "importance": 70,
+   "evidence": [
+    "FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "Texas resumes data centre permitting before Democrats take over",
+     "snippet": "Incoming governor Gina Hinojosa pledged to rein in construction of new projects during her campaign",
+     "published_at": "2026-11-26T12:00:10Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-85f90c620dab",
+   "headline": "Ohio approves gas plant for data centers despite local voter backlash",
+   "summary": "Ohio regulators OK'd a gas plant to serve data centers over local opposition.",
+   "subtopics": [
+    "data-center-buildout",
+    "energy-policy"
+   ],
+   "entities": [
+    "Ohio"
+   ],
+   "importance": 68,
+   "evidence": [
+    "Canary Media #2"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 31.42,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 2,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://canarymedia.com/articles/data-centers/ohio-oks-gas-plant-for-data-centers"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://canarymedia.com/articles/data-centers/ohio-oks-gas-plant-for-data-centers",
+     "outlet": "canarymedia.com",
+     "title": "Ohio OKs gas plant for data centers despite local voter backlash",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "energy-611ad9d66099",
+   "headline": "Google bets on superhot geothermal to power Oregon data centers",
+   "summary": "Google is backing superhot geothermal for its Oregon data centers.",
+   "subtopics": [
+    "data-center-buildout"
+   ],
+   "entities": [
+    "Google"
+   ],
+   "importance": 64,
+   "evidence": [
+    "Canary Media #19"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 25.26,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 19,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://canarymedia.com/articles/geothermal/google-superhot-geothermal-oregon-data-centers"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://canarymedia.com/articles/geothermal/google-superhot-geothermal-oregon-data-centers",
+     "outlet": "canarymedia.com",
+     "title": "Google bets on superhot geothermal to power Oregon data centers",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "energy-acbaaebfbd87",
+   "headline": "Nuclear plants to stay open longer as new builds suffer delays and rising costs",
+   "summary": "Governments are extending existing plants' lives to meet demand as new builds slip.",
+   "subtopics": [
+    "nuclear-fusion"
+   ],
+   "entities": [],
+   "importance": 60,
+   "evidence": [
+    "FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/ea0f3201-34f4-4cd4-84f3-6510bcc8b313?syn-25a6b1a6=1"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://ft.com/content/ea0f3201-34f4-4cd4-84f3-6510bcc8b313?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "Nuclear plants to stay open longer as new builds hit by delays and rising costs",
+     "snippet": "Governments around the world are increasingly looking at extending the life of existing power stations in a bid to meet rising demand for electricity, raising the prospect of 100-year-old reactors",
+     "published_at": "2026-11-27T05:00:04Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-4419e734aaf6",
+   "headline": "Taiwan votes on nuclear power as AI boom revives debate",
+   "summary": "A national referendum on nuclear power is set for tomorrow.",
+   "subtopics": [
+    "nuclear-fusion",
+    "energy-policy"
+   ],
+   "entities": [
+    "Taiwan"
+   ],
+   "importance": 60,
+   "evidence": [
+    "SCMP",
+    "Taipei Times"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jb1hjWmNVMG1fZ2dHVndWaG4zWVptdTJ4bUdsQzVudG9qM05ESUxFMFpLa3hobVpUelI2LWVJR1VhaklHbE9pRzM3Qi1vQTVDZTZvNkRDdS1iOTB0ZVVzM0oxN2lmVTlRSENCWA?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE9zZ05mUXdWNVFfbm5vT0dDWGdtYkxrTW1acWphS1JjckdHSWJHc2czZnpta2FsbmFnQkRNeFVlMFVlRjl5OUM1UllYb3c3cXVpeHZ3R0FncElkN1NUNXlSRWh1UmRuQmV5Z3Znb1lMZkhJU292M3M1dkVn?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxOam1SMktVZ0xRNWt2M0Y0b1phM0Fid1dQcVlySVJ0LTZuNjJ5bE5YTTBKWlpwVHRxYTViZVVrN2E0aWozM1JCSW1BT3hnaWtPOFNSMVg4bHNEdHVKV1Nzb3hEQzdnWm5tMUlWRTdqNEFBSFRhc3BISGJBMzZuSm03OTFLdjRkanNsT01mWUpENC1RdjIwVkpVc2M2YkJZR052UE5OSC1HSksxaHhDZThrdWxnNmd4dVhQejA0LUdSMEx5UGlTX19RcjR30gHKAUFVX3lxTE5qbVIyS1VnTFE1a3YzRjRvWmEzQWJ3V1BxWXJJUnQtNm42MnlsTlhNMEpaWnBUdHFhNWJlVWs3YTRpajMzUkJJbUFPeGdpa084U1IxWDhsc0R0dUpXU3NveERDN2dabm0xSVZFN2o0QUFIVGFzcEhIYkEzNm5KbTc5MUt2NGRqc2xPTWZZSkQ0LVF2MjBWSlVzYzZiQllHTnZQTk5ILUdKSzFoeENlOGt1bGc2Z3h1WFB6MDQtR1IwTHlQaVNfX1FyNHc?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jb1hjWmNVMG1fZ2dHVndWaG4zWVptdTJ4bUdsQzVudG9qM05ESUxFMFpLa3hobVpUelI2LWVJR1VhaklHbE9pRzM3Qi1vQTVDZTZvNkRDdS1iOTB0ZVVzM0oxN2lmVTlRSENCWA?oc=5",
+     "outlet": "뉴스웍스",
+     "title": "Taiwan, a country without nuclear power plants...National referendum on pros and cons tomorrow",
+     "snippet": "",
+     "published_at": "2026-11-27T03:42:49Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9zZ05mUXdWNVFfbm5vT0dDWGdtYkxrTW1acWphS1JjckdHSWJHc2czZnpta2FsbmFnQkRNeFVlMFVlRjl5OUM1UllYb3c3cXVpeHZ3R0FncElkN1NUNXlSRWh1UmRuQmV5Z3Znb1lMZkhJU292M3M1dkVn?oc=5",
+     "outlet": "Taipei Times",
+     "title": "2026 Elections: Groups urge public to reject nuclear power in vote",
+     "snippet": "",
+     "published_at": "2026-11-26T16:00:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOam1SMktVZ0xRNWt2M0Y0b1phM0Fid1dQcVlySVJ0LTZuNjJ5bE5YTTBKWlpwVHRxYTViZVVrN2E0aWozM1JCSW1BT3hnaWtPOFNSMVg4bHNEdHVKV1Nzb3hEQzdnWm5tMUlWRTdqNEFBSFRhc3BISGJBMzZuSm03OTFLdjRkanNsT01mWUpENC1RdjIwVkpVc2M2YkJZR052UE5OSC1HSksxaHhDZThrdWxnNmd4dVhQejA0LUdSMEx5UGlTX19RcjR30gHKAUFVX3lxTE5qbVIyS1VnTFE1a3YzRjRvWmEzQWJ3V1BxWXJJUnQtNm42MnlsTlhNMEpaWnBUdHFhNWJlVWs3YTRpajMzUkJJbUFPeGdpa084U1IxWDhsc0R0dUpXU3NveERDN2dabm0xSVZFN2o0QUFIVGFzcEhIYkEzNm5KbTc5MUt2NGRqc2xPTWZZSkQ0LVF2MjBWSlVzYzZiQllHTnZQTk5ILUdKSzFoeENlOGt1bGc2Z3h1WFB6MDQtR1IwTHlQaVNfX1FyNHc?oc=5",
+     "outlet": "South China Morning Post",
+     "title": "Taiwan’s AI boom thrusts nuclear power back onto the ballot",
+     "snippet": "",
+     "published_at": "2026-11-27T02:59:14Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-f10218c242ed",
+   "headline": "IAEA working with Russia, Ukraine on ceasefire to repair Zaporizhzhia power link",
+   "summary": "IAEA seeks a local ceasefire to repair the plant's power line.",
+   "subtopics": [
+    "nuclear-fusion"
+   ],
+   "entities": [
+    "IAEA",
+    "Zaporizhzhia"
+   ],
+   "importance": 58,
+   "evidence": [
+    "Reuters"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQXlld0FmMFoxdUVjNlhmNURVMmZwLXJNcXZrVkhEQWxOLS14ajJFb2VQZzBOOUZKM1Z1VGwzLURERG9lUWdGczh0bTZGTGJqdC00Nk9tYjZLR21iN1ZRbEtmTHhnRFAzV3lYRzVRN2txb3h0TUxoeENQbmNTeHlmN1AtNnBnTE1rYTRnYmxxTXNBUkh1WTdZVHpBN3h2XzNYMXlUaWVLRmlOR051bTIwbE9BWVhJRjRHSWxVd0pXQy1tdnc?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQXlld0FmMFoxdUVjNlhmNURVMmZwLXJNcXZrVkhEQWxOLS14ajJFb2VQZzBOOUZKM1Z1VGwzLURERG9lUWdGczh0bTZGTGJqdC00Nk9tYjZLR21iN1ZRbEtmTHhnRFAzV3lYRzVRN2txb3h0TUxoeENQbmNTeHlmN1AtNnBnTE1rYTRnYmxxTXNBUkh1WTdZVHpBN3h2XzNYMXlUaWVLRmlOR051bTIwbE9BWVhJRjRHSWxVd0pXQy1tdnc?oc=5",
+     "outlet": "Reuters",
+     "title": "IAEA working with Russia, Ukraine on ceasefire to repair power link at Zaporizhzhia nuclear plant",
+     "snippet": "",
+     "published_at": "2026-11-27T00:29:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-546c927cee4b",
+   "headline": "Japan's METI awards Kyoto Fusioneering-led consortium up to JPY 23.3bn for tokamak demonstration",
+   "summary": "METI funding backs a tokamak fusion power demonstration.",
+   "subtopics": [
+    "nuclear-fusion"
+   ],
+   "entities": [
+    "METI",
+    "Kyoto Fusioneering"
+   ],
+   "importance": 58,
+   "evidence": [
+    "Energies Media"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 10.25,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMickFVX3lxTFB2QzlvbVlRMXcxOHFyVmJOd3dYX0RRVnQ4c1ZtdzM1cEdnTUlWaXZSWE1GSjdvZkh4LXc2NDJSZHpKQk9TLTBkNGIwQVZaRENsWkpnLW1MWFFYcFpfZXpaTno2NjluWkw5bDFHSF9TLWg0UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMifEFVX3lxTE5NZG5YMGRwR3R4Rm1fYTFzV1NWMGpUeUJIbFRRdkZaOEN1dHQ1NU9uVkRqNS1ZNGhwdzE0RXViS2dJbWo3ajZsc3dmX3BJNmdUZW1OSGNUOXhVdUc1bllXZHAxVno2MU1TeEZUR3BsZGdWSnZtRDlEbWMyVXM?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFB2QzlvbVlRMXcxOHFyVmJOd3dYX0RRVnQ4c1ZtdzM1cEdnTUlWaXZSWE1GSjdvZkh4LXc2NDJSZHpKQk9TLTBkNGIwQVZaRENsWkpnLW1MWFFYcFpfZXpaTno2NjluWkw5bDFHSF9TLWg0UQ?oc=5",
+     "outlet": "Energies Media",
+     "title": "Japan's METI awards Kyoto Fusioneering-led consortium up to JPY 23.3 billion for tokamak fusion power demonstration",
+     "snippet": "",
+     "published_at": "2026-11-26T14:37:20Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5NZG5YMGRwR3R4Rm1fYTFzV1NWMGpUeUJIbFRRdkZaOEN1dHQ1NU9uVkRqNS1ZNGhwdzE0RXViS2dJbWo3ajZsc3dmX3BJNmdUZW1OSGNUOXhVdUc1bllXZHAxVno2MU1TeEZUR3BsZGdWSnZtRDlEbWMyVXM?oc=5",
+     "outlet": "Energies Media",
+     "title": "Kyoto Fusioneering appoints former Idaho National Laboratory fusion lead Pattrick Calderoni as Director of Blanket Programs",
+     "snippet": "",
+     "published_at": "2026-11-27T02:42:53Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-0e6edfc85f0d",
+   "headline": "Norway pauses data center connections as requests outgrow its power system",
+   "summary": "Rystad reports Norway has paused data center grid connections.",
+   "subtopics": [
+    "grid-transmission",
+    "data-center-buildout"
+   ],
+   "entities": [
+    "Norway",
+    "Rystad Energy"
+   ],
+   "importance": 58,
+   "evidence": [
+    "single source"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTmtUTnNiMEZsRlhTTVJLbkFBS3NOanRMZ3hOTmpud0xCNDZhei1Bc09YUC1mbE5aaGdDUlRfbmhsdjFfTm5FcmpqTWtfTHZQSUc5NUM2SC1tMHgwa1gyUXJnb2hUVTdCQzgtSFk4NWY5TGtLN201UXMtT1hZcHdfNmFVVklaUDNrOG4yRFpNWHhHVy03NWJvcWF0RlU1U21aU2pPS204SE1lZTFMaHNwRm5n?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTmtUTnNiMEZsRlhTTVJLbkFBS3NOanRMZ3hOTmpud0xCNDZhei1Bc09YUC1mbE5aaGdDUlRfbmhsdjFfTm5FcmpqTWtfTHZQSUc5NUM2SC1tMHgwa1gyUXJnb2hUVTdCQzgtSFk4NWY5TGtLN201UXMtT1hZcHdfNmFVVklaUDNrOG4yRFpNWHhHVy03NWJvcWF0RlU1U21aU2pPS204SE1lZTFMaHNwRm5n?oc=5",
+     "outlet": "Rystad Energy",
+     "title": "Norway pauses data center connections as requests outgrow its power system",
+     "snippet": "",
+     "published_at": "2026-11-26T11:18:29Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-375f945d0778",
+   "headline": "Massachusetts to require new data centers to use clean energy",
+   "summary": "New data centers in Massachusetts will face clean energy requirements.",
+   "subtopics": [
+    "energy-policy",
+    "data-center-buildout"
+   ],
+   "entities": [
+    "Massachusetts"
+   ],
+   "importance": 56,
+   "evidence": [
+    "EnergyNow"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdHN0Y2Q2OUJ2TFNNVWNQZ05vZEMxOVdKaXQ5RjFteXVONGFLcFROSmZuQ1JrRTNRT0FIS19GTm9BaFphRnZRb0VTREpsbG9sUXJvZ29ZamFYVU1iX25PZ2lDSzltY3hWcHdNWW1Gb1lwdzMxMFJRdWRWdGVPT2lwbDFlZF9Db2ZyMi1Mc2llTlplcVVBYy0tQ21B?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdHN0Y2Q2OUJ2TFNNVWNQZ05vZEMxOVdKaXQ5RjFteXVONGFLcFROSmZuQ1JrRTNRT0FIS19GTm9BaFphRnZRb0VTREpsbG9sUXJvZ29ZamFYVU1iX25PZ2lDSzltY3hWcHdNWW1Gb1lwdzMxMFJRdWRWdGVPT2lwbDFlZF9Db2ZyMi1Mc2llTlplcVVBYy0tQ21B?oc=5",
+     "outlet": "EnergyNow",
+     "title": "Massachusetts Will Require New Data Centers to Use Clean Energy",
+     "snippet": "",
+     "published_at": "2026-11-26T17:15:17Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-5c4d0e295eb6",
+   "headline": "Vietnam weighs delaying nuclear plants beyond 2035; Indonesia and Malaysia set nuclear timelines",
+   "summary": "Vietnam's revised plan pushes Ninh Thuan beyond 2035, while PLN targets first nuclear in 2034 and Malaysia targets 2040.",
+   "subtopics": [
+    "nuclear-fusion"
+   ],
+   "entities": [
+    "Vietnam",
+    "PLN"
+   ],
+   "importance": 55,
+   "evidence": [
+    "Bloomberg",
+    "Construction Review"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 38.75,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 5,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNX3pqNEJJMWtBQ1YzTFpHcHJZVU1TUzd5S2hmR29GN1ktMDIteTdjWEgza3RoN0hQUW9HMlRjTGxxckVhSEFZM2J6MmVPdW1kV1M0RUNXT1Z3RWxmUy1qV3pSUTR2OGQ5eDk0SmZzb0w1MW14bW9DRVhQLU1iLVVlNFhObm01cFNnQzNEeVJodk5Rb05jeW5uSHpZS1paa3dHZ2tibm5hWXZJMnRtbnVWNjdWUjRmNVdzNUcxM2R1d1dVNXlUY0dCeU1XLWF4eVloY1FET0tFRHl4dw?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBteWFBNURpV1ZubUxGZ1BCb3ZjZDFhQ0xxMjNvVWV2YUNoRDBCNEc5YU5SUkRtR2F6cHFUZ2RMcUNBU0p6VTZuUFR3eS1MSnEw?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUTJlT0JOSlNPS3BOcXh0MmpnLXJSempHY0xXV1BvUTJGNjd3Ul94RTZGMHpmNWFiVmdmMGo5RWF4MmF2eXNLSXEyaFcyTS1LYlE4N3RnMXRtUllsc1BMaHF6Q3BlWE9RV0toTXdIZ2ZUVFpMWkNQNjJaMHBhcElQemVaTFkybWpNOWsxVW1QYks0dy1ZdTFEUldkTVYwQTM2ZXZUT29ndVQ2cmViNjdVWEpWS1JqZFpsb2RrbjU0dXJuSzE3ejVNag?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkt6LUNJVDYtM2RnTkxUX2czbTU5STNJaWR2OUhwd2NlbFVRajl5RjJGRU9XbmM2S2w1QzB1M2RYTk9vVkZVdVV1TG1pRTVTWGVwWERXWXZxOFh4UGsxZWRDck4xdGlyN0JHbVJadnFIaUxPcmNkVkpQcGhUUUQwVnFtQ01qOUp2STBsaEU0ZXFXSXJ2enZVbnVFa2taT2ZKN3ZrWWRhMkNnZmplWWpiN1h0cTZkLUx3NmF1dldRbFBGWXJtV0UzVnBNMVo?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaGdmcUtqLWtoVmNGWVJUczdNUUFPTWFSNjY1Q1ZTTzNtaExWZUdUOU5EdzRDUHBGQW1oejRXNE11QWNNaXFMeFR5REFrc19jeDFDbXoxbGYxVFJ3MFZvdzRNX0t5aGxPZWNIbmJaVWVuM3VzaDUxTFlzSG4yLVpMYWxRb0dnQnF3SXFMeHFETFRnT244dElKYTBzclV4SFIxV1p6MTE2djJCOXdBMmFoWFNiTWY?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNX3pqNEJJMWtBQ1YzTFpHcHJZVU1TUzd5S2hmR29GN1ktMDIteTdjWEgza3RoN0hQUW9HMlRjTGxxckVhSEFZM2J6MmVPdW1kV1M0RUNXT1Z3RWxmUy1qV3pSUTR2OGQ5eDk0SmZzb0w1MW14bW9DRVhQLU1iLVVlNFhObm01cFNnQzNEeVJodk5Rb05jeW5uSHpZS1paa3dHZ2tibm5hWXZJMnRtbnVWNjdWUjRmNVdzNUcxM2R1d1dVNXlUY0dCeU1XLWF4eVloY1FET0tFRHl4dw?oc=5",
+     "outlet": "SolarQuarter",
+     "title": "Peninsular Malaysia Electricity Demand To Double To 49.8 GW By 2050, Nuclear Power Entry Targeted For 2040",
+     "snippet": "",
+     "published_at": "2026-11-27T04:47:30Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBteWFBNURpV1ZubUxGZ1BCb3ZjZDFhQ0xxMjNvVWV2YUNoRDBCNEc5YU5SUkRtR2F6cHFUZ2RMcUNBU0p6VTZuUFR3eS1MSnEw?oc=5",
+     "outlet": "The Edge Malaysia",
+     "title": "Vietnam weighs delaying nuclear power plants beyond 2035 target",
+     "snippet": "",
+     "published_at": "2026-11-26T07:40:25Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUTJlT0JOSlNPS3BOcXh0MmpnLXJSempHY0xXV1BvUTJGNjd3Ul94RTZGMHpmNWFiVmdmMGo5RWF4MmF2eXNLSXEyaFcyTS1LYlE4N3RnMXRtUllsc1BMaHF6Q3BlWE9RV0toTXdIZ2ZUVFpMWkNQNjJaMHBhcElQemVaTFkybWpNOWsxVW1QYks0dy1ZdTFEUldkTVYwQTM2ZXZUT29ndVQ2cmViNjdVWEpWS1JqZFpsb2RrbjU0dXJuSzE3ejVNag?oc=5",
+     "outlet": "Construction Review",
+     "title": "Ninh Thuan Nuclear Power Plant Timeline Delayed Past 2035 Under Revised Vietnam Energy Plan",
+     "snippet": "",
+     "published_at": "2026-11-26T13:04:14Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkt6LUNJVDYtM2RnTkxUX2czbTU5STNJaWR2OUhwd2NlbFVRajl5RjJGRU9XbmM2S2w1QzB1M2RYTk9vVkZVdVV1TG1pRTVTWGVwWERXWXZxOFh4UGsxZWRDck4xdGlyN0JHbVJadnFIaUxPcmNkVkpQcGhUUUQwVnFtQ01qOUp2STBsaEU0ZXFXSXJ2enZVbnVFa2taT2ZKN3ZrWWRhMkNnZmplWWpiN1h0cTZkLUx3NmF1dldRbFBGWXJtV0UzVnBNMVo?oc=5",
+     "outlet": "Indonesia Business Post",
+     "title": "PLN targets first nuclear power plants in 2034 and 7 GW capacity by 2040",
+     "snippet": "",
+     "published_at": "2026-11-26T12:28:44Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-0cd88fdbdbca",
+   "headline": "Rest of world plays catch-up with China's solar dominance as Chinese turbine makers go abroad",
+   "summary": "FT examines Western manufacturing efforts and China's wind export push.",
+   "subtopics": [
+    "solar-wind"
+   ],
+   "entities": [
+    "China"
+   ],
+   "importance": 55,
+   "evidence": [
+    "FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 21.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/8aafaa00-9b46-4513-9be9-b5ec5c6d123f?syn-25a6b1a6=1",
+    "https://ft.com/content/f683c0d1-c48e-45fe-a0bb-666380299b31?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRFlVWEhsU1BRSl85NE9zaDNMMWtkS2VKX0lqRVNva1MycWZRRnBQTDM1LXh1QURBdjc2MnlBWW00bWlzX3Bmb3l6bmE3SUJuZ2pNbmZNekgzTm5EeG9uV2JCazNUSGRSa2w2RE9FeUhaSnd3eHBsdm8zTjdla1pfQU5MeWU?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://ft.com/content/8aafaa00-9b46-4513-9be9-b5ec5c6d123f?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "Rest of the world plays catch-up with China’s solar power dominance",
+     "snippet": "Europe, India and the US are all investing in domestic manufacturing capacity but have a long way to go to reduce their reliance on Chinese suppliers of panels and batteries",
+     "published_at": "2026-11-27T05:00:04Z"
+    },
+    {
+     "url": "https://ft.com/content/f683c0d1-c48e-45fe-a0bb-666380299b31?syn-25a6b1a6=1",
+     "outlet": "the Financial Times",
+     "title": "China’s wind turbine makers look abroad as pressures grow at home",
+     "snippet": "A highly competitive domestic market has driven a rapid international expansion in recent years with a focus on emerging markets due to political barriers to growth in the west",
+     "published_at": "2026-11-27T05:00:04Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-806475781d95",
+   "headline": "Feds back $4B project to connect eastern and western US grids",
+   "summary": "Federal support for a transmission project linking the two grids.",
+   "subtopics": [
+    "grid-transmission"
+   ],
+   "entities": [],
+   "importance": 55,
+   "evidence": [
+    "Factor This"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQkxTX0Vtdk9JTXlCeG5wendxNWR0dm90RXpXYzNzSmM5WXhvQVVZQnJOaUdaTzJ0OHVSa0g5YTQzcEVqTjV3OGZvNUxCWi1nR1ROX0ZoVGwwcFN6Rk9weXhPU2dKaC0wbElPNHphN0JrUHpUOXpHLXd3MDRjZDR3STFhREU1Yi03X3NPNTVUa2hkbC1sQldVZnFwMXB1cGEtOVp6ZTNXWkgxUHBJSE1rQlpKN1NKYWVJUmszQUhYZVE1b1ZRaURzMjZUSQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQkxTX0Vtdk9JTXlCeG5wendxNWR0dm90RXpXYzNzSmM5WXhvQVVZQnJOaUdaTzJ0OHVSa0g5YTQzcEVqTjV3OGZvNUxCWi1nR1ROX0ZoVGwwcFN6Rk9weXhPU2dKaC0wbElPNHphN0JrUHpUOXpHLXd3MDRjZDR3STFhREU1Yi03X3NPNTVUa2hkbC1sQldVZnFwMXB1cGEtOVp6ZTNXWkgxUHBJSE1rQlpKN1NKYWVJUmszQUhYZVE1b1ZRaURzMjZUSQ?oc=5",
+     "outlet": "Factor This",
+     "title": "Feds back $4B project to connect eastern and western electricity grids",
+     "snippet": "",
+     "published_at": "2026-11-26T09:01:16Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-dc581d9825db",
+   "headline": "Trump EPA keeps trying to kill Solar for All despite court losses",
+   "summary": "EPA continues its effort against the program.",
+   "subtopics": [
+    "energy-policy",
+    "solar-wind"
+   ],
+   "entities": [
+    "EPA"
+   ],
+   "importance": 54,
+   "evidence": [
+    "Canary Media #8"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 27.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 8,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://canarymedia.com/articles/solar/trump-epa-solar-for-all"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://canarymedia.com/articles/solar/trump-epa-solar-for-all",
+     "outlet": "canarymedia.com",
+     "title": "Trump EPA keeps trying to kill Solar for All despite court losses",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "energy-d53771d78f23",
+   "headline": "FCC says SpaceX can deploy 1 million satellites for data centers in space",
+   "summary": "Scientists are skeptical of the approval.",
+   "subtopics": [
+    "data-center-buildout"
+   ],
+   "entities": [
+    "FCC",
+    "SpaceX"
+   ],
+   "importance": 54,
+   "evidence": [
+    "PBS"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTHhFVk1odlI3Y0VSYlFtSXR4dTktQXhGYW1NeFZDNUhDN0ZwY1BrNHY4dTV6aVZMVjM2Q3A2SWgwam14MzhpUncxd3pyYXljTGE3YUdhRkQzTm1zUEM2RnVsLVpsVFFCQnJZTW9sSnJqWVR3c3diRlk2LThxVmlYYmFmaXZ0NDNZNHdNaWdDTWh1RExzYlhkNXl1RkZXaERaSzFGb1NyMWc1MXVBOF9uTDZhMmNlTlBMVm9oakJrTk5WS0VEYmMwMWxkZmxMZm8?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTHhFVk1odlI3Y0VSYlFtSXR4dTktQXhGYW1NeFZDNUhDN0ZwY1BrNHY4dTV6aVZMVjM2Q3A2SWgwam14MzhpUncxd3pyYXljTGE3YUdhRkQzTm1zUEM2RnVsLVpsVFFCQnJZTW9sSnJqWVR3c3diRlk2LThxVmlYYmFmaXZ0NDNZNHdNaWdDTWh1RExzYlhkNXl1RkZXaERaSzFGb1NyMWc1MXVBOF9uTDZhMmNlTlBMVm9oakJrTk5WS0VEYmMwMWxkZmxMZm8?oc=5",
+     "outlet": "PBS",
+     "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
+     "snippet": "",
+     "published_at": "2026-11-26T20:16:59Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-29224f980c2b",
+   "headline": "Cheyenne Light seeks transmission for three Microsoft data centers in Wyoming",
+   "summary": "A $686M grid expansion would serve Microsoft data centers.",
+   "subtopics": [
+    "data-center-buildout",
+    "grid-transmission"
+   ],
+   "entities": [
+    "Cheyenne Light",
+    "Microsoft",
+    "Bright Horizon"
+   ],
+   "importance": 52,
+   "evidence": [
+    "DCD",
+    "Construction Review"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 14.0,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOa3NBUnRIcHhHSkRuOHhKZ0M5VnVTRjJLU1N4dnZvaldURmhrRWI3TlpPcTI2YUM2d3c2ZmREcnRpZ2piemFGeGZ3Mm5ab1dIblMtN0JIN1Y4ejFBdFlOTGNVUTB5OWVRZnNOS0U5Vk92ZktnT2ZKcjJqaURGcGtrUVRzem5Md1R0X0tKdFdqcGRqbURfeGlHTDZha0lQMWwwTkplclJWc3VQMGN0NkJ2bnVTUGtiSzBLYTk1YkpaYTNQYlZVa3lGbWhBX2lhdWl0T0NyeThoaVBOWWJMVWw4MQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbmdOb3p4cXpiWkd5c3BVdzN5RHNNeXE1RVNOLVczTXNqUHZoOHVtVW9zUmtFQXkzUkFwTVVSNkxneHBHYnY5NGlUTXJzb0lRRjNRdUtCYTBWVTIxdVBiUVdYSnJmMjROOGVPX25UQVNqQXM1SjlBeXkzcEg4d3puUldPU3lvVURwVUhtbVFVd18zeG1TRE5tZGMzQUhVc0dWcm1BSXEwbFgzdFMxWGFDckNQWUY5ckR3MlpERDBSZkdRd0dNVFRCYjhoQzdSMVk?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOa3NBUnRIcHhHSkRuOHhKZ0M5VnVTRjJLU1N4dnZvaldURmhrRWI3TlpPcTI2YUM2d3c2ZmREcnRpZ2piemFGeGZ3Mm5ab1dIblMtN0JIN1Y4ejFBdFlOTGNVUTB5OWVRZnNOS0U5Vk92ZktnT2ZKcjJqaURGcGtrUVRzem5Md1R0X0tKdFdqcGRqbURfeGlHTDZha0lQMWwwTkplclJWc3VQMGN0NkJ2bnVTUGtiSzBLYTk1YkpaYTNQYlZVa3lGbWhBX2lhdWl0T0NyeThoaVBOWWJMVWw4MQ?oc=5",
+     "outlet": "Data Center Dynamics",
+     "title": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
+     "snippet": "",
+     "published_at": "2026-11-26T11:54:05Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbmdOb3p4cXpiWkd5c3BVdzN5RHNNeXE1RVNOLVczTXNqUHZoOHVtVW9zUmtFQXkzUkFwTVVSNkxneHBHYnY5NGlUTXJzb0lRRjNRdUtCYTBWVTIxdVBiUVdYSnJmMjROOGVPX25UQVNqQXM1SjlBeXkzcEg4d3puUldPU3lvVURwVUhtbVFVd18zeG1TRE5tZGMzQUhVc0dWcm1BSXEwbFgzdFMxWGFDckNQWUY5ckR3MlpERDBSZkdRd0dNVFRCYjhoQzdSMVk?oc=5",
+     "outlet": "Construction Review",
+     "title": "Bright Horizon's $686 Million Wyoming Grid Expansion Sets Stage for Microsoft Data Center Buildout",
+     "snippet": "",
+     "published_at": "2026-11-26T10:09:10Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-357f27c661c0",
+   "headline": "Avantus signs PG&E PPAs for 800 MW solar and 3,200 MWh storage",
+   "summary": "Large California solar-plus-storage contracts.",
+   "subtopics": [
+    "solar-wind",
+    "storage-batteries"
+   ],
+   "entities": [
+    "Avantus",
+    "PG&E"
+   ],
+   "importance": 52,
+   "evidence": [
+    "MarketScale"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWm1IRmFTa2RsVUpTUlJKWk4xZ0R1YkhlcGthbUY4YXFXRU1VX0lMRVNWOUpHU3BYX2pkWlcyOTIzYmJ4cW02akxGV3NKUTBDM3l2UWFNMktFY1dLU19SclNKUzFYcUhPVllORE40TkI5T05MaUVORnI3cnN5VlNoWWtNQUtoLThSdW5kY0pfVW02dUdWOUtXMmE1Y3hDS3lFdDNOZkJ0WGxRelRYYkJHNjUteFA?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWm1IRmFTa2RsVUpTUlJKWk4xZ0R1YkhlcGthbUY4YXFXRU1VX0lMRVNWOUpHU3BYX2pkWlcyOTIzYmJ4cW02akxGV3NKUTBDM3l2UWFNMktFY1dLU19SclNKUzFYcUhPVllORE40TkI5T05MaUVORnI3cnN5VlNoWWtNQUtoLThSdW5kY0pfVW02dUdWOUtXMmE1Y3hDS3lFdDNOZkJ0WGxRelRYYkJHNjUteFA?oc=5",
+     "outlet": "MarketScale",
+     "title": "Avantus signs PG&E PPAs for 800 MW solar, 3,200 MWh storage",
+     "snippet": "",
+     "published_at": "2026-11-26T23:11:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-5427e5402f0d",
+   "headline": "Pacific Fusion granted radioactive materials license for fusion facility",
+   "summary": "Pacific Fusion received a license for its fusion facility.",
+   "subtopics": [
+    "nuclear-fusion"
+   ],
+   "entities": [
+    "Pacific Fusion"
+   ],
+   "importance": 52,
+   "evidence": [
+    "Business Journals"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPS25oSGRDNjRlMjB6MnlKdC10YXN4Y0ZITFRUMXg4RnRIOGpRdWtCQTdqa0ZEOGFUVENVZXpaNEdReFQwWFdUdEFMdTRyMUswUEs5UG41MkZaZUxPeEhnWUVMTGpwck5UN0NLbmZ6cC1SVmJubFljWXh1c21JZ0NZcHVwTW1pZGhVSFlkS0ZwbFBibXJsZkxmcTFVZHRMcGpPbExyRW50UDQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPS25oSGRDNjRlMjB6MnlKdC10YXN4Y0ZITFRUMXg4RnRIOGpRdWtCQTdqa0ZEOGFUVENVZXpaNEdReFQwWFdUdEFMdTRyMUswUEs5UG41MkZaZUxPeEhnWUVMTGpwck5UN0NLbmZ6cC1SVmJubFljWXh1c21JZ0NZcHVwTW1pZGhVSFlkS0ZwbFBibXJsZkxmcTFVZHRMcGpPbExyRW50UDQ?oc=5",
+     "outlet": "The Business Journals",
+     "title": "Pacific Fusion granted radioactive materials license for fusion facility",
+     "snippet": "",
+     "published_at": "2026-11-26T19:00:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-865894db6951",
+   "headline": "Kansas City rejects vertical data center proposal",
+   "summary": "A developer wanted to build up, not out, and the city said no.",
+   "subtopics": [
+    "data-center-buildout"
+   ],
+   "entities": [
+    "Kansas City"
+   ],
+   "importance": 50,
+   "evidence": [
+    "NYT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 14.0,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc0ZCbUVSRzhoelpDWGlfV1AybXNuSktnbzZ2bVhIZWRmRE9LRnBLWkMwMWhxbVpMaFhRWTNNamVvRGNtZ3VyTXU3MUVWa1BvRHR4Rlplc1M5N2QxZTFaV090dV80SllpRThNTy1UMW9ZWjVwNUEzNFY5dVRPUXRtdE83LVJpT0E?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMmhNeTZvN3VieDZRZENibXFzUl9Sa1NwVHJOYmszMHFZSmM2UXh6QjdxZ2ZnLUJhUk5zZnlhZHo0dXZja01DeWFWNW14THQ3SWtOV0FnUmxsOEZNOVplZ0pFakpPLVlFYk1qMUs1ajY2UGNZNDZtVnhPNE5rdU85ZkJYVHpyYUdneE1ES1BiR0k3WWxtcDl3SW9WVnA4MWdZV2c?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc0ZCbUVSRzhoelpDWGlfV1AybXNuSktnbzZ2bVhIZWRmRE9LRnBLWkMwMWhxbVpMaFhRWTNNamVvRGNtZ3VyTXU3MUVWa1BvRHR4Rlplc1M5N2QxZTFaV090dV80SllpRThNTy1UMW9ZWjVwNUEzNFY5dVRPUXRtdE83LVJpT0E?oc=5",
+     "outlet": "ИФЗ РАН",
+     "title": "What Most People Get Wrong About Vertical Data Centers After Kansas City Said No",
+     "snippet": "",
+     "published_at": "2026-11-26T23:57:36Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMmhNeTZvN3VieDZRZENibXFzUl9Sa1NwVHJOYmszMHFZSmM2UXh6QjdxZ2ZnLUJhUk5zZnlhZHo0dXZja01DeWFWNW14THQ3SWtOV0FnUmxsOEZNOVplZ0pFakpPLVlFYk1qMUs1ajY2UGNZNDZtVnhPNE5rdU85ZkJYVHpyYUdneE1ES1BiR0k3WWxtcDl3SW9WVnA4MWdZV2c?oc=5",
+     "outlet": "The New York Times",
+     "title": "Data Center Developer Wanted to Build Up, Not Out. Kansas City Said No.",
+     "snippet": "",
+     "published_at": "2026-11-26T15:12:12Z"
+    }
+   ]
+  },
+  {
+   "story_id": "energy-aada841944be",
+   "headline": "Energy Vault backlog hits $2.3bn as it closes financing for 150MW Texas BESS",
+   "summary": "Q3 results and non-recourse financing.",
+   "subtopics": [
+    "storage-batteries"
+   ],
+   "entities": [
+    "Energy Vault"
+   ],
+   "importance": 50,
+   "evidence": [
+    "energy-storage.news"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 13.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://energy-storage.news/energy-vault-backlog-hits-us2-3-billion-as-it-closes-financing-for-150mw-texas-bess"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://energy-storage.news/energy-vault-backlog-hits-us2-3-billion-as-it-closes-financing-for-150mw-texas-bess",
+     "outlet": "energy-storage.news",
+     "title": "Energy Vault backlog hits US$2.3 billion as it closes financing for 150MW Texas BESS",
+     "snippet": "NYSE-listed energy infrastructure company Energy Vault has reported its Q3 2026 financial results and the close of non-recourse project financing for its 150MW/300MWh SOSA Energy Centre in Texas, US.",
+     "published_at": "2026-11-26T13:03:53Z"
+    }
+   ]
+  }
+ ]
+}

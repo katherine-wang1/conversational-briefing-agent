@@ -20,18 +20,29 @@ from app.contracts.common import Strict
 
 class NoteSource(Strict):
     """One source the note writer tried. `url` is what was fetched (a publisher URL after resolving
-    Google News links); `listed_url` is the URL as the digest listed it, if different."""
+    Google News links); `listed_url` is the URL as the digest listed it, if different.
+
+    status "snippet": not fetched; the publisher's own headline and feed summary (`DigestEntry.
+    source_snippets`), kept in `text`. Facts may cite it, at summary level only.
+    `found_via` "free_coverage_search": not listed in the digest; found by one search for free coverage of
+    the same event because every listed source was paywalled, blocked or failed (`match` says why it was
+    accepted)."""
 
     url: str
     listed_url: str | None = None
     outlet: str | None = None
-    status: Literal["ok", "paywalled", "failed", "skipped"] = "ok"
+    status: Literal["ok", "paywalled", "failed", "skipped", "snippet"] = "ok"
     error: str | None = None
+    # Additive (2026-11-27, paywalls); absent in older notes.
+    title: str | None = None
+    text: str | None = None  # status "snippet": the publisher text facts were checked against
+    found_via: Literal["digest", "free_coverage_search"] | None = None  # None = listed in the digest
+    match: str | None = None  # free coverage: e.g. "title 72, entities 3/3, primary"
 
 
 class NoteFact(Strict):
     text: str  # one factual sentence
-    source_urls: list[str]  # each must be a NoteSource.url with status "ok"
+    source_urls: list[str]  # each must be a NoteSource.url with status "ok" (or "snippet")
 
 
 class StoryNote(Strict):
@@ -45,7 +56,11 @@ class StoryNote(Strict):
     why_it_matters: str = ""
     open_questions: list[str] = []  # what isn't known yet
     sources: list[NoteSource] = []
-    status: Literal["ok", "partial", "no_text"] = "ok"  # no_text: no source could be fetched
+    # ok: enough fetched sources; partial: fewer than wanted (may add publisher snippets); summary: no
+    # article text at all, only publisher headlines + feed summaries ("snippet" sources), so the note is
+    # summary-level and every fact is attributable to the outlet; no_text: not even a usable snippet
+    # (headline only, no facts).
+    status: Literal["ok", "partial", "summary", "no_text"] = "ok"
     model: str | None = None
     prompt_version: str | None = None
     created_at: datetime

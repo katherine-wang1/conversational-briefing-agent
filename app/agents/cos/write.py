@@ -126,8 +126,18 @@ def _payload(
             for f in pack.facts:
                 lines.append(f"fact: {f.text} [cites: {', '.join(f.passage_ids)}]")
             for p in pack.passages:
-                lines.append(wrap(p.text, id=p.passage_id, source=p.source))
+                lines.append(wrap(p.text, id=p.passage_id, source=p.source, kind=p.kind))
+            if any(p.kind == "publisher_summary" for p in pack.passages):
+                # Only when such passages exist (the system prompt stays as it is, and its size with it).
+                lines.append(PUBLISHER_SUMMARY_RULE)
     return "\n".join(lines)
+
+
+PUBLISHER_SUMMARY_RULE = (
+    'note: passages with kind="publisher_summary" are only the outlet\'s own headline and summary (the '
+    "article couldn't be read). Attribute what they say to their source (\"The New York Times reports "
+    'that…"), say nothing beyond their words, and keep this story to a headline and one or two sentences.'
+)
 
 
 def _transition_refs(sents: list[DraftSentence], known: set[str]) -> dict[int, str]:

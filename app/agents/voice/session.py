@@ -752,7 +752,7 @@ class VoiceSession:
             except Exception:  # noqa: BLE001 - a note read must never break the turn
                 log.warning("note store read failed for %s", ref, exc_info=True)
         if note is not None:
-            ok = {src.url: src.outlet for src in note.sources if src.status == "ok"}
+            ok = {src.url: src.outlet for src in note.sources if src.status in ("ok", "snippet")}
             for i, f in enumerate(note.facts):
                 url = next((u for u in f.source_urls if u in ok), f.source_urls[0] if f.source_urls else None)
                 self.citations.add_source(note_cite_id(ref, i), url, ok.get(url or ""), note.headline)

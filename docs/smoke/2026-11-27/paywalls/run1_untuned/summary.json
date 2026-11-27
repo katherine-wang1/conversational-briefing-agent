@@ -1,0 +1,101 @@
+{
+ "day": "e2e-2026-11-27b",
+ "at": "2026-11-27T06:36:58.401788+00:00",
+ "beats": {
+  "ai": {
+   "digest_entries": 30,
+   "entries_with_snippet_text": 19,
+   "source_snippets": 76,
+   "before": {
+    "partial": 6,
+    "ok": 13,
+    "no_text": 11
+   },
+   "after": {
+    "partial": 7,
+    "ok": 14,
+    "summary": 6,
+    "no_text": 3
+   },
+   "rescued": {
+    "snippets": 6,
+    "free_coverage": 2
+   },
+   "free_coverage_searches": 11,
+   "sources": {
+    "ok": 36,
+    "failed": 25,
+    "skipped": 1,
+    "paywalled": 19,
+    "snippet": 15
+   },
+   "newsroom_seconds": 31.0,
+   "newsroom_cost_usd": 0.1149,
+   "notes_seconds": 38.9,
+   "notes_cost_usd": 0.0205,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 11
+  },
+  "energy": {
+   "digest_entries": 25,
+   "entries_with_snippet_text": 7,
+   "source_snippets": 47,
+   "before": {
+    "no_text": 10,
+    "ok": 12,
+    "partial": 3
+   },
+   "after": {
+    "summary": 6,
+    "ok": 12,
+    "no_text": 4,
+    "partial": 3
+   },
+   "rescued": {
+    "snippets": 6
+   },
+   "free_coverage_searches": 10,
+   "sources": {
+    "paywalled": 6,
+    "snippet": 7,
+    "ok": 25,
+    "failed": 18
+   },
+   "newsroom_seconds": 26.6,
+   "newsroom_cost_usd": 0.1071,
+   "notes_seconds": 33.5,
+   "notes_cost_usd": 0.0158,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 10
+  },
+  "physical_ai": {
+   "digest_entries": 25,
+   "entries_with_snippet_text": 0,
+   "source_snippets": 66,
+   "before": {
+    "ok": 17,
+    "partial": 8
+   },
+   "after": {
+    "ok": 17,
+    "partial": 8
+   },
+   "rescued": {},
+   "free_coverage_searches": 0,
+   "sources": {
+    "ok": 47,
+    "failed": 14
+   },
+   "newsroom_seconds": 27.8,
+   "newsroom_cost_usd": 0.092,
+   "notes_seconds": 33.7,
+   "notes_cost_usd": 0.0212,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 0
+  }
+ },
+ "seconds": 191.5,
+ "cost_usd": 0.3715,
+ "search_provider_calls": 21,
+ "search_provider_refused": 0
+}

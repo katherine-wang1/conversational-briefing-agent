@@ -25,7 +25,10 @@ packs:
   max_fetch_attempts: 6       # per story: further URLs are tried when a fetch fails or is empty
   paywall_domains:            # known hard paywalls: tried last (never bypassed: no mirrors, no UA tricks)
     [wsj.com, ft.com, bloomberg.com, theinformation.com, nytimes.com, economist.com,
-     asia.nikkei.com, washingtonpost.com, barrons.com]
+     asia.nikkei.com, nikkei.com, washingtonpost.com, barrons.com, reuters.com, axios.com]
+  free_coverage_search: true  # digest story with no text from its URLs: one search for free coverage
+                              # (thresholds: story_notes.free_coverage; charged to the user's searches)
+  max_publisher_snippets: 2   # then the outlets' own headline + feed summary as attributed passages
 # Per-user stored set: the brief's stories plus the next best by the C5 ranking (docs/stored-set.md).
 stored_set:
   size: 20                    # stories kept per user per day; the voice agent can discuss any of them
@@ -76,6 +79,21 @@ story_notes:
   reuse_ok_hours: 6             # a story already noted "ok" this recently keeps its note (story ids are stable
                                 # across runs); 0 = rewrite every story on every run
   budget: {input_tokens: 900000, output_tokens: 150000, fetches: 400}   # per run (80 stories)
+  # Paywalled / blocked stories (docs/smoke/2026-11-27/paywalls): never bypassed. First, when every listed
+  # source failed, ONE search for free coverage of the same event (app/agents/cos/free_coverage.py); then,
+  # if still short, the publishers' own headline + feed summary as lower-grade "snippet" sources.
+  free_coverage_search: true    # skipped without a search provider
+  free_coverage:
+    max_searches: 25            # per notes run (one digest)
+    max_results: 8
+    max_fetches: 2              # accepted hits fetched per story until one gives text naming the entities
+    min_title_similarity: 50    # rapidfuzz, mean of token_set and token_sort ratios (0-100)
+    strong_title_similarity: 80 # at or above: one matching entity is enough
+    min_entities: 2             # story entities named in the hit's title + snippet (capped by how many it has)
+    window_hours: 36            # hits published from (story first seen - this) until now
+    allow_undated: false
+  snippet_sources: true
+  max_snippet_sources: 2
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
 # Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
 newsroom:
@@ -132,5 +150,8 @@ newsroom_editor:
              "nuclear energy news today", "energy policy news today"]
     physical_ai: ["most important robotics news today", "humanoid robot news today",
                   "autonomous vehicles news today", "physical AI news today"]
+  # reuters.com (HTTP 401), axios.com (403) and nikkei.com (login wall, ~380 chars of text) added
+  # 2026-11-27 from the e2e run's fetch errors (docs/e2e/2026-11-27/story_notes.json).
   paywalled_domains: [wsj.com, ft.com, bloomberg.com, nytimes.com, theinformation.com, economist.com,
-                      barrons.com, washingtonpost.com, businessinsider.com, theatlantic.com, wired.com]
+                      barrons.com, washingtonpost.com, businessinsider.com, theatlantic.com, wired.com,
+                      reuters.com, axios.com, nikkei.com]

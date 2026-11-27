@@ -1,0 +1,1455 @@
+{
+ "digest_id": "physical_ai-20261127T0636Z-6d3f488c",
+ "run_id": "paywalls-physical_ai",
+ "beat": "physical_ai",
+ "at": "2026-11-27T06:36:58.401788Z",
+ "version": "74c6441c235ba9ee",
+ "entries": [
+  {
+   "story_id": "physical_ai-3c4b617fb1c8",
+   "headline": "XPENG unveils Turing physical AI architecture (VLA 3.0) and IRON humanoid robot, targeting mass production in January 2027",
+   "summary": "XPENG showed its IRON general-purpose humanoid and Turing physical AI stack. Reports say mass production is targeted for January 2027, though one outlet says Q2 2027 sales. Its CEO has said the price could be near an EV's median.",
+   "subtopics": [
+    "humanoids",
+    "robot-foundation-models"
+   ],
+   "entities": [
+    "XPENG",
+    "IRON",
+    "Turing",
+    "VLA 3.0",
+    "He Xiaopeng"
+   ],
+   "importance": 90,
+   "evidence": [
+    "covered by Xinhua, Automotive News, CNBC, Seeking Alpha",
+    "dozens of outlets"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 39.5,
+   "features": {
+    "n_items": 11,
+    "n_independent_domains": 9,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 11,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmJVeENXOVBLY3poZWRzei03czJiT3Fqc0F3UkxrSnhNb1V6QWtHSkswUUoxWVNUQkJiRVpaV3RCVE1ERnNDWkcwRUREUzZQQnRveUlzQXNvRF9yQUNPUndFOFNsZmFJNzdSMnM0cTZyaFptVUI2QkZJcm9xN2pWZzlua2NvOUhkTG9JcnJHOUtWTEpjbldoajZ2ejdwdDByekc5QkdDRlROakdmX2pmNnMzaGpTMnI3ZDVlOWd5Vm85YUU3VnNKWF9ha2IyX2k4RndaUlUzQnc5V3d2QjR3cTZCLV9UclczQkNIVHZNOFVTNVE5blZlZXFFaw?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMifEFVX3lxTFBRNFg1Mzl4TU9SWDZoSktLekhYdTZzSVJIUHFWakpIS3pvS1ZNcXJkM3lCUl94NzdjVDluWTlzbTg3OUhTN1hKaTVSb1IwdUYwRjhpQTVwaXhBbDlYYmZuQ1JFRkJOa2VCY2hRRWl6YUxRd2F5ODNReHdFeVo?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZTlCUzl2dlUxWkk5bUwtRzl3aVp5Y0J2XzgzT3ktQzZpcXBXSl85czJIZjQyTWdzT2xiZEY5aFgtQlpZUTdpVVB4UmxQTlVic3NhUzJEODlPZC1wTGRha05FMk51blR5MThERndDYlhybVZ5VkFZNWRjSGxIbnJZbXVR?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOLWwxNVNJa3hkTmRNZjJ1RF9TY2FNQWVNU19BY0M2Q2p0ZDBKNXM1cjdmQkpMUzlCSTRsYktCUFFiUXd3UTNZcURKTlNPX2RmLWc1Nl9ob0ZJVEt5ZkF2bU11S2NKWEpJRnRQb0JMVnlhX28wZUtfaGFTeDM4cmlXenFOMVJuenRBcGdwbUFlWEg?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRjNvZmNDSllQUDVpRVd1RXlHTndiQWI3Q2xicGNZd0JrdDZRVi1qZndNeHQ2elB0MF9HQnRqZERTVnpqaWZCanhJaEd6Vk1UZWtFd1k1NHNhOVRMTXV2OXltT3NjelI2QnFEYjBmdkNDMldyNU5LU3ZSaDBNZ3hkaGtEZmFjVm51TEY1RnpZOUY?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTXR0ZkFjTURyZVNwTmtkM28yTC1IbWwzLVlFdnZfcVVxVWhhdmktYU1sV0xBWG4wel9Jd0FlWC04bkNpOFFmU2Vzb3JVSUhlN0hsNVVsLWVGLXJOeVBSdHJvb3k2Mkg1YUgwOXZCVE02M1BQY0M3SlNhMG5RS3U2ZVU5UUpLLWZUdldMVXNVZV9mQ0lZc2xURmt1aGtyalE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZDc0cWhDNy1XeXRaLWQtbUx4dWlOQk9LV1V1NUtkVXlnVU1IcHpRd0tVX1JtYm9oaTNBM1JKM0FjWk16R3FCZG1jaUpKVTR2ZmV5c1EydUtOcXBaa0E0MG5HaHFETGpXQTdXUEtKU2lObXc1eVZVNGtlTktSQVhBUVNVeF84OVFkcGFMcjhVQ3NpODNBNzBudUFnZmNxWnVMcnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNHc2TFhzOE1la2xDcHU5OGpaUjN2ZU1SeWJOUkd5dDFJcmZCZHE4OXlEMXJuVnJSNnIxaEQ5aWJaQk1XZ2FmZmVad2lFRGpxZS14eUpjOHpUWU1aNExFcXozYk5SWlQ5Z1RScjFqUjVwMWduazNqNzBlLXQzV3JQRFVoTk9LeVNHQWpnLUZQYXYxenBzc0NMZ0ZRb05GYUIyZlE?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeFVfd2RIbGZLZ2RieVg4WjhvbTE2MlRCbjhha0tFaGNpU3ZJZ0cyYlB4dnFEMC1LeEt3MFN5cUVaLUZJUTJBc3NpZUVYVWp3T3o0SWNyc1NudFd0MkVCQ3BVaGstcnEwT0lzMnh2M2RNUTVUUGt4UzU3bVppTW4yaDM3NkVjcjh2Rk0wcFRBTDFyT2tCU0M4cjlyMUs3UGs0Y0R2TVZoMXJLQQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmJVeENXOVBLY3poZWRzei03czJiT3Fqc0F3UkxrSnhNb1V6QWtHSkswUUoxWVNUQkJiRVpaV3RCVE1ERnNDWkcwRUREUzZQQnRveUlzQXNvRF9yQUNPUndFOFNsZmFJNzdSMnM0cTZyaFptVUI2QkZJcm9xN2pWZzlua2NvOUhkTG9JcnJHOUtWTEpjbldoajZ2ejdwdDByekc5QkdDRlROakdmX2pmNnMzaGpTMnI3ZDVlOWd5Vm85YUU3VnNKWF9ha2IyX2k4RndaUlUzQnc5V3d2QjR3cTZCLV9UclczQkNIVHZNOFVTNVE5blZlZXFFaw?oc=5",
+     "outlet": "Investing News Network",
+     "title": "In The Economist's \"The World Ahead 2027\", XPENG CEO He Xiaopeng Outlines Humanoid Robotics Will Advance Through Hardware-Software Co-Evolution",
+     "snippet": "",
+     "published_at": "2026-11-26T19:19:20Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+     "outlet": "marketscreener",
+     "title": "XPENG Inc. Unveils Turing Physical AI Architecture VLA 3.0 And Debuts Advanced General-Purpose Humanoid Robot IRON",
+     "snippet": "",
+     "published_at": "2026-11-26T06:51:09Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+     "outlet": "Howl.Link",
+     "title": "XPENG Achieves New Milestone in Humanoid Robotics as IRON Brings Human-Centric Intelligence into the Mass Production Era",
+     "snippet": "",
+     "published_at": "2026-11-27T05:06:23Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBRNFg1Mzl4TU9SWDZoSktLekhYdTZzSVJIUHFWakpIS3pvS1ZNcXJkM3lCUl94NzdjVDluWTlzbTg3OUhTN1hKaTVSb1IwdUYwRjhpQTVwaXhBbDlYYmZuQ1JFRkJOa2VCY2hRRWl6YUxRd2F5ODNReHdFeVo?oc=5",
+     "outlet": "Xinhua",
+     "title": "Xpeng's humanoid robot IRON takes the stage",
+     "snippet": "",
+     "published_at": "2026-11-26T08:29:16Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZTlCUzl2dlUxWkk5bUwtRzl3aVp5Y0J2XzgzT3ktQzZpcXBXSl85czJIZjQyTWdzT2xiZEY5aFgtQlpZUTdpVVB4UmxQTlVic3NhUzJEODlPZC1wTGRha05FMk51blR5MThERndDYlhybVZ5VkFZNWRjSGxIbnJZbXVR?oc=5",
+     "outlet": "EVXL.co",
+     "title": "XPeng Unveils Turing Physical AI Stack and Shows IRON in Public",
+     "snippet": "",
+     "published_at": "2026-11-26T13:17:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-386802ef471a",
+   "headline": "Nvidia expects physical AI revenue above $25 billion in fiscal 2027",
+   "summary": "Nvidia forecasts physical AI revenue to quadruple to more than $25 billion in fiscal 2027.",
+   "subtopics": [
+    "robotics-business",
+    "robot-foundation-models"
+   ],
+   "entities": [
+    "Nvidia"
+   ],
+   "importance": 80,
+   "evidence": [
+    "multiple outlets"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 23.5,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 4,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8taENrWENmUmc0V2dTY1VXUkZRLXBaWVR2SHczNGZyM2FMUnh6WlpnODNDRUh6Tmdwc1dfamFWRTFfQmN0YzJlOWw2Mko5OFJQVWJvaEk4OFI?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE9rVFFLR28tMVREc2Jpckc3RUw5V1hCbXFlQU1ya09rM2lBdlhXTkRNb2ZEa0tITHdQRXQzYnZNdExVTUtPRWM5NThBNTJ2TE90MlBncHp6M1BUZXFIYmNtdHpjeWJKbWsxcTZQZWRrVFR5QWs?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIMHJLeF9pdkpqUTlBcDBQZlI1bHB4NDJtVGl6U0J5WU5ZTjc5R0tDelQybWNMeVJ3Z2o5ZkN6OWhEeS1wV2g0dTRRaVVPN281ODZrejRINENSUXlXRk9OT3pUSHU0cEU0Vkg5dEJYWnhWOXRZa3VTQXNzYw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWjhOU2VZQU8yMjdBQlE5LXQ0U1pLUmQ5M2htYjBZUVdweEpHcXFwZTJpWDYyRjZ4T2J5ajFGYzRvb1k1Q1NSN1VYOXlZQ0ZfOEZJUnBaeG5Xc2FlQmpFRWIzSzRGOWFTNGNudmxnSlg2RXc1eFExNmZTeHBjVGZ1LVNJb042dGZpMWYyMmVGQUZ0RWNIT0FxNXNCbkRsS3FKZkVlSVlUVlRFQQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8taENrWENmUmc0V2dTY1VXUkZRLXBaWVR2SHczNGZyM2FMUnh6WlpnODNDRUh6Tmdwc1dfamFWRTFfQmN0YzJlOWw2Mko5OFJQVWJvaEk4OFI?oc=5",
+     "outlet": "www.tokenpost",
+     "title": "Nvidia Forecasts More Than $25 Billion in Physical AI Revenue",
+     "snippet": "",
+     "published_at": "2026-11-26T18:08:47Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9rVFFLR28tMVREc2Jpckc3RUw5V1hCbXFlQU1ya09rM2lBdlhXTkRNb2ZEa0tITHdQRXQzYnZNdExVTUtPRWM5NThBNTJ2TE90MlBncHp6M1BUZXFIYmNtdHpjeWJKbWsxcTZQZWRrVFR5QWs?oc=5",
+     "outlet": "Crypto Briefing",
+     "title": "Nvidia expects physical AI revenue to exceed $25 billion in fiscal 2027",
+     "snippet": "",
+     "published_at": "2026-11-26T18:02:03Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIMHJLeF9pdkpqUTlBcDBQZlI1bHB4NDJtVGl6U0J5WU5ZTjc5R0tDelQybWNMeVJ3Z2o5ZkN6OWhEeS1wV2g0dTRRaVVPN281ODZrejRINENSUXlXRk9OT3pUSHU0cEU0Vkg5dEJYWnhWOXRZa3VTQXNzYw?oc=5",
+     "outlet": "Pluang",
+     "title": "Nvidia's physical AI revenue to quadruple in fi...",
+     "snippet": "",
+     "published_at": "2026-11-26T18:20:18Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWjhOU2VZQU8yMjdBQlE5LXQ0U1pLUmQ5M2htYjBZUVdweEpHcXFwZTJpWDYyRjZ4T2J5ajFGYzRvb1k1Q1NSN1VYOXlZQ0ZfOEZJUnBaeG5Xc2FlQmpFRWIzSzRGOWFTNGNudmxnSlg2RXc1eFExNmZTeHBjVGZ1LVNJb042dGZpMWYyMmVGQUZ0RWNIT0FxNXNCbkRsS3FKZkVlSVlUVlRFQQ?oc=5",
+     "outlet": "NAI500",
+     "title": "Nvidia Trails Magnificent Seven in 2026: Can Physical AI Fuel a Turnaround?",
+     "snippet": "",
+     "published_at": "2026-11-27T01:13:02Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-5d99f76956f2",
+   "headline": "XPeng says IRON humanoid will be priced about the same as an EV",
+   "summary": "XPeng says its IRON humanoid may sell near the median EV price. Coverage frames it as a push toward home use.",
+   "subtopics": [
+    "humanoids",
+    "robotics-business"
+   ],
+   "entities": [
+    "XPeng",
+    "IRON"
+   ],
+   "importance": 78,
+   "evidence": [
+    "Automotive News, Digital Trends, others"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 39.5,
+   "features": {
+    "n_items": 9,
+    "n_independent_domains": 9,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 9,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE55UlZBY0VfY3ZCMVhrNG5HZ2N5VUlLdXJnNXcwZ1hjN0VoMjdIS19jSU1ET1lUTFpqTkhyNWVvZ2NYT0ZyWGg0dmN1TEw3OHNaTDhwU1JKZm9nV3FaeFFmWEUzVVQ2VmFHcHozRHFuWHlMM3NUN0E?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBmUWFoQ00zNEx3S0l6bEUzRkJucF9sUTBSbG5GU3ZMYlB0TmlVb3ZfMlprV05hdHVCMHNaeFBTT3FpZHIyRUFRQ2ZCUk9Za1JlLUpIbFNIZTJsRlllZGM5MW5FMWtjX2V1OUNQSUY3MHZXZmNXQ0E?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZ21vb3ZsbWVqSEk4UjROY1VPa2J4dXozWENPWlNCNnVPX29mOENFRDFMMkg3QWVuNUFpbXg1MVpfek1DMC1jendWeDhFVVZJc2pNamRjNmZtOXlMOVRHcTNtUjRvZHNtTDZ3TjBuLWd0OEVBUDRmRVhNbmdxNGkwaFBB?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRjF2VGo2ZHBPbU43Z2hhbTBtcGxDTXdSd09kTHJSeUR2RUFNdGU3Z0FweUdIZVY2bmNkOGRlOTB6ajZxd0dBSk9TWUVBUjI1Wm1idndYb0p6dGlORFliNW53YXdYQVltdGxkN2tsbkRSaGFlT2VFTV9abGtyT3FkWkJZb25WbFU?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0U0WWVudnFwZXRZM2hyYnVIWWxBTGpzRG9UYWVRa0FKYXRZNTU0UXRmX1J1QVozZXFhWTlNMDY4WDNIdWNIYzJYM3QydGtmb21CNTVkZ2ZsQlRZYkJVcHhZSHBJbVk0QnVRdDVTbWZiSFByR01Oem9ZZnJZNnl0UkUwWEZBVWha?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPX3ZHRVlQVEo1UUJ4S1FzbkxLMjNLVkk5d205bDBTZDQwRkJoUDA4b0p1bUw3SWVZU1N0YkpCdEthajR2Vk1XYUotYVI3SGF4Mm12VElWR2otUXd5Q09zSGo1YTRSRHptWFJ5VVJrVEpReTgwVEh6eVkyNDZhOUVTaE1uZWwwNkR1LTB6TGxrdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdzNEYlJ5NmRDb0ttd0gxWmktVnBncTN5eXhWWnN1U3IySktMNHEtUHRfOUFmbkFsTkdwcGZLSDlvOS0xMkhabFpraXNsN01UV0FIMGhNZHMyOXFrR1FudjJjNG45TmNTTExNUDhlWldFakQ1dEtqNm90YUpmNDl2emF4cnA3QzN5Vzd1MElIdlItRnV2QzZsTC1HNTBzci16M3lOM1pjUWs?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWkhhWUZFSnBZT0U5cTJtd0RmNmF4clRsZVFGdFpINjBUQmtpbHl1Sm5ud09SVDhlN0hnQXNRU0x1V3Q1NVhNaHdvR3VMVlVqVlBnUWxTOUxyR0tMSndodE1ISWdITWxIWW41Y0xqeG9iTVdwZnJlNHJ4LUR6eHNNcFdBX0hBb3dZRVQxbGtxSThzcW5lYnBqSU5TSlJLMmxWNXMzd09yTUdKQUVXWjhmeVI2NE5GSGVUYWE2clZFTWQ5SHJ6enNQLVhB0gHPAUFVX3lxTE9MWWJ6RTdYZTdPcW9Sc3pNcEJfU0lTZ3BTczFFazhEbXhTZmlxZjAxbk5kQUZod25wX1VVTWNEOGRNS0FWWGtpM3FhcmE2bm9GT1J3c3lLd3VWODZxVl9qbXgxUXNTSVJsVmFBbVZvZWY5THNDOFFlZGJTOXpXaVdWbVhtbTkwcmFDS0hMZHdsNnFjczg1ZDNVejJIMFlOaVB0ZFNIaGdMazJ2R0l1Vl9JSEQ1b2l2M1dMZ1ZCWFlZclVQN2txM0dLbkdXd0E0UQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+     "outlet": "Mezha",
+     "title": "XPeng's IRON humanoid robot will cost as much as an electric car – company reveals when sales will begin",
+     "snippet": "",
+     "published_at": "2026-11-26T11:36:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55UlZBY0VfY3ZCMVhrNG5HZ2N5VUlLdXJnNXcwZ1hjN0VoMjdIS19jSU1ET1lUTFpqTkhyNWVvZ2NYT0ZyWGg0dmN1TEw3OHNaTDhwU1JKZm9nV3FaeFFmWEUzVVQ2VmFHcHozRHFuWHlMM3NUN0E?oc=5",
+     "outlet": "BigGo Finance",
+     "title": "XPeng Puts a Price on Its Humanoid Bet: IRON May Sell for Roughly What an EV Costs",
+     "snippet": "",
+     "published_at": "2026-11-26T13:06:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBmUWFoQ00zNEx3S0l6bEUzRkJucF9sUTBSbG5GU3ZMYlB0TmlVb3ZfMlprV05hdHVCMHNaeFBTT3FpZHIyRUFRQ2ZCUk9Za1JlLUpIbFNIZTJsRlllZGM5MW5FMWtjX2V1OUNQSUY3MHZXZmNXQ0E?oc=5",
+     "outlet": "remio",
+     "title": "XPeng Robot Pricing Targets EV-Level Cost",
+     "snippet": "",
+     "published_at": "2026-11-26T23:10:26Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZ21vb3ZsbWVqSEk4UjROY1VPa2J4dXozWENPWlNCNnVPX29mOENFRDFMMkg3QWVuNUFpbXg1MVpfek1DMC1jendWeDhFVVZJc2pNamRjNmZtOXlMOVRHcTNtUjRvZHNtTDZ3TjBuLWd0OEVBUDRmRVhNbmdxNGkwaFBB?oc=5",
+     "outlet": "Retail News Asia",
+     "title": "Xpeng Plans To Price Humanoid Robot Around EV Median",
+     "snippet": "",
+     "published_at": "2026-11-27T06:24:05Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRjF2VGo2ZHBPbU43Z2hhbTBtcGxDTXdSd09kTHJSeUR2RUFNdGU3Z0FweUdIZVY2bmNkOGRlOTB6ajZxd0dBSk9TWUVBUjI1Wm1idndYb0p6dGlORFliNW53YXdYQVltdGxkN2tsbkRSaGFlT2VFTV9abGtyT3FkWkJZb25WbFU?oc=5",
+     "outlet": "Digital Trends",
+     "title": "China's Xpeng wants to put an eerily friendly humanoid robot in your home for the same price as an affordable EV",
+     "snippet": "",
+     "published_at": "2026-11-26T19:17:11Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-2e82098e2d93",
+   "headline": "Volvo Cars begins training Hexagon AEON humanoids for factory work at Ghent plant, with rollout from 2027",
+   "summary": "Volvo is training Hexagon Robotics humanoids at its Belgium plant, starting with placing parts into fixtures.",
+   "subtopics": [
+    "humanoids",
+    "industrial-logistics"
+   ],
+   "entities": [
+    "Volvo Cars",
+    "Hexagon Robotics",
+    "AEON"
+   ],
+   "importance": 76,
+   "evidence": [
+    "primary source (Volvo)",
+    "Automotive News"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 39.5,
+   "features": {
+    "n_items": 9,
+    "n_independent_domains": 9,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 9,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VX0pCblpnSHduc0N0X2lpVVBOS3lUaGd6Z2V6VS1pLWQ2dFI0ZG5RNElVbTBsMmM5TkZLdXczanVQaUtoSVNySjBTa0FnektSaDlvY1hBMEk2LUwzNFo3MngzNHlwOGlzZFZ1eWNBMnNfVDFQZkU3Yw?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE9oWjgwR3VhLUdIMy11bFhtamc3Sk5aNVFEcDZmOWhaS0JObmF5Q21XZWRUbVhWNnlHNWN6cGVScU1yVFFqNVJ6VnpoS3IySDVocm5Zam40bDgxNmJGaE9Tajd2LTRRRkliNHVld1J6RDM3bzNnLWRPVzY2d1dXdw?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM1lFaTRVdmlhT3ljSlh1bk44ZnhMcGJFeTVjUXhRYzdVT3ZlZU0tb1lub1l2NkMydkdQcElUbWZxdG13NWhnVVlxWTlYWTQteEk0aHZwX3RST0dycEJLMHdnTVRVZ2FlczdpUEF5ZVlhRm5qbzdzUUZzSnBWUUh1SXBtdTA5d2I0aDFKRW1RbzJPVXVQOWFFUDBkWm4?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRUxIdzFkM1JGQWY1RXlGb3FBelNEMEpUWmpSRVd1ODBDc3k2UGYtTnNiY0VfSW1fakJhM2pabFRrUVFrbEwxNW50cjhGYUNfT2pTdmcxc3V4M2NlSDNfTkNmeTIxNzlOUzhvWFZPX095SzZJamk0OHpTbzdRdVpOaExreGV5WHlwajFNVUNoTTh5UUoyQm11LXppWjN4RjY2SGc2N3Fn0gGrAUFVX3lxTE8zSVlSbFNmVlRzblVlZ0pYTFBRSF8xZk8zVjV3VFFSWldkNC1SOVhkeC1iRzlrSzhkUTE1TUZqTVZtSV9kWkY5M1o4YmNQeHFUTENMbUtPMURxV0RSNExxcVBWNkhiQk9DOVh1a0hhbWZsR0tQM19RRW9vSkxpMzlCV1RKY041Z2d0Y3E2eVlSLWc2dTRfYm1UTFJoYmdzcEpSemNsd3ZjeWU2OA?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNFRMOWVOcW83aUlLVy1hZlFHRDNyR09pT1FIem9KOEM1VzE0Nmxtam9OVGlzUEp0dWFEMEZBcC1Jc0RfT1hiWmJUVlZFR0xDNGtTS196TWRJQ0VuV2FTT1MxN2xOa0p2amFBU3hzUkNMVzlHQnRKbWNXRVI3LUxTQnNfMFJYTlZUZ0hsNGRrOEZOY0pWS3g4VGk3YnA3MXlpS0RIdnlScE4?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZnFaYTZEVms0R0wzMUdtVWpHX0NudXlKTTRDcjBCSzcweDZyZEo2dklLVFdBMnJkT1RFR25uN0JCdHJiUWpnSnBnUlU4UkNiLTFZSUdkVGQyaDlDWDV5YTBMaWhpSHUtMC00MURIdTFEaFNPc0RWVkF6UUVnRGVPdkR5TWJhdk1EZ2RjUUVzX1RRS3pMTXYxcUFlN3VQMVRWcEM0ZnhaWTJYQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTjhqeVhIUlpYUzFMRmoxWHNUSUgwMllUcWZLVTBiWDE2TjNtTWoxUFFWMWpYR0QwQ2h4RmczS0pkYk01T3FvNERrc1loOEQzeVhwSVdTZGU0T0t5N1BMTnZZemd3YTgzcEFLLWUySURqb0NPc2NkVFI1ZnJLZUJCVmxDSnFLOXhEM3hrc3o0VjZwaWZPcWRlemlRVkI2X2RwLWVPU1d2b2l2TEdFdURTcjZxSm8zLUxEOG9FbG1XMENPZw?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNi1NQzhlT0lqZ1ZFZHhYRFd3bmZRQ1UxS0tFNmRxQ19pU1UzTEpiR1ZFTW81cGU4U0Y5Q3JVc1lKLXdsd0Y0Mk1XY1Y4RWdvazJuc0o2RWxFT1Z1YXZySHA4YjdFamRTMGpoeEhCTXB5dDlPTzNJbFkwd3JDaENlbFlwaEEzMnR0cm5nOHV1eDFfX3BZVFczbHN4d0gzZFNIRGdmdXNqaUtjT3dtYU12MW5LN1l2UG1BNFRGRzUzV3Y3THRn?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxQdXdsM2JwRWhwSUQwVk9EcUpLc0NqRmdwTTB5cXRueGFuUkNVN3dnVUZQblQ3bU1GOUxnV3h5UUZlbFZBSjFjUXg2WmlBNUFoWE52Q2JfakkxcmdYZ2ljdFRVSVFua2tGM1pWcmRoXzNjQ3B0S0hvemNtWlgzM0JFNG5VQ3pDckIxRzBkQ2x1STY1OE56c2UyMThwdkxDbUlzbkhZNzJoQ09YMXM0cXMwbEF2bUhWeXY3OXFQanFiOWxSbzdNVUZpMDZnTDJ4UQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VX0pCblpnSHduc0N0X2lpVVBOS3lUaGd6Z2V6VS1pLWQ2dFI0ZG5RNElVbTBsMmM5TkZLdXczanVQaUtoSVNySjBTa0FnektSaDlvY1hBMEk2LUwzNFo3MngzNHlwOGlzZFZ1eWNBMnNfVDFQZkU3Yw?oc=5",
+     "outlet": "Volvo",
+     "title": "Volvo Cars trains Hexagon Robotics’ humanoids for manufacturing",
+     "snippet": "",
+     "published_at": "2026-11-26T08:00:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9oWjgwR3VhLUdIMy11bFhtamc3Sk5aNVFEcDZmOWhaS0JObmF5Q21XZWRUbVhWNnlHNWN6cGVScU1yVFFqNVJ6VnpoS3IySDVocm5Zam40bDgxNmJGaE9Tajd2LTRRRkliNHVld1J6RDM3bzNnLWRPVzY2d1dXdw?oc=5",
+     "outlet": "Automotive News",
+     "title": "Volvo puts humanoid robots to work at Belgium plant as automakers chase factory automation",
+     "snippet": "",
+     "published_at": "2026-11-26T11:00:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM1lFaTRVdmlhT3ljSlh1bk44ZnhMcGJFeTVjUXhRYzdVT3ZlZU0tb1lub1l2NkMydkdQcElUbWZxdG13NWhnVVlxWTlYWTQteEk0aHZwX3RST0dycEJLMHdnTVRVZ2FlczdpUEF5ZVlhRm5qbzdzUUZzSnBWUUh1SXBtdTA5d2I0aDFKRW1RbzJPVXVQOWFFUDBkWm4?oc=5",
+     "outlet": "MLQ.ai",
+     "title": "Volvo Cars trains Hexagon AEON humanoids for Ghent production from mid-2027",
+     "snippet": "",
+     "published_at": "2026-11-26T10:39:13Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRUxIdzFkM1JGQWY1RXlGb3FBelNEMEpUWmpSRVd1ODBDc3k2UGYtTnNiY0VfSW1fakJhM2pabFRrUVFrbEwxNW50cjhGYUNfT2pTdmcxc3V4M2NlSDNfTkNmeTIxNzlOUzhvWFZPX095SzZJamk0OHpTbzdRdVpOaExreGV5WHlwajFNVUNoTTh5UUoyQm11LXppWjN4RjY2SGc2N3Fn0gGrAUFVX3lxTE8zSVlSbFNmVlRzblVlZ0pYTFBRSF8xZk8zVjV3VFFSWldkNC1SOVhkeC1iRzlrSzhkUTE1TUZqTVZtSV9kWkY5M1o4YmNQeHFUTENMbUtPMURxV0RSNExxcVBWNkhiQk9DOVh1a0hhbWZsR0tQM19RRW9vSkxpMzlCV1RKY041Z2d0Y3E2eVlSLWc2dTRfYm1UTFJoYmdzcEpSemNsd3ZjeWU2OA?oc=5",
+     "outlet": "Motor Illustrated",
+     "title": "Volvo to Introduce Humanoid Robots into Vehicle Production in 2027",
+     "snippet": "",
+     "published_at": "2026-11-26T13:36:06Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNFRMOWVOcW83aUlLVy1hZlFHRDNyR09pT1FIem9KOEM1VzE0Nmxtam9OVGlzUEp0dWFEMEZBcC1Jc0RfT1hiWmJUVlZFR0xDNGtTS196TWRJQ0VuV2FTT1MxN2xOa0p2amFBU3hzUkNMVzlHQnRKbWNXRVI3LUxTQnNfMFJYTlZUZ0hsNGRrOEZOY0pWS3g4VGk3YnA3MXlpS0RIdnlScE4?oc=5",
+     "outlet": "AI Insider",
+     "title": "Volvo Cars Begins Training Hexagon Humanoid Robots for Factory Work",
+     "snippet": "",
+     "published_at": "2026-11-26T13:11:27Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-1ff10008efd0",
+   "headline": "Japan's Noetra launches with 44 companies for domestic physical AI, backed by up to ¥1.3 trillion from METI",
+   "summary": "Noetra launched with 44 companies, with METI support of up to ¥1.3 trillion.",
+   "subtopics": [
+    "robotics-business",
+    "robot-foundation-models"
+   ],
+   "entities": [
+    "Noetra",
+    "METI"
+   ],
+   "importance": 72,
+   "evidence": [
+    "single source"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyQXZSZjdKVU5nQWFXVnlmWF9tbm1wT2ZYbjU4WnlYVG5FOWprY1pFTS1hTGxaRDNNX1YyN1RHRVNobEs2b0h0UVNEaGFZbTdnMWtJTlRXakloWVFsLWtQWkNTcm5pSE02N3dlSFV3bEVSaF9GX0E?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyQXZSZjdKVU5nQWFXVnlmWF9tbm1wT2ZYbjU4WnlYVG5FOWprY1pFTS1hTGxaRDNNX1YyN1RHRVNobEs2b0h0UVNEaGFZbTdnMWtJTlRXakloWVFsLWtQWkNTcm5pSE02N3dlSFV3bEVSaF9GX0E?oc=5",
+     "outlet": "BigGo Finance",
+     "title": "Japan's Noetra Launches with 44 Companies to Build Domestic Physical AI; Ministry of Economy, Trade and Industry to Back It with Up to ¥1.3 Trillion",
+     "snippet": "",
+     "published_at": "2026-11-27T01:56:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-07b37e8588c5",
+   "headline": "Jensen Huang reinstated as Nvidia CEO after resignation amid reported scandal",
+   "summary": "Robotics247 reports Huang was reinstated as president, CEO and board member after an earlier resignation report. Trump said the market feels good about his return.",
+   "subtopics": [
+    "robotics-business"
+   ],
+   "entities": [
+    "Jensen Huang",
+    "Nvidia",
+    "Trump"
+   ],
+   "importance": 70,
+   "evidence": [
+    "Reuters",
+    "robotics247"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 34.39,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 2,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 5,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member",
+    "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9XbVFpb2oxYzkzN0xRaDhhYlVjbU0wTHhISkowOGhuMVYwQTF1WU9GTDZsanpnZmM2TXdvdkxMMTZyTHY1QmM1aG1uSThHUGZoOUhkWGRnTzZDRi1RMG5qNHBlbkUtMXM?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member",
+     "outlet": "robotics247.com",
+     "title": "Jensen Huang reinstated as NVIDIA president, CEO and board member",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal",
+     "outlet": "robotics247.com",
+     "title": "Jensen Huang resigns as NVIDIA CEO amid affairs scandal",
+     "snippet": "",
+     "published_at": null
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9XbVFpb2oxYzkzN0xRaDhhYlVjbU0wTHhISkowOGhuMVYwQTF1WU9GTDZsanpnZmM2TXdvdkxMMTZyTHY1QmM1aG1uSThHUGZoOUhkWGRnTzZDRi1RMG5qNHBlbkUtMXM?oc=5",
+     "outlet": "Reuters",
+     "title": "Trump: 'Market feels very good' about Huang's return as Nvidia CEO",
+     "snippet": "",
+     "published_at": "2026-11-27T03:28:14Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-c8d1425b6894",
+   "headline": "Samsung's robotics push, including humanoid and chip-fab robots by 2028, sparks Korean robot stock rally",
+   "summary": "Samsung plans unmanned vehicles, robots and robotic arms in its chip fabs by 2028. Korean robot stocks surged on the news and hopes for a CES humanoid reveal.",
+   "subtopics": [
+    "robotics-business",
+    "humanoids"
+   ],
+   "entities": [
+    "Samsung Electronics",
+    "Rainbow Robotics",
+    "Xenics Robotics"
+   ],
+   "importance": 68,
+   "evidence": [
+    "Businesskorea, Chosunbiz, Wccftech"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 39.5,
+   "features": {
+    "n_items": 12,
+    "n_independent_domains": 9,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 12,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xN3hHXzJBS2pGWHdXZElGeXI5Wk13cEtOYXlqdmFqU3l2ajFmOEJLeWFQYk45R2YzNnNGZElLYlZnMUZYT1FlR2Y2U2tGV3M?oc=5",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9YMHV2ODZxbnNnVzJqZmNnNkcwNlp6MHg3QkhLa0pDek5YSlVZaU8zWmMzSkpqVmJhbWVlbmNYdnZkQ09sS1cyQjFCamVVQVo2RXFBT2luMXA?oc=5",
+    "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1yY2szbWZBN0tGbUE4Z1VmdmJYdGF3alp0MDU5RVBWRTdsdER2V3NpWGJBQ3J2MlBEdl9uRU9GcXR6TGJhdVFaMEhRRk9lN1RHN05BdVhvRnBGejFuV3NYMGlB?oc=5",
+    "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5EeEZxdUFTcGo3U2lYcjJQQldYblZzMFFoQUZUenNRMnVLOV9fZkRxQm1VS2d6dnZOcTJDTEd4RTJvMVctVGJpTG1aWlAxR0dvNDVpbDMxWEhtUEdEbUc1dTJR?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1TX1hBLXAyT05PNnV6T0s2US0zQXk5ajVzdEo4bTFPRW92dXVQZ2YxTEQ5QkNYSWw4Q0tmMl9PLWgwaGhOeGVLdGFyYTN5Nnc5QURsVVJyRm5sSEpUdHVUaDdUcC1VNVk?oc=5",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YanJXODFiQjVsS2NKVnNrWi0ta1ByVE0yeWlRQ2tVWVVSSS1tNHE4OG1aSVcwRWttX3l6Rm91dEdPNlFraENDRVNKZDNSRkJOSldwUWk1Y2RJY3JiVjB0dXpMbnY2UmZRQWln?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rSHU2VzRGcDZJZWh1REVZSE1sM3RoampBS3RwT0FLbTVaUlJoUXFfMVlxSHk5NFVaQ2tmRXVxV2J3dHZsOWJHUWpMMlpBbkJld2FJNmxSYUtrNlBWbk5ONHBNbnl0WlVQbGZySQ?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3TlhmUTgtR2RWcUtFVE91cG90UjNROWdDNnZ5WVhYMWdxMGpYVURRWXJ3bFVNRVhPazJiYjNOUFJVaGdXYmhISjJWYS1Gb19LUDM5ZlFteHNrNGcxSEVGbVhqT2g4S0VLZENHcnlGT2M4cHVw?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9uXzJTQUpWYURBWXlTMV9QOWt3bmhpaFN3WkRkTlM5YmtHRi1oZ3A1TXdkLXVfRklXWnBUNkh6WUp3R2txa2t6T0M4YWtxTjYwMWVfcU1zdmI5QnpoQWJwQUNzejdhMzUzR1ZOcURiaHp2RWRhWmc?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBadHEwU1lIV1N6T1oxaWZ4Rmd0TnkyNWY1RkxOTW0wdnNPX001VmlEVlB5ckJuQUFneFV0c2JhRnpQZHlkSmVNblpkQ2o2a2FibXV5cFNiUzFuTnVCTjVMd2dBcnA5X3djV0NMdGI2dmdtZFdYNHc?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRlBBV2c1U2J4RlE4VnhzTDAzRHNLT3dJQnNrYnVuMWtDME51WnZYcE5fU1hlSXZ5b0JuSEpWSnNMYjBrZF9SVEltdDdTMVFRcFRaQ2xQc1BoQzdsV00wd1ZqUlluR3ZNTTBreXdvMXB4bDB1a1lMTzFhLTJUYklRcNIBlAFBVV95cUxQQUstbWlGdWlabURYdHU0VEhCb185RS1MM2swMU9qaXJEcXdfbDF6cWVTc2t0S1l2XzV4c3M3M1lnd3lHSTluZlV4WGhmc1FJcGZURFB5SVRjZDBIWXZYU3h1eTVTSlV6ZXRXckNlSDY0WGtWam5XYUw0eVJuUGdldzBFVHBSYkdvYmx4OGo3TXhEV3ho?oc=5",
+    "https://news.google.com/rss/articles/CBMingJBVV95cUxORUUxZDRyMlhvT2ZIZjJ0MmtDTFV4TzZTT1U4TGhreE80N1dfVndyODVGd0U3NDRhTEpoRUFBZkt0akVLWE1aSHFyUEgweFhiQjZKUDFaM3RXUDAzOUx1UUw1Mmt1MTVIX0g1Y0Z6SUlmdHZJem9hYzVvMmZBMk9iaTJHMzFwY1JPNTh0bEpETlFDa2N4RjJxWHV6Q2pNOXEzd3RmUDJ2NWEzRkpyRkxiSHBWbnVuMHJzSldEWDBIZzdrekhuMkxNNE00MkxwSGhvVUlHQ2pwTjJkNElBeHJVYjVvMDRLY2VfTk1nRXREVG4wNTdHY1lXNC1RRjM0ZlhINTkwOThBdU5JOWhqSnUycDdhYzRmSmhFekg1OC1n0gGjAkFVX3lxTE5BV29ObmRfWGxMODJtajNXRVIzQkQyclNZMlpsRkQzTFppejQ0QmE1XzA1UEtHMFpFcUt3ZzJxWDRCVHFMeW1iYTJaVnhsSXV6cko0cmxyOFpVdVhlZTFoNm1XS2wybTA3Q2RPaUVFM3pKVEJMUHkyeVlZV0ptRFEyWWlFSkN0ODJ6N2ZkMUZyRzBtampmWmd1TXpvWWZBZlB3aE1WNFZDVEVwSHZCTmkycDBVV1ROcFFWdW5meUdLUDFBb1Bqa1FzaVNnZmZfa2ctVEFyeDlUb2JxSzBqOFFQaHF5aDJGN2p3SEFrR0JkNEwwQno4dzRfVm00WlJWMFp4YmFJczFqS3RmUTFfSlUyM29uTFg2UEVpQXk4SFA2WngtMA?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xN3hHXzJBS2pGWHdXZElGeXI5Wk13cEtOYXlqdmFqU3l2ajFmOEJLeWFQYk45R2YzNnNGZElLYlZnMUZYT1FlR2Y2U2tGV3M?oc=5",
+     "outlet": "매일경제",
+     "title": "Amid growing expectations for expanding humanoid demand in the future, robot-related stocks are soar..",
+     "snippet": "",
+     "published_at": "2026-11-27T01:02:44Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9YMHV2ODZxbnNnVzJqZmNnNkcwNlp6MHg3QkhLa0pDek5YSlVZaU8zWmMzSkpqVmJhbWVlbmNYdnZkQ09sS1cyQjFCamVVQVo2RXFBT2luMXA?oc=5",
+     "outlet": "파이낸셜뉴스",
+     "title": "'Robot on the March': Rainbow Robotics Rises to No. 2 on KOSDAQ by Market Cap",
+     "snippet": "",
+     "published_at": "2026-11-26T07:40:06Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1yY2szbWZBN0tGbUE4Z1VmdmJYdGF3alp0MDU5RVBWRTdsdER2V3NpWGJBQ3J2MlBEdl9uRU9GcXR6TGJhdVFaMEhRRk9lN1RHN05BdVhvRnBGejFuV3NYMGlB?oc=5",
+     "outlet": "재경일보",
+     "title": "\"Xenics Robotics\" hits daily price limit... Samsung's expanded robotics business sparks investor sentiment... Related stocks surge",
+     "snippet": "",
+     "published_at": "2026-11-27T01:50:12Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5EeEZxdUFTcGo3U2lYcjJQQldYblZzMFFoQUZUenNRMnVLOV9fZkRxQm1VS2d6dnZOcTJDTEd4RTJvMVctVGJpTG1aWlAxR0dvNDVpbDMxWEhtUEdEbUc1dTJR?oc=5",
+     "outlet": "재경일보",
+     "title": "Robot stocks rally on forecast of 7.87 million humanoid units by 2040; Hyundai AutoEver up 6%, Rainbow Robotics up over 8%",
+     "snippet": "",
+     "published_at": "2026-11-27T01:50:13Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1TX1hBLXAyT05PNnV6T0s2US0zQXk5ajVzdEo4bTFPRW92dXVQZ2YxTEQ5QkNYSWw4Q0tmMl9PLWgwaGhOeGVLdGFyYTN5Nnc5QURsVVJyRm5sSEpUdHVUaDdUcC1VNVk?oc=5",
+     "outlet": "cwibc.co.id",
+     "title": "Samsung Expands Robotics Push Across Chip Factories and Research",
+     "snippet": "",
+     "published_at": "2026-11-27T04:39:03Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-11e403668712",
+   "headline": "XPeng says humanoids could do household chores within 1-2 years and will trial as store assistants in Q1 2027",
+   "summary": "XPeng says robots could do chores in 1-2 years. An IRON robot is slated to train as a store assistant at XPENG retail stores in Q1 2027.",
+   "subtopics": [
+    "humanoids"
+   ],
+   "entities": [
+    "XPENG",
+    "IRON"
+   ],
+   "importance": 62,
+   "evidence": [
+    "CNBC",
+    "Stock Titan"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 28.25,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 5,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxOc1BINks3MVZUQ1BqeGk5azVmcm9QaFpCY001LVlOVVpvRW1SdG9xNlBENG5hLXFRamhpS0o0anNBZWU5ZzJaR2k5b0JFc2FRQ3djY3A2LTlaOW5sSFhWdGEzdHRyQzg0S2h2aVJMNWlzZE40UUp4RV9yTzN0RmdoaFpQVnJBRHZDOVNLadIBkgFBVV95cUxObzFMRk80QVkxUUIxdDFGSXdab01lX2xZTjhab0pRUXpzbTA3XzNJQXhYVjdJZVhIQU01a3lJNjdVeFcwTko1MC1Cak43aEtZakI3bVpOVjB5Q2JqTXVQRGo4NmtYX3QzVGNDczJHT09lRC16R0dOTTNUUDRWUGl2LVhZeHNtVHppemJlNjJuWVd6UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeGRUY3p2UmJ3UFdCOWp4aURGdnlUcW9BM0F3cVVSQmdVYnhKaVhvMExDZ09kZUxnSENyeFptZzBITXF5TldyaTV3Yy1VNXlLeVVEVFJ0UVA5WEtkNHY5TVc5WVZHYnRwd3Ywc3B0eEVGbnBveDVyNFRjM2RNd2NIMXRYTGJIZkpsTzI3YTRpZ0hDUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTy0yQ0NWVmxTUW9xdkM2d2s1ejdQMkVYTW1ab3hNX2ZiTHBXSVZhT3N4azhIbVhWc2xoYms1RkF4R0pCekRWOFgtc3dyMlZUWDhNdF93R2E3ZFQtNFNBYnpoOVotTjItLVc3bDZWY2E5Wmkxc3J4bXFsUE82eUpvMVBZV1J0elh4UG5WbjZqalowN29SRFE?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeFdwYmVXdjVPS0s0VF9sRGNicWlNWHQxemVUWEE3X3NtM2RHcXZ1NG1JS1E3MTNDMVZmVDFSdDFXX2l1ZjY4c096SlRaWS1BVUk5Q3dpcjIzMWstUERjdEhSenlfbXZhTXBDc2ZoWm1pTkNmcjNEQkZ6MjdaNzdYMzd5QmxYR19sWUU4YThZU0Z0T3l0cndKR0RBb1V4MWhpZUNGZFhqOUd0YmNEcG5kenI0bnVrcTA?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5",
+     "outlet": "eWeek",
+     "title": "XPeng’s IRON Robot Has a 2027 Timeline: What Its Store Trial Could Prove",
+     "snippet": "",
+     "published_at": "2026-11-26T10:05:05Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOc1BINks3MVZUQ1BqeGk5azVmcm9QaFpCY001LVlOVVpvRW1SdG9xNlBENG5hLXFRamhpS0o0anNBZWU5ZzJaR2k5b0JFc2FRQ3djY3A2LTlaOW5sSFhWdGEzdHRyQzg0S2h2aVJMNWlzZE40UUp4RV9yTzN0RmdoaFpQVnJBRHZDOVNLadIBkgFBVV95cUxObzFMRk80QVkxUUIxdDFGSXdab01lX2xZTjhab0pRUXpzbTA3XzNJQXhYVjdJZVhIQU01a3lJNjdVeFcwTko1MC1Cak43aEtZakI3bVpOVjB5Q2JqTXVQRGo4NmtYX3QzVGNDczJHT09lRC16R0dOTTNUUDRWUGl2LVhZeHNtVHppemJlNjJuWVd6UQ?oc=5",
+     "outlet": "CNBC",
+     "title": "Robots could be doing household chores in just 1-2 years, Chinese EV firm says",
+     "snippet": "",
+     "published_at": "2026-11-26T07:30:11Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeGRUY3p2UmJ3UFdCOWp4aURGdnlUcW9BM0F3cVVSQmdVYnhKaVhvMExDZ09kZUxnSENyeFptZzBITXF5TldyaTV3Yy1VNXlLeVVEVFJ0UVA5WEtkNHY5TVc5WVZHYnRwd3Ywc3B0eEVGbnBveDVyNFRjM2RNd2NIMXRYTGJIZkpsTzI3YTRpZ0hDUQ?oc=5",
+     "outlet": "Android Headlines",
+     "title": "Humanoid Robots Could Be Doing Your Laundry and Dishes Within Two Years, XPENG Says",
+     "snippet": "",
+     "published_at": "2026-11-27T02:38:21Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTy0yQ0NWVmxTUW9xdkM2d2s1ejdQMkVYTW1ab3hNX2ZiTHBXSVZhT3N4azhIbVhWc2xoYms1RkF4R0pCekRWOFgtc3dyMlZUWDhNdF93R2E3ZFQtNFNBYnpoOVotTjItLVc3bDZWY2E5Wmkxc3J4bXFsUE82eUpvMVBZV1J0elh4UG5WbjZqalowN29SRFE?oc=5",
+     "outlet": "TVC News",
+     "title": "Chinese Carmaker XPENG To Deploy Humanoid Robots As Shop Assistants",
+     "snippet": "",
+     "published_at": "2026-11-26T09:20:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeFdwYmVXdjVPS0s0VF9sRGNicWlNWHQxemVUWEE3X3NtM2RHcXZ1NG1JS1E3MTNDMVZmVDFSdDFXX2l1ZjY4c096SlRaWS1BVUk5Q3dpcjIzMWstUERjdEhSenlfbXZhTXBDc2ZoWm1pTkNmcjNEQkZ6MjdaNzdYMzd5QmxYR19sWUU4YThZU0Z0T3l0cndKR0RBb1V4MWhpZUNGZFhqOUd0YmNEcG5kenI0bnVrcTA?oc=5",
+     "outlet": "Stock Titan",
+     "title": "A humanoid robot is scheduled to train as a store assistant at XPENG retail stores in Q1 2027.",
+     "snippet": "",
+     "published_at": "2026-11-26T18:05:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-d4067a16a11a",
+   "headline": "Rockwell Automation to acquire AGILOX",
+   "summary": "Rockwell is acquiring the mobile robot maker.",
+   "subtopics": [
+    "industrial-logistics",
+    "robotics-business"
+   ],
+   "entities": [
+    "Rockwell Automation",
+    "AGILOX"
+   ],
+   "importance": 62,
+   "evidence": [
+    "robotics247 #12"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 20.21,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 1,
+    "best_rank": 12,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://robotics247.com/article/rockwell-automation-to-acquire-agilox"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://robotics247.com/article/rockwell-automation-to-acquire-agilox",
+     "outlet": "robotics247.com",
+     "title": "Rockwell Automation to acquire AGILOX",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-88cd6b952f8f",
+   "headline": "Waymo recall covers 4,488 vehicles tied to closed-lane incidents",
+   "summary": "Reuters reported a recall tied to 11 closed-lane incidents.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Waymo",
+    "Reuters"
+   ],
+   "importance": 62,
+   "evidence": [
+    "Reuters-based reports"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 10.25,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE5MTF84ekpnYkhOd0VJOUNSNXJiZS1WODlMSUZ6Rk0zTmMtazgtY0NtYm5fZkhqUUNoRl9QZ2FnQXZDREZnQkFKTnVkN2ZiTEtGRVJFZTFnNjVoTnpsblhacGFOVUZLME1JTDVEYU9Ja2UtVm11c1puQkdxLXUtdw?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOajFYRWlGcTZpSVVhbktXZWlWYWJwT0VIWnlxTGVOZDBrWExXNFA0elJyYzg2b1JKeGxmTUhHTzNOTWdSdUswYXdZZXY4WjhXNHlZWkg5N0NnS25YLTlyMWFjS3Eyamd1bk94QzM3ZUtNbVRLYTZ5LVB2Wm1UWFdydmdGdkVCVnRnN1N3NWZ1Y1o?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5MTF84ekpnYkhOd0VJOUNSNXJiZS1WODlMSUZ6Rk0zTmMtazgtY0NtYm5fZkhqUUNoRl9QZ2FnQXZDREZnQkFKTnVkN2ZiTEtGRVJFZTFnNjVoTnpsblhacGFOVUZLME1JTDVEYU9Ja2UtVm11c1puQkdxLXUtdw?oc=5",
+     "outlet": "NeoTeo",
+     "title": "Waymo Robotaxi Recall Covers 4,488 ADS Units",
+     "snippet": "",
+     "published_at": "2026-11-26T14:16:11Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOajFYRWlGcTZpSVVhbktXZWlWYWJwT0VIWnlxTGVOZDBrWExXNFA0elJyYzg2b1JKeGxmTUhHTzNOTWdSdUswYXdZZXY4WjhXNHlZWkg5N0NnS25YLTlyMWFjS3Eyamd1bk94QzM3ZUtNbVRLYTZ5LVB2Wm1UWFdydmdGdkVCVnRnN1N3NWZ1Y1o?oc=5",
+     "outlet": "NeoTeo",
+     "title": "Reuters reports Waymo recall tied to 11 closed-lane incidents",
+     "snippet": "",
+     "published_at": "2026-11-26T09:30:57Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-2da33018627a",
+   "headline": "Robotera puts 45 M7 humanoids to work at China Post's Hangzhou hub",
+   "summary": "A large-scale humanoid fleet deployment.",
+   "subtopics": [
+    "humanoids",
+    "industrial-logistics"
+   ],
+   "entities": [
+    "Robotera",
+    "China Post"
+   ],
+   "importance": 60,
+   "evidence": [
+    "PR Newswire, Gasgoo"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOelI4ZEFpNGdWS0Y5LU4zMlVYYlJ3aVlnZUN3QlhxT0dqd2lZT3c1dk9JOXk2aElyWnJ3Y2pjWnd2T05DVmpxWDRuUnI5bjZfS3JYdTJ6ZWU4YjlWTldCdkhBQ2p1VDVHSkx4Z0x0WHRYRTNKS0VSZzExbVh3T2dVLVNxR2t2Vk5TU2tBM1VUc2xrU0t6eDBiUi1OeEZydlVKVlA5Zm5SVklNblpibGxSRWppNl9mbF9sMlRHNzF4UXNxVTM4cmM4R0hXQlJJYnFRM1E?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUnY2b2QtVlR5SWpBbGc3SVR3c1pobTlpTDZiSklWZGdLVWpnY1BFMDJweEVkMUJJRjBqeHBxeUxudFdOQVRoRU96S3N3Wng1aVMxT1NYXzJsTkRVbllnTVFyZm95Ry1ud3BGWnVWZnlpWU02RnZlMDFFenM0NmozVnV4Vy1abmphM05KZENR?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbExxMDBXT3JtdmYwOTZ3SEhFdXVTM3g4dTVJZ3hlTWFUVTQtWW5JOXZtVmNKd1kzaW9MZU51Qm9VbzZRcnBLWkNnalAyb25Cd3JBSk1uUFU2MDNRcHZYU3kxMjd6SDA0bWdVN3l0bENEaDNTLU94RmhzRkRsbThnc0FEZkpqd3cxSjc5bTl0anF1MFd1TkhTamx2eGV3aDBXR29IR0J0SEJmdnkycHMwc0tjN2xHX3k3MjQ1UzZxdmlCSXhHRE83NA?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOelI4ZEFpNGdWS0Y5LU4zMlVYYlJ3aVlnZUN3QlhxT0dqd2lZT3c1dk9JOXk2aElyWnJ3Y2pjWnd2T05DVmpxWDRuUnI5bjZfS3JYdTJ6ZWU4YjlWTldCdkhBQ2p1VDVHSkx4Z0x0WHRYRTNKS0VSZzExbVh3T2dVLVNxR2t2Vk5TU2tBM1VUc2xrU0t6eDBiUi1OeEZydlVKVlA5Zm5SVklNblpibGxSRWppNl9mbF9sMlRHNzF4UXNxVTM4cmM4R0hXQlJJYnFRM1E?oc=5",
+     "outlet": "PR Newswire",
+     "title": "ROBOTERA Puts 45 Humanoid Robots into Large-Scale Fleet Operations at China Post",
+     "snippet": "",
+     "published_at": "2026-11-26T11:19:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUnY2b2QtVlR5SWpBbGc3SVR3c1pobTlpTDZiSklWZGdLVWpnY1BFMDJweEVkMUJJRjBqeHBxeUxudFdOQVRoRU96S3N3Wng1aVMxT1NYXzJsTkRVbllnTVFyZm95Ry1ud3BGWnVWZnlpWU02RnZlMDFFenM0NmozVnV4Vy1abmphM05KZENR?oc=5",
+     "outlet": "Unite.AI",
+     "title": "ROBOTERA Deploys 45 Humanoid Robots at China Post’s Hangzhou Hub",
+     "snippet": "",
+     "published_at": "2026-11-26T12:05:02Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbExxMDBXT3JtdmYwOTZ3SEhFdXVTM3g4dTVJZ3hlTWFUVTQtWW5JOXZtVmNKd1kzaW9MZU51Qm9VbzZRcnBLWkNnalAyb25Cd3JBSk1uUFU2MDNRcHZYU3kxMjd6SDA0bWdVN3l0bENEaDNTLU94RmhzRkRsbThnc0FEZkpqd3cxSjc5bTl0anF1MFd1TkhTamx2eGV3aDBXR29IR0J0SEJmdnkycHMwc0tjN2xHX3k3MjQ1UzZxdmlCSXhHRE83NA?oc=5",
+     "outlet": "Gasgoo",
+     "title": "45 Robotera M7 Embodied Robots Start Work at China Post in Hangzhou",
+     "snippet": "",
+     "published_at": "2026-11-26T13:31:19Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-0df058c54820",
+   "headline": "Pentagon confirms preliminary talks with GM, Ford on drone component production",
+   "summary": "Talks on drone parts production.",
+   "subtopics": [
+    "drones-field"
+   ],
+   "entities": [
+    "Pentagon",
+    "GM",
+    "Ford"
+   ],
+   "importance": 58,
+   "evidence": [
+    "single source"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWXVOanp1Y1pnN01HY0phZ1VXSTJGUDV6dkFCVGIxTDZUYmlmaGJmVU9ZSi1oU0ozSGZfNTAtUU5HUkxBUVc4a3MzRkVweHNKT0x1Vld6MUZfOHN1d1dBMkRNZEFVZDhaQkxtanFqVnhQOVdwT0I4VGk4ZHgtTmRDQ1k4S19lU1dScC1lLWVpS1J4a2RCbEQzYUwyS3h1U1NyTjFCQ1VkZGxVNzQ1S184bzhfamlzNHhfTTZWYlVrUTlONnhuaVZOZ2dQOUxQRDQtSkE?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWXVOanp1Y1pnN01HY0phZ1VXSTJGUDV6dkFCVGIxTDZUYmlmaGJmVU9ZSi1oU0ozSGZfNTAtUU5HUkxBUVc4a3MzRkVweHNKT0x1Vld6MUZfOHN1d1dBMkRNZEFVZDhaQkxtanFqVnhQOVdwT0I4VGk4ZHgtTmRDQ1k4S19lU1dScC1lLWVpS1J4a2RCbEQzYUwyS3h1U1NyTjFCQ1VkZGxVNzQ1S184bzhfamlzNHhfTTZWYlVrUTlONnhuaVZOZ2dQOUxQRDQtSkE?oc=5",
+     "outlet": "National News Desk",
+     "title": "Pentagon confirms preliminary talks with GM, Ford on drone component production",
+     "snippet": "",
+     "published_at": "2026-11-26T20:00:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-03b01137dfb4",
+   "headline": "Tesla robotaxi registrations in Texas pass Waymo, with Cybercabs added",
+   "summary": "1,507 Tesla vehicles reportedly registered versus 1,390 for Waymo.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Tesla",
+    "Waymo"
+   ],
+   "importance": 55,
+   "evidence": [
+    "TeslaNorth, X"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsZGhad2N2Z3NmSi1Mcnloa1labzhTX29iWjJId2NGNE1PTG1yQ2x6N2VXb1dIZG5fRWx1NXRmMzhjR1JUVUw5dmJjT2Y5c2VCTXRqRXJQOW1VUloybFhyb2hJUzNreTRPd1EtSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxONVlJcGZlRnBVa3BJVDd6NG9MUzZDSkQ5Z3d1VlNHa2pJMHZEcHM2RzNtWnoyS0kyMW5qMXdGZXJCaGRuYzJ2MnM1Q1hOZENYTUs2SzRPa1E0Ri1aaWFmdWJBTDNwTS1neFkyay1vSTFJbnI1X09Md3dzY0szZFVBM1c4VEluLTYtWERWcXFSWFh2Vkk1?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOREdOYTZCdUNuZ2xzMU9yTkMwc29XcURiQ0I4Q0dVTUM3Q1oyMGd1ZGlOZ2xjTGUzbW9zYW1kQ1NuLXRKOHRJWGpYblRrYVZCdkx1NFl1a3pLREhiMk9OQ015UkpnSzFiQnhZWU51MG92UFlkVk9yUHlXbV9KZHRva2xFVEc5VEh3eE5mbHdSU3N3Rm9NWVp5Wi1GTm1uNU0?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsZGhad2N2Z3NmSi1Mcnloa1labzhTX29iWjJId2NGNE1PTG1yQ2x6N2VXb1dIZG5fRWx1NXRmMzhjR1JUVUw5dmJjT2Y5c2VCTXRqRXJQOW1VUloybFhyb2hJUzNreTRPd1EtSQ?oc=5",
+     "outlet": "X",
+     "title": "Tesla's Robotaxi fleet just pulled AHEAD of Waymo in Texas. And it's adding Cybercabs by the HUNDREDS. The numbers? 1,507 vehicles registered for Tesla vs. 1,390 for Waymo. Tesla added around 200 Cybercabs in one batch, helping it take the lead in th",
+     "snippet": "",
+     "published_at": "2026-11-26T07:30:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONVlJcGZlRnBVa3BJVDd6NG9MUzZDSkQ5Z3d1VlNHa2pJMHZEcHM2RzNtWnoyS0kyMW5qMXdGZXJCaGRuYzJ2MnM1Q1hOZENYTUs2SzRPa1E0Ri1aaWFmdWJBTDNwTS1neFkyay1vSTFJbnI1X09Md3dzY0szZFVBM1c4VEluLTYtWERWcXFSWFh2Vkk1?oc=5",
+     "outlet": "Yahoo Finance",
+     "title": "‘How Can TSLA Compete With Waymo?’ Gary Black Questions Tesla’s Robotaxi Strategy, Predicts Waymo Will Lead in Miles and Trips",
+     "snippet": "",
+     "published_at": "2026-11-27T01:30:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOREdOYTZCdUNuZ2xzMU9yTkMwc29XcURiQ0I4Q0dVTUM3Q1oyMGd1ZGlOZ2xjTGUzbW9zYW1kQ1NuLXRKOHRJWGpYblRrYVZCdkx1NFl1a3pLREhiMk9OQ015UkpnSzFiQnhZWU51MG92UFlkVk9yUHlXbV9KZHRva2xFVEc5VEh3eE5mbHdSU3N3Rm9NWVp5Wi1GTm1uNU0?oc=5",
+     "outlet": "TeslaNorth",
+     "title": "Tesla Now Has More Than 1,000 Cybercabs on Texas’ Robotaxi Roster",
+     "snippet": "",
+     "published_at": "2026-11-26T22:07:34Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-4489a390ee52",
+   "headline": "OpenAI model tops humanoid simulation benchmark ahead of Google and Anthropic",
+   "summary": "An Artificial Analysis humanoid simulation test found LLMs struggling to grip, with OpenAI leading.",
+   "subtopics": [
+    "robot-foundation-models",
+    "simulation-world-models"
+   ],
+   "entities": [
+    "OpenAI",
+    "Google",
+    "Anthropic",
+    "Artificial Analysis"
+   ],
+   "importance": 55,
+   "evidence": [
+    "eWeek, Digg"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9Fam54SWNTcHhieDJrbTFkWmk0U2F6aFBoVmdFeHp1cGtVenVRRWF2U2doQnhFRmkyRUxoVXVTRmxEZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQ3A0d1hBcmh6d00yWTdpaVlyQjA3ZzlyQWJuOUhBdzk4cGMyWEV2VXBtWXpXZm1WSUJZd2FsMTNRVVVXYUVUQXQtcGotbXl3SlFWdU82Q1RJMlBfN3dwcGtURE9ianNwMUstOU0yOEc4YmpEWm90SjlyRzF6RHZab0lR?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNUlwX2pvcVlwY3UwbWpHY0V4dWVJTGhTSVktTk9LT08zSkxGbXNqN01VcG5IQWZrNFc5SHdMVzRublFfVWhwTGllZ1JwMWJ4UXRVMkozS3JwTldGckkwcktyNmQtVGdOeUFJMWQ3NDR0cWxfTkpoelhlWktSMFBvZEZkRDBGTkVpMXNXaQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9Fam54SWNTcHhieDJrbTFkWmk0U2F6aFBoVmdFeHp1cGtVenVRRWF2U2doQnhFRmkyRUxoVXVTRmxEZw?oc=5",
+     "outlet": "Digg",
+     "title": "ArtificialAnlys’ humanoid simulation test finds LLMs struggling to get a grip",
+     "snippet": "",
+     "published_at": "2026-11-26T11:41:53Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQ3A0d1hBcmh6d00yWTdpaVlyQjA3ZzlyQWJuOUhBdzk4cGMyWEV2VXBtWXpXZm1WSUJZd2FsMTNRVVVXYUVUQXQtcGotbXl3SlFWdU82Q1RJMlBfN3dwcGtURE9ianNwMUstOU0yOEc4YmpEWm90SjlyRzF6RHZab0lR?oc=5",
+     "outlet": "eWeek",
+     "title": "OpenAI Beats Google, Anthropic in Humanoid Robot Benchmark",
+     "snippet": "",
+     "published_at": "2026-11-26T19:21:11Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNUlwX2pvcVlwY3UwbWpHY0V4dWVJTGhTSVktTk9LT08zSkxGbXNqN01VcG5IQWZrNFc5SHdMVzRublFfVWhwTGllZ1JwMWJ4UXRVMkozS3JwTldGckkwcktyNmQtVGdOeUFJMWQ3NDR0cWxfTkpoelhlWktSMFBvZEZkRDBGTkVpMXNXaQ?oc=5",
+     "outlet": "Wisevoter",
+     "title": "OpenAI Model Tops Humanoid Robotics Benchmark",
+     "snippet": "",
+     "published_at": "2026-11-26T21:48:42Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-6997eeccb052",
+   "headline": "EU delays vote on Tesla self-driving to December 15",
+   "summary": "Tesla's European FSD expansion faces delay.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Tesla",
+    "EU"
+   ],
+   "importance": 55,
+   "evidence": [
+    "TradingView, Zacks"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX0dpYmlyemx3Q0Fya0tXdUx1OFBjcDQ2UTlqX3k0NHB3SlBQbnczNVZaVnpybGpNamRFOFo0UV9KeEdpSkVEMnEtQ1UyOHE5ZUROdVhQRzIyTTBNOUZlVWlQSlE4U0QyeXQ0a1BYRl9pMUdmX29WUmNfT21fLTlaYkU5bFFGZFRiclQ4WUxYcmZ3QmFXMGhlUlRqOHg5RTNEVnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdDRRcWRMdE5xVXV3U0hqVG92Y2w5bUlWSUJjTGdGek5JU2pzY1duVnZrMDRsVjRiOHFtVXFGSUQzVTBsQ1BHaUlTZzUzYWFVNms2ajRmSE95Sy15aTBvSXI0NTByTTNESFBoQ25acGV6ZlZRZzhKZVpSR0R4TzhUTnMxWXZyeVlFdDdXXzlCV0lCOTdjeF9rSGZPdzlaa0xfalVj?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYk9lYWplZVhTSUtMaDU4SmNFRGh0X1g2TXI2d0RkcWpWUW55Um9qcHFxTG9Cb1ZwVWF6NFhIQUhUR2dndVpqa3NyQmdOWnN6bElkYm0yV3B6QVBicllhT2hVQlBGaDdOU1g2TmhTaUNYcm1OZjdLSUlTbzEyNjY1TTE0NkVUUGZDbzh2VEc2TW9ONXYtdi1TbG9LbHdWSGljbktHNG9zek80anZoZmNKbGV5NV9wYWkyNGp3X01HY292eWlvVi13?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX0dpYmlyemx3Q0Fya0tXdUx1OFBjcDQ2UTlqX3k0NHB3SlBQbnczNVZaVnpybGpNamRFOFo0UV9KeEdpSkVEMnEtQ1UyOHE5ZUROdVhQRzIyTTBNOUZlVWlQSlE4U0QyeXQ0a1BYRl9pMUdmX29WUmNfT21fLTlaYkU5bFFGZFRiclQ4WUxYcmZ3QmFXMGhlUlRqOHg5RTNEVnc?oc=5",
+     "outlet": "Yahoo Finance",
+     "title": "Tesla's Self-Driving Expansion in Europe Faces a Crucial Test",
+     "snippet": "",
+     "published_at": "2026-11-26T13:44:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYk9lYWplZVhTSUtMaDU4SmNFRGh0X1g2TXI2d0RkcWpWUW55Um9qcHFxTG9Cb1ZwVWF6NFhIQUhUR2dndVpqa3NyQmdOWnN6bElkYm0yV3B6QVBicllhT2hVQlBGaDdOU1g2TmhTaUNYcm1OZjdLSUlTbzEyNjY1TTE0NkVUUGZDbzh2VEc2TW9ONXYtdi1TbG9LbHdWSGljbktHNG9zek80anZoZmNKbGV5NV9wYWkyNGp3X01HY292eWlvVi13?oc=5",
+     "outlet": "TradingView",
+     "title": "Tesla Stocks Slip 1.18% as EU Delays Self-Driving Vote to December 15",
+     "snippet": "",
+     "published_at": "2026-11-26T19:03:57Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-c350933e8cbb",
+   "headline": "Eric Trump-backed robot startup's employees lose health insurance after weeks without pay",
+   "summary": "The startup is reportedly scrambling for a $150 million lifeline.",
+   "subtopics": [
+    "robotics-business"
+   ],
+   "entities": [
+    "Eric Trump"
+   ],
+   "importance": 55,
+   "evidence": [
+    "Yahoo Finance report"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQT01vZUc4LUtVcGZSNTd4d3VnZTRVdFRVVkZmSkwtdjh4TXJVVVNPZFhlbHNOYlBrQ1JxV01UeUQwdUpHaTg2RHhLZjVCeWZ1ZGlvMHVtRXdSV1Nhd3dZMzFuV3Z2RlhrTHlRWHV6azg1VV83cXd1bWQwZWlYbkVhTV8tWFVRSmlSYmoxYlZTMmt1a2xBaEpB?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQT01vZUc4LUtVcGZSNTd4d3VnZTRVdFRVVkZmSkwtdjh4TXJVVVNPZFhlbHNOYlBrQ1JxV01UeUQwdUpHaTg2RHhLZjVCeWZ1ZGlvMHVtRXdSV1Nhd3dZMzFuV3Z2RlhrTHlRWHV6azg1VV83cXd1bWQwZWlYbkVhTV8tWFVRSmlSYmoxYlZTMmt1a2xBaEpB?oc=5",
+     "outlet": "Yahoo Finance",
+     "title": "Eric Trump-Backed Robot Startup’s Employees Lose Health Insurance After Weeks Without Pay as Company Scrambles for $150 Million Lifeline: Report",
+     "snippet": "",
+     "published_at": "2026-11-27T02:30:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-d19a8a67a55f",
+   "headline": "US government investigates Waymo robotaxis passing school buses",
+   "summary": "Federal probe into robotaxis passing school buses.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Waymo"
+   ],
+   "importance": 55,
+   "evidence": [
+    "MotorSafety.org"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOUlJ3MHQtMkNUR0JvSlhSQV9raUF6amx3T1JQUi1RUXVmcWhrTDF3SEtaaDFzRmxMb1lmYjBlUEFUbHJvV1dveFhJdWFydlMzYjBKVXAzNHItRUhobGl3UjcyS3czUVl3U2lHUnNtdS11emJnZFd2Z0Q4RkJRR2tlUHlwbkowZlZ4M1QwMFpscXo1dW1oNTd0c0NzYW5EQQ?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUlJ3MHQtMkNUR0JvSlhSQV9raUF6amx3T1JQUi1RUXVmcWhrTDF3SEtaaDFzRmxMb1lmYjBlUEFUbHJvV1dveFhJdWFydlMzYjBKVXAzNHItRUhobGl3UjcyS3czUVl3U2lHUnNtdS11emJnZFd2Z0Q4RkJRR2tlUHlwbkowZlZ4M1QwMFpscXo1dW1oNTd0c0NzYW5EQQ?oc=5",
+     "outlet": "MotorSafety",
+     "title": "US government investigates Waymo over robotaxis passing school buses",
+     "snippet": "",
+     "published_at": "2026-11-26T14:28:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-9e4f09e47466",
+   "headline": "Figure AI answers Musk's 'staged demo' criticism with apple video",
+   "summary": "Figure released a 41-second video responding to Musk.",
+   "subtopics": [
+    "humanoids"
+   ],
+   "entities": [
+    "Figure AI",
+    "Elon Musk"
+   ],
+   "importance": 52,
+   "evidence": [
+    "BigGo, Notebookcheck"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1VWjQ2YWdUV1JWS0UtU3NfQUVZNUNIbm9vdFUyWG1lcVdTYmlhcGNaUFNYcVIzOFFnSUc0c1haMWRPclE5eXNkcEFkWGRER1NhTk14XzQ1M3ctRFNiUlN0aFBBa2xheDJ5dV9yX3JCcGJ1UTlHeGc?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX3BwRmtaeERwMGFyT3YyNG91YnV2Q014QjduZ3pKUmRxeUxTTnpKdlN3Z21WbGlUekVRTUR6WnhvN2QyVkdJbU0zUDladHgtUExMU1ZzOFdlNnhKQkVIcVB2UzVtaVIxdFBucTVsemhSbkhyOExsYjJnSFN4MTZGXw?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPellUM2JpSTJYSWo4ajhkcnRveXFoaUhuQW9JclpNTkpJVnU4VGdkNkNMeFFEb3VLTEVSWk1JQjFoU1BMTlMtTE92ekpqR0E2MFQ5eG5xQUw2N1Z5Q3JGZ0g3NFJ6S0YzWkFkQ0doNXlMQ3phcUJhMHdEeFpNTnJ6TGVFbFNNZmpScXJHRVJFbzlYXzlONDVMRXdzMlJHVDdwVUNndlpfci1SUF9TeHpVdkdoRGpIWGFC?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1VWjQ2YWdUV1JWS0UtU3NfQUVZNUNIbm9vdFUyWG1lcVdTYmlhcGNaUFNYcVIzOFFnSUc0c1haMWRPclE5eXNkcEFkWGRER1NhTk14XzQ1M3ctRFNiUlN0aFBBa2xheDJ5dV9yX3JCcGJ1UTlHeGc?oc=5",
+     "outlet": "BigGo Finance",
+     "title": "Figure AI Fires Back at Musk's \"Staged Robot Demo\" Criticism With Apology Video: \"It Still Succeeds Even When the Table Is Moved\"",
+     "snippet": "",
+     "published_at": "2026-11-26T13:05:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX3BwRmtaeERwMGFyT3YyNG91YnV2Q014QjduZ3pKUmRxeUxTTnpKdlN3Z21WbGlUekVRTUR6WnhvN2QyVkdJbU0zUDladHgtUExMU1ZzOFdlNnhKQkVIcVB2UzVtaVIxdFBucTVsemhSbkhyOExsYjJnSFN4MTZGXw?oc=5",
+     "outlet": "shattered.io",
+     "title": "Figure AI Fires Back at Musk With 41-Second Apple Demo",
+     "snippet": "",
+     "published_at": "2026-11-26T13:34:58Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPellUM2JpSTJYSWo4ajhkcnRveXFoaUhuQW9JclpNTkpJVnU4VGdkNkNMeFFEb3VLTEVSWk1JQjFoU1BMTlMtTE92ekpqR0E2MFQ5eG5xQUw2N1Z5Q3JGZ0g3NFJ6S0YzWkFkQ0doNXlMQ3phcUJhMHdEeFpNTnJ6TGVFbFNNZmpScXJHRVJFbzlYXzlONDVMRXdzMlJHVDdwVUNndlpfci1SUF9TeHpVdkdoRGpIWGFC?oc=5",
+     "outlet": "Notebookcheck",
+     "title": "Figure AI: Tesla rival counters Elon Musk’s robot criticism with an apple",
+     "snippet": "",
+     "published_at": "2026-11-26T12:38:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-a3df99f782f6",
+   "headline": "Boston Dynamics expands GlobalFoundries partnership with Spot and Atlas",
+   "summary": "Boston Dynamics will deploy Spot and Atlas in semiconductor settings with GlobalFoundries.",
+   "subtopics": [
+    "humanoids",
+    "industrial-logistics"
+   ],
+   "entities": [
+    "Boston Dynamics",
+    "GlobalFoundries"
+   ],
+   "importance": 50,
+   "evidence": [
+    "robotics247 #7"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 21.63,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 1,
+    "best_rank": 7,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://robotics247.com/article/boston-dynamics-expands-globalfoundries-partnership-with-spot-and-atlas-in-semiconductor-manufacturing"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://robotics247.com/article/boston-dynamics-expands-globalfoundries-partnership-with-spot-and-atlas-in-semiconductor-manufacturing",
+     "outlet": "robotics247.com",
+     "title": "Boston Dynamics expands GlobalFoundries partnership with Spot and Atlas in semiconductor...",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-76a789c7dbeb",
+   "headline": "Waymo keeps stumbling on freeways despite city mastery",
+   "summary": "The Verge examines Waymo's freeway difficulties.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Waymo"
+   ],
+   "importance": 50,
+   "evidence": [
+    "The Verge"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE01RlZnS2lFS2ZvZWwwcUZHa3Q3aTkxTllSZnFiaTk0YVRwTUt6NXJIRGVHWjdjZ0w5OEZlVUFNRTVxZE5ubXUtVC1DNVRza3BEOEVsdExYeGdTNTRrTmJWV0pPRmpqUkljYnFWNDZTREFUMWpJcE85bTZPUU1hODQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbTctSFc1NVpZTE01Qm1uR0RwNDJuSllEdlA3cFJ3OVlockRSSDA1XzdfMmJYc3BQUTduTW1QcGR5RFJOZ1g1dDdDaTYwTHN1aWJnNnlVakg0RGMzc0NmQzVmZEpteHQ5bzNWdjdoVEJBVTVqYUE2YVNhMHgycy01UDNpVWhnQnJvTFZB?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZ2plaDdTbm0xZ000bG42cng3TGRQTWNJNUItenRmQVpjLThkTDFBTUhWeHhKSndNRnBNZEVOc2dPMkM5SXN2eGR3S2szZFZ2amhJQy1iYmJvUWhZenJRS0VrYTUtazdveE9Uc2E1LVZFWUcxWjhwdWFHMDRCM3FacWRhaklPVkZMeG9vWWVMekVhUzdzZ1dNNEl3?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE01RlZnS2lFS2ZvZWwwcUZHa3Q3aTkxTllSZnFiaTk0YVRwTUt6NXJIRGVHWjdjZ0w5OEZlVUFNRTVxZE5ubXUtVC1DNVRza3BEOEVsdExYeGdTNTRrTmJWV0pPRmpqUkljYnFWNDZTREFUMWpJcE85bTZPUU1hODQ?oc=5",
+     "outlet": "Mezha",
+     "title": "Why Waymo keeps stumbling on freeways after millions of urban miles",
+     "snippet": "",
+     "published_at": "2026-11-26T12:07:40Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbTctSFc1NVpZTE01Qm1uR0RwNDJuSllEdlA3cFJ3OVlockRSSDA1XzdfMmJYc3BQUTduTW1QcGR5RFJOZ1g1dDdDaTYwTHN1aWJnNnlVakg0RGMzc0NmQzVmZEpteHQ5bzNWdjdoVEJBVTVqYUE2YVNhMHgycy01UDNpVWhnQnJvTFZB?oc=5",
+     "outlet": "The Verge",
+     "title": "Waymo conquered city streets — why does it keep stumbling on freeways?",
+     "snippet": "",
+     "published_at": "2026-11-26T12:00:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-b45b675c19ae",
+   "headline": "Lute Robotics raises $20 million for touch-based physical AI",
+   "summary": "Lute raised $20M to give robots a sense of touch.",
+   "subtopics": [
+    "robotics-business",
+    "robotics-hardware"
+   ],
+   "entities": [
+    "Lute Robotics"
+   ],
+   "importance": 50,
+   "evidence": [
+    "multiple outlets"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11NU9hc01Bel8xV1BPaEEtTWNtZ21XaS1IQ083QXQ3V1RZRHRPcmwwYWsxalNhN1FXOVdsSy1jUWZQRkdIelNuMm9OQXFPQTNOYWNoYjJCYlo?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTUhLQnYxQkluZmdRM0NrMTJCX3Fja3VnUVZ4dXo4ejhBckg1V3FJbVRVSElIUFZqUXo4VVRkYWFQQ3E0NThxMW9jR2JZMlVoTzUzOFZHb0FjVFNzTG1vUFRsQ2hIT3Q4cVdfRjBKUkZoWFdMcnhqNjRyOUFIRDNGU0J4WU1JRlBpcC12Zk5XOU5PbGFKVkp2cl9mUE1RNzBFc091X3BLX0NOU3V5TUwtNQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUltYUdhWDRYMWtMTjZYUjdKa3ZpdnJNckF1ZU5lSjdVaENvZFBmRVZZWEkwVU1GV0NfMzlLZnJGcTJRSTE3TGhDYWN5RVRBM2FOUHNSYXdnWnJCSktzYWdCMVpMV0Y4X1ZLRjNxRVBaVVlEYm0yMGFNaWZGcVROZnVQUWdsUEx1aHlrSXFhT1U4aW1HRWEwbE93ZzZIbFRVSVR1ZGhNbXg0UGlaT2M4TUJyN001T1FmOXc?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11NU9hc01Bel8xV1BPaEEtTWNtZ21XaS1IQ083QXQ3V1RZRHRPcmwwYWsxalNhN1FXOVdsSy1jUWZQRkdIelNuMm9OQXFPQTNOYWNoYjJCYlo?oc=5",
+     "outlet": "www.tokenpost",
+     "title": "Lute Robotics Raises $20 Million to Build Physical AI Platform",
+     "snippet": "",
+     "published_at": "2026-11-27T02:04:00Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTUhLQnYxQkluZmdRM0NrMTJCX3Fja3VnUVZ4dXo4ejhBckg1V3FJbVRVSElIUFZqUXo4VVRkYWFQQ3E0NThxMW9jR2JZMlVoTzUzOFZHb0FjVFNzTG1vUFRsQ2hIT3Q4cVdfRjBKUkZoWFdMcnhqNjRyOUFIRDNGU0J4WU1JRlBpcC12Zk5XOU5PbGFKVkp2cl9mUE1RNzBFc091X3BLX0NOU3V5TUwtNQ?oc=5",
+     "outlet": "Robotics & Automation News",
+     "title": "Lute raises $20 million to give robots a sense of touch",
+     "snippet": "",
+     "published_at": "2026-11-26T14:31:20Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUltYUdhWDRYMWtMTjZYUjdKa3ZpdnJNckF1ZU5lSjdVaENvZFBmRVZZWEkwVU1GV0NfMzlLZnJGcTJRSTE3TGhDYWN5RVRBM2FOUHNSYXdnWnJCSktzYWdCMVpMV0Y4X1ZLRjNxRVBaVVlEYm0yMGFNaWZGcVROZnVQUWdsUEx1aHlrSXFhT1U4aW1HRWEwbE93ZzZIbFRVSVR1ZGhNbXg0UGlaT2M4TUJyN001T1FmOXc?oc=5",
+     "outlet": "The Recursive",
+     "title": "Lute Raises $20M to Build Touch-Based AI for Robots",
+     "snippet": "",
+     "published_at": "2026-11-26T13:55:38Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-6fad82b008e7",
+   "headline": "Wang Xingxing says China's robot output will overtake cars in 5-10 years; Unitree warns profit may slip after listing",
+   "summary": "Unitree founder's outlook.",
+   "subtopics": [
+    "humanoids",
+    "robotics-business"
+   ],
+   "entities": [
+    "Wang Xingxing",
+    "Unitree"
+   ],
+   "importance": 50,
+   "evidence": [
+    "BigGo"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE05d3ltYlRsa1FOQ29LTWxScU9BWF96bGFDeURtRUkzSER3SWpTYjRPejljYnBlWTBja3lOYnN5aDRMOFlod0ptMXRQWWpsSUZjX2U2SUlHRmd4c1NqZU9kM0pxS2tRV0U4RWRpWVRGVEtkU1Q3MHc?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05d3ltYlRsa1FOQ29LTWxScU9BWF96bGFDeURtRUkzSER3SWpTYjRPejljYnBlWTBja3lOYnN5aDRMOFlod0ptMXRQWWpsSUZjX2U2SUlHRmd4c1NqZU9kM0pxS2tRV0U4RWRpWVRGVEtkU1Q3MHc?oc=5",
+     "outlet": "BigGo Finance",
+     "title": "Wang Xingxing Says China's Robot Output Will Overtake Cars in 5-10 Years, But Unitree Warns Profit May Slip After Listing",
+     "snippet": "",
+     "published_at": "2026-11-26T12:55:00Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-821684fa9105",
+   "headline": "Humyn Labs raises $47M Series A for physical AI",
+   "summary": "Physical AI research and deployment firm raised Series A.",
+   "subtopics": [
+    "robotics-business"
+   ],
+   "entities": [
+    "Humyn Labs"
+   ],
+   "importance": 48,
+   "evidence": [
+    "robotics247"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 20.02,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 1,
+    "best_rank": 13,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://robotics247.com/article/physical-ai-research-and-deployment-company-humyn-labs-raises-47m-in-series-a",
+     "outlet": "robotics247.com",
+     "title": "Physical AI research and deployment company Humyn Labs raises $47M in Series A",
+     "snippet": "",
+     "published_at": null
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-ba6ceb960691",
+   "headline": "Robotaxi expansion: VW ID. Buzz in LA, Lucid Gravity, Uber Bay Area driverless tests, Pony AI",
+   "summary": "Several robotaxi program updates reported the same day.",
+   "subtopics": [
+    "autonomous-vehicles"
+   ],
+   "entities": [
+    "Volkswagen",
+    "Lucid",
+    "Uber",
+    "Pony AI"
+   ],
+   "importance": 48,
+   "evidence": [
+    "InsideEVs, Simply Wall St"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 16.0,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 2,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUmtJemZiczRqem9ldGZxQ043LWltandzTFlQY2d0bnBNMGs3SmQ3ZFg2bGR5QkFIbXZmanppbzhicVZyeDhwVGJTQ05wUWJ3d0dxUHc5dmRSdDIxUHZFZC1mNlYweGttNU45VmhEaTc2SVdfVm1PaFlNTUJveDZQdU9CWTFDZGxXQ214Z2oyazAxM1dSUVVjRXRmS09saEt6cFVybDFHbkdtbnljVnI1VFhrTk1nbVRZVHNZNnI0YlRpcXd3bEl6cnIyaFlReXZMakVLR2U3MNIB3AFBVV95cUxNeDVOVG9qVkM2TWNna3RkWEJSTERicXgySk9DLXYydmZJYXZBRmw1aW90Z1lSLU9meHNPRXREUU9KUjhTQnNfSVZ0dTdrYWFVSFUyb1Zzd1NRZ3FudmVxeTJMTWRnYVh6SHJNSjJKREdXSTZfaEpuVGVMRmdiX2ZJQklOOUJNZ0tFRk53NlhFSFl1dWpTU3dVV2ZGUm9TWVdLYnl6YnRxdzZ5cUx2R2hPdUNpZmhPOXpZS0lJNGIxck53YUpGT0FCMjQzOG5UaHp5VW5IUmNWbjZTQmdk?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2NmdnV3UzVGajFUTDNmMmRUa3haaTJQUGpSTTRHZV9Fd0NsOWxNTERtZXdwc0h1bEotbS1YZTdaTUdFanVHSnFkMU1uM3o2Yi1hU3E5dzBWNmFXYmVyNXhCaW9qYVZBa3pNNzFwdE9uRjdFZGxRT2RPbmZUZEVqS2RUZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnBCOFFaRFlDdFFJakpKYTA5Q0ZhUExWa25faUxINEdVYnZJaldGcVdDQXRoR3ozWmMyLW44U1RNZHVHUzBUQjZ3U3ZUOU9fNmpXYlpwQnFzejV2cFBFeHFNMUdLblM1NjlEbUhGUzZDUzRNaUdia21DcGwzY3ZjMHlwLXltV2VqZVE?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMWNNTEJSakMtcXZnZlFXRVpjZkdjRnhDemdfZFlxeTNnRUhtRHUtdmdMNDFzZWlFaEdmTFBMb1JMMFFlN2RCcWFLaVg1dXdER1hqSTVMUlBIV3c3S05yNkhDVW5wS3JKUDBXRHBZci1sRTFlazZFZzFZSkJDX0JrQmNpa09kc3pwZjlSa2dwZlpEb0RuN2EwU2R5STNTLWdQbFlwR25JZ3A2NGNELVlkTC14dDA3Uy1XMjQ4WnllclYtNVdC0gHKAUFVX3lxTE1NTlJIRGtqY3ZuY0JJNXpKc3NWMm1nLThncHl4allWTmtIdXdIMG9fTHFkQmtLMjNhZGFRSFBqakpvWmpGVUFta0JsT0s3aHhMV05VNndzSC1ja3EtN0FHejItSkRnTmRsaUN3b3ZiSlJZcXQyMkxFNkphQmlQMU01UjdEZkttSnBOMHhmSHMwdzVWRnV1SG9RNFppUFBtcW9lOF8zMXNGTlNPR2czNGRLUTRmZ201aHhtYWNlYkFpRGFYU3FWc25OOUE?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUmtJemZiczRqem9ldGZxQ043LWltandzTFlQY2d0bnBNMGs3SmQ3ZFg2bGR5QkFIbXZmanppbzhicVZyeDhwVGJTQ05wUWJ3d0dxUHc5dmRSdDIxUHZFZC1mNlYweGttNU45VmhEaTc2SVdfVm1PaFlNTUJveDZQdU9CWTFDZGxXQ214Z2oyazAxM1dSUVVjRXRmS09saEt6cFVybDFHbkdtbnljVnI1VFhrTk1nbVRZVHNZNnI0YlRpcXd3bEl6cnIyaFlReXZMakVLR2U3MNIB3AFBVV95cUxNeDVOVG9qVkM2TWNna3RkWEJSTERicXgySk9DLXYydmZJYXZBRmw1aW90Z1lSLU9meHNPRXREUU9KUjhTQnNfSVZ0dTdrYWFVSFUyb1Zzd1NRZ3FudmVxeTJMTWRnYVh6SHJNSjJKREdXSTZfaEpuVGVMRmdiX2ZJQklOOUJNZ0tFRk53NlhFSFl1dWpTU3dVV2ZGUm9TWVdLYnl6YnRxdzZ5cUx2R2hPdUNpZmhPOXpZS0lJNGIxck53YUpGT0FCMjQzOG5UaHp5VW5IUmNWbjZTQmdk?oc=5",
+     "outlet": "Simply Wall St",
+     "title": "Uber Technologies (UBER) Begins Fully Driverless Robotaxi Testing In Bay Area",
+     "snippet": "",
+     "published_at": "2026-11-26T16:10:48Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2NmdnV3UzVGajFUTDNmMmRUa3haaTJQUGpSTTRHZV9Fd0NsOWxNTERtZXdwc0h1bEotbS1YZTdaTUdFanVHSnFkMU1uM3o2Yi1hU3E5dzBWNmFXYmVyNXhCaW9qYVZBa3pNNzFwdE9uRjdFZGxRT2RPbmZUZEVqS2RUZw?oc=5",
+     "outlet": "InsideEVs",
+     "title": "Lucid Gravity Robotaxis Just Took A Major Step Toward Commercial Launch",
+     "snippet": "",
+     "published_at": "2026-11-26T09:03:34Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnBCOFFaRFlDdFFJakpKYTA5Q0ZhUExWa25faUxINEdVYnZJaldGcVdDQXRoR3ozWmMyLW44U1RNZHVHUzBUQjZ3U3ZUOU9fNmpXYlpwQnFzejV2cFBFeHFNMUdLblM1NjlEbUhGUzZDUzRNaUdia21DcGwzY3ZjMHlwLXltV2VqZVE?oc=5",
+     "outlet": "InsideEVs",
+     "title": "The Volkswagen ID. Buzz Robotaxi Is Hitting LA Streets",
+     "snippet": "",
+     "published_at": "2026-11-26T17:59:52Z"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMWNNTEJSakMtcXZnZlFXRVpjZkdjRnhDemdfZFlxeTNnRUhtRHUtdmdMNDFzZWlFaEdmTFBMb1JMMFFlN2RCcWFLaVg1dXdER1hqSTVMUlBIV3c3S05yNkhDVW5wS3JKUDBXRHBZci1sRTFlazZFZzFZSkJDX0JrQmNpa09kc3pwZjlSa2dwZlpEb0RuN2EwU2R5STNTLWdQbFlwR25JZ3A2NGNELVlkTC14dDA3Uy1XMjQ4WnllclYtNVdC0gHKAUFVX3lxTE1NTlJIRGtqY3ZuY0JJNXpKc3NWMm1nLThncHl4allWTmtIdXdIMG9fTHFkQmtLMjNhZGFRSFBqakpvWmpGVUFta0JsT0s3aHhMV05VNndzSC1ja3EtN0FHejItSkRnTmRsaUN3b3ZiSlJZcXQyMkxFNkphQmlQMU01UjdEZkttSnBOMHhmSHMwdzVWRnV1SG9RNFppUFBtcW9lOF8zMXNGTlNPR2czNGRLUTRmZ201aHhtYWNlYkFpRGFYU3FWc25OOUE?oc=5",
+     "outlet": "Simply Wall St",
+     "title": "Pony AI (PONY) Stock Looks Rich After Driverless Robotaxi Launch",
+     "snippet": "",
+     "published_at": "2026-11-26T17:10:39Z"
+    }
+   ]
+  },
+  {
+   "story_id": "physical_ai-f10f342065ad",
+   "headline": "Auterion and partners to build drone manufacturing facility in Germany",
+   "summary": "New German drone factory.",
+   "subtopics": [
+    "drones-field"
+   ],
+   "entities": [
+    "Auterion"
+   ],
+   "importance": 48,
+   "evidence": [
+    "Israel Defense"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55MF84MzJIcW84SjZZM0NlY1dwXzI5VFVVdlFYY19wYVdYdmtzbi1ZWndWQjhTd183b1R0akxGX1FwZjlBLUl3cmVpTkVTWlhLLWJCSkp6enM?oc=5"
+   ],
+   "source_snippets": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55MF84MzJIcW84SjZZM0NlY1dwXzI5VFVVdlFYY19wYVdYdmtzbi1ZWndWQjhTd183b1R0akxGX1FwZjlBLUl3cmVpTkVTWlhLLWJCSkp6enM?oc=5",
+     "outlet": "Israel Defense",
+     "title": "Auterion and Partners to Build Drone Manufacturing Facility in Germany",
+     "snippet": "",
+     "published_at": "2026-11-26T13:03:00Z"
+    }
+   ]
+  }
+ ]
+}

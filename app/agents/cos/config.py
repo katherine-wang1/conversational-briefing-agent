@@ -42,6 +42,9 @@ DEFAULT_PAYWALL_DOMAINS = (
     "asia.nikkei.com",
     "washingtonpost.com",
     "barrons.com",
+    "nikkei.com",
+    "reuters.com",
+    "axios.com",
 )
 
 
@@ -58,6 +61,11 @@ class PacksConfig(_Cfg):
     light_threshold: float = 0.25
     max_fetch_attempts: int = 6  # per story, when fetches fail or come back empty
     paywall_domains: list[str] = list(DEFAULT_PAYWALL_DOMAINS)  # tried last; never bypassed
+    # A digest story whose URLs gave no text: one search for free coverage of the same event (thresholds
+    # from `story_notes.free_coverage`; charged to the user's search budget), then the publishers' own
+    # headline + feed summary as attributed "publisher_summary" passages (at most this many).
+    free_coverage_search: bool = True
+    max_publisher_snippets: int = 2
 
 
 class ConcurrencyCfg(_Cfg):
