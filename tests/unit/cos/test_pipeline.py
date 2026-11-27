@@ -259,6 +259,9 @@ async def test_b5_naive_pipeline():
     assert script.sentences[-1].kind == "outro"
     assert packs[0].passages[0].passage_id == story.cites[0]
     assert script.arm == "b5_naive"
+    # no pool or ranking in the naive arm: the stored set is the brief
+    assert [s.story_ref for s in trace.story_set.stories] == [s.story_ref for s in script.stories]
+    assert all(s.in_brief for s in trace.story_set.stories)
 
 
 async def test_b5_naive_respects_search_cap():

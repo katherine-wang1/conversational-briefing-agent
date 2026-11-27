@@ -7,6 +7,8 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
+from app.contracts.notes import UserStorySet
+
 
 class TraceEvent(BaseModel):
     step: str  # e.g. "C1", "C2", "memory.rules"
@@ -24,6 +26,10 @@ class RunTrace(BaseModel):
     arm: str = "full"
     events: list[TraceEvent] = Field(default_factory=list)
     prompts: dict[str, str] = Field(default_factory=dict)  # prompt name -> sha
+    # The per-user stored set from `run_cos_daily`. Carried on the trace so the run keeps returning
+    # (script, packs, trace); the job handler saves it with the brief. Left out of the trace JSON
+    # (a "stored_set" event lists the refs instead).
+    story_set: UserStorySet | None = Field(default=None, exclude=True)
 
     def add(self, step: str, kind: str, *, role: str | None = None, ok: bool = True, **detail: Any) -> None:
         self.events.append(TraceEvent(step=step, kind=kind, role=role, ok=ok, detail=detail))

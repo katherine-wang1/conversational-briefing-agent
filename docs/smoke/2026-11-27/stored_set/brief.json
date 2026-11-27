@@ -1,0 +1,228 @@
+{
+ "brief_id": "b_e269029c8cb8f5f0",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:43c22bce363c",
+   "slot": "for_you",
+   "headline": "NVIDIA Releases Open Weights For Nemotron-Labs-Image-30B-A3B, An Autoregressive Image Generator Outpacing GPT Image 2 With 3B Active Parameters",
+   "why_tag": "for you",
+   "aliases": [
+    "NVIDIA",
+    "Nemotron-Labs-Image-30B-A3B",
+    "OpenAI"
+   ]
+  },
+  {
+   "story_ref": "u:f0c64e2aa10c",
+   "slot": "for_you",
+   "headline": "Leto: Utility-Centric Agent Memory",
+   "why_tag": "for you",
+   "aliases": [
+    "Leto",
+    "Mem0",
+    "LangMem",
+    "Hindsight",
+    "Letta",
+    "Zep",
+    "Memobase"
+   ]
+  },
+  {
+   "story_ref": "ai-651cc167b0ad",
+   "slot": "outside_usual",
+   "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "Scott Aaronson",
+    "Andrew Bailey",
+    "Bank of England"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. Here are your stories for today, about three minutes' worth. Answers to your follow-up questions come first, but none were queued.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "Our first big story is about Nvidia and its server partners in Southeast Asia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s002",
+   "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "The pause has no set end date while Nvidia assesses whether its regional partners are meeting U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "Chinese companies have been tapping Nvidia chips remotely from data centers in those countries, a loophole the U.S. Commerce Department closed earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:416-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "The U.S. Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:416-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "One think tank estimates such remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "Next, a story that's outside your usual coverage: OpenAI and the exponent of matrix multiplication.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:480-673"
+   ],
+   "kind": "transition"
+  },
+  {
+   "sid": "s008",
+   "text": "OpenAI claims to prove that omega, the exponent of matrix multiplication, is exactly 9/4, a lower bound.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:480-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "That claimed lower bound matches an upper bound OpenAI proved in its October 6 release.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:480-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s010",
+   "text": "Volker Strassen first showed in the late 1960s that this exponent is below 3.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:710-962"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "A separate Yupan Liu preprint on arXiv proves that QIP(2) equals PSPACE.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:2095-2353"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "Now, a model for image generation.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "0ae97048a20e9744e322ccb30100ebab:0-252"
+   ],
+   "kind": "transition"
+  },
+  {
+   "sid": "s013",
+   "text": "NVIDIA has released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B, an autoregressive image generation model.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "0ae97048a20e9744e322ccb30100ebab:0-252"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s014",
+   "text": "The model is a mixture-of-experts design with 30 billion total parameters, using 3 billion per token.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "0ae97048a20e9744e322ccb30100ebab:588-796"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "It scored 97.98 on LongTextBench, ahead of GPT Image 2 at 96.00, though GPT Image 2 maintained an advantage on GenEval2 with 81.00 versus Nemotron's 65.43.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "0ae97048a20e9744e322ccb30100ebab:1554-1739",
+    "0ae97048a20e9744e322ccb30100ebab:1906-2138"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "Next, a research note on how AI agents remember things.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [
+    "b388de6345f1791fd6726cc0a32c07d9:44-154"
+   ],
+   "kind": "transition"
+  },
+  {
+   "sid": "s017",
+   "text": "Existing agent memory systems judge memory by how faithfully it records past conversations.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [
+    "b388de6345f1791fd6726cc0a32c07d9:155-264"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s018",
+   "text": "What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 117
+}

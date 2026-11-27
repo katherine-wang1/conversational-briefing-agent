@@ -1,0 +1,410 @@
+{
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "brief_id": "b_e269029c8cb8f5f0",
+ "local_date": "2026-11-26",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "rank": 1,
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "summary": "Nvidia told manufacturing partners such as Dell and Supermicro to halt server shipments to four Southeast Asian countries. The pause follows a new US rule requiring licenses for advanced AI chip purchases there and a closed remote-access loophole.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://ft.com/content/33772353-35dd-4e5a-89e4-b75dccbd9eca?syn-25a6b1a6=1",
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?accessToken=zwAAAaKuNQQ-lc82jEUmoM5JUdOoR_A5rypRr894OKcVB9RGBdOqYCH1rysjcM8_V3g53u1A9NOvn7-PtUiQ488yW5PWvC5N09OZQc9GiKyhHdO5lhOroTBLn9OMFcQdt82IlAE.MEUCIAPJOFlcs0Bojv5ln7BmjmdLTj5dPHWXAdsn-FuOch_SAiEA5Eu4HIM2_h5rJDnldWxSlTi5axDZdg9vO7b_UplS1Nk&segmentId=7d4bcc2e-e664-92ba-62e3-5590579f1902",
+    "https://ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370?syn-25a6b1a6=1",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html"
+   ],
+   "in_brief": true,
+   "relevance": 0.4,
+   "importance": 93.0,
+   "why": [
+    "big news",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:43c22bce363c",
+   "rank": 2,
+   "headline": "NVIDIA Releases Open Weights For Nemotron-Labs-Image-30B-A3B, An Autoregressive Image Generator Outpacing GPT Image 2 With 3B Active Parameters",
+   "summary": "NVIDIA has quietly released open weights for Nemotron-Labs-Image-30B-A3B on Hugging Face, an autoregressive MoE image generator beating GPT Image 2.",
+   "beat": "ai",
+   "urls": [
+    "https://www.google.com/url?opi=89978449&q=CAESlgEBxCJF18_wMgeCMtl99hJf97xsU9ZUJDeGtWuMePamBJmSCQ0yKfbDj1XzzoZ6F-ugtJjpjPJueMiAD6n6nXQiMBNci-Ey0NSD0AkI_ODvLyOREOrcYUVd-V0WsexAEZEdPd7e_MwiJYxFFQ6qO5krNojQRrlCvJA-pDi9PETFSVkM177hXS0ykTpQ87BwBkurys06r2A&sa=U&uoh=3&ved=2ahUKEwjtydGEwaeYAxU1VTABHS_MDYIQxfQBegQIAxAC&usg=AOvVaw2yXwXhlK3onKhH9frSmS_s",
+    "https://www.google.com/url?opi=89978449&q=CAESpgEBxCJF1w5iVE-yogHkgnLjHMTITsDJzTL42Tdsqs7kG_3P4DhjLkxwqiCNpPhKjLhoilQcFgu-gc467pUPMAcpTG5fU_mlEh2Vqisoii72-hn50PUgwlwUpLY8cg9GyqeLnbEeLd9lW4zFjVe-hCM8YR_AR55cm62Mp-SCOJNKXMre0stCmJ4X-nOzdoZK_4aP_1yw8X3lFrRC2gikyXIgVrXSw4oa&sa=U&uoh=3&ved=2ahUKEwjtydGEwaeYAxU1VTABHS_MDYIQxfQBegQIBBAC&usg=AOvVaw3QtfAtoNjqu2xiTIRipZrz",
+    "https://www.google.com/url?opi=89978449&q=CAEShQEBxCJF1134hGzEgfWq9FImS-GJNCHT85ykhkgaEst537W8aqGNqHgF2zD5YEwiJHjAiQr2zcqUtqIGg4_5tF-dFckFXE8bL3rjvoIEmkuTo1x4PWoX4DU_umFdSerOjRqOXu4q_Q8EINOn6LC89gwng63udYai8l6XUl2kue4qw9OKGHWE&sa=U&uoh=3&ved=2ahUKEwjtydGEwaeYAxU1VTABHS_MDYIQxfQBegQIBhAC&usg=AOvVaw3NZOdT4pl2hJnd1PdNubLN",
+    "https://www.google.com/url?opi=89978449&q=CAESbwHEIkXXrgfPr_lBeOU20uV8rudWLYPM40uzwfwM1HhV3gIlehzQlhYxXn1FZuARph0Ff0m13eEJzx9AnJfrU5EhipzJxP8lPC7cVKlpdftDrBxSvYbZiE0wf6KUdLKlFV8zHqNZ9N2LyJWD74o-BQ&sa=U&uoh=3&ved=2ahUKEwjtydGEwaeYAxU1VTABHS_MDYIQxfQBegQICRAC&usg=AOvVaw39cgF_2zgqtpAc0lQD4zGC",
+    "https://www.google.com/url?opi=89978449&q=CAESkAEBxCJF14ekRRtvKaazW_l-Ykdpoh5Vj47BgG0WPmSBl7XXZdOWxB7ZustNiM_OSC010-AWYqlyB-EuC2-uqcZYdmJidYw9CEttf6BxWwYy0qYSkA_zqGQRQI4rfCvZwweXsTb2ApuWJ5_Xi6NKni8oC1_67UNDKIdmOBhDJzuBUZKE0Ez-0kKYTDAnD1uDgig&sa=U&uoh=3&ved=2ahUKEwjtydGEwaeYAxU1VTABHS_MDYIQxfQBegQIBRAC&usg=AOvVaw1aZrZ1XFcLRR-OhKcxaz5g"
+   ],
+   "in_brief": true,
+   "relevance": 0.7,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-651cc167b0ad",
+   "rank": 3,
+   "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+   "summary": "Scott Aaronson's post reports that leading labs are sitting on major unreleased breakthroughs whose exact nature is unknown. Bank of England governor Andrew Bailey said unreleased AI models have raised encryption concerns and called for global model testing.",
+   "beat": "ai",
+   "urls": [
+    "https://scottaaronson.blog/?p=10379",
+    "https://ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE94WjZzdW1xS0Npckt3RmNZX1F2Wk1aVHkyYWZYeHlZUkFLaXZFVnZ6SFV5ajRnS005Vjh3X1NMaV9PNmwyOFNuelpwbnlMdjE4UjhIZkNxVFlrRnhtMDNLUDlQZjgweXo5OEdlVlhsM3hsV1U?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.35,
+   "importance": 88.0,
+   "why": [
+    "outside your usual"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "physical_ai-2af40820bf64",
+   "rank": 4,
+   "headline": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027",
+   "summary": "XPeng showed its IRON humanoid with about 1,500 tactile sensors alongside its Turing physical AI stack, and said it may be priced near an EV. Reports say mass production starts January 2027, with store-assistant trials in Q1 2027 and sales around Q2 2027; some sources say no price was named.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5laktIWWlkWURXRWIzamdEcThwUWVCVExCdzBWM1pIM1J3ZEtfb1hEVGd3T2NwREUyUUdWV1NudE1KdFFUQ3lxVjJqTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTE9wZ2VHNXUyc3g0SHNqazFSU1NMZXBxX2IweFhvMDIwUktQTjlTSTdiLW1ycnUtMjNvMWJqWUxyX0Z2eUJENW54aFpqX3ZMU3pyOS1IN1dpd0JiQUJRV21OYllvblJLYnNrRHNNS1VuN3RYdw?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 90.0,
+   "why": [
+    "big news",
+    "cut from the brief",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:f0feba66efd2",
+   "rank": 5,
+   "headline": "Travis Sachs on Instagram: \"Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Sea…\"",
+   "summary": "Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas. This is the first time factory-produced, modular advanced reactors will serve an industrial facility. The challenge: coordinating prefabricated components across multiple supplier",
+   "beat": "energy",
+   "urls": [
+    "https://www.instagram.com/reel/DgKugT7h3Nj"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "cut from the brief",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-1109dc2af8f5",
+   "rank": 6,
+   "headline": "AI leaders push back on Anthropic vision; OpenAI and Anthropic researchers warn new models may be too powerful to release",
+   "summary": "Axios reports rivals disputing Anthropic's vision, Amodei pushing back on free-will reporting, and warnings about unsafe-to-release models.",
+   "beat": "ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOLVR2OXI5dkJUZ2U5UXNvWllBeTJXVGVyaG9ZZmhqLWFXcXVGNFdoRE9sTnhLaXVyZkZLQWZQVndpNnJtRzJiWmRiLWRKNThfQlZCRXd4dWliUndRVzV3M3Jib0hFc2tIUjhpMEdKLWJhcmpWV1UxdHFXRWlTNU9UN2dn?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTFlLeVdXV0Q3U2lsUlVFNmtzekFOd0xLQ092OExYRzlCckFRb0RZVTJuWXdQQVpFNG1Td1ZaZHIyYy1RbGY1WTJIUDlLYWx1R2c4aDRqUERmZkNweW16NUk4a0tTajZhSF9pSUtBVG43VkxVcG1Qc0d1azlhSlliSV9wZ1VOeVcz?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNejlpTmhzNmw3aWRaNkZ4SXJjZDN3UzdRbEFHMm1lZml6MGlaM3ZOTFdabXlLQ3E0eTRvbnJxLW9wa09NaVZObVAxUVFSbE81SXBjdlZESGtjS2tCa0oxYzFfaXZUQ2RuN2VBNlZxcTM4TzVXZDlVV1Y1bjlUUHQyNDJkN05PamE3TTQ2TjBjd2pOd3lTenR0bUJWUzlsOUhsOFdQQzRiTE84Mk9MbHhicNIBrAFBVV95cUxPMWl4NlA0eEpnVVA5TG03eDE1R1JSOHo0NTRyUW9VUVJ1aTRNMTE2SEVQMWhkTUtNUlZEZVRHOERZeXNTVE5SS21naTdRVndoRXhyX0RENlByX0lWMEFUbXhfcTAwRHU0d1RiWWxCTEZqQjBCeW5iVjQ4TVhRXzAxc1Zxd2xOelZUQW1zeVgwaHllcWpvS3ZrWDJ3Y1J4NWNpbGw3NDFfN0tZRF9S?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "cut from the brief",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "energy-546c927cee4b",
+   "rank": 7,
+   "headline": "Japan's METI awards Kyoto Fusioneering-led consortium up to JPY 23.3bn for tokamak demonstration",
+   "summary": "Funding supports a tokamak fusion power demonstration.",
+   "beat": "energy",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMickFVX3lxTFB2QzlvbVlRMXcxOHFyVmJOd3dYX0RRVnQ4c1ZtdzM1cEdnTUlWaXZSWE1GSjdvZkh4LXc2NDJSZHpKQk9TLTBkNGIwQVZaRENsWkpnLW1MWFFYcFpfZXpaTno2NjluWkw5bDFHSF9TLWg0UQ?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 58.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "ai-f13b8b271767",
+   "rank": 8,
+   "headline": "Meta refused UK FCA joint testing of its Muse personal AI agent",
+   "summary": "The FCA complained that Meta declined to work on testing before rolling out its agent.",
+   "beat": "ai",
+   "urls": [
+    "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "https://ft.com/content/7f81ffd9-c259-4f36-9e22-77269244de1b?syn-25a6b1a6=1",
+    "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 57.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "ai-68db70806804",
+   "rank": 9,
+   "headline": "US chip curbs and distillation crackdown threaten Chinese AI model development; Z.ai's GLM-5.5 reportedly delayed",
+   "summary": "Reuters sources say Z.ai's flagship GLM-5.5 missed its November release and could slip to Q1 2027 or later. Moonshot AI expects longer intervals between major releases.",
+   "beat": "ai",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWFVoTlJVZ0xNRkdybDlrb01paGpFY1pBSHctekVYbk9UVHdhVENzUncwUllQbGZlbzZpRkltMDNxX0pFQ0dlUUI2YkM1M0VuSUdVUVR6Z0ZTRktrRDU4Vm9iNElzU1FXS2NDV2NQUnJKQVAwWjZGaEJ4c0lERVZqM29nUndYbzZkNjZDREJxRjliU0NZU2N3?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 80.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:bbaab1549e54",
+   "rank": 10,
+   "headline": "China and the United States Are Running Different AI Races in Africa | Carnegie Endowment for International Peace",
+   "summary": "Kimi, are more prevalent among Chinese labs. The provider of an open-weight model publishes its architecture and weights—that is, the “set of learned parameters that overlay the model architecture to produce an output from a given input.” Users can download, modify, and run the model on their own in",
+   "beat": "ai",
+   "urls": [
+    "https://carnegieendowment.org/research/2026/11/china-and-the-united-states-are-running-different-ai-races-in-africa"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-88942110e199",
+   "rank": 11,
+   "headline": "OpenAI corrects GPT-6.2 billing bug; Astra users will hit usage limits 40% faster",
+   "summary": "OpenAI admitted a billing mistake that incorrectly discounted usage for GPT-6.2 Astra and Sol launches.",
+   "beat": "ai",
+   "urls": [
+    "https://techradar.com/ai-platforms-assistants/chatgpt/weve-fixed-this-now-so-the-same-work-will-use-more-of-your-plans-usage-allowance-openai-admits-it-made-a-mistake-when-launching-gpt-6-2-and-now-paying-chatgpt-users-could-hit-their-usage-limits-up-to-40-percent-faster",
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNkVpb05PVHpGbUViaXo4cUFrZjVkQVg2eld2X3ZKN2tDeVlEYXJuNUNFTWxnOHR0aWVJS3F4RlU2UThMXzVGbnNScVJkRzU3b2dGVklGazQzeTZkMXpYWVE2R2xYUEQ1OG83Y3FLUm90SVNIRGdreWVwUHozSU1BU1RsQXBzU0tXV1VHd1NnbkVqUXYtRmlWXzdfcFpGVWFwb1BJSnJIdUVFaFJmeVNBcHNianpuZnVsQXdNMFgtaGJUeWt1NjZDM09NcEtubTNrcFB3d3pZeUNMblhUd3Y1TWNic1pRZ9IB6wFBVV95cUxQMXM1ZXk4VnpPczZTcHh1WTNzbzktVFdCLWt3eEtlcVJlbU52ZzhRNnNNdnV1Vzk3ajhIc1hjN3JSYlJxQmJNb0NxLWlRbm9rSllvVlk3a2VscXdqVGV0ZUc4RDM2SU43NXRuMlBsak9GcEJaN0d6Q3JSS2hEZndsMzlTLUtZVlhfdTdiNUVQWV9VdXhBRVVhRHRZTXBtZy1tMWpheVg3a1YzUmNndWs5ajljMVRpYUdRQ2Q0WFpCTWlJQVl5YUdOU25oNVppdFN6OURVZ051c1BYeVZHNHZqQ1ZxajZmYURaVGF3?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 66.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "energy-898a268c248d",
+   "rank": 12,
+   "headline": "Poland nears construction deal with US consortium for $50 billion nuclear plant",
+   "summary": "WSJ exclusive reports Poland is close to a construction deal for its nuclear plant.",
+   "beat": "energy",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxORV9KbWp6SnZ2NF8zUzg5d3FucHFtSWZXa0FsaGF2SERCcnpwdzY5T3ZNZlhmTkhsRlhRWDFkcUw5ZjUwY1dlRVRZLXM5aEN4dDlWeTlPc1RXMGVoTnFDdEZWTHgxRVRnM1VVek9Ya1NfNlNXRjlXVGJFbm5nMVNfTWQ4QnowTTVwS0hKdXg2eFNVSkFwU3M2QnFaYUpCTmg1NHNGdC12LUtORU1pMnd2UkhVX1lnWW8?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 67.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "energy-c53218764ff9",
+   "rank": 13,
+   "headline": "Japan nuclear restarts hit snag as Kashiwazaki-Kariwa-7 delayed over building issue",
+   "summary": "Tepco delays restart of the reactor on a building issue.",
+   "beat": "energy",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSkFFek03WFQ5elRibWhtRkZGS1hTZ2VSZDVzTlJ6QUd6STlZaE1FN3Nwc2w0T09GeUpXSm5mTmJQa2ZSTzBkdkh6dERpQ3I1LUp3YlRXTWRLQ3Z4TTFOcmxFSWFUM2dvTGNmYXFwdE9CdmxBdlAtM0h2b0FMRnUwR2hGSnVKR0ZqbVdkbGVGVzFmeTludmlVSlpGYXR2VUhCVy1ud0ZSaERyQnFoWS0yMFpES2RENkk?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZGNMMkhLY2VERnJQSldVcFJZTTE4djRCUVFRb1JUWE5SdGUxOXZvY0gtM0pDSHAzc1c4c2xyVHN4bzZwLUItdDV1Yi1uTUttVVZxbVNsX2FvNmdaYUVCMXFISlZZd2VGM3hzMGE3eUp0Y3JFYkpTYlEydTNib283d3N5Z2FORng0Y2JMckZNNlktZmdjc3hwVkt2Zk5iTlZSNURycExxUDNTa3BJaTg4cy1JOA?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 62.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "rank": 14,
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "summary": "And now, just this week, a new engineering alliance between Sargent & Lundy and ENTRA1 Energy announced that it would be banding together to bring scalable SMR plants to grids around the globe. The initiative will be using NuScale's certified reactors, the first and only proprietary SMR design to re",
+   "beat": "energy",
+   "urls": [
+    "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:6320c78f53dd",
+   "rank": 15,
+   "headline": "How 12 months made 20 years - Nuclear Engineering International",
+   "summary": "In April 2026, when the Nuclear Regulatory Commission (USNRC) issued a second licence renewal for the plant, it highlighted another milestone: it was described by the USNRC as the “fastest licence renewal review in agency history and the first completed under new federal timelines aimed at accelerat",
+   "beat": "energy",
+   "urls": [
+    "https://www.neimagazine.com/analysis/newbuild-lifeextension/how-12-months-made-20-years"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:adc479907ff7",
+   "rank": 16,
+   "headline": "AI company employees warn internal models are too powerful to safely release: report",
+   "summary": "Both Anthropic and OpenAI's unreleased models are far more powerful than what has been publicly released, but the companies have struggled to ensure that they are safe enough for public release, according to unnamed sources. ## \"If we continue trying to make models much smarter, such that they're a",
+   "beat": "ai",
+   "urls": [
+    "https://cnycentral.com/news/nation-world/ai-company-employees-warn-internal-models-are-too-powerful-to-safely-release-report-anthropic-openai-rrt"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:e718d98c0c4a",
+   "rank": 17,
+   "headline": "LLM RTL Generation Benchmark: AIChipBench Agent Results | AgentsPulse",
+   "summary": "| Regrading condition | Failing sequences within 32 steps (of 85) | ---| | Bounded memory stalls | 29 | | Reset after activity | 28 | | Nonzero cache positions | 19 | | New prompt only | 9 | Source: AIChipBench paper, Section 4.3. [...] 3. Test the conditions that touch state. Memory stalls, reset",
+   "beat": "ai",
+   "urls": [
+    "https://agentspulse.github.io/tutorials/llm-rtl-generation"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f6e378e50127",
+   "rank": 18,
+   "headline": "PolyAI's ex-ML chief raises $20M for robotics startup Lute | Dealroom.co",
+   "summary": "What's the endgame? Lute builds a deployment platform for physical AI. It pairs low-cost robot arms and mobile humanoids from hardware partners with robot foundation models, then adds a loop of navigation, spatial memory, manipulation, and human feedback so robots improve through real-world work. Th",
+   "beat": null,
+   "urls": [
+    "https://app.dealroom.co/news/note/polyai-s-ex-ml-chief-raises-20m-for-robotics-startup-lute"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:8c2803ba9e40",
+   "rank": 19,
+   "headline": "The National Law Review on Facebook: \"Navigating Nuclear: US Nuclear Regulatory Commission Issues Final Rules of Practice and Procedure ht…\"",
+   "summary": "- Author: The National Law Review - Posted: 2026-11-25T04:42:52+00:00 - Shared link: Navigating Nuclear: US Nuclear Regulatory Commission Issues Final Rules of Practice and Procedure - Links: - Reactions: 0 - Comment count: 0 - Shares: 0 - Privacy: Public [...] # The National Law Review on Facebook",
+   "beat": "energy",
+   "urls": [
+    "https://www.facebook.com/NatLawReview/posts/navigating-nuclear-us-nuclear-regulatory-commission-issues-final-rules-of-practi/1800999035363900"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "energy-4d07ab5b1bf6",
+   "rank": 20,
+   "headline": "Vietnam weighs delaying nuclear plants beyond 2035",
+   "summary": "The revised energy plan pushes the Ninh Thuan timeline past 2035.",
+   "beat": "energy",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBteWFBNURpV1ZubUxGZ1BCb3ZjZDFhQ0xxMjNvVWV2YUNoRDBCNEc5YU5SUkRtR2F6cHFUZ2RMcUNBU0p6VTZuUFR3eS1MSnEw?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUTJlT0JOSlNPS3BOcXh0MmpnLXJSempHY0xXV1BvUTJGNjd3Ul94RTZGMHpmNWFiVmdmMGo5RWF4MmF2eXNLSXEyaFcyTS1LYlE4N3RnMXRtUllsc1BMaHF6Q3BlWE9RV0toTXdIZ2ZUVFpMWkNQNjJaMHBhcElQemVaTFkybWpNOWsxVW1QYks0dy1ZdTFEUldkTVYwQTM2ZXZUT29ndVQ2cmViNjdVWEpWS1JqZFpsb2RrbjU0dXJuSzE3ejVNag?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaGdmcUtqLWtoVmNGWVJUczdNUUFPTWFSNjY1Q1ZTTzNtaExWZUdUOU5EdzRDUHBGQW1oejRXNE11QWNNaXFMeFR5REFrc19jeDFDbXoxbGYxVFJ3MFZvdzRNX0t5aGxPZWNIbmJaVWVuM3VzaDUxTFlzSG4yLVpMYWxRb0dnQnF3SXFMeHFETFRnT244dElKYTBzclV4SFIxV1p6MTE2djJCOXdBMmFoWFNiTWY?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 52.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  }
+ ],
+ "created_at": "2026-11-26T22:10:02.013079Z"
+}

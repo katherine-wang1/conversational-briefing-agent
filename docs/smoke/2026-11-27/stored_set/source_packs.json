@@ -1,0 +1,358 @@
+[
+ {
+  "story_ref": "ai-5166002f4d42",
+  "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+  "facts": [
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners are meeting U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely tapping Nvidia chips in data centers in the affected countries, a loophole the US Commerce Department closed earlier this month.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:416-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:416-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 416,
+    "char_end": 589
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "physical_ai-2af40820bf64",
+  "headline": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027",
+  "facts": [],
+  "passages": [],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ },
+ {
+  "story_ref": "u:f0feba66efd2",
+  "headline": "Travis Sachs on Instagram: \"Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Sea\u2026\"",
+  "facts": [
+   {
+    "text": "The page content provided is only a copyright notice from Instagram, with no substantive story content.",
+    "passage_ids": [
+     "b3af1527239a4d1a41d414fb67e25f67:0-26"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "b3af1527239a4d1a41d414fb67e25f67:0-26",
+    "doc_id": "b3af1527239a4d1a41d414fb67e25f67",
+    "url": "https://www.instagram.com/reel/DgKugT7h3Nj",
+    "source": "instagram.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "\u00a9 2026 Instagram from Meta",
+    "char_start": 0,
+    "char_end": 26
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "u:43c22bce363c",
+  "headline": "NVIDIA Releases Open Weights For Nemotron-Labs-Image-30B-A3B, An Autoregressive Image Generator Outpacing GPT Image 2 With 3B Active Parameters",
+  "facts": [
+   {
+    "text": "NVIDIA released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B, an autoregressive image generation model.",
+    "passage_ids": [
+     "0ae97048a20e9744e322ccb30100ebab:0-252"
+    ]
+   },
+   {
+    "text": "Nemotron-Labs-Image-30B-A3B is a Mixture-of-Experts model with 30 billion total parameters and 3 billion active parameters per token.",
+    "passage_ids": [
+     "0ae97048a20e9744e322ccb30100ebab:588-796"
+    ]
+   },
+   {
+    "text": "On LongTextBench, Nemotron-Labs-Image-30B-A3B scored 97.98, versus 96.00 for GPT Image 2 and 97.60 for Nano Banana Pro.",
+    "passage_ids": [
+     "0ae97048a20e9744e322ccb30100ebab:1554-1739"
+    ]
+   },
+   {
+    "text": "GPT Image 2 outperformed Nemotron-Labs-Image-30B-A3B on GenEval2 (81.00 vs 65.43) and Qwen-Image-Bench (65.23 vs 52.46).",
+    "passage_ids": [
+     "0ae97048a20e9744e322ccb30100ebab:1906-2138"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "0ae97048a20e9744e322ccb30100ebab:0-252",
+    "doc_id": "0ae97048a20e9744e322ccb30100ebab",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF18Vknbb2p1F3VB7C0Za6miKWieK_QEcWw5xE9dk2kp44wcF8s8o_k5xr0g8Z0s6yiyIcAlo0h1O--_P4cGRICNwaOI85dlQHIkfRNoo4yqXMWgzBAc4-ENeadeeQ030sIJJc3pIEosJwif0z4ePYfSdxkWtYMRn_QjQWFbDdhU_J1kSQaSTHJvKsDYlHSR8F9g&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIBhAC&usg=AOvVaw1TLgLNyJxc4v4ZggZ9YNXY",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "NVIDIA has quietly released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B, which the company states is an autoregressive image generation model built as the core raster rendering engine for its new Nemotron-Labs-VisualCreation framework.",
+    "char_start": 0,
+    "char_end": 252
+   },
+   {
+    "passage_id": "0ae97048a20e9744e322ccb30100ebab:588-796",
+    "doc_id": "0ae97048a20e9744e322ccb30100ebab",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF18Vknbb2p1F3VB7C0Za6miKWieK_QEcWw5xE9dk2kp44wcF8s8o_k5xr0g8Z0s6yiyIcAlo0h1O--_P4cGRICNwaOI85dlQHIkfRNoo4yqXMWgzBAc4-ENeadeeQ030sIJJc3pIEosJwif0z4ePYfSdxkWtYMRn_QjQWFbDdhU_J1kSQaSTHJvKsDYlHSR8F9g&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIBhAC&usg=AOvVaw1TLgLNyJxc4v4ZggZ9YNXY",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "To make the LLM accessible for a variety of hardware, Nemotron-Labs-Image-30B-A3B utilizes a Mixture-of-Experts architecture packing 30 billion parameters while activating just 3 billion parameters per token.",
+    "char_start": 588,
+    "char_end": 796
+   },
+   {
+    "passage_id": "0ae97048a20e9744e322ccb30100ebab:1396-1553",
+    "doc_id": "0ae97048a20e9744e322ccb30100ebab",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF18Vknbb2p1F3VB7C0Za6miKWieK_QEcWw5xE9dk2kp44wcF8s8o_k5xr0g8Z0s6yiyIcAlo0h1O--_P4cGRICNwaOI85dlQHIkfRNoo4yqXMWgzBAc4-ENeadeeQ030sIJJc3pIEosJwif0z4ePYfSdxkWtYMRn_QjQWFbDdhU_J1kSQaSTHJvKsDYlHSR8F9g&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIBhAC&usg=AOvVaw1TLgLNyJxc4v4ZggZ9YNXY",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "As for performance, Nemotron-Labs-VisualCreation outperforms proprietary competitors including GPT Image 2 and Nano Banana Pro across several key benchmarks.",
+    "char_start": 1396,
+    "char_end": 1553
+   },
+   {
+    "passage_id": "0ae97048a20e9744e322ccb30100ebab:1554-1739",
+    "doc_id": "0ae97048a20e9744e322ccb30100ebab",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF18Vknbb2p1F3VB7C0Za6miKWieK_QEcWw5xE9dk2kp44wcF8s8o_k5xr0g8Z0s6yiyIcAlo0h1O--_P4cGRICNwaOI85dlQHIkfRNoo4yqXMWgzBAc4-ENeadeeQ030sIJJc3pIEosJwif0z4ePYfSdxkWtYMRn_QjQWFbDdhU_J1kSQaSTHJvKsDYlHSR8F9g&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIBhAC&usg=AOvVaw1TLgLNyJxc4v4ZggZ9YNXY",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "For instance, on LongTextBench, which evaluates dense text generation accuracy, Nemotron-Labs-Image-30B-A3B scored 97.98 compared to 96.00 for GPT Image 2 and 97.60 for Nano Banana Pro.",
+    "char_start": 1554,
+    "char_end": 1739
+   },
+   {
+    "passage_id": "0ae97048a20e9744e322ccb30100ebab:1906-2138",
+    "doc_id": "0ae97048a20e9744e322ccb30100ebab",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF18Vknbb2p1F3VB7C0Za6miKWieK_QEcWw5xE9dk2kp44wcF8s8o_k5xr0g8Z0s6yiyIcAlo0h1O--_P4cGRICNwaOI85dlQHIkfRNoo4yqXMWgzBAc4-ENeadeeQ030sIJJc3pIEosJwif0z4ePYfSdxkWtYMRn_QjQWFbDdhU_J1kSQaSTHJvKsDYlHSR8F9g&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIBhAC&usg=AOvVaw1TLgLNyJxc4v4ZggZ9YNXY",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "While GPT Image 2 maintained an advantage on GenEval2 with 81.00 versus Nemotron\u2019s 65.43 and led Qwen-Image-Bench at 65.23 against 52.46, NVIDIA\u2019s open-weight release closes much of the remaining gap in structured visual generation.",
+    "char_start": 1906,
+    "char_end": 2138
+   },
+   {
+    "passage_id": "7cbcee1c966c5c013d7aa01214c65ad6:0-67",
+    "doc_id": "7cbcee1c966c5c013d7aa01214c65ad6",
+    "url": "https://www.google.com/url?opi=89978449&q=CAESjwEBxCJF1yP_KbRHTKFxuXj2VQI_jXuW4svKnA3_cZVrRlmnGR_5UmBlOn1YSVy-m82z5ILv_AzHRXzBjhDLfN3-Z2wUTt_p9W9DyhHuHKN6ajcxPpq0FUOocFsyQo7ooB4x0IynDoi7hDEglV376KvZh922XCa6ImFqbcLXEn0GvSNdp3WuX0tH-5lv6NrmPA&sa=U&uoh=3&ved=2ahUKEwiuhLKQwKeYAxUWKFkFHdC6AdMQxfQBegQIChAC&usg=AOvVaw17p1PN3N8asYDeKHiEUrYs",
+    "source": "google.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "newsletter \u00b7 weekly\nGet AI news, tools, and insights in your inbox.",
+    "char_start": 0,
+    "char_end": 67
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "u:f0c64e2aa10c",
+  "headline": "Leto: Utility-Centric Agent Memory",
+  "facts": [
+   {
+    "text": "Existing memory systems treat memory as a record of the past and evaluate it by fidelity to the conversation.",
+    "passage_ids": [
+     "b388de6345f1791fd6726cc0a32c07d9:265-343"
+    ]
+   },
+   {
+    "text": "Leto treats memory as a prediction problem and focuses on the utility of memory to the future rather than its fidelity to the past.",
+    "passage_ids": [
+     "b388de6345f1791fd6726cc0a32c07d9:44-154"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "b388de6345f1791fd6726cc0a32c07d9:44-154",
+    "doc_id": "b388de6345f1791fd6726cc0a32c07d9",
+    "url": "https://arxiv.org/html/2611.33005v1",
+    "source": "arxiv.org",
+    "published_at": "2026-08-23T00:00:00Z",
+    "text": "Large language model (LLM) agents rely on external memory to retain and reuse information across interactions.",
+    "char_start": 44,
+    "char_end": 154
+   },
+   {
+    "passage_id": "b388de6345f1791fd6726cc0a32c07d9:265-343",
+    "doc_id": "b388de6345f1791fd6726cc0a32c07d9",
+    "url": "https://arxiv.org/html/2611.33005v1",
+    "source": "arxiv.org",
+    "published_at": "2026-08-23T00:00:00Z",
+    "text": "However, the value of memory lies in whether it improves the agent\u2019s response.",
+    "char_start": 265,
+    "char_end": 343
+   },
+   {
+    "passage_id": "b388de6345f1791fd6726cc0a32c07d9:155-264",
+    "doc_id": "b388de6345f1791fd6726cc0a32c07d9",
+    "url": "https://arxiv.org/html/2611.33005v1",
+    "source": "arxiv.org",
+    "published_at": "2026-08-23T00:00:00Z",
+    "text": "Existing memory systems treat memory as a record of the past and evaluate it by fidelity to the conversation.",
+    "char_start": 155,
+    "char_end": 264
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-651cc167b0ad",
+  "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+  "facts": [
+   {
+    "text": "OpenAI claims to prove that \u03c9, the exponent of matrix multiplication, is exactly 9/4.",
+    "passage_ids": [
+     "c38f09864b6b0af2b111171ebbdf1a9f:480-673"
+    ]
+   },
+   {
+    "text": "The claimed lower bound on \u03c9 matches an upper bound OpenAI proved in its October 6 release.",
+    "passage_ids": [
+     "c38f09864b6b0af2b111171ebbdf1a9f:480-673"
+    ]
+   },
+   {
+    "text": "Volker Strassen first showed in the late 1960s that \u03c9<3.",
+    "passage_ids": [
+     "c38f09864b6b0af2b111171ebbdf1a9f:710-962"
+    ]
+   },
+   {
+    "text": "OpenAI claims a proof that the true number of linear gates needed to compute the Fourier Transform is N (log N)1/2+o(1), with a matching lower bound.",
+    "passage_ids": [
+     "c38f09864b6b0af2b111171ebbdf1a9f:1451-1603"
+    ]
+   },
+   {
+    "text": "Yupan Liu posted a preprint on the arXiv proving that QIP(2) = PSPACE, and used AI to help achieve it.",
+    "passage_ids": [
+     "c38f09864b6b0af2b111171ebbdf1a9f:2095-2353"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:168-226",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Last night, we had friends and colleagues over for dinner.",
+    "char_start": 168,
+    "char_end": 226
+   },
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:480-673",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "OpenAI claims to prove that \u03c9, the exponent of matrix multiplication, is exactly 9/4\u2014a lower bound (!!), matching the upper bound that OpenAI proved in the great Mathocalypse drop of October 6.",
+    "char_start": 480,
+    "char_end": 673
+   },
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:710-962",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "The first shock is that we now, finally, know the right answer to this central mystery of algorithms going back to the late 1960s, when Volker Strassen first showed that \u03c9<3 (he got \u03c9\u2264log27) \u2026 and that the true answer is actually a rational number (!).",
+    "char_start": 710,
+    "char_end": 962
+   },
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:963-1126",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "But the even bigger shock is that the AI was able to prove any lower bound of the form \u03c9>2. I never expected this challenge to be all that much easier than P \u2260 NP.",
+    "char_start": 963,
+    "char_end": 1126
+   },
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:1451-1603",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "During dessert, we saw another OpenAI release proving that the true number of linear gates needed to compute the Fourier Transform is N (log N)1/2+o(1).",
+    "char_start": 1451,
+    "char_end": 1603
+   },
+   {
+    "passage_id": "c38f09864b6b0af2b111171ebbdf1a9f:2095-2353",
+    "doc_id": "c38f09864b6b0af2b111171ebbdf1a9f",
+    "url": "https://scottaaronson.blog/?p=10379",
+    "source": "scottaaronson.blog",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "To give an idea of how much things have changed, the other day Yupan Liu put a preprint on the arXiv proving that QIP(2) = PSPACE\u2014that is, quantum interactive protocols with only two messages have the full power of those with three, or any polynomial number.",
+    "char_start": 2095,
+    "char_end": 2353
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ }
+]

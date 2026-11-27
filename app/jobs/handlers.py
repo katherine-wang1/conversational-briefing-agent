@@ -340,6 +340,9 @@ async def cos_daily(deps: Deps, job: Job) -> None:
         deps.tools,
     )
     script = script.model_copy(update={"brief_id": brief_id, "user_id": str(uid)})
+    story_set = getattr(trace, "story_set", None)  # UserStorySet from the real agent; None from stubs
+    if story_set is not None:
+        story_set = story_set.model_copy(update={"brief_id": brief_id, "user_id": str(uid)})
     async with deps.db.user_scope(uid) as s:
         await s.briefs.upsert(
             conflict=("user_id", "run_id", "local_date", "arm"),
@@ -348,6 +351,7 @@ async def cos_daily(deps: Deps, job: Job) -> None:
             arm=arm,
             status="rendering",
             script=script,
+            story_set=story_set,
             trace_uri=save_trace(deps, "cos", brief_id, trace),
         )
         for p in packs:

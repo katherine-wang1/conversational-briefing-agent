@@ -1,0 +1,14 @@
+Good morning. There are five stories today, and I'll walk you through them. Answers to your follow-up questions come first, though you have none queued.
+Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+The pause has no set end date. It is meant to check whether Nvidia's regional partners are meeting U.S. export requirements.
+The reason for these countries is a loophole. Chinese companies have been tapping Nvidia chips remotely from data centers there.
+The U.S. Commerce Department closed that loophole earlier this month.
+One estimate says remote data centers like these supply about 24 percent of China's AI computing power.
+Next, a story that is outside the usual scope of this brief.
+OpenAI claims to prove that the exponent of matrix multiplication, ω, is exactly 9/4, matching an upper bound it proved on October 6.
+Separately, Yupan Liu posted a preprint on the arXiv proving that QIP(2) equals PSPACE.
+Now, a story for you about NVIDIA's latest release.
+NVIDIA has quietly released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B.
+It is an image generation model that uses a mixture of experts design, with 30 billion total parameters and 3 billion active per token.
+GPT Image 2 still leads on some other benchmarks, so the picture is mixed.
+That is the brief. What would you like to dig into?

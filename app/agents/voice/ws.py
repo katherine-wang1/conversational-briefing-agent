@@ -18,6 +18,7 @@ from typing import Any
 from fastapi import APIRouter, Query, WebSocket, WebSocketDisconnect
 from pydantic import TypeAdapter, ValidationError
 
+from app.agents.newsroom.note_store import DbNoteStore
 from app.agents.voice.citations import CitationIndex, load_titles, pack_doc_ids
 from app.agents.voice.session import VoiceConfig, VoiceSession
 from app.agents.voice.store import DbSessionStore
@@ -25,6 +26,7 @@ from app.api.auth import AuthError, bearer, resolve_user
 from app.config import loader
 from app.contracts.brief import BriefScript, SourcePack
 from app.contracts.common import TokenBudget, TraceCtx
+from app.contracts.notes import UserStorySet
 from app.contracts.session import ClientMessage, ErrorMsg
 from app.contracts.tools import ToolContext
 from app.jobs.deps import _now
@@ -48,11 +50,24 @@ async def load_session_context(db: Any, user_id: Any, session_id: str) -> dict[s
     return {
         "session": sess,
         "brief": BriefScript.model_validate(brief["script"]) if brief and brief.get("script") else None,
+        "story_set": _story_set(brief),
         "packs": packs,
         "citations": CitationIndex(packs, titles),
         "settings": (prof or {}).get("settings") or {},
         "open_questions": "; ".join(q["question"] for q in questions[:5]),
     }
+
+
+def _story_set(brief: dict[str, Any] | None) -> UserStorySet | None:
+    """The brief's stored set, if it has one (briefs written before the column existed don't)."""
+    raw = (brief or {}).get("story_set")
+    if not raw:
+        return None
+    try:
+        return UserStorySet.model_validate(raw)
+    except ValidationError:
+        log.warning("brief %s: stored set does not match UserStorySet; ignored", (brief or {}).get("id"))
+        return None
 
 
 @router.websocket("/ws/session/{session_id}")
@@ -115,6 +130,10 @@ async def ws_session(websocket: WebSocket, session_id: str, token: str | None = 
         run_id=run_id,
         open_questions=ctx["open_questions"],
         citations=ctx["citations"],
+        story_set=ctx["story_set"],
+        # app.state.note_store overrides (tests, replay); otherwise read `story_notes`, which reads
+        # as "no note" until that table exists.
+        note_store=getattr(st, "note_store", None) or DbNoteStore(st.db, user.user_id, run_id=run_id),
     )
     try:
         while True:

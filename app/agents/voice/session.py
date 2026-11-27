@@ -34,12 +34,17 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
 
+from app.agents.newsroom.note_store import NoteStore
 from app.agents.voice.citations import CitationIndex
 from app.agents.voice.context import (
     is_meta_sentence,
+    note_cite_id,
     position_line,
     prefix_messages,
+    render_note,
+    render_stored_fallback,
     spoken_form,
+    stored_cite_id,
     turn_messages,
     voice_prompt,
 )
@@ -48,6 +53,7 @@ from app.agents.voice.tools import NAV_ACTIONS, PREFERENCE_KINDS, VOICE_TOOLS
 from app.contracts.brief import BriefScript, SourcePack
 from app.contracts.common import BudgetExceeded, TokenBudget, TraceCtx
 from app.contracts.llm import ChatRequest, Message, ModelClient, ToolCall
+from app.contracts.notes import StoredStory, UserStorySet
 from app.contracts.session import (
     BookmarkCreated,
     ClientHello,
@@ -126,6 +132,8 @@ class VoiceSession:
         run_id: str = "live",
         open_questions: str = "",
         citations: CitationIndex | None = None,
+        story_set: UserStorySet | None = None,
+        note_store: NoteStore | None = None,
     ):
         self.session_id = session_id
         self.user_id = user_id
@@ -141,6 +149,12 @@ class VoiceSession:
         self.cfg = config or VoiceConfig()
         self.run_id = run_id
         self.open_questions = open_questions
+        # The user's stored set (brief + the next best stories) and where shared notes are read.
+        # No note store configured: get_story answers from the stored story alone.
+        self.story_set = story_set
+        self.note_store = note_store
+        stored = story_set.stories if story_set else []
+        self._stored: dict[str, StoredStory] = {s.story_ref: s for s in stored}
 
         self.state: SessionState = "READY"
         self.text_mode = False
@@ -153,7 +167,7 @@ class VoiceSession:
         self.tts_seq = 0
         self.asked_about: dict[str, int] = {}
         self.ended = False
-        self._prefix = prefix_messages(brief, packs)
+        self._prefix = prefix_messages(brief, packs, story_set)
         self._turn_task: asyncio.Task | None = None
         self._resume_task: asyncio.Task | None = None
         self._idle_task: asyncio.Task | None = None
@@ -212,8 +226,13 @@ class VoiceSession:
         return pos["segment_id"] if pos else None
 
     def _valid_story(self, story_id: str | None) -> str | None:
-        """Voice tools may only reference stories in this user's brief (never arbitrary ids)."""
-        if not story_id or not self.brief:
+        """Voice tools may only reference stories in this user's brief or stored set (never arbitrary
+        ids)."""
+        if not story_id:
+            return None
+        if story_id in self._stored:
+            return story_id
+        if not self.brief:
             return None
         return story_id if story_id in {s.story_ref for s in self.brief.stories} else None
 
@@ -550,7 +569,9 @@ class VoiceSession:
                     break
                 messages.append(Message(role="assistant", content="".join(round_text), tool_calls=calls))
                 for call in calls:
-                    sid_arg = self._valid_story(call.arguments.get("story_id"))
+                    sid_arg = self._valid_story(
+                        call.arguments.get("story_id") or call.arguments.get("story_ref")
+                    )
                     if sid_arg:
                         story_hits.add(sid_arg)
                     await self.debug_event(
@@ -717,12 +738,47 @@ class VoiceSession:
             tokens_cached=u.tokens_cached, cost_usd=cost, cached=resp.cached,
         )
 
+    async def _get_story(self, ref: str) -> str:
+        """L2: the shared note for a stored story, else the stored story's own headline, summary and
+        links (flagged as "no detail stored" so the model falls back to quick_search)."""
+        story = self._stored.get(ref)
+        if story is None and self._valid_story(ref) is None:
+            bad = ref[:40]
+            return f"<tool_error>unknown story_ref {bad!r}: use one from the STORED STORIES list</tool_error>"
+        note = None
+        if self.note_store is not None and (story is None or story.note_status == "shared"):
+            try:
+                note = await self.note_store.get(ref)
+            except Exception:  # noqa: BLE001 - a note read must never break the turn
+                log.warning("note store read failed for %s", ref, exc_info=True)
+        if note is not None:
+            ok = {src.url: src.outlet for src in note.sources if src.status == "ok"}
+            for i, f in enumerate(note.facts):
+                url = next((u for u in f.source_urls if u in ok), f.source_urls[0] if f.source_urls else None)
+                self.citations.add_source(note_cite_id(ref, i), url, ok.get(url or ""), note.headline)
+            await self.debug_event("tool", f"get_story {ref}: note with {len(note.facts)} facts", ref=ref)
+            return render_note(note)
+        if story is None:  # a brief story missing from the stored set (old briefs): no detail here
+            stories = self.brief.stories if self.brief else []
+            head = next((s.headline for s in stories if s.story_ref == ref), ref)
+            story = StoredStory(story_ref=ref, rank=1, headline=head, in_brief=True)
+        self.citations.add_source(
+            stored_cite_id(ref), story.urls[0] if story.urls else None, None, story.headline
+        )
+        await self.debug_event("tool", f"get_story {ref}: no note stored; headline and summary only", ref=ref)
+        return render_stored_fallback(story, in_corpus=any(p.story_ref == ref for p in self.packs))
+
     async def _run_voice_tool(self, call: ToolCall, turn_id: str, nav: list[tuple[str, str | None]]) -> str:
         a = call.arguments
+        if call.name == "get_story":
+            ref = str(a.get("story_ref") or a.get("story_id") or "").strip()
+            if not ref:
+                return "<tool_error>story_ref is required</tool_error>"
+            return await self._get_story(ref)
         story = self._valid_story(a.get("story_id"))
         if a.get("story_id") and story is None:
             bad = str(a.get("story_id"))[:40]
-            return f"<tool_error>unknown story_id {bad!r}: use one from the brief</tool_error>"
+            return f"<tool_error>unknown story_id {bad!r}: use one from the brief or stored list</tool_error>"
         if call.name == "bookmark_question":
             q = str(a.get("question", "")).strip()
             if not q:

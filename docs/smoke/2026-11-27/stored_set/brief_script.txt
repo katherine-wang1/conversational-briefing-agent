@@ -1,0 +1,19 @@
+Good morning. Here are your stories for today, about three minutes' worth. Answers to your follow-up questions come first, but none were queued.
+Our first big story is about Nvidia and its server partners in Southeast Asia.
+Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+The pause has no set end date while Nvidia assesses whether its regional partners are meeting U.S. export requirements.
+Chinese companies have been tapping Nvidia chips remotely from data centers in those countries, a loophole the U.S. Commerce Department closed earlier this month.
+The U.S. Commerce Department closed that loophole earlier this month.
+One think tank estimates such remote data centers supply about 24 percent of China's AI computing power.
+Next, a story that's outside your usual coverage: OpenAI and the exponent of matrix multiplication.
+OpenAI claims to prove that omega, the exponent of matrix multiplication, is exactly 9/4, a lower bound.
+That claimed lower bound matches an upper bound OpenAI proved in its October 6 release.
+Volker Strassen first showed in the late 1960s that this exponent is below 3.
+A separate Yupan Liu preprint on arXiv proves that QIP(2) equals PSPACE.
+Now, a model for image generation.
+NVIDIA has released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B, an autoregressive image generation model.
+The model is a mixture-of-experts design with 30 billion total parameters, using 3 billion per token.
+It scored 97.98 on LongTextBench, ahead of GPT Image 2 at 96.00, though GPT Image 2 maintained an advantage on GenEval2 with 81.00 versus Nemotron's 65.43.
+Next, a research note on how AI agents remember things.
+Existing agent memory systems judge memory by how faithfully it records past conversations.
+What would you like to dig into?

@@ -1,0 +1,161 @@
+{
+ "brief_id": "b_e269029c8cb8f5f0",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:43c22bce363c",
+   "slot": "for_you",
+   "headline": "NVIDIA Releases Open Weights For Nemotron-Labs-Image-30B-A3B, An Autoregressive Image Generator Outpacing GPT Image 2 With 3B Active Parameters",
+   "why_tag": "for you",
+   "aliases": [
+    "NVIDIA"
+   ]
+  },
+  {
+   "story_ref": "ai-651cc167b0ad",
+   "slot": "outside_usual",
+   "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "Scott Aaronson",
+    "Andrew Bailey",
+    "Bank of England"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. There are five stories today, and I'll walk you through them. Answers to your follow-up questions come first, though you have none queued.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s002",
+   "text": "The pause has no set end date. It is meant to check whether Nvidia's regional partners are meeting U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "The reason for these countries is a loophole. Chinese companies have been tapping Nvidia chips remotely from data centers there.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "The U.S. Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "One estimate says remote data centers like these supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "Next, a story that is outside the usual scope of this brief.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s007",
+   "text": "OpenAI claims to prove that the exponent of matrix multiplication, ω, is exactly 9/4, matching an upper bound it proved on October 6.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:432-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "Separately, Yupan Liu posted a preprint on the arXiv proving that QIP(2) equals PSPACE.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:2095-2353"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "Now, a story for you about NVIDIA's latest release.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s010",
+   "text": "NVIDIA has quietly released open weights on Hugging Face for Nemotron-Labs-Image-30B-A3B.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "56f9d36ab41f51a050e533252622aeeb:0-252"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "It is an image generation model that uses a mixture of experts design, with 30 billion total parameters and 3 billion active per token.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "56f9d36ab41f51a050e533252622aeeb:588-796"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "GPT Image 2 still leads on some other benchmarks, so the picture is mixed.",
+   "story_ref": "u:43c22bce363c",
+   "cites": [
+    "56f9d36ab41f51a050e533252622aeeb:1906-2138"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "That is the brief. What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 92
+}
