@@ -274,6 +274,16 @@ async def main(out: Path, day: str) -> None:
     def code(step: str) -> list[dict]:
         return [e["detail"] for e in ev if e["step"] == step and e["kind"] == "code"]
 
+    def tool_events(step: str, tool: str) -> list[dict]:
+        return [
+            e["detail"]
+            for e in ev
+            if e["step"] == step and e["kind"] == "tool" and e["detail"].get("tool") == tool
+        ]
+
+    def degrades(step: str) -> list[dict]:
+        return [e["detail"] for e in ev if e["step"] == step and e["kind"] == "degrade"]
+
     log.add(
         "## 4. One user's daily run (per user)",
         "",
@@ -287,9 +297,12 @@ async def main(out: Path, day: str) -> None:
     log.add("**C1 plan:** the model plans searches from the user's interests:", "")
     for q in plan.get("queries", []):
         log.add(f"- `{q['query']}` ({q['kind']}): {q.get('rationale', '')}")
-    searches = [d for d in code("C2") if d.get("tool") == "search"]
+    searches = tool_events("C2", "search")
     c2 = next((d for d in code("C2") if "finds" in d), {})
     log.add("", f"**C2 search:** {len(searches)} searches, {c2.get('finds')} finds kept.", "")
+    for d in searches:
+        log.add(f"- `{d.get('query')}` ({d.get('query_kind')}): {d.get('n_hits')} hits")
+    log.add("")
     c3 = next(iter(code("C3")), {})
     log.add(
         f"**C3 pool:** {c3.get('pool_size')} candidates by origin {c3.get('origins')}; "
@@ -302,7 +315,7 @@ async def main(out: Path, day: str) -> None:
         ["Story", "Slot", "Why"],
         [[s.get("story_ref"), s.get("slot"), s.get("why_tag")] for s in c5.get("selected", [])],
     )
-    fetches = [d for d in code("C6") if d.get("tool") == "fetch"]
+    fetches = tool_events("C6", "fetch")
     log.add(
         f"**C6 source packs:** {len(packs)} packs; {len(fetches)} fetches, "
         f"{sum(1 for d in fetches if d.get('error'))} failed: "
@@ -310,6 +323,11 @@ async def main(out: Path, day: str) -> None:
         + ".",
         "",
     )
+    for step in ("C6", "C8"):
+        dg = degrades(step)
+        if dg:
+            reasons = Counter(d.get("reason", "?") for d in dg)
+            log.add(f"*{step} degraded:* " + "; ".join(f"{r} ×{n}" for r, n in reasons.items()), "")
     c7 = [d for d in code("C7") if "notes" in d]
     c8 = [d for d in code("C8") if "checked" in d]
     log.add(

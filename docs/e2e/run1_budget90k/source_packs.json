@@ -1,0 +1,427 @@
+[
+ {
+  "story_ref": "ai-d53b121b6704",
+  "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule",
+  "facts": [
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners are meeting U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely using Nvidia chips from data centers in those countries.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed this remote-access loophole earlier in the month, reportedly grudgingly.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:0-589",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Nvidia is under pressure to do things differently, and a new WSJ report shows how far that\u2019s going.\nAccording to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.\nAs for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 0,
+    "char_end": 589
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "physical_ai-2af40820bf64",
+  "headline": "XPeng unveils IRON humanoid and Turing Physical AI architecture (VLA 3.0), targets mass production and EV-level pricing",
+  "facts": [
+   {
+    "text": "XPENG unveiled its general-purpose humanoid robot, XPENG IRON, at AI Day 2026.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:0-349"
+    ]
+   },
+   {
+    "text": "XPENG is developing IRON as a work partner for real-world roles.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:708-922"
+    ]
+   },
+   {
+    "text": "XPENG says mass production of IRON is scheduled to begin in January 2027.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:923-1449"
+    ]
+   },
+   {
+    "text": "The latest IRON generation has 76 degrees of freedom and a 21-degree-of-freedom dexterous hand.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:2311-2683"
+    ]
+   },
+   {
+    "text": "IRON OS runs on three proprietary Turing AI chips delivering 2,250 TOPS of effective computing power.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:2311-2683"
+    ]
+   },
+   {
+    "text": "Tactile feedback allows IRON to detect contact and adjust the force it applies when handling objects.",
+    "passage_ids": [
+     "5d5d6d39d6c67a14cf98a76caf1d566f:2816-2931"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "5d5d6d39d6c67a14cf98a76caf1d566f:0-349",
+    "doc_id": "5d5d6d39d6c67a14cf98a76caf1d566f",
+    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "source": "t.co",
+    "published_at": "2026-11-01T00:00:00Z",
+    "text": "GUANGZHOU, China, Nov. 25, 2026 (GLOBE NEWSWIRE) -- XPENG Inc. (\u201cXPENG\u201d or the \u201cCompany,\u201d NYSE: XPEV; HKEX: 9868), a leading global Physical AI company, today introduced its advanced general-purpose humanoid robot, XPENG IRON, at AI Day 2026, showcasing advances in its robotics technology, manufacturing capabilities and commercialisation strategy.",
+    "char_start": 0,
+    "char_end": 349
+   },
+   {
+    "passage_id": "5d5d6d39d6c67a14cf98a76caf1d566f:708-922",
+    "doc_id": "5d5d6d39d6c67a14cf98a76caf1d566f",
+    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "source": "t.co",
+    "published_at": "2026-11-01T00:00:00Z",
+    "text": "XPENG is developing IRON as a work partner for real-world roles, guided by five core product priorities: foundational capabilities, safety and reliability, emotional value, 24/7 operation and business capabilities.",
+    "char_start": 708,
+    "char_end": 922
+   },
+   {
+    "passage_id": "5d5d6d39d6c67a14cf98a76caf1d566f:923-1449",
+    "doc_id": "5d5d6d39d6c67a14cf98a76caf1d566f",
+    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "source": "t.co",
+    "published_at": "2026-11-01T00:00:00Z",
+    "text": "\u201cHumanoid robotics is reaching the point where the industry must move beyond demonstrations and prove that robots can create value in the real world,\u201d said Mr. He Xiaopeng, Chairman and CEO of XPENG.\u201cThat requires more than capable hardware or intelligent models. It requires reliable products, high-quality data, scalable manufacturing and continuous learning through deployment. XPENG IRON brings these capabilities together as we prepare for commercial deployment and mass production is scheduled to begin in January 2027.\u201d",
+    "char_start": 923,
+    "char_end": 1449
+   },
+   {
+    "passage_id": "5d5d6d39d6c67a14cf98a76caf1d566f:2311-2683",
+    "doc_id": "5d5d6d39d6c67a14cf98a76caf1d566f",
+    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "source": "t.co",
+    "published_at": "2026-11-01T00:00:00Z",
+    "text": "The latest generation of IRON features 76 degrees of freedom, including a 21-degree-of-freedom dexterous hand, more than 1,500 tactile sensing points, 3D vision and 360-degree perception of its environment. Its IRON OS runs on three proprietary Turing AI chips, delivering 2,250 TOPS of effective computing power to support onboard AI models and whole-body motion control.",
+    "char_start": 2311,
+    "char_end": 2683
+   },
+   {
+    "passage_id": "5d5d6d39d6c67a14cf98a76caf1d566f:2816-2931",
+    "doc_id": "5d5d6d39d6c67a14cf98a76caf1d566f",
+    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "source": "t.co",
+    "published_at": "2026-11-01T00:00:00Z",
+    "text": "Tactile feedback, for example, allows IRON to detect contact and adjust the force it applies when handling objects.",
+    "char_start": 2816,
+    "char_end": 2931
+   },
+   {
+    "passage_id": "306f0e3ce585ca728191b3557bc352e9:0-534",
+    "doc_id": "306f0e3ce585ca728191b3557bc352e9",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55UlZBY0VfY3ZCMVhrNG5HZ2N5VUlLdXJnNXcwZ1hjN0VoMjdIS19jSU1ET1lUTFpqTkhyNWVvZ2NYT0ZyWGg0dmN1TEw3OHNaTDhwU1JKZm9nV3FaeFFmWEUzVVQ2VmFHcHozRHFuWHlMM3NUN0E?oc=5",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "XPeng Prices IRON Humanoid Near an EV's Sticker, Targeting 2027 Commercial Rollout\nXPeng has attached a number to its humanoid robot ambitions: roughly the price of one of its own electric cars. The Chinese automaker said its IRON humanoid, unveiled at its AI Day event in Guangzhou this week, could retail near the average selling price of its vehicles, a band that runs from 119,800 yuan to 309,800 yuan, or about $18,000 at the low end.\nThe disclosure puts a concrete figure on a product that has so far been a stage demonstration.",
+    "char_start": 0,
+    "char_end": 534
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-be41885503cc",
+  "headline": "US chip curbs and distillation crackdown slow Chinese AI models; Z.ai's GLM-5.5 reportedly delayed",
+  "facts": [
+   {
+    "text": "Zhipu's next flagship model, GLM-5.5, may be delayed until after the first quarter of next year.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:417-666"
+    ]
+   },
+   {
+    "text": "Moonshot AI projects that cutting off overseas data center access could double the interval between major model releases to over a year.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:667-883"
+    ]
+   },
+   {
+    "text": "A researcher at a major Chinese tech company said 'We are finished' regarding AI model training work.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:1272-1445"
+    ]
+   },
+   {
+    "text": "The U.S. Department of Commerce regulations blocking remote rental of Nvidia advanced chips through overseas data centers took effect on the 19th.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:2607-2821"
+    ]
+   },
+   {
+    "text": "SMIC has been unable to secure top-tier manufacturing equipment due to U.S. export restrictions, creating a domestic chip production bottleneck.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:2420-2606"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:217-416",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Reuters reported on the 26th (local time), citing sources familiar with the matter, that the development schedule for the next flagship AI model by Chinese AI developer Zhipu (Z.ai) is facing delays.",
+    "char_start": 217,
+    "char_end": 416
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:417-666",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Sources stated that while Zhipu originally planned to release its next-generation model, \"GLM-5.5,\" within the year, the launch could be delayed until after the first quarter of next year following the introduction of new U.S. computing regulations.",
+    "char_start": 417,
+    "char_end": 666
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:667-883",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Competitor Moonshot AI in China is also internally projecting that if access to overseas data centers is cut off, the interval between major AI model releases could double from the previous six months to over a year.",
+    "char_start": 667,
+    "char_end": 883
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:1272-1445",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "A researcher at a major Chinese tech company said, \"We are finished,\" adding that many of their peers and themselves want to leave the AI training sector to find other jobs.",
+    "char_start": 1272,
+    "char_end": 1445
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:2607-2821",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The U.S. Department of Commerce announced regulations on the 16th to block Chinese companies from remotely renting Nvidia advanced chips through overseas data centers, and these regulations took effect on the 19th.",
+    "char_start": 2607,
+    "char_end": 2821
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:2420-2606",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "However, China's top foundry, SMIC, has been unable to secure top-tier manufacturing equipment due to U.S. export restrictions, leaving domestic chip production capacity as a bottleneck.",
+    "char_start": 2420,
+    "char_end": 2606
+   },
+   {
+    "passage_id": "0409c157c03aad5c3f9a115b38164f5a:0-332",
+    "doc_id": "0409c157c03aad5c3f9a115b38164f5a",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWFVoTlJVZ0xNRkdybDlrb01paGpFY1pBSHctekVYbk9UVHdhVENzUncwUllQbGZlbzZpRkltMDNxX0pFQ0dlUUI2YkM1M0VuSUdVUVR6Z0ZTRktrRDU4Vm9iNElzU1FXS2NDV2NQUnJKQVAwWjZGaEJ4c0lERVZqM29nUndYbzZkNjZDREJxRjliU0NZU2N3?oc=5",
+    "source": "grafa.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Key points\n- Chinese AI developers Z.AI and Moonshot AI face potential delays to flagship model releases as US restrictions tighten access to advanced computing resources.\n- Z.AI's GLM-5.5 could be delayed until the first quarter of 2027 or later, while Moonshot's release intervals could extend from six months to a year or longer.",
+    "char_start": 0,
+    "char_end": 332
+   },
+   {
+    "passage_id": "62f2a076a2355d19fabdc57d46d169ca:0-401",
+    "doc_id": "62f2a076a2355d19fabdc57d46d169ca",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZUd4QmVfQ3VKc2o5WUcydWNMWjBlZmpUSnRXYldhOG5yREJDT19iTUdwcWdzN21JVlF3NzZnYWNxYmJhRzZraUdTSUpUVVFQc3RTemZaSUVwSk1TQkNjbHdBS1kwZjZVeXJ5ZEo5b0xhc2pral9IQ2dYRGdGdWh0RnJFQW5CR0pMd19zWGRBT3NHZVNtZG1hRWRPNm9HZm1lc1ZGSE9pRDRQd1N4V3Vqb2R0ONIBrwFBVV95cUxNR2F6YUsyc19KNGdMR3dOSnktcUpuQkg1NFotS3ZEZVB3dDY5WkZ2MnpLS0RvTzZNOHpvaUlCQ2cxYkNYVHVPVkV0X3JxalBQV2FFb1M3dS1rREV4WWpmajFXd0dIWGg2OXpmT2NicWx5aWI2anl0NWlzRXFtcEwyb0Fudkpsb3B6TzhlUmtUdmczM3Y4ZkwyVVZsNjlCWkxxNnd4S3lvZTlhbGZZbVo0?oc=5",
+    "source": "thenews.com.pk",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "US chip curbs and distillation crackdown slow Chinese AI model rollouts\nStricter US compute restrictions and anti-distillation safeguards from OpenAI and Anthropic are stalling flagship models at Z.AI and DeepSeek\nNew Washington rules restricting overseas data center access and tighter anti-distillation blocks by OpenAI and Anthropic are delaying flagship Chinese AI releases such as Z.AI\u2019s GLM-5.5.",
+    "char_start": 0,
+    "char_end": 401
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:c3a6c974e788",
+  "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions",
+  "facts": [
+   {
+    "text": "NVIDIA released Nemotron-Labs-Image-30B-A3B as a free open-weight image-generation model.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:101-234"
+    ]
+   },
+   {
+    "text": "The model uses an autoregressive mechanism rather than diffusion.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:235-420",
+     "cd80b035be375554cf4970bd2c168bc0:754-952"
+    ]
+   },
+   {
+    "text": "The NVIDIA License permits only non-commercial use; commercial use requires separate confirmation of terms.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1116-1264",
+     "cd80b035be375554cf4970bd2c168bc0:1571-1682"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:101-234",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "U.S. semiconductor giant NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model.",
+    "char_start": 101,
+    "char_end": 234
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:235-420",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Its biggest distinguishing feature is that it adopts the autoregressive mechanism common in large language models (LLMs) rather than the diffusion models that dominate image generation.",
+    "char_start": 235,
+    "char_end": 420
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1116-1264",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "The runtime environment assumes Linux, Python 3.12, and CUDA 13.0. It uses the \"NVIDIA License,\" which permits use for non-commercial purposes only.",
+    "char_start": 1116,
+    "char_end": 1264
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1571-1682",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Note: The license is limited to non-commercial use, and commercial use requires separate confirmation of terms.",
+    "char_start": 1571,
+    "char_end": 1682
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:754-952",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Unlike diffusion models, which paint images by progressively removing noise, Nemotron-Labs-Image-30B-A3B handles pixel information through an autoregressive method that predicts tokens sequentially.",
+    "char_start": 754,
+    "char_end": 952
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:cb81d14cfc07",
+  "headline": "Distilling Kimi-K3.1-Pro Into Qwen3.8-27B: 93% for $260 | explainx.ai Blog",
+  "facts": [],
+  "passages": [
+   {
+    "passage_id": "d79e65c2905e36bb1d2a5a9a21164691:0-67",
+    "doc_id": "d79e65c2905e36bb1d2a5a9a21164691",
+    "url": "https://explainx.ai/blog/together-ai-distill-kimi-k3-1-pro-into-qwen3-8-27b-lao-translation-260-dollars-2026",
+    "source": "explainx.ai",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "newsletter \u00b7 weekly\nGet AI news, tools, and insights in your inbox.",
+    "char_start": 0,
+    "char_end": 67
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "energy-9fa7f405d5db",
+  "headline": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+  "facts": [],
+  "passages": [],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ }
+]

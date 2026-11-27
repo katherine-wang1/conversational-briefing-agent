@@ -1,0 +1,400 @@
+{
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "local_date": "2026-11-27",
+ "stories": [
+  {
+   "story_ref": "ai-d53b121b6704",
+   "rank": 1,
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule",
+   "summary": "Nvidia halted shipments to four Southeast Asian countries after the US closed a remote-access loophole that helped Chinese firms reach advanced AI chips. Singapore's deputy PM says it is talking to Washington to keep chip access and has not confirmed the halt.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://bloomberg.com/news/articles/2026-11-27/singapore-talking-to-us-to-keep-ai-chip-access-deputy-pm-says",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.25,
+   "importance": 92.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "physical_ai-2af40820bf64",
+   "rank": 2,
+   "headline": "XPeng unveils IRON humanoid and Turing Physical AI architecture (VLA 3.0), targets mass production and EV-level pricing",
+   "summary": "XPeng showed its IRON general-purpose humanoid and Turing architecture, with mass production targeted for around January 2027. The company says it may sell near an EV's median price, and store-assistant trials are planned for Q1 2027.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE55UlZBY0VfY3ZCMVhrNG5HZ2N5VUlLdXJnNXcwZ1hjN0VoMjdIS19jSU1ET1lUTFpqTkhyNWVvZ2NYT0ZyWGg0dmN1TEw3OHNaTDhwU1JKZm9nV3FaeFFmWEUzVVQ2VmFHcHozRHFuWHlMM3NUN0E?oc=5",
+    "https://news.google.com/rss/articles/CBMifEFVX3lxTFBRNFg1Mzl4TU9SWDZoSktLekhYdTZzSVJIUHFWakpIS3pvS1ZNcXJkM3lCUl94NzdjVDluWTlzbTg3OUhTN1hKaTVSb1IwdUYwRjhpQTVwaXhBbDlYYmZuQ1JFRkJOa2VCY2hRRWl6YUxRd2F5ODNReHdFeVo?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZTlCUzl2dlUxWkk5bUwtRzl3aVp5Y0J2XzgzT3ktQzZpcXBXSl85czJIZjQyTWdzT2xiZEY5aFgtQlpZUTdpVVB4UmxQTlVic3NhUzJEODlPZC1wTGRha05FMk51blR5MThERndDYlhybVZ5VkFZNWRjSGxIbnJZbXVR?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.15,
+   "importance": 90.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "ai-be41885503cc",
+   "rank": 3,
+   "headline": "US chip curbs and distillation crackdown slow Chinese AI models; Z.ai's GLM-5.5 reportedly delayed",
+   "summary": "Reuters sources say US chip controls and curbs on distillation are hampering Chinese AI development. Z.ai's flagship GLM-5.5 missed its November release and could slip to Q1 2027 or later.",
+   "beat": "ai",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://bloomberg.com/news/videos/2026-11-27/counterpoint-on-china-s-ai-progress-under-chip-curbs-video",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.7,
+   "importance": 80.0,
+   "why": [
+    "for you",
+    "i-open",
+    "i-acme"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:c3a6c974e788",
+   "rank": 4,
+   "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions",
+   "summary": "NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model. Rather than a diffusion model, it uses an…",
+   "beat": "ai",
+   "urls": [
+    "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "cut from the brief",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:cb81d14cfc07",
+   "rank": 5,
+   "headline": "Distilling Kimi-K3.1-Pro Into Qwen3.8-27B: 93% for $260 | explainx.ai Blog",
+   "summary": "Together AI says it fixed a small model's blind spot with a few hundred dollars of compute. Qwen3.8-27B, a popular small open model, answered in Thai when asked to translate English into Lao. After training a LoRA adapter on about 3,800 Lao translations from Kimi-K3.1-Pro, the model wrote Lao on eve",
+   "beat": "ai",
+   "urls": [
+    "https://explainx.ai/blog/together-ai-distill-kimi-k3-1-pro-into-qwen3-8-27b-lao-translation-260-dollars-2026"
+   ],
+   "in_brief": false,
+   "relevance": 0.75,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "cut from the brief",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "energy-9fa7f405d5db",
+   "rank": 6,
+   "headline": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+   "summary": "FT reports the tie-up faces fierce opposition as anger over soaring electricity bills spills into Wall Street dealmaking.",
+   "beat": "energy",
+   "urls": [
+    "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1"
+   ],
+   "in_brief": false,
+   "relevance": 0.2,
+   "importance": 88.0,
+   "why": [
+    "outside your usual",
+    "cut from the brief"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:d3aa11d5f12e",
+   "rank": 7,
+   "headline": "NuScale Power (SMR) Draws Fresh Investor Focus As AI Power Demand Lifts SMR Appeal",
+   "summary": "The NRC approved small modular reactor design gives NuScale Power a licensing framework that Oklo does not yet have. This can shorten regulatory steps once projects move toward construction. For data center and AI users, that approval makes NuScale a potential supplier of standardized modules rather",
+   "beat": "energy",
+   "urls": [
+    "https://finance.yahoo.com/energy/articles/nuscale-power-smr-draws-fresh-141122724.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.8,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-7bbb8e23452a",
+   "rank": 8,
+   "headline": "Meta declined UK FCA request for joint testing of Muse personal agent",
+   "summary": "The FCA warned of agent-driven risk after Meta refused to share Muse for testing before rollout.",
+   "beat": "ai",
+   "urls": [
+    "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 58.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:c766ba0c02a2",
+   "rank": 9,
+   "headline": "Holistic Review Details Architecture, Infrastructure, and Benchmarking",
+   "summary": "Keywords: Agentic AI, Multi-Agent Systems, Large Language Models, Agentic RAG, Cognitive Architectures, Hierarchical Memory, Tool Use, ModelOps, Artificial Intelligence, Autonomous Agents, Evaluation Benchmarks, Prompt Injection, Robotics, WebArena, MemGPT, Algorithmic Alignment, AI Safety News Sou",
+   "beat": "ai",
+   "urls": [
+    "https://bioengineer.org/holistic-review-details-architecture-infrastructure-and-benchmarking-limits-in-agentic-ai-systems"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:8ffa3ed30741",
+   "rank": 10,
+   "headline": "Why businesses are embracing ‘good enough’ open-weight AI—and how geopolitics could get in the way | Fortune",
+   "summary": "“For the longest time, the idea has been that you can get the highest level of performance using closed-weight models, so many firms start off by using them,” says Hariharasudhan Saminathan, cofounder of Friday, a sovereign AI startup backed by global venture capital firm Antler. But now, “through d",
+   "beat": "ai",
+   "urls": [
+    "https://fortune.com/2026/11/26/global-businesses-open-weight-ai"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:4ebb752045c8",
+   "rank": 11,
+   "headline": "Procedure Inference as Memory: Learning Recruiter Decision Procedures from OKF-Structured Episodes in Multi-Session Hiring Assistants",
+   "summary": "Multi-session hiring assistants must infer evolving recruiter preferences and decision patterns across projects and time. We introduce Open Knowledge Format (OKF)-indexed episodic memory to organize interactions and retrieve related events through their lineage. We also introduce Procedure Memory, w",
+   "beat": "ai",
+   "urls": [
+    "https://arxiv.org/html/2611.34576v1"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f83b26de444d",
+   "rank": 12,
+   "headline": "Amini Releases Soma, an Open Artificial Intelligence (AI) Model to Take Nations from Analogue to AI-Ready",
+   "summary": "Amini released Soma-1X Lite, a compact, open-weight AI model that converts paper records into structured, machine-readable data. Small enough to run on a single GPU within a government’s sovereign infrastructure, Soma shows that countries of the Global South can build world-class AI for their own co",
+   "beat": "ai",
+   "urls": [
+    "https://aithority.com/machine-learning/amini-releases-soma-an-open-artificial-intelligence-ai-model-to-take-nations-from-analogue-to-ai-ready"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:ebc86becc2d3",
+   "rank": 13,
+   "headline": "Open-weight models are the hottest thing in AI. Are they right for you?",
+   "summary": "Hyperscience reported that distillation delivers up to 97% cost reduction and four times faster inference, while retaining over 95% of the original model’s performance on designated tasks. Small models are faster and considerably cheaper than frontier LLMs. ### Are open-weight models for you? Expe",
+   "beat": "ai",
+   "urls": [
+    "https://siliconangle.com/2026/11/25/open-weight-models-are-the-hottest-thing-in-ai-are-they-right-for-you"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:9a6288b4c8b1",
+   "rank": 14,
+   "headline": "Lawmakers push for more oversight as AI takes bigger role in developing itself",
+   "summary": "The concerns about recursive self-improvement come as leading AI developers like Meta, Anthropic and OpenAI have disclosed a series of instances of their models acting beyond their instructions and acting in unexpected ways, which has raised questions about whether companies can reliably control mod",
+   "beat": null,
+   "urls": [
+    "https://abc45.com/news/nation-world/lawmakers-push-for-more-oversight-as-ai-takes-bigger-role-in-developing-itself"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "physical_ai-4489a390ee52",
+   "rank": 15,
+   "headline": "OpenAI model tops humanoid simulation benchmark from Artificial Analysis, beating Google and Anthropic",
+   "summary": "A humanoid simulation test found LLMs struggling with grip, with OpenAI leading.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9Fam54SWNTcHhieDJrbTFkWmk0U2F6aFBoVmdFeHp1cGtVenVRRWF2U2doQnhFRmkyRUxoVXVTRmxEZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQ3A0d1hBcmh6d00yWTdpaVlyQjA3ZzlyQWJuOUhBdzk4cGMyWEV2VXBtWXpXZm1WSUJZd2FsMTNRVVVXYUVUQXQtcGotbXl3SlFWdU82Q1RJMlBfN3dwcGtURE9ianNwMUstOU0yOEc4YmpEWm90SjlyRzF6RHZab0lR?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNUlwX2pvcVlwY3UwbWpHY0V4dWVJTGhTSVktTk9LT08zSkxGbXNqN01VcG5IQWZrNFc5SHdMVzRublFfVWhwTGllZ1JwMWJ4UXRVMkozS3JwTldGckkwcktyNmQtVGdOeUFJMWQ3NDR0cWxfTkpoelhlWktSMFBvZEZkRDBGTkVpMXNXaQ?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents",
+    "i-acme"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:42837bc4bb39",
+   "rank": 16,
+   "headline": "Procedure Inference as Memory | OpenTrain AI",
+   "summary": "Multi-session hiring assistants must infer evolving recruiter preferences and decision patterns across projects and time. We introduce Open Knowledge Format (OKF)-indexed episodic memory to organize interactions and retrieve related events through their lineage. We also introduce Procedure Memory, w",
+   "beat": "ai",
+   "urls": [
+    "https://www.opentrain.ai/papers/procedure-inference-as-memory-learning-recruiter-decision-procedures-from-okf-st--arxiv-2611.34576"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "energy-acbaaebfbd87",
+   "rank": 17,
+   "headline": "Nuclear plants to stay open longer as new builds hit delays and costs",
+   "summary": "Governments are extending existing plant lives to meet rising demand.",
+   "beat": "energy",
+   "urls": [
+    "https://ft.com/content/ea0f3201-34f4-4cd4-84f3-6510bcc8b313?syn-25a6b1a6=1"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 58.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:adc479907ff7",
+   "rank": 18,
+   "headline": "AI company employees warn internal models are too powerful to safely release: report",
+   "summary": "Both Anthropic and OpenAI's unreleased models are far more powerful than what has been publicly released, but the companies have struggled to ensure that they are safe enough for public release, according to unnamed sources. ## \"If we continue trying to make models much smarter, such that they're a",
+   "beat": null,
+   "urls": [
+    "https://cnycentral.com/news/nation-world/ai-company-employees-warn-internal-models-are-too-powerful-to-safely-release-report-anthropic-openai-rrt"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:66d080264e04",
+   "rank": 19,
+   "headline": "Uranium Market Heats Up as New Fuel Deals Signal a Bigger Nuclear Expansion • Carbon Credits",
+   "summary": "One of the most significant recent developments involves Oklo and Centrus Energy. The companies finalized multiple multi-year agreements to supply high-assay low-enriched uranium (HALEU) for Oklo’s advanced reactor projects. The agreements will secure enough fuel to support up to five Aurora powerh",
+   "beat": "energy",
+   "urls": [
+    "https://carboncredits.com/uranium-market-heats-up-as-new-fuel-deals-signal-a-bigger-nuclear-expansion"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:125e29b9788d",
+   "rank": 20,
+   "headline": "Oklo Inc. (OKLO) stock price, news, quote and history - Yahoo Finance",
+   "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology",
+   "beat": "energy",
+   "urls": [
+    "https://au.finance.yahoo.com/quote/OKLO"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 20.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  }
+ ],
+ "created_at": "2026-11-27T06:31:46.882800Z"
+}

@@ -1,0 +1,252 @@
+{
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-27",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-d53b121b6704",
+   "slot": "big_news",
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Singapore",
+    "Malaysia",
+    "Thailand",
+    "Indonesia",
+    "Gan Kim Yong"
+   ]
+  },
+  {
+   "story_ref": "physical_ai-2af40820bf64",
+   "slot": "big_news",
+   "headline": "XPeng unveils IRON humanoid and Turing Physical AI architecture (VLA 3.0), targets mass production and EV-level pricing",
+   "why_tag": "big news",
+   "aliases": [
+    "XPeng",
+    "IRON",
+    "Turing",
+    "VLA 3.0",
+    "He Xiaopeng"
+   ]
+  },
+  {
+   "story_ref": "ai-be41885503cc",
+   "slot": "for_you",
+   "headline": "US chip curbs and distillation crackdown slow Chinese AI models; Z.ai's GLM-5.5 reportedly delayed",
+   "why_tag": "for you",
+   "aliases": [
+    "Z.ai",
+    "Moonshot AI",
+    "GLM-5.5",
+    "Reuters"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have three stories today, among them Nvidia pausing chip server shipments to four Southeast Asian countries and XPeng unveiling its IRON humanoid robot.",
+   "story_ref": null,
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "5d5d6d39d6c67a14cf98a76caf1d566f:0-349"
+   ],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "First, the biggest story this morning.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "TechCrunch, citing the Wall Street Journal, reports that partners including Dell and Super Micro were told to hold shipments.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "The pause has no set end date while Nvidia assesses whether its regional partners are meeting U.S. export requirements.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The reason those countries are involved is that Chinese companies have been using Nvidia chips remotely from data centers there.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The U.S. Commerce Department closed that remote-access loophole earlier this month, reportedly grudgingly.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "The Institute for Progress estimates such remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "I can walk you through how the remote-access rule works, if you're curious.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s010",
+   "text": "Next, a hardware story from XPeng, the Chinese company that makes electric cars.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s011",
+   "text": "XPeng unveiled its general-purpose humanoid robot, the IRON, at its AI Day 2026 event in Guangzhou.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [
+    "5d5d6d39d6c67a14cf98a76caf1d566f:0-349"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "The company is developing IRON as a work partner for real-world roles, and says mass production is scheduled to begin in January 2027.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [
+    "5d5d6d39d6c67a14cf98a76caf1d566f:708-922",
+    "5d5d6d39d6c67a14cf98a76caf1d566f:923-1449"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "The latest version has 76 degrees of freedom and a 21-degree-of-freedom dexterous hand, with more than 1,500 tactile sensing points.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [
+    "5d5d6d39d6c67a14cf98a76caf1d566f:2311-2683"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s014",
+   "text": "Its tactile feedback lets it sense contact and adjust how hard it grips objects.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [
+    "5d5d6d39d6c67a14cf98a76caf1d566f:2816-2931"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "A separate report says XPeng could price the IRON near the average selling price of its cars, which runs from 119,800 to 309,800 yuan.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [
+    "306f0e3ce585ca728191b3557bc352e9:0-534"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "I can tell you more about the robot's onboard chips, if that interests you.",
+   "story_ref": "physical_ai-2af40820bf64",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s017",
+   "text": "Next, a story on Chinese AI model development.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s018",
+   "text": "Sources say Zhipu's next flagship model, GLM-5.5, could be delayed until after the first quarter of next year.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [
+    "26e4a0dc9e872cc4cbfe4b1c07388d8e:417-666"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "Moonshot AI projects that cutting off overseas data center access could stretch its release gap from six months to over a year.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [
+    "26e4a0dc9e872cc4cbfe4b1c07388d8e:667-883"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s020",
+   "text": "The U.S. rule blocking remote rental of Nvidia chips through overseas data centers took effect on the 19th.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [
+    "26e4a0dc9e872cc4cbfe4b1c07388d8e:2607-2821"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s021",
+   "text": "Chinese chipmaker SMIC has struggled to get top-tier manufacturing equipment because of U.S. export restrictions.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [
+    "26e4a0dc9e872cc4cbfe4b1c07388d8e:2420-2606"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s022",
+   "text": "Since you follow open models, this one is worth a look.",
+   "story_ref": "ai-be41885503cc",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s023",
+   "text": "Which of these would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 150
+}

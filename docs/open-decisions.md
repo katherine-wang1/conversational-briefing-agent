@@ -16,6 +16,7 @@ the date and outcome.
 | D6 | Story-note reuse (`story_notes.reuse_ok_hours: 6`) | Story ids persist across runs, so a recent ok note is kept instead of rewritten | Keep; set 0 to rewrite every run |
 | D7 | Notes inside the newsroom job vs their own job | A separate job would get its own retries; today a notes failure is logged and never fails the newsroom job | Keep in the newsroom job for now |
 | D8 | Mix of the per-user stored set (20) | It continues the brief's for-you ranking, which favours the user's own finds (no shared notes): in the smoke run 13 of 20 were the user's finds, 7 shared stories. Important shared stories with low relevance drop out (XPeng, importance 90, relevance 0.15, was in only because it was in the brief) | Rank by the higher of the for-you and big-news scores, or reserve about half for shared stories |
+| D9 | Paywalls leave many shared stories without a note | In the end-to-end run, 15 of 30 ai notes had no text: links resolve, but to Bloomberg, FT, NYT and Reuters, which return 401/403. The architecture decision says prefer a free outlet or the primary source for the same story, without circumventing paywalls | For a story with no fetchable source, one search by headline (Tavily now, Exa if keyed) for free coverage of the same event, accepted only on a close title match from a non-paywalled outlet. About 15–25 searches per run |
 
 ## Follow-ups
 
@@ -37,6 +38,8 @@ the date and outcome.
 | F15 | Brief: some C6 source-pack citations don't state the fact (a title-derived fact); the claim check then drops the story | C6 |
 | F16 | Brief: Haiku style slips in teasers (symbols like ≠, 9/4); the rundown runs 45–60 words with 4+ stories | `cos.write_brief.md` |
 | F17 | Paragraph-level citation for the brief: not done (weaker claim check, voice loses per-sentence sources, fragile sentence splitting). Revisit if the claim check finds its own supporting passages | part 3 |
+| F18 | Stored set: near-duplicate user finds ("Procedure Inference as Memory" twice) and low-value pages (a Yahoo Finance quote page) take slots; dedupe and filter per-user finds before ranking | `app/agents/cos/stored_set.py` |
+| F19 | Voice narrates its tool use ("I need the detail on that one, so I'll pull up the stored note") | `voice.turn.md` |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed
@@ -45,3 +48,4 @@ the date and outcome.
 |---|---|---|
 | 2026-11-27 | Newsroom default | Editor newsroom, Sonnet 5.5 (OpenRouter), prompt v4 (`docs/smoke/2026-11-27/editor_multiday/results.md`) |
 | 2026-11-27 | Anthropic key use | Avoid; everything that can runs through OpenRouter. `claude_agent` runs are on hold |
+| 2026-11-27 | Per-user token budget | Raised 90k → 150k input tokens: at 90k, search and scoring (~63k) plus the write reserve left source packs ~9k, so 3 of 6 picks were dropped from the brief (`docs/e2e/run1_budget90k/`). About $0.006 more per user per day on Haiku |

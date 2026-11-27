@@ -1,0 +1,24 @@
+Good morning.
+You have three stories today, among them Nvidia pausing chip server shipments to four Southeast Asian countries and XPeng unveiling its IRON humanoid robot.
+First, the biggest story this morning.
+Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia.
+TechCrunch, citing the Wall Street Journal, reports that partners including Dell and Super Micro were told to hold shipments.
+The pause has no set end date while Nvidia assesses whether its regional partners are meeting U.S. export requirements.
+The reason those countries are involved is that Chinese companies have been using Nvidia chips remotely from data centers there.
+The U.S. Commerce Department closed that remote-access loophole earlier this month, reportedly grudgingly.
+The Institute for Progress estimates such remote data centers supply about 24 percent of China's AI computing power.
+I can walk you through how the remote-access rule works, if you're curious.
+Next, a hardware story from XPeng, the Chinese company that makes electric cars.
+XPeng unveiled its general-purpose humanoid robot, the IRON, at its AI Day 2026 event in Guangzhou.
+The company is developing IRON as a work partner for real-world roles, and says mass production is scheduled to begin in January 2027.
+The latest version has 76 degrees of freedom and a 21-degree-of-freedom dexterous hand, with more than 1,500 tactile sensing points.
+Its tactile feedback lets it sense contact and adjust how hard it grips objects.
+A separate report says XPeng could price the IRON near the average selling price of its cars, which runs from 119,800 to 309,800 yuan.
+I can tell you more about the robot's onboard chips, if that interests you.
+Next, a story on Chinese AI model development.
+Sources say Zhipu's next flagship model, GLM-5.5, could be delayed until after the first quarter of next year.
+Moonshot AI projects that cutting off overseas data center access could stretch its release gap from six months to over a year.
+The U.S. rule blocking remote rental of Nvidia chips through overseas data centers took effect on the 19th.
+Chinese chipmaker SMIC has struggled to get top-tier manufacturing equipment because of U.S. export restrictions.
+Since you follow open models, this one is worth a look.
+Which of these would you like to dig into?

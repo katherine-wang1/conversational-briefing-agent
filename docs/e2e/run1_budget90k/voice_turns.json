@@ -1,0 +1,302 @@
+[
+ {
+  "utterance": "Tell me more about Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule. Why does it matter?",
+  "answer": [
+   {
+    "text": "On the Nvidia shipment pause story: Nvidia has told manufacturing partners, including Dell and Super Micro, to hold server shipments to Malaysia, Singapore, Thailand and Indonesia.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule"
+     }
+    ]
+   },
+   {
+    "text": "There's no set end date.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Nvidia is assessing whether its partners in those countries are meeting U.S. export requirements.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule"
+     }
+    ]
+   },
+   {
+    "text": "The reason those four countries are involved is a loophole.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Chinese companies have been using Nvidia chips remotely from data centers there.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule"
+     }
+    ]
+   },
+   {
+    "text": "The U.S. Commerce Department closed that remote-access loophole earlier this month, and reportedly did so grudgingly.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule"
+     }
+    ]
+   },
+   {
+    "text": "It matters because the Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US licence rule"
+     }
+    ]
+   },
+   {
+    "text": "Closing that channel changes access to advanced chips for a large share of Chinese AI work, and it puts pressure on the regional partners doing the shipping.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want the related story on how this is slowing Chinese AI model releases, or shall I go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: On the Nvidia shipment pause story: Nvidia has told manufacturing partners, including Dell and Super Micro, to hold server shipments to Malaysia, Singapore, Thailand and Indonesia.  [techcrunch.com]",
+   "say #2: There's no set end date.",
+   "say #3: Nvidia is assessing whether its partners in those countries are meeting U.S. export requirements.  [techcrunch.com]",
+   "say #4: The reason those four countries are involved is a loophole.",
+   "say #5: Chinese companies have been using Nvidia chips remotely from data centers there.  [techcrunch.com]",
+   "say #6: The U.S. Commerce Department closed that remote-access loophole earlier this month, and reportedly did so grudgingly.  [techcrunch.com]",
+   "say #7: It matters because the Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.  [techcrunch.com]",
+   "say #8: Closing that channel changes access to advanced chips for a large share of Chinese AI work, and it puts pressure on the regional partners doing the shipping.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2578 ms (first token 629 ms) \u00b7 15401 in (0 cached) / 457 out \u00b7 $0.0021 (session $0.0021)",
+   "say #9: Want the related story on how this is slowing Chinese AI model releases, or shall I go back to the brief?"
+  ],
+  "s": 2.6,
+  "signals": []
+ },
+ {
+  "utterance": "What's the story with Meta declined UK FCA request for joint testing of Muse personal agent?",
+  "answer": [
+   {
+    "text": "I need the detail on that one, so I'll pull up the stored note for it.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "On the Meta Muse story: Meta turned down a request from the UK's financial regulator, the Financial Conduct Authority, to joint-test its Muse personal agent in Meta's sandbox.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "The FCA's head of innovation, Colin Payne, disclosed the refusal and said Meta only told the regulator about its plans last month, which left too little time to set up joint testing.",
+    "citations": [
+     "note:ai-7bbb8e23452a:0",
+     "note:ai-7bbb8e23452a:4"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-7bbb8e23452a:0",
+      "source": "wired.com",
+      "url": "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+      "title": "Meta declined UK FCA request for joint testing of Muse personal agent"
+     }
+    ]
+   },
+   {
+    "text": "Payne called it reasonable for the FCA to want to see what AI agents will do in the market, and said the regulator had hoped to investigate how Muse would interact with an ordinary customer.",
+    "citations": [
+     "note:ai-7bbb8e23452a:2",
+     "note:ai-7bbb8e23452a:3"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-7bbb8e23452a:2",
+      "source": "wired.com",
+      "url": "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+      "title": "Meta declined UK FCA request for joint testing of Muse personal agent"
+     }
+    ]
+   },
+   {
+    "text": "The biggest worry is how payments get made by agents and what happens when prompts have unintended consequences.",
+    "citations": [
+     "note:ai-7bbb8e23452a:5"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-7bbb8e23452a:5",
+      "source": "wired.com",
+      "url": "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+      "title": "Meta declined UK FCA request for joint testing of Muse personal agent"
+     }
+    ]
+   },
+   {
+    "text": "Meta says it has engaged constructively with regulators and will keep doing so.",
+    "citations": [
+     "note:ai-7bbb8e23452a:6"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-7bbb8e23452a:6",
+      "source": "wired.com",
+      "url": "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+      "title": "Meta declined UK FCA request for joint testing of Muse personal agent"
+     }
+    ]
+   },
+   {
+    "text": "Muse can shop, book tickets and negotiate for you, but it needs your permission before making purchases or sending emails.",
+    "citations": [
+     "note:ai-7bbb8e23452a:9"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-7bbb8e23452a:9",
+      "source": "theguardian.com",
+      "url": "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+      "title": "Meta declined UK FCA request for joint testing of Muse personal agent"
+     }
+    ]
+   },
+   {
+    "text": "It's not yet known whether the FCA will get testing access later.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want me to bookmark that question for the next brief, or shall I go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1296 ms (first token 925 ms) \u00b7 15372 in (15219 cached) / 85 out \u00b7 $0.0002 (session $0.0002) \u00b7 1 tool call(s)",
+   "say #1: I need the detail on that one, so I'll pull up the stored note for it.",
+   "tool call get_story(story_ref='ai-7bbb8e23452a')",
+   "get_story ai-7bbb8e23452a: note with 10 facts",
+   "say #2: On the Meta Muse story: Meta turned down a request from the UK's financial regulator, the Financial Conduct Authority, to joint-test its Muse personal agent in Meta's sandbox.",
+   "say #3: The FCA's head of innovation, Colin Payne, disclosed the refusal and said Meta only told the regulator about its plans last month, which left too little time to set up joint testing.  [wired.com]",
+   "say #4: Payne called it reasonable for the FCA to want to see what AI agents will do in the market, and said the regulator had hoped to investigate how Muse would interact with an ordinary customer.  [wired.com]",
+   "say #5: The biggest worry is how payments get made by agents and what happens when prompts have unintended consequences.  [wired.com]",
+   "say #6: Meta says it has engaged constructively with regulators and will keep doing so.  [wired.com]",
+   "say #7: Muse can shop, book tickets and negotiate for you, but it needs your permission before making purchases or sending emails.  [theguardian.com]",
+   "say #8: It's not yet known whether the FCA will get testing access later.",
+   "voice.turn round 2: anthropic/claude-haiku-5.5 \u00b7 2606 ms (first token 931 ms) \u00b7 16480 in (15219 cached) / 460 out \u00b7 $0.0005 (session $0.0007)",
+   "say #9: Want me to bookmark that question for the next brief, or shall I go back to the brief?"
+  ],
+  "s": 3.9,
+  "signals": [
+   {
+    "type": "dive",
+    "story_ref": "ai-7bbb8e23452a",
+    "explicit": false,
+    "strength": 1.0,
+    "turn_id": "t_01m8dvf0v3kbj981r4j2j5ca17",
+    "payload": {}
+   }
+  ]
+ },
+ {
+  "utterance": "What else happened today that I should know about?",
+  "answer": [
+   {
+    "text": "Besides the three stories in your brief, a few others are worth knowing.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Nvidia released an open-weight image-generation model called Nemotron-Labs-Image-30B-A3B, which uses an autoregressive approach rather than diffusion, though its license only allows non-commercial use.",
+    "citations": [
+     "cd80b035be375554cf4970bd2c168bc0:101-234",
+     "cd80b035be375554cf4970bd2c168bc0:1116-1264"
+    ],
+    "sources": [
+     {
+      "passage_id": "cd80b035be375554cf4970bd2c168bc0:101-234",
+      "source": "finance.biggo.com",
+      "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+      "title": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions"
+     }
+    ]
+   },
+   {
+    "text": "On the energy side, the Financial Times reports that a $67 billion NextEra and Dominion deal faces growing opposition as anger over rising electricity bills spreads.",
+    "citations": [
+     "energy-9fa7f405d5db"
+    ],
+    "sources": [
+     {
+      "passage_id": "energy-9fa7f405d5db",
+      "source": null,
+      "url": null,
+      "title": null
+     }
+    ]
+   },
+   {
+    "text": "And Meta declined a request from the UK's Financial Conduct Authority to jointly test its Muse personal agent before rollout.",
+    "citations": [
+     "ai-7bbb8e23452a"
+    ],
+    "sources": [
+     {
+      "passage_id": "ai-7bbb8e23452a",
+      "source": null,
+      "url": null,
+      "title": null
+     }
+    ]
+   },
+   {
+    "text": "Which of these would you like more on?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: Besides the three stories in your brief, a few others are worth knowing.",
+   "say #2: Nvidia released an open-weight image-generation model called Nemotron-Labs-Image-30B-A3B, which uses an autoregressive approach rather than diffusion, though its license only allows non-commercial use.  [finance.biggo.com]",
+   "say #3: On the energy side, the Financial Times reports that a $67 billion NextEra and Dominion deal faces growing opposition as anger over rising electricity bills spreads.  [?]",
+   "say #4: And Meta declined a request from the UK's Financial Conduct Authority to jointly test its Muse personal agent before rollout.  [?]",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2113 ms (first token 989 ms) \u00b7 15353 in (15219 cached) / 287 out \u00b7 $0.0003 (session $0.0003)",
+   "say #5: Which of these would you like more on?"
+  ],
+  "s": 2.1,
+  "signals": []
+ }
+]
