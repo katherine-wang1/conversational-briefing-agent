@@ -34,16 +34,43 @@ def _numbers(text: str) -> set[str]:
     return {n.rstrip(".,").replace(",", "") for n in _NUM.findall(text)}
 
 
+_HEDGE = re.compile(
+    r"\b(may|might|could|would|plans?|planned|reportedly|allegedly|expected|proposed|considering|"
+    r"preparing|seeking|aims?|intends?|suggests?|estimates?)\b",
+    re.I,
+)
+_STOP = frozenset(
+    "a an the of to in on at for and or by with that this is are was were be as its it s".split()
+)
+COVER_MIN = 0.95  # share of the sentence's content words found in one passage
+
+
+def _words(text: str) -> list[str]:
+    return [w for w in utils.default_process(text).split() if w not in _STOP]
+
+
+def _keeps_qualifiers(text: str, p: Passage) -> bool:
+    if not _numbers(text) <= _numbers(p.text):
+        return False
+    if len(_NEG.findall(text)) != len(_NEG.findall(p.text)):
+        return False
+    hedges = {h.lower() for h in _HEDGE.findall(p.text)}
+    return hedges <= {h.lower() for h in _HEDGE.findall(text)}
+
+
 def restates_passage(text: str, cited: list[Passage]) -> bool:
-    """True when `text` is a near copy of one cited passage, with its numbers and negations intact."""
+    """True when `text` restates one cited passage: a near copy, or a shortening whose words all come from
+    that passage. Either way the passage's numbers, negations and hedges ("may", "plans to",
+    "reportedly") must be kept, so a shortening can't turn a plan into a fact or drop a "not"."""
+    words = _words(text)
     for p in cited:
-        if fuzz.token_sort_ratio(text, p.text, processor=utils.default_process) < RESTATE_MIN:
+        if not _keeps_qualifiers(text, p):
             continue
-        if not _numbers(text) <= _numbers(p.text):
-            continue
-        if len(_NEG.findall(text)) != len(_NEG.findall(p.text)):
-            continue
-        return True
+        if fuzz.token_sort_ratio(text, p.text, processor=utils.default_process) >= RESTATE_MIN:
+            return True
+        have = set(_words(p.text))
+        if len(words) >= 6 and sum(w in have for w in words) / len(words) >= COVER_MIN:
+            return True
     return False
 
 

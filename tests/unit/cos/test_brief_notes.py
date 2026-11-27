@@ -90,3 +90,62 @@ def test_restates_passage_guards_numbers_and_negation():
     neg = p("Neither Tesla nor EMAG has disclosed the financial terms of the deal.")
     assert not restates_passage("Tesla and EMAG have disclosed the financial terms of the deal.", [neg])
     assert not restates_passage("Tesla is buying EMAG.", [neg])
+
+
+def test_restates_passage_accepts_a_shortening_but_keeps_hedges():
+    from app.agents.cos.claim_check import restates_passage
+
+    def p(t):
+        return Passage(passage_id="x", doc_id="d", url="u", text=t, char_start=0, char_end=len(t))
+
+    src = p(
+        "Bloomberg reports that serial numbers in Chinese filings reveal Nvidia's restricted Blackwell chips "
+        "were installed at a Shanghai data center linked to Alice Huang and Megaspeed."
+    )
+    short = (
+        "Bloomberg reports that Nvidia's restricted Blackwell chips were installed at a Shanghai data center."
+    )
+    assert restates_passage(short, [src])
+    plan = p("Tesla plans to acquire EMAG, a German maker of machine tools for robot parts.")
+    assert not restates_passage(
+        "Tesla will acquire EMAG, a German maker of machine tools for robot parts.", [plan]
+    )
+    assert restates_passage("Tesla plans to acquire EMAG, a German maker of machine tools.", [plan])
+
+
+def test_low_value_finds():
+    from app.agents.cos.pool import low_value_find
+
+    assert low_value_find("https://www.instagram.com/reel/abc", "Agent memory demo") == "social post"
+    assert low_value_find("https://finance.yahoo.com/quote/NVDA/", "NVIDIA Corporation (NVDA)")
+    assert low_value_find("https://events.vtools.ieee.org/m/1", "Distinguished Lecture - Agentic AI")
+    assert low_value_find("https://medium.com/@x/abc", "Medium") == "no real headline"
+    assert low_value_find("https://www.nasdaq.com/x", "X-Energy (Nasdaq:XE) - Stock Analysis")
+    assert low_value_find("https://techcrunch.com/2026/11/27/a", "Sierra raises $1.75B") is None
+    assert low_value_find("https://www.reuters.com/x", "Live updates: chip export rules") is None
+
+
+def test_stored_set_balance_reserves_shared():
+    from app.agents.cos.selection import ScoredItem
+    from app.agents.cos.stored_set import _balance
+
+    def it(ref):
+        return (
+            ScoredItem(
+                story_ref=ref,
+                importance=50,
+                relevance=0.5,
+                novelty=1,
+                adjacency="core",
+                beat="ai",
+                origin="digest",
+                features=frozenset(),
+            ),
+            0.0,
+        )
+
+    extra = [it("u:1"), it("u:2"), it("u:3"), it("u:4"), it("a"), it("b"), it("c")]
+    out = [e[0].story_ref for e in _balance(extra, 4, 0.5)]
+    assert out == ["u:1", "u:2", "a", "b"]  # ranking order kept, half shared
+    assert [e[0].story_ref for e in _balance(extra[:4] + extra[4:5], 4, 0.5)] == ["u:1", "u:2", "u:3", "a"]
+    assert _balance(extra, 4, 0.0) == extra

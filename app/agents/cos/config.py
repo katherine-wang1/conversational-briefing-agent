@@ -110,6 +110,8 @@ class CosConfig(_Cfg):
     # Light source packs (1 document) for the top non-brief per-user finds ("u:..." refs, which get
     # no shared newsroom note). 0 = none; docs/stored-set.md explains the cost/latency choice.
     stored_set_extra_packs: int = 0
+    # Share of the stored set beyond the brief reserved for shared digest stories (D8, 2026-11-27).
+    stored_set_min_shared: float = 0.5
 
 
 def _merge(base: dict[str, Any], over: dict[str, Any]) -> dict[str, Any]:
@@ -150,4 +152,5 @@ def cos_config(
         concurrency=ConcurrencyCfg(**(agent_cfg.get("concurrency") or {})),
         stored_set_size=int(stored.get("size", 20)),
         stored_set_extra_packs=int(stored.get("extra_packs", 0)),
+        stored_set_min_shared=float(stored.get("min_shared_share", 0.5)),
     )

@@ -64,6 +64,23 @@ def listening_order(script: BriefScript) -> list[BriefStory]:
     return sorted(script.stories, key=lambda st: at.get(st.story_ref, len(script.sentences)))
 
 
+def _balance(
+    extra: list[tuple[ScoredItem, float]], slots: int, min_shared_share: float
+) -> list[tuple[ScoredItem, float]]:
+    """Keep the C5 ranking, but reserve at least `min_shared_share` of the remaining slots for shared
+    digest stories (they have notes the voice agent can explain); per-user finds ("u:...") fill the rest.
+    Without enough of either kind, the other fills in."""
+    if slots <= 0 or min_shared_share <= 0:
+        return extra
+    shared = [e for e in extra if not e[0].story_ref.startswith("u:")]
+    user = [e for e in extra if e[0].story_ref.startswith("u:")]
+    n_shared = min(len(shared), max(0, int(-(-slots * min_shared_share // 1))))
+    n_user = min(len(user), slots - n_shared)
+    n_shared = min(len(shared), slots - n_user)
+    keep = {e[0].story_ref for e in shared[:n_shared] + user[:n_user]}
+    return [e for e in extra if e[0].story_ref in keep]
+
+
 def build_story_set(
     *,
     user_id: str,
@@ -78,6 +95,7 @@ def build_story_set(
     size: int,
     beats: Mapping[str, str | None] | None = None,
     extra_why: str = WHY_TAG["for_you"],
+    min_shared_share: float = 0.0,
 ) -> UserStorySet:
     beats = beats or {}
     out: list[StoredStory] = []
@@ -119,6 +137,7 @@ def build_story_set(
                 beat=beats.get(sel.story_ref),
             )
         )
+    extra = _balance(list(extra), max(size, 0) - len(out), min_shared_share)
     for item, _score in extra:
         it = pool.get(item.story_ref)
         add(

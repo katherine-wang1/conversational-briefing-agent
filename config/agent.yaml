@@ -34,6 +34,7 @@ packs:
 stored_set:
   size: 20                    # stories kept per user per day; the voice agent can discuss any of them
   extra_packs: 0              # light packs for the top non-brief per-user finds (they get no shared note)
+  min_shared_share: 0.5       # beyond the brief, at least half are shared stories (they have notes; D8)
 memory:
   eta_explicit: 0.30
   eta_implicit: 0.15

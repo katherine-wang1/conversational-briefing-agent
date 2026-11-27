@@ -9,8 +9,10 @@ method is not available to this workstream; swap in `same_story` when it is).
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
+from urllib.parse import urlsplit
 
 from app.agents.cos.text import canonical_url, jaccard, short_hash, tokens
 from app.contracts.agent_io import ShownStory
@@ -19,6 +21,44 @@ from app.contracts.digest import Digest, DigestEntry, SourceSnippet
 from app.contracts.sources import SearchHit
 
 SAME_STORY_JACCARD = 0.5
+NEAR_DUP_TITLE = 0.8  # Jaccard between two per-user finds' titles: the same item twice
+
+# Per-user finds that aren't news a host can stand behind (F18, F20): social posts, quote and listing
+# pages, event announcements. The voice agent once stated an Instagram reel as fact.
+_LOW_VALUE_HOSTS = (
+    "instagram.com",
+    "tiktok.com",
+    "facebook.com",
+    "x.com",
+    "twitter.com",
+    "threads.net",
+    "youtube.com",
+    "reddit.com",
+    "linkedin.com",
+    "pinterest.com",
+    "quora.com",
+)
+_LOW_VALUE_PATH = re.compile(r"/(quote|quotes|symbol|stock-price|events?|webinars?|meetups?|tags?)/", re.I)
+_LOW_VALUE_TITLE = re.compile(
+    r"\b(webinar|lecture|meetup|register now|stock price|share price|stock analysis|price target)\b|vtools",
+    re.I,
+)
+
+
+def low_value_find(url: str, title: str) -> str | None:
+    """Why a search hit is not worth a slot ("social post", "quote/listing page", ...), or None."""
+    host = urlsplit(url).netloc.lower().removeprefix("www.").removeprefix("m.")
+    if any(host == h or host.endswith("." + h) for h in _LOW_VALUE_HOSTS):
+        return "social post"
+    if _LOW_VALUE_PATH.search(urlsplit(url).path):
+        return "quote/listing page"
+    if _LOW_VALUE_TITLE.search(title or ""):
+        return "event or quote page"
+    if len((title or "").split()) < 3:
+        return "no real headline"
+    return None
+
+
 REPEAT_JACCARD = 0.6
 NEW_FACTS_MAX_JACCARD = 0.8
 
@@ -123,9 +163,14 @@ def build_pool(
 
     # search finds (personal before adjacent so a story found by both counts as personal)
     ordered = sorted(enumerate(finds), key=lambda t: (t[1].kind != "personal", t[0]))
+    user_titles: list[set[str]] = []
     for _, f in ordered:
         cu = canonical_url(f.hit.url)
         tt = tokens(f.hit.title)
+        why = low_value_find(f.hit.url, f.hit.title)
+        if why:
+            notes.append(f"low-value find dropped ({why}): {f.hit.url}")
+            continue
         if cu in shown_urls or any(jaccard(tt, s) >= REPEAT_JACCARD for s in shown_titles):
             notes.append(f"repeat find dropped: {f.hit.url}")
             continue
@@ -143,6 +188,10 @@ def build_pool(
                 it.queries.append(f.query)
             url_index[cu] = ref
             continue
+        if any(jaccard(tt, u) >= NEAR_DUP_TITLE for u in user_titles):
+            notes.append(f"near-duplicate find dropped: {f.hit.url}")
+            continue
+        user_titles.append(tt)
         ref = "u:" + short_hash(cu)
         origin = "adjacent" if f.kind == "adjacent" else "personal"
         items[ref] = PoolItem(

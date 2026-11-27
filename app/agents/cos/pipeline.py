@@ -244,7 +244,9 @@ async def run_cos_daily(
     extra = rank_beyond(
         scored,
         result.refs,
-        cfg.stored_set_size - len(result.selected),
+        # Ranked well past the set size, so the shared/per-user balance (stored_set.min_shared_share)
+        # can reach further down either list.
+        3 * max(0, cfg.stored_set_size - len(result.selected)),
         importance_only=not cfg.flags.personalization,
         lam=cfg.selection.mmr_lambda,
     )
@@ -404,6 +406,7 @@ async def run_cos_daily(
         size=cfg.stored_set_size,
         beats={c.story_ref: c.beat for c in scored},
         extra_why="big news" if not cfg.flags.personalization else "for you",
+        min_shared_share=cfg.stored_set_min_shared,
     )
     _trace_story_set(trace, extra_pack_refs)
     _finish_trace(trace, [research, writing], cfg.budget.input_tokens)
