@@ -31,7 +31,7 @@ def test_web_client_shapes(client, pgdb, tmp_path):
     assert client.post("/api/onboarding", headers=H, json=body).status_code == 202
     me = client.get("/api/me", headers=H).json()
     assert me["onboarded"] and me["settings"]["brief_time"] == "07:30"
-    assert me["settings"]["depth_pref"] == "deep" and me["delivery"]["length_s"] == 180
+    assert me["settings"]["depth_pref"] == "deep" and me["delivery"]["length_s"] == 120
     first = client.get("/api/briefs/today", headers=H).json()
     if first["status"] != "ready":  # the dev user may already have today's brief from an earlier test
         assert first["status"] == "pending" and first["manifest"] is None and "brief_id" in first

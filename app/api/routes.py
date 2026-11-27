@@ -72,7 +72,7 @@ class Onboarding(BaseModel):
     check_tz = field_validator("timezone")(_validate_tz)
 
 
-LENGTH_PREF_S = {"short": 180, "medium": 300, "long": 600}
+LENGTH_PREF_S = {"short": 120, "medium": 240, "long": 420}  # the app labels: ~2, ~4, ~7 min
 
 
 class SessionCreate(BaseModel):
