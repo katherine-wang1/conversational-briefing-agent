@@ -222,6 +222,7 @@ async def main(out: Path, day: str) -> None:
                 len(d.entries),
                 status.get("ok", 0),
                 status.get("partial", 0),
+                status.get("summary", 0),
                 status.get("no_text", 0),
                 len(d.entries) - len(notes),
                 round(sum(facts) / len(facts), 1) if facts else 0,
@@ -244,7 +245,10 @@ async def main(out: Path, day: str) -> None:
         f"quote it exactly, or code drops it. Took {timings['3 story notes']} s, ${costs['3 story notes']}.",
         "",
     )
-    log.table(["Beat", "Stories", "ok", "partial", "no text", "no note", "Facts per note", "s"], srows)
+    log.table(
+        ["Beat", "Stories", "ok", "partial", "summary only", "no text", "no note", "Facts per note", "s"],
+        srows,
+    )
     log.add(f"Sources tried across all notes: {dict(src_counter)}.", "")
     if example:
         log.add(f"**Example note: {example.headline}** ({example.beat}, status {example.status})", "")

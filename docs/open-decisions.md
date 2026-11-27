@@ -16,7 +16,7 @@ the date and outcome.
 | D6 | Story-note reuse (`story_notes.reuse_ok_hours: 6`) | Story ids persist across runs, so a recent ok note is kept instead of rewritten | Keep; set 0 to rewrite every run |
 | D7 | Notes inside the newsroom job vs their own job | A separate job would get its own retries; today a notes failure is logged and never fails the newsroom job | Keep in the newsroom job for now |
 | D8 | Mix of the per-user stored set (20) | It continues the brief's for-you ranking, which favours the user's own finds (no shared notes): in the smoke run 13 of 20 were the user's finds, 7 shared stories. Important shared stories with low relevance drop out (XPeng, importance 90, relevance 0.15, was in only because it was in the brief). In the e2e run, 13 of the 14 stories beyond the brief were the user's finds and only 1 was shared (`docs/e2e/2026-11-27/run_log.md`) | Rank by the higher of the for-you and big-news scores, or reserve about half for shared stories |
-| D9 | Paywalls leave many shared stories without a note | In the end-to-end run, 15 of 30 ai notes had no text: links resolve, but to Bloomberg, FT, NYT and Reuters, which return 401/403. The architecture decision says prefer a free outlet or the primary source for the same story, without circumventing paywalls | Kate, 2026-11-27: do both: (1) ground on the publisher's own headline and summary from the feeds, attributed (\"The New York Times reports…\"); (2) one search for free coverage of the same event or the primary source. In progress |
+| D10 | A licensed full-text source | Snippets and free coverage cut stories without note text from 21 to 3 of 80, but summary-level notes (11) are thin. Options (unverified): Event Registry/NewsAPI.ai article bodies (free 2K tokens, $90 for 5K; coverage of FT/Bloomberg/WSJ and product-use terms unknown); NYT Developer APIs (free, licensed abstract and lead paragraph); Guardian Open Platform (full text, non-commercial); Reuters/AP/Factiva/LexisNexis (enterprise) | Try the NYT API and Event Registry's bodies before paying for anything |
 
 ## Follow-ups
 
@@ -42,6 +42,10 @@ the date and outcome.
 | F19 | Voice narrates its tool use ("I need the detail on that one, so I'll pull up the stored note") | `voice.turn.md` |
 | F20 | Voice states a stored story's headline as fact without a source (an Instagram reel in the e2e run); per-user finds need a source-quality filter (social posts, quote pages) | voice / stored set |
 | F21 | Per-user token budget: give each step its own allowance instead of one shared cap (search used up what packs needed); turn on prompt caching for scoring (instructions and profile repeat in every batch; 0 cached tokens today); send scoring a shorter line per story. Keep the 80-story pool | `app/agents/cos/` |
+| F22 | Free-coverage search: 57% of Tavily news hits are google.com/url redirects (most 403/429); Exa or Brave return direct URLs | `app/agents/cos/free_coverage.py` |
+| F23 | Wire copies are attributed to the host ("yahoo.com") instead of "Reuters, via Yahoo News"; detect bylines | story notes |
+| F24 | Free-coverage thresholds (title 60/80, 2 entities, 36 h, 25 searches per run) set from one day; low-grade hosts (content farms) may need a quality list | `config/agent.yaml` |
+| F25 | C6 runs its own free-coverage search even when the shared note already found a free source; reuse it from the note store | `app/agents/cos/packs.py` |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed
@@ -53,3 +57,4 @@ the date and outcome.
 | 2026-11-27 | Per-user token budget | Raised 90k → 150k input tokens: at 90k, search and scoring (~63k) plus the write reserve left source packs ~9k, so 3 of 6 picks were dropped from the brief (`docs/e2e/run1_budget90k/`). About $0.006 more per user per day on Haiku |
 | 2026-11-27 | Newsroom default reopened | Kate's first 6 list comparisons preferred Haiku with the old prompt (5 of 6) over Sonnet v4 (worst 3 of 6). Default stays Sonnet v4 until round 2 (Sonnet with the old prompt, Sonnet v5) is rated |
 | 2026-11-27 | Per-user token budget | 150k → 300k (a safety cap, not a model limit; costs ~$0.015 per user at most on Haiku) |
+| 2026-11-27 | Paywalled stories (D9) | Both fixes built: publisher headline and summary as attributed, summary-level sources, and one free-coverage search per blocked story. Stories without note text: 21 → 3 of 80 (`docs/smoke/2026-11-27/paywalls/results.md`) |
