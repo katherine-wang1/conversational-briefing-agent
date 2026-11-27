@@ -94,6 +94,7 @@ class Scope:
         newsroom_runs: r.NewsroomRunsRepo
         digests: r.DigestsRepo
         digest_entries: r.DigestEntriesRepo
+        story_notes: r.StoryNotesRepo
         jobs: r.JobsRepo
         invites: r.InvitesRepo
         admin_audit: r.AdminAuditRepo

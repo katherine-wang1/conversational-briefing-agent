@@ -209,6 +209,42 @@ async def newsroom_run(deps: Deps, job: Job) -> None:
         await s.newsroom_runs.update(
             run_row_id, status="done", trace_uri=save_trace(deps, "newsroom", digest.digest_id, trace)
         )
+    await write_digest_notes(deps, digest, job_id=str(job.id))
+
+
+async def write_digest_notes(deps: Deps, digest: Digest, *, job_id: str | None = None) -> int:
+    """Shared story notes for the new digest (`story_notes` in config/agent.yaml), stored in `story_notes`.
+
+    Skipped without a model client (no key: the quick start still works) or with placeholder agents. A
+    failure is logged and never fails the newsroom job: the digest is already saved. Returns notes stored.
+    """
+    from app.agents.newsroom.note_store import DbNoteStore
+    from app.agents.newsroom.notes import StoryNotesSettings, write_story_notes
+
+    st = StoryNotesSettings.from_config()
+    if not st.enabled:
+        return 0
+    if deps.model_client is None or not _real(deps):
+        log.info("story notes for %s skipped: no model client configured", digest.digest_id)
+        return 0
+    store = DbNoteStore(deps.db, run_id=digest.run_id)
+    try:
+        run = await write_story_notes(
+            digest,
+            deps.model_client,
+            deps.tools,
+            settings=st,
+            now=deps.clock(),
+            job_id=job_id,
+            existing=store,
+        )
+        n = await store.put_many(run.notes)
+    except Exception:
+        log.exception("story notes for %s failed; digest kept without notes", digest.digest_id)
+        return 0
+    save_trace(deps, "notes", digest.digest_id, run.trace)
+    log.info("story notes for %s: %s", digest.digest_id, run.summary())
+    return n
 
 
 # ---- chief of staff -------------------------------------------------------------------------------------
