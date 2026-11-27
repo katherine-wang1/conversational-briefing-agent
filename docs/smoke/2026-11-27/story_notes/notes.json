@@ -1,0 +1,1486 @@
+[
+ {
+  "story_id": "ai-5166002f4d42",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+  "facts": [
+   {
+    "text": "According to the Wall Street Journal, Nvidia told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether its regional partners are meeting U.S. export requirements.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia"
+    ]
+   },
+   {
+    "text": "Chinese companies have been tapping Nvidia chips remotely from data centers in the four countries.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia"
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed this remote-access loophole earlier this month, reportedly grudgingly.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia"
+    ]
+   },
+   {
+    "text": "The think tank Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia"
+    ]
+   }
+  ],
+  "entities": [
+   "Nvidia",
+   "Dell",
+   "Super Micro",
+   "US Commerce Department",
+   "Institute for Progress",
+   "Malaysia",
+   "Singapore",
+   "Thailand",
+   "Indonesia"
+  ],
+  "context": "Nvidia designs the advanced AI chips used in data centers and sells them largely through manufacturing partners such as Dell and Super Micro, which build complete servers from those chips. US export controls restrict which advanced chips can be shipped abroad, and particularly to China, to limit its AI computing capabilities. Companies can sometimes use chips located in other countries through remote cloud-style access, which is the kind of gap export rules try to close.",
+  "why_it_matters": "The pause could disrupt server supply in Malaysia, Singapore, Thailand and Indonesia, affecting the partners and customers that rely on those shipments. It also signals how seriously Nvidia is taking US export compliance in the region, and how the remote-access loophole closure is affecting China's access to AI computing.",
+  "open_questions": [
+   "How long the shipment pause will last is not specified.",
+   "Whether Nvidia's regional partners are meeting US export requirements has not been determined."
+  ],
+  "sources": [
+   {
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "listed_url": null,
+    "outlet": "techcrunch.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOM1ZtZ1FmQ3d0Nk9xZzFmaDNtd3ZURjZ1cm1sWkptUktqcm1aOUc3eWpIYjVpUGoxWGxWd2FjRTZiTzBGRGtaTTA3ZUFsTEJLNk5BV3VfV2VKNHJVbk1mTDJqYkZkdEFPQ09jdzVHRzBHazlKVko5bVp4WDZMSUpUaEpyZk5ZUUUxbm42MjBIRWJCaGZzVXRkNklKN2dfdDRES3RwazQ1UU55Q3Bf?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNT2IzeDRBUHdXNi1LQjBNUEl3S21Va0NyeGN6eFZQZmdHUU5STk5FRXZTSFVhd2tYbTBHNjRfUkNDS29yNDlXYXdYMXZGMVZOZzE1STd1dEdVdk1iM0szN3B4ai1QWkpHTDlnVGZzZzNlQ09acXRCRklnWTgwMGV2Q3MtbWtYbkg0SnV1bjNCMV9tbW5zMUVEUU1IOTBNRHdDZUpGWXZuaG1MLWlSV3p2UkZFQVhoeF94RDY3Yzh6MkdtamtCVGQzamRsQ1VkbTU3X1huQ3NJTQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://ft.com/content/33772353-35dd-4e5a-89e4-b75dccbd9eca?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   },
+   {
+    "url": "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   },
+   {
+    "url": "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 401"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-651cc167b0ad",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+  "facts": [
+   {
+    "text": "Scott Aaronson says he is virtually certain, from multiple reliable sources, that AI labs are sitting on one or more cryptography-relevant breakthroughs.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson says he does not know the specific nature of those reported breakthroughs and does not want to spread unverified rumors.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson reports that OpenAI claims to prove that the matrix multiplication exponent omega is exactly 9/4.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson reports that OpenAI released a proof that the number of linear gates needed to compute the Fourier Transform is N (log N)^(1/2+o(1)).",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson reports that OpenAI and Anthropic have posted proofs that VP is not equal to VNP.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson says the AI companies have repeatedly backed up their claims with Lean certificates, and that he assumes proofs coming directly from OpenAI or Anthropic are correct barring contrary information.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson says a Yupan Liu preprint proving QIP(2) = PSPACE used AI assistance.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson writes that AI labs now release papers by uploading them to GitHub rather than issuing press releases.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson says he now feels that a proof of P \u2260 NP is not far off.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   },
+   {
+    "text": "Aaronson notes that Alp\u00f6ge and Anthropic have reportedly proved the Riemann Hypothesis.",
+    "source_urls": [
+     "https://scottaaronson.blog/?p=10379"
+    ]
+   }
+  ],
+  "entities": [
+   "Scott Aaronson",
+   "OpenAI",
+   "Anthropic",
+   "Yupan Liu",
+   "Alp\u00f6ge"
+  ],
+  "context": "Scott Aaronson is a computer scientist who writes a widely read blog on theoretical computer science and quantum computing. Matrix multiplication exponent, omega, measures how fast matrices can be multiplied, and a lower bound proves a minimum cost. Lean is a formal proof assistant whose machine-checked certificates can verify a mathematical proof. Cryptosystems such as ECDSA, which secures many cryptocurrency wallets, rely on computational problems believed to be hard.",
+  "why_it_matters": "If AI labs hold algorithms that break deployed cryptosystems, anyone relying on those systems for security, including cryptocurrency users, could be affected. Aaronson himself says the mathematical advances are the bigger story and that the cryptography details are unverified.",
+  "open_questions": [
+   "What the specific cryptographic breakthroughs held by AI labs are, according to the sources not yet known.",
+   "Whether the claimed proofs have been independently verified beyond the labs' own releases.",
+   "Whether the Bank of England's call for global model testing will be acted on, according to the sources not yet decided."
+  ],
+  "sources": [
+   {
+    "url": "https://scottaaronson.blog/?p=10379",
+    "listed_url": null,
+    "outlet": "scottaaronson.blog",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE94WjZzdW1xS0Npckt3RmNZX1F2Wk1aVHkyYWZYeHlZUkFLaXZFVnZ6SFV5ajRnS005Vjh3X1NMaV9PNmwyOFNuelpwbnlMdjE4UjhIZkNxVFlrRnhtMDNLUDlQZjgweXo5OEdlVlhsM3hsV1U?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-67526a50a0f0",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "Anthropic shares slide after IPO, trading as ANT, with tech stocks hit as investors rotate",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMmpFZUNudkVlYUlreHZmQ2gzVnNMZXFIWlRyY3gtUmRma2MxN0RWZW5VOE1nUTNmYzNEbThON0QtTE10WHFERVJaS3ZOVUhzX2lTSGVlY3BadF9oQkVDbVFqZzM4OXkxSklGdWtGZktrbV8wcElfY3N0SkY0RU5Sbm1sYVdkSktIY1otajM3NnpaU21tOEctWGo1SGVQY2IzdC1CZGFQSHdZQjliYzA2QU5oNzdjZzY4Zjg0Z3piU3BCanBaNWlsb3laU3JoNmZDcVktX21fOEhSSVZnWkZn?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPaUE5RGp3R0ZRcUJKX2c0YjNNTTkxbU03c0haWGlfWm5MZ1FMbFNMZXhXNlRBN3I3bVFBX2xaLXlfOGtJVWNzVzlGWV9hZ3dGOGNyLURLUVhKeTR6NEx2RkNRWUIwYVRjTWd4eFZCc1A4ZmVaaFQwZ3hmUFFqTXFOSnpLR2pkRXFLQ3lLU3lFZlpBYnBYY3JNX0pEX2stb3FBdlQ5a1NXWkVNZjlZU3Ewbmstb21wdTRTNHFwOEJwcUs1YklIbEtDSnEzX09DVGVIXy1fMUliWTZTSVdlNVNuZlg0Y3g?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZVFJsLUhiTUVxUU14VzdQamVCVWVKWnh6U0U0aGRBWjQ3N1NXZUdlcEhWSDhZMFJiSnp4aWhrZ19UOWhXNXB2YXc3a0l5LXEtOEZZbEdRTGFfNFJKLURQWlhOci1qMnhtOGtpdQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-78b9a3fd0ee0",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "Jensen Huang's reinstatement at Nvidia sparks governance scrutiny, S&P downgrade warning and divided Washington",
+  "facts": [
+   {
+    "text": "Nvidia's board chair said the company did not intend to reinstate Jensen Huang, according to CBS News.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "Huang's comeback as Nvidia CEO was announced on Monday after Trump and his team spent the weekend working to make it happen.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "Trump told CNBC he \"convinced them\" to rehire Huang.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "The White House gave Nvidia's board legal assurances that Huang was not the target of a Justice Department investigation and the government had no legal issues with him.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "The White House's assurances did not extend to Alice Huang, a former top executive at Singapore-based Megaspeed with whom Jensen Huang had an affair.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "Megaspeed has been accused of transferring Nvidia chips to China, which the company denies, and was put on a US trade blacklist.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "S&P Global Ratings is considering downgrading Nvidia's rating, citing concerns about management and governance practices.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
+    ]
+   },
+   {
+    "text": "S&P cited \"weak executive oversight and lack of succession planning\" and \"key man risk\" in a statement.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
+    ]
+   },
+   {
+    "text": "S&P expects to finish its review within 90 days and could cut Nvidia's rating from AA to AA-.",
+    "source_urls": [
+     "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
+    ]
+   },
+   {
+    "text": "Commerce Secretary Howard Lutnick's department is responsible for enforcing export controls on advanced chips and has been accused of not doing enough to prevent diversion to China.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   },
+   {
+    "text": "Secretary of State and National Security Adviser Marco Rubio privately expressed concern about aspects of Huang's return but has not publicly broken with Trump, according to allies.",
+    "source_urls": [
+     "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated"
+    ]
+   }
+  ],
+  "entities": [
+   "Jensen Huang",
+   "Nvidia",
+   "S&P Global Ratings",
+   "Moody's",
+   "Marco Rubio",
+   "JD Vance",
+   "Donald Trump",
+   "Alice Huang",
+   "Megaspeed",
+   "Howard Lutnick"
+  ],
+  "context": "Nvidia is a leading maker of chips used to train and run artificial intelligence, and its credit rating reflects how lenders judge its ability to repay debt. Credit rating agencies such as S&P assess governance and key-man risk, meaning how much a company depends on a single executive. Export controls are federal rules that limit sales of advanced chips to certain countries, enforced by the Commerce Department.",
+  "why_it_matters": "A downgrade would raise Nvidia's borrowing costs and could force lenders to demand larger guarantees on the AI infrastructure financing it backs, affecting neocloud and infrastructure companies that rely on Nvidia.",
+  "open_questions": [
+   "Whether S&P will actually downgrade Nvidia's rating once its review finishes.",
+   "Whether lenders will demand larger guarantees from Nvidia on its AI infrastructure loans.",
+   "Whether Rubio and Bessent will publicly break with Trump over the Huang decision."
+  ],
+  "sources": [
+   {
+    "url": "https://cbsnews.com/news/trump-jensen-huang-nvidia-ceo-reinstated",
+    "listed_url": null,
+    "outlet": "cbsnews.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
+    "listed_url": null,
+    "outlet": "techcrunch.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcFBLdDNQN05jdHNUa2h1Nzg2a01obklsZThHc2VDOTFiZzloY1B0RVVKaThCRjNFRDZNRWwxSDBYODdyWjRXU29QZ0Y1UnZsOHE3dThzMk9GOGRzS0JhMzFXZk1tMVdyRnlGNklIQkpiVzRLSHl0SE04MWZQaDhFYjdzdU1Ba1hxUG40ZWQxZGtSQnEybDlCWTh1ODVUdw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://ft.com/content/cd688a72-04ed-40fb-9c26-5cae522a0abd",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   },
+   {
+    "url": "https://nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   },
+   {
+    "url": "https://theinformation.com/articles/s-p-discovers-nvidias-governance-lapses",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-68db70806804",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "US chip curbs and distillation crackdown threaten Chinese AI model development; Z.ai's GLM-5.5 reportedly delayed",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "listed_url": null,
+    "outlet": null,
+    "status": "failed",
+    "error": "unavailable: HTTP 401"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-c715d2397e21",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "SAP prepares at least 10,000 job cuts in AI-era restructuring",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   },
+   {
+    "url": "https://ft.com/content/ef05b4ab-7944-44ae-ad00-15475f8c1ec9?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-e5d436e38133",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "FCC approves SpaceX plan for up to one million data-center satellites",
+  "facts": [
+   {
+    "text": "US regulators, the FCC, have approved SpaceX's plan to launch up to one million satellites into orbit to build data centres in space.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "The project, called Starmind, is the first approval of its kind for orbital data centres.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "The satellites would use sunlight to power computing that processes data for AI and sends results back to Earth.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "FCC Chairman Brendan Carr said the project opens a bold new frontier for computing infrastructure.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "Under the licence, deployment must begin no later than November 2033, with 10% deployed by November 2035 and 50% by November 2038.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "SpaceX has said it wants to launch its first Starmind satellite next year.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "It is unclear whether a million satellites will actually be launched or whether SpaceX sought approval for a higher number than it will use.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "The American Astronomical Society said it was disheartened and dismayed by the decision, warning it would significantly undermine astronomical facilities and night-sky observation.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "Amazon criticised the plan as a lofty ambition rather than a real plan.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   },
+   {
+    "text": "Prof Sir Martin Sweeting said the idea seems technically feasible but whether it makes sense at scale still needs analysis, and laser links are not yet perfected for the data volumes involved.",
+    "source_urls": [
+     "https://bbc.co.uk/news/articles/cwp836l8n1jgo"
+    ]
+   }
+  ],
+  "entities": [
+   "SpaceX",
+   "FCC",
+   "Starmind",
+   "Elon Musk",
+   "Brendan Carr",
+   "Amazon",
+   "American Astronomical Society",
+   "Starlink",
+   "Prof Sir Martin Sweeting",
+   "Earthjustice"
+  ],
+  "context": "SpaceX is Elon Musk's rocket and satellite company, which runs the Starlink internet network of more than 10,000 satellites in low-Earth orbit. The FCC is the US Federal Communications Commission, which licenses satellite systems and radio spectrum. Orbital data centres are proposed computing facilities placed in space, where solar power is available and cooling is handled differently than on Earth.",
+  "why_it_matters": "The approval is the first of its kind for putting large computing facilities in orbit, which could affect the night sky for astronomers and the public and add to congestion and collision risks in space. Supporters, including Musk, see it as a greener way to meet AI computing demand that is increasingly opposed on Earth.",
+  "open_questions": [
+   "Whether a million satellites will actually be launched or whether the approved number exceeds what SpaceX will use.",
+   "Whether laser links from the ground can support the data volumes involved.",
+   "Whether the concept makes economic sense at scale."
+  ],
+  "sources": [
+   {
+    "url": "https://bbc.co.uk/news/articles/cwp836l8n1jgo",
+    "listed_url": null,
+    "outlet": "bbc.co.uk",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest",
+    "listed_url": null,
+    "outlet": "theguardian.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUmh3LVh3RnFNUW5hVjJWcXlzOERNTTloeEdIbnRiRGVSV1B4UzJaWVhudzNvS0Q4YlRvN1pUTThRVjhka1JpYUFBWC1RWW1hYnFxT3RxM0VoMERWRmlJdmd4LXJJR0F5S083cThjNDFWay1zRWVPcmRUeXR5WWVuQ01ObUVGRVZBOGFzTDdobUxMUQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "ai-16b0900dd66d",
+  "digest_id": "ai-20261126T2209Z-9e3be052",
+  "beat": "ai",
+  "headline": "Microsoft says China and North Korea state hackers use AI pentest tool ARTEX",
+  "facts": [
+   {
+    "text": "Microsoft says Chinese state-backed groups Crystal Typhoon and Salt Typhoon have integrated Artex into their tools.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Microsoft says state-backed and financially motivated hackers are using Artex, an AI-powered platform that automates phases of cyber intrusions.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "According to Microsoft, Artex has been steadily added to the arsenal of multiple North Korean and Chinese groups.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Microsoft says Artex can advance from reconnaissance to persistent, privileged access to a target in minutes.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Microsoft says Artex does not introduce new attack techniques but uses common, pre-existing penetration testing tools.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Microsoft says the most reliable signal of Artex activity is behavioral, such as bursts of requests at machine speed.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "The New York Times and NextGov reported that Artex was allegedly used in attacks on the CIA, the National Geospatial-Intelligence Agency and the Office of the Director of National Intelligence.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "The FBI released an advisory on Artex two weeks ago warning it is used prolifically by cybercriminals and nation-states.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Microsoft previously said Chinese state-backed actors used Artex in a supply chain attack on IT management software company ConnectWise.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   },
+   {
+    "text": "Salt Typhoon is a Chinese hacking group that U.S. agencies believe was behind a breach of at least nine telecommunications giants in 2024.",
+    "source_urls": [
+     "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+    ]
+   }
+  ],
+  "entities": [
+   "Microsoft",
+   "Salt Typhoon",
+   "Crystal Typhoon",
+   "ARTEX",
+   "FBI",
+   "ConnectWise"
+  ],
+  "context": "Artex is an AI-powered platform that can automate parts of a cyber intrusion, such as scanning, credential attacks and exploitation. Penetration testing tools are software used by security professionals to probe systems for weaknesses. Salt Typhoon is a Chinese state-linked hacking group known for telecommunications intrusions.",
+  "why_it_matters": "Microsoft says Artex lets attackers move from reconnaissance to privileged access in minutes, which could pressure defenders at government agencies and telecom and infrastructure organizations. Defenders are advised to watch for bursts of anomalous, high-volume traffic from a single source.",
+  "open_questions": [
+   "The sources do not say who the Chinese researcher behind Artex is or what action will be taken against them.",
+   "It is not stated which North Korean groups use Artex or how widely it has been deployed."
+  ],
+  "sources": [
+   {
+    "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
+    "listed_url": null,
+    "outlet": "therecord.media",
+    "status": "ok",
+    "error": null
+   }
+  ],
+  "status": "ok",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:17.708731Z"
+ },
+ {
+  "story_id": "energy-a91b415a343a",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "US chip export curbs stall billions in Asia data center deals; Nvidia reportedly halts server shipments to Southeast Asia",
+  "facts": [
+   {
+    "text": "Nvidia has reportedly ordered its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The halt follows an interim final rule issued by the US Department of Commerce earlier in November.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "According to an FT report, Dell and Supermicro told customers in the affected countries that Nvidia stopped server orders being shipped.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "It is unclear whether the shipment halt is temporary, according to the report.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The Bureau of Industry & Security issued the rule on November 16, requiring licenses to export or transfer advanced semiconductors to Indonesia, Malaysia, Singapore, Thailand, or Brazil.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The US government considers these countries to present a higher-than-normal risk of diversion of chips.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The rule also restricts remote access to advanced AI chips and servers used in data centers in third countries.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "Citing Nvidia company accounts, the FT said Nvidia booked $104 billion in 2025 revenue through its Singapore subsidiary, a 72 percent increase over a 12-month period.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The US government added Megaspeed, a Singapore-based IT and cloud company, and its Thai and Malaysian subsidiaries to the Entity List earlier in the week.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "Megaspeed is under investigation for smuggling Nvidia GPUs into China.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "Nvidia CEO Jensen Huang resigned on November 12 and was reinstated by the Nvidia board eleven days later after pressure from President Donald Trump and Vice President JD Vance.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   },
+   {
+    "text": "The Nvidia board said it received input from senior US government levels and was confident Huang's reinstatement poses no national security risk.",
+    "source_urls": [
+     "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report"
+    ]
+   }
+  ],
+  "entities": [
+   "Nvidia",
+   "Jensen Huang",
+   "Alice Huang",
+   "Megaspeed",
+   "US Department of Commerce",
+   "Bureau of Industry & Security",
+   "Dell",
+   "Supermicro",
+   "Financial Times",
+   "Donald Trump",
+   "JD Vance"
+  ],
+  "context": "Nvidia designs the advanced AI chips and servers used to build data centers. The US Department of Commerce controls exports of these chips to protect national security, and an Entity List restricts trade with companies it flags. Manufacturing partners such as Dell and Supermicro assemble and ship the servers to customers.",
+  "why_it_matters": "The reported shipment halt could slow AI data center projects in Malaysia, Singapore, Thailand and Indonesia, affecting customers who ordered servers from Nvidia partners. Singapore is also central to Nvidia's revenue reporting, so the rule touches the company's finances.",
+  "open_questions": [
+   "Whether the shipment halt is temporary or permanent is unclear.",
+   "The sources do not say how long the new export licensing requirements will last."
+  ],
+  "sources": [
+   {
+    "url": "https://datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report",
+    "listed_url": null,
+    "outlet": "datacenterdynamics.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJWFVtc1BvNXp5TFMzbWtqVTdzc3JVM3pmY1hkR09YMi1WV3k3TzZ4VzFDQUpkcGJHVEZ2R0NqVnRNNmZsTThQZ0V3SlNzUmY1dUFURGtVckNOTXVQamlqSnVxTG5NVy1UVVR1dnlaNFE1MTluNFdUOTZzSHg2eHYzYTF1emwxMjZKUVIxcWhqYzhxTUdYZ0VZU3BsV1UxRHp3RTZnc2lyS2U5SDAydW5vcjVqaFFz?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcF9XSks4a3prSHMwSUlVaWJydXp0ZTlZREdGNXFGS3JyeFBibjNCMUFiR0lhQi1zME9pcE5Sdm9YbWV3X1NWaUZEbk9MMmRFbXFYRkUtV01WSE9mRDlSUGk5Y1pYXzY5Wmh1VDFJcmJiOUM5UnRqSTRudkNzUVFkWHNKcTdodGJObGE0Y01KN0dEVzlJZHc?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-9fa7f405d5db",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "Backlash over AI power costs threatens $67bn NextEra-Dominion deal",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-00c0f8c87c5d",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "Google signs 3.6-GW power deal with Constellation Energy",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeXRoQ2ZLWk1oemNaN2ozYkdBdTAyV2VjbGNEOGZxMDEyVTBCQndvTmxWQU5ESkdKcVBGSTVmcHhBOWwxbzRGZFpmekF0YzVhNnVDcnhIcHFQUjNhcWVMZWlmNXQydUlsQU5kMnFjejVnODJnaHhBLU83MThTbzByTVFJdXFkR1dTTzdhcExFVURkUm5BYV84dWlFUWI?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-96a0cbbd7b50",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "Senate passes permitting bill boosting clean and fossil energy projects",
+  "facts": [
+   {
+    "text": "The Senate passed the Bipartisan American Affordability and Jobs Act by a 62 to 33 vote.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "The bill would streamline permitting for energy and infrastructure projects, both clean and fossil.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "The bill was co-written by Democratic Sens. Martin Heinrich and Sheldon Whitehouse and Republican Sens. Mike Lee and Shelley Moore Capito.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "The bill would also ease permitting for fossil-fueled power plants, pipelines, and data centers.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "Rhodium Group found the bill would cause greenhouse gas emissions to fall, while other modelers found it could raise emissions.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "Sierra Club and the Natural Resources Defense Council have come out against the bill.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "The House of Representatives will now take up the legislation.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   },
+   {
+    "text": "Supporters want to pass the current version now rather than risk a better deal under the Democratic-led Congress next year.",
+    "source_urls": [
+     "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy"
+    ]
+   }
+  ],
+  "entities": [
+   "US Senate",
+   "Martin Heinrich",
+   "Sheldon Whitehouse",
+   "Mike Lee",
+   "Shelley Moore Capito",
+   "Sierra Club",
+   "Natural Resources Defense Council",
+   "Rhodium Group",
+   "Evergreen Action",
+   "House of Representatives"
+  ],
+  "context": "Permitting is the government process for approving energy and infrastructure projects such as power lines, pipelines and power plants. Transmission lines carry electricity from generators to customers and are notoriously slow to build. The bill would change parts of federal environmental laws that affect these approvals.",
+  "why_it_matters": "The bill could speed up clean energy and transmission projects but also fossil fuel and data center projects, and climate groups disagree on whether it would raise or lower emissions. The House must now decide whether to pass it.",
+  "open_questions": [
+   "Whether the House will pass the bill.",
+   "Whether Democrats will take up permitting reform in 2027, as the newsroom summary raises."
+  ],
+  "sources": [
+   {
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "listed_url": null,
+    "outlet": "canarymedia.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+    "listed_url": null,
+    "outlet": "heatmap.news",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://heatmap.news/politics/baaja-data-centers",
+    "listed_url": null,
+    "outlet": "heatmap.news",
+    "status": "ok",
+    "error": null
+   }
+  ],
+  "status": "ok",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-c7346b489f79",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "UK grid operator makes record number of calls for extra power amid cold snap",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQX2ZfNXdXdHh2Z0pJLUp1alQxbDFiUTFodGZTNWkzYVZUV2ItT2twZ3Q2b0sxOWJ1RkNueHlKQmQ5OUxibzE5OGhSSWtPV1hDcUtGTG82Q1NVRklRYVIxRFdjSm9mbUJmQ3Q3RU9YVFdtOEtQeU1mZzQ4R3RseXJhOHJlNF80M01JQUhCRVJOS3dCT1VSLUR1NjNLZHJFTDhnbFRacUJRRVExbVVJNXZuRXBwdGVGYWZSbFo2MkF0X3pNUHFHWHlBMVc1X3ZaRmxXcUE?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb0NGOHVKakF2RnNCZ0o1QzQ2WHdqM2xRUGdTQnJ3bWJ6N2hXN09TOExHbzQzcUNWYjBKRVU1UWp1dE1yTi1fdG9mb05aVVF5SnJ3ZDJGRkZScEMyZVl2MkNSZXVYRElKTTlfZE1meW1wa0JWLURUVXc1ajhVeU5EWVM3R0hlRXNaazkyNHVnUkVkOEVEcFU1TjFtN1RpUjVwUGhxOGdWWi1kUVVLMnEyY0Jha2F4Zw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://ft.com/content/21a1331c-c201-4333-b312-ab87b7fd994f?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-bda410da229d",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "Texas resumes data centre permitting before Democrats take over",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1",
+    "listed_url": null,
+    "outlet": null,
+    "status": "paywalled",
+    "error": "unavailable: HTTP 403"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-483dfc504ecf",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "JERA plans AI data centers beside its power plants, in talks with Amazon, Microsoft, Google, Anthropic, Meta",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUTRHSm0wQmRiS1I2VjZCcjVnVkN5RmVRVFFlaVI3d2h0b0dRS21OUWNSdF9KbFZxOFhXNHJ5QUZqSnAxSnZIWXNuMm4zMGtvS0Z2YjdZbXFWWEN2bkdHZ21UNjhEUnJmOGhmcE9STzYwSm9pLVJwdnpIaDloSzdLWlR3?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMG04VjdqTnc0bmZjLUw4V1dGTUpoNkljMVZwc2pHdGIySFN5OXN3NGhuaWlEOEZqWWxGTkRhTXZISTVlVjlYdDFqRGo0SUdiUUF4MzZtOFJPU1V1bmROM2JVZXRGSEN1Y2EzZ0wxMzlodThVSlpCSG01Tzk3M0k3T2s3ZC1sb29vbE16eE5CalM3ZjNGM3FYWVZHSlc3WHN0Q2xhbGhjZ1NTbHVz?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "energy-898a268c248d",
+  "digest_id": "energy-20261126T2209Z-e4284e23",
+  "beat": "energy",
+  "headline": "Poland nears construction deal with US consortium for $50 billion nuclear plant",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORV9KbWp6SnZ2NF8zUzg5d3FucHFtSWZXa0FsaGF2SERCcnpwdzY5T3ZNZlhmTkhsRlhRWDFkcUw5ZjUwY1dlRVRZLXM5aEN4dDlWeTlPc1RXMGVoTnFDdEZWTHgxRVRnM1VVek9Ya1NfNlNXRjlXVGJFbm5nMVNfTWQ4QnowTTVwS0hKdXg2eFNVSkFwU3M2QnFaYUpCTmg1NHNGdC12LUtORU1pMnd2UkhVX1lnWW8?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:24.788776Z"
+ },
+ {
+  "story_id": "physical_ai-2af40820bf64",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "XPeng unveils IRON humanoid and Turing VLA 3.0 physical AI architecture at AI Day, targeting mass production in January 2027",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5laktIWWlkWURXRWIzamdEcThwUWVCVExCdzBWM1pIM1J3ZEtfb1hEVGd3T2NwREUyUUdWV1NudE1KdFFUQ3lxVjJqTQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-3896f77bf54a",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "California DMV bars Waymo from freeways after safety incidents",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CRE1XVnFnWlBYaldncXdqRWI2YkEtNTVxOGtrOGk5bDRGLWw2aTdZRWg4UUZlZVYtaWliY1N5M09WM2d0Zl84T1JZOWlzZVd6V0hRbHN4dHVwX0hrcXJtcEVhRGkzODVCOGdyWU1yRkdfY1RoVEhpR1BONA?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1HeF9sb3c0V3hmYXlqZVY3ZFFwNThyMUduSERVN01lbWlnZzN4YTQ1MUQ3NXVBdWF3ZUhwZ1E5WTlRcGFhS292ck5ZcXViZkxnMTdVZ1NKYjhvdzVSREJRU2ZaOUdIRTZwdV9OYXV3XzhCNDlxdzZCdQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12Yk1LZ3loNklNLS1PbUhXMjBuRllSTnlvd1lMdkF6cWFraS15WXEwLXdXcmlHaVRVaXZLaUctZW8yb3Bkc0RHcElXVjM5RnlFU0RraTNRVDhFbWdTckVkbWItZW1LM0ZpRmxOaU5waWMxOXpkWDBHWW1EUVl1dw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-386802ef471a",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "Nvidia forecasts more than $25 billion in physical AI revenue in fiscal 2027",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8taENrWENmUmc0V2dTY1VXUkZRLXBaWVR2SHczNGZyM2FMUnh6WlpnODNDRUh6Tmdwc1dfamFWRTFfQmN0YzJlOWw2Mko5OFJQVWJvaEk4OFI?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9rVFFLR28tMVREc2Jpckc3RUw5V1hCbXFlQU1ya09rM2lBdlhXTkRNb2ZEa0tITHdQRXQzYnZNdExVTUtPRWM5NThBNTJ2TE90MlBncHp6M1BUZXFIYmNtdHpjeWJKbWsxcTZQZWRrVFR5QWs?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBIMHJLeF9pdkpqUTlBcDBQZlI1bHB4NDJtVGl6U0J5WU5ZTjc5R0tDelQybWNMeVJ3Z2o5ZkN6OWhEeS1wV2g0dTRRaVVPN281ODZrejRINENSUXlXRk9OT3pUSHU0cEU0Vkg5dEJYWnhWOXRZa3VTQXNzYw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-b5749e123983",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "Genesis AI announces $500M Series A at $3.5B valuation",
+  "facts": [
+   {
+    "text": "Genesis AI announced it raised $500 million in Series A funding.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "The round valued Genesis AI at a $3.5 billion post-money valuation.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "The round was co-led by Premji Invest, Khosla Ventures and Eclipse.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "The company said the funding will go toward developing and deploying physical AI technologies, including its Eno flagship robot.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "Genesis AI said it is currently ramping up production of Eno.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "The company plans to roll out Eno first in industrial settings such as manufacturing, logistics and laboratories.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   },
+   {
+    "text": "Genesis AI says it builds its entire robot stack in-house to optimize every layer together.",
+    "source_urls": [
+     "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation"
+    ]
+   }
+  ],
+  "entities": [
+   "Genesis AI",
+   "Eno",
+   "Premji Invest",
+   "Khosla Ventures",
+   "Eclipse",
+   "Zhou Xian",
+   "Eric Schmidt",
+   "Vinod Khosla",
+   "Vedant Agrawal",
+   "Charly Mwangi"
+  ],
+  "context": "Genesis AI is a global robotics company developing general-purpose robots. Physical AI refers to AI systems that control robots or machines operating in the real world. A Series A is an early-stage venture funding round, typically used to scale a company's product and operations.",
+  "why_it_matters": "The funding gives Genesis AI resources to scale production and deployment of its Eno robot in industrial settings like manufacturing, logistics and laboratories. Investors and customers in industrial robotics are affected as the company moves from demonstrations toward real-world deployment.",
+  "open_questions": [
+   "The sources do not say how many Eno robots will be produced or deployed.",
+   "The sources do not give a timeline for expansion into hospitality, healthcare, consumer or outdoor applications."
+  ],
+  "sources": [
+   {
+    "url": "https://robotics247.com/article/genesis-ai-announces-500m-series-a-at-3.5b-valuation",
+    "listed_url": null,
+    "outlet": "robotics247.com",
+    "status": "ok",
+    "error": null
+   }
+  ],
+  "status": "ok",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-4005d95ab201",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "Jensen Huang reinstated as Nvidia president, CEO and board member; Vance says he was not under investigation",
+  "facts": [
+   {
+    "text": "NVIDIA's board announced on November 23 that co-founder Jensen Huang has been reinstated as company president, CEO and board member, effective immediately.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member"
+    ]
+   },
+   {
+    "text": "The board formed an independent committee to investigate allegations of a personal affair with a potential Chinese spy, and said the investigation will proceed to conclusion.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member"
+    ]
+   },
+   {
+    "text": "Huang fully supports the investigation and is committed to cooperating with it, according to NVIDIA's statement.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member"
+    ]
+   },
+   {
+    "text": "Huang admitted to an extramarital affair with Alice Huang, a Chinese business executive, on November 10.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal"
+    ]
+   },
+   {
+    "text": "New reports suggest Alice Huang is an asset of China's Ministry of State Security, the country's main intelligence agency.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal"
+    ]
+   },
+   {
+    "text": "The New York Times reported on November 11 that five NVIDIA employees alleged Huang was romantically involved with Kimberly Powell, a company vice president; CBS News had not verified the report.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal"
+    ]
+   },
+   {
+    "text": "Colette Kress, NVIDIA's CFO, served as interim CEO after Huang's resignation and is thanked by the board for her service.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member"
+    ]
+   },
+   {
+    "text": "According to the article, NVIDIA's stock dropped 27% and the company lost over $1 trillion in market capitalization in the 11 days after Huang's resignation.",
+    "source_urls": [
+     "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member"
+    ]
+   }
+  ],
+  "entities": [
+   "Jensen Huang",
+   "Nvidia",
+   "Colette Kress",
+   "Harvey C. Jones",
+   "Alice Huang",
+   "Kimberly Powell",
+   "Megaspeed",
+   "China's Ministry of State Security"
+  ],
+  "context": "NVIDIA is a US technology company that makes graphics processors and AI chips widely used in data centers and robotics. Its CEO and co-founder Jensen Huang led the company for about 33 years. The board of directors oversees the company's leadership and can appoint or reinstate its chief executive.",
+  "why_it_matters": "Huang's removal and return came amid a scandal that wiped out a large share of NVIDIA's market value, affecting investors, employees and customers. The board says his reinstatement serves stockholders, employees, partners and customers.",
+  "open_questions": [
+   "The outcome of the independent committee's investigation into the allegations is not yet known.",
+   "Whether the allegations about Alice Huang and Kimberly Powell are substantiated is not stated in the sources.",
+   "The sources do not say whether Vance's comment that Huang was not under investigation is accurate."
+  ],
+  "sources": [
+   {
+    "url": "https://robotics247.com/article/jensen-huang-reinstated-as-nvidia-president-ceo-and-board-member",
+    "listed_url": null,
+    "outlet": "robotics247.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://robotics247.com/article/jensen-huang-resigns-as-nvidia-ceo-amid-affairs-scandal",
+    "listed_url": null,
+    "outlet": "robotics247.com",
+    "status": "ok",
+    "error": null
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBuNHFNMms2X24wSEJKOU1fbGoxV01VQ1JEVXFjRHdSTGdueGdJSWV4bnhwRFBQeWVFWGY1cTZCNkI3YzJMY3RyTHpENTI1TjRvQmY4YnhuRTI4ZUJWaEVwQm9WYmRBdU0?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "partial",
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_version": "2",
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-aa1d7030bdc1",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "Volvo Cars trains Hexagon AEON humanoids for Ghent factory work from 2027",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9oWjgwR3VhLUdIMy11bFhtamc3Sk5aNVFEcDZmOWhaS0JObmF5Q21XZWRUbVhWNnlHNWN6cGVScU1yVFFqNVJ6VnpoS3IySDVocm5Zam40bDgxNmJGaE9Tajd2LTRRRkliNHVld1J6RDM3bzNnLWRPVzY2d1dXdw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM1lFaTRVdmlhT3ljSlh1bk44ZnhMcGJFeTVjUXhRYzdVT3ZlZU0tb1lub1l2NkMydkdQcElUbWZxdG13NWhnVVlxWTlYWTQteEk0aHZwX3RST0dycEJLMHdnTVRVZ2FlczdpUEF5ZVlhRm5qbzdzUUZzSnBWUUh1SXBtdTA5d2I0aDFKRW1RbzJPVXVQOWFFUDBkWm4?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRUxIdzFkM1JGQWY1RXlGb3FBelNEMEpUWmpSRVd1ODBDc3k2UGYtTnNiY0VfSW1fakJhM2pabFRrUVFrbEwxNW50cjhGYUNfT2pTdmcxc3V4M2NlSDNfTkNmeTIxNzlOUzhvWFZPX095SzZJamk0OHpTbzdRdVpOaExreGV5WHlwajFNVUNoTTh5UUoyQm11LXppWjN4RjY2SGc2N3Fn0gGrAUFVX3lxTE8zSVlSbFNmVlRzblVlZ0pYTFBRSF8xZk8zVjV3VFFSWldkNC1SOVhkeC1iRzlrSzhkUTE1TUZqTVZtSV9kWkY5M1o4YmNQeHFUTENMbUtPMURxV0RSNExxcVBWNkhiQk9DOVh1a0hhbWZsR0tQM19RRW9vSkxpMzlCV1RKY041Z2d0Y3E2eVlSLWc2dTRfYm1UTFJoYmdzcEpSemNsd3ZjeWU2OA?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-7d92e75abc79",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "EU delays vote on Tesla's assisted self-driving system to December 15",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1sMFBWNUEzTlh6OC1lQ3cxaG1ZN1ExMDZzUjlqeFBERmlONDlPd25MbmZlbU9GanYyVlZHXzMyR3hGa2RscVREUlh5Y296dDFOVXEtbVRMUG9KUXdLZFc0N0t4R2Z4TVpWUDYyTDFOWVZkeU0?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04eXJoNXZlM3ZCamFROGV4ZnJzZDVrcU1BczZSUmtEaHpKLTJwOWVpd1NoY3B4UVFxWk1ZUVVJZEVGSnIzNEt1dmZLQWtHTk5MajNrbXpvX1J4ck9heVpzbTRJNEpCUGZQbWJEY05VVk44dWRhcDVKOUR2dm9DaDA?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeFFSYmlzTEp0Z3ZpZTh6blFveFBKczZOY2JXYTdjLXpRaVFtelJRejJ6eUhGZG9nMl9td0t3Z2ZXX1dScnlEWXJvdjZTRTNobHJraThTeHIxUWR4Ykd5QzNWdlZNX3NmNnVoNDRueXlsWk5HaGJ1cDBLQTlKS0NuNndTMFU3SVJQXzJRRjFoblFLcDJ2ckE?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ },
+ {
+  "story_id": "physical_ai-88cd6b952f8f",
+  "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+  "beat": "physical_ai",
+  "headline": "Waymo recall covers 4,488 vehicles tied to closed-lane and highway incidents",
+  "facts": [],
+  "entities": [],
+  "context": "",
+  "why_it_matters": "",
+  "open_questions": [],
+  "sources": [
+   {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5MTF84ekpnYkhOd0VJOUNSNXJiZS1WODlMSUZ6Rk0zTmMtazgtY0NtYm5fZkhqUUNoRl9QZ2FnQXZDREZnQkFKTnVkN2ZiTEtGRVJFZTFnNjVoTnpsblhacGFOVUZLME1JTDVEYU9Ja2UtVm11c1puQkdxLXUtdw?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSzdkX0NxeUI3dUxtd1psZGk4UG9vRkxMaEZUNXVkZTZfZ29DX3laaXMxVWhWNm80cGhINk55OHFsNjFFdDZJRWo2OF9vZDNmMC1HcVd5aVZaakxMQlcxQXhydDVGYVhyZGh4dHdnMy1la3Q5cF9TTDBXamZUSFZRMTFWN3hqRDJ0MHAwYjhiTQ?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   },
+   {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOajFYRWlGcTZpSVVhbktXZWlWYWJwT0VIWnlxTGVOZDBrWExXNFA0elJyYzg2b1JKeGxmTUhHTzNOTWdSdUswYXdZZXY4WjhXNHlZWkg5N0NnS25YLTlyMWFjS3Eyamd1bk94QzM3ZUtNbVRLYTZ5LVB2Wm1UWFdydmdGdkVCVnRnN1N3NWZ1Y1o?oc=5",
+    "listed_url": null,
+    "outlet": "news.google.com",
+    "status": "failed",
+    "error": "text 0 chars"
+   }
+  ],
+  "status": "no_text",
+  "model": null,
+  "prompt_version": null,
+  "created_at": "2026-11-27T06:23:31.074475Z"
+ }
+]

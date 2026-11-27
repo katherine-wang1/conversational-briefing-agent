@@ -58,6 +58,20 @@ concurrency:
   pack_fetches: 3             # C6 fetch+extract per pack
 worker:
   type_concurrency: {newsroom_run: 1}   # max jobs of a type running at once per worker (memory)
+# Shared story notes (app/agents/newsroom/notes.py; docs/architecture-revisit.md part 2): one note per
+# digest story after each newsroom run, shared by every user (facts cited to fetched sources).
+story_notes:
+  enabled: true
+  max_sources_per_story: 3      # good (fetched, with text) sources per note
+  max_fetch_attempts: 6         # URLs tried per story: a failed fetch moves on to the next URL
+  concurrency: 6                # stories in flight at once (each fetches up to max_sources_per_story at once)
+  max_text_chars: 6000          # source text per document shown to the model
+  min_text_chars: 400           # less extracted text than this = failed (e.g. an unresolved redirect page)
+  max_output_tokens: 2500       # a 10-fact note with quotes is ~1,200 tokens; 1,500 truncated one in the smoke run
+  require_quotes: true          # each fact must carry a short quote found in a cited source, or it is dropped
+  reuse_ok_hours: 6             # a story already noted "ok" this recently keeps its note (story ids are stable
+                                # across runs); 0 = rewrite every story on every run
+  budget: {input_tokens: 900000, output_tokens: 150000, fetches: 400}   # per run (80 stories)
 spend_guard: {alert_pct: [40, 60, 80], pause_eval_at_pct: 60}
 # Newsroom pipeline N2-N6 (W-C; TDD §7). Additive keys, validated by app/agents/newsroom/settings.py.
 newsroom:

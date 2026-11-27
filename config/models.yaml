@@ -9,6 +9,7 @@ roles:
   newsroom.cluster_tiebreak: {provider: openrouter, model: TBD}
   newsroom.score: {provider: openrouter, model: TBD}
   newsroom.editor: {provider: openrouter, model: "anthropic/claude-sonnet-5.5", params: {reasoning: {effort: medium}}}   # chosen 2026-11-27 (docs/smoke/2026-11-27/editor_multiday)
+  newsroom.story_note: {provider: openrouter, model: TBD}   # shared story notes (app/agents/newsroom/notes.py)
   cos.plan: {provider: openrouter, model: TBD}
   cos.search_loop: {provider: openrouter, model: TBD}
   cos.score: {provider: openrouter, model: TBD}

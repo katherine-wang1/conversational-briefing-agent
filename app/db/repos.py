@@ -15,6 +15,7 @@ from psycopg import sql
 from psycopg.types.json import Jsonb
 from pydantic import BaseModel
 
+from app.contracts.notes import StoryNote
 from app.db.scope import Scope, ScopeError
 
 
@@ -392,6 +393,45 @@ class DigestEntriesRepo(Repo):
     has_run_id = False
 
 
+class StoryNotesRepo(Repo):
+    """Shared story notes (app/contracts/notes.py), append-only: the latest row by created_at per
+    (run_id, story_id) is the current note."""
+
+    table = "story_notes"
+    json_cols = frozenset({"note_json"})
+    default_order = "created_at"
+
+    async def put(self, note: StoryNote, *, run_id: str | None = None) -> dict[str, Any]:
+        return await self.insert(
+            story_id=note.story_id,
+            digest_id=note.digest_id,
+            beat=note.beat,
+            note_json=note,
+            created_at=note.created_at,
+            run_id=run_id or self.s.run_id,
+        )
+
+    async def latest(self, story_id: str, *, run_id: str | None = None) -> dict[str, Any] | None:
+        return await self.s.fetch_one(
+            "select * from story_notes where run_id = %s and story_id = %s"
+            " order by created_at desc, id desc limit 1",
+            [run_id or self.s.run_id, story_id],
+        )
+
+    async def get_note(self, story_id: str, *, run_id: str | None = None) -> StoryNote | None:
+        row = await self.latest(story_id, run_id=run_id)
+        return StoryNote.model_validate(row["note_json"]) if row else None
+
+    async def for_digest(self, digest_id: str, *, run_id: str | None = None) -> list[StoryNote]:
+        """The latest note of each story written for `digest_id`."""
+        rows = await self.s.fetch_all(
+            "select distinct on (story_id) note_json from story_notes where run_id = %s and digest_id = %s"
+            " order by story_id, created_at desc, id desc",
+            [run_id or self.s.run_id, digest_id],
+        )
+        return [StoryNote.model_validate(r["note_json"]) for r in rows]
+
+
 # ---- system tables --------------------------------------------------------------------------------------
 
 
@@ -458,6 +498,7 @@ REPOS: dict[str, type[Repo]] = {
         NewsroomRunsRepo,
         DigestsRepo,
         DigestEntriesRepo,
+        StoryNotesRepo,
         JobsRepo,
         InvitesRepo,
         AdminAuditRepo,

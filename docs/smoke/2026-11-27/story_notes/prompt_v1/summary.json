@@ -1,0 +1,117 @@
+{
+ "digests": "docs/smoke/2026-11-27/editor_to_brief",
+ "per_beat": 8,
+ "settings": {
+  "enabled": true,
+  "max_sources_per_story": 3,
+  "max_fetch_attempts": 6,
+  "concurrency": 6,
+  "max_text_chars": 6000,
+  "min_text_chars": 400,
+  "max_output_tokens": 1500,
+  "require_quotes": true,
+  "reuse_ok_hours": 6.0,
+  "paywalled_domains": [
+   "wsj.com",
+   "ft.com",
+   "bloomberg.com",
+   "nytimes.com",
+   "theinformation.com",
+   "economist.com",
+   "barrons.com",
+   "washingtonpost.com",
+   "businessinsider.com",
+   "theatlantic.com",
+   "wired.com"
+  ],
+  "budget": {
+   "input_tokens": 900000,
+   "output_tokens": 150000,
+   "fetches": 400
+  }
+ },
+ "wall_s": 23.4,
+ "beats": {
+  "ai": {
+   "digest_id": "ai-20261126T2209Z-9e3be052",
+   "beat": "ai",
+   "entries": 8,
+   "written": 8,
+   "reused": 0,
+   "no_note": [],
+   "status": {
+    "partial": 4,
+    "no_text": 3,
+    "ok": 1
+   },
+   "sources": {
+    "ok": 7,
+    "failed": 12,
+    "paywalled": 9
+   },
+   "facts": 43,
+   "facts_dropped": 0,
+   "facts_per_note_with_text": 8.6,
+   "tokens_in": 16227,
+   "tokens_out": 5903,
+   "fetches": 28,
+   "seconds": 8.82,
+   "cost_usd": 0.0044,
+   "llm_calls": 5
+  },
+  "energy": {
+   "digest_id": "energy-20261126T2209Z-e4284e23",
+   "beat": "energy",
+   "entries": 8,
+   "written": 8,
+   "reused": 0,
+   "no_note": [],
+   "status": {
+    "partial": 1,
+    "no_text": 6,
+    "ok": 1
+   },
+   "sources": {
+    "ok": 4,
+    "failed": 9,
+    "paywalled": 3
+   },
+   "facts": 19,
+   "facts_dropped": 0,
+   "facts_per_note_with_text": 9.5,
+   "tokens_in": 6461,
+   "tokens_out": 2512,
+   "fetches": 16,
+   "seconds": 5.98,
+   "cost_usd": 0.0017,
+   "llm_calls": 2
+  },
+  "physical_ai": {
+   "digest_id": "physical_ai-20261126T2210Z-5fb9446d",
+   "beat": "physical_ai",
+   "entries": 8,
+   "written": 8,
+   "reused": 0,
+   "no_note": [],
+   "status": {
+    "no_text": 6,
+    "ok": 1,
+    "partial": 1
+   },
+   "sources": {
+    "failed": 19,
+    "ok": 3
+   },
+   "facts": 17,
+   "facts_dropped": 0,
+   "facts_per_note_with_text": 8.5,
+   "tokens_in": 7300,
+   "tokens_out": 2166,
+   "fetches": 22,
+   "seconds": 8.55,
+   "cost_usd": 0.0017,
+   "llm_calls": 2
+  }
+ },
+ "cost_usd": 0.0078
+}
