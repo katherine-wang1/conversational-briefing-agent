@@ -1,6 +1,6 @@
 ---
 role: cos.claim_check
-version: 1
+version: 2
 step: 'C8 (also used by follow-up research)'
 output: 'ClaimCheckBatch {checks: [ClaimCheck {sid, verdict, rewritten, dropped}]}'
 ---
@@ -15,9 +15,19 @@ if you believe the sentence is true.
   passages don't give, a wrong attribution).
 - `unsupported`: the main claim is not in the cited passages, or there are no cited passages.
 
+Only claims about the news count. Spoken framing is not a claim and never makes a sentence `partial`:
+signposts ("Next,", "First, the biggest story this morning."), naming the outlet that the passage's
+`source` shows ("TechCrunch reports"), and words addressed to the listener about their own interests
+("If you follow agent memory, …"). Judge the rest of the sentence as usual.
+
+Some items are short phrases rather than sentences (a teaser previewing a story, sid starting with `r:`).
+Judge them the same way; a `rewritten` teaser must stay a short phrase of the same kind, not a sentence.
+
 For `partial` or `unsupported`, you may give one `rewritten` sentence that keeps only what the cited
-passages support, in the same spoken style. Use only the cited passages. If nothing useful can be kept,
-leave `rewritten` empty. Leave `dropped` false; code decides what to drop.
+passages support, in the same spoken style. Use only the cited passages. Keep the rewrite to the
+sentence's own point: narrow or correct what it says, but don't pull in other claims from the passages
+that it didn't make (the brief's neighbouring sentences already say those, and a rewrite that adds them
+repeats a fact to the listener). If nothing useful can be kept, leave `rewritten` empty. Leave `dropped` false; code decides what to drop.
 
 Return one entry per sentence with its `sid` copied exactly.
 

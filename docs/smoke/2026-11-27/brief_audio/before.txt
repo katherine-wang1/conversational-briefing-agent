@@ -1,0 +1,19 @@
+[s000 intro -] Good morning. You have five stories today. Answers to your follow-up questions come first, and I'll start with the big news.
+[s001 transition ai-5166002f4d42] Our first big story is about Nvidia pausing chip shipments in Southeast Asia.
+[s002 story ai-5166002f4d42] Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+[s003 story ai-5166002f4d42] Nvidia is checking whether its regional partners are meeting U.S. export requirements, and the pause has no set end date.
+[s004 story ai-5166002f4d42] The reason is that Chinese companies have been tapping Nvidia chips remotely from data centers in the region.
+[s005 story ai-5166002f4d42] The Institute for Progress estimates these remote data centers supply about 24% of China's AI computing power.
+[s006 transition u:f0c64e2aa10c] Now, a few stories picked for you, starting with a new approach to AI agent memory.
+[s007 story u:f0c64e2aa10c] A new system called Leto treats memory as a prediction problem. It judges memory by how useful it is for future responses, not how faithfully it records the past.
+[s008 story u:f0c64e2aa10c] On the PrefEval test, Leto beats the strongest rival memory system by 16.3 percentage points in accuracy.
+[s009 story u:f0c64e2aa10c] On long multi-step tasks, it posts the best overall results, and its lead grows with chain depth.
+[s010 transition u:f81b8ae246e0] Our next pick is about small modular nuclear reactors gaining ground in the United States.
+[s011 story u:f81b8ae246e0] At the end of September, the Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.
+[s012 story u:f81b8ae246e0] That project will use the GE Vernova Hitachi BWRX-300 reactor. Only two SMR designs are approved for use in the United States so far.
+[s013 transition u:21c2dd316a1d] Next, a practical lesson on why AI memory can give wrong answers.
+[s014 story u:21c2dd316a1d] Both the old and new seat preferences looked current, and nothing said which one should win.
+[s015 transition ai-651cc167b0ad] Last, a story that is further from your usual reading.
+[s016 story ai-651cc167b0ad] OpenAI claims to have proved that omega, the exponent of matrix multiplication, is exactly 9/4.
+[s017 story ai-651cc167b0ad] Another OpenAI release reportedly improves the known bound on the linear gates needed for the Fourier Transform.
+[s018 outro -] What would you like to dig into?

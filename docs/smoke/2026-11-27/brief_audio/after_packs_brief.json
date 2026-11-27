@@ -1,0 +1,253 @@
+{
+ "brief_id": "b_4f2b22c75c3ccedb",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:ea4591aaee04",
+   "slot": "for_you",
+   "headline": "1,000 Claude Agents Formalized Fermat's Last Theorem — Lance Martin, Anthropic｜AI Engineer — BigGo Finance",
+   "why_tag": "for you",
+   "aliases": [
+    "Anthropic",
+    "Lance Martin"
+   ]
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "slot": "for_you",
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "why_tag": "for you",
+   "aliases": [
+    "NuScale",
+    "Sargent & Lundy",
+    "ENTRA1 Energy"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have three stories today: Nvidia pausing chip server shipments to Southeast Asia, a thousand Claude agents formalizing Fermat's Last Theorem, and the first US utility authorized to build a small modular reactor.",
+   "story_ref": null,
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "3514377c54bd884b0d4ecc657836f4ac:14-242",
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "First, the biggest story this morning.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "The Journal reports that Dell and Super Micro were told to hold server shipments for an unspecified period.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Nvidia is assessing whether its regional partners are meeting U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The reason is that Chinese companies have been tapping Nvidia chips remotely from data centers in those countries.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The US Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "I can walk you through how that remote-access loophole worked, if you're curious.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s010",
+   "text": "Next, something for your work on agent memory.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s011",
+   "text": "Lance Martin, a researcher at Anthropic, describes 1,000 Claude agents formalizing Fermat's Last Theorem in Lean.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:14-242"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "The run took about 30 hours and used no domain-specific harness and no human steering on the solution.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788",
+    "3514377c54bd884b0d4ecc657836f4ac:2651-2720"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "The agents' only tools were Git and a SQL database.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s014",
+   "text": "The lead agent built database tables to coordinate the team without being told to.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:2249-2503",
+    "3514377c54bd884b0d4ecc657836f4ac:2721-2881"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "Since you follow agent memory, the coordination tables are the part to hear.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s016",
+   "text": "I can tell you what those tables were for, if you'd like.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s017",
+   "text": "Now to energy, and small modular reactors.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s018",
+   "text": "The Tennessee Valley Authority became the first US power utility authorized to build a commercial small modular reactor, at the end of September.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "The project will use the GE Vernova Hitachi BWRX-300 reactor.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2658-2793"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s020",
+   "text": "Small modular reactors are miniature nuclear reactors built in a factory and assembled on-site.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:494-717"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s021",
+   "text": "Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2173-2360"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s022",
+   "text": "If you're tracking SMR licensing, this is the one to watch.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s023",
+   "text": "I can say more about how the TVA decision fits into the wider picture, if you're interested.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s024",
+   "text": "Which of these would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 137
+}

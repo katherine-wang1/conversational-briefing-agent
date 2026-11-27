@@ -19,6 +19,7 @@ dependencies = [
   "feedparser>=6.0",
   "trafilatura>=1.12",
   "lxml>=5.0",
+  "rapidfuzz>=3.9",  # cos spoken-brief near-duplicate check (app/agents/cos/spoken.py); also newsroom dedupe
 ]
 
 [project.optional-dependencies]

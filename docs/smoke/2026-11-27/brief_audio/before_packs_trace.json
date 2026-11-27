@@ -1,0 +1,475 @@
+{
+ "run_id": "brief-audio-before_packs",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "job": "cos_daily",
+ "arm": "full",
+ "events": [
+  {
+   "step": "C1",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "queries": []
+   },
+   "at": "2026-11-27T06:16:36.874700Z"
+  },
+  {
+   "step": "C2",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "searches_used": 0,
+    "finds": 0
+   },
+   "at": "2026-11-27T06:16:36.874721Z"
+  },
+  {
+   "step": "C3",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "pool_size": 6,
+    "notes": [],
+    "origins": {
+     "digest": 3,
+     "personal": 3
+    }
+   },
+   "at": "2026-11-27T06:16:36.874867Z"
+  },
+  {
+   "step": "C5",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "k": 6,
+    "slot_targets": {
+     "big_news": 2,
+     "for_you": 3,
+     "outside_usual": 1
+    },
+    "notes": [],
+    "selected": [
+     {
+      "story_ref": "ai-5166002f4d42",
+      "slot": "big_news",
+      "rank": 1,
+      "why_tag": "big news",
+      "mmr_score": 0.651
+     },
+     {
+      "story_ref": "physical_ai-2af40820bf64",
+      "slot": "big_news",
+      "rank": 2,
+      "why_tag": "big news",
+      "mmr_score": 0.63
+     },
+     {
+      "story_ref": "u:ea4591aaee04",
+      "slot": "for_you",
+      "rank": 3,
+      "why_tag": "for you",
+      "mmr_score": 0.425429
+     },
+     {
+      "story_ref": "u:f81b8ae246e0",
+      "slot": "for_you",
+      "rank": 4,
+      "why_tag": "for you",
+      "mmr_score": 0.35525
+     },
+     {
+      "story_ref": "u:9ad8c83ad888",
+      "slot": "for_you",
+      "rank": 5,
+      "why_tag": "for you",
+      "mmr_score": 0.355
+     },
+     {
+      "story_ref": "ai-651cc167b0ad",
+      "slot": "outside_usual",
+      "rank": 6,
+      "why_tag": "outside your usual",
+      "mmr_score": 0.546505
+     }
+    ],
+    "scores": {
+     "ai-5166002f4d42": {
+      "story_ref": "ai-5166002f4d42",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 93,
+      "importance_evidence": [
+       "techmeme #1",
+       "FT, NYT, WSJ, TechCrunch, Reuters, Forbes"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "chips-and-compute",
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Nvidia",
+       "Dell",
+       "Supermicro",
+       "US Commerce"
+      ]
+     },
+     "physical_ai-2af40820bf64": {
+      "story_ref": "physical_ai-2af40820bf64",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 90,
+      "importance_evidence": [
+       "covered by Bloomberg, Xinhua, Nikkei, Seeking Alpha and dozens more",
+       "primary company event"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "humanoids",
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "XPeng",
+       "IRON",
+       "Turing",
+       "VLA 3.0",
+       "He Xiaopeng"
+      ]
+     },
+     "u:ea4591aaee04": {
+      "story_ref": "u:ea4591aaee04",
+      "relevance": 0.8,
+      "because": [
+       "i-agents"
+      ],
+      "adjacency": "core",
+      "novelty": 0.8,
+      "importance": 55,
+      "importance_evidence": [
+       "Anthropic engineer talk, secondary aggregator coverage"
+      ],
+      "dive_likelihood": 0.7,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Anthropic",
+       "Lance Martin"
+      ]
+     },
+     "u:f81b8ae246e0": {
+      "story_ref": "u:f81b8ae246e0",
+      "relevance": 0.7,
+      "because": [
+       "i-smr"
+      ],
+      "adjacency": "core",
+      "novelty": 0.7,
+      "importance": 45,
+      "importance_evidence": [
+       "Industry trade publication, new engineering alliance announced"
+      ],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "nuclear-fission"
+      ],
+      "entities": [
+       "NuScale",
+       "Sargent & Lundy",
+       "ENTRA1 Energy"
+      ]
+     },
+     "u:9ad8c83ad888": {
+      "story_ref": "u:9ad8c83ad888",
+      "relevance": 0.75,
+      "because": [
+       "i-agents"
+      ],
+      "adjacency": "core",
+      "novelty": 0.8,
+      "importance": 40,
+      "importance_evidence": [
+       "Research paper summary on alphaXiv, niche video generation topic"
+      ],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "LongLive"
+      ]
+     },
+     "ai-651cc167b0ad": {
+      "story_ref": "ai-651cc167b0ad",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 88,
+      "importance_evidence": [
+       "hn_front #24 1949pts",
+       "techmeme #3",
+       "FT"
+      ],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "evals-and-safety",
+       "frontier-models"
+      ],
+      "entities": [
+       "Scott Aaronson",
+       "Andrew Bailey",
+       "Bank of England"
+      ]
+     }
+    }
+   },
+   "at": "2026-11-27T06:16:36.874919Z"
+  },
+  {
+   "step": "C7",
+   "kind": "llm",
+   "role": "cos.write_brief",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.write_brief",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 6497,
+    "tokens_out": 1860,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:16:43.722845Z"
+  },
+  {
+   "step": "C7",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "notes": [
+     "story physical_ai-2af40820bf64 has no grounded sentences: removed from script",
+     "story ai-651cc167b0ad has no grounded sentences: removed from script"
+    ],
+    "n_sentences": 23
+   },
+   "at": "2026-11-27T06:16:43.723046Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 3729,
+    "tokens_out": 596,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:16:46.411881Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1362,
+    "tokens_out": 115,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:16:47.710961Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1372,
+    "tokens_out": 115,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:16:48.973786Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1156,
+    "tokens_out": 42,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:16:49.696230Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checked": 17,
+    "dropped": [
+     "s018"
+    ],
+    "rewritten": [
+     "s009",
+     "s021"
+    ]
+   },
+   "at": "2026-11-27T06:16:49.696288Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checks": [
+     {
+      "sid": "s002",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s003",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s004",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s005",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s006",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s007",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s009",
+      "verdict": "partial",
+      "rewritten": "Anthropic researcher Lance Martin says 1,000 Claude agents self-coordinated over 30 hours to formalize Fermat's Last Theorem in Lean without a domain-specific harness.",
+      "dropped": false
+     },
+     {
+      "sid": "s010",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s011",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s012",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s014",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s015",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s016",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s018",
+      "verdict": "partial",
+      "rewritten": "Real-time autoregressive video generators struggle to keep people, objects, and places consistent over a long interactive story, and Agentic LongLive is a memory system aimed at that problem.",
+      "dropped": true
+     },
+     {
+      "sid": "s019",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s020",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s021",
+      "verdict": "partial",
+      "rewritten": "The full system streams faster than real time, at 34.3 frames per second on one 8xB200 node with the generator in BF16.",
+      "dropped": false
+     }
+    ]
+   },
+   "at": "2026-11-27T06:16:49.696371Z"
+  },
+  {
+   "step": "end",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "used_input_tokens": 14116,
+    "used_output_tokens": 2728,
+    "used_searches": 0,
+    "budget_input_tokens": 90000
+   },
+   "at": "2026-11-27T06:16:49.696582Z"
+  }
+ ],
+ "prompts": {
+  "cos.write_brief": "4f0ec8ef6993",
+  "cos.claim_check": "5ff2bc1b4ce8"
+ }
+}

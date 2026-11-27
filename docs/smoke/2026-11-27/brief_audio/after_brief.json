@@ -1,0 +1,262 @@
+{
+ "brief_id": "b_a08ab75e7f95e568",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:c4c8118aa18d",
+   "slot": "for_you",
+   "headline": "EvolveMAS: A Unified Self-Evolution Framework for Decentralized Multi-Agent Systems",
+   "why_tag": "for you",
+   "aliases": [
+    "EvolveMAS"
+   ]
+  },
+  {
+   "story_ref": "u:32ca84e4b7b9",
+   "slot": "for_you",
+   "headline": "Procedure Inference as Memory: Learning Recruiter Decision ...",
+   "why_tag": "for you",
+   "aliases": [
+    "Open Knowledge Format"
+   ]
+  },
+  {
+   "story_ref": "ai-651cc167b0ad",
+   "slot": "outside_usual",
+   "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "Scott Aaronson",
+    "Andrew Bailey",
+    "Bank of England"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have four stories today: Nvidia pausing chip shipments to Southeast Asia, EvolveMAS, a memory framework for decentralized multi-agent systems, procedure memory for learning recruiter decisions, and OpenAI's claimed proof that the matrix multiplication exponent ω is exactly 9/4.",
+   "story_ref": null,
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "c2f22198fd6092de0b56da19ac9a2679:93-208",
+    "47f6945f8dfb30fe3581f65a338e8a8a:263-415",
+    "c38f09864b6b0af2b111171ebbdf1a9f:432-673"
+   ],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "First, the biggest story this morning.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "TechCrunch, citing the Wall Street Journal, reports that Dell and Super Micro were among the manufacturing partners told to hold those shipments.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Nvidia has told manufacturing partners to pause server shipments to those countries for an unspecified period while it assesses whether regional partners meet U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The U.S. Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "I can walk you through how that remote access worked, if you want the details.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s009",
+   "text": "Next, something for your work on agent memory.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s010",
+   "text": "A paper called EvolveMAS addresses decentralized multi-agent systems, where large language model agents interact without centralized control.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:93-208"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "Each main agent gets a dedicated MemoryAgent that manages its memory outside the agent's own reasoning context.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:863-1043"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "Across five benchmarks, EvolveMAS posted the highest normalized average score of 77.2 among the methods compared.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:1549-1738"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "Since you follow agent memory, the dedicated memory agent is the part to watch.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s014",
+   "text": "Also on agent memory, a paper on learning recruiter decisions.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s015",
+   "text": "Hiring assistants have to infer recruiter preferences that shift across projects and over time.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [
+    "47f6945f8dfb30fe3581f65a338e8a8a:0-121"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "The authors introduce Procedure Memory, which learns reusable decision steps from past episodes.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [
+    "47f6945f8dfb30fe3581f65a338e8a8a:263-415"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s017",
+   "text": "On PersonaMem-v2, that approach reached 50.2 percent accuracy, compared with 29.0 percent with no memory.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [
+    "47f6945f8dfb30fe3581f65a338e8a8a:1374-1571"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s018",
+   "text": "It also used 69 percent fewer context tokens than keeping the full conversation history.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [
+    "47f6945f8dfb30fe3581f65a338e8a8a:775-953"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "I can tell you how the memory retrieval works, if you're curious.",
+   "story_ref": "u:32ca84e4b7b9",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s020",
+   "text": "And finally, one from outside your usual beat.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s021",
+   "text": "OpenAI reportedly claims to have proved that the exponent of matrix multiplication is exactly 9/4.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:432-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s022",
+   "text": "Scott Aaronson's blog describes that as a lower bound matching an upper bound OpenAI proved earlier.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:432-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s023",
+   "text": "Yupan Liu also posted an arXiv preprint proving that two-message quantum interactive protocols have the full power of PSPACE.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:2095-2353"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s024",
+   "text": "Which of these would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 148
+}

@@ -1,0 +1,228 @@
+{
+ "brief_id": "b_fc7a919419f5c049",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:f0c64e2aa10c",
+   "slot": "for_you",
+   "headline": "Leto: Utility-Centric Agent Memory",
+   "why_tag": "for you",
+   "aliases": [
+    "Mem0",
+    "LangMem",
+    "Hindsight",
+    "Letta",
+    "Zep",
+    "Memobase"
+   ]
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "slot": "for_you",
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "why_tag": "for you",
+   "aliases": [
+    "Sargent & Lundy",
+    "ENTRA1 Energy",
+    "NuScale"
+   ]
+  },
+  {
+   "story_ref": "u:21c2dd316a1d",
+   "slot": "for_you",
+   "headline": "AI Agent Memory Breaks the Day a Fact Changes",
+   "why_tag": "for you",
+   "aliases": [
+    "LongMemEval"
+   ]
+  },
+  {
+   "story_ref": "ai-651cc167b0ad",
+   "slot": "outside_usual",
+   "headline": "Sources say leading AI labs hold unreleased algorithmic breakthroughs that could break deployed cryptosystems; Bank of England's Bailey voices concern",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "Scott Aaronson",
+    "Andrew Bailey",
+    "Bank of England"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. You have five stories today. Answers to your follow-up questions come first, and I'll start with the big news.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "Our first big story is about Nvidia pausing chip shipments in Southeast Asia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s002",
+   "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia is checking whether its regional partners are meeting U.S. export requirements, and the pause has no set end date.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "The reason is that Chinese companies have been tapping Nvidia chips remotely from data centers in the region.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "The Institute for Progress estimates these remote data centers supply about 24% of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "Now, a few stories picked for you, starting with a new approach to AI agent memory.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s007",
+   "text": "A new system called Leto treats memory as a prediction problem. It judges memory by how useful it is for future responses, not how faithfully it records the past.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [
+    "b388de6345f1791fd6726cc0a32c07d9:155-264",
+    "b388de6345f1791fd6726cc0a32c07d9:265-343",
+    "b388de6345f1791fd6726cc0a32c07d9:541-729"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "On the PrefEval test, Leto beats the strongest rival memory system by 16.3 percentage points in accuracy.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [
+    "b388de6345f1791fd6726cc0a32c07d9:1321-1489"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "On long multi-step tasks, it posts the best overall results, and its lead grows with chain depth.",
+   "story_ref": "u:f0c64e2aa10c",
+   "cites": [
+    "b388de6345f1791fd6726cc0a32c07d9:1490-1650"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s010",
+   "text": "Our next pick is about small modular nuclear reactors gaining ground in the United States.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s011",
+   "text": "At the end of September, the Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "That project will use the GE Vernova Hitachi BWRX-300 reactor. Only two SMR designs are approved for use in the United States so far.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2658-2793",
+    "e9c42d63067edbd5e75065a697c2c5d8:1630-1826"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "Next, a practical lesson on why AI memory can give wrong answers.",
+   "story_ref": "u:21c2dd316a1d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s014",
+   "text": "Both the old and new seat preferences looked current, and nothing said which one should win.",
+   "story_ref": "u:21c2dd316a1d",
+   "cites": [
+    "9aea4bc6c1e965ca892c29f459c21e41:188-306"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "Last, a story that is further from your usual reading.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s016",
+   "text": "OpenAI claims to have proved that omega, the exponent of matrix multiplication, is exactly 9/4.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:432-673"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s017",
+   "text": "Another OpenAI release reportedly improves the known bound on the linear gates needed for the Fourier Transform.",
+   "story_ref": "ai-651cc167b0ad",
+   "cites": [
+    "c38f09864b6b0af2b111171ebbdf1a9f:1451-1859"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s018",
+   "text": "What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 131
+}

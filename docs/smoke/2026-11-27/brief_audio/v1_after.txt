@@ -1,0 +1,17 @@
+[s000 intro -] Good morning.
+[s001 intro -] You have two stories today: Nvidia pausing server shipments to four Southeast Asian countries and a framework for self-evolving decentralized multi-agent systems.
+[s002 transition -] First, the biggest story this morning.
+[s003 story ai-5166002f4d42] Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.
+[s004 story ai-5166002f4d42] Reporting from the Wall Street Journal, relayed by TechCrunch, says Dell and Super Micro were among the manufacturing partners told to hold server shipments.
+[s005 story ai-5166002f4d42] Chinese companies have been using Nvidia chips remotely from data centers in those countries, a loophole the U.S. Commerce Department closed earlier this month.
+[s006 story ai-5166002f4d42] The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.
+[s007 transition ai-5166002f4d42] If you're tracking export controls, this is the one to watch.
+[s008 transition -] Next, something for your work on agent memory.
+[s009 story u:c4c8118aa18d] EvolveMAS is a framework that lets decentralized groups of language model agents adapt and reuse what they've learned.
+[s010 story u:c4c8118aa18d] The paper argues that existing approaches often build adaptation for one particular kind of interaction at a time.
+[s011 story u:c4c8118aa18d] Agents there have to adjust to other agents at test time and reuse past experience, whether cooperating, mixing motives, or opposing each other.
+[s012 transition u:c4c8118aa18d] Since you follow agent memory, the reuse of accumulated experience is the part to pay attention to.
+[s013 transition -] Now to chips and China's AI labs.
+[s014 transition -] Next, a nuclear story, since you're tracking SMR licensing.
+[s015 transition -] And finally, one from outside your usual beat.
+[s016 outro -] Which of these would you like to dig into?

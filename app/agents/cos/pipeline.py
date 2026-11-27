@@ -15,6 +15,8 @@ Steps C1–C8 (C9 audio render and C10 persistence belong to the job handler). E
 
 from __future__ import annotations
 
+from dataclasses import replace
+
 from app.agents.cos.claim_check import ToCheck, check_claims
 from app.agents.cos.config import CosConfig, cos_config
 from app.agents.cos.llm import CallCtx
@@ -31,10 +33,19 @@ from app.agents.cos.selection import (
     select,
     select_importance_only,
 )
+from app.agents.cos.spoken import finish_script, lead_sids
 from app.agents.cos.stored_set import build_story_set, listening_order
 from app.agents.cos.text import short_hash, tokens
 from app.agents.cos.trace import RunTrace
-from app.agents.cos.write import DEFAULT_OUTRO, assemble, est_duration_s, followup_sentences, write_brief
+from app.agents.cos.write import (
+    assemble,
+    draft_leads,
+    est_duration_s,
+    followup_sentences,
+    listener_interests,
+    teasers,
+    write_brief,
+)
 from app.common.concurrency import gather_bounded
 from app.config import loader
 from app.config.loader import ExperimentCfg, ExperimentFlags
@@ -288,11 +299,14 @@ async def run_cos_daily(
         memory.delivery,
         answered,
         int(length_s) if length_s else None,
+        listener=listener_interests(scores, memory.interests),
     )
     sentences, stories, wnotes = assemble(
         draft, result.selected, headlines, pack_by_ref, followup_sentences(answered), entities
     )
-    trace.add("C7", "code", notes=wnotes, n_sentences=len(sentences))
+    rundown = teasers(draft, result.selected, pack_by_ref)
+    leads = lead_sids(sentences, draft_leads(draft))
+    trace.add("C7", "code", notes=wnotes, n_sentences=len(sentences), teasers=sorted(rundown))
 
     if cfg.flags.claim_check:
         passages = {p.passage_id: p for pk in packs for p in pk.passages}
@@ -301,6 +315,8 @@ async def run_cos_daily(
             for s in sentences
             if s.kind == "story" or (s.cites and s.kind != "followup_answer")
         ]
+        # Rundown teasers are claims too: checked like sentences, under the sid "r:<story_ref>".
+        to_check += [ToCheck(f"r:{t.story_ref}", t.text, t.cites) for t in rundown.values()]
         outcomes = {o.sid: o for o in await check_claims(cc, to_check, passages)}
         kept = []
         for s in sentences:
@@ -309,15 +325,24 @@ async def run_cos_daily(
                 kept.append(s)
             elif o.text is not None:
                 kept.append(s.model_copy(update={"text": o.text}))
-        trace.add("C8", "code", checks=[o.record.model_dump() for o in outcomes.values()])
+        trace.add(
+            "C8",
+            "code",
+            checks=[o.record.model_dump() for o in outcomes.values()],
+            dropped_text={c.sid: c.text for c in to_check if outcomes[c.sid].text is None},
+        )
         sentences = kept
+        rundown = {
+            ref: replace(t, text=o.text.strip().rstrip(".!?;,: "))
+            for ref, t in rundown.items()
+            if (o := outcomes.get(f"r:{ref}")) is not None and o.text
+        }
         live = {s.story_ref for s in sentences if s.kind == "story"}
         stories = [st for st in stories if st.story_ref in live]
-        sentences = [
-            s for s in sentences if s.kind != "transition" or s.story_ref is None or s.story_ref in live
-        ]
-        if not sentences or sentences[-1].kind != "outro":
-            sentences.append(BriefSentence(sid="tmp", text=DEFAULT_OUTRO, kind="outro"))
+
+    fin = finish_script(sentences, stories, leads, rundown)
+    sentences, stories = fin.sentences, fin.stories
+    trace.add("C8", "code", spoken=fin.notes)
 
     sentences = _renumber(sentences)
     script = BriefScript(

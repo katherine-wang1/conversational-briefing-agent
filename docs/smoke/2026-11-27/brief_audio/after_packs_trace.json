@@ -1,0 +1,528 @@
+{
+ "run_id": "brief-audio-after_packs",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "job": "cos_daily",
+ "arm": "full",
+ "events": [
+  {
+   "step": "C1",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "queries": []
+   },
+   "at": "2026-11-27T06:28:28.933682Z"
+  },
+  {
+   "step": "C2",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "searches_used": 0,
+    "finds": 0
+   },
+   "at": "2026-11-27T06:28:28.933702Z"
+  },
+  {
+   "step": "C3",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "pool_size": 6,
+    "notes": [],
+    "origins": {
+     "digest": 3,
+     "personal": 3
+    }
+   },
+   "at": "2026-11-27T06:28:28.933832Z"
+  },
+  {
+   "step": "C5",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "k": 6,
+    "slot_targets": {
+     "big_news": 2,
+     "for_you": 3,
+     "outside_usual": 1
+    },
+    "notes": [],
+    "selected": [
+     {
+      "story_ref": "ai-5166002f4d42",
+      "slot": "big_news",
+      "rank": 1,
+      "why_tag": "big news",
+      "mmr_score": 0.651
+     },
+     {
+      "story_ref": "physical_ai-2af40820bf64",
+      "slot": "big_news",
+      "rank": 2,
+      "why_tag": "big news",
+      "mmr_score": 0.63
+     },
+     {
+      "story_ref": "u:ea4591aaee04",
+      "slot": "for_you",
+      "rank": 3,
+      "why_tag": "for you",
+      "mmr_score": 0.425429
+     },
+     {
+      "story_ref": "u:f81b8ae246e0",
+      "slot": "for_you",
+      "rank": 4,
+      "why_tag": "for you",
+      "mmr_score": 0.35525
+     },
+     {
+      "story_ref": "u:9ad8c83ad888",
+      "slot": "for_you",
+      "rank": 5,
+      "why_tag": "for you",
+      "mmr_score": 0.355
+     },
+     {
+      "story_ref": "ai-651cc167b0ad",
+      "slot": "outside_usual",
+      "rank": 6,
+      "why_tag": "outside your usual",
+      "mmr_score": 0.546505
+     }
+    ],
+    "scores": {
+     "ai-5166002f4d42": {
+      "story_ref": "ai-5166002f4d42",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 93,
+      "importance_evidence": [
+       "techmeme #1",
+       "FT, NYT, WSJ, TechCrunch, Reuters, Forbes"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "chips-and-compute",
+       "policy-and-regulation"
+      ],
+      "entities": [
+       "Nvidia",
+       "Dell",
+       "Supermicro",
+       "US Commerce"
+      ]
+     },
+     "physical_ai-2af40820bf64": {
+      "story_ref": "physical_ai-2af40820bf64",
+      "relevance": 0.2,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 90,
+      "importance_evidence": [
+       "covered by Bloomberg, Xinhua, Nikkei, Seeking Alpha and dozens more",
+       "primary company event"
+      ],
+      "dive_likelihood": 0.3,
+      "subtopics": [
+       "humanoids",
+       "robot-foundation-models"
+      ],
+      "entities": [
+       "XPeng",
+       "IRON",
+       "Turing",
+       "VLA 3.0",
+       "He Xiaopeng"
+      ]
+     },
+     "u:ea4591aaee04": {
+      "story_ref": "u:ea4591aaee04",
+      "relevance": 0.8,
+      "because": [
+       "i-agents"
+      ],
+      "adjacency": "core",
+      "novelty": 0.8,
+      "importance": 55,
+      "importance_evidence": [
+       "Anthropic engineer talk, secondary aggregator coverage"
+      ],
+      "dive_likelihood": 0.7,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "Anthropic",
+       "Lance Martin"
+      ]
+     },
+     "u:f81b8ae246e0": {
+      "story_ref": "u:f81b8ae246e0",
+      "relevance": 0.7,
+      "because": [
+       "i-smr"
+      ],
+      "adjacency": "core",
+      "novelty": 0.7,
+      "importance": 45,
+      "importance_evidence": [
+       "Industry trade publication, new engineering alliance announced"
+      ],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "nuclear-fission"
+      ],
+      "entities": [
+       "NuScale",
+       "Sargent & Lundy",
+       "ENTRA1 Energy"
+      ]
+     },
+     "u:9ad8c83ad888": {
+      "story_ref": "u:9ad8c83ad888",
+      "relevance": 0.75,
+      "because": [
+       "i-agents"
+      ],
+      "adjacency": "core",
+      "novelty": 0.8,
+      "importance": 40,
+      "importance_evidence": [
+       "Research paper summary on alphaXiv, niche video generation topic"
+      ],
+      "dive_likelihood": 0.5,
+      "subtopics": [
+       "agents-and-tools"
+      ],
+      "entities": [
+       "LongLive"
+      ]
+     },
+     "ai-651cc167b0ad": {
+      "story_ref": "ai-651cc167b0ad",
+      "relevance": 0.3,
+      "because": [],
+      "adjacency": "adjacent",
+      "novelty": 0.9,
+      "importance": 88,
+      "importance_evidence": [
+       "hn_front #24 1949pts",
+       "techmeme #3",
+       "FT"
+      ],
+      "dive_likelihood": 0.4,
+      "subtopics": [
+       "evals-and-safety",
+       "frontier-models"
+      ],
+      "entities": [
+       "Scott Aaronson",
+       "Andrew Bailey",
+       "Bank of England"
+      ]
+     }
+    }
+   },
+   "at": "2026-11-27T06:28:28.933882Z"
+  },
+  {
+   "step": "C7",
+   "kind": "llm",
+   "role": "cos.write_brief",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.write_brief",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 8220,
+    "tokens_out": 2728,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:28:38.069462Z"
+  },
+  {
+   "step": "C7",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "notes": [
+     "story physical_ai-2af40820bf64 has no grounded sentences: removed from script",
+     "story ai-651cc167b0ad has no grounded sentences: removed from script"
+    ],
+    "n_sentences": 30,
+    "teasers": [
+     "ai-5166002f4d42",
+     "u:9ad8c83ad888",
+     "u:ea4591aaee04",
+     "u:f81b8ae246e0"
+    ]
+   },
+   "at": "2026-11-27T06:28:38.069912Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 4039,
+    "tokens_out": 354,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:28:39.594902Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1605,
+    "tokens_out": 45,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:28:40.435310Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 2509,
+    "tokens_out": 208,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:28:41.694411Z"
+  },
+  {
+   "step": "C8",
+   "kind": "llm",
+   "role": "cos.claim_check",
+   "ok": true,
+   "detail": {
+    "prompt": "cos.claim_check",
+    "model": "anthropic/claude-haiku-5.5",
+    "tokens_in": 1402,
+    "tokens_out": 66,
+    "tool_calls": [],
+    "cached": false
+   },
+   "at": "2026-11-27T06:28:42.474519Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checked": 22,
+    "dropped": [
+     "s024",
+     "r:u:9ad8c83ad888"
+    ],
+    "rewritten": [
+     "s004",
+     "s020"
+    ]
+   },
+   "at": "2026-11-27T06:28:42.474634Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "checks": [
+     {
+      "sid": "s002",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s003",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s004",
+      "verdict": "partial",
+      "rewritten": "Nvidia is assessing whether its regional partners are meeting U.S. export requirements.",
+      "dropped": false
+     },
+     {
+      "sid": "s005",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s006",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s007",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s010",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s011",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s012",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s013",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s017",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s018",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s019",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s020",
+      "verdict": "partial",
+      "rewritten": "Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.",
+      "dropped": false
+     },
+     {
+      "sid": "s024",
+      "verdict": "unsupported",
+      "rewritten": null,
+      "dropped": true
+     },
+     {
+      "sid": "s025",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s026",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "s027",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:ai-5166002f4d42",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:u:ea4591aaee04",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:u:f81b8ae246e0",
+      "verdict": "supported",
+      "rewritten": null,
+      "dropped": false
+     },
+     {
+      "sid": "r:u:9ad8c83ad888",
+      "verdict": "partial",
+      "rewritten": "Agentic LongLive, a memory system for keeping long video generation consistent",
+      "dropped": true
+     }
+    ],
+    "dropped_text": {
+     "s024": "According to a paper posted on alphaXiv, Agentic LongLive is an asynchronous agentic memory system for long video generation.",
+     "r:u:9ad8c83ad888": "Agentic LongLive, a memory system for long video generation"
+    }
+   },
+   "at": "2026-11-27T06:28:42.474795Z"
+  },
+  {
+   "step": "C8",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "spoken": [
+     "story u:9ad8c83ad888 lost its introducing sentence and has no checked teaser: removed"
+    ]
+   },
+   "at": "2026-11-27T06:28:42.475133Z"
+  },
+  {
+   "step": "end",
+   "kind": "code",
+   "role": null,
+   "ok": true,
+   "detail": {
+    "used_input_tokens": 17775,
+    "used_output_tokens": 3401,
+    "used_searches": 0,
+    "budget_input_tokens": 90000
+   },
+   "at": "2026-11-27T06:28:42.475310Z"
+  }
+ ],
+ "prompts": {
+  "cos.write_brief": "919d5e1fef9f",
+  "cos.claim_check": "656a747ddc46"
+ }
+}
