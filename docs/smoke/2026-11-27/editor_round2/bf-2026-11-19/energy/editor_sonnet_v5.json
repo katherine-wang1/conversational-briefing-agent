@@ -1,0 +1,433 @@
+{
+ "arm": "editor_sonnet_v5",
+ "beat": "energy",
+ "at": "2026-11-19T20:00:00Z",
+ "ok": true,
+ "error": null,
+ "stories": [
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 1,
+   "headline": "IEA: data center power use could double by 2030, pushing grids to the limit and adding emissions",
+   "summary": "The IEA says the data center boom could double electricity use by 2030 and strain power grids. The Guardian reports it could add 70% more carbon emissions by 2030.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE9vWl9oYndSQnQ3QzRFeWdrd0lPd04tVE15WFlBczh4STBmekk2REczTlRCaFowX292YmJuSnk2X1haSXk1UmRub2YtQkR2ZFRnUzNvNUZzUXVwTHZQMnJ4LW5UTGpzSGdjR1U0SW9oMlczcGxTMV9RYThYSdIBgAFBVV95cUxQUzFseXVxOEhXZ3pxZGNIelNTVjdEcU1XRzQ3RGc5Zzc0QWZnQlZvaUhQclJURGJyUDFxdTVMTjZSU1k5Q09VZDlRNlVBOFg1M1JOaTh4UG5WSlBiUXNhbWZNd3A4SENGQnpKRkZzdS14OWVYYkpDYWlOanpUUjQtdw?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE4zNUliTm9JVjM2Ym1EUUdMcmhCUWxWaHFndFJ6czIyN3hfX2lFcFZSLVY0UTZsaHY3U1FYTFJtVEZhUTdwQzlWR0k2MTljeXpWblRWMDRRdS1PcGU3VllDNzlsZmRSbE5ZNXV4S0tQZ0F5bHFGejgzYWZhWHNIdTA?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbXNwSnl3bHRhcWMyRTRoX2VRMEdZMkpVNldKY0Z6WnpRc25zYzhOWW9wMUt5ei1MOHhPLWF6UDBzS2NuSVlhNXZQNVJPU3dDY05pUGFHUmpYTC1mbEVnTWlFTzE4NjQyN2I2TktrRGNNNUcwSXVrcGhCZ3daR3ljb3VCdnBTRmczc2Z0V1lB?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSXdlV0VTRnhIQlo4SnlSS0RBVmoxUEdoTGtVbFV0WHVKd3VfX005X2ZIdU5KOEMydlBHdVh5RXl3Y1pENE1lY3N2VERMM3lndFhxM1JQNml3NU4wWXJlU1RON1F0Zk9Hc0RRYjRIRlZMcXhwZFJTVjl4aFRPcENpdlBUSW14U3Qyb3hobG9rY3dnS2Y5RnB1emNNZk5TNWM3ZElZZFJwLVRUcVpMVGVMUXl3NGE4czVa?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYjJIYkhXNkJlLWpTaVVEUzdGTW1WNy1yWHFmbkh6SjYzbXM2VVNfaGdpS3VYaXkza1ZNMnJMWUl2R0E3SndMTkxPcVc0aU1aejdRc05KSWdibjhIWV93RGs5MmU4SEFOTEVBU3VRRTZMUE9KSF9XYjVTM2U0bEdtb1BfeEdQaGNEYk84RHhJSDJnaHNKelhrbm9vTWg3SDJfZHlXMnp0U0k2SDZpUWc?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 90.0,
+   "reason": "covered by Bloomberg, CNBC, Quartz, Guardian"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 2,
+   "headline": "IEA World Energy Outlook: Iran war energy shock to speed nuclear, solar and electrification",
+   "summary": "The IEA's annual outlook says the Middle East war's energy crisis reinforces the comeback of nuclear power and could cut oil demand 4% by 2035. It also projects solar to lead global generation across all scenarios by the mid-2030s.",
+   "urls": [
+    "https://electrek.co/2026/11/18/the-worlds-biggest-oil-shock-could-give-evs-and-solar-a-boost",
+    "https://world-nuclear-news.org/articles/energy-crisis-reinforces-comeback-of-nuclear-power-says-iea",
+    "https://nytimes.com/2026/11/19/business/cop31-energy-iea.html",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRlVLekJsV1lXTGsxOWFDNkJLTDZhV3JSeFRQWS1zNXlobWJ6cDB0dXdhUE5IZ2VBY3N1THJOdVFtNmhEcnVTcUpWS2x4cVJRV1BscHJ2cVRmbGxtUEJLd0xvRUhkYlpUZU1PcnZpUzJ5cWx5R3ZnWFN5VXdiWmkwczJpci1yQkpVWWtMNV9yY3JHc3NfNzc0V2R2ZWlkSDVaa3V1MUhJVUNoSV9MQl91ckE5c2J4c1c2VFlPSHBIYzAxX2RZYXpZ?oc=5",
+    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTWtyMUhMMTRqbmJWUzNPREphSTFQODNsYVJZODBpWE5RVllGWGhmV1dYTTZ3TWlXRkQ1cUE5WGh4a1VOWWRvTFJXZTg1VFZmbm9XTmhjcXllVlY5bXlDU0NDSzdvRGUtZjhGRzQ1N3hDcTZoaWpFNjliSW9QdnVhd0ZCclNFR0xLUTByQTRoczBSYlVISVpHZkdtUU5LeTJCVVRybmlGODdxUDR4WjlhLXRrZnE4LTlWVHU0U2NkQ1J6Ykk1LUwzZWgxeVAtalRtSllLMzdFOHVfSDJHZ2pRZw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE5aM3YydmR1TkJJcS1lNUtacXZKbzJsc2JDd0lXUlBDU0tMNUlSUnpyd1lYbzFWS1dHak9nTWRTblBLdlptMnY5Wm9DczlUTVJ5UTlCdXV2dW9TVDcyRWVpa3lhUlBuekRIMVFIUmJ3?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWUlmYm9QTTliNUR5N3k3UUktR3oyZ1kyOEhQOHlPSk0tNDFGZmQzcnBlRUJfeExCRjlCTWVrNFdpNkFVYU5GLW95LTljRFZWUGFJX2RUaGNCb2R2bzZuUzVkcVZyQlJscktIMUpSMG4yVzZtMGtFbGJmZUU3aU5yMDQ0V25IbHFqM1RBV1puOHYzOG1lbUw2cmp2XzdTQ3BSYUR2QVdn?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc1JxVjVvRGo3WGluZHZzVU0wUE9IVk5qTkE4ZjVTZUl3ZEk2cUdTMmk2MHhwV3RPcXNfaUFGUjJ1cDdlb2F0cWZSem9oR18zeHF6S1FUdmtsR0o1d3YwMGs2bVh2dGNlYXM1aHFveFU0U3ZFMWxKbFdULVhSQXRvNmU4eGl4Wmt5Uk92ZjM1azQzWUNqLUxER3o3Z1lvNnBUTHhNZ1hR?oc=5"
+   ],
+   "outlets": [
+    "electrek.co",
+    "world-nuclear-news.org",
+    "nytimes.com",
+    "news.google.com"
+   ],
+   "importance": 88.0,
+   "reason": "covered by NYT, Reuters, World Nuclear News, PV Tech"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 3,
+   "headline": "Senate permitting bill (BAAJA) splits green groups over data center exemption and loophole",
+   "summary": "Authors of the Senate permitting bill seek a data center exemption, and green groups decry a new loophole. Amendment votes on the energy bill are snarled by the data center fight.",
+   "urls": [
+    "https://energy-storage.news/what-us-bess-industry-experts-are-saying-about-baaja-at-re-2026",
+    "https://nytimes.com/2026/11/18/climate/permitting-bill-baaja-environmentalists-energy.html",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQY0ZhSlloQWp1NlZieTZMVW0yZ09LRDFycVhxNWZCX1NwcGFIYXljbGltaDl3dG5Zc21FVF9HRWNFN2VycmkxUl9RWF9hYjh3MnBjXzltNC1iU09fZmFKZ2JuMDU4TlF0NHBlTzFyNTdZd2w5bFdHeWRMSVFYOXFBT1JUQjZFdlJwWlBOR3BXQVVzU0hEUmpGUXBmYVpuTFh1al8wSDVzSE5YY1hCSmdhVmZHT1pkWkZpeTc4N0hFTFQ4TUxEVmk1NEFhQlVBM1oweWc?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTldvZ05OSndsMXdKRDBEWjhWbTlRMWdTcWxDbG4xWUJzUTN3dlFfUi1HN2sxOVZ0cFM3Tk9GbHpCWkVjdFFYcGs0Vl8yalVzRVoxTk9pN0RQd0loUmM0andNSjc1TEJrenI0UWI2SlZiYVdMbzl3VkZoT0tVc3ZKOVBablNUVGJVeDBtQ2M0MA?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPLXY3OTExMnBUOG0zOTZ6bXFUVEhBY1pqYzNTUmRGRGcwMEctd3ZBVng3YnRidnYxX0JFT3JROVJGbGRWTTV6S3lMOHVyd0p4YkdDWEdVS2JCSXZna0xzeVZIMTcwd0JDbXdZUWMyaDZfN3JkOU9VVE5JdEJCSUtick1rbHVZdmROQ3ZuVE5oT3lCVHBPRHdGTtIBngFBVV95cUxOLTVGVzd5bVByZnpnNzdsMDF4Zi0xSzZrZmNVYXJLRXdJZ19fbERmeGtNUHJwSElHWDdUUWJ1ZTVXRkZYeGNLaEFnVWdZMmxlTng1VUdKYWo5VEtVMWFTWUR0MUJZTEhJZlM1REQ3Qm8wV28tLTRNY19vaGhCZjMwWXlTXzZrLVFEcXVpWTltUk9TRmQyMzFoQ3BuNDVqUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX2kxU29fbS1hWmZXbjF1cjFHUExiUnhZc1JjQklOTl8wWmRncFQ0aE5TRzZKMXlIUTBYMkxUQkY5ZEVCN0I4UTQ5LVFVRXYweVBBWjFxSVpxTUg0QnBzMFhZam5vc0daS2JfTGJGTlkwbk80YXJIYXNLbFBDY3kzOF9mX0dMZFV6bDc0bXBtbm15VmFRZENzdlItX3Q5NTTSAbMBQVVfeXFMUGs3NWVWTDRkaVR2akMxRUJ5NzY2Rjd5cWJRNFY5NlA1Ul9TRU5YOTRxTkU0LTcxcUcwM3BzNUhYSU5GMUpSSEFXT3VVUmI5NFNmTHRiUEF4Sk9rT3hmSF8xOWhfWmctcWVEeldGeU1JR0JLVnloOVBDTldqdXJhSWhfaENVQWlIQkNYb2d1OUp6TGZBWkhiWl9ydmd0U0RHLVkzWk1rb0w0NFNicF9UMmFWeVE?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOczRKN1FvdURGU05HVEtmZjFtSFNKWkkyTGs1TVgzUkVDWXd3Sk5ZczhBQ05OOHVyZ0p2TVpTRjJrX0hIVE93Smp2WC03U3lkN0tIMFlsUmxOcWlOVzFlWnBfMGJhYlFGd0pRSV9VSzJCNzZiQmhBbU14TFFxODdPbjNOZVFFTUhiZGo0cWNoMXVBTGNvdXFZQWZjTm5raXlPb3UxOWFMNA?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVEp4ZnZLZlBjMHY3YzVULUN4bjRRQ3oyd2Q1cTA4RGF0Zk8wR0VzUDBWaTNldmppTWE2S3NlN1BjckY3Zm5zRDJOWi1lWEtoNmNnMHdPOXlvZm9zV19nbE9Ua0NNOGZXa0NKOXdxWlFYck05YWIzaDVDLUlxM1RtVE9UOHhMZXFnUTJURmpZSkZycV8yaVBaUWhVOWJWRklrMUozS1g0NUtLVGlfMEJFc2docEx3MnlsRS1R?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTW04bXNuR3BEREI4RV9INExZMl9KcXVyNmYxZnM5S0xCNHdVMTgwOWtDZXVzZHRuZk9GODhieGR4dWxQZGpiTUdQYjRfT1dqMEp4ZWRGTGZfenNtUGNHQzlBRTJaUGhHaEtwUE1LVEt1amROczNKRFd3YnB4dldpWEJEUi1UYXAxMTI0bEZmVkRDVlVaa0pFal9ueU95Z3gtWGJySGhvNlB5YmIwTXFKeVZxVE9TTGdVNDgtSUJPdw?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQS054dkg3N3JBcWNoMVhiM0FmcjRKS1V1WE9OdHhKTWEwNXBtX1cwN21RRTlXcWVFM0dQLUszU1BUMEZSbE9PVXRMYWtQcUc4ZEhyWlR3NHoxb0FUaTdyY0FENTNtRGNLRE53X3hkZUxUek5BU1hxcGVtMV9SclVmTkRROVZsT01uXzlOallxZFBGU1dPaDJDUHhRRU5kejBqV3dYUG9XMUFEU0d1QVE?oc=5"
+   ],
+   "outlets": [
+    "energy-storage.news",
+    "nytimes.com",
+    "news.google.com"
+   ],
+   "importance": 85.0,
+   "reason": "Bloomberg, NYT, The Hill, Politico Pro"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 4,
+   "headline": "PJM urged to delay base capacity auction until data centers are cut from load forecast",
+   "summary": "Stakeholders want PJM to postpone its base capacity auction until data center demand is removed from the forecast.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbXctTXFMMDVCNTJFYzVBOGF6Zk1aNUNmZUZqQUtLVTNzSHVSZk5tUGFLQzY1QWtta1BMUkNQdF9JWV83U1lsaEVNbGliSG13RlhMay1JYVJEeVN3ak5TRDA0amZER2tYTUtLSmpoNzdzUUdhTV9ISTB3dDVxOWxZNjhDN1J6RXJhVnJnZWV0TzMzR0l0NlE2ZnU5cUE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 74.0,
+   "reason": "Utility Dive"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 5,
+   "headline": "NYISO: New York faces electricity resource shortfall beginning 2033 as demand climbs",
+   "summary": "The New York grid operator says the state will be short of electric resources starting in 2033.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPV2prem11Qk9xZGN0elQ2bTVHOVQxOXFMZGdWbG04VzhLSEFGc2Nfam03dll2ZW9jYmExTEdGRmFLbk9GWldOSHdlbS16MWstRHhKbUJLTlBnYllrczg2ai1RSlNSSVN2Qjl4eGEyY21oUUswVE41czEtcTBlQmpoamxubEVZWFdXUWFiZnlWcm5SRWM3SEY2SFVfbHA?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUnpxWDNGY2tlTFBadDg0czhfMTNpNGhhRzFrUjhIVkxYMEdmVExjWFZvMzZ2WDRTbVBKdklYRVZ4bkFRbm1hM19JcFJ4VFNlZ2htSGtCZnplTmlmMm9aRGF1eXRhZXZVQzJzZTJBRm5HUVI5MFhzNG9nbGluMzBkWTZselJkTENreWh5X0FSRUdxX2ZkVThMNE9RMXZPa1FXUVJGeG1GRDZicmNDM21LMEx2MA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 72.0,
+   "reason": "Bloomberg, Utility Dive"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 6,
+   "headline": "Texas governor tells agency to grant data center permits despite order to wait for audit",
+   "summary": "The Texas governor directed an agency to grant data center permits even though it had been ordered to wait for an audit.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxONjdZMGplTlh0cDE3X0dVSmUxUk0xQTVrSjAtdEZHVVRBS0VnM2VJSk5KOUxULTctQzI0Mkd0Q3I5Q0pTcXFDUzNhNU5WSklIMFhCN1NaS1RrX0ZzSEtTMTBQUXprZElpMVJOMElCX3B3ck12R1E1YkpJY2doMjI3cGI1SUVEcDhGSzlkZjZLcnZhTEp5YWptM1hodEdZQQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 68.0,
+   "reason": "Hart Energy"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 7,
+   "headline": "UK launches renewables auction with nominal \u00a31 budget as grid costs soar; grid reform leaves projects worse off",
+   "summary": "The UK opened its latest renewables auction with a nominal \u00a31 budget. Bloomberg says grid reform leaves most projects worse off.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUTdub19KUUIyYUFNV0pudXBpNUhLYndrX1FkQUdyV1VUV3hpaDNtLTNDZENYaWNlbmtwWlctaXJzV3l1b0QyaXIxZVNQWW5zaW1nSjdvVXFrNUJ3dXEwUTRlUDVIdVUxZU1FeG5EZDBxbmdJNEJzbjBrRGlTd0ZJbFExVWhmVnBlN1ZBck42VGxFc1F4ei1RT2RJZmF4YzZodVdoZ2otT29MRVE?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNR3ZUS1B3cnRNZmFKWUNrUHdEUVFwT1RhdFBUU1V2NTNVd0YweVBhME1SWlZEaXhyTG9jQ0JrRU42M0ZET2lCLU92S3JReXdTa1ZaaE9ycmJoRW8zWFlxRXRQNHU5T2hLMlpfemFHUWxPdlRVV3k0VmFyYkZOSGEwNGlWdmw0b0lNYnN5b29uZGJpa19sNWx0WUNtSWk5R3UwODJkZFBwS091UVpnUXc1ZVZkNA?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVkM2NkUtcm1vSnAtNjFBN0pLR05kQnpoQ2IybDh3enZpaHhSNFdIRWp2ZlAyd25DSWFiME1QMnkxenpabDREc0ZEOWhGWUZFLUdGbGZWZkhOYS1HR0J1T2V5YTlQT1g2d01xOU5SWXA2d3B4bW5uXzVHcldCWUFRWUJxS21tTVdId1EzaG14TVJoTHZtRHJBT3pRVGhTRnU2eHRBX0JqQmQtM1FBQnZIXzh0N04?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "Reuters, Bloomberg"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 8,
+   "headline": "Google and Ohio Power announce initiative using advanced transmission technology to unlock capacity",
+   "summary": "Google and Ohio Power Company launch an initiative to unlock new grid capacity with advanced transmission technology.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPazQ4WG1XNkZZQTdURkNMb2lWXzgyWFA5YzNoM3RfcloyaktDNGNObjVEUjVVTndlR3VIbllUc3RoSDJfeDEtSVE1bURpVVo5SEZlQjdnUGdocmJWWFBzcGpMeWhzZUtya2tiZTVTcHFIQ0tmT1luSzE0UE1hYmtJeXNDSjk0bGlYdFBqTll1OGlaalM3cEtyZFdneDRyZVpKbHhHZzl6ZS16WUxVQnFlZmtiUkg0TnZDdUZ5ZVh0UWtCc3BReVoyVUVDQzhRbFBvUWlqZHZ3N2pucERQUDk1Q21URUVNdlFncUNRNlNlSGxPLTJGelpz?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 66.0,
+   "reason": "primary source (Google Cloud press)"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 9,
+   "headline": "Local backlash against data centers grows: bans, moratoriums and ballot efforts",
+   "summary": "Towns and states from Utah to Alberta are restricting data centers, while Google pledges local support amid backlash.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMifEFVX3lxTFBiZXlLTzl6TkREWTkyVXlUVERLSWNIWWJiRW5DQVBjQ21QS2wwNjltbG84YXZ2N1B4b19vQUtpZmE2S05Wc1FLV2Q1aEtwTzlsbzZ0d2Z4WU0talVzOFhIanR2Ukg4Snd3aWVSd3VIMUo2LUdRaDdKbVVYcnQ?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcExSVnFncmNTdnBrWGhZV2V0dGtuSG5wQV82LWhXV193ODVGcG9XZGNycFczRUlPU2pfYjhLcnVGRzczUGdKOGRFRzdqZ28tQUwzTjY5MTg2MURUUGo5N2cxc1RpU2ZueERrcWxXcTVIZ0dEVGgxV0h2a0hfdlFjaktiNU9nQ1E?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQV2hESHR3dHBPczZubUVCSUl6Yk0zNWxaLW5xTHh6VGhMNUJ2XzRzd05JbFU2Qnd5czVBdWtRckNhMkVOVEJ0dDBFeXVxVnJSZ1VIQ0VBNWhOeGhhdmRUZlBOMjd4R0hXLXlXTXM5dEp2NXpId2M3Y09kZnVlZ0RXQVkxcTMwQWstU0huem93?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxORUctU2ZOS1diQ0F4ZG9XRkt5VzR4czZDVXZUWlR0MGVYNGRMeVhnUFhkOE02OGE1Zk1PWml3Z1piLTh3S2RTTlFOU1poZDNRQUY0MWpBMU5MaldpdllYVXhtTzVwWklzMmdsM2RrMk8tZHdJMDZPdE52b05EcWktdnhyMm15MFJOSkV2dXlDUW04Qk1X?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMXB6cVdpV2IzOXFrQlgyOWtOWjZnWlNyYW5na3FGdHpCbHJQVWdEN0REMGw4MlpUOTNTajRZLWM2WkN5TnZYSjhqbUg5aEo0c2p6NFJNVFRNTi1UaFB2OGxDaDd5RDhkVUxzRnB6ajljeUhLVUk4b3hPVk5RYkRKSUxCUTVSRmgySWdiUGgxYVkza0MwVzRjTDJMTTI2eC1QblVtRHNkUmZRLTJYejBVNlVlZTdYTjctODhZ?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxNN3ZFWjVFT2otV1hiTnVrWnFjTkFCa1ZGWFg5cjNRQzcyLUtYUWRNZ1dHMjN6SFBXeVVweV9pcEdaVEE4S0JMQXJhWUxMM0xMRENob0VRcDRtN3Q5bFlFSFFGYWZpc1RkSHNPVVBqNnBkeVBtNHJxbXZQWlRGNktNeEZmX2I4dW0wNnpWcFVXY0MzMS1zalY1ckw0WFdUdTRxaTRTbUxxcUhENUI2RDJ2RklaTkwxWDNodVdpTHFtQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRUpIdEJySW53eTFhcElxN0VFWmxXcFVuYXBEWFRLNmhEeGpSZmpDR0F5U2QyLWwxVU5WbGhfWXVHc0stcWlSSnJhN2IwU2F4QlFER3MxZlFSX21FZG9pYjl0eEFNb3pobDljVnRuZ3VPVEhyX2kzWGNwMUtMcUo1a2JCYk1MRUVfVWszb1V0WFNVa2Zsb2lJcEdCNEZiaDlfZDl3TFhsSDV4ZFphZmpRa0pyMGdxbFBLUnZqUmhMNmt4dzQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSzNnN2RyMU8zcXZlMTJFWFVXbjZ0bE56Z21hS1ZIcXJSblJrRkVqdzdpSVdLTkJYMWpxZlF3TExDUW5lbUxIRVlPel9SMF9rWDlyQUk2X0p0bkdRWGpNNndNMm1sYnEweFpMdkF2OFhmSjdOQVFPQVIyYjdRb1JHblZLSnZkVXNaZzdySjdiX0pnMWxfU2o5XzRkckdCMHRhb2Q1S0k2THh2UjdHVkxpdUZrNmstSkxu?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRjVPekVCd1ktOG96NjBvV1k2SEJlVHlNbDd0LUZlRnVESmhMMm5uMEV2LUNqVDNhMkdLOFhObXduMy0xaXJPYjNPTXg0eXl6b2NMYWI5ZWxRbVpySE5GR0hYVUpfS3VLNFZfbklaeHhaYXdyZEMtOHdTalRmeldaOW9WZFFmcFM2LVpwNk9UNm9CeS1faVJKQkVrVjN4cHRvc1ZVQmc0N0JqZ2JoVk1nRkctNnFBNjE5Ym1EZ09n?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxOYXFBUWVEeUZ0TUw1Ym1xc05RMFA1WjFSU2tYTktRbUIzckVrRkVXb0ZXdk5PUHFPeEFGbnFvWmJRNUxfeml1OEIxOWRCTURBZ3FrNUZnVDBuLXMxTGdrREZSOTkzaF9RV2Q1bDZlOXFHRklTQjl6a0Zvbm9JRHZjU0xod28?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 64.0,
+   "reason": "NYT, Bloomberg, multiple local outlets"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 10,
+   "headline": "COP31 draft drops fossil fuel language as talks near deadline",
+   "summary": "Negotiators walked back language on quitting fossil fuels at COP31.",
+   "urls": [
+    "https://politico.com/news/2026/11/19/fossil-fuels-score-2-wins-5000-miles-apart-01175305",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTDVmUURibWtobVFEeThfNFlGTWNQNzJkWDRTdl9Cd3ZjWWVWLVdiM1BIbkpfRGhmTzZaQ3ZDZWpsdDNBY0liOGstZzFDNENSckNyN1Y5YVBpUnhURGxNa3c3Vi1UeU4wcW5veWhNcjd0Q1ZfZk03U1FmQWFEdE9EaUtrQjljUm9leGU2R19JZThXc3FoQWJ5aHBSOGx2N1pF?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWnNmMHZITEU3THdLMmZxbTI5UGtOeXdNb1BPNG9kckV1cENjajg5THowdFRDbENYSWJYS2JhZzJOVVJnRVdBX2RSOWluYmtURUxnWmlEbDV1SEJ1R0NhYVJRX084NHNzNVlKNGZwcUdtdU5IbE5ERGJuMVZHSWh3THhnT3lRdXJ5SGNSZjF4ZFlqNkNtOHRyd1hUa2FkZHRUY2ZZMVpMSVBJVkdqT3JiWXVFMHJnU3YtcVVjNzZXQTRiSk95T2c?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTWtWWkpTOEdVeFlnMnJDRW9Xd1ZvbHFHVGl1MDBRZHpiT3BjemZLXy14WnYyVGhWcWxyNVNfeUR6Z3BSRF9lUjBVRi01T1h3SW00SU5qUEEzV2duSmZTYmo3MGpQQVBoXzZfd0FCQlgxeEluTTdoQjdpYnNNRHI1UV9jcENYQnVHR251eUlFZWZsYkdqbFlqWFFESGxwOEljYjJfd3RYd245RVRTa3F4Xzl3?oc=5"
+   ],
+   "outlets": [
+    "politico.com",
+    "news.google.com"
+   ],
+   "importance": 63.0,
+   "reason": "Reuters, Bloomberg, Politico"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 11,
+   "headline": "Can US data centers supply their own power? On-site generation push grows",
+   "summary": "Bloomberg examines whether data centers can leave the grid. Alpha Compute secured 430MW of gas power for a western Pennsylvania campus.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTDdQSTdUSFN4MlJsalRCekJHTjVKMEdHaUlMTmNXdFpnWmdUNWx1aExMbHlRQV9NaG5xRkYyYnN4bWRmUWpJenpkMDRNSm1zWl9nbjJWcnVlNEJBRkJsNkQtWUJQZTJPZ1paUVZTU0dsSnpmMTVuWWZvcHBPcVppSWFxVkNZN1lZX3dOLUY2TVVJcWVjSzdfVWM3alBwTXlD?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeUlFUlRBZ0VwZjFSN2oyR2t6Ny1LcWlycjJjTW5oWWI0eVBuX3dBVDRpdHVndjBuZEJSMFpZSkhvSzczUWZhb2hZV0MtanNBS0w2a0stNHIwSGtrNTFNWGFRVW1kV3hUekFmanRVZWlxQXVlUDB4QnZSNGxvdXducURWS0MwVFJQQnZzNmlQVEJjaWd6LTNmX2xfZFVUU0s4Z3dHSVZPM1JhV004Y3V4RERSdllfaVBLYVVZM2YxMVQ3QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcXZvbVU1LVRUMmtueXBGN1ZyMlcyS19qZjEtMzhTZmsyR2JReHZDWmFWQ0thRklDNkV0MEMtQ0p1d2VIUW1VR0c0NzBaa2Z3STYyRkc2a1p0a2ljTnA4a1RfcHRUcDdWN3lHSG9WRzU1cmdsNWphdTNMMmdpSDh2STdMSGhRUHM4Z2ZSXzl0VVRqY2xHaWJGd1NHbk1MM3FyRzhGbFJWUkNfUWh5dXlFbDJpME5TRmE3?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 62.0,
+   "reason": "Bloomberg, WSJ"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 12,
+   "headline": "Bangladesh's Rooppur begins supplying nuclear power to grid; Turkey's Akkuyu 1 in hot testing",
+   "summary": "Rooppur Unit 1 started supplying electricity, and Akkuyu 1 is in hot and cold commissioning.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/hot-cold-testing-under-way-for-turkeys-akkuyu-1",
+    "https://ans.org/news/2026-11-19/article-8591/bangladeshs-rooppur-begins-supplying-nuclear-electricity-to-grid"
+   ],
+   "outlets": [
+    "world-nuclear-news.org",
+    "ans.org"
+   ],
+   "importance": 62.0,
+   "reason": "ANS, World Nuclear News"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 13,
+   "headline": "Poland expects first nuclear plant deal in 2027; Bulgaria's NEK signs BWRX-300 MoU",
+   "summary": "Poland expects to finalize its first nuclear plant deal in 2027. Bulgaria's NEK signed an MoU with Polish firms on possible BWRX-300 projects.",
+   "urls": [
+    "https://world-nuclear-news.org/articles/bulgarias-nek-signs-mou-for-potential-bwrx-300-projects",
+    "https://world-nuclear-news.org/articles/new-nuclear-projects-offer-economic-advantages-for-ontario",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTVpadzJPZDZJdktJUTN0WUlLOUZWYjF2NlltakFuV3VxYm1DNURMVkFWUE81UlBxdlpZdmNVZkwtdlVuV3FBWm9ua2pMNzBVcVhmYmxLV2RCSHEwR21jX2c0UU1mQllmRUgwVjR6OEJSOWx0MkUxa1ZYOVR2ZjF6R0pORFo4akhRTi1GTzU2aHBQUk9oRzhSanI1UzJYNGJpanZyY01pTUFEZGhtSVZ0RUtn?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE5hZlpZYU1mZjRlSUhqejM5Zk5aWkNyMmtkdUJWcjdhQzJDZTk0R3RmVFAwUnQ0LTZ4S3NvTEttQjVBdVJLNFZFT0cxV0FkSnRaOFVrSGNxSlUzNGFmazVRRUw1N081VmhkcmVZdnR1VEQ0SnJHR0tz?oc=5"
+   ],
+   "outlets": [
+    "world-nuclear-news.org",
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Reuters, World Nuclear News"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 14,
+   "headline": "BlackRock-backed AES buyout receives final FERC approval",
+   "summary": "FERC gave final regulatory approval to the AES buyout.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE45MVJGQjdXY08tRXlBdjN1OV96MFIxd09BbDJRTUF6cXNHejlBUlAwbW9XZlduakdmUWtnNnBKa1d4dmt1S1E5TDlHY3o0SWRLeGl4U0xUNGgyNGxVOHJoWEJ3WmRVdnNZSFE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Mugglehead"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 15,
+   "headline": "Duke Energy wins North Carolina approval for new data center rate class",
+   "summary": "Duke Energy secured regulatory approval for a new data center rate class in North Carolina.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQalJJRlFKbS1xbXQ0ZGRoWldIenY4eVQ0WG8xMEZCMkUtLVlUWGRQVWo4WllBQTZaZU44STk3VkFEYTlYUmh6RHhnSjgxSTY4R1BEQmstTS13TVlJcDBaSGVnRXMwZ0UxYW5vaFJ0QWhKY2xRQVVZY2FZbW9wWU51MktiRTh1TjJxNDBmSDVJQ0h6bHZjblFyc1NjZzFqS0FjRThKVHgwRnFiR2l1NkstRWJEN1lvaVZ1YVpVb2hzeXRHZVg3RjlBUXJmdUs3NW92c0dV?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 60.0,
+   "reason": "Data Center Dynamics"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 16,
+   "headline": "Goldman Sachs acquires RWE Americas' US distributed clean energy business",
+   "summary": "Goldman Sachs is buying RWE's US distributed clean energy unit.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZG5NdW4ySGFxVzZ6NnM5bDc0eWNMam1GMFVldXdBZ3loNTd3RGRxTVhHdW54dmVRLUd6T1hMSlQ4SmRGS2tlUHQtMEx6bWVPb2k2VndmNU9lVmYybGRTb3lzaE51V196TFhSWXdxS2pYeDhiQWwtaG5jeVd0RDNMSkc3d256bXI3Y0tkYjlsLU92aXlPOGVIMm54dDBuZjB4X2VlTDNiVzlMZXRWalFyWEtqWTJjOElEVmJn?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "Paul Weiss"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 17,
+   "headline": "Tesla unveils Powercore solid-state transformer platform aimed at data centers",
+   "summary": "Tesla introduced a solid-state transformer platform targeting data center power.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVEgyVUNWNlk4VWNSOUVRM0JIZTI4eWhMTGVXSXlnU1l0aU43VjRKeWlkSk1Da0FKZGNISlpCbHRheWZkTFdWYmU4eU1vTExwdEpPVlRnakZPTGE5Y09MdnBUWFlNWE83UmJxdUIzbFVCWkV5aDU1eGhYZ2x3RGFvdnZXTXFOTHJkNnZ6NnliOWMzNHJscHFZeE8ycnR0STl0cXpiRWxiSndzM25hVHpEX3FwMXhnZEtaSHRKb0ppMA?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 58.0,
+   "reason": "Data Center Dynamics"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 18,
+   "headline": "US battery storage tops 200 GWh, with nearly 50 GWh added in first nine months of 2026",
+   "summary": "US storage installations crossed 200 GWh. S&P says WECC leads Q3 additions.",
+   "urls": [
+    "https://electrek.co/2026/11/18/us-battery-storage-just-topped-200-gwh-heres-where-it-is",
+    "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOOUhDWXlDQ3dSV244VXlOSlFvTUNjUHpKTnYyVnZONVd4NHNBWGRGdzlDYW5qNnA1S1RjRExvOUxwcW5XSnNiMW5JRVp3dlNIajBBWHRmS2l3NkVRMURaTXdURFhvWmxMVjhWZ2xWb2dBYmFVM1ZLY3pCMTN4VUN2a0lMM19DTTZMN08xeHRTQjFDdEd0X2NJd3lDRVdzSjlfT0hFWklZWGhsSWlDdURzSjhDRjJ4UEkxekc4TTNmbTVnZ09GV292cEMyUWpsS0UtYjlxbFBHbDNJMjZ4emVwSUg2NDlvZGpsMnhr?oc=5"
+   ],
+   "outlets": [
+    "electrek.co",
+    "news.google.com"
+   ],
+   "importance": 56.0,
+   "reason": "Electrek, S&P Global"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 19,
+   "headline": "Studies link data center power demand to long-distance air quality damage and about 650 US premature deaths",
+   "summary": "An MIT study finds data centers damage air quality far away, with another study estimating 650 premature deaths in the US.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQejgxSnFTTTMxUmVKLU9zOTJhWjFJUUJGOXE3bUt1SHpxVEpPZGxwUzExenV2bU9EOTlHbG1FS01GYlU4eFhRa3VJeVg3OGxYZnNCQmx6d2YxcTVoY2lFS09seUt6UkYxcm53Rll4RUpEdDkzVm9XOTZjaWRXbjhBWjBkU0ZRWERFVjhKWXc4NlpXOFlQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdGtaQzk2LTk5ZktINVkyRC1hdENNSVRocW1xR2RoNXpWdEwxUlBhQXpJMlU4X3NuZzZPdTZmTGRXNmZJQnJqUzVqdDdiWmdOWHpvU0tpNmdVR2ZJaFMxY1VFSEpRWnB3UWVSTkFHN3JwZXd6dElNT05JUFJzUGJ5R1pJR0dxSXV4QWFETWwxemhBSFBwN3lqR0t4bzdXa1p5RHJtODVHOUdNOW1kN0Q0T1luaHRKeEZ1?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 55.0,
+   "reason": "MIT News"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 20,
+   "headline": "Fusion advances: IAEA outlook cites record funding and $80B gap; France strategy; EIB backs Marvel Fusion",
+   "summary": "IAEA's fusion outlook finds record money. France announced a national fusion strategy, EIB backs Marvel Fusion, and Kyoto Fusioneering was selected for a METI subsidy.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSWN5VzJQN3U2bkN4QThFZEpoSHF5VGduTWIzaC1PYzVJamROSEoxNTRqclZQMmFTaFNISWJWa2I3cGhvaWlWTGdaWkZoNFl4QWxab1JpM0JoMHVidVU5Y3BkbEh3dk1KQzNPQXhyZUZJTC1Zc0I4ZDUzWEQwTElHMjFZU3BSbW9XUVRDbmlTdWo1cWlYTDF1dFJlclI3X3E2dWE0S1lOa1dFMkpzQlM3RUxFWEdSZmJsWnAxN0xVVGhqdGdycWlWckNhcVl2cTFBdlk0NDgteVNTSG9k?oc=5",
+    "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOdmVUUXd4VE5Bc3NCVnd2UGJxT2ZuX29HWjBTaUJ2Nk9TUDRwTGYzaVo4a29SNmthRHZIY0RaYjdDYVRwSWE3LTUyWDRWN3U4blhLdjhCZDllYUZHRUhyaUpnc04tMWNBXzhzN21JNVlSSTM3NXMwaEViUEVaNGpSVGl0TDEwYUJJQ3ZBZWUyaENjN25oTm1BUGU4NkdXbGxkSkZ3TnlISEZ3SHhRZUltUFc2amxWWFh6cjZrczRBRXh4dzhSc08tS2k1a0JibFNQR2ZtUTgxSTM3NGFXX1d3a24zLVFPcWhQZkVj?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1xbndZYXFlVktubHR2ellIenI3TlZ1TTA4Y1p0QXZqemdmanFqS3VhWkJQSlZqRUR3ZTlRMVp2aXlZSkloSVQzWHlmYkNhSDk4ZTdLU05KTUptcThTN3ptNklnRQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcWVDdkc0R3RXdS0zVG5fdXAtaVZvdk5ja3JyY1ZjYXhidjhlQWhnTkhLY0RtUmQxRHgtSk8xdVlRQlh3NktlRHItN0tiSUptcjRiRUJuVS1NXzEzRklHdm5Jdy0xWlRtS3NpaHNoX3hNWXJGby00aE9GazVGb204XzJuWkZyWUVzSUJ3?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSHRsVEplVWsxSmFEYy1yU0h1blgydVBBVXlsN1RDOERGVzNIcTJYUkZ0VGctYTQ0YmVvVVljdkJ6TExWY2lYeGpPUFZIYmZ4NTdCUXRBZlBMWFRxQ0Y5MUFNY2xIR1JjZXZxOHVDT05tUVFacFJBUmRHbkxObGl0ajBnTHE0OTBrY0ZxMUoxaG5tRHcwN3c?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSURYb3VacDVzYnZiTWZyTmg1aXNudmpHNTdwVGEzYTNJQVJKR3YxamtoLUo1MGR6R3lYTU1XOXpOQldFOHBFdmxJXzVZQ3VJbmZwS0diSTZCcnA0M3dkRHRSVXF6X09IRjVmVS11bkJVbmxIWmIxN1ItaG1OM05MMG5KRmVzaE1rd3ZIUnNtWTl3NVNiTk4w?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxNcEJlbllYU3U5cnVHVUM5aUJFMHljTFFEQ0V4VkpudFh4T0FjamF1SDBLcDA4RzZBZmlmeFRVX1JVM29XaFI3bTVmYjFFY1JPQjljdHVNbFZkNzY3cTZ0aVQ4VlRjUVVDVE5RRnZzYlE2dVBpeElEemxJcmxDRXA5aEpPR2NYZHBqTUN3TXZZd2RaZS1wWkVBWlhHNlhmYlJYS1JjTUEwZUhNSkZadjFhZkNTTE5sNzlRblc5Tjd6T2lHeXBndGlIWmluWUY1QQ?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "multiple sources"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 21,
+   "headline": "Non-profit says 60% of Anthropic's mapped US data center power demand is tied to natural gas",
+   "summary": "A non-profit claims most of Anthropic's mapped US data center power demand depends on natural gas.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPY1FjZkJzOGxOVm9peV9CVVdIUHpnVHRWRFhFakIzOTlPY3dZbk1nbUhBemtVdEM4V2RrRjhRLWotOXBNbDNmQ1Z5R2VQbVk1RDFwRE92djRYbzE2ZDlFaURqa2dyeV9iblFWZWJQNkEzVHRQeXlzNFJnZ3phV1lXaTNkcXBWckZDQmFWcFBRRjZEMy1pOEZSbHlCY3JFWHY3SHA1RV9IQjFHUWI0YVdwNF80aGhkMUtoMlNhQk9keXY3cVJpaGticW5neExCOWp4S2c?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 52.0,
+   "reason": "Data Center Dynamics, single source"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 22,
+   "headline": "Google picks Blue Origin to launch AI computing satellites in 2029",
+   "summary": "Google chose Blue Origin to launch space-based AI computing satellites.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNN3VqbnV1MzJhUTVfQzlfY2kyX2gzdk1FU0lyNU15dWhzVk40ZGNtRFlPaUFlS0hYeEhZQ0trUkdMUV9OQmIwZTE5aWliLVVYX0Faa2cxUUpjdWw2TFE5OTBCSnh6d3BqWnA0Znc1MV82SnpMdGZVQzRPXzVXcDV5X0hrckZ0TklGQlJmTTdiOFdob19wajZDT2dnUnlhNEZtVkhKMllQZ3R0U3VhOHdOQTl6WU5kRTNieHZqWVIyQlRERms?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYU5uV05oQzBOTzVZLXV4SnNaWWZoSEJLd0FLV2Q4SFpHUk5DSENfZlhOVUpnY2hrV2RjMHdoOUNxSGFaYWplWXJSSFlPcGdOVXVQeE5uQ0M3UTdLUGxRM1pZTGt6TXI1aTZXb0I4ZEJMNkJjQ0hkMHQydHdFakgxOE03VTM?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQldjcXQ5SWFpV0hMU2ZKZW0zN0htM2RJWjFIWHotSHU5WjJqRmVTMmt2UnNOTGJ6SDBmMTJ0aEFzSzl3M1dmUGR4VFpwM1BXdmNkZUJDV29OTFBqRURVTHhST1JQdkFBTTdxS181SURRRkxNR3UyNkNIV3pMcmtKQ25pS3VBemZYQ1RudWIxSHZuclBibVFDdWdyV2FNR2c1ZVg1eVptQ2RmQUVmLWQtaE9qTkI?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Reuters"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 23,
+   "headline": "FERC approves MVP Boost, Sabine Pass LNG expansion and other gas projects",
+   "summary": "FERC granted a certificate for MVP Boost and approved the 19 Mt/y Sabine Pass expansion.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1GdWJEVlVOUzR3SjNMSjQxOXFiSm5sWV8tb3dmSEFrSmVyNkZzSTgtQkhicjA4eTNVanRYT3FjeWdtSEdiM185T0I1VTRHNTdkSjNIeWFVejNCUjRo?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWWM3QzlDVVdZOVNfWV9XcFY0UE9QRGNJUl9EaW8wQTN5aTNxNXF1bm92X3NsVGZVTjlKWmtIejdDRlVfeFdfSFE0UlR2YnFlTWZ1NGZRQWZtQVA4cTFhelotMTdkMGN1TGIzOWxTOGhCdEpHbzB5dGtvUk40TF9hU1dqYWdCY1NzclE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVB0Q2pUR3JiREVrYXpmdmRDSnFPOEdVUUd3WHROOFp2bzRaSmREeGFyRmVxY3cwb0h3U3RZOXJOOEhUQW1zdUpWVS0yQ0IwUWFKTW9nekFWb3VxZUNsV1hYRk03NVRJZ0VUemFQUzc5TVNkYl9sWFVPVDFvbkh4QndLNkl4aGlPdTFaRFNFelpCVVZMbkpINnlKMXVRaEhPMUE?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUWhsRWhNZUJJeGgxT2FkRTRZOWpaUVR6YkVadjhoSWR1akZhLVhNME91Yl9ybVJ4b042WE9HclJKRkZfOGlqVW9jYUtoYWxLTFlkdnB2dTFiZV8tMC13bG1iMWpvSDQxLVdBdFFzRzY3VkN0WnhMVXlTTXIzakstRWx3dEtqTk1tYXI2bVpUbTE5d08xV21mUDFFMW1EVUhmMFZRbDFMUFMwRkMzV1JVb1hzYUE?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "NGI, WVTF"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 24,
+   "headline": "Army Corps reviews NJ offshore wind approval; Muir Mh\u00f2r floating wind farm gets Scottish consent",
+   "summary": "The Army Corps confirmed review of a NJ offshore wind approval, while Scotland consented the Muir Mh\u00f2r floating project.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYlV2bExGVTRnbXR2bzY2TXlUemRhQmhQWklTb2tvUjJOWkVDbUFrRTBVZGhhSy03TkxkQ3plTzZFWjQwRVNtVE04amlmS1FrckxMMERTbEkxNWF4VWJsSTFTd3pDSHp1WFpjVzE2bTBfZUNqU244bEZsNzV2S1RiZEU2bTNSUXFiSDh2MTlnLUpJbnNSc0NheUlaMA?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeU9ZaUh0SzUxRml1WTZqZnpYb1ZNa0J3eWVNY1k2MXhlaHRDZlhsMGVTaTNISkU0Ynh1eVV5SVA2M2dpNTZmMzR4WDNXaWhueXoxdXNnXzhmYWFaek1haXBnejRqVHJNMUJYaUNPYy0wZkVVQ29QN1pyejZDdXVCUlhzSjFwX1M1b2w4N1MzeEZOVUJSZGh5M1NHTDdWQjg4RFFTdA?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRGR1SnpFMmtNaEFHVzJiMUY5TnRHQmVvdGpFNm9LYXFBZFhFYkN0dUhtQTFFYXpnUDgzM3Y1M2Nnb3lpSUJ0WnhaNGRDb05ZSWU5bF9zNG9XVDFkY3hOT0RPTU03aG5RYm1GeDRJOXZQVUczakx2Q1RTNE81YVRuSmN3bVJKRFNKRHViTmIzWHhac0lBeUIxREM1N0xScXlGYXh3cE1qSGp6THBxa29EcjdjUVRhUmc?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxOV1Ewc3ZtRDFNMlBBWVR5eTJqV1JnUXRqUlpCY3lGN05FUy1mVXBsZWxvRVFBNE9pOTZHWXVOdzZnMVQ0dmZ6TE14TnJqZ1hwTDdVbUNtbS1falFuT0dBYXpxLWdlN0hjRXVNUXlLWEI5UE9oYmtyWm1KUjNvWWZ2NnNObzktdkExYjVtUVVqeWU2SDNGdGxVdU9wTElvVktUeGVfYTdrU1VBNWtVUXpad1dlTkV1Q3h3TmNESXdQTUo0WDRGQXNDZ3V3?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Maritime Executive, Windtech"
+  },
+  {
+   "arm": "editor_sonnet_v5",
+   "rank": 25,
+   "headline": "China's Tongwei open to deals as solar industry consolidates",
+   "summary": "Tongwei says it is open to deals amid consolidation.",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUFd2aVlXbFE0bWFKZF9RaHVlb2tXQVBfU29udW9JaTBnc0FVdzNaOEhKRXBvNXJ6Z3g1NDdzV0cxVWl4NzVsYl9GWm5oaERtR3loel9Nb2NDYllmVDBUSmxnWnplMDBETmc2R1Z2ME9jcDJwOUoxd2VQSnVsZEd4WUZEcTR3RmlFZFVoVWpZbEJvMldrZG5tUFBHRWYxUFhzbTVhLThmZ2M4ckNFR3hsXw?oc=5"
+   ],
+   "outlets": [
+    "news.google.com"
+   ],
+   "importance": 50.0,
+   "reason": "Bloomberg"
+  }
+ ],
+ "wall_s": 32.1,
+ "peak_rss_mb": 76.1,
+ "cost_usd": 0.1003,
+ "searches": null,
+ "notes": {
+  "observations": 1029,
+  "editor_model": "anthropic/claude-sonnet-5.5"
+ }
+}
