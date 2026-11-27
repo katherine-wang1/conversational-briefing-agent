@@ -1,0 +1,29 @@
+Good morning.
+You have five stories today: Nvidia pausing server shipments to Southeast Asia, GTA VI's record-breaking launch, with the top Metacritic rating of all time and $3.79 billion made on release day, X-Energy's reactor licensing milestones ahead, TVA cleared to build a commercial small reactor, and Senate passing a bipartisan energy permitting bill.
+First, the biggest story this morning.
+Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia.
+According to the Journal, the partners include Dell and Super Micro, and the pause has no set end date.
+Nvidia is assessing whether its regional partners are meeting U.S. export requirements.
+Those countries matter because Chinese companies have been tapping Nvidia chips remotely from data centers there.
+The US Commerce Department closed that loophole earlier this month, reportedly grudgingly.
+The think tank Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.
+I can walk you through how the remote access worked, if you're curious.
+Next, something a little different: the Grand Theft Auto VI launch.
+It's about GTA VI's record-breaking launch, with the top Metacritic rating of all time and $3.79 billion made on release day.
+TechCrunch notes the game was created entirely without generative AI, and about 5,000 people labored over it for more than a decade.
+Want to hear how the team's approach compares with the AI-heavy games coming next?
+Now to energy.
+X-Energy designs small modular reactors and manufactures specialized fuel.
+Its flagship Xe-100 is a high-temperature gas-cooled reactor generating up to 80 megawatts per module.
+The key date to watch is the NRC construction permit decision for the four-unit Xe-100 plant at Dow's Seadrift, Texas site, which management says could arrive by early 2027.
+A favorable decision would be the first construction permit for this kind of reactor in the U.S.
+I can tell you more about the Seadrift timeline, if you'd like.
+Also in nuclear, the Tennessee Valley Authority became the first US power utility authorized to build a commercial SMR.
+Given your SMR licensing interest, the TVA project is worth following alongside the Seadrift decision.
+Next, a story on energy policy from outside your usual beat.
+The Senate passed the bipartisan American Affordability and Jobs Act by a 62 to 33 vote.
+The bill would make it easier to build energy infrastructure, both dirty and clean.
+Canary Media reports the House will now take up the legislation.
+The Sierra Club and the Natural Resources Defense Council have come out against the bill, and modelers disagree on whether it would cut or raise emissions.
+I can go into the emissions models if you want the details.
+Which of these would you like to dig into?

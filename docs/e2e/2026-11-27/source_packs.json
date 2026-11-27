@@ -1,0 +1,634 @@
+[
+ {
+  "story_ref": "ai-6b5d8d763b8d",
+  "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access",
+  "facts": [
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether its regional partners are meeting U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely using Nvidia chips from data centers in those countries.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed this loophole earlier in the month, reportedly grudgingly.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387,
+    "kind": null
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589,
+    "kind": null
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ },
+ {
+  "story_ref": "ai-1e0e12f0c930",
+  "headline": "Anthropic goes public, trading as ANT",
+  "facts": [
+   {
+    "text": "GTA VI launched as the highest-rated game of all time on Metacritic.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+    ]
+   },
+   {
+    "text": "GTA VI made $3.79 billion on release day.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+    ]
+   },
+   {
+    "text": "GTA VI was created entirely without generative AI.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:1150-1367",
+     "7aa896c7cb490e59f4cc2e461b760cbd:1368-1433"
+    ]
+   },
+   {
+    "text": "About 5,000 people labored over GTA VI for more than a decade.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:2882-3030"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:0-279",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "It should have been impossible for \u201cGrand Theft Auto VI\u201d (GTA VI) to live up to the hype. Fans waited 13 years for the newest installment in the crime-adventure franchise, and Rockstar Games exceeded even those inconceivable expectations when the game finally came out last week.",
+    "char_start": 0,
+    "char_end": 279,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:280-541",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "GTA VI launched as the highest-rated game of all time on Metacritic and made $3.79 billion on release day to mark what could be the biggest entertainment event ever \u2013 more massive than \u201cAvengers: Endgame\u201d ($2.9 billion) or Taylor Swift\u2019s Eras tour ($2 billion).",
+    "char_start": 280,
+    "char_end": 541,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1150-1367",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "We do have a view that GTA is likely to be the last game of its kind to be made this way,\u201d Ben Feder, managing partner at TIRTA Ventures and former CEO of Rockstar parent company Take-Two Interactive, told TechCrunch.",
+    "char_start": 1150,
+    "char_end": 1367,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1368-1433",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "That\u2019s because GTA VI was created entirely without generative AI.",
+    "char_start": 1368,
+    "char_end": 1433,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1896-2080",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "At virtually the same moment that Anthropic broke the record for the largest IPO ever, GTA VI was also breaking records with the highest-rated and best-selling game launch of all time.",
+    "char_start": 1896,
+    "char_end": 2080,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:2882-3030",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "against the backdrop of the AI industry\u2019s first major IPO, Rockstar has unveiled a game that about 5,000 people labored over for more than a decade.",
+    "char_start": 2882,
+    "char_end": 3030,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ },
+ {
+  "story_ref": "u:d41171df299f",
+  "headline": "X-Energy (XE): Key Milestones Ahead in Advanced Nuclear Deployment",
+  "facts": [
+   {
+    "text": "X-Energy designs small modular reactors and manufactures specialized fuel.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:0-191"
+    ]
+   },
+   {
+    "text": "The Xe-100 is a high-temperature gas-cooled reactor generating up to 80 MWe per module.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:192-377"
+    ]
+   },
+   {
+    "text": "The TRISO-X facility in Oak Ridge, Tennessee received the first commercial fuel-fabrication license from the NRC in more than 50 years.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:872-1045"
+    ]
+   },
+   {
+    "text": "The NRC construction permit decision for the four-unit Xe-100 plant at Dow's Seadrift, Texas site could arrive by early 2027 according to management.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:1252-1476"
+    ]
+   },
+   {
+    "text": "A favorable decision would be the first HTGR construction permit in the U.S.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:1477-1623"
+    ]
+   },
+   {
+    "text": "X-Energy had roughly $1.8 billion in cash and no debt as of late September 2026.",
+    "passage_ids": [
+     "6cbf9d790f7cde0bc4df56bde98fccfc:2296-2371"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:0-191",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "X-Energy (XE) occupies a distinctive niche in advanced nuclear power as a designer of small modular reactors (SMRs) \u2014 compact, factory-built reactors \u2014 and a manufacturer of specialized fuel.",
+    "char_start": 0,
+    "char_end": 191,
+    "kind": null
+   },
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:192-377",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "Its flagship Xe-100 is a high-temperature gas-cooled reactor (HTGR) that generates up to 80 megawatts of electric power (MWe) per module while also capable of producing industrial heat.",
+    "char_start": 192,
+    "char_end": 377,
+    "kind": null
+   },
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:872-1045",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "Its TRISO-X facility in Oak Ridge, Tennessee, received the first commercial fuel-fabrication license from the U.S. Nuclear Regulatory Commission (NRC) in more than 50 years.",
+    "char_start": 872,
+    "char_end": 1045,
+    "kind": null
+   },
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:1252-1476",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "The single most consequential near-term catalyst is the NRC's construction permit decision for the four-unit Xe-100 plant at Dow's Seadrift, Texas manufacturing site, which management has signaled could arrive by early 2027.",
+    "char_start": 1252,
+    "char_end": 1476,
+    "kind": null
+   },
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:1477-1623",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "A favorable decision would mark the first HTGR construction permit in the U.S. and provide the first concrete regulatory validation of the design.",
+    "char_start": 1477,
+    "char_end": 1623,
+    "kind": null
+   },
+   {
+    "passage_id": "6cbf9d790f7cde0bc4df56bde98fccfc:2296-2371",
+    "doc_id": "6cbf9d790f7cde0bc4df56bde98fccfc",
+    "url": "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213",
+    "source": "tickeron.com",
+    "published_at": "2026-11-19T00:00:00Z",
+    "text": "which stood at roughly $1.8 billion with no debt as of late September 2026.",
+    "char_start": 2296,
+    "char_end": 2371,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:a0aa99129246",
+  "headline": "GLM-5.4 vs GLM-5.3: 1.5x Quota, No Open Weights",
+  "facts": [
+   {
+    "text": "GLM-5.4 became available to all GLM Coding Plan users on November 23, 2026.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:0-189",
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:190-400"
+    ]
+   },
+   {
+    "text": "Weekly-quota GLM Coding Plan subscribers get 1.5 times the GLM-5.3 allowance for GLM-5.4.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:190-400"
+    ]
+   },
+   {
+    "text": "The GLM-5.4 Model API opens only after a security assessment, with no date given.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:190-400",
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:3209-3333"
+    ]
+   },
+   {
+    "text": "GLM-5.3 is priced at $1.40 per million input tokens and $4.40 per million output tokens.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:453-578"
+    ]
+   },
+   {
+    "text": "Z.ai has not published a per-token price for GLM-5.4.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:3112-3208"
+    ]
+   },
+   {
+    "text": "Z.ai has not confirmed downloadable weights for GLM-5.4.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:3112-3208"
+    ]
+   },
+   {
+    "text": "GLM-5.4 is reachable only through a subscription, according to the article.",
+    "passage_ids": [
+     "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:674-795"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:0-189",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Z.ai put GLM-5.4 in front of every GLM Coding Plan subscriber on November 23, 2026, and held back the two things open-model fans wanted most: downloadable weights and a published API price.",
+    "char_start": 0,
+    "char_end": 189,
+    "kind": null
+   },
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:190-400",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Z.ai\u2019s documentation says GLM-5.4 is available to all Coding Plan users, weekly-quota subscribers get 1.5 times the GLM-5.3 allowance for the new model, and the Model API opens only after a security assessment.",
+    "char_start": 190,
+    "char_end": 400,
+    "kind": null
+   },
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:453-578",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "GLM-5.3 is the model Z.ai calls open-weight and prices at $1.40 per million input tokens and $4.40 per million output tokens.",
+    "char_start": 453,
+    "char_end": 578,
+    "kind": null
+   },
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:674-795",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "GLM-5.4 is the newer flagship, built on a Loop Transformer, and you can reach it through a subscription and nothing else.",
+    "char_start": 674,
+    "char_end": 795,
+    "kind": null
+   },
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:3112-3208",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Z.ai did not publish a per-token price for GLM-5.4, and it did not confirm downloadable weights.",
+    "char_start": 3112,
+    "char_end": 3208,
+    "kind": null
+   },
+   {
+    "passage_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1:3209-3333",
+    "doc_id": "5f3a8e6ba4582240cfbbd4ae6ee6b4b1",
+    "url": "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26",
+    "source": "shattered.io",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Its documentation says the Model API will be made available upon completion of the security assessment, with no date attache",
+    "char_start": 3209,
+    "char_end": 3333,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:f81b8ae246e0",
+  "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+  "facts": [
+   {
+    "text": "Only two SMR designs have been approved for use in the United States.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+    ]
+   },
+   {
+    "text": "The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial SMR at the end of September.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2503-2657",
+     "e9c42d63067edbd5e75065a697c2c5d8:2658-2793"
+    ]
+   },
+   {
+    "text": "The TVA project will use GE Vernova Hitachi's BWRX-300 reactor.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2658-2793"
+    ]
+   },
+   {
+    "text": "TVA has not yet set a date to break ground on the SMR project.",
+    "passage_ids": [
+     "e9c42d63067edbd5e75065a697c2c5d8:2794-2956"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:0-136",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Years of hype have been followed by years of fizzling and delay for what was supposed to have been the small modular reactor revolution.",
+    "char_start": 0,
+    "char_end": 136,
+    "kind": null
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:494-717",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Small modular reactors, commonly known as SMRs, are miniature nuclear reactors that can be built in a factory setting and then assembled on-site in varying numbers and configurations according to a particular plant's needs.",
+    "char_start": 494,
+    "char_end": 717,
+    "kind": null
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2503-2657",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "At the end of September, the Tennessee Valley Authority (TVA) became the very first U.S. power utility to receive authorization to build a commercial SMR.",
+    "char_start": 2503,
+    "char_end": 2657,
+    "kind": null
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2658-2793",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "The project will use the GE Vernova Hitachi's BWRX-300 reactor, representing the second-ever reactor construction granted domestically.",
+    "char_start": 2658,
+    "char_end": 2793,
+    "kind": null
+   },
+   {
+    "passage_id": "e9c42d63067edbd5e75065a697c2c5d8:2794-2956",
+    "doc_id": "e9c42d63067edbd5e75065a697c2c5d8",
+    "url": "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html",
+    "source": "oilprice.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "\"Although TVA has not set a date to break ground, the decision represents a turning point for American civilian nuclear energy,\" Interesting Engineering reported.",
+    "char_start": 2794,
+    "char_end": 2956,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "energy-96a0cbbd7b50",
+  "headline": "Senate OKs permitting bill that would boost clean and dirty energy",
+  "facts": [
+   {
+    "text": "The Senate passed the bipartisan American Affordability and Jobs Act by a 62 to 33 vote.",
+    "passage_ids": [
+     "2eb766a0f11af9bb50ffbcc2c29bf6a5:67-208"
+    ]
+   },
+   {
+    "text": "The bill was co-written by Democratic Sens. Martin Heinrich and Sheldon Whitehouse and Republican Sens. Mike Lee and Shelley Moore Capito.",
+    "passage_ids": [
+     "2eb766a0f11af9bb50ffbcc2c29bf6a5:577-845"
+    ]
+   },
+   {
+    "text": "The Sierra Club and the Natural Resources Defense Council have come out against the bill.",
+    "passage_ids": [
+     "2eb766a0f11af9bb50ffbcc2c29bf6a5:1660-1807"
+    ]
+   },
+   {
+    "text": "Rhodium Group and Resources for the Future project that the bill would reduce greenhouse gas emissions, while other energy modelers found it could cause emissions to rise.",
+    "passage_ids": [
+     "2eb766a0f11af9bb50ffbcc2c29bf6a5:2068-2452"
+    ]
+   },
+   {
+    "text": "A Princeton University Repeat Project study says the U.S. must double to triple its current transmission capacity to decarbonize the power grid by the mid-2030s.",
+    "passage_ids": [
+     "2eb766a0f11af9bb50ffbcc2c29bf6a5:2722-2957"
+    ]
+   },
+   {
+    "text": "The page is a paywall prompt from Heatmap asking readers to subscribe to continue reading.",
+    "passage_ids": [
+     "0a9fcf2fc5477d6880ede69c97b6fbd6:0-69",
+     "0a9fcf2fc5477d6880ede69c97b6fbd6:70-124"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5:67-208",
+    "doc_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5",
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "source": "canarymedia.com",
+    "published_at": "2026-11-20T00:00:00Z",
+    "text": "A bipartisan bill that would make it easier to build energy infrastructure \u2014 both dirty and clean \u2014 has passed the Senate by a 62 to 33 vote.",
+    "char_start": 67,
+    "char_end": 208,
+    "kind": null
+   },
+   {
+    "passage_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5:577-845",
+    "doc_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5",
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "source": "canarymedia.com",
+    "published_at": "2026-11-20T00:00:00Z",
+    "text": "The House of Representatives will now take up the legislation, which was co-written by Democratic Sens. Martin Heinrich (N.M.) and Sheldon Whitehouse (R.I.) \u2014 two vocal supporters of clean energy \u2014 and Republican Sens. Mike Lee (Utah) and Shelley Moore Capito (W.Va.).",
+    "char_start": 577,
+    "char_end": 845,
+    "kind": null
+   },
+   {
+    "passage_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5:1660-1807",
+    "doc_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5",
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "source": "canarymedia.com",
+    "published_at": "2026-11-20T00:00:00Z",
+    "text": "But several major environmental groups, including the Sierra Club and the Natural Resources Defense Council, have come out against the legislation.",
+    "char_start": 1660,
+    "char_end": 1807,
+    "kind": null
+   },
+   {
+    "passage_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5:2068-2452",
+    "doc_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5",
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "source": "canarymedia.com",
+    "published_at": "2026-11-20T00:00:00Z",
+    "text": "Different models have arrived at different conclusions. Energy analysis firm Rhodium Group has found that the bill would cause greenhouse gas emissions to fall. Think tank Resources for the Future also predicts it would reduce emissions. But other energy modelers have found the bill would spur so much construction of fossil fuel infrastructure that it would cause emissions to rise.",
+    "char_start": 2068,
+    "char_end": 2452,
+    "kind": null
+   },
+   {
+    "passage_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5:2722-2957",
+    "doc_id": "2eb766a0f11af9bb50ffbcc2c29bf6a5",
+    "url": "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "source": "canarymedia.com",
+    "published_at": "2026-11-20T00:00:00Z",
+    "text": "The U.S. must double to triple its current transmission capacity to decarbonize the power grid by the mid-2030s, according to a study from Princeton University\u2019s Repeat Project, but the pace of power line construction remains sluggish.",
+    "char_start": 2722,
+    "char_end": 2957,
+    "kind": null
+   },
+   {
+    "passage_id": "0a9fcf2fc5477d6880ede69c97b6fbd6:0-69",
+    "doc_id": "0a9fcf2fc5477d6880ede69c97b6fbd6",
+    "url": "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+    "source": "heatmap.news",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "You\u2019ve read your free article. Keep reading with a Heatmap membership",
+    "char_start": 0,
+    "char_end": 69,
+    "kind": null
+   },
+   {
+    "passage_id": "0a9fcf2fc5477d6880ede69c97b6fbd6:70-124",
+    "doc_id": "0a9fcf2fc5477d6880ede69c97b6fbd6",
+    "url": "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+    "source": "heatmap.news",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "Everything Heatmap publishes, plus a seat in the room.",
+    "char_start": 70,
+    "char_end": 124,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ }
+]

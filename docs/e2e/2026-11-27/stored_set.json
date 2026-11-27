@@ -1,0 +1,398 @@
+{
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "local_date": "2026-11-27",
+ "stories": [
+  {
+   "story_ref": "ai-6b5d8d763b8d",
+   "rank": 1,
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access",
+   "summary": "Nvidia told manufacturing partners to halt shipments to four Southeast Asian countries after Washington closed a remote-access loophole. The new US rule requires licenses to buy advanced AI chips, and sellers are also restricting neocloud sales over Chinese access.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.15,
+   "importance": 95.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "ai-1e0e12f0c930",
+   "rank": 2,
+   "headline": "Anthropic goes public, trading as ANT",
+   "summary": "Anthropic entered the public market with ticker ANT, drawing heavy coverage of price, valuation and investor prospects.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxPckx2b2tGYjRHR01ZSjFVN1dzNlFsTHlST1Fidjh2V1ZsVzFwWGl1R3pZUl9Zc2JKOTFvTjA4OGNaQ3VXNFNNZ0JKNXJIWHM4Zk5wcHJQckpzQWtmTVEtUWxjclZ1S0tUSGhJTmZVQkN1ZVRGWGRuVmxLbUpjd1A3RXl3?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2Y3Q21iQmpWbjd1T1hIQjYyaXgySjhyYk5aOU1KWjMzMXpJTmhUYlRLSjNHZGZETVM4V1Z5bGFvZi11a09RUDZGVDFaaHlSZVBnaHBTVzdNTHhZaVlKcy1pY25hcC0xUTNVcGFJRU1XRWZFTEpQNVF3amFGZVkxVExoZ3Fsdkx1bkZ4ZENUbmNEU1FKX184M2V5MG8?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUDFjSVMyZlBQdmhPeE5sRFhfTm1rcUNxd3dZS1hHNjRFR0tIaExIS2huVzdNZzNidGxpV0VyeGhIRy14ckxBRzJ3ZkVma3pOSW51ZHgzazlSNklaNVQybXUybm9RUlpGSS1Oa3UxdzBDd2NtZTI0Wk1iaFBhUjNrVHp0YzFJZUZMNmtNallGVGlHMFlaRXBRY2NNa3M?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOb09uM053RlUycW10aHhQZkZybE00MGdxemwwendwX003ekp6YmJOcTZnUHVTWEF3SUxaU2ZnRVdYbm5PYzZLby1QMzZxTmR3SEg1djFzVFYyX3RfbjJYMmxmM25aR1dXTldvNjd1X3dNMk4yWmtKelRvSXdUOEVUY2xtWXVZeWlUdGhLdE12OHNVTzJQMVJaTDA1MnRUbU4zOGg4N1ZydEg?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.25,
+   "importance": 88.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:d41171df299f",
+   "rank": 3,
+   "headline": "X-Energy (XE): Key Milestones Ahead in Advanced Nuclear Deployment",
+   "summary": "The single most consequential near-term catalyst is the NRC's construction permit decision for the four-unit Xe-100 plant at Dow's Seadrift, Texas manufacturing site, which management has signaled could arrive by early 2027. A favorable decision would mark the first HTGR construction permit in the U",
+   "beat": "energy",
+   "urls": [
+    "https://tickeron.com/blogs/x-energy-xe-key-milestones-ahead-in-advanced-nuclear-deployment-41213"
+   ],
+   "in_brief": true,
+   "relevance": 0.8,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "rank": 4,
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "summary": "And now, just this week, a new engineering alliance between Sargent & Lundy and ENTRA1 Energy announced that it would be banding together to bring scalable SMR plants to grids around the globe. The initiative will be using NuScale's certified reactors, the first and only proprietary SMR design to re",
+   "beat": "energy",
+   "urls": [
+    "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html"
+   ],
+   "in_brief": true,
+   "relevance": 0.75,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "energy-96a0cbbd7b50",
+   "rank": 5,
+   "headline": "Senate OKs permitting bill that would boost clean and dirty energy",
+   "summary": "The Senate passed a permitting bill that speeds clean energy projects but could also fast-track fossil fuels; coverage looks at its data center provisions and the prospects for 2027 reform.",
+   "beat": "energy",
+   "urls": [
+    "https://canarymedia.com/articles/clean-energy/senate-oks-permitting-bill-that-would-boost-clean-and-dirty-energy",
+    "https://heatmap.news/daily/will-democrats-really-take-up-permitting-reform-in-2027",
+    "https://heatmap.news/politics/baaja-data-centers",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNU53NnNVbjlTREM4a3pmSjdyVXp0OW5xXy13a2VuTlMyWmZxZDN6N1BsbUdRVEcwV1BCdmRheHJhRzVPV0tVRFZmSlNCVnJFcksxcHM1OUVHZGZES0NCc203VS14Y1NyaXJodXlIaFlmczdrLWJNSmdINVJRSGN5SnFEUzItbHJCVUpIQWFiZkZydE1sQkpMRUs0aUtJMWRuZmk2dzZsa1ZGaG15VkRnaG9ZRFZRMEtS?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.3,
+   "importance": 86.0,
+   "why": [
+    "outside your usual",
+    "i-smr"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:a0aa99129246",
+   "rank": 6,
+   "headline": "GLM-5.4 vs GLM-5.3: 1.5x Quota, No Open Weights",
+   "summary": "5. Self-hosting GLM-5.3 for coding. A reported Revolut deployment of self-hosted GLM-5.3 for AI coding illustrates what the open-weight path can buy a financial company: control over where code goes and a cost curve that depends on hardware, not on a vendor’s meter. Treat the savings as reported, no",
+   "beat": "ai",
+   "urls": [
+    "https://shattered.io/glm-5-4-vs-glm-5-3-no-open-weights-coding-plan-from-18-nov-26"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "cut from the brief",
+    "i-open",
+    "i-acme"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:d3aa11d5f12e",
+   "rank": 7,
+   "headline": "NuScale Power (SMR) Draws Fresh Investor Focus As AI Power Demand Lifts SMR Appeal",
+   "summary": "The NRC approved small modular reactor design gives NuScale Power a licensing framework that Oklo does not yet have. This can shorten regulatory steps once projects move toward construction. For data center and AI users, that approval makes NuScale a potential supplier of standardized modules rather",
+   "beat": "energy",
+   "urls": [
+    "https://finance.yahoo.com/energy/articles/nuscale-power-smr-draws-fresh-141122724.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.75,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:9b780e5528de",
+   "rank": 8,
+   "headline": "GitHub - akitaonrails/ai-memory: Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors · GitHub",
+   "summary": "- It ages memory without an LLM. Memory decays on a schedule you can tune per tier, and memory you use decays slower: opening a page, searching it, or reaching it through a link counts as use. When episodic notes go cold they can be compacted down to their durable facts (file paths, error codes, dec",
+   "beat": "ai",
+   "urls": [
+    "https://github.com/akitaonrails/ai-memory"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 25.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:5112dcc98dfd",
+   "rank": 9,
+   "headline": "Energy Northwest seeks NRC filing exemptions for Cascade SMR",
+   "summary": "For the broader reactor-development context, NNN has covered the Cascade-linked Xe-100 project in Indiana, the fuel arrangements X-energy has made with Centrus, and the Xe-100's UK design-assessment process. Those projects face different licensing and commercial steps. None resolves the application-",
+   "beat": "energy",
+   "urls": [
+    "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f0feba66efd2",
+   "rank": 10,
+   "headline": "Travis Sachs on Instagram: \"Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Sea…\"",
+   "summary": "Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas. This is the first time factory-produced, modular advanced reactors will serve an industrial facility. The challenge: coordinating prefabricated components across multiple supplier",
+   "beat": "energy",
+   "urls": [
+    "https://www.instagram.com/reel/DgKugT7h3Nj"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-b57d153658e5",
+   "rank": 11,
+   "headline": "Meta's Muse agent draws UK FCA complaint as AI shopping bots face holiday test",
+   "summary": "The FCA complained Meta refused joint testing before rolling out Muse, while retailers worry about liability as AI shopping agents arrive for Black Friday.",
+   "beat": "ai",
+   "urls": [
+    "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "https://bloomberg.com/news/features/2026-11-26/holidays-to-test-ai-shopping-bots-from-google-amazon-meta-and-openai",
+    "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa1RWUDNfdFhiM242MUZmNTlSajdYeEllVVU0YzFkdmptd1phTjVzYWNBeXduX05iSUNjSVgwUkJwajFETlYteDMtamYxb1liMTJQWFlSbFkxLW9SQXFZWFRNZHhWQlRUNkxEblY2dVF1ZHlnTmhtRHhzOF8wTVJJbV94VVFXZzZ4ZmthNGJPU2pNdFQ2V1JlVjVhNWpYNVlUSnNYM1BvMkhLZTdtdXo5bDBSNzJwTkxEQzNJ?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 58.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:ec24df99063d",
+   "rank": 12,
+   "headline": "X-Energy (Nasdaq:XE) - Stock Analysis",
+   "summary": "Earnings Summary. X-Energy reported strong third-quarter 2026 results, highlighted by the U.S. Nuclear Regulatory Commission (NRC) issuing a construction",
+   "beat": "energy",
+   "urls": [
+    "https://simplywall.st/stocks/us/capital-goods/nasdaq-xe/x-energy"
+   ],
+   "in_brief": false,
+   "relevance": 0.75,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:6320c78f53dd",
+   "rank": 13,
+   "headline": "How 12 months made 20 years - Nuclear Engineering International",
+   "summary": "In April 2026, when the Nuclear Regulatory Commission (USNRC) issued a second licence renewal for the plant, it highlighted another milestone: it was described by the USNRC as the “fastest licence renewal review in agency history and the first completed under new federal timelines aimed at accelerat",
+   "beat": "energy",
+   "urls": [
+    "https://www.neimagazine.com/analysis/newbuild-lifeextension/how-12-months-made-20-years"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:46c6a40b636d",
+   "rank": 14,
+   "headline": "Medium",
+   "summary": "AI Agent Memory Architecture is a system design that enables AI agents to capture, store, retrieve, update, and utilize information across interactions and workflows. It extends the capabilities of large language models by introducing persistent storage, contextual retrieval, session management, and",
+   "beat": "ai",
+   "urls": [
+    "https://skphd.medium.com/top-30-ai-agent-memory-architecture-interview-questions-and-answers-for-2027-bfae3984ceb9"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 20.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:db63a7f02d48",
+   "rank": 15,
+   "headline": "Open Source Vs Closed Source AI: Can Self-Hosted Models Take Revenue From Anthropic And OpenAI? - TalkMarkets - Howl.Link",
+   "summary": "# Open Source Vs Closed Source AI: Can Self-Hosted Models Take Revenue From Anthropic And OpenAI? Revolut slashed AI coding costs by 90% after migrating from Anthropic to self-hosted open-weight models. In October 2026 Revolut said it had moved about 2,000 engineers from Claude Code to an open model",
+   "beat": "ai",
+   "urls": [
+    "https://t.co/GOPK0TBleW"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:4ebb752045c8",
+   "rank": 16,
+   "headline": "Procedure Inference as Memory: Learning Recruiter Decision Procedures from OKF-Structured Episodes in Multi-Session Hiring Assistants",
+   "summary": "Multi-session hiring assistants must infer evolving recruiter preferences and decision patterns across projects and time. We introduce Open Knowledge Format (OKF)-indexed episodic memory to organize interactions and retrieve related events through their lineage. We also introduce Procedure Memory, w",
+   "beat": "ai",
+   "urls": [
+    "https://arxiv.org/html/2611.34576v1"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f1727215de92",
+   "rank": 17,
+   "headline": "Perplexity’s Time Machine lets AI agents search the web of the past - The Next Web",
+   "summary": "Perplexity has added Time Machine to its Search and Context APIs, letting agents see the web as it was up to 365 days ago so forecasting tests are not spoiled by hindsight. It follows Epochal’s Time Portal by a day, and Perplexity’s results come from its own tests. Perplexity has launched Time Machi",
+   "beat": "ai",
+   "urls": [
+    "https://thenextweb.com/news/perplexity-time-machine-ai-agents-past-web"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:90d6d3a5bed4",
+   "rank": 18,
+   "headline": "Monroe Energy Council on Facebook: \"Faster federal permitting means New York's nuclear plan can move before the 2033 shortfall hits Roch…\"",
+   "summary": "# Monroe Energy Council on Facebook: \"Faster federal permitting means New York's nuclear plan can move before the 2033 shortfall hits Roch…\" Faster federal permitting means New York's nuclear plan can move before the 2033 shortfall hits Rochester ratepayers. MEC supports safe, faster licensing so n",
+   "beat": "energy",
+   "urls": [
+    "https://www.facebook.com/groups/1120088696482322/posts/1683640603460459"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 20.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:05267d669754",
+   "rank": 19,
+   "headline": "CodeCraft AI on Facebook: \"What Is Agent Memory? An AI agent may need to remember: - Current task state - Previous tool results…\"",
+   "summary": "# CodeCraft AI on Facebook: \"What Is Agent Memory? An AI agent may need to remember: - Current task state - Previous tool results…\" What Is Agent Memory? An AI agent may need to remember: - Current task state - Previous tool results - User preferences - Important historical information But not ev",
+   "beat": "ai",
+   "urls": [
+    "https://www.facebook.com/TheCodeCraftAI/posts/what-is-agent-memoryan-ai-agent-may-need-to-remember-current-task-state-previous/1543349884617829"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 15.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:bee3962376e2",
+   "rank": 20,
+   "headline": "Inside the Architecture of AI Agents: From User Queries to Autonomous Tool Execution and Security Hardening + Video",
+   "summary": "Inside the Architecture of AI Agents: From User Queries to Autonomous Tool Execution and Security Hardening + Video - \"Undercode Testing\": Monitor hackers.",
+   "beat": "ai",
+   "urls": [
+    "https://t.co/XjDVRsB9FU"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 15.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  }
+ ],
+ "created_at": "2026-11-27T07:35:30.862603Z"
+}

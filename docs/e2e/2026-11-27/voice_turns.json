@@ -1,0 +1,200 @@
+[
+ {
+  "utterance": "Tell me more about Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access. Why does it matter?",
+  "answer": [
+   {
+    "text": "On the Nvidia shipments story: Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand and Indonesia, for an unspecified period, while it checks whether those regional partners are meeting U.S. export requirements.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access"
+     }
+    ]
+   },
+   {
+    "text": "The reason those countries are in the spotlight is that Chinese companies have been remotely tapping Nvidia chips from data centers there.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access"
+     }
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed that loophole earlier this month, reportedly grudgingly.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access"
+     }
+    ]
+   },
+   {
+    "text": "It matters because the Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access"
+     }
+    ]
+   },
+   {
+    "text": "So this is about whether US chip rules can reach compute that sits offshore but is still used by Chinese firms.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want me to explain how the remote access worked, or go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: On the Nvidia shipments story: Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand and Indonesia, for an unspecified period, while it checks whether those regional partners are meeting U.S. export requirements.  [techcrunch.com]",
+   "say #2: The reason those countries are in the spotlight is that Chinese companies have been remotely tapping Nvidia chips from data centers there.  [techcrunch.com]",
+   "say #3: The US Commerce Department closed that loophole earlier this month, reportedly grudgingly.  [techcrunch.com]",
+   "say #4: It matters because the Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.  [techcrunch.com]",
+   "say #5: So this is about whether US chip rules can reach compute that sits offshore but is still used by Chinese firms.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2114 ms (first token 627 ms) \u00b7 16217 in (0 cached) / 385 out \u00b7 $0.0022 (session $0.0022)",
+   "say #6: Want me to explain how the remote access worked, or go back to the brief?"
+  ],
+  "s": 2.1,
+  "signals": []
+ },
+ {
+  "utterance": "What's the story with Meta's Muse agent draws UK FCA complaint as AI shopping bots face holiday test?",
+  "answer": [
+   {
+    "text": "The Meta Muse story isn't in today's spoken brief, but it's in my wider set, so let me pull up what I have on it.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "On the Meta Muse story: the UK's Financial Conduct Authority is unhappy with how Meta rolled out its Muse AI assistant.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "According to the FCA's head of innovation, Colin Payne, Meta turned down a suggestion to test Muse jointly through the FCA's regulatory sandbox, a controlled environment where firms trial new products under regulator oversight.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Payne said Meta only told the FCA about its plans last month, which left little time to set up testing.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "The FCA says it wants to see what AI agents actually do in the market, and it calls that approach reasonable.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Meta says it has engaged constructively with the appropriate regulators.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Muse launched in the UK this week with retailers including Marks & Spencer, Sainsbury's, JD Sports and Currys.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "In the UK, it has to ask your approval before making a purchase or sending an email.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Do you want the open questions, like who is liable if an agent gets an order wrong, or shall I go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1232 ms (first token 864 ms) \u00b7 16191 in (16030 cached) / 101 out \u00b7 $0.0002 (session $0.0002) \u00b7 1 tool call(s)",
+   "say #1: The Meta Muse story isn't in today's spoken brief, but it's in my wider set, so let me pull up what I have on it.",
+   "tool call get_story(story_ref='ai-b57d153658e5')",
+   "get_story ai-b57d153658e5: note with 10 facts",
+   "say #2: On the Meta Muse story: the UK's Financial Conduct Authority is unhappy with how Meta rolled out its Muse AI assistant.",
+   "say #3: According to the FCA's head of innovation, Colin Payne, Meta turned down a suggestion to test Muse jointly through the FCA's regulatory sandbox, a controlled environment where firms trial new products under regulator oversight.",
+   "say #4: Payne said Meta only told the FCA about its plans last month, which left little time to set up testing.",
+   "say #5: The FCA says it wants to see what AI agents actually do in the market, and it calls that approach reasonable.",
+   "say #6: Meta says it has engaged constructively with the appropriate regulators.",
+   "say #7: Muse launched in the UK this week with retailers including Marks & Spencer, Sainsbury's, JD Sports and Currys.",
+   "say #8: In the UK, it has to ask your approval before making a purchase or sending an email.",
+   "voice.turn round 2: anthropic/claude-haiku-5.5 \u00b7 2393 ms (first token 1075 ms) \u00b7 17406 in (16030 cached) / 317 out \u00b7 $0.0005 (session $0.0007)",
+   "say #9: Do you want the open questions, like who is liable if an agent gets an order wrong, or shall I go back to the brief?"
+  ],
+  "s": 3.6,
+  "signals": [
+   {
+    "type": "dive",
+    "story_ref": "ai-b57d153658e5",
+    "explicit": false,
+    "strength": 1.0,
+    "turn_id": "t_01m8dz5rg1pdtprpbz6zj7b9pn",
+    "payload": {}
+   }
+  ]
+ },
+ {
+  "utterance": "What else happened today that I should know about?",
+  "answer": [
+   {
+    "text": "Besides the five stories in your brief, there are a few more on my list.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "The biggest is a piece on Anthropic's public debut, which I'd be glad to go into, though the text I have only gives me the headline and summary, so I can't add much detail yet.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "There's also a report on Meta's Muse agent drawing a complaint from the UK's Financial Conduct Authority, over Meta refusing joint testing before the rollout.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "And there's a new Z.ai model, GLM-5.4, that's available to subscribers but has no downloadable weights and no published API price.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Which of these would you like to hear more about?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: Besides the five stories in your brief, there are a few more on my list.",
+   "say #2: The biggest is a piece on Anthropic's public debut, which I'd be glad to go into, though the text I have only gives me the headline and summary, so I can't add much detail yet.",
+   "say #3: There's also a report on Meta's Muse agent drawing a complaint from the UK's Financial Conduct Authority, over Meta refusing joint testing before the rollout.",
+   "say #4: And there's a new Z.ai model, GLM-5.4, that's available to subscribers but has no downloadable weights and no published API price.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1651 ms (first token 706 ms) \u00b7 16164 in (16030 cached) / 191 out \u00b7 $0.0003 (session $0.0003)",
+   "say #5: Which of these would you like to hear more about?"
+  ],
+  "s": 1.7,
+  "signals": []
+ }
+]

@@ -47,6 +47,7 @@ the date and outcome.
 | F24 | Free-coverage thresholds (title 60/80, 2 entities, 36 h, 25 searches per run) set from one day; low-grade hosts (content farms) may need a quality list | `config/agent.yaml` |
 | F25 | C6 runs its own free-coverage search even when the shared note already found a free source; reuse it from the note store | `app/agents/cos/packs.py` |
 | F26 | Newsroom scope: the Sonnet v4 ai digest included a GTA VI story ("highest-rated game on Metacritic"), which then filled the brief's outside-your-usual slot (`docs/e2e/run3_write_truncated`) | editor prompt / beat scope |
+| F27 | Voice answers from a `get_story` note show no sources: the model leaves out citation markers, so no links reach the listener (seen in two runs) | `voice.turn.md` / citations |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed

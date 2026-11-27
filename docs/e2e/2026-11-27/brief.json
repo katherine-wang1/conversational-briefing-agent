@@ -1,0 +1,310 @@
+{
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-27",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-6b5d8d763b8d",
+   "slot": "big_news",
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US rule tightens China chip access",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "US Commerce",
+    "Malaysia",
+    "Singapore",
+    "Thailand",
+    "Indonesia"
+   ]
+  },
+  {
+   "story_ref": "ai-1e0e12f0c930",
+   "slot": "big_news",
+   "headline": "Anthropic goes public, trading as ANT",
+   "why_tag": "big news",
+   "aliases": [
+    "Anthropic"
+   ]
+  },
+  {
+   "story_ref": "u:d41171df299f",
+   "slot": "for_you",
+   "headline": "X-Energy (XE): Key Milestones Ahead in Advanced Nuclear Deployment",
+   "why_tag": "for you",
+   "aliases": [
+    "X-energy",
+    "Dow",
+    "NRC"
+   ]
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "slot": "for_you",
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "why_tag": "for you",
+   "aliases": [
+    "Sargent & Lundy",
+    "ENTRA1 Energy",
+    "NuScale"
+   ]
+  },
+  {
+   "story_ref": "energy-96a0cbbd7b50",
+   "slot": "outside_usual",
+   "headline": "Senate OKs permitting bill that would boost clean and dirty energy",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "US Senate"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have five stories today: Nvidia pausing server shipments to Southeast Asia, GTA VI's record-breaking launch, with the top Metacritic rating of all time and $3.79 billion made on release day, X-Energy's reactor licensing milestones ahead, TVA cleared to build a commercial small reactor, and Senate passing a bipartisan energy permitting bill.",
+   "story_ref": null,
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "7aa896c7cb490e59f4cc2e461b760cbd:280-541",
+    "6cbf9d790f7cde0bc4df56bde98fccfc:1252-1476",
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657",
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:67-208"
+   ],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "First, the biggest story this morning.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "According to the Journal, the partners include Dell and Super Micro, and the pause has no set end date.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Nvidia is assessing whether its regional partners are meeting U.S. export requirements.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "Those countries matter because Chinese companies have been tapping Nvidia chips remotely from data centers there.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The US Commerce Department closed that loophole earlier this month, reportedly grudgingly.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "The think tank Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s009",
+   "text": "I can walk you through how the remote access worked, if you're curious.",
+   "story_ref": "ai-6b5d8d763b8d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s010",
+   "text": "Next, something a little different: the Grand Theft Auto VI launch.",
+   "story_ref": "ai-1e0e12f0c930",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s011",
+   "text": "It's about GTA VI's record-breaking launch, with the top Metacritic rating of all time and $3.79 billion made on release day.",
+   "story_ref": "ai-1e0e12f0c930",
+   "cites": [
+    "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "TechCrunch notes the game was created entirely without generative AI, and about 5,000 people labored over it for more than a decade.",
+   "story_ref": "ai-1e0e12f0c930",
+   "cites": [
+    "7aa896c7cb490e59f4cc2e461b760cbd:1368-1433",
+    "7aa896c7cb490e59f4cc2e461b760cbd:2882-3030"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "Want to hear how the team's approach compares with the AI-heavy games coming next?",
+   "story_ref": "ai-1e0e12f0c930",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s014",
+   "text": "Now to energy.",
+   "story_ref": "u:d41171df299f",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s015",
+   "text": "X-Energy designs small modular reactors and manufactures specialized fuel.",
+   "story_ref": "u:d41171df299f",
+   "cites": [
+    "6cbf9d790f7cde0bc4df56bde98fccfc:0-191"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "Its flagship Xe-100 is a high-temperature gas-cooled reactor generating up to 80 megawatts per module.",
+   "story_ref": "u:d41171df299f",
+   "cites": [
+    "6cbf9d790f7cde0bc4df56bde98fccfc:192-377"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s017",
+   "text": "The key date to watch is the NRC construction permit decision for the four-unit Xe-100 plant at Dow's Seadrift, Texas site, which management says could arrive by early 2027.",
+   "story_ref": "u:d41171df299f",
+   "cites": [
+    "6cbf9d790f7cde0bc4df56bde98fccfc:1252-1476"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s018",
+   "text": "A favorable decision would be the first construction permit for this kind of reactor in the U.S.",
+   "story_ref": "u:d41171df299f",
+   "cites": [
+    "6cbf9d790f7cde0bc4df56bde98fccfc:1477-1623"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "I can tell you more about the Seadrift timeline, if you'd like.",
+   "story_ref": "u:d41171df299f",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s020",
+   "text": "Also in nuclear, the Tennessee Valley Authority became the first US power utility authorized to build a commercial SMR.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s021",
+   "text": "Given your SMR licensing interest, the TVA project is worth following alongside the Seadrift decision.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s022",
+   "text": "Next, a story on energy policy from outside your usual beat.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s023",
+   "text": "The Senate passed the bipartisan American Affordability and Jobs Act by a 62 to 33 vote.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:67-208"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s024",
+   "text": "The bill would make it easier to build energy infrastructure, both dirty and clean.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:67-208"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s025",
+   "text": "Canary Media reports the House will now take up the legislation.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:577-845"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s026",
+   "text": "The Sierra Club and the Natural Resources Defense Council have come out against the bill, and modelers disagree on whether it would cut or raise emissions.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:1660-1807",
+    "2eb766a0f11af9bb50ffbcc2c29bf6a5:2068-2452"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s027",
+   "text": "I can go into the emissions models if you want the details.",
+   "story_ref": "energy-96a0cbbd7b50",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s028",
+   "text": "Which of these would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 182
+}
