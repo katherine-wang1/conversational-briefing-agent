@@ -334,8 +334,21 @@ async def run_cos_daily(
 
     if cfg.flags.claim_check:
         passages = {p.passage_id: p for pk in packs for p in pk.passages}
+        # A story sentence is also judged against its story's note passages: the writer often cites one
+        # note fact while a detail comes from a sibling fact of the same note (all already checked
+        # against their sources), and a cite-only check then drops a correct headline.
+        note_ids = {
+            pk.story_ref: [p.passage_id for p in pk.passages if p.kind in ("note_fact", "note_context")]
+            for pk in packs
+        }
+
+        def check_cites(s: BriefSentence) -> list[str]:
+            if s.kind != "story" or not s.story_ref:
+                return s.cites
+            return list(dict.fromkeys([*s.cites, *note_ids.get(s.story_ref, [])]))
+
         to_check = [
-            ToCheck(s.sid, s.text, s.cites)
+            ToCheck(s.sid, s.text, check_cites(s))
             for s in sentences
             if s.kind == "story" or (s.cites and s.kind != "followup_answer")
         ]

@@ -2,16 +2,21 @@
 
 Flow per batch: verdicts (+ an optional rewrite that uses only the cited passages) → rewrites are checked
 once more → a rewrite judged `supported` replaces the sentence; anything else that is not `supported`
-is dropped. A sentence missing from a successful response counts as unsupported. If the token budget
+is dropped. A sentence missing from a successful response counts as unsupported. Before any model call,
+a sentence that closely restates one of its passages (same words in nearly the same order, every number
+and every negation of that passage kept) is accepted by code: the model check was erratic on those (it
+called near-verbatim copies "partial" and then rejected its own rewrite). If the token budget
 runs out, the remaining sentences are kept unchecked (they already passed the code-level citation
 check) and the trace records it.
 """
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 from pydantic import BaseModel
+from rapidfuzz import fuzz, utils
 
 from app.agents.cos.llm import CallCtx, StructuredOutputFailure, call_structured
 from app.agents.cos.prompts import load_prompt
@@ -20,6 +25,26 @@ from app.contracts.brief import ClaimCheck, Passage
 from app.contracts.common import BudgetExceeded
 
 BATCH = 15
+RESTATE_MIN = 88  # rapidfuzz token_sort_ratio for "restates the passage"
+_NUM = re.compile(r"\d[\d,.]*")
+_NEG = re.compile(r"\b(not|no|never|none|without|neither|nor)\b|n't", re.I)
+
+
+def _numbers(text: str) -> set[str]:
+    return {n.rstrip(".,").replace(",", "") for n in _NUM.findall(text)}
+
+
+def restates_passage(text: str, cited: list[Passage]) -> bool:
+    """True when `text` is a near copy of one cited passage, with its numbers and negations intact."""
+    for p in cited:
+        if fuzz.token_sort_ratio(text, p.text, processor=utils.default_process) < RESTATE_MIN:
+            continue
+        if not _numbers(text) <= _numbers(p.text):
+            continue
+        if len(_NEG.findall(text)) != len(_NEG.findall(p.text)):
+            continue
+        return True
+    return False
 
 
 class ClaimCheckBatch(BaseModel):
@@ -68,6 +93,14 @@ async def check_claims(
     budget_gone = False
     for start in range(0, len(sentences), BATCH):
         batch = sentences[start : start + BATCH]
+        quick = [
+            s for s in batch if restates_passage(s.text, [passages[c] for c in s.cites if c in passages])
+        ]
+        for s in quick:
+            out[s.sid] = CheckOutcome(s.sid, s.text, ClaimCheck(sid=s.sid, verdict="supported"))
+        batch = [s for s in batch if s.sid not in out]
+        if not batch:
+            continue
         if budget_gone:
             for s in batch:
                 out[s.sid] = CheckOutcome(
@@ -124,6 +157,13 @@ async def check_claims(
         step,
         "code",
         checked=len(sentences),
+        restated=[
+            s.sid
+            for s in sentences
+            if s.sid in out
+            and out[s.sid].record.verdict == "supported"
+            and restates_passage(s.text, [passages[c] for c in s.cites if c in passages])
+        ],
         dropped=[o.sid for o in out.values() if o.text is None],
         rewritten=[o.sid for o in out.values() if o.record.rewritten and o.text is not None],
     )

@@ -133,33 +133,38 @@ def _content_words(text: str) -> int:
 def drop_near_duplicates(
     sentences: list[BriefSentence], protected: set[str], threshold: float = DUP_THRESHOLD
 ) -> tuple[list[BriefSentence], list[str]]:
-    """Within a story, drop a story sentence that repeats the previous story sentence of the same story."""
+    """Within a story, drop a story sentence that repeats any earlier story sentence of the same story
+    (the writer sometimes restates the headline a few sentences later, in other words)."""
     notes: list[str] = []
     out: list[BriefSentence] = []
-    last: dict[str, int] = {}  # story_ref -> index in `out` of its latest story sentence
+    earlier: dict[str, list[int]] = {}  # story_ref -> indexes in `out` of its story sentences so far
     for s in sentences:
-        if s.kind != "story" or not s.story_ref or s.story_ref not in last:
-            if s.kind == "story" and s.story_ref:
-                last[s.story_ref] = len(out)
+        if s.kind != "story" or not s.story_ref:
             out.append(s)
             continue
-        i = last[s.story_ref]
+        idxs = earlier.setdefault(s.story_ref, [])
+        best, i = 0.0, -1
+        for j in idxs:
+            prev = out[j]
+            if min(_content_words(prev.text), _content_words(s.text)) < DUP_MIN_WORDS:
+                continue
+            sc = fuzz.token_set_ratio(prev.text, s.text, processor=utils.default_process)
+            if sc > best:
+                best, i = sc, j
+        if i < 0 or best < threshold:
+            idxs.append(len(out))
+            out.append(s)
+            continue
         prev = out[i]
-        short = min(_content_words(prev.text), _content_words(s.text))
-        score = fuzz.token_set_ratio(prev.text, s.text, processor=utils.default_process)
-        if short < DUP_MIN_WORDS or score < threshold:
-            last[s.story_ref] = len(out)
-            out.append(s)
-            continue
-        # Keep the longer sentence, but never drop the story's lead.
+        # Keep the longer sentence (in the earlier sentence's place), but never drop the story's lead.
         drop_prev = prev.sid not in protected and (
             s.sid in protected or _content_words(s.text) > _content_words(prev.text)
         )
         if drop_prev:
-            notes.append(f"near-duplicate ({score:.0f}): dropped {prev.sid}, kept {s.sid}")
+            notes.append(f"near-duplicate ({best:.0f}): dropped {prev.sid}, kept {s.sid}")
             out[i] = s
         else:
-            notes.append(f"near-duplicate ({score:.0f}): dropped {s.sid}, kept {prev.sid}")
+            notes.append(f"near-duplicate ({best:.0f}): dropped {s.sid}, kept {prev.sid}")
     return out, notes
 
 

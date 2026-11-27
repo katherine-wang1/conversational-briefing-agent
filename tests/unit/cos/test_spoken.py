@@ -328,3 +328,18 @@ async def test_story_with_dropped_lead_and_failed_teaser_is_removed():
     assert script.sentences[1].text.startswith("You have five stories today, starting with")
     assert f"the {ref} story" not in script.sentences[1].text
     check_grounded(script, packs)
+
+
+def test_near_duplicate_found_against_any_earlier_sentence_of_the_story():
+    a = "Bloomberg reports that Nvidia Blackwell chips were installed at a Shanghai data center (Megaspeed)."
+    b = "Nvidia is a US chip company whose processors power much of today's AI computing."
+    c = (
+        "According to the report, serial numbers in Chinese filings show Nvidia's restricted Blackwell chips "
+        "were installed at a Shanghai data center linked to Megaspeed."
+    )
+    sents = [
+        BriefSentence(sid=f"s{i}", text=t, story_ref="x", cites=["p"], kind="story")
+        for i, t in enumerate([a, b, c])
+    ]
+    out, notes = drop_near_duplicates(sents, protected={"s0"})
+    assert [s.sid for s in out] == ["s0", "s1"] and notes

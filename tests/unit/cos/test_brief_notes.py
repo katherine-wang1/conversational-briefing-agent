@@ -69,3 +69,24 @@ def test_rundown_names_at_most_three():
     s = rundown_sentence(stories, teasers)
     assert s.text == "You have six stories today, starting with story 0, story 1, and story 2."
     assert s.cites == ["p0", "p1", "p2"]
+
+
+def test_restates_passage_guards_numbers_and_negation():
+    from app.agents.cos.claim_check import restates_passage
+
+    def p(t):
+        return Passage(passage_id="x", doc_id="d", url="u", text=t, char_start=0, char_end=len(t))
+
+    src = p(
+        "Bloomberg reports that a pair of Chinese firms installed Nvidia Corp.'s Blackwell chips in Shanghai."
+    )
+    assert restates_passage(
+        "Bloomberg reports that a pair of Chinese firms installed Nvidia's Blackwell chips in Shanghai.",
+        [src],
+    )
+    assert not restates_passage(
+        "Bloomberg reports that 3 Chinese firms installed Nvidia's Blackwell chips in Shanghai.", [src]
+    )
+    neg = p("Neither Tesla nor EMAG has disclosed the financial terms of the deal.")
+    assert not restates_passage("Tesla and EMAG have disclosed the financial terms of the deal.", [neg])
+    assert not restates_passage("Tesla is buying EMAG.", [neg])

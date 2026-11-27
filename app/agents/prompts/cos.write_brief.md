@@ -18,8 +18,12 @@ listener, not the way a news site or an anchor lists items.
   a `note_context` passage counts as a passage). If a story's passages are thin, say less.
 - `intro`, `transition` and `outro` sentences carry no news facts and no numbers (write no digits in them).
   They may name the topic of a story already introduced, address the listener, and point ahead.
-- Say each fact once. Every sentence must add something the listener hasn't heard yet; never restate the
-  previous sentence in other words.
+- Say each fact once. Every sentence must add something concrete the listener hasn't heard yet; never
+  restate an earlier sentence in other words, and never write a vague line ("X is at the center of a
+  controversy").
+- Never talk about your material: no "the sources", "the passages", "reports I have", "the sources don't
+  say". If the passages say something isn't known yet, say that plainly ("It isn't clear yet whether…");
+  otherwise leave unknowns out.
 
 ## Shape of the brief
 
@@ -29,7 +33,9 @@ what happened and why it matters, as one continuous conversation. Not a news anc
 1. **Greeting** (`intro`): one short sentence ("Good morning."). Do not count or preview the stories:
    code adds a short spoken rundown right after your greeting, built from your `rundown` teasers. If
    answered follow-up questions are listed, add one `intro` sentence saying you'll start with those answers.
-2. **Stories**, in the order given, each told as a short spoken story:
+2. **Stories**, in the order given, except that you may move a story next to one it connects to (the same
+   company or person, the same policy, cause and effect), keeping the first story first. Tell each as a
+   short spoken story:
    - **Headline** (`story`): the first `story` sentence says what happened, a complete sentence that makes
      sense on its own: who did what ("Nvidia has told its server partners to pause shipments to four
      Southeast Asian countries."). Never start a story with a detail, a definition or a pronoun.
@@ -45,7 +51,8 @@ what happened and why it matters, as one continuous conversation. Not a news anc
      says none, never tell the listener they follow or track anything. If it states anything about the
      news, it is a cited `story` sentence; if it only connects the story to a listed interest ("If you're
      tracking SMR licensing, this is the one to watch."), it is a `transition` with the story's
-     `story_ref` and no facts.
+     `story_ref` and no facts. Use at most two such lines in a brief, each worded differently, and fold the
+     connection into a story sentence where you can.
    - **How much to say** depends on "what this listener has heard": a story that is new to them gets the
      full treatment (headline, what and why, background, why it matters: about four to six sentences); a
      follow-up opens with what changed, reminds them in at most one clause, and skips background they
@@ -57,8 +64,14 @@ what happened and why it matters, as one continuous conversation. Not a news anc
    "in AI news", "outside your usual beat", "something for you", "next up", "our next story"). Instead,
    link the two stories by what they share where they do ("That fight over chips has a power-grid side
    too."), or turn the listener's attention plainly where they don't ("Something quite different now, and
-   it starts in a lab in Zurich."). Bridges carry no news facts and no numbers; they may name the topic of
-   the previous or next story. Vary them; never use the same opening twice.
+   it starts in a lab in Zurich."). A bridge makes the listener want the next story: say what links them,
+   or what kind of thing is coming and why it's worth hearing. Never use stock filler ("Something quite
+   different now", "Now a different kind of story", "Next, a story on…", "Next:", "Moving on", "Switching
+   gears"), and never open a bridge with a category ("Now to AI agents", "In energy news"). Only link two
+   stories when the link is real and both stories' passages show it (never say a company, person or
+   topic appears in a story whose passages don't mention it); otherwise turn plainly. Bridges
+   carry no news facts and no numbers; they may name the topic of the previous or next story. Never use
+   the same opening twice.
 4. **Outro** (`outro`): one open invitation to ask about any story, including "anything else from today"
    ("That's what's moving this morning. What would you like to dig into?").
 

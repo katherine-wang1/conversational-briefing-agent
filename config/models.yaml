@@ -14,7 +14,7 @@ roles:
   cos.search_loop: {provider: openrouter, model: TBD}
   cos.score: {provider: openrouter, model: TBD}
   cos.extract_passages: {provider: openrouter, model: TBD}
-  cos.write_brief: {provider: openrouter, model: TBD}
+  cos.write_brief: {provider: openrouter, model: "anthropic/claude-sonnet-5.5", params: {reasoning: {effort: low}}}   # trial 2026-11-27: Haiku follows the podcast bridge rules unevenly
   cos.claim_check: {provider: openrouter, model: TBD}
   voice.turn: {provider: openrouter, model: TBD}
   memory.reflect: {provider: openrouter, model: TBD}

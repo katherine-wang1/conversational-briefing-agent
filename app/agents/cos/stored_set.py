@@ -47,9 +47,9 @@ def _story(
         urls=list(dict.fromkeys(cand.urls))[:MAX_URLS] if cand else [],
         in_brief=in_brief,
         relevance=score.relevance if score else None,
-        importance=float(score.importance) if score else (
-            float(item.digest_importance) if item and item.digest_importance is not None else None
-        ),
+        importance=float(score.importance)
+        if score
+        else (float(item.digest_importance) if item and item.digest_importance is not None else None),
         why=[w for w in dict.fromkeys([*why, *because]) if w],
         note_status=note_status_for(ref),  # type: ignore[arg-type]
     )
@@ -95,8 +95,14 @@ def build_story_set(
             continue
         add(
             _story(
-                st.story_ref, len(out) + 1, pool.get(st.story_ref), scores.get(st.story_ref),
-                in_brief=True, why=[st.why_tag], headline=st.headline, beat=beats.get(st.story_ref),
+                st.story_ref,
+                len(out) + 1,
+                pool.get(st.story_ref),
+                scores.get(st.story_ref),
+                in_brief=True,
+                why=[st.why_tag],
+                headline=st.headline,
+                beat=beats.get(st.story_ref),
             ),
             force=True,  # a `size` smaller than the brief still keeps the whole brief
         )
@@ -104,15 +110,23 @@ def build_story_set(
     for sel in selected:
         add(
             _story(
-                sel.story_ref, len(out) + 1, pool.get(sel.story_ref), scores.get(sel.story_ref),
-                in_brief=False, why=[sel.why_tag, "cut from the brief"], beat=beats.get(sel.story_ref),
+                sel.story_ref,
+                len(out) + 1,
+                pool.get(sel.story_ref),
+                scores.get(sel.story_ref),
+                in_brief=False,
+                why=[sel.why_tag, "cut from the brief"],
+                beat=beats.get(sel.story_ref),
             )
         )
     for item, _score in extra:
         it = pool.get(item.story_ref)
         add(
             _story(
-                item.story_ref, len(out) + 1, it, scores.get(item.story_ref),
+                item.story_ref,
+                len(out) + 1,
+                it,
+                scores.get(item.story_ref),
                 in_brief=False,
                 why=[extra_why, it.origin if it else ""],
                 beat=item.beat or beats.get(item.story_ref),

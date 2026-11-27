@@ -175,15 +175,15 @@ P = {
 
 async def test_claim_check_missing_verdict_counts_as_unsupported():
     client = FakeModelClient({"cos.claim_check": {"checks": []}})
-    out = await check_claims(cc(client), [ToCheck("s1", "Acme released X-1.", ["p1"])], P)
+    out = await check_claims(cc(client), [ToCheck("s1", "Acme shipped X-1 to everyone.", ["p1"])], P)
     assert out[0].text is None and out[0].record.dropped
 
 
 async def test_claim_check_budget_exhaustion_keeps_unchecked():
     client = FakeModelClient({"cos.claim_check": claim_handler()})
     c = cc(client, tokens=5)
-    out = await check_claims(c, [ToCheck("s1", "Acme released X-1.", ["p1"])], P)
-    assert out[0].text == "Acme released X-1." and out[0].checked is False
+    out = await check_claims(c, [ToCheck("s1", "Acme shipped X-1 to everyone.", ["p1"])], P)
+    assert out[0].text == "Acme shipped X-1 to everyone." and out[0].checked is False
     assert c.trace.degradations
 
 

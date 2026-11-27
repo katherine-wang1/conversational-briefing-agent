@@ -124,6 +124,8 @@ if [ ! -f .env ]; then
   ok "created .env from .env.example"
 fi
 envpy lint || die "fix the lines above in .env, then rerun."
+# Local runs keep agent traces (how each brief was built) in var/traces; scripts/rebrief.py prints them.
+[ -n "$(envpy get TRACE_DIR)" ] || envpy set TRACE_DIR var/traces
 
 # An empty variable exported in the shell would hide the value in .env: don't pass those on.
 for k in $(grep -oE '^[A-Za-z_][A-Za-z0-9_]*=' .env | tr -d '='); do
