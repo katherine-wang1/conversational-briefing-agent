@@ -346,7 +346,7 @@ def judge(h: SearchHit, entities=("SAP",), titles=(HEAD,), **kw: Any):
 def test_accepts_close_match_on_open_domain_in_window():
     v = judge(hit("https://cnbc.com/sap-jobs", "SAP to cut at least 10,000 jobs in AI restructuring"))
     assert v.accepted, v.reason
-    assert v.reason.startswith("title ") and "entities 1/1" in v.reason
+    assert v.reason.startswith("title ") and "entities 2/2" in v.reason  # SAP and the figure 10,000
 
 
 def test_rejects_paywalled_domain_even_on_perfect_match():
@@ -377,6 +377,71 @@ def test_rejects_out_of_window_and_undated():
     ).accepted
 
 
+def test_single_entity_story_needs_a_strong_title_match():
+    head = "Massachusetts to require new data centers to use clean energy"
+    weak = judge(
+        hit(
+            "https://wbur.org/x", "Ballot question would put major restrictions on Massachusetts data centers"
+        ),
+        entities=("Massachusetts",),
+        titles=(head,),
+    )
+    assert not weak.accepted and weak.reason.startswith("entities 1/1")
+    strong = judge(
+        hit("https://wbur.org/y", "Massachusetts will require new data centers to use clean energy"),
+        entities=("Massachusetts",),
+        titles=(head,),
+    )
+    assert strong.accepted
+
+
+def test_redirect_links_are_judged_by_where_they_land():
+    from app.agents.cos.free_coverage import landed_ok
+
+    g = "https://www.google.com/url?opi=1&q=CAESxyz"
+    assert landed_ok(g, "https://ca.news.yahoo.com/a.html", PAYWALL, FC) == (
+        "https://ca.news.yahoo.com/a.html",
+        None,
+    )
+    url, why = landed_ok(g, "https://www.reuters.com/a", PAYWALL, FC)
+    assert why and "paywalled" in why
+    assert landed_ok(g, None, PAYWALL, FC)[1] == "redirect did not reach a publisher"
+    assert landed_ok("https://cnbc.com/a", "https://cnbc.com/a", PAYWALL, FC) == ("https://cnbc.com/a", None)
+
+
+async def test_redirect_hit_is_recorded_under_the_publisher_url_it_landed_on():
+    gurl = "https://www.google.com/url?opi=1&q=CAESabc"
+    landed = "https://ca.news.yahoo.com/sap-cuts-1.html"
+    d = doc(gurl, OPEN_TEXT).model_copy(update={"canonical_url": landed})
+    client = FakeModelClient({"newsroom.story_note": quoting_handler})
+    hits = [hit(gurl, "SAP to cut at least 10,000 jobs in AI restructuring")]
+    run = await write_story_notes(
+        digest(entry([BBG], [BBG_SNIP])),
+        client,
+        {"fetch": paywalled_fetch({gurl: d}), "search": Search(hits)},
+        settings=notes_settings(),
+        now=NOW,
+    )
+    src = next(s for s in run.notes[0].sources if s.found_via)
+    assert (
+        src.status == "ok"
+        and src.url == landed
+        and src.listed_url == gurl
+        and src.outlet == "yahoo.com"
+    )
+    # landing on a paywalled domain is rejected, never used
+    d2 = d.model_copy(update={"canonical_url": "https://www.reuters.com/x"})
+    run = await write_story_notes(
+        digest(entry([BBG], [BBG_SNIP])),
+        client,
+        {"fetch": paywalled_fetch({gurl: d2}), "search": Search(hits)},
+        settings=notes_settings(),
+        now=NOW,
+    )
+    src = next(s for s in run.notes[0].sources if s.found_via)
+    assert src.status == "paywalled" and run.notes[0].status == "summary"
+
+
 def test_rejects_when_too_few_entities_named():
     ents = ("Netherlands", "ASML", "MATCH Act")
     head = "Dutch government to resist US MATCH Act restricting ASML sales to China"
@@ -404,6 +469,7 @@ def test_already_tried_url_is_rejected_and_primary_sources_are_recognised():
     assert primary_hint("https://www.ferc.gov/news/x", [])
     assert primary_hint("https://www.prnewswire.com/news-releases/x", [])
     assert not primary_hint("https://cnbc.com/x", ["SAP"])
+    assert not primary_hint("https://www.google.com/url?q=CAES", ["Google"])  # a redirect, not Google's site
 
 
 def test_query_and_entities():
@@ -411,7 +477,8 @@ def test_query_and_entities():
         "US chip curbs and distillation crackdown delay Chinese AI models; Z.ai's GLM-5.5 slips"
     )
     assert q == "US chip curbs and distillation crackdown delay Chinese AI models"
-    assert key_entities(["US", "AI", "SAP"], "x") == ["SAP"]  # generic entities dropped
+    assert key_entities(["US", "AI", "SAP", "Bloomberg"], "x") == ["SAP"]  # generic and outlet names dropped
+    assert key_entities(["SAP"], "SAP to cut 10,000 jobs in 2027, 9% of staff") == ["SAP", "10,000"]
     assert "Britain" in key_entities([], "Britain's grid operator makes record calls for extra power")
     assert content_matches("Jensen Huang returned as chief", ["Jensen Huang"], FC)
     assert content_matches("Mr. Huang returned", ["Jensen Huang"], FC)  # distinctive last name

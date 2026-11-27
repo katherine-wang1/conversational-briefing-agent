@@ -51,9 +51,11 @@ NOT_SOURCES = (
     "youtube.com",
     "tiktok.com",
     "threads.net",
-    "msn.com",  # mostly syndicated wire copy behind a script wall; the extractor gets little text
-    "yahoo.com/news/videos",
+    "tavily.com",  # the search provider's own company "knowledge" pages
 )
+# Search-result redirect links (Tavily's news results are often Google redirects whose target is encoded):
+# fetched like any link, then judged again by the publisher URL they land on (`landed_ok`).
+REDIRECT_PREFIXES = ("google.com/url",)
 PRESS_WIRES = ("prnewswire.com", "businesswire.com", "globenewswire.com", "accessnewswire.com")
 GOV_SUFFIXES = (".gov", ".gov.uk", ".gouv.fr", ".europa.eu", ".gc.ca", ".gov.au", ".go.jp", ".mil")
 GENERIC_ENTITIES = frozenset(
@@ -75,6 +77,22 @@ GENERIC_ENTITIES = frozenset(
         "japan",
         "india",
         "world",
+        # outlets: the newsroom sometimes lists the reporting outlet as an entity ("Bloomberg")
+        "bloomberg",
+        "reuters",
+        "financial times",
+        "ft",
+        "wall street journal",
+        "wsj",
+        "new york times",
+        "the new york times",
+        "nyt",
+        "the information",
+        "nikkei",
+        "nikkei asia",
+        "axios",
+        "cnbc",
+        "techcrunch",
     }
 )
 _STOP = frozenset(
@@ -90,9 +108,9 @@ class FreeCoverageSettings(BaseModel):
     max_searches: int = 25  # per story-notes run (one digest); C6 is bounded by the user's search budget
     max_results: int = 8
     max_fetches: int = 2  # accepted hits fetched per story until one gives text
-    min_title_similarity: float = 50.0  # rapidfuzz 0-100 (mean of token_set and token_sort ratios)
-    strong_title_similarity: float = 80.0  # at or above: one entity is enough
-    min_entities: int = 2  # entities named in the hit (capped by how many distinctive ones the story has)
+    min_title_similarity: float = 60.0  # rapidfuzz 0-100 (mean of token_set and token_sort ratios)
+    strong_title_similarity: float = 80.0  # at or above: one story entity named in the hit is enough
+    min_entities: int = 2  # below strong similarity: story entities (or headline figures) the hit must name
     window_hours: float = 36.0  # hits published from (story first seen - this) to now
     allow_undated: bool = False
     blocked_domains: list[str] = list(NOT_SOURCES)
@@ -158,7 +176,15 @@ def key_entities(entities: Sequence[str], headline: str) -> list[str]:
         n = _norm(e)
         if n and n not in GENERIC_ENTITIES and n not in {_norm(o) for o in out}:
             out.append(e)
-    if out:
+    # Distinctive figures in the headline ("10,000", "$67bn", "9%") count like entities.
+    for num in re.findall(r"\$?\d[\d,.]*\d(?:\s?(?:bn|billion|million|m|%))?|\$?\d+%?", headline or ""):
+        n = _norm(num)
+        digits = re.sub(r"\D", "", n)
+        if len(digits) < 2 or re.fullmatch(r"(19|20)\d\d", digits):  # not a year
+            continue
+        if n not in {_norm(o) for o in out}:
+            out.append(num)
+    if any(_norm(o) for o in out if not re.match(r"^\$?\d", o)):
         return out
     toks = re.findall(r"\b(?:[A-Z][\w&.-]+|\d[\d,.]*%?)", strip_outlet_suffix(headline))
     for t in toks:
@@ -204,6 +230,8 @@ def primary_hint(url: str, entities: Sequence[str], primary: Iterable[str] = ())
     """Looks like the primary source: a configured primary domain, a government / regulator site, a press
     release wire, or the site of a company the story names (sap.com for "SAP", news.sap.com too)."""
     host = url_host(url)
+    if _domain_in(url, REDIRECT_PREFIXES):  # a redirect link: the publisher is unknown until fetched
+        return False
     if _domain_in(url, primary) or _domain_in(url, PRESS_WIRES):
         return True
     if host.endswith(GOV_SUFFIXES) or host == "sec.gov" or host.endswith(".sec.gov"):
@@ -288,11 +316,12 @@ def judge_hit(
             return v
     v.title_sim = max((title_similarity(t, hit.title) for t in ref_titles if t), default=0.0)
     v.entities = entities_found(entities, f"{hit.title}\n{hit.snippet}")
-    need = required_entities(entities, st)
+    # Strong title match: one named entity confirms it. Weaker: at least `min_entities` (a story with one
+    # entity needs a strong title match; live check 2026-11-27: single-entity medium matches were other
+    # stories about the same place).
+    need = st.min_entities if v.title_sim < st.strong_title_similarity else min(1, len(entities))
     v.primary = primary_hint(hit.url, entities, primary)
-    if v.title_sim >= st.strong_title_similarity and (len(v.entities) >= min(1, need)):
-        v.accepted = True
-    elif v.title_sim >= st.min_title_similarity and len(v.entities) >= need:
+    if v.title_sim >= st.min_title_similarity and len(v.entities) >= need:
         v.accepted = True
     if v.accepted:
         v.reason = v.match_text(len(entities))
@@ -328,8 +357,12 @@ class CoverageSearch:
             "searched": self.searched,
             "error": self.error,
             "hits": len(self.verdicts),
-            "accepted": [{"url": v.url, "match": v.reason} for v in self.accepted],
-            "rejected": [{"url": v.url, "reason": v.reason} for v in self.verdicts if not v.accepted][:8],
+            "accepted": [{"url": v.url, "title": v.title[:160], "match": v.reason} for v in self.accepted],
+            "rejected": [
+                {"url": v.url, "title": v.title[:160], "reason": v.reason}
+                for v in self.verdicts
+                if not v.accepted
+            ][:10],
         }
 
 
@@ -384,6 +417,26 @@ async def search_free_coverage(
     return cs
 
 
+def is_redirect(url: str) -> bool:
+    return _domain_in(url, REDIRECT_PREFIXES)
+
+
+def landed_ok(
+    requested: str, final: str | None, paywall: Iterable[str], st: FreeCoverageSettings
+) -> tuple[str, str | None]:
+    """(source URL, rejection reason or None) for a fetched hit: a redirect link counts as the publisher
+    URL it landed on, which must pass the same domain checks as a hit (a paywall stays a paywall)."""
+    if not is_redirect(requested):
+        return requested, None
+    if not final or is_redirect(final):
+        return requested, "redirect did not reach a publisher"
+    if _domain_in(final, paywall):
+        return final, f"redirect landed on paywalled domain {url_host(final)}"
+    if _domain_in(final, st.blocked_domains):
+        return final, f"redirect landed on {url_host(final)} (not a source)"
+    return final, None
+
+
 def search_unavailable(error: str | None) -> bool:
     """The search tool has no provider (or none at all): skip free coverage for the rest of the run."""
     e = (error or "").lower()
@@ -398,7 +451,9 @@ __all__ = [
     "content_matches",
     "coverage_query",
     "entities_found",
+    "is_redirect",
     "judge_hit",
+    "landed_ok",
     "key_entities",
     "primary_hint",
     "search_free_coverage",

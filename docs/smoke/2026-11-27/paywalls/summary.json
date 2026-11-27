@@ -1,0 +1,101 @@
+{
+ "day": "e2e-2026-11-27b",
+ "at": "2026-11-27T06:36:58.401788+00:00",
+ "beats": {
+  "ai": {
+   "digest_entries": 30,
+   "entries_with_snippet_text": 19,
+   "source_snippets": 76,
+   "before": {
+    "partial": 6,
+    "ok": 13,
+    "no_text": 11
+   },
+   "after": {
+    "partial": 9,
+    "ok": 16,
+    "summary": 5
+   },
+   "rescued": {
+    "snippets": 5,
+    "free_coverage": 6
+   },
+   "free_coverage_searches": 11,
+   "sources": {
+    "ok": 40,
+    "failed": 23,
+    "skipped": 1,
+    "paywalled": 19,
+    "snippet": 15
+   },
+   "newsroom_seconds": 0.0,
+   "newsroom_cost_usd": 0,
+   "notes_seconds": 36.4,
+   "notes_cost_usd": 0.0225,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 11
+  },
+  "energy": {
+   "digest_entries": 25,
+   "entries_with_snippet_text": 7,
+   "source_snippets": 47,
+   "before": {
+    "no_text": 10,
+    "ok": 12,
+    "partial": 3
+   },
+   "after": {
+    "summary": 6,
+    "ok": 13,
+    "no_text": 3,
+    "partial": 3
+   },
+   "rescued": {
+    "snippets": 6,
+    "free_coverage": 1
+   },
+   "free_coverage_searches": 10,
+   "sources": {
+    "paywalled": 6,
+    "failed": 15,
+    "snippet": 7,
+    "ok": 26
+   },
+   "newsroom_seconds": 0.0,
+   "newsroom_cost_usd": 0.0,
+   "notes_seconds": 24.7,
+   "notes_cost_usd": 0.0157,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 10
+  },
+  "physical_ai": {
+   "digest_entries": 25,
+   "entries_with_snippet_text": 0,
+   "source_snippets": 66,
+   "before": {
+    "ok": 16,
+    "partial": 9
+   },
+   "after": {
+    "ok": 16,
+    "partial": 9
+   },
+   "rescued": {},
+   "free_coverage_searches": 0,
+   "sources": {
+    "ok": 46,
+    "failed": 15
+   },
+   "newsroom_seconds": 0.0,
+   "newsroom_cost_usd": 0.0,
+   "notes_seconds": 31.9,
+   "notes_cost_usd": 0.0216,
+   "search_provider_calls_newsroom": 0,
+   "search_provider_calls_notes": 0
+  }
+ },
+ "seconds": 92.9,
+ "cost_usd": 0.0598,
+ "search_provider_calls": 21,
+ "search_provider_refused": 0
+}

@@ -33,6 +33,7 @@ from app.agents.cos.free_coverage import (
     FreeCoverageSettings,
     content_matches,
     key_entities,
+    landed_ok,
     search_free_coverage,
 )
 from app.agents.cos.llm import CallCtx, StructuredOutputFailure, call_structured
@@ -327,6 +328,14 @@ async def build_pack(
         try:
             doc = await fetch(tools, ctx, url=url, max_tokens=dcfg.tokens)
             extra = {"found_via": FOUND_VIA, "match": match[2]} if match else {}
+            if doc is not None and match:
+                # A search redirect link counts as the publisher URL it landed on (same domain checks).
+                final, why = landed_ok(url, doc.canonical_url, cfg.packs.paywall_domains, match[1])
+                if why:
+                    sub.trace.add("C6", "code", ok=False, url=url, rejected=why)
+                    doc = None
+                elif final != url:
+                    doc = doc.model_copy(update={"url": final, "source": url_host(final)})
             if doc is not None and match and not content_matches(doc.text, match[0], match[1]):
                 sub.trace.add("C6", "code", ok=False, url=url, rejected="page does not name the entities")
                 doc = None

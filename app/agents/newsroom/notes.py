@@ -45,7 +45,9 @@ from app.agents.cos.free_coverage import (
     CoverageSearch,
     FreeCoverageSettings,
     content_matches,
+    is_redirect,
     key_entities,
+    landed_ok,
     search_free_coverage,
     search_unavailable,
 )
@@ -56,6 +58,7 @@ from app.agents.cos.text import canonical_url, hn_item_id
 from app.agents.cos.tooling import ToolUnavailable, fetch, tool_ctx
 from app.agents.cos.trace import RunTrace
 from app.agents.cos.untrusted import sanitize, wrap
+from app.agents.newsroom.snippets import outlet_for
 from app.common.concurrency import gather_bounded
 from app.config import loader
 from app.contracts.common import BudgetExceeded, Mode, TokenBudget
@@ -237,7 +240,8 @@ class NoteOutcome:
 def _fetched_url(listed: str, doc: Document) -> str:
     """The publisher URL the document came from: `doc.url`, or its canonical URL when `doc.url` is still an
     aggregator redirect (fetch backends that resolve Google News links may report either)."""
-    if is_aggregator(doc.url) and doc.canonical_url and not is_aggregator(doc.canonical_url):
+    redirect = is_aggregator(doc.url) or is_redirect(doc.url)
+    if redirect and doc.canonical_url and not is_aggregator(doc.canonical_url):
         return doc.canonical_url
     return doc.url or listed
 
@@ -383,6 +387,13 @@ async def _free_coverage(
     for v in cs.accepted[: fc.max_fetches]:
         src, doc, _ = await _fetch_one(v.url, tools, ctx, st)
         src = src.model_copy(update={"found_via": FOUND_VIA, "match": v.reason, "title": v.title})
+        if doc is not None:
+            final, why = landed_ok(v.url, src.url, st.paywalled_domains or [], fc)
+            src = src.model_copy(update={"outlet": outlet_for(final) or src.outlet})
+            if why:
+                status = "paywalled" if "paywalled" in why else "failed"
+                src = src.model_copy(update={"status": status, "error": why})
+                doc = None
         if doc is not None and not content_matches(doc.text, keys, fc):
             src = src.model_copy(
                 update={"status": "failed", "error": "fetched page does not name the story's entities"}
