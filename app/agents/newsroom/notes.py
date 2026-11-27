@@ -7,7 +7,8 @@ Per digest entry:
    pages are discussion, not sources, and are left out. Paywalls are never bypassed.
 2. Fetch through the `fetch` tool (its live or replay backend; the code is the same), in waves: a failed,
    empty or too-short fetch moves on to the story's next URL until `max_sources_per_story` good sources
-   or `max_fetch_attempts` URLs are used.
+   or `max_fetch_attempts` URLs are used. Once a redirect comes back unresolved (today's live backend
+   cannot follow Google News links), the story's other redirects are skipped, not fetched.
 3. One `newsroom.story_note` call over the fetched text (wrapped as untrusted content). Every fact must
    cite sources that were fetched ok (by id S1, S2, ...) and carry a short quote; code drops source ids
    that were not fetched ok, and (with `require_quotes`) facts whose quote is in none of their cited
@@ -73,7 +74,7 @@ class StoryNotesSettings(BaseModel):
     concurrency: int = 6
     max_text_chars: int = 6000
     min_text_chars: int = 400
-    max_output_tokens: int = 1500
+    max_output_tokens: int = 2500
     require_quotes: bool = True
     reuse_ok_hours: float = 0  # >0: an "ok" note this recent (from `existing`) is kept, not rewritten
     paywalled_domains: list[str] | None = None
@@ -185,6 +186,7 @@ class NoteOutcome:
     seconds: float = 0.0
     facts_proposed: int = 0
     facts_dropped: int = 0
+    skipped_redirects: int = 0
     tokens_in: int = 0
     tokens_out: int = 0
 
@@ -298,7 +300,6 @@ async def write_note(
     t0 = time.monotonic()
     out = NoteOutcome(story_id=entry.story_id)
     urls = order_note_urls(entry.urls, paywall=st.paywalled_domains or [], primary=primary_domains())
-    urls = urls[: max(st.max_sources_per_story, st.max_fetch_attempts)]
     want = min(st.max_sources_per_story, len(urls))
     ctx = tool_ctx(
         mode=mode,
@@ -314,13 +315,27 @@ async def write_note(
     records: list[NoteSource] = []
     good: list[tuple[NoteSource, Document]] = []
     seen_docs: set[str] = set()
-    pos, exhausted = 0, False
-    while len(good) < want and pos < len(urls) and not exhausted:
-        wave = urls[pos : pos + want - len(good)]
-        pos += len(wave)
+    queue = list(urls)
+    attempts, exhausted = 0, False
+    # Once an aggregator redirect comes back unresolved (the fetch backend could not reach the publisher),
+    # the story's other redirects would too: skip them so the attempts go to the remaining URLs.
+    aggregator_dead, skipped_redirects = False, 0
+    while len(good) < want and queue and attempts < st.max_fetch_attempts and not exhausted:
+        wave: list[str] = []
+        while queue and len(wave) < min(want - len(good), st.max_fetch_attempts - attempts):
+            u = queue.pop(0)
+            if aggregator_dead and is_aggregator(u):
+                skipped_redirects += 1
+                continue
+            wave.append(u)
+        if not wave:
+            break
+        attempts += len(wave)
         done = await gather_bounded([lambda u=u: _fetch_one(u, tools, ctx, st) for u in wave], len(wave))
         for u, (src, doc, budget_out) in zip(wave, done, strict=True):
             exhausted = exhausted or budget_out
+            if is_aggregator(u) and doc is None and is_aggregator(src.url) and src.status != "skipped":
+                aggregator_dead = True
             cc.trace.add(
                 STEP,
                 "tool",
@@ -342,6 +357,9 @@ async def write_note(
             if doc is not None:
                 good.append((src, doc))
 
+    out.skipped_redirects = skipped_redirects
+    if skipped_redirects:
+        cc.trace.add(STEP, "code", story_id=entry.story_id, skipped_unresolved_redirects=skipped_redirects)
     status = "no_text" if not good else ("ok" if len(good) >= want else "partial")
     base = dict(
         story_id=entry.story_id,

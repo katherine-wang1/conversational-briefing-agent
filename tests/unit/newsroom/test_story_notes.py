@@ -239,6 +239,19 @@ async def test_redirect_resolved_by_fetch_backend_keeps_listed_url_and_dedupes()
     assert note.facts and all(f.source_urls == [pub] for f in note.facts)
 
 
+async def test_unresolved_redirects_are_not_all_tried():
+    gns = [f"https://news.google.com/rss/articles/G{i}" for i in range(4)]
+    pw = "https://ft.com/content/x"
+    fetch = Fetch({g: doc(g, "") for g in gns}, errors={pw: "unavailable: HTTP 403"})
+    client = FakeModelClient({"newsroom.story_note": note_handler})
+    run = await write_story_notes(
+        digest(entry("s1", [*gns, pw])), client, {"fetch": fetch}, settings=settings(), now=NOW
+    )
+    assert fetch.calls == gns[:2] + [pw]  # first wave: two redirects, both unresolved; then the paywall
+    assert run.notes[0].status == "no_text" and run.outcomes[0].skipped_redirects == 2
+    assert [s.status for s in run.notes[0].sources] == ["failed", "failed", "paywalled"]
+
+
 async def test_model_failure_and_budget_write_no_note_but_other_stories_continue():
     a = "https://robotreport.com/acme"
     fetch = Fetch({a: doc(a, TEXT_A)})
