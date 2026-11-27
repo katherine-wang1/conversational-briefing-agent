@@ -53,6 +53,7 @@ from app.agents.newsroom.normalize import (
 )
 from app.agents.newsroom.prompts import Prompt, load_prompt
 from app.agents.newsroom.settings import Settings
+from app.agents.newsroom.snippets import collect_source_snippets
 from app.agents.newsroom.stories import story_id_for
 from app.agents.newsroom.trace import LlmCallRecord, NewsroomTrace, Trace, TraceStep
 from app.config import loader
@@ -1011,15 +1012,20 @@ async def run_editor_newsroom(
     above = [(g, e) for g, e in scored if e.importance >= st.newsroom.score_floor]
     ranked = sorted(above, key=lambda ge: (-ge[1].importance, -rules[ge[1].story_id], ge[1].story_id))
     ranked = ranked[: beat.digest_size]
-    entries = [
-        DigestEntry(
-            **e.model_dump(),
-            importance_rules=rules[e.story_id],
-            features=feats[e.story_id],
-            urls=url_order(g.items),
+    entries = []
+    for g, e in ranked:
+        urls = url_order(g.items)
+        entries.append(
+            DigestEntry(
+                **e.model_dump(),
+                importance_rules=rules[e.story_id],
+                features=feats[e.story_id],
+                urls=urls,
+                # The publishers' own headlines and feed summaries, verbatim: citable at summary level
+                # when the articles can't be fetched (story notes, C6). Code only; no model output.
+                source_snippets=collect_source_snippets(g.items, urls, source_type=sources.type),
+            )
         )
-        for g, e in ranked
-    ]
     digest_id = (
         f"{beat_id}-{at:%Y%m%dT%H%MZ}-"
         + hashlib.sha256(f"{run_id}|{beat_id}|{at.isoformat()}|{version}".encode()).hexdigest()[:8]

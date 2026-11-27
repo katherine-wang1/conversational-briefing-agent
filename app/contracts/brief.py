@@ -66,6 +66,10 @@ class Passage(Strict):
     text: str  # verbatim
     char_start: int
     char_end: int
+    # Additive (2026-11-27, paywalls). "publisher_summary": the outlet's own headline and feed summary
+    # (the article could not be fetched); writers attribute it to `source` and add no detail. None = text
+    # from a fetched document (or an older pack).
+    kind: Literal["publisher_summary"] | None = None
 
 
 class Fact(Strict):

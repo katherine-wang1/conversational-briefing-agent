@@ -8,6 +8,12 @@ and related prior stories.
 Passages are never invented: a passage whose text is not found verbatim in the document is dropped.
 If extraction fails (budget, bad output) the document's lead is used as a verbatim passage. If fetching
 fails, the search-result snippet (verbatim from the search provider) is used when one exists.
+
+A digest story none of whose URLs gives text (paywalls, bot blocks): one search for free coverage of the
+same event (`app/agents/cos/free_coverage.py`, charged to the user's search budget); an accepted hit whose
+fetched text names the story's entities is extracted like any document. Still short of documents: the
+publishers' own headline + feed summary (`DigestEntry.source_snippets`) become `publisher_summary`
+passages, so the writer can say "The Financial Times reports that …" and C8 checks it against those words.
 """
 
 from __future__ import annotations
@@ -22,10 +28,17 @@ from urllib.parse import urlsplit
 from pydantic import BaseModel
 
 from app.agents.cos.config import CosConfig, PacksConfig
+from app.agents.cos.free_coverage import (
+    FOUND_VIA,
+    FreeCoverageSettings,
+    content_matches,
+    key_entities,
+    search_free_coverage,
+)
 from app.agents.cos.llm import CallCtx, StructuredOutputFailure, call_structured
 from app.agents.cos.pool import PoolItem
 from app.agents.cos.prompts import load_prompt
-from app.agents.cos.text import canonical_url, hn_item_id, jaccard, tokens
+from app.agents.cos.text import canonical_url, hn_item_id, jaccard, short_hash, tokens
 from app.agents.cos.tooling import ToolUnavailable, fetch, hn_comments, tool_ctx
 from app.agents.cos.trace import RunTrace
 from app.agents.cos.untrusted import sanitize, wrap
@@ -34,6 +47,7 @@ from app.config import loader
 from app.contracts.agent_io import ShownStory
 from app.contracts.brief import CandidateScores, Fact, Passage, RelatedStory, SourcePack
 from app.contracts.common import BudgetExceeded, Mode
+from app.contracts.digest import SourceSnippet
 from app.contracts.sources import Document, SearchHit
 from app.contracts.tools import Tool
 
@@ -132,6 +146,32 @@ def snippet_passage(hit: SearchHit) -> Passage | None:
         char_start=0,
         char_end=len(hit.snippet),
     )
+
+
+def publisher_passage(sn: SourceSnippet) -> Passage | None:
+    """The outlet's own headline + feed summary as one verbatim passage, marked `publisher_summary`."""
+    if not sn.snippet.strip():
+        return None
+    text = f"{sn.title}\n{sn.snippet}"
+    doc_id = f"pub:{short_hash(sn.url)}"
+    return Passage(
+        passage_id=passage_id(doc_id, 0, len(text)),
+        doc_id=doc_id,
+        url=sn.url,
+        source=sn.outlet or url_host(sn.url),
+        published_at=sn.published_at,
+        text=text,
+        char_start=0,
+        char_end=len(text),
+        kind="publisher_summary",
+    )
+
+
+@lru_cache(maxsize=1)
+def free_coverage_settings() -> FreeCoverageSettings:
+    """Thresholds shared with story notes: `story_notes.free_coverage` in config/agent.yaml."""
+    raw = (loader.agent().get("story_notes") or {}).get("free_coverage") or {}
+    return FreeCoverageSettings(**raw)
 
 
 async def extract_document(
@@ -268,7 +308,9 @@ async def build_pack(
     )[: max(n_docs, cfg.packs.max_fetch_attempts)]
     limit = concurrency if concurrency is not None else cfg.concurrency.pack_fetches
 
-    async def one(url: str) -> _UrlOutcome:
+    async def one(url: str, match: tuple[list[str], FreeCoverageSettings, str] | None = None) -> _UrlOutcome:
+        """Fetch + extract one URL. `match` (free coverage): the fetched text must name the story's
+        entities, and the trace records how the URL was found."""
         sub = cc.child()
         out = _UrlOutcome(url=url, trace=sub.trace)
         ctx = tool_ctx(
@@ -284,7 +326,11 @@ async def build_pack(
         doc = None
         try:
             doc = await fetch(tools, ctx, url=url, max_tokens=dcfg.tokens)
-            sub.trace.add("C6", "tool", tool="fetch", url=url, ok=doc is not None)
+            extra = {"found_via": FOUND_VIA, "match": match[2]} if match else {}
+            if doc is not None and match and not content_matches(doc.text, match[0], match[1]):
+                sub.trace.add("C6", "code", ok=False, url=url, rejected="page does not name the entities")
+                doc = None
+            sub.trace.add("C6", "tool", tool="fetch", url=url, ok=doc is not None, **extra)
         except BudgetExceeded:
             out.budget_exceeded = True
             sub.trace.degraded("C6", "fetch budget exceeded", url=url)
@@ -309,6 +355,48 @@ async def build_pack(
         good += sum(o.good for o in done)
         if any(o.budget_exceeded for o in done):
             break
+    # A digest story with no text from any of its URLs: one search for free coverage of the same event.
+    if (
+        good == 0
+        and cfg.packs.free_coverage_search
+        and not item.ref.startswith("u:")
+        and "search" in tools
+        and not any(o.budget_exceeded for o in outcomes)
+    ):
+        fc = free_coverage_settings()
+        ctx = tool_ctx(
+            mode=mode,
+            now=now,
+            run_id=cc.run_id,
+            user_id=cc.user_id,
+            budget=cc.budget,
+            role="cos.free_coverage",
+            step="C6",
+            job_id=cc.job_id,
+        )
+        cs = await search_free_coverage(
+            tools,
+            ctx,
+            headline=item.candidate.headline,
+            ref_titles=[s.title for s in item.source_snippets],
+            entities=item.entities,
+            anchor=item.first_seen,
+            now=now,
+            paywall=cfg.packs.paywall_domains,
+            exclude_urls=[*item.candidate.urls, *urls],
+            primary=primary_domains(),
+            st=fc,
+        )
+        cc.trace.add(
+            "C6", "tool", tool="search", ok=cs.searched, story_ref=item.ref, free_coverage=cs.summary()
+        )
+        keys = key_entities(item.entities, item.candidate.headline)
+        for v in cs.accepted[: fc.max_fetches]:
+            o = await one(v.url, (keys, fc, v.reason))
+            outcomes.append(o)
+            if o.good:
+                good += 1
+                break
     # Snippet fallback (verbatim from the search provider) only for the documents still missing.
     shortfall = n_docs - good
     passages: list[Passage] = []
@@ -325,6 +413,21 @@ async def build_pack(
                 shortfall -= 1
                 passages.append(sp)
                 cc.trace.degraded("C6", "fetch failed: snippet passage used", url=o.url)
+    # Still short: the publishers' own headline + feed summary for articles that were not fetched.
+    if shortfall > 0 and cfg.packs.max_publisher_snippets > 0:
+        fetched = {canonical_url(o.url) for o in outcomes if o.good}
+        used = 0
+        for sn in item.source_snippets:
+            if shortfall <= 0 or used >= cfg.packs.max_publisher_snippets:
+                break
+            pp = publisher_passage(sn) if canonical_url(sn.url) not in fetched else None
+            if pp is None:
+                continue
+            passages.append(pp)
+            used += 1
+            shortfall -= 1
+        if used:
+            cc.trace.degraded("C6", "no article text: publisher summary passages used", story_ref=item.ref)
 
     reaction, reaction_ids = None, []
     hn_urls = [u for u in item.candidate.urls if hn_item_id(u)]

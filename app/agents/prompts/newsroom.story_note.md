@@ -1,6 +1,6 @@
 ---
 role: newsroom.story_note
-version: 2
+version: 3
 step: 'story notes (after the newsroom digest; one call per story)'
 output: 'NoteDraft {facts: [{text, sources: [source id], quote}], entities, context, why_it_matters, open_questions}'
 ---
@@ -23,6 +23,10 @@ Facts (the core of the note):
 - Never state news (events, numbers, dates, statements, decisions) that the sources do not contain, even if
   you believe it is true. If sources disagree, give both versions as separate facts with their sources.
 - Attribute claims that are a party's own account ("the company said", "according to the filing").
+- A source with `kind="publisher_summary"` is not the article: it is only the outlet's own headline and
+  feed summary (the article could not be read). Facts from it say who reports them ("The Financial Times
+  reports that…", "according to Bloomberg") and state no more than its words: no added numbers, names,
+  causes or outcomes. Expect only one to three facts from it.
 
 Entities: the people, companies, products, agencies and places central to the story, as named in the
 sources (full names, e.g. "Jensen Huang", "US Commerce Department"). At most 10.

@@ -13,8 +13,17 @@ Per digest entry:
    cite sources that were fetched ok (by id S1, S2, ...) and carry a short quote; code drops source ids
    that were not fetched ok, and (with `require_quotes`) facts whose quote is in none of their cited
    sources. `context` may use stable background knowledge; news claims stay cited.
-4. Nothing fetched: `status="no_text"`, headline only, no model call. Fewer good sources than wanted:
-   `status="partial"`. A failed model call (budget, invalid output) writes no note for that story.
+4. Every listed source paywalled, blocked or failed: one search for free coverage of the same event
+   (`app/agents/cos/free_coverage.py`; `free_coverage_search`, at most `free_coverage.max_searches` per run).
+   An accepted hit (open domain, close title + entity match, inside the story's window, and its fetched
+   text names the entities) is fetched and used as a normal source, recorded with
+   `found_via="free_coverage_search"`.
+5. Still fewer good sources than wanted: the publishers' own headline + feed summary
+   (`DigestEntry.source_snippets`) are added as lower-grade "snippet" sources that facts may cite
+   (quotes are checked against the snippet text like any source).
+6. Status: `ok` (enough fetched sources), `partial` (fewer), `summary` (no article text, snippets only: a
+   summary-level note whose facts are the outlets' own summaries), `no_text` (not even a usable snippet:
+   headline only, no model call). A failed model call (budget, invalid output) writes no note.
 
 Stories run concurrently (`story_notes.concurrency`); everything shares one `TokenBudget` per run.
 """
@@ -31,6 +40,15 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict
 
+from app.agents.cos.free_coverage import (
+    FOUND_VIA,
+    CoverageSearch,
+    FreeCoverageSettings,
+    content_matches,
+    key_entities,
+    search_free_coverage,
+    search_unavailable,
+)
 from app.agents.cos.llm import CallCtx, StructuredOutputFailure, call_structured
 from app.agents.cos.packs import domain_in, primary_domains, url_host
 from app.agents.cos.prompts import load_prompt
@@ -78,6 +96,10 @@ class StoryNotesSettings(BaseModel):
     require_quotes: bool = True
     reuse_ok_hours: float = 0  # >0: an "ok" note this recent (from `existing`) is kept, not rewritten
     paywalled_domains: list[str] | None = None
+    free_coverage_search: bool = True  # all listed sources failed: one search for free coverage
+    free_coverage: FreeCoverageSettings = FreeCoverageSettings()
+    snippet_sources: bool = True  # too few fetched sources: cite the publishers' own feed summaries
+    max_snippet_sources: int = 2
     budget: NotesBudget = NotesBudget()
 
     @classmethod
@@ -169,10 +191,29 @@ def quote_in(quote: str, text: str) -> bool:
 
 @dataclass
 class FetchedSource:
-    sid: str  # S1, S2, ... (ok sources only)
+    sid: str  # S1, S2, ... (ok and snippet sources)
     source: NoteSource
     text: str
     title: str | None = None
+
+    @property
+    def is_snippet(self) -> bool:
+        return self.source.status == "snippet"
+
+
+@dataclass
+class CoverageState:
+    """Free-coverage searches for one story-notes run (shared by its stories)."""
+
+    max_searches: int
+    used: int = 0
+    disabled: str | None = None  # why searching stopped for the run (no provider)
+
+    def take(self) -> bool:
+        if self.disabled or self.used >= self.max_searches:
+            return False
+        self.used += 1
+        return True
 
 
 @dataclass
@@ -189,6 +230,8 @@ class NoteOutcome:
     skipped_redirects: int = 0
     tokens_in: int = 0
     tokens_out: int = 0
+    free_coverage: dict | None = None  # the search's summary, when one ran
+    rescued_by: str | None = None  # "free_coverage" | "snippets" when the listed sources gave no text
 
 
 def _fetched_url(listed: str, doc: Document) -> str:
@@ -244,10 +287,38 @@ def render_payload(entry: DigestEntry, beat: str, sources: Sequence[FetchedSourc
         f"Sources ({len(sources)}):\n"
     )
     blocks = [
-        wrap(s.text, id=s.sid, url=s.source.url, outlet=s.source.outlet, title=sanitize(s.title or ""))
+        wrap(
+            s.text,
+            id=s.sid,
+            url=s.source.url,
+            outlet=s.source.outlet,
+            title=sanitize(s.title or ""),
+            kind="publisher_summary" if s.is_snippet else None,
+        )
         for s in sources
     ]
     return head + "\n\n".join(blocks)
+
+
+def snippet_sources(
+    entry: DigestEntry, good: Sequence[tuple[NoteSource, Document]], limit: int
+) -> list[tuple[NoteSource, str]]:
+    """Publisher snippets with a summary (not headline only) for articles that were not fetched, at most
+    `limit`: (source record, text = headline + summary, verbatim from the feed)."""
+    fetched = {canonical_url(s.url) for s, _ in good}
+    fetched |= {canonical_url(s.listed_url) for s, _ in good if s.listed_url}
+    out: list[tuple[NoteSource, str]] = []
+    for sn in entry.source_snippets:
+        if len(out) >= limit:
+            break
+        if not sn.snippet or canonical_url(sn.url) in fetched:
+            continue
+        text = f"{sn.title}\n{sn.snippet}"
+        src = NoteSource(
+            url=sn.url, outlet=sn.outlet or url_host(sn.url), status="snippet", title=sn.title, text=text
+        )
+        out.append((src, text))
+    return out
 
 
 def validate_facts(
@@ -278,6 +349,63 @@ def validate_facts(
     return out, dropped
 
 
+async def _free_coverage(
+    cc: CallCtx,
+    entry: DigestEntry,
+    tools: Mapping[str, Tool],
+    ctx: Any,
+    st: StoryNotesSettings,
+    *,
+    now: datetime,
+    tried: Sequence[str],
+) -> tuple[CoverageSearch, list[tuple[NoteSource, Document | None]]]:
+    """One free-coverage search for the story, then fetch accepted hits (primary-looking first) until one
+    gives text that also names the story's entities. Returns (search, [(source record, document)])."""
+    fc = st.free_coverage
+    cs = await search_free_coverage(
+        dict(tools),
+        ctx,
+        headline=entry.headline,
+        ref_titles=[s.title for s in entry.source_snippets],
+        entities=entry.entities,
+        anchor=entry.features.first_seen,
+        now=now,
+        paywall=st.paywalled_domains or [],
+        exclude_urls=[*entry.urls, *tried],
+        primary=primary_domains(),
+        st=fc,
+    )
+    cc.trace.add(
+        STEP, "tool", tool="search", ok=cs.searched, story_id=entry.story_id, free_coverage=cs.summary()
+    )
+    keys = key_entities(entry.entities, entry.headline)
+    out: list[tuple[NoteSource, Document | None]] = []
+    for v in cs.accepted[: fc.max_fetches]:
+        src, doc, _ = await _fetch_one(v.url, tools, ctx, st)
+        src = src.model_copy(update={"found_via": FOUND_VIA, "match": v.reason, "title": v.title})
+        if doc is not None and not content_matches(doc.text, keys, fc):
+            src = src.model_copy(
+                update={"status": "failed", "error": "fetched page does not name the story's entities"}
+            )
+            doc = None
+        cc.trace.add(
+            STEP,
+            "tool",
+            tool="fetch",
+            url=v.url,
+            ok=doc is not None,
+            status=src.status,
+            error=src.error,
+            story_id=entry.story_id,
+            found_via=FOUND_VIA,
+            match=v.reason,
+        )
+        out.append((src, doc))
+        if doc is not None:
+            break
+    return cs, out
+
+
 def _clean_list(xs: Iterable[str], limit: int) -> list[str]:
     out: list[str] = []
     for x in xs:
@@ -296,8 +424,10 @@ async def write_note(
     *,
     mode: Mode,
     now: datetime,
+    coverage: CoverageState | None = None,
 ) -> NoteOutcome:
     t0 = time.monotonic()
+    coverage = coverage or CoverageState(max_searches=st.free_coverage.max_searches)
     out = NoteOutcome(story_id=entry.story_id)
     urls = order_note_urls(entry.urls, paywall=st.paywalled_domains or [], primary=primary_domains())
     want = min(st.max_sources_per_story, len(urls))
@@ -360,7 +490,31 @@ async def write_note(
     out.skipped_redirects = skipped_redirects
     if skipped_redirects:
         cc.trace.add(STEP, "code", story_id=entry.story_id, skipped_unresolved_redirects=skipped_redirects)
-    status = "no_text" if not good else ("ok" if len(good) >= want else "partial")
+
+    # Every listed source paywalled, blocked or failed: look once for free coverage of the same event.
+    if not good and not exhausted and st.free_coverage_search and "search" in tools and coverage.take():
+        cs, extra = await _free_coverage(cc, entry, tools, ctx, st, now=now, tried=[r.url for r in records])
+        out.free_coverage = cs.summary()
+        if cs.error and search_unavailable(cs.error):
+            coverage.disabled = cs.error
+        records += [src for src, _ in extra]
+        good += [(src, doc) for src, doc in extra if doc is not None]
+        if good:
+            out.rescued_by = "free_coverage"
+    want = max(want, 1)
+
+    snippets: list[tuple[NoteSource, str]] = []
+    if st.snippet_sources and len(good) < want:
+        snippets = snippet_sources(entry, good, st.max_snippet_sources)
+        records += [src for src, _ in snippets]
+        if snippets:
+            cc.trace.add(STEP, "code", story_id=entry.story_id, snippet_sources=[s.url for s, _ in snippets])
+            if not good:
+                out.rescued_by = "snippets"
+    if good:
+        status = "ok" if len(good) >= want else "partial"
+    else:
+        status = "summary" if snippets else "no_text"
     base = dict(
         story_id=entry.story_id,
         digest_id=digest.digest_id,
@@ -370,15 +524,21 @@ async def write_note(
         status=status,
         created_at=now,
     )
-    if not good:
+    if not good and not snippets:
         cc.trace.degraded(STEP, "no source text: headline-only note", story_id=entry.story_id)
         out.note = StoryNote(**base)
         out.seconds = round(time.monotonic() - t0, 2)
         return out
+    if not good:
+        cc.trace.degraded(STEP, "no article text: summary-level note from snippets", story_id=entry.story_id)
 
     fetched = [
         FetchedSource(sid=f"S{i}", source=src, text=doc.text, title=doc.title)
         for i, (src, doc) in enumerate(good, start=1)
+    ]
+    fetched += [
+        FetchedSource(sid=f"S{len(good) + i}", source=src, text=text, title=src.title)
+        for i, (src, text) in enumerate(snippets, start=1)
     ]
     prompt = load_prompt(PROMPT)
     n_events = len(cc.trace.events)
@@ -450,6 +610,10 @@ class NotesRun:
             for s in n.sources:
                 src[s.status] = src.get(s.status, 0) + 1
         with_text = [n for n in written if n.status != "no_text"]
+        rescued: dict[str, int] = {}
+        for o in self.outcomes:
+            if o.rescued_by and not o.reused and o.note is not None:
+                rescued[o.rescued_by] = rescued.get(o.rescued_by, 0) + 1
         return {
             "digest_id": self.digest_id,
             "beat": self.beat,
@@ -467,6 +631,10 @@ class NotesRun:
             "tokens_in": self.budget.used_input_tokens,
             "tokens_out": self.budget.used_output_tokens,
             "fetches": self.budget.used_fetches,
+            "free_coverage_searches": sum(
+                1 for o in self.outcomes if o.free_coverage and o.free_coverage["searched"]
+            ),
+            "rescued": rescued,
             "seconds": self.seconds,
         }
 
@@ -502,6 +670,7 @@ async def write_story_notes(
         cache_namespace=cache_namespace or rid,
     )
     entries = list(digest.entries)[: limit if limit is not None else None]
+    coverage = CoverageState(max_searches=st.free_coverage.max_searches)
     t0 = time.monotonic()
 
     async def one(entry: DigestEntry) -> tuple[NoteOutcome, RunTrace]:
@@ -515,7 +684,8 @@ async def write_story_notes(
             ):
                 sub.trace.add(STEP, "code", story_id=entry.story_id, reused=prior.digest_id)
                 return NoteOutcome(story_id=entry.story_id, note=prior, reused=True), sub.trace
-        return await write_note(sub, entry, digest, tools, st, mode=mode, now=when), sub.trace
+        note = await write_note(sub, entry, digest, tools, st, mode=mode, now=when, coverage=coverage)
+        return note, sub.trace
 
     results = await gather_bounded([lambda e=e: one(e) for e in entries], max(1, st.concurrency))
     outcomes = []

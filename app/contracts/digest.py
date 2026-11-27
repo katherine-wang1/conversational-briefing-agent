@@ -48,10 +48,25 @@ class DigestEntryLLM(Strict):
     notes_for_editor: str | None = None
 
 
+class SourceSnippet(Strict):
+    """What a publisher itself gives us in a feed (RSS description, a Techmeme or front-page excerpt): its
+    headline and summary paragraph, verbatim. Lower grade than article text, but citable at summary level
+    when the article can't be fetched (paywall, bot block). Never written by a model."""
+
+    url: str  # the story URL as listed in DigestEntry.urls (may be a Google News redirect)
+    outlet: str | None = None  # publication name as a listener hears it ("The New York Times")
+    title: str
+    snippet: str = ""  # the publisher's summary; "" = headline only
+    published_at: datetime | None = None
+
+
 class DigestEntry(DigestEntryLLM):
     importance_rules: float | None = None  # rules-only score from features
     features: StoryFeatures
     urls: list[str]
+    # Additive (2026-11-27, paywalls): publisher snippets of the story's member items, deduped, at most 5.
+    # Digests written before this field load with [].
+    source_snippets: list[SourceSnippet] = []
 
 
 class Digest(Strict):

@@ -10,11 +10,12 @@ method is not available to this workstream; swap in `same_story` when it is).
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime
 
 from app.agents.cos.text import canonical_url, jaccard, short_hash, tokens
 from app.contracts.agent_io import ShownStory
 from app.contracts.brief import Candidate, CandidateOrigin
-from app.contracts.digest import Digest, DigestEntry
+from app.contracts.digest import Digest, DigestEntry, SourceSnippet
 from app.contracts.sources import SearchHit
 
 SAME_STORY_JACCARD = 0.5
@@ -42,6 +43,10 @@ class PoolItem:
     update_of: str | None = None
     snippets: dict[str, SearchHit] = field(default_factory=dict)  # canonical url -> hit (snippet passages)
     queries: list[str] = field(default_factory=list)
+    # Digest stories: the publishers' own headlines + feed summaries (C6 fallback when nothing fetches) and
+    # when the newsroom first saw the story (the free-coverage search window).
+    source_snippets: list[SourceSnippet] = field(default_factory=list)
+    first_seen: datetime | None = None
 
     @property
     def ref(self) -> str:
@@ -73,6 +78,8 @@ def _digest_item(e: DigestEntry, beat: str, origin: CandidateOrigin) -> PoolItem
         subtopics=list(e.subtopics),
         entities=list(e.entities),
         update_of=e.is_update_of,
+        source_snippets=list(e.source_snippets),
+        first_seen=e.features.first_seen,
     )
 
 
