@@ -1,0 +1,34 @@
+Good morning.
+You have six stories today: Nvidia pausing chip server shipments to Southeast Asia, XPeng's new robot architecture and humanoid plans, US chip curbs may delay the release of Zhipu's next model, GLM-5.5, AI agents running part of DeepMind's compute, Nvidia's free autoregressive image model, and Jensen Huang's resignation and reinstatement at Nvidia.
+First, the biggest story this morning.
+Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.
+TechCrunch, citing the Wall Street Journal, reports that partners including Dell and Super Micro were told to hold off for an unspecified period.
+Nvidia is assessing whether its regional partners are meeting U.S. export requirements.
+The reason for those countries is that Chinese companies have been tapping Nvidia chips remotely from data centers there.
+The U.S. Commerce Department closed that loophole earlier this month, reportedly grudgingly.
+The think tank Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.
+I can walk you through how that remote-access loophole worked, if you're curious.
+Next, a story from XPeng, the Chinese carmaker's push into robots.
+XPeng founder He Xiaopeng says robots must be designed with a software mindset, but hardware must come first.
+He also says robots need multiple speeds of thought, and the data they learn from needs variety, not merely volume.
+Now to China's AI models, which may be slowing down.
+Stricter U.S. curbs on remote access to Nvidia chips, plus U.S. crackdowns on model distillation, are reportedly stalling China's AI development.
+Moonshot AI reportedly expects its release interval for major models could roughly double from six months to more than a year if overseas data center access is blocked.
+Since you follow open models, this one is worth keeping an eye on.
+I can tell you how the Commerce regulation blocking remote chip rentals took effect, if you want the dates.
+Next, Google DeepMind's use of AI agents in its own research.
+According to The Decoder, AI agents now control part of the compute themselves to run experiments.
+The lab is still far from full recursive self-improvement, though.
+Since you follow agent memory, this is a useful signal of where agents are heading.
+I can share more on how those agents split the experiment work, if you're curious.
+Next, a new image model from Nvidia that is free to use.
+Nvidia released its image model Nemotron-Labs-Image-30B-A3B as a free open-weight model.
+Unlike the diffusion models that dominate image generation, it uses an autoregressive method, like large language models do.
+It can make photorealistic and illustration-style images, as well as images with text and infographics.
+Rendering text and diagrams has been a weak spot for diffusion models.
+Since you follow open models, you may want to look at the license, which allows only non-commercial use.
+Last, one from outside your usual beat: Nvidia's leadership.
+It's about Jensen Huang's resignation and reinstatement at Nvidia.
+Nvidia's board unanimously accepted Huang's resignation, and CFO Colette Kress is acting CEO while the company searches for a permanent one.
+Then Nvidia restored Huang as CEO after intervention from President Trump and Vice President JD Vance.
+Which of these would you like to dig into?

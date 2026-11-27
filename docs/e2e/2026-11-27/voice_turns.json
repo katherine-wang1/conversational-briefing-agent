@@ -1,0 +1,124 @@
+[
+ {
+  "utterance": "Tell me more about Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules. Why does it matter?",
+  "answer": [
+   {
+    "text": "On the Nvidia shipment pause story: Nvidia has told manufacturing partners, including Dell and Super Micro, to hold server shipments to Malaysia, Singapore, Thailand and Indonesia for an unspecified period.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules"
+     }
+    ]
+   },
+   {
+    "text": "Nvidia is checking whether its regional partners are meeting U.S. export requirements.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules"
+     }
+    ]
+   },
+   {
+    "text": "The reason these countries are in the spotlight is that Chinese companies have been tapping Nvidia chips remotely from data centers there, through a loophole the U.S. Commerce Department closed earlier this month, reportedly grudgingly.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules"
+     }
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules"
+     }
+    ]
+   },
+   {
+    "text": "That is why it matters: a large share of China's AI capacity may depend on access that Washington is now tightening, and it affects the hardware makers and data center operators in these four countries.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want me to walk through how that remote-access loophole worked, or go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: On the Nvidia shipment pause story: Nvidia has told manufacturing partners, including Dell and Super Micro, to hold server shipments to Malaysia, Singapore, Thailand and Indonesia for an unspecified period.  [techcrunch.com]",
+   "say #2: Nvidia is checking whether its regional partners are meeting U.S. export requirements.  [techcrunch.com]",
+   "say #3: The reason these countries are in the spotlight is that Chinese companies have been tapping Nvidia chips remotely from data centers there, through a loophole the U.S. Commerce Department closed earlier this month, reportedly grudgingly.  [techcrunch.com]",
+   "say #4: The Institute for Progress estimates remote data centers like these supply about 24 percent of China's AI computing power.  [techcrunch.com]",
+   "say #5: That is why it matters: a large share of China's AI capacity may depend on access that Washington is now tightening, and it affects the hardware makers and data center operators in these four countries.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2304 ms (first token 809 ms) \u00b7 21770 in (0 cached) / 415 out \u00b7 $0.0029 (session $0.0029)",
+   "say #6: Want me to walk through how that remote-access loophole worked, or go back to the brief?"
+  ],
+  "s": 2.3,
+  "signals": []
+ },
+ {
+  "utterance": "What else happened today that I should know about?",
+  "answer": [
+   {
+    "text": "Besides the six stories in your brief, my wider set includes a few others you may find useful.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Two headlines stand out.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "And the Dutch government says it will resist a proposed US rule, the MATCH Act, that would restrict ASML's sales to China.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "I can go deeper on either one, or go back to the brief.",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: Besides the six stories in your brief, my wider set includes a few others you may find useful.",
+   "say #2: Two headlines stand out.",
+   "say #3: Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas.",
+   "say #4: And the Dutch government says it will resist a proposed US rule, the MATCH Act, that would restrict ASML's sales to China.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1469 ms (first token 852 ms) \u00b7 21718 in (21584 cached) / 144 out \u00b7 $0.0003 (session $0.0003)",
+   "say #5: I can go deeper on either one, or go back to the brief."
+  ],
+  "s": 1.5,
+  "signals": []
+ }
+]

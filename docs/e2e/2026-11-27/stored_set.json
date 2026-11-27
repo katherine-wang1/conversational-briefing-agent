@@ -1,0 +1,400 @@
+{
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "local_date": "2026-11-27",
+ "stories": [
+  {
+   "story_ref": "ai-6b5d8d763b8d",
+   "rank": 1,
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules",
+   "summary": "Nvidia told manufacturing partners to halt shipments to four Southeast Asian countries after a new US rule requiring licenses for advanced AI chip purchases. GPU sellers are also restricting neocloud sales over Chinese remote access.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.3,
+   "importance": 92.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "physical_ai-3c4b617fb1c8",
+   "rank": 2,
+   "headline": "XPeng unveils Turing physical AI architecture (VLA 3.0) and IRON humanoid, targeting mass production in January 2027",
+   "summary": "XPeng showed its IRON general-purpose humanoid and Turing physical AI stack on stage. Reports say mass production is targeted for January 2027, with sales in Q2 2027 and a price near an EV median.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmJVeENXOVBLY3poZWRzei03czJiT3Fqc0F3UkxrSnhNb1V6QWtHSkswUUoxWVNUQkJiRVpaV3RCVE1ERnNDWkcwRUREUzZQQnRveUlzQXNvRF9yQUNPUndFOFNsZmFJNzdSMnM0cTZyaFptVUI2QkZJcm9xN2pWZzlua2NvOUhkTG9JcnJHOUtWTEpjbldoajZ2ejdwdDByekc5QkdDRlROakdmX2pmNnMzaGpTMnI3ZDVlOWd5Vm85YUU3VnNKWF9ha2IyX2k4RndaUlUzQnc5V3d2QjR3cTZCLV9UclczQkNIVHZNOFVTNVE5blZlZXFFaw?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM21oUW02dGtUXzNMNjdGYkZfTG11RlpLVXNKX1VaWkdDeVZQRWtBVHdtRXUtZ3Vjei1odzludXh6bTc3Si1BTWk4RnRGYjc2WUhIQ0JsTHRQRUhuaUpRRHhBOVU2YUlXcWRKWjhrZ1ptRE1QYVkzWXJEblpaQ01kNUtVaWhIU0R6UVNwLUxaLWZwZUxDZG04OXVKdkxoVnY3dGZMWmdqaVhDZEhmMkl4SW9QTXhiWXprZmlNZVhXZTMxUjdzUzR5a1lRWlJwTXQyTWNHRFlOZG9VRDFjUU9OcHRFQVlNRkU?oc=5",
+    "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kdFJ6X25FSGlHWjRMTW5rSFlDYWZzX1IwbEdzM2V0TlhDdDlvZFpCckNYM2hfU0RBb1REclNtRTZVNm5qOGp4cmZfNU1UMkE1c0x3YjI1c3FQVXdvOHllbFNoX0VFTTYzWDhWWUJ4X0w1VlpCOUF4YjczR2w2T00?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTFBoT3ZlS29LOE5CYTd5dXk2ZVZBLXVzWDNhb2gxd0ZPQnRrMTBVTEF6SVloSV9fTUQ2MUVIXy1HNmV4QklPSEdSRTRvTEZNSFptVXkzeHdnOFdmNTdLY2doZHdFQXQ5OUk2SkpNbTZ1Zlg1T29FUGlwNHhCTXpTdWc?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.2,
+   "importance": 88.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "ai-be41885503cc",
+   "rank": 3,
+   "headline": "US chip curbs and distillation crackdown delay Chinese AI models; Z.ai's GLM-5.5 reportedly slips",
+   "summary": "Reuters sources say US chip curbs and distillation curbs threaten Chinese AI development. Z.ai's flagship GLM-5.5 missed its November release and could slip to Q1 2027, and Moonshot expects longer gaps between releases.",
+   "beat": "ai",
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://bloomberg.com/news/videos/2026-11-27/counterpoint-on-china-s-ai-progress-under-chip-curbs-video",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.7,
+   "importance": 80.0,
+   "why": [
+    "for you",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:6bac70b0e180",
+   "rank": 4,
+   "headline": "AI agents now control part of Deepmind's compute for Gemini experiments, but recursive self-improvement remains distant - The Decoder",
+   "summary": "### The Decoder. # AI agents now control part of Deepmind's compute for Gemini experiments, but recursive self-improvement remains distant. **Google Deepmind lets AI agents run experiments on their own for the next Gemini model.** On the company's podcast, VP of Research Koray Kavukcuoglu, who leads",
+   "beat": "ai",
+   "urls": [
+    "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/"
+   ],
+   "in_brief": true,
+   "relevance": 0.7,
+   "importance": 65.0,
+   "why": [
+    "for you",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:c3a6c974e788",
+   "rank": 5,
+   "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions — BigGo Finance",
+   "summary": "U.S. semiconductor giant NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model. Its biggest distinguishing feature is that it adopts the autoregressive mechanism common in large language models (LLMs) rather than the diffusion models that dominat",
+   "beat": "ai",
+   "urls": [
+    "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572"
+   ],
+   "in_brief": true,
+   "relevance": 0.75,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-4fcd190539ae",
+   "rank": 6,
+   "headline": "Jensen Huang reinstated as Nvidia CEO after ethics breach; questions over governance",
+   "summary": "Trump says Huang is excited about a 'second term' at Nvidia after his reinstatement. The FT and others question the company's governance after Huang's code of conduct violation.",
+   "beat": "ai",
+   "urls": [
+    "https://ft.com/content/1da49f07-9558-4e37-88e8-cc2088c27a58?syn-25a6b1a6=1",
+    "https://ft.com/content/2a98efa0-2c2d-47e3-99a9-e00fbe699c34?syn-25a6b1a6=1",
+    "https://ft.com/content/6a01bdc9-f242-4272-b5e3-a147af5b125c?syn-25a6b1a6=1",
+    "https://nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+    "https://wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?mod=rss_Technology"
+   ],
+   "in_brief": true,
+   "relevance": 0.25,
+   "importance": 78.0,
+   "why": [
+    "outside your usual"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:f0feba66efd2",
+   "rank": 7,
+   "headline": "Travis Sachs on Instagram: \"Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Sea…\"",
+   "summary": "Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas. This is the first time factory-produced, modular advanced reactors will serve an industrial facility. The challenge: coordinating prefabricated components across multiple supplier",
+   "beat": "energy",
+   "urls": [
+    "https://www.instagram.com/reel/DgKugT7h3Nj"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:8ffa3ed30741",
+   "rank": 8,
+   "headline": "Why businesses are embracing ‘good enough’ open-weight AI—and how geopolitics could get in the way | Fortune",
+   "summary": "A handful of U.S. companies—including Thinking Machines, Reflection AI and Nvidia—are releasing open-weight models. Nvidia and its recently returned CEO, Jensen Huang, have also championed the technology. According to Reuters, Huang’s support for open-weight AI helped persuade Trump and Vice Preside",
+   "beat": "ai",
+   "urls": [
+    "https://fortune.com/2026/11/26/global-businesses-open-weight-ai"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:d3aa11d5f12e",
+   "rank": 9,
+   "headline": "NuScale Power (SMR) Draws Fresh Investor Focus As AI Power Demand Lifts SMR Appeal",
+   "summary": "The NRC approved small modular reactor design gives NuScale Power a licensing framework that Oklo does not yet have. This can shorten regulatory steps once projects move toward construction. For data center and AI users, that approval makes NuScale a potential supplier of standardized modules rather",
+   "beat": "energy",
+   "urls": [
+    "https://finance.yahoo.com/energy/articles/nuscale-power-smr-draws-fresh-141122724.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-404c6bdd6fca",
+   "rank": 10,
+   "headline": "Dutch government to resist US MATCH Act restricting ASML sales to China",
+   "summary": "The Netherlands says it will oppose and ask Washington not to enforce the proposed rules, calling them a threat to ASML.",
+   "beat": "ai",
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGdjRUN5YTg3WHZsaVA3dk9EVHB3TzkybFUwc2cyS29EOTBueVZIVjhUOFlqZzl6T2xpNER5aW53a2plOWdIaG1icGNfQWUxd01yVjJ5Vm10dVR4QTNGb1VoQS11SWRhNlJJb3ZoQmtrVGZMcUlxWjhjYXpjNmVBNV9kdGdhZnJMTW9vd3lqV2ZPUnFGN0tUczEtTTk5TVBWbWl3?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 72.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:6db1936c8601",
+   "rank": 11,
+   "headline": "Causal Episodic Memory for Feedback-Driven Agent Repair",
+   "summary": "Abstract. LLM agents that repair failures often discard successful corrections, forcing later episodes to rediscover similar solutions.",
+   "beat": "ai",
+   "urls": [
+    "https://aclanthology.org/2026.realm-1.70"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f06d131d6631",
+   "rank": 12,
+   "headline": "The geopolitics of open-access AI models: Technology, influence and the lobbying battle in Washington - The Times of India",
+   "summary": "in an open letter named 'Open Weights and American AI Leadership', is pressing Washington to resist premature restrictions, maintaining that wider distribution can stimulate competition, lower barriers to innovation and extend American technological influence. Yet the companies backing this position",
+   "beat": "ai",
+   "urls": [
+    "https://timesofindia.indiatimes.com/technology/aiq/the-geopolitics-of-open-access-ai-models-technology-influence-and-the-lobbying-battle-in-washington/articleshow/136186458.cms"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:cb81d14cfc07",
+   "rank": 13,
+   "headline": "Distilling Kimi-K3.1-Pro Into Qwen3.8-27B: 93% for $260 | explainx.ai Blog",
+   "summary": "Together AI says it fixed a small model's blind spot with a few hundred dollars of compute. Qwen3.8-27B, a popular small open model, answered in Thai when asked to translate English into Lao. After training a LoRA adapter on about 3,800 Lao translations from Kimi-K3.1-Pro, the model wrote Lao on eve",
+   "beat": "ai",
+   "urls": [
+    "https://explainx.ai/blog/together-ai-distill-kimi-k3-1-pro-into-qwen3-8-27b-lao-translation-260-dollars-2026"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:5112dcc98dfd",
+   "rank": 14,
+   "headline": "Energy Northwest seeks NRC filing exemptions for Cascade SMR",
+   "summary": "For the broader reactor-development context, NNN has covered the Cascade-linked Xe-100 project in Indiana, the fuel arrangements X-energy has made with Centrus, and the Xe-100's UK design-assessment process. Those projects face different licensing and commercial steps. None resolves the application-",
+   "beat": "energy",
+   "urls": [
+    "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request"
+   ],
+   "in_brief": false,
+   "relevance": 0.65,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:9e760e85798d",
+   "rank": 15,
+   "headline": "𝗔𝗜 𝗔𝗴𝗲𝗻𝘁’𝘀 𝗠𝗲𝗺𝗼𝗿𝘆 is the most important piece of 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴, this is how we define it 👇 In general, the memory for an agent is something that we provide via… | Aurimas Griciūnas | 25 comments",
+   "summary": "Jugal Sheth2h The episodic piece is the one most agent stacks skip — they remember facts and forget what actually happened. Is that the type that breaks first in production? Abdullah M.2h Episodic memory goes wrong first. Storing every past action sounds useful, but the agent starts repeating old",
+   "beat": "ai",
+   "urls": [
+    "https://www.linkedin.com/posts/aurimas-griciunas_%F0%9D%97%94%F0%9D%97%9C-%F0%9D%97%94%F0%9D%97%B4%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%A0%F0%9D%97%B2%F0%9D%97%BA%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%86-is-the-most-activity-7531330749011079168-2Z61"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:ebc86becc2d3",
+   "rank": 16,
+   "headline": "Open-weight models are the hottest thing in AI. Are they right for you?",
+   "summary": "Image 31 Tanium’s Yang: New releases of open-weight models require organizations to expend resources on evaluation and testing. Photo: LinkedIn Executing open-weight models directly alongside operational databases or within containerized edge pods minimizes routing hops and rate limits. Distillati",
+   "beat": "ai",
+   "urls": [
+    "https://siliconangle.com/2026/11/25/open-weight-models-are-the-hottest-thing-in-ai-are-they-right-for-you"
+   ],
+   "in_brief": false,
+   "relevance": 0.7,
+   "importance": 30.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "rank": 17,
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "summary": "And now, just this week, a new engineering alliance between Sargent & Lundy and ENTRA1 Energy announced that it would be banding together to bring scalable SMR plants to grids around the globe. The initiative will be using NuScale's certified reactors, the first and only proprietary SMR design to re",
+   "beat": "energy",
+   "urls": [
+    "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.65,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:43c22bce363c",
+   "rank": 18,
+   "headline": "What is open-weight AI? Why Chinese model releases worry US firms and government",
+   "summary": "Open-weight AI models are large language models (LLMs) whose trained parameters, or \"weights\", are released for public download. Weights are the billions",
+   "beat": "ai",
+   "urls": [
+    "https://www.google.com/url?opi=89978449&q=CAESZAHEIkXX02-HNN9yWPjSPPSURLdFlaVbJi08m9HVXB_QrR2g6gfZrMLfjl-icXlB0kEboqNLj1N24kbAeA01KIQUpTSFDGQ3XiY5H5nInxwu3gkDoBHk_d_244J8XTNOvhy67NI&sa=U&uoh=3&ved=2ahUKEwj-9YmgxaeYAxUIkmoFHaQzGwUQxfQBegQIAxAC&usg=AOvVaw3CjxqgSylKgKb8jxqeOxUn",
+    "https://www.google.com/url?opi=89978449&q=CAESlQEBxCJF1__ak7K51xLBOgLYs-x7olW_5xGH1nCt4hteNIdaYw0QNv0Xgp4BsXazacNMiobx80fTXtbbK2zCkurasEUUFMvIqHIaLAZiFxb6Mvr9qZJexuaplxtZZQ_7ib9SsyTZ7fsldYx7QILWYPqb_2lxnhxlGAl6hRlYqiikY4ZrbqLExD-9lBxWoniEw_OWfkfZrw&sa=U&uoh=3&ved=2ahUKEwj-9YmgxaeYAxUIkmoFHaQzGwUQxfQBegQIBRAC&usg=AOvVaw3Onp1GBBw0V_P4RWAr9ixR",
+    "https://www.google.com/url?opi=89978449&q=CAESpQEBxCJF123ryZmUpAtpF7P29YtHO5etp9ACtCClkJPhOmaJbXIERoymRfFxC72P8Ukf_FpcDvhSTtF891IZRKLwJc7BfDJceJnqvPy2fZhHkLkFZ_m-_sDOy342fZ5bEA_b6nlC2VjA9wzAXOqXnoPHBjS6fUMCnrR8mWoyM_s6K7NbdfofRSKMT8JmOlwaguVg5aQJo2z07rJ2g9ficbzeFWvASsI&sa=U&uoh=3&ved=2ahUKEwj-9YmgxaeYAxUIkmoFHaQzGwUQxfQBegQIBxAC&usg=AOvVaw1d-6VJDxAGwnsDafhwMnYy",
+    "https://www.google.com/url?opi=89978449&q=CAES7AEBxCJF118pGNctnjOwt8keFF6RHf9SPsClUdqBXlFFO2iVrShqO0dYVQY5rW1Q8zzw_V-l8CYO3AKFpoQYODjxXfWarX5SReCQ3okZ_Uhsvj-Xiydd73yl9fNyKRrlMfwuRq1q2ZkxDIPLRo3f_0iRix8NafVaoJrnRJhCG4Rj5oKa5oXR65g-AE_uOL06wOnDyOlPaw69fFM8cIVktEbeuQBqKI-_myw1ETiYx-zUHhFc3A4H1r4E4t2P921YbM5Y_A3HDQ6ldPU8X6PGxa5yZQo0W7L1QXufI-3Y3w0iWWRbCLzVppqNLLzmGA&sa=U&uoh=3&ved=2ahUKEwj-9YmgxaeYAxUIkmoFHaQzGwUQxfQBegQIBBAC&usg=AOvVaw2TKfU0xbstf22xjUy1BAQI",
+    "https://www.google.com/url?opi=89978449&q=CAESmQEBxCJF1_ngL8CzguoDviF9j4jD2PcjFESi7_gUEgKIRt1YLUWlfHHLV-tnr4S8rp3_8ffDIz1c-Wzzw6mla4lrITbEw2YnjbXk-3rnQDv0qJDIKZAmrGn30Azl5cQUoQUwry7MI1_83B5PKjQfk3AcljoCkTLGIrSFJ3AayS1ZEHV1D_Nop9Wdfib5CHmOPyb0UsqbGY9DoUQ&sa=U&uoh=3&ved=2ahUKEwj-9YmgxaeYAxUIkmoFHaQzGwUQxfQBegQICBAC&usg=AOvVaw3W_MYdsNwheMojLKx466aq"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:ea4591aaee04",
+   "rank": 19,
+   "headline": "1,000 Claude Agents Formalized Fermat's Last Theorem — Lance Martin, Anthropic｜AI Engineer — BigGo Finance",
+   "summary": "On CL Bench, an open-source continual-learning benchmark, Claude is asked 40 sequential questions about a database, each in a fresh session, with a memory directory it may write to between sessions. The instruction is deliberately bare — the directory is available, use it if you want. Results by mod",
+   "beat": "ai",
+   "urls": [
+    "https://finance.biggo.com/podcast/f39423827d7c5866"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:378e81228e00",
+   "rank": 20,
+   "headline": "Agentic AI Needs Boundaries Before it Needs Freedom - Infosecurity Magazine",
+   "summary": "Infosecurity Magazine Home » Opinions » Agentic AI Needs Boundaries Before it Needs Freedom. # Agentic AI Needs Boundaries Before it Needs Freedom. When an AI agent has permission to act, a mistake doesn’t just give you a bad answer. It may have called a system, sent a message, opened a ticket or mo",
+   "beat": "ai",
+   "urls": [
+    "https://www.infosecurity-magazine.com/opinions/agentic-ai-boundaries-freedom/"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  }
+ ],
+ "created_at": "2026-11-27T06:36:58.401788Z"
+}

@@ -15,7 +15,7 @@ the date and outcome.
 | D5 | Story-note model | Haiku: $0.0008 per note, about $0.09 per run of 80 once Google News links resolve; Sonnet about 20× (estimated, not measured). Live notes read well on Haiku (`docs/smoke/2026-11-27/story_notes/`) | Keep Haiku; compare Sonnet on ~10 stories after Google News resolution |
 | D6 | Story-note reuse (`story_notes.reuse_ok_hours: 6`) | Story ids persist across runs, so a recent ok note is kept instead of rewritten | Keep; set 0 to rewrite every run |
 | D7 | Notes inside the newsroom job vs their own job | A separate job would get its own retries; today a notes failure is logged and never fails the newsroom job | Keep in the newsroom job for now |
-| D8 | Mix of the per-user stored set (20) | It continues the brief's for-you ranking, which favours the user's own finds (no shared notes): in the smoke run 13 of 20 were the user's finds, 7 shared stories. Important shared stories with low relevance drop out (XPeng, importance 90, relevance 0.15, was in only because it was in the brief) | Rank by the higher of the for-you and big-news scores, or reserve about half for shared stories |
+| D8 | Mix of the per-user stored set (20) | It continues the brief's for-you ranking, which favours the user's own finds (no shared notes): in the smoke run 13 of 20 were the user's finds, 7 shared stories. Important shared stories with low relevance drop out (XPeng, importance 90, relevance 0.15, was in only because it was in the brief). In the e2e run, 13 of the 14 stories beyond the brief were the user's finds and only 1 was shared (`docs/e2e/2026-11-27/run_log.md`) | Rank by the higher of the for-you and big-news scores, or reserve about half for shared stories |
 | D9 | Paywalls leave many shared stories without a note | In the end-to-end run, 15 of 30 ai notes had no text: links resolve, but to Bloomberg, FT, NYT and Reuters, which return 401/403. The architecture decision says prefer a free outlet or the primary source for the same story, without circumventing paywalls | For a story with no fetchable source, one search by headline (Tavily now, Exa if keyed) for free coverage of the same event, accepted only on a close title match from a non-paywalled outlet. About 15–25 searches per run |
 
 ## Follow-ups
@@ -40,6 +40,7 @@ the date and outcome.
 | F17 | Paragraph-level citation for the brief: not done (weaker claim check, voice loses per-sentence sources, fragile sentence splitting). Revisit if the claim check finds its own supporting passages | part 3 |
 | F18 | Stored set: near-duplicate user finds ("Procedure Inference as Memory" twice) and low-value pages (a Yahoo Finance quote page) take slots; dedupe and filter per-user finds before ranking | `app/agents/cos/stored_set.py` |
 | F19 | Voice narrates its tool use ("I need the detail on that one, so I'll pull up the stored note") | `voice.turn.md` |
+| F20 | Voice states a stored story's headline as fact without a source (an Instagram reel in the e2e run); per-user finds need a source-quality filter (social posts, quote pages) | voice / stored set |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed

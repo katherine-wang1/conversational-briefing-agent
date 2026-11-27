@@ -1,0 +1,1149 @@
+{
+ "digest_id": "ai-20261127T0636Z-4f2fe536",
+ "run_id": "e2e-ai",
+ "beat": "ai",
+ "at": "2026-11-27T06:36:58.401788Z",
+ "version": "8c601224adb10f23",
+ "entries": [
+  {
+   "story_id": "ai-6b5d8d763b8d",
+   "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules",
+   "summary": "Nvidia told manufacturing partners to halt shipments to four Southeast Asian countries after a new US rule requiring licenses for advanced AI chip purchases. GPU sellers are also restricting neocloud sales over Chinese remote access.",
+   "subtopics": [
+    "chips-and-compute",
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Nvidia",
+    "US Commerce",
+    "Malaysia",
+    "Singapore",
+    "Thailand",
+    "Indonesia"
+   ],
+   "importance": 92,
+   "evidence": [
+    "covered by NYT, WSJ, TechCrunch",
+    "WSJ and NYT coverage"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 42.5,
+   "features": {
+    "n_items": 9,
+    "n_independent_domains": 6,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 9,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbDE3V09SWDZ4Z2Z6VVNSMzZROUxiTVd6OWtIdFVIbEZhcGVOemluR0JZNHhaMGxlM0NTd1kxOVloUDNNTE0xcXl6REprdlNfNVV4bnVZV2taR0x1NExNaWQ3R3U1VXhTZXVtYTVfUXBpNTZzeHZReVdHaF9nbEtrR2JYSktWVGp3NFlGdWtmTkZKS0JMeGNrekFVVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNXJLYnM0R2lJUkVNSmZSN3pZcmhXOGtHLWpjUXQ1bDU5bG9RNGF0UWIwUmtxOGNpLXdvcVUtcXpDTjhma1RPTEg3UWtXUlZ3OTNhNWZPdTBFbVFraE1XaFMwX3U3dnNRRTB3QldNNnAzZ3VlZXVKdDVxbnBCSFZzYXJ1U3ZhRXdQQVR2cElIX2xUeHFhMjJLVWpYY1hLOFRVVDFCX2FXYkZJNFkt?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSHM3RHJjQzd5X25CS3B2YkpjVm9fa092SkJjUmlWLS1xRi1EaFZNam9wTi1lbUpmTXdPeVRaYXdjM2hnT2dLenQyQXVtOHZzcDJ5SkZSeGdlS0ZCZHMtMUNfclhqT3VJVUNmNy1yUmtNMnlnRkhvd1ZWV2FKdVQ1QmtB?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMGFER2Vpbl9JMXo5TFF1MFdQemdLcWFENFE0eGhwRS1pWkVyVTJvMFQ3RnRxUURGSjBxbHVMVVlyYzk0N3ZVU0tfb0tJa3NJREFmSzNmbkVWd0xxdDlvLUlqNzQ1bnBmUExWNWxmVTczRG1UNEQzd3NReXh5N2xTU3IwbkRwcDJFT1BXYzExU3NLMVNkZ3RR?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-7c2aaae79bc3",
+   "headline": "Anthropic goes public as ANT, then slips after debut",
+   "summary": "Anthropic's IPO began trading and shares fell after the debut, failing to calm AI worries.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Anthropic",
+    "ANT",
+    "S&P 500"
+   ],
+   "importance": 85,
+   "evidence": [
+    "Multiple outlets",
+    "StoneX"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 32.75,
+   "features": {
+    "n_items": 13,
+    "n_independent_domains": 5,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 13,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWGg3QTRDNzJFaXUyWDJPZmF3d1NEblViWHZDRkU5RUstSTM2cURWTXl0MFh4VUtoU1JRc3VBMm5UZGNXVHkwcnRSbDR6eEplZml3ZlQyaW84Y0o0aG83NDJWeGxPSG1nalJvSmFRN082dF9JajdFZ00wa0F6UjlUZg?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQmF5RGYyWXcxVUlrNTg5N21SMU5uNTVSdVhPdUhBR0ltV3NLWUVyWXlscjJtcW5USEJWRmFkcmdUMFdfRTRGSklTdjR2M3FsUnBDNHR1d0hSTFp5SHBVN0J6LVhlN2tUVnlLWkhzR3B5UUdlUm51aWV0cnJJWWVmUTh2bmxPdjg1QXRYbFZ2VmFZcm9iU0hiOVFn?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2Y3Q21iQmpWbjd1T1hIQjYyaXgySjhyYk5aOU1KWjMzMXpJTmhUYlRLSjNHZGZETVM4V1Z5bGFvZi11a09RUDZGVDFaaHlSZVBnaHBTVzdNTHhZaVlKcy1pY25hcC0xUTNVcGFJRU1XRWZFTEpQNVF3amFGZVkxVExoZ3Fsdkx1bkZ4ZENUbmNEU1FKX184M2V5MG8?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUDFjSVMyZlBQdmhPeE5sRFhfTm1rcUNxd3dZS1hHNjRFR0tIaExIS2huVzdNZzNidGxpV0VyeGhIRy14ckxBRzJ3ZkVma3pOSW51ZHgzazlSNklaNVQybXUybm9RUlpGSS1Oa3UxdzBDd2NtZTI0Wk1iaFBhUjNrVHp0YzFJZUZMNmtNallGVGlHMFlaRXBRY2NNa3M?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdGtMMTM4bDg3T2dUeGprQ2plUzdtd0x4Xy1zWXRTWlowVVJpd0Z5VFphZTJ0VExwam9RdnFNeXJRY2xWTy1kcGxVR2dnaG9TNG5LdjRLb09RazFyRTRnWS1WbldiOTI2V0dvNTFTeTJjc0RqdVJfY1ZheFNCRkctaVNSZE1fWTJSWmtIUjJ5WHhOWTJzaW1Ga0x1eC1OSFE?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVk94U1hFbjNmMUNfOVRXUVR0YVQ3bUNVS29OTnA2U0c1aDNZV3pyVzdGaXdOR0xmT0ZpUmRaWjdHdFNla0psTlVhZGpOSG5lZk1fZ3hRV0pjNXZRSjZ3NTJzUEtBcG4wY3BpSFVocWFTZDkzcEQ2UTVsbWQzcmZ4ZEItR0RQbHNDcFJPNEZpb0p3c0I5dy15ZDVCZkpJUEV2QUVLek5n?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOb09uM053RlUycW10aHhQZkZybE00MGdxemwwendwX003ekp6YmJOcTZnUHVTWEF3SUxaU2ZnRVdYbm5PYzZLby1QMzZxTmR3SEg1djFzVFYyX3RfbjJYMmxmM25aR1dXTldvNjd1X3dNMk4yWmtKelRvSXdUOEVUY2xtWXVZeWlUdGhLdE12OHNVTzJQMVJaTDA1MnRUbU4zOGg4N1ZydEg?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWU8ybzlxdUlpQzh6R1hNU0hOTDF6SllWeHhHWW1FZFI3Vkx4UXpMRjZfZjVrOFNVcUdZbEM2cmQxX1BaZVJmal9waTFFV2JZcHlYUXIteUhyQmdwVUJGRGJyQ3RZN2xxa210SUhUUGV2b2dOR1pCX0ZEcG1obXdGbFZzVkNWSV9pLWNCajF4V0FVUjZNek93dEczRWxpRUFNNFp1dmN0WlEydw?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ1R3cmlmQUhhMmw5b2Rsc0hZNVhWbEFyVXRFaXM3bVE3NWsta2k2QmFyekZzdDJwd3NJbDZ1bUJ3aVIzdDI4allRbkxvZjVkOXY0a2ZRZHRTM202cjRLWWtmLWRheFJjUHFDbm5rNzhpeHRUNHJLcUFLMEZZaEZMY2RCSkVhNG12TlJycTd6eVljblNEeXFlTWotQlpMRkd2R2hPYTQyYUd1eXhv?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxPODJ4azZ4azNueHpjY3c5TS1xV2FEV2JjY0ZLdmh3aVBBeFFSc2IyMkVIUTQ3aUhTZnhjemNmYVpvTTRTNlcwZ2dvaDlYMmExNGNuRFVJWWVLSzYzUEl3YW1HWDBCMlN3dk9TdWR3R2JKdjI5SjNwMExISW8zSXpVaXRHUkxxN1JEbVZ6TGFob3Q3Q1g1enpJS25vRG1Qckt4YnN5cmJ5dXRkU25Gcnc?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPc2dkX2xHMGxqZDZjb0hyMmN3SW9fWm1HWFRXTkhtQndHWS0yeWk2TzQzREJQWHNrX0JoWXpSand6RW93czkza1ZzMHJ3TWdnSW85MXkyeFNVSzhEa3NCdWZfbVV0TWZCUkFLU2pBdGEtdHlWSkQzWTFJcGxQYnRLX09HZDR2RE9LZlBIQjd3Z1FzT3lWTThGdWZoQVJVd1I5NUF3QnRoYkpjekZiTWc5SjY0SQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWXotWmhsTEN6dnZfVklNTTZvQmllWGxYRlJzdC1pUnI2RV91OVdnN0JGOXFLY2tTT0ZKYnVSYTNrdG8tcGtrVVFCOGV3LWpSR2dDZkFkMEpWM0hJekJoS3NuVEJ1QUx3ZllsMmFndkpEZV85Um0yakJCd1NFTDlpZzFPVzFRZXZSd0x5d29iQkZ5akxJb0pxeDlaVDZmWjRnYzlfRlVYTkpWdXlkVXRtMUpNYWtaZkszZWRNU1J6STFLM1NwMUtwZUp5WHdVWmc?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-c715d2397e21",
+   "headline": "SAP preparing to cut at least 10,000 jobs, about 9% of staff, in AI restructuring",
+   "summary": "Bloomberg reports SAP is planning to eliminate at least 10,000 positions to transform its software business for the AI era.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "SAP",
+    "Bloomberg"
+   ],
+   "importance": 84,
+   "evidence": [
+    "techmeme #1",
+    "Bloomberg, Reuters, FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 43.58,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 3,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 1,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring",
+    "https://bloomberg.com/news/videos/2026-11-27/software-firm-sap-weighs-cutting-at-least-10-000-jobs-video",
+    "https://ft.com/content/ef05b4ab-7944-44ae-ad00-15475f8c1ec9?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUUhZaXItb2lOYVhHRHBoUkpGZFM2Y0ZpQ1dSN3QwUnEyQlBKdmlRVG9fdFM5WS1UNm41dGZnRVhyY1FIbjBvOUNFWEREN1F4S1l1amVSUGFheGl4N1NNbk1ieF9HU3N0azQ1djN1bjA2RWhIc1VhVWVWb0RVbG1HMVlPbFQyb0N5N1ZLTUVZeXlxMDk4d3d0UHh1ajdZeWd3ekx5TU52Z3BDaXdhOU9uN3dtd1lLMXM?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-be41885503cc",
+   "headline": "US chip curbs and distillation crackdown delay Chinese AI models; Z.ai's GLM-5.5 reportedly slips",
+   "summary": "Reuters sources say US chip curbs and distillation curbs threaten Chinese AI development. Z.ai's flagship GLM-5.5 missed its November release and could slip to Q1 2027, and Moonshot expects longer gaps between releases.",
+   "subtopics": [
+    "frontier-models",
+    "chips-and-compute"
+   ],
+   "entities": [
+    "Z.ai",
+    "GLM-5.5",
+    "Moonshot AI",
+    "Reuters"
+   ],
+   "importance": 80,
+   "evidence": [
+    "Reuters exclusive",
+    "techmeme #7"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 57.88,
+   "features": {
+    "n_items": 12,
+    "n_independent_domains": 10,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 7,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 12,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://bloomberg.com/news/videos/2026-11-27/counterpoint-on-china-s-ai-progress-under-chip-curbs-video",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHo5VjlHR1l4UkdCSmFGNUd6WVlZNXlwZXl6Yk5oYUFnTm9ISC1ZSWdmbi1aZ3R1b1Q3bXhpaXVoSXRaNy1hcWdSWHdCd2RFVGx6WlhYN25pZXI4Q2xHWGpQVkJYN2MwTk1ma2NERnBKTHhBUXpHSElLeFdwdEpVZFZZcWhxMm1QUEVpeHRYSXczYXNJelJTUWtHdEkxSGpud2NxeV90R0VjTXVkTmE4U0JRZWVRM1RFUmt3UGhIbw?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE9jLWVKNkd6VnZPU0U3TTk3RkpHYmFFd2dTR2dCMVBfaVI2emxTcURueF9ld19GQjdNaDVZZ3VGbjNUWTBkUDU5cktSR1VUSzJXTGlDNGZHREpYNElmbFIwaDE1WlZJTl9jNXJHTU5rWUgzOGoyTkM4eFhQZw?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWFVoTlJVZ0xNRkdybDlrb01paGpFY1pBSHctekVYbk9UVHdhVENzUncwUllQbGZlbzZpRkltMDNxX0pFQ0dlUUI2YkM1M0VuSUdVUVR6Z0ZTRktrRDU4Vm9iNElzU1FXS2NDV2NQUnJKQVAwWjZGaEJ4c0lERVZqM29nUndYbzZkNjZDREJxRjliU0NZU2N3?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNME1rVTBzSi1Dd2ZZVG91M0Z2Vm1fVzlBeHhuQmQ1bldFemR4X0VkNDdXRjA5elRTRVI4N3I4cFhXd0dSbVRDZXNqLU04bDh1REdyUWI2OUNpbjZEMmtFbnV4MURmNFdLd0NFQjdnQTVYLWJiYjFyemlEbE9FWDdnZExLMnpFUDljTzVKcVc3RXlTN0EwY3ZxMnR3?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZUd4QmVfQ3VKc2o5WUcydWNMWjBlZmpUSnRXYldhOG5yREJDT19iTUdwcWdzN21JVlF3NzZnYWNxYmJhRzZraUdTSUpUVVFQc3RTemZaSUVwSk1TQkNjbHdBS1kwZjZVeXJ5ZEo5b0xhc2pral9IQ2dYRGdGdWh0RnJFQW5CR0pMd19zWGRBT3NHZVNtZG1hRWRPNm9HZm1lc1ZGSE9pRDRQd1N4V3Vqb2R0ONIBrwFBVV95cUxNR2F6YUsyc19KNGdMR3dOSnktcUpuQkg1NFotS3ZEZVB3dDY5WkZ2MnpLS0RvTzZNOHpvaUlCQ2cxYkNYVHVPVkV0X3JxalBQV2FFb1M3dS1rREV4WWpmajFXd0dIWGg2OXpmT2NicWx5aWI2anl0NWlzRXFtcEwyb0Fudkpsb3B6TzhlUmtUdmczM3Y4ZkwyVVZsNjlCWkxxNnd4S3lvZTlhbGZZbVo0?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMXZpVFNGcEFERmFpM2ZzSU1JUE1HSVBMakU5V0tKX0c2M3hkSFlYYVZ3dUtvaXNzVVVBdTJFWmZPVHN1Z1hMZUNyWmt1aDNidTczMGFpTzBJcFJLbHpZcDlmdFlVUFFJdDFscHdZRGRGNHFPbVpOZF95Njd0QVYyWFVkakZxZUc1blpHcURKYVpVR2FVNTk3aXJOQTdsLS1qM1NHd0h3cEo4WnJwdmFiQzMzQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVENaTUJjQ0trZ2NQMG1FdkQwT0ZkcXNHbGhHVmstbjRBbXFPQnhOUVZvNVlOWXo2UGxybkI0NXRjZ3JQbXg1azUzM1ZBQTFmZzVpVnQ1bzgxUHMyZHlqbW5LZW9hREptN05jLWhxOUxkQVpNUGtXalk0OTNVS09LWTBuSkpwelVxczJjQ29oNHVqT3owWk9sU2dNS1FQS0taaXpibkkwVEowZ282MzRCS0plakpiejUwcXQxVWJfeDBEOXdRUGRDMVctSzE?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZGVnb1Q5QllweVA5WllCYXRSWTVLajZ5bmtSMENSQW1EcXhRdXMyN1ZFRHpyZ1JiUWZyenFUS2U1Vi1Ucm9lTlR2SGtNQ2d6eW1WbWp1blpUY3R2VF81V3psTnlOY1VPMFQydkp0RUtvX3kxYmJwcnBicS1uLU5FYWVOeTE5TDFtSGE5ZVd3?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-4fcd190539ae",
+   "headline": "Jensen Huang reinstated as Nvidia CEO after ethics breach; questions over governance",
+   "summary": "Trump says Huang is excited about a 'second term' at Nvidia after his reinstatement. The FT and others question the company's governance after Huang's code of conduct violation.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Jensen Huang",
+    "Nvidia",
+    "Trump"
+   ],
+   "importance": 78,
+   "evidence": [
+    "FT, WSJ, Bloomberg, Reuters, NYT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 50.0,
+   "features": {
+    "n_items": 18,
+    "n_independent_domains": 13,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 18,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/1da49f07-9558-4e37-88e8-cc2088c27a58?syn-25a6b1a6=1",
+    "https://ft.com/content/2a98efa0-2c2d-47e3-99a9-e00fbe699c34?syn-25a6b1a6=1",
+    "https://ft.com/content/6a01bdc9-f242-4272-b5e3-a147af5b125c?syn-25a6b1a6=1",
+    "https://nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+    "https://wsj.com/business/jensen-huang-nvidia-ping-pong-rise-and-fall-bfd13000?mod=rss_Technology",
+    "https://wsj.com/opinion/does-nvidia-really-need-its-brilliant-nutjob-33b21d47?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9XbVFpb2oxYzkzN0xRaDhhYlVjbU0wTHhISkowOGhuMVYwQTF1WU9GTDZsanpnZmM2TXdvdkxMMTZyTHY1QmM1aG1uSThHUGZoOUhkWGRnTzZDRi1RMG5qNHBlbkUtMXM?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMVVhX1RLVGl0MGZ0bXYwbFVXRkZBVzZYT2YyNDJMd2FxZHhjVjBkRmVwbFFSTThEbWZnREpPdVd3NExTWERFTldPOEttRGw5WHlZZW8ydHlvMTV3eFg2djRPT1lodHhvS21tejUtNUthTDNndGplTWFIRHFmenB4SEV4Y0VxM1U0TFVr?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOSkZtTnozZk54bWk3aGktOHJicl9GVm1JcF85X21kNVVNOHVIcUJHc0I4X1hqTGR6MlBYR0NUVUkzZTBfdEtkc2dRY3BpTHIxY2plZ1pzQTg5NEZJcUtOazEtUzFlaG5rUV9FdjhUZXJtSjNPbDlWOEJwS1hKUjIyR1QwcllKM1hiRFE2M3N1Ry1rRjhuazg2UFc1alNHdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOU2llVFEzTzBjQ2VGVjBFbTFScmR1NjVfbFY1MHc3eHFEc3NMWHIySnZZVEUtb2xKc0p5UmRoYkFSbWpuVldIMHNRVFJhc2tlaHUzVDNfZ3p6MkprcDZ4MTI5V2JrTDhXSG9Ja211enlHd201SmFxemZvbHF5ZTVMNHpYTmlRVDZMQmR1dG1fWGhXWnFqU1NLcy11WENrV3haVWc?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLWllb1cyZW5fYjltOTFXb1djVzhzM1pzRmczeHM3WFNzUW8tQUVNZUhNUGVFdmZ3bzRKRFRkcnhWVVR3aEpBOWtnYXhWX29vU3BSZ1VyY056ckZUSjNTNHQzVXduc1FoaUpod05vMjNoV2dFMndFNXpBZUZBQzQ3bnd0NUZLMXJXY0VhWmZHN3Q3SURXYkV4dmlUT1RmeF9MWTNqci1xWFhra05UY1BIMlU3aTF0QVk?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVGRpQVpRRU5rM3hDTnpTVU1oRGhRTTNwRzdtOXlKQzhBMmNnYkhiMHhzc1d3cHNjVzBVM1Q0R2Z6c3VsTTlFOHpPTXNsYV8zTEdzMWw3cnd1SzIyX0RPQWg5LVlDdGxCX2dxWkpONDd1TjRVc0pJZ3ZuVjlKQ0NzSnZ3d3BGZDBoamRCUndVMTRCLXlMSVpXNFluZFBfRUVSVEprbThfV0VWWkcyNTFDZnF5ZUxiTVF60gG-AUFVX3lxTE40VHY3Y2o1NmkyNUNQdk02UF9PZU5GQU1oTWl5UVNZQjkwbDE1Wkpkb1NkY1Nua1E3TXBWa0dGV2IxZG01M1pKOGJCUTZQQ0ZiUEdvR2tEbUlXSjRnTjNIT3o2UXdyUUo2M0s4d0NGRDJnWEtTTVU1Q1JEVGo2QTVzOUVKOTdJWW5fTzkwV1JhWWxkTm5tVkFnY2dlRHJVWUUtZnN3cnZ3NHlnd0xSc1BjNnF3T2xZb3hYSC1rZlE?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczJXQXdpU1J5eDIxR1BmcjBHY0x4Z1hGeEowT1B3NnprRm0zSndubl9CanBVTHpKMzdDcmFac2FEc2tWNExZMTQtcXdUU2JGT2czRVdOeGhfUjVKbkhrQ0NocXEwQVNfVHNFMU5LaGdJbVIybldJc0MzbFg4SElvVTZaeVVEQUZLWlpaMldPWkFTXzNTUkxISUs2TVdJa05ua3M1VWlnVjl1dk03U3RiMTFuZEpiRlR5R29OY2RoYw?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMmhZNWpCZkQ2NkZfMFNRX3p1TkFPal81d2JibVcxcGgyN2ZBUXlkV1VLZzNtenVOZzlNUW1yM1VVcTFON2dBcTlXZHptMkRESkl0RGVDa0Q0VGhFNnA0eTRNWGY0MUVmRkR2T0lSallESGFhQ0VyQWZzdkZXZWUzYkFQMF8?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQWtFWC1COVRvQTMzbUtZQzl1SWVhbmQtUHViSFZaUjFQUzJOMDBXVVVvdkVlekhCVjYyNk1yZTRyOXd1ZU1OejRhSGJIR3hFNUFGaWltT3dwTmIyV29jZkVSOWtwN2dUVVJCb2FfRUpCSkNTdlFrMFpEUjJlZ3FQV2JqZUlhdGYw?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSXUzbTJkNUdvMWM1MEw5blpJRlpMLXI0TXhfMlV4T1B4a2NoVWQ1ajVZa1BXTnp3cXpScldieVc3NHpSZXUyUGNFS1VoOVJQQ0pKWWxXdTJ5TjlUUzZKUTNGSzdRa3dYTTVOMG9rUXpKX0dSMDRJeTJTbVo4NFNqdGVSUmlLYW9IM1hMbXFKajE3XzQ5TDFMVkpmUQ?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-404c6bdd6fca",
+   "headline": "Dutch government to resist US MATCH Act restricting ASML sales to China",
+   "summary": "The Netherlands says it will oppose and ask Washington not to enforce the proposed rules, calling them a threat to ASML.",
+   "subtopics": [
+    "chips-and-compute",
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "ASML",
+    "MATCH Act",
+    "Netherlands"
+   ],
+   "importance": 72,
+   "evidence": [
+    "techmeme #12",
+    "Bloomberg, Reuters"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 30.96,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 12,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGdjRUN5YTg3WHZsaVA3dk9EVHB3TzkybFUwc2cyS29EOTBueVZIVjhUOFlqZzl6T2xpNER5aW53a2plOWdIaG1icGNfQWUxd01yVjJ5Vm10dVR4QTNGb1VoQS11SWRhNlJJb3ZoQmtrVGZMcUlxWjhjYXpjNmVBNV9kdGdhZnJMTW9vd3lqV2ZPUnFGN0tUczEtTTk5TVBWbWl3?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-d53b121b6704",
+   "headline": "Singapore in talks with US to retain AI chip access as Washington closes remote-access loophole",
+   "summary": "Singapore's deputy PM said it is talking with the US to keep access to advanced chips, while saying it has yet to confirm Nvidia's halt. Fitch says the curbs will slow Asia data-center investment.",
+   "subtopics": [
+    "chips-and-compute",
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Singapore",
+    "Gan Kim Yong",
+    "Fitch",
+    "Nvidia"
+   ],
+   "importance": 70,
+   "evidence": [
+    "Bloomberg, Reuters, WSJ"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 35.0,
+   "features": {
+    "n_items": 5,
+    "n_independent_domains": 4,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 5,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-27/singapore-talking-to-us-to-keep-ai-chip-access-deputy-pm-says",
+    "https://wsj.com/tech/a-game-changing-move-just-gave-america-the-edge-over-china-in-ai-53492e2c?mod=rss_Technology",
+    "https://wsj.com/tech/ai/the-ai-boom-looks-alive-and-well-in-asia-59841697?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJWFVtc1BvNXp5TFMzbWtqVTdzc3JVM3pmY1hkR09YMi1WV3k3TzZ4VzFDQUpkcGJHVEZ2R0NqVnRNNmZsTThQZ0V3SlNzUmY1dUFURGtVckNOTXVQamlqSnVxTG5NVy1UVVR1dnlaNFE1MTluNFdUOTZzSHg2eHYzYTF1emwxMjZKUVIxcWhqYzhxTUdYZ0VZU3BsV1UxRHp3RTZnc2lyS2U5SDAydW5vcjVqaFFz?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZ0xUbE5GaWQ0enliSzVlc1V4ZHZIT253bFNrbnJDX2hVbE9EUGdudFFtR2FHUEFFaTdqOGtqZGx6SWhHRElWY3lFRm9IR05HWDRFMEpQQ1BLR19hZ3RNM1ZPRnZxSkRIeHZRMmRFVTZwakM4cUd5OHRBMm9vTEk2S1ZCOE9aTWJZcDEtVktCdE14c093ekY5c3VoQnk?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-31012828d055",
+   "headline": "OpenAI and Anthropic researchers warn new models may be too powerful to release safely",
+   "summary": "Axios reports researchers at both labs warn about powerful models; OpenAI's chief scientist proposes shared limits on frontier development.",
+   "subtopics": [
+    "evals-and-safety",
+    "frontier-models"
+   ],
+   "entities": [
+    "OpenAI",
+    "Anthropic",
+    "Axios"
+   ],
+   "importance": 68,
+   "evidence": [
+    "Axios via others"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcVp5blFWbzY1VFIwVW9OdFNqcU91TUp1QmFtT1VJcDlnYmZsNWhpX3NicG03MGZyWW1yeUFzRzZZYmJtS3NpRFJHdUU4MGtFNXRzRmhSRno5R1ZCS2NiZFk5d2M2UUVuWExTTHAyUFhId0NLU0pweVRndWtqOWZoNA?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNejlpTmhzNmw3aWRaNkZ4SXJjZDN3UzdRbEFHMm1lZml6MGlaM3ZOTFdabXlLQ3E0eTRvbnJxLW9wa09NaVZObVAxUVFSbE81SXBjdlZESGtjS2tCa0oxYzFfaXZUQ2RuN2VBNlZxcTM4TzVXZDlVV1Y1bjlUUHQyNDJkN05PamE3TTQ2TjBjd2pOd3lTenR0bUJWUzlsOUhsOFdQQzRiTE84Mk9MbHhicNIBrAFBVV95cUxPMWl4NlA0eEpnVVA5TG03eDE1R1JSOHo0NTRyUW9VUVJ1aTRNMTE2SEVQMWhkTUtNUlZEZVRHOERZeXNTVE5SS21naTdRVndoRXhyX0RENlByX0lWMEFUbXhfcTAwRHU0d1RiWWxCTEZqQjBCeW5iVjQ4TVhRXzAxc1Zxd2xOelZUQW1zeVgwaHllcWpvS3ZrWDJ3Y1J4NWNpbGw3NDFfN0tZRF9S?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMkZOVGpNbTJJRlpCYTA4eHFzQXo5NHJ2RTdnRk5Hc3dzV29pX2ZSV1BLN2kxbGNfY2xnbjZvcUVDVVVCd05UUEx0U0JJeUh6bzFMMmI4dGhCNlFxQlQweF9Pazgyd2dPLTNYYlV3XzNOWU16YmdJRnpEamhzdlQ2S0d1WW0tUF9UZWxkeWl0VzVabVRKbzk1Zms0anVxLXZxcmdETy1UTHNZXzNTZEdpUTdjVQ?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-eb13a71bd94a",
+   "headline": "Bipartisan push to regulate AI in Congress faces slow legislating and turf battles",
+   "summary": "Members of both parties want to tackle AI policy but face obstacles.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Congress"
+   ],
+   "importance": 66,
+   "evidence": [
+    "NYT",
+    "techmeme #2"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 32.42,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 2,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdm5vVlNYSU1RdnJub1pDc2hpOHhGZWNRWDBubnlHTURaQ3FHSEdXcjFyVkdkLTJyeWJWWHNzU3F0ckdTcHBqcUhtR2tyd3ZXSDVVWHlEVUctRThyLUFmS1FtWnpUYTlKWF9LOGRhR2VobFVVQy0xY0szVEpheHBhZm9kVHhvTjNW?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-f3937cb2017f",
+   "headline": "SoftBank credit risk rises as investors fret over AI bets",
+   "summary": "Investors see rising default risk, with CDS at a 4-year high and pressure on its retail bond.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "SoftBank"
+   ],
+   "importance": 64,
+   "evidence": [
+    "Reuters, Bloomberg"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 29.25,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bloomberg.com/news/articles/2026-11-27/softbank-group-s-1-trillion-retail-bond-shows-more-credit-risk",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbXByeGEwLTVxU195LU1WRUprSnI4cU1EaWQtRFF1QUNfQnU3TlN3VlYyVjlvUHFkc09mQVV6eHlLemN4d3BfcnJ2c1pmT2Q2NlAyZ2oxMlRjbjFHd0JKNDZNRFhCWTl0dkZYZXRuSnB4X3lUSmh1RjdZdjM3VndxN2xpX21kSnNYTVdQcWFjTjZrSmV4WUZfUlM3cHdYOHNyd3R1ekpQeUJPSlZ3eklaOUtFTzMzUnhQdUtDMmlDc1VDZw?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Sd2ZENGFFQVdBZFpoY1VKZEVlYTMyZThEUmdxd1lhdHhsYm56ZzdRbENBdGV1OTdza1BmUTAwcmhCeGw3RHhTMHh1M0tYYjY0S2I3SEVQYTlHbkp4X0hVT25XcmdTeEppeUpGWjkzakRvS0VXR3c?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-2540d2151fc2",
+   "headline": "AI-linked market volatility hits Asia and Taiwan as Nvidia saga unsettles stocks",
+   "summary": "Asian stocks swung after Huang's return, foreign funds are on pace for a record Taiwan exodus, and global stocks recovered after volatile US trading over AI risks.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Nvidia",
+    "Taiwan",
+    "Trump"
+   ],
+   "importance": 62,
+   "evidence": [
+    "BBC, Bloomberg, Reuters, FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 38.75,
+   "features": {
+    "n_items": 7,
+    "n_independent_domains": 5,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 7,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bbc.co.uk/news/articles/cqevr4lnd1nxo",
+    "https://bloomberg.com/news/articles/2026-11-27/foreign-funds-on-pace-for-record-taiwan-stock-exodus-in-ai-rout",
+    "https://ft.com/content/6e217409-9fbb-456c-b405-2eb15bb69679?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYW55b1BZTkM4emFaZmljMEIzZlBhd2duLWJnRlpMaVA1UnBMaXpEQTdYU0JQUF93QWRkMEV0ZHlaUFhJM3JwTkVLSFNQcDhJSW43VEJ3ME9uQmVvaXpaVkV6eG1CWnBISXFncTVTQjI0NElBcUZDTXlNZEw0S0RCSGxFa25EX29sYzJVZHJmREFnckNW?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWkt5OU9rSlNUam1waVVQSzc0cWNjMWk3N0xXSnk5Q1p4UlVHSG5JdGpkZGxVLWI5bW9QOVUwMGRsOExnNkc1VkZWUHllWWQxOV9QX0xTLUVxbGcxOFV3NHQxUnpUQUJRTFh6aXZ6MlpOb3d0eHRucTNQOERjNHlfS01YTlk3dTBwX2ZfWVFjdER1Tkl5V0NDODlzclpSckpUT3c?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWHRXZnN1TmZVRDJ6VUJtNjhuRm85eGlQVmdGNGQ0SC0yeHlPVUlKSksyLVNZa0VqRGdqUWVtaW1oNHhjQldDdHlKYnZ0TVgtbkpEcmJfVEcyTUxnNkNYeEdaYXlWUmQwcnhyLUtrUERoYnhIdnVxV3lFeUhza21Wc3U2WW9yd2loWmpxeXE4SG9OT2Rlai1reWtSemRkYnlBZndLaFVNOHJHeDF4ZkVmckpqSzZSbElNZHpfdUFLTTBsOW9C?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxPSVVnUGstZEZZNmZVOTNMYTBkRzZJejBCTkhJQWd0c2RpekZZM09lUWRUdnNQZXVUWThKSXl4UmhPN2xVazVFOXo3WW11c09jY01kTkt2UUF5RHlsWmVQM25DTUhEMXZkZGhqN2MxVW92LWdtS205VFZ2Y0JMdTgyZEF5SEZTOVhoXy00VndCdnY0UzF2cjRwZWdGcldsQQ?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-651cc167b0ad",
+   "headline": "Bank of England warns of AI borrowing risks and encryption threats from unreleased AI models",
+   "summary": "The BoE sees growing financial risks as AI borrowing surges and Bailey says unreleased models raise encryption concerns, calling for global testing.",
+   "subtopics": [
+    "policy-and-regulation",
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Bank of England",
+    "Andrew Bailey"
+   ],
+   "importance": 62,
+   "evidence": [
+    "Reuters, FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 30.25,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 3,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/450920b9-82b8-4a66-960b-5740aa7f94ae?syn-25a6b1a6=1",
+    "https://ft.com/content/cf30cef5-0e35-4ebd-a456-797dbd1ad132?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMlNESVMtMnZuRm9TZ0FHOGE2NkE2anNKbkwwVlpqbThWRW5WdGpYMnJyMVZrX1dheTRXTGtRT2xqckxNdEo1Y1V3aUthRU5QTUJGY21qaDBnamg1cVRlSG5ZQ1IzZTVnUzJ1djJfS25sOC03WlgwOVY1LXJ0ZHZhRFFwWk5ubV9KWWIxal93a25QaDBmTGMxUmg3OFUta2NWNmFBRGNJVUlNakE3ak82Sm9tRzI?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE94WjZzdW1xS0Npckt3RmNZX1F2Wk1aVHkyYWZYeHlZUkFLaXZFVnZ6SFV5ajRnS005Vjh3X1NMaV9PNmwyOFNuelpwbnlMdjE4UjhIZkNxVFlrRnhtMDNLUDlQZjgweXo5OEdlVlhsM3hsV1U?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-2ec5802f6ce1",
+   "headline": "Anthropic and OpenAI sketch plans to share wealth ahead of IPOs; OpenAI IPO clock ticking",
+   "summary": "Anthropic and OpenAI are outlining wealth-sharing plans, while the WSJ says OpenAI's IPO countdown is ticking. Anthropic employees have become AI billionaires.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "Anthropic",
+    "OpenAI"
+   ],
+   "importance": 60,
+   "evidence": [
+    "Fast Company, WSJ, Economist"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 30.25,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 3,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://wsj.com/tech/ai/giving-pledge-anthropic-charity-effective-altruism-fef947b2?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNcjFOVHg1Q3U5MDNoTlFhTl9iUlJ4Mm9ETHdMTTd0Qnl3N1MzOUxYYmdiV0RvQUJKUHBoeFNGNGFMWEJHcTdLNEF0dEtDeERUOTgyQ0xIaUJSbVllM0lOdzZlNkRva1RBNE9HaUhWZ3hrT00xR1NTVmYwYkhjczhTeHZFeU1wem5MUXdlWGs2aHVZZXhHTk1kNmRWU2F2MkhPVG9wanNYRDdqT2FDTEQxbnNwUW5BNXBLWUZQVmh1amVmSjRYeXNndTdqOGxrWUxfU2NrbWVxRE9VN0pKeHg0d3g1QWxWbGpfSlR0S1JaUTRxU0dUaXBTTXQ3aE1sYTY0RjBiQ0FKcHQ?oc=5",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOV3Qxb0R3X0EydVhiOG9yX1ZCczV1eVBZaGdvYVlFWGdTNjBNS3dEYjI1dzZOS2lMQW1tTEZDc1h5cFNtWTFHcUFnSWxzcFJIcDNvLVdNOEZzQnRhNnNlYi1xMFJFUUI5Z3Z0b2xVTHB2NXBlV2RoUGpIVDJQbzZtNQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVWFIa1JwZUJkaXc3TVREeXpXX0ota1B1RkNOZnZlamFYeXA0NEk1d2hRY04zSS1vdlNUVEltbS1IdzhaWkdpN3B3VC1IdmpnbzY3NnlsTEt2R3RVU0lQZG5Obm5rR1didGlMZTZETTZQUVB6T3hvRlFGYm94SVRVZEltM1ZjTExrNy1DLTVuZFdwRldwWDZIWFB2VC1XRkQza2tlT0t0aw?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-e5d436e38133",
+   "headline": "US approves Musk's Starmind plan for a million data-center satellites",
+   "summary": "Regulators authorised launch of the Starmind constellation for AI computing.",
+   "subtopics": [
+    "chips-and-compute"
+   ],
+   "entities": [
+    "Musk",
+    "SpaceX",
+    "Starmind"
+   ],
+   "importance": 60,
+   "evidence": [
+    "BBC, Guardian"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.5,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bbc.co.uk/news/articles/cwp836l8n1jgo",
+    "https://theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest"
+   ]
+  },
+  {
+   "story_id": "ai-87ce67fce9cd",
+   "headline": "ElevenLabs in early talks to raise at $33 billion valuation",
+   "summary": "Bloomberg reports early funding talks.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "ElevenLabs"
+   ],
+   "importance": 58,
+   "evidence": [
+    "Bloomberg"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM3BIeVR1cFF6MFdfSFZldnRneHh1eGFoQi00bV9yVzF3SWh6TGFIQ29jVVpEcndBN2d1WmxEMTBHU2pvSUZ6TnQ5M3E5bVFVR1pGdFU0N0V2RnVSNHRyQjVSZEltWXhhRFRUSC1zRFd3TFRBYXFnUkcya2NqcFN0aTdkRk8wdkRK?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYjBKYlVDdklhbjM1VVIzWmloci1PRDdWUkhFUG00dERuY1A3WDBiQUl2VEUxVkhoX0FyMFJiNDVXY1k5OW5UU2RzanRPeDVKZ0ljeEhBazZucE50dmNvR3lPanQ3LWZhNktpSkVnM3BmdGNIeUJsRGtEd25wb2laQ04xQXhXNzNYUmZNLS1PZElUM0lxa3VYakgxS0JRSFdNa18zTzh3MmRTOVk?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWDZDSXBpam9icmNSdEVhMmJHdDQxWU5JOWV0NERCNmNhVS0xcUZrek9KMm9UbUt3WERDaHg4bWNkODhQV2daN1VTQ1hKMmJrRmhXZi1SU29xVFQwbXU1eWpvQm0wSU41ajlTX3ZtUVFkUll1VktCNzcybHBZM25sSHdJRVF4RmdSUk5neTRBdjFUUFh6aDJHRGd3MGlGcFI4bFZNTE1FZld1eEFUVVd3X0hWMA?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-7bbb8e23452a",
+   "headline": "Meta refused UK FCA joint testing request ahead of rolling out Muse personal agent",
+   "summary": "The FCA warned about agent risks after Meta declined.",
+   "subtopics": [
+    "agents-and-tools",
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Meta",
+    "FCA",
+    "Muse"
+   ],
+   "importance": 55,
+   "evidence": [
+    "Wired, Guardian"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.5,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains"
+   ]
+  },
+  {
+   "story_id": "ai-29ee2e9e0cee",
+   "headline": "42 state AGs try to stop Character.AI selling user chats in bankruptcy",
+   "summary": "A coalition seeks to prevent sale of user data during Chapter 11.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Character.AI"
+   ],
+   "importance": 55,
+   "evidence": [
+    "The Verge"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 13.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats"
+   ]
+  },
+  {
+   "story_id": "ai-f42bc524424b",
+   "headline": "Japan's JERA in talks with Anthropic and Meta to build data centres near power plants",
+   "summary": "Nikkei reports JERA is exploring data centers for the two companies.",
+   "subtopics": [
+    "business-and-funding"
+   ],
+   "entities": [
+    "JERA",
+    "Anthropic",
+    "Meta"
+   ],
+   "importance": 52,
+   "evidence": [
+    "Nikkei, Reuters"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNci1xelJldENmMjRjVWpKcWhHX1ZfTkdtT0tyaTlLcUswaWI2S0h1b3V3OXBsdE5qVkpEcXp5U3AwOUFzeGxSdGEySlFwajJwNHB0WEhEdjJQeWpwRW1EczlIZnJiSldOemp3eG9nU0h6X3lkc0NOSThtS3c2dzlLTDRyRjk2WW1nU2I2UXU4R2hVbFI3cTF4SEszRGxwRno2TmF1eFJHMGZfQUpjTTZVZkJGSXY0VzhfN3dUTHVSbU10VDZPd1hkeFhETV9NLWdFTzZWWmc1LVVXQ0pJLTZqTnhjUXVnWEU?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZTV4V1Uwcm12UjRESWc2c1RLT0lrS2p3d29wSW1SRWRDLUJySUV4eG9ZMW4zd3g0OEtCdkw5RkJkVUVVZFdUdDZmcGZXb0hEQVpTSE1XVHpOdzB3UnZVWVVYZUw5dHJuNkZkU2NKYlBtSXUyVnlWTEtxaUxEMmNPN2l3SWVpV1lOaUs5amZLU0VKZ0NOeHV4ajdlYzNRajExcWpyR01ORTFoaVpfWU5ablZnZWVsNVM3SHpKVF84cmdCUXU5a3NoUUFYRHU5dw?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-a86b28f34721",
+   "headline": "Hochul vetoes AI safety bill; California governor seeks AI safety action; NY AG creates unit to enforce RAISE Act",
+   "summary": "State-level AI safety regulation developments across New York and California.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Hochul",
+    "Letitia James",
+    "RAISE Act"
+   ],
+   "importance": 50,
+   "evidence": [
+    "Several single-source reports"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUlNXeGJOdjYxcmY5T3VWcG93N2JpQUYzUmtnSUw1cVpKaG9BVm5qeFROb2Q3dTBjTXAzbFV6ZkZlcFYxeVl1MmRGeWxyUXUyXzItOURfM0xwbjBPY1JPQ21TQTJUZEItMEExbmNnRUpzUUxUMTZOQk1nVUJ5bUhfT2JiTmlIeGN5eUdUd2xtVGRZd0hCSG1BMllYTk15Z1E?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaHBQZFlGWVpWd0xhdnNPV3pFTmxybW5zeGdLMUF5SWhfcmdWRExqazVpMmVfRjNJOExmUFowU2dMbmhOYl9RTXFNYnQ3RmxhZGU2Q3FLT0N2bTVIVkJHVXJNekVHMEI3ZVM2WDFYT3dBUDgyMW4xNGYwNnNfTURtcWF1X01Qd3NpaE9XWDYtQ3lqNGVGdm9XRjNITEpyRHdnaGc?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcHF0VmtTdmlyajVmNjVlcVk5dTJfNjE3Z0VBcGVMXzRyMG1uRmhOVUVxeFlZVlAxNV9hSlI3a2p1Z0VmZTNXZ1RRaEhQUVZsU0VQOWtZUnRsRlI5VnV3SDN5aXJtR0tGX3VLbWx0cmozNmZpb2dnY3BZQXpwdDRzQUFXUXlXV2MzalB5cFc4TUFvMWtxTXlrMEp6SW9DQUtBaTVpbXg3MkM2X1pYcGJoeENIaWlYcVRod2xZMVVRZ2RoZ0U?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-993f6abb3d75",
+   "headline": "AI agents used in five cyber attacks in Switzerland",
+   "summary": "Swiss government reports.",
+   "subtopics": [
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Switzerland"
+   ],
+   "importance": 48,
+   "evidence": [
+    "Reuters"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxObHJoZUpFSGFNc09VMDVnYmkxbEhyaUdhN0J1ZHc5c1BWbGxmb3VOZ1NWbGI5cVZ0MG1oMG9TMThva25SLXhBTlN1cnpjeXFfYnBhVEtzUHdZVi1pSDJWS2dvdXlkanBQdUU3dUNLT1VPUnNGb05UeE1VVzhYVktfR0ppdGJ3UFg0OERkaVhyRFFkcFRUa09fM1BGMUxpQXl4dldoWlI5bXBsNldXVnBUMU5pQXU?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-4736f77d4ceb",
+   "headline": "Anthropic's Claude lets users turn artifacts into apps",
+   "summary": "New Claude feature.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Anthropic",
+    "Claude"
+   ],
+   "importance": 48,
+   "evidence": [
+    "Mashable"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 9.25,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1lOEh5SzRKaG8yT3M1czlwM09oU1gxQlFrdFB6b3lBQ0RmdkxyeG5XUXNUY01CcmdMT0lpS0o1YUx2TXNJTUhjeFJaR0RuRkNVcmJERnk3a0tnQ00?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-1fbbba61112e",
+   "headline": "Dario Amodei rejects surrendering free will to AI, criticizes rivals' 'vibes-based' positioning",
+   "summary": "Amodei distinguished governing by AI, which he opposes, from automating tasks.",
+   "subtopics": [
+    "evals-and-safety"
+   ],
+   "entities": [
+    "Dario Amodei",
+    "Anthropic"
+   ],
+   "importance": 45,
+   "evidence": [
+    "Axios, techmeme #15"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 39.96,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 4,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 15,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://axios.com/2026/11/25/anthropic-dario-amodei-ai-free-will-contro-axios",
+    "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWZXazNFQkxXY3lMQ05iSmxNSDR3Y29ORVZhT1podjJLNmRMZlRHLTI4cmVTNk5WWnNJcVlqT1JkeW5WcE04UTBMUkVIQkJZWHpXMnN2V2tVblNYNFk5M0FUUXl1STZZd1d0NkRJU0NWWUw0VXMtM09RS1g3S1hSYmktckZtRUhjTkJUd2ZOZGFtY1BtTG5fTzY0NjJxRUl6emxfZA?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTlk5eG4tY240MUk4VzhtZVU5ZUxzQkNVQmlEa1ExRVhvakNEV1M4NUlkamI5cUlNdUljVDR4bVdsQjQ1bHZFSktnUVBlVW95YTVzVF9YYlVUWFpOSjBEQUhKUzFjNUY1eXpqdHo2QUZqakxrZnltYjZsRUdaS2U4TVphdVBPVUNvMzU1RUY3bHVDX0JHLUh1TkluWVpOYXd5T0pZb0d4R1ZJcjh3VUJJRURpTlpGUmFhV2c?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-b32e7ef81fc0",
+   "headline": "AI power cost backlash threatens NextEra-Dominion deal; Texas resumes data centre permitting",
+   "summary": "Power bills anger spills into dealmaking.",
+   "subtopics": [
+    "other"
+   ],
+   "entities": [
+    "NextEra",
+    "Dominion"
+   ],
+   "importance": 45,
+   "evidence": [
+    "FT"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 20.75,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://ft.com/content/1f4095cb-c032-414f-9858-554c8b82b145?syn-25a6b1a6=1",
+    "https://ft.com/content/e0a1bf7a-7c28-4a20-8ca8-86dc7d5097b3?syn-25a6b1a6=1"
+   ]
+  },
+  {
+   "story_id": "ai-e9cf184de630",
+   "headline": "UN calls for global framework on AI risks within a year",
+   "summary": "A UN special summit on AI safety stressed human-centric governance.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "United Nations"
+   ],
+   "importance": 45,
+   "evidence": [
+    "ShiaWaves, Telecompaper"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 18.75,
+   "features": {
+    "n_items": 3,
+    "n_independent_domains": 3,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 3,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaURxb3hTdTBEeVBoVUtGNUZtbHU0eFg2UkV5ZVZuSjVaVldabUN5ZzVaeDBmcFlxaUppS1JHSGRjdmhubHZBNmk0eUstclhIc2RUY3dfZ1Q1RU1VNU1temM0Sl9ldmh6b0p5MTk2Y21KS0t3WWxHQk01YWdoWWJ1cFFOMko2RFFxdDJFV3QzTzZQZkJid2ZuMXFHSU9UeEpwWGRPc3E0bWl2d0x3Y3FTeGs0c2dGNDA4RW9vekJLLTRDMXRlajBvU0lEb3ZyLUZf?oc=5",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMy1nRVlFSFpxTFZqVlFtVWVscFUzemY4UHgwLV9ncDJCMlE1TnZ6dVBvSG83YnAyVW52M2h6NDk0OEtZMC1ueUN5NzJqZlNNSFMzdWRJY196VnVFSUcwVEpiM0VWUHFJWHEwZG4yMXdfb1JpV3ZNckhKay1GcUVqS1JCMUNWTkVNakF3MWV6M1F4LWowLUlVcG5HVlZETmdySHllXzg1dmNhOEJad1Ntc1F3Sm82UUdYbDJkcjFsTDRuS2Z4eU1mdi1PRFk0bTJCbDdyUDI3bVUxQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA5MzFZcWVDS2FDcFVNNGJMa1ZjMHZLUlY2ZDhiNmRxMV9wSUNldEpmZWtwSlBEd2xMbDAzR1dfRlMwcVRIejJrOEFGZ0JsWkRJVmczTGM5ZFk?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-3ffc2c643f46",
+   "headline": "Thomson Reuters to launch AI model built on Chinese and US open-source models",
+   "summary": "It blends models to cut costs and control IP.",
+   "subtopics": [
+    "open-models",
+    "business-and-funding"
+   ],
+   "entities": [
+    "Thomson Reuters"
+   ],
+   "importance": 45,
+   "evidence": [
+    "Dataconomy, TechGig"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 14.0,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 2,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPby13OWdhU1duYUhnTGNtN0hZdWx0VTd2NHhUamlVU0FoVnlGYTN3QXo2RlNVTTk5ZGthZ3RKT2EtRlhHOTlpSW8zZ09VN1EtSUljalZnTmFNVkIxRlNHRWV2T0FRWXJMcDF6cVF0YXJBYkt3RnA3eVg0ZllVckx5OVdrUTFhVkxSUUtWVjZScDRYbWdwYzcxWg?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVUp1TVlyMHlTZ3d1RTlVZmhiZUVvSTRyOE95NUlGR0FHa3drLXNGcGVmMlZ4QThyN2J1THNoenVUVDB6SEpSRnJoMEFhRXZnNENqRWJCMDVVWk1XZWZtUTNxLVJ2ZTVybG5XUS14bE5VN2VNNnJ1MWY3ckRiMTEyeVJXZUd3SERDLVR5Q2l0Zmtlbzl0SHZoQTItbk94T2ZMb2c3dXk1VElkSXlvRV9V?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-84a911189baf",
+   "headline": "Undisclosed AI use affected dozens of court cases in England and Wales",
+   "summary": "Guardian found at least 25 cases with fake citations.",
+   "subtopics": [
+    "policy-and-regulation"
+   ],
+   "entities": [
+    "Guardian"
+   ],
+   "importance": 44,
+   "evidence": [
+    "Guardian"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 13.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 2,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://theguardian.com/technology/2026/nov/26/dozens-of-court-cases-in-england-and-wales-affected-by-undisclosed-ai-use-in-2026"
+   ]
+  },
+  {
+   "story_id": "ai-67cb5d3b5732",
+   "headline": "Avicena raises $100M+ Series C for microLED chip interconnects",
+   "summary": "SK Hynix, Samsung and AMD ventures joined.",
+   "subtopics": [
+    "chips-and-compute",
+    "business-and-funding"
+   ],
+   "entities": [
+    "Avicena",
+    "SK Hynix",
+    "Samsung",
+    "AMD"
+   ],
+   "importance": 42,
+   "evidence": [
+    "techmeme #6"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 28.08,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 1,
+    "best_rank": 6,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://thenextweb.com/news/avicena-100m-series-c-microled-optical-interconnects-ai"
+   ]
+  },
+  {
+   "story_id": "ai-b57d153658e5",
+   "headline": "AI shopping bots from Google, Amazon, Meta and OpenAI face holiday test",
+   "summary": "Bloomberg looks at holiday AI shopping.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Google",
+    "Amazon",
+    "Meta",
+    "OpenAI"
+   ],
+   "importance": 40,
+   "evidence": [
+    "Bloomberg"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 20.75,
+   "features": {
+    "n_items": 2,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 2,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://bloomberg.com/news/features/2026-11-26/holidays-to-test-ai-shopping-bots-from-google-amazon-meta-and-openai",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa1RWUDNfdFhiM242MUZmNTlSajdYeEllVVU0YzFkdmptd1phTjVzYWNBeXduX05iSUNjSVgwUkJwajFETlYteDMtamYxb1liMTJQWFlSbFkxLW9SQXFZWFRNZHhWQlRUNkxEblY2dVF1ZHlnTmhtRHhzOF8wTVJJbV94VVFXZzZ4ZmthNGJPU2pNdFQ2V1JlVjVhNWpYNVlUSnNYM1BvMkhLZTdtdXo5bDBSNzJwTkxEQzNJ?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-e8dbe49f19e9",
+   "headline": "Los Angeles blocks AI features as Google threatens schools' search access",
+   "summary": "AP report.",
+   "subtopics": [
+    "products-and-apps"
+   ],
+   "entities": [
+    "Google",
+    "Los Angeles"
+   ],
+   "importance": 40,
+   "evidence": [
+    "AP"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 19.75,
+   "features": {
+    "n_items": 1,
+    "n_independent_domains": 1,
+    "best_tier": 1,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 1,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPX28yVGlpUUl3UEpZMGJaTDRFbXBWR09uX1diWWotVXFuQ2JOTDlZRVVCUXRtN3FyUUNzczI2SG9sTXZXanlELUZfYU1YTHZ3enQ1NUoyUGU4NmwzNzJYV3l5ZjM0cHF0NHlhMDl2R3gwaWROaHREY3Zrd3BBd2hHd202WnFqWTJwSF9pSThfUk5wRV9TQkdBVC1zc09hbHh6M1BVVHJ5MUdmc2JzQmJ2YUJLaEkzSGJXNHc?oc=5"
+   ]
+  },
+  {
+   "story_id": "ai-1bd7b7e3d0bc",
+   "headline": "BharatGen launches open-weight Patram 1.5 document AI model",
+   "summary": "7B-parameter model for Indian documents.",
+   "subtopics": [
+    "open-models"
+   ],
+   "entities": [
+    "BharatGen",
+    "Patram 1.5"
+   ],
+   "importance": 38,
+   "evidence": [
+    "multiple Indian outlets"
+   ],
+   "is_update_of": null,
+   "notes_for_editor": null,
+   "importance_rules": 23.5,
+   "features": {
+    "n_items": 4,
+    "n_independent_domains": 4,
+    "best_tier": 3,
+    "frontpage_hits": 0,
+    "best_rank": null,
+    "hn_points_at_observation": null,
+    "comments_at_observation": null,
+    "first_seen": "2026-11-27T06:36:58.401788Z",
+    "velocity": 4,
+    "has_primary_source": false
+   },
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQY2wwZ0U1LUJQaFJ0ZHl0V2Jnd3JoTFk5WTA0ZkRkRl95Zjc2YlNTZmU4WFVJQ2RrakRjTl91dXlDMFF1NHBMQkRqSk5pTnZvM2VqN0xDXzBvZ2dDbndrOFpwel9LZm1aR1huT2pvSjhLNDlDOWJncFExelIydXM0b1MwVng1R1A3bk1GQjBSbDVMQkZyRk00TnU5dXo1UGp3MXdCbHlZekxEWVo5QzBYMG12WnVWQ2xaczZsc2hXMVBJM0ZhYWxINWh2Wm92TnAyaHh4azJkRmtUdzhoNXBuTlZWN2xfcnFxMEhqRNIB8gFBVV95cUxQWkxoaXBsWHJXQ1ROMEY2cGtyZE5SbGgzcUVpZm9kbHZZZU5ZYmUtV1dEWHc0Y3hlcnhtS3BRNUFEV2lFT1ZkQ0o5QXZsVnlWdU9kaWxHaHhRWTBSN3NyVVZtMkREUE1KdDNkSmR6WklpeWhBWVJvMGdqd0xnR2w3TUNETTFXZjdQN0ZsMDhfR0wwQTNNTnowbmVHNHpOVEhMVkVhRS1ObERfamdPYUpGWWlSOTFBY1dvdndfQWxLT3oxYkI2OURsOFRha2ZTTC1CUmFUV2Z6YXNKdDAtajYwTTM2NGxSa296SnQ1WG5uWHZzUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPZU9TeG9rTkp3OVNMRXp0VVdHaEhQUWZtLWc5ZVF1M2MtcW9CSldtR2VWQU52ZllyMEF0YmZIUDA5b3M1ZFpmQ0ZzeEU4dXF4Uy1LYzZRNzBJZW5ST2p6Vy1Zd05XSWpfeTFZdXVxdDZFbEl2TzZSckVNdThlZVVHazlPSWZfLUtCVFBUaWZ6b3FtMTJVdndobWwyNVc5VWs1bkFuekFMUGpGcl9JanpLSmN6Z2hwajVjVzQyR3ZGa212M0h2c1hLTUpXWU1fT2E1XzNyR1dvM0ZQeTF5MG0yVDFKZlZpT2VkRVZnZXBudGlld9IB9wFBVV95cUxPdnVveFd5U19ya21iUnE3NEhodXIyeW5NSUdPSWpvUVNwT2syMUJwX3cySGlEREhsbmUtVzNCTHlnOHdac1ZuOEs2SDlvd2VIdmlUdHU5Q196QUFoczZaZWFWZW9WMEZiMmQwWmM1NXZ4YjB2T3hNdGh2aE1wUTZzcVlDNzNiRHJhZm5ZWUFDcDIyTE44bWQzQ1VvTEtNSDVMWDNaa3pfRlFrazR6cDJuM01HRk9OSnVBb2xKV0haT3JiaW1kYVdMUVRaQXA3V1lyME9WbDR2a2pUb042SzJlZEFTRlcxTVNuWm1tZERCSG5uSFJCTGdJ?oc=5",
+    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNanRjcWUzWEJYdkJ5TmJpWkU4LXd3Y0lSWS1tUlZDY0lBZHhBS3FDTm9nZVNRenRNYm9IbExCUWtHdEUtbE8wZ3Vma3M1SG8xM1RIN091YjhteWR1OWhZeFUtRlozT1RfejZzblA1eTlJOEk0ZzNJdUdrdzFQLTVpSWZmbEdITDY3b21jVVRDQnJYQjdXT3RpSjRTU21SN2F2U1FBbEdqLUVsdy1MaFJPNTRIajhZSEpEODNNNEV6YjhPWnZQRWVhVThZQWVpd1IwRHVOZ1RYeXE5aHB0T0Y2cXk1WDE0aktfQjc1eGpMcXozcHFz0gH6AUFVX3lxTE1NbGdRZmhFNUZid2J6NWF0S2toR1JhNUYxajlpZm5GUmIwWkU2TlVJdGdLUy1teXQ0Z3ZabVNha0pVNWJqQ0Uxekw2c0ZreXU3cFhBUEZjMXJaMEVvNVpPRFJmQjluNXVfeWs1dXRRdnMzZGRZXzF5TWNBb2ZISnNibGM1eXVvenQzVEN5T1AtejNXQ05nNE95WmdralRzRHpRTXNoZ2hWbGFucWJuMGFKdzdCY1B0Q0hjYVU5N0MtZnQ4Z1YtRnBteDkwRVRwQkdyQXh5VWNVWUFFOUZPSzRTMjR1MFdSZjhxNXYtd0JtUFh6TTRCRDgwNmc?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPY2t5RWhIVy1KODY0YzdFdVA3ZjIwUTJ1aVlhNnU5cmlHM2g0Rkx0bXUzUDVpNERBZkw4bG96TzNmNjNmVFFTcWJwTy1qak41aUk4d0VITGthaXo3Sk1BSGpwbGpsRFgyYk9tYnNOU2dTZFNIaDBEXzdqQ0dkengydnAzbnpDS1l1ck5icUFvR3BqdEpOUnpmUEZJVjIyNXNzOE1aNlNqR2xHR2h4?oc=5"
+   ]
+  }
+ ]
+}

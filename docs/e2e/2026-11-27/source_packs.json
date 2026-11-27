@@ -1,0 +1,650 @@
+[
+ {
+  "story_ref": "ai-6b5d8d763b8d",
+  "headline": "Nvidia tells partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens China chip access rules",
+  "facts": [
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners are meeting U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been tapping Nvidia chips remotely from data centers in these countries.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed this loophole earlier in the month, reportedly grudgingly.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   },
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners are meeting U.S. export requirements.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been tapping Nvidia chips remotely from data centers in these countries.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:388-589"
+    ]
+   },
+   {
+    "text": "The US Commerce Department closed this loophole earlier in the month, reportedly grudgingly.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:388-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:388-589",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:590-739",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "physical_ai-3c4b617fb1c8",
+  "headline": "XPeng unveils Turing physical AI architecture (VLA 3.0) and IRON humanoid, targeting mass production in January 2027",
+  "facts": [],
+  "passages": [
+   {
+    "passage_id": "a2fe9c4efe9c45e2533b1e26adc02942:215-431",
+    "doc_id": "a2fe9c4efe9c45e2533b1e26adc02942",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmJVeENXOVBLY3poZWRzei03czJiT3Fqc0F3UkxrSnhNb1V6QWtHSkswUUoxWVNUQkJiRVpaV3RCVE1ERnNDWkcwRUREUzZQQnRveUlzQXNvRF9yQUNPUndFOFNsZmFJNzdSMnM0cTZyaFptVUI2QkZJcm9xN2pWZzlua2NvOUhkTG9JcnJHOUtWTEpjbldoajZ2ejdwdDByekc5QkdDRlROakdmX2pmNnMzaGpTMnI3ZDVlOWd5Vm85YUU3VnNKWF9ha2IyX2k4RndaUlUzQnc5V3d2QjR3cTZCLV9UclczQkNIVHZNOFVTNVE5blZlZXFFaw?oc=5",
+    "source": "investingnews.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Mr. He Xiaopeng emphasizes: \"Robots must be designed with a software mindset, but hardware must come first. Robots also need multiple speeds of thought, and the data they learn from needs variety, not merely volume.\"",
+    "char_start": 215,
+    "char_end": 431
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ },
+ {
+  "story_ref": "ai-be41885503cc",
+  "headline": "US chip curbs and distillation crackdown delay Chinese AI models; Z.ai's GLM-5.5 reportedly slips",
+  "facts": [
+   {
+    "text": "Reports say stricter U.S. curbs on remote access to Nvidia chips and U.S. AI firms' crackdowns on model distillation are stalling China's AI model development.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:0-216"
+    ]
+   },
+   {
+    "text": "Zhipu's next-generation model GLM-5.5 could be delayed until after the first quarter of next year.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:417-666"
+    ]
+   },
+   {
+    "text": "Moonshot AI projects that cutting off overseas data center access could double the interval between major model releases to over a year.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:667-883"
+    ]
+   },
+   {
+    "text": "The U.S. Department of Commerce regulations blocking Chinese companies from remotely renting Nvidia advanced chips via overseas data centers took effect on the 19th.",
+    "passage_ids": [
+     "26e4a0dc9e872cc4cbfe4b1c07388d8e:2607-2821"
+    ]
+   },
+   {
+    "text": "Reuters reported on Nov. 26 that Zhipu's next flagship model development schedule is being delayed.",
+    "passage_ids": [
+     "25b132515f6e28fa944c71ed7a69a7c6:448-650"
+    ]
+   },
+   {
+    "text": "Zhipu's planned GLM-5.5 release could slip until after the first quarter of next year.",
+    "passage_ids": [
+     "25b132515f6e28fa944c71ed7a69a7c6:651-901"
+    ]
+   },
+   {
+    "text": "Moonshot AI reportedly expects its major model release interval could more than double to over a year if overseas data center access is blocked.",
+    "passage_ids": [
+     "25b132515f6e28fa944c71ed7a69a7c6:902-1142"
+    ]
+   },
+   {
+    "text": "A U.S. Commerce Department regulation blocking Chinese firms from remotely renting Nvidia advanced chips via overseas data centers took effect on Nov. 19.",
+    "passage_ids": [
+     "25b132515f6e28fa944c71ed7a69a7c6:2930-3159"
+    ]
+   },
+   {
+    "text": "Moonshot AI has reportedly withdrawn from a $150 million Blackwell access contract through an Indonesian data center.",
+    "passage_ids": [
+     "25b132515f6e28fa944c71ed7a69a7c6:1983-2265"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:0-216",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Stricter U.S. government curbs on remote access to Nvidia chips and crackdowns by U.S. artificial intelligence (AI) companies on model \"distillation\" are reportedly stalling and delaying China's AI model development.",
+    "char_start": 0,
+    "char_end": 216
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:417-666",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Sources stated that while Zhipu originally planned to release its next-generation model, \"GLM-5.5,\" within the year, the launch could be delayed until after the first quarter of next year following the introduction of new U.S. computing regulations.",
+    "char_start": 417,
+    "char_end": 666
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:667-883",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Competitor Moonshot AI in China is also internally projecting that if access to overseas data centers is cut off, the interval between major AI model releases could double from the previous six months to over a year.",
+    "char_start": 667,
+    "char_end": 883
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:1272-1445",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "A researcher at a major Chinese tech company said, \"We are finished,\" adding that many of their peers and themselves want to leave the AI training sector to find other jobs.",
+    "char_start": 1272,
+    "char_end": 1445
+   },
+   {
+    "passage_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e:2607-2821",
+    "doc_id": "26e4a0dc9e872cc4cbfe4b1c07388d8e",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "source": "news.sbs.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The U.S. Department of Commerce announced regulations on the 16th to block Chinese companies from remotely renting Nvidia advanced chips through overseas data centers, and these regulations took effect on the 19th.",
+    "char_start": 2607,
+    "char_end": 2821
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:448-650",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Reuters reported on Nov. 26 (local time), citing sources familiar with the matter, that the development schedule for the next flagship AI model of the Chinese AI developer Zhipu (Z.ai) is being delayed.",
+    "char_start": 448,
+    "char_end": 650
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:651-901",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Zhipu originally planned to release its next model, \u2018GLM-5.5,\u2019 within the year, but sources reported that the release timing could be delayed until after the first quarter of next year following the introduction of the new U.S. computing regulations.",
+    "char_start": 651,
+    "char_end": 901
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:902-1142",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Competitor Moonshot AI of China is also reportedly anticipating internally that if access to overseas data centers is blocked, the release interval for its major AI models could roughly double from the previous 6 months to more than 1 year.",
+    "char_start": 902,
+    "char_end": 1142
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:1527-1704",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "A researcher at a major Chinese technology company said, \u201cWe are finished,\u201d adding that they and many of their colleagues want to leave the AI training field to find other jobs.",
+    "char_start": 1527,
+    "char_end": 1704
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:1983-2265",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Chinese companies have previously secured Nvidia\u2019s cutting-edge chip \u2018Blackwell\u2019 through smuggling or remote access to overseas data centers, but sources reported that Moonshot AI has already withdrawn from a $150 million Blackwell access contract through an Indonesian data center.",
+    "char_start": 1983,
+    "char_end": 2265
+   },
+   {
+    "passage_id": "25b132515f6e28fa944c71ed7a69a7c6:2930-3159",
+    "doc_id": "25b132515f6e28fa944c71ed7a69a7c6",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "source": "businesskorea.co.kr",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The U.S. Department of Commerce announced a regulation on Nov. 16 blocking the path for Chinese companies to remotely rent and use Nvidia\u2019s advanced chips through overseas data centers, and this regulation took effect on Nov. 19.",
+    "char_start": 2930,
+    "char_end": 3159
+   },
+   {
+    "passage_id": "758d8b43b5fd647bf8ff38d1bab215e9:232-406",
+    "doc_id": "758d8b43b5fd647bf8ff38d1bab215e9",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9jLWVKNkd6VnZPU0U3TTk3RkpHYmFFd2dTR2dCMVBfaVI2emxTcURueF9ld19GQjdNaDVZZ3VGbjNUWTBkUDU5cktSR1VUSzJXTGlDNGZHREpYNElmbFIwaDE1WlZJTl9jNXJHTU5rWUgzOGoyTkM4eFhQZw?oc=5",
+    "source": "cryptobriefing.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Z.AI, the company also known as Zhipu AI, has reportedly fallen behind schedule on its next flagship model, according to Reuters, which cited people familiar with the matter.",
+    "char_start": 232,
+    "char_end": 406
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:6bac70b0e180",
+  "headline": "AI agents now control part of Deepmind's compute for Gemini experiments, but recursive self-improvement remains distant - The Decoder",
+  "facts": [],
+  "passages": [
+   {
+    "passage_id": "305e62040e8a734e17a1846ad4df4ef6:679-839",
+    "doc_id": "305e62040e8a734e17a1846ad4df4ef6",
+    "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+    "source": "the-decoder.com",
+    "published_at": "2026-11-25T00:00:00Z",
+    "text": "According to Kavukcuoglu, AI agents control part of the compute themselves to run experiments, though the lab is still far from full recursive self-improvement.",
+    "char_start": 679,
+    "char_end": 839
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "deep"
+ },
+ {
+  "story_ref": "u:c3a6c974e788",
+  "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions \u2014 BigGo Finance",
+  "facts": [
+   {
+    "text": "NVIDIA released its image-generation model Nemotron-Labs-Image-30B-A3B as a free open-weight model.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:101-420"
+    ]
+   },
+   {
+    "text": "Nemotron-Labs-Image-30B-A3B uses an autoregressive mechanism rather than diffusion.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:101-420",
+     "cd80b035be375554cf4970bd2c168bc0:754-1115"
+    ]
+   },
+   {
+    "text": "The model can generate photorealistic and illustration-style images as well as images containing text and infographics.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:754-1115"
+    ]
+   },
+   {
+    "text": "The model's runtime assumes Linux, Python 3.12, and CUDA 13.0.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1116-1264"
+    ]
+   },
+   {
+    "text": "The model is released under the NVIDIA License, which permits only non-commercial use.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1116-1264"
+    ]
+   },
+   {
+    "text": "NVIDIA says the broader system recorded scores exceeding GPT-Image-2 and Nano Banana Pro on multiple benchmarks.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1683-2008"
+    ]
+   },
+   {
+    "text": "Rendering text and diagrams has been a weakness of diffusion models.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:2249-2428"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:101-420",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "U.S. semiconductor giant NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model. Its biggest distinguishing feature is that it adopts the autoregressive mechanism common in large language models (LLMs) rather than the diffusion models that dominate image generation.",
+    "char_start": 101,
+    "char_end": 420
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:754-1115",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Unlike diffusion models, which paint images by progressively removing noise, Nemotron-Labs-Image-30B-A3B handles pixel information through an autoregressive method that predicts tokens sequentially. Sample outputs have been published showing it can generate not only photorealistic and illustration-style images but also images containing text and infographics.",
+    "char_start": 754,
+    "char_end": 1115
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1116-1264",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "The runtime environment assumes Linux, Python 3.12, and CUDA 13.0. It uses the \"NVIDIA License,\" which permits use for non-commercial purposes only.",
+    "char_start": 1116,
+    "char_end": 1264
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1683-2008",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "The system as a whole is said to have recorded scores exceeding OpenAI's GPT-Image-2 and Nano Banana Pro (Gemini 3 Pro Image) on multiple benchmark tests. A technical report, \"Nemotron-Labs-VisualCreation: Pixel as Code for Agentic Visual Creation,\" has also been published, where detailed evaluation results can be reviewed.",
+    "char_start": 1683,
+    "char_end": 2008
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:2249-2428",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Rendering text and diagrams has been an area where diffusion models have struggled, and adopting an autoregressive approach also carries the context of addressing such weaknesses.",
+    "char_start": 2249,
+    "char_end": 2428
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-4fcd190539ae",
+  "headline": "Jensen Huang reinstated as Nvidia CEO after ethics breach; questions over governance",
+  "facts": [
+   {
+    "text": "Jensen Huang resigned as Nvidia CEO after reports of multiple extramarital affairs, including with an alleged Chinese spy.",
+    "passage_ids": [
+     "229617f3fd3054bc7e626a96e06bb242:0-209"
+    ]
+   },
+   {
+    "text": "Nvidia's board unanimously accepted Huang's resignation and does not intend to reinstate him as CEO.",
+    "passage_ids": [
+     "229617f3fd3054bc7e626a96e06bb242:1225-1340"
+    ]
+   },
+   {
+    "text": "CFO Colette Kress is acting CEO on an interim basis while Nvidia searches for a permanent CEO.",
+    "passage_ids": [
+     "229617f3fd3054bc7e626a96e06bb242:1098-1206"
+    ]
+   },
+   {
+    "text": "Alice Huang, a former Megaspeed executive, was accused of being a Chinese intelligence agent funnelling Nvidia chips to China.",
+    "passage_ids": [
+     "229617f3fd3054bc7e626a96e06bb242:2042-2288"
+    ]
+   },
+   {
+    "text": "Nvidia announced quarterly revenue rose 20 percent to $115.8 billion in Q4.",
+    "passage_ids": [
+     "229617f3fd3054bc7e626a96e06bb242:611-735"
+    ]
+   },
+   {
+    "text": "Trump said Huang is looking forward to his \"second term\" as Nvidia CEO.",
+    "passage_ids": [
+     "6fee8c5690f23ecc1509dc7d51051d1a:15-274",
+     "6fee8c5690f23ecc1509dc7d51051d1a:806-906"
+    ]
+   },
+   {
+    "text": "Trump dismissed national security concerns over Huang's reinstatement.",
+    "passage_ids": [
+     "6fee8c5690f23ecc1509dc7d51051d1a:1120-1196"
+    ]
+   },
+   {
+    "text": "Nvidia restored Huang as CEO after intervention from Trump and Vice President JD Vance.",
+    "passage_ids": [
+     "6fee8c5690f23ecc1509dc7d51051d1a:1338-1507"
+    ]
+   },
+   {
+    "text": "Trump's efforts drew criticism from both Republicans and Democrats.",
+    "passage_ids": [
+     "6fee8c5690f23ecc1509dc7d51051d1a:1647-1811"
+    ]
+   },
+   {
+    "text": "Nvidia's stock rose more than 31% on Monday after Huang's return was announced, then lost more than 9.5% over the next two days.",
+    "passage_ids": [
+     "6fee8c5690f23ecc1509dc7d51051d1a:1933-2066"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "229617f3fd3054bc7e626a96e06bb242:0-209",
+    "doc_id": "229617f3fd3054bc7e626a96e06bb242",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "source": "mashable.com",
+    "published_at": "2026-11-18T00:00:00Z",
+    "text": "Nvidia held its Q3 2027 earnings call on Tuesday, less than a week after former CEO Jensen Huang resigned amidst reports he had engaged in multiple extramarital affairs \u2014 including with an alleged Chinese spy.",
+    "char_start": 0,
+    "char_end": 209
+   },
+   {
+    "passage_id": "229617f3fd3054bc7e626a96e06bb242:1225-1340",
+    "doc_id": "229617f3fd3054bc7e626a96e06bb242",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "source": "mashable.com",
+    "published_at": "2026-11-18T00:00:00Z",
+    "text": "\"The Nvidia board unanimously accepted his resignation and does not intend to reinstate Jensen as CEO,\" said Jones.",
+    "char_start": 1225,
+    "char_end": 1340
+   },
+   {
+    "passage_id": "229617f3fd3054bc7e626a96e06bb242:1098-1206",
+    "doc_id": "229617f3fd3054bc7e626a96e06bb242",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "source": "mashable.com",
+    "published_at": "2026-11-18T00:00:00Z",
+    "text": "Nvidia is currently searching for a permanent CEO, with CFO Colette Kress acting in the role in the interim.",
+    "char_start": 1098,
+    "char_end": 1206
+   },
+   {
+    "passage_id": "229617f3fd3054bc7e626a96e06bb242:2042-2288",
+    "doc_id": "229617f3fd3054bc7e626a96e06bb242",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "source": "mashable.com",
+    "published_at": "2026-11-18T00:00:00Z",
+    "text": "The first of Huang's affair partners to be revealed was Alice Huang (no relation), a former Megaspeed executive accused of being a Chinese intelligence agent funnelling Nvidia chips to the country, which would be a violation of U.S. restrictions.",
+    "char_start": 2042,
+    "char_end": 2288
+   },
+   {
+    "passage_id": "229617f3fd3054bc7e626a96e06bb242:611-735",
+    "doc_id": "229617f3fd3054bc7e626a96e06bb242",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03QnFOcVdTcXE4Nmtyem9SSFZwY2tFcU9JdHh6dWVjMDJRWG9hQVhXZ0JjZUxJQVc3dThXVXBrMmVlWDViLVFvQkc3UW1sUGFmbmdkUTl4ZUdnU1Vabi0tVDVxakNZSVBPVG1LV2Rsd3R6Q0FuU0JER0JR?oc=5",
+    "source": "mashable.com",
+    "published_at": "2026-11-18T00:00:00Z",
+    "text": "This growth has continued in Q4, with Nvidia announcing its quarterly revenue had increased by 20 percent to $115.8 billion.",
+    "char_start": 611,
+    "char_end": 735
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:15-274",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "President Donald Trump said Jensen Huang is looking forward to his \"second term\" as chief executive officer of Nvidia Corp., reiterating his praise for the man whose reinstatement he pushed hard for despite bipartisan backlash over national security concerns.",
+    "char_start": 15,
+    "char_end": 274
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:806-906",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "\"When I did speak to him, he is so happy to be going back. He calls it his second term,\" Trump said.",
+    "char_start": 806,
+    "char_end": 906
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:1120-1196",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "\"Based on information and belief, I think he's absolutely fine,\" Trump said.",
+    "char_start": 1120,
+    "char_end": 1196
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:1338-1507",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Nvidia earlier this week restored Huang as CEO, following intervention from Trump, who also enlisted Vice President JD Vance to help make a personal appeal to the board.",
+    "char_start": 1338,
+    "char_end": 1507
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:1647-1811",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Trump's efforts drew widespread criticism from both Republicans and Democrats, with lawmakers vowing to investigate ties between Huang and the Trump administration.",
+    "char_start": 1647,
+    "char_end": 1811
+   },
+   {
+    "passage_id": "6fee8c5690f23ecc1509dc7d51051d1a:1933-2066",
+    "doc_id": "6fee8c5690f23ecc1509dc7d51051d1a",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeWd2bXhnLUhPT1VLNVFLVHNkai1zcmVfdG1rbGNpRnFOMm94ZTJwcFFySWdUTERMMUtVT2JGbFBXMEhjbVRlT0JiUzVmbnNKVUVDRTN6YS1Bb3VqUzJOTXZHcjZ0eDRDNlJLcU1BTlNzSWZJSHNTdlpJWThUTklDRGIzR1d0UTQ?oc=5",
+    "source": "ca.finance.yahoo.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Nvidia's stock soared more than 31% on Monday after the announcement of Huang's return, but lost more than 9.5% in the next two days.",
+    "char_start": 1933,
+    "char_end": 2066
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ }
+]
