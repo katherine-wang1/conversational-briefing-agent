@@ -1,0 +1,25 @@
+[s000 intro -] Good morning.
+[s001 intro -] You have three stories today: Nvidia pausing chip server shipments to Southeast Asia, a thousand Claude agents formalizing Fermat's Last Theorem, and the first US utility authorized to build a small modular reactor.
+[s002 transition ai-5166002f4d42] First, the biggest story this morning.
+[s003 story ai-5166002f4d42] Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.
+[s004 story ai-5166002f4d42] The Journal reports that Dell and Super Micro were told to hold server shipments for an unspecified period.
+[s005 story ai-5166002f4d42] Nvidia is assessing whether its regional partners are meeting U.S. export requirements.
+[s006 story ai-5166002f4d42] The reason is that Chinese companies have been tapping Nvidia chips remotely from data centers in those countries.
+[s007 story ai-5166002f4d42] The US Commerce Department closed that loophole earlier this month.
+[s008 story ai-5166002f4d42] The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.
+[s009 transition ai-5166002f4d42] I can walk you through how that remote-access loophole worked, if you're curious.
+[s010 transition u:ea4591aaee04] Next, something for your work on agent memory.
+[s011 story u:ea4591aaee04] Lance Martin, a researcher at Anthropic, describes 1,000 Claude agents formalizing Fermat's Last Theorem in Lean.
+[s012 story u:ea4591aaee04] The run took about 30 hours and used no domain-specific harness and no human steering on the solution.
+[s013 story u:ea4591aaee04] The agents' only tools were Git and a SQL database.
+[s014 story u:ea4591aaee04] The lead agent built database tables to coordinate the team without being told to.
+[s015 transition u:ea4591aaee04] Since you follow agent memory, the coordination tables are the part to hear.
+[s016 transition u:ea4591aaee04] I can tell you what those tables were for, if you'd like.
+[s017 transition u:f81b8ae246e0] Now to energy, and small modular reactors.
+[s018 story u:f81b8ae246e0] The Tennessee Valley Authority became the first US power utility authorized to build a commercial small modular reactor, at the end of September.
+[s019 story u:f81b8ae246e0] The project will use the GE Vernova Hitachi BWRX-300 reactor.
+[s020 story u:f81b8ae246e0] Small modular reactors are miniature nuclear reactors built in a factory and assembled on-site.
+[s021 story u:f81b8ae246e0] Over 120 distinct SMR designs have been recorded globally, but many have not achieved licensing.
+[s022 transition u:f81b8ae246e0] If you're tracking SMR licensing, this is the one to watch.
+[s023 transition u:f81b8ae246e0] I can say more about how the TVA decision fits into the wider picture, if you're interested.
+[s024 outro -] Which of these would you like to dig into?

@@ -1,0 +1,25 @@
+[s000 intro -] Good morning.
+[s001 intro -] You have four stories today: Nvidia pausing chip shipments to Southeast Asia, EvolveMAS, a memory framework for decentralized multi-agent systems, procedure memory for learning recruiter decisions, and OpenAI's claimed proof that the matrix multiplication exponent ω is exactly 9/4.
+[s002 transition ai-5166002f4d42] First, the biggest story this morning.
+[s003 story ai-5166002f4d42] Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.
+[s004 story ai-5166002f4d42] TechCrunch, citing the Wall Street Journal, reports that Dell and Super Micro were among the manufacturing partners told to hold those shipments.
+[s005 story ai-5166002f4d42] Nvidia has told manufacturing partners to pause server shipments to those countries for an unspecified period while it assesses whether regional partners meet U.S. export requirements.
+[s006 story ai-5166002f4d42] The U.S. Commerce Department closed that loophole earlier this month.
+[s007 story ai-5166002f4d42] The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.
+[s008 transition ai-5166002f4d42] I can walk you through how that remote access worked, if you want the details.
+[s009 transition u:c4c8118aa18d] Next, something for your work on agent memory.
+[s010 story u:c4c8118aa18d] A paper called EvolveMAS addresses decentralized multi-agent systems, where large language model agents interact without centralized control.
+[s011 story u:c4c8118aa18d] Each main agent gets a dedicated MemoryAgent that manages its memory outside the agent's own reasoning context.
+[s012 story u:c4c8118aa18d] Across five benchmarks, EvolveMAS posted the highest normalized average score of 77.2 among the methods compared.
+[s013 transition u:c4c8118aa18d] Since you follow agent memory, the dedicated memory agent is the part to watch.
+[s014 transition u:32ca84e4b7b9] Also on agent memory, a paper on learning recruiter decisions.
+[s015 story u:32ca84e4b7b9] Hiring assistants have to infer recruiter preferences that shift across projects and over time.
+[s016 story u:32ca84e4b7b9] The authors introduce Procedure Memory, which learns reusable decision steps from past episodes.
+[s017 story u:32ca84e4b7b9] On PersonaMem-v2, that approach reached 50.2 percent accuracy, compared with 29.0 percent with no memory.
+[s018 story u:32ca84e4b7b9] It also used 69 percent fewer context tokens than keeping the full conversation history.
+[s019 transition u:32ca84e4b7b9] I can tell you how the memory retrieval works, if you're curious.
+[s020 transition ai-651cc167b0ad] And finally, one from outside your usual beat.
+[s021 story ai-651cc167b0ad] OpenAI reportedly claims to have proved that the exponent of matrix multiplication is exactly 9/4.
+[s022 story ai-651cc167b0ad] Scott Aaronson's blog describes that as a lower bound matching an upper bound OpenAI proved earlier.
+[s023 story ai-651cc167b0ad] Yupan Liu also posted an arXiv preprint proving that two-message quantum interactive protocols have the full power of PSPACE.
+[s024 outro -] Which of these would you like to dig into?

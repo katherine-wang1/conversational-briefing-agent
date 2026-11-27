@@ -1,0 +1,241 @@
+{
+ "brief_id": "b_96365f0f52a4f311",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:ea4591aaee04",
+   "slot": "for_you",
+   "headline": "1,000 Claude Agents Formalized Fermat's Last Theorem — Lance Martin, Anthropic｜AI Engineer — BigGo Finance",
+   "why_tag": "for you",
+   "aliases": [
+    "Anthropic",
+    "Lance Martin"
+   ]
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "slot": "for_you",
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "why_tag": "for you",
+   "aliases": [
+    "NuScale",
+    "Sargent & Lundy",
+    "ENTRA1 Energy"
+   ]
+  },
+  {
+   "story_ref": "u:9ad8c83ad888",
+   "slot": "for_you",
+   "headline": "Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation | alphaXiv",
+   "why_tag": "for you",
+   "aliases": [
+    "LongLive"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. There are four stories today. Answers to your follow-up questions come first.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "Our biggest story is about Nvidia and its chips in Southeast Asia.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s002",
+   "text": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "Partners named include Dell and Super Micro. The pause has no set end date.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "It lasts while Nvidia checks whether regional partners meet U.S. export requirements.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Chinese companies had been tapping Nvidia chips remotely from data centers in these countries.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The U.S. Commerce Department closed that loophole earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "The Institute for Progress estimates these remote data centers supply about 24% of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "Next, a story for you on a team of AI agents doing advanced math.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s009",
+   "text": "Anthropic researcher Lance Martin says 1,000 Claude agents self-coordinated over 30 hours to formalize Fermat's Last Theorem in Lean without a domain-specific harness.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:14-242"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s010",
+   "text": "The run had no domain-specific harness and no human steering on the solution.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "The lead agent created database tables to coordinate the team, though it was never told to.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:2249-2503",
+    "3514377c54bd884b0d4ecc657836f4ac:2721-2881"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "The agents' only tools were Git and a SQL database.",
+   "story_ref": "u:ea4591aaee04",
+   "cites": [
+    "3514377c54bd884b0d4ecc657836f4ac:1597-1788"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s013",
+   "text": "Now, a story for you on small modular reactors.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s014",
+   "text": "The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2503-2657"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s015",
+   "text": "The project will use GE Vernova Hitachi's BWRX-300 reactor. The TVA has not set a date to break ground.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2658-2793",
+    "e9c42d63067edbd5e75065a697c2c5d8:2794-2956"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s016",
+   "text": "Over 120 distinct designs are recorded globally, up from 83 in 2022, but many have not been licensed.",
+   "story_ref": "u:f81b8ae246e0",
+   "cites": [
+    "e9c42d63067edbd5e75065a697c2c5d8:2173-2360"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s017",
+   "text": "Last, a story for you on AI that generates long videos.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s018",
+   "text": "Its memory agent reads only the prompts so far, never the generated video.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:502-680"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s019",
+   "text": "On a new benchmark of 25 stories, it improved persistent-state accuracy by 26.3 points over its base generator.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:1171-1481"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s020",
+   "text": "The full system streams faster than real time, at 34.3 frames per second on one 8xB200 node with the generator in BF16.",
+   "story_ref": "u:9ad8c83ad888",
+   "cites": [
+    "292b44986b3f1eab9e020390933dae89:1482-1747"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s021",
+   "text": "What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 128
+}

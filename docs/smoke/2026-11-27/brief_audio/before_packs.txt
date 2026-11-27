@@ -1,0 +1,22 @@
+[s000 intro -] Good morning. There are four stories today. Answers to your follow-up questions come first.
+[s001 transition -] Our biggest story is about Nvidia and its chips in Southeast Asia.
+[s002 story ai-5166002f4d42] Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+[s003 story ai-5166002f4d42] Partners named include Dell and Super Micro. The pause has no set end date.
+[s004 story ai-5166002f4d42] It lasts while Nvidia checks whether regional partners meet U.S. export requirements.
+[s005 story ai-5166002f4d42] Chinese companies had been tapping Nvidia chips remotely from data centers in these countries.
+[s006 story ai-5166002f4d42] The U.S. Commerce Department closed that loophole earlier this month.
+[s007 story ai-5166002f4d42] The Institute for Progress estimates these remote data centers supply about 24% of China's AI computing power.
+[s008 transition -] Next, a story for you on a team of AI agents doing advanced math.
+[s009 story u:ea4591aaee04] Anthropic researcher Lance Martin says 1,000 Claude agents self-coordinated over 30 hours to formalize Fermat's Last Theorem in Lean without a domain-specific harness.
+[s010 story u:ea4591aaee04] The run had no domain-specific harness and no human steering on the solution.
+[s011 story u:ea4591aaee04] The lead agent created database tables to coordinate the team, though it was never told to.
+[s012 story u:ea4591aaee04] The agents' only tools were Git and a SQL database.
+[s013 transition -] Now, a story for you on small modular reactors.
+[s014 story u:f81b8ae246e0] The Tennessee Valley Authority became the first U.S. power utility authorized to build a commercial small modular reactor.
+[s015 story u:f81b8ae246e0] The project will use GE Vernova Hitachi's BWRX-300 reactor. The TVA has not set a date to break ground.
+[s016 story u:f81b8ae246e0] Over 120 distinct designs are recorded globally, up from 83 in 2022, but many have not been licensed.
+[s017 transition -] Last, a story for you on AI that generates long videos.
+[s018 story u:9ad8c83ad888] Its memory agent reads only the prompts so far, never the generated video.
+[s019 story u:9ad8c83ad888] On a new benchmark of 25 stories, it improved persistent-state accuracy by 26.3 points over its base generator.
+[s020 story u:9ad8c83ad888] The full system streams faster than real time, at 34.3 frames per second on one 8xB200 node with the generator in BF16.
+[s021 outro -] What would you like to dig into?

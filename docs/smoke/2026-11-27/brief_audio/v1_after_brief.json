@@ -1,0 +1,169 @@
+{
+ "brief_id": "b_a08ab75e7f95e568",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-26",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-5166002f4d42",
+   "slot": "big_news",
+   "headline": "Nvidia tells server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia as US tightens export controls",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Dell",
+    "Supermicro",
+    "US Commerce"
+   ]
+  },
+  {
+   "story_ref": "u:c4c8118aa18d",
+   "slot": "for_you",
+   "headline": "EvolveMAS: A Unified Self-Evolution Framework for Decentralized Multi-Agent Systems",
+   "why_tag": "for you",
+   "aliases": [
+    "EvolveMAS",
+    "MemoryAgent"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have two stories today: Nvidia pausing server shipments to four Southeast Asian countries and a framework for self-evolving decentralized multi-agent systems.",
+   "story_ref": null,
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "c2f22198fd6092de0b56da19ac9a2679:0-516"
+   ],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "First, the biggest story this morning.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s003",
+   "text": "Nvidia has told its server partners to pause shipments to Malaysia, Singapore, Thailand and Indonesia.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "Reporting from the Wall Street Journal, relayed by TechCrunch, says Dell and Super Micro were among the manufacturing partners told to hold server shipments.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Chinese companies have been using Nvidia chips remotely from data centers in those countries, a loophole the U.S. Commerce Department closed earlier this month.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:388-589"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "The Institute for Progress estimates those remote data centers supply about 24 percent of China's AI computing power.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:590-739"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "If you're tracking export controls, this is the one to watch.",
+   "story_ref": "ai-5166002f4d42",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s008",
+   "text": "Next, something for your work on agent memory.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s009",
+   "text": "EvolveMAS is a framework that lets decentralized groups of language model agents adapt and reuse what they've learned.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:0-516"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s010",
+   "text": "The paper argues that existing approaches often build adaptation for one particular kind of interaction at a time.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:0-516"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s011",
+   "text": "Agents there have to adjust to other agents at test time and reuse past experience, whether cooperating, mixing motives, or opposing each other.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [
+    "c2f22198fd6092de0b56da19ac9a2679:0-516"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s012",
+   "text": "Since you follow agent memory, the reuse of accumulated experience is the part to pay attention to.",
+   "story_ref": "u:c4c8118aa18d",
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s013",
+   "text": "Now to chips and China's AI labs.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s014",
+   "text": "Next, a nuclear story, since you're tracking SMR licensing.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s015",
+   "text": "And finally, one from outside your usual beat.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "transition"
+  },
+  {
+   "sid": "s016",
+   "text": "Which of these would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 96
+}
