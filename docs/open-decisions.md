@@ -1,5 +1,7 @@
 # Open decisions and follow-ups
 
+Start with `docs/next-session.md` (prioritized tasks and open questions as of 2026-11-27); this file has the detail.
+
 Kept current during the 2026-11-27 work (part 1 of `docs/architecture-revisit.md` and the steps after
 it). "Decision" items need Kate. "Follow-up" items are known work. Closed items move to the bottom with
 the date and outcome.
@@ -8,7 +10,7 @@ the date and outcome.
 
 | # | Decision | Context | Recommendation |
 |---|---|---|---|
-| D1 | Compare newsroom lists (replaces rating all 195) | 12 blind side-by-side comparisons (4 days × 3 beats) of the three remaining setups' top 5: Haiku with the old prompt, Haiku v4, Sonnet v4. Pick best and worst list. Page: https://claude.ai/artifact/Dppc6cYRVSSbZFogXCXecw (answer key: `docs/rating/lists_key_2026-11-27.json`). The 195-story page stays open for spot checks (https://claude.ai/artifact/YWXefuNeTZwhEfPy8kkuz3) | 6 of 12 done (2026-11-27): Haiku with the old prompt best 5 of 6; Sonnet v4 worst 3 of 6. Kate's notes: lists lose for clustering (several stories about one company or saga), and gain for headline-like titles. Round 2 (Haiku with the old prompt, Sonnet with the old prompt, Sonnet v5): https://claude.ai/artifact/84Cv2BmqUi7sLeNCY7x7CE (key: `docs/rating/lists_key_round2_2026-11-27.json`) |
+| D1 | Compare newsroom lists (replaces rating all 195) | 12 blind side-by-side comparisons (4 days × 3 beats) of the three remaining setups' top 5: Haiku with the old prompt, Haiku v4, Sonnet v4. Pick best and worst list. Page: https://claude.ai/artifact/Dppc6cYRVSSbZFogXCXecw (answer key: `docs/rating/lists_key_2026-11-27.json`). The 195-story page stays open for spot checks (https://claude.ai/artifact/YWXefuNeTZwhEfPy8kkuz3) | 6 of 12 done (2026-11-27): Haiku with the old prompt best 5 of 6; Sonnet v4 worst 3 of 6. Kate's notes: lists lose for clustering (several stories about one company or saga), and gain for headline-like titles. Round 2 (ai only, 4 days): no clear winner (best: Sonnet + old prompt 2, Sonnet v5 1, Haiku + old prompt 1). Notes: every list concentrated on Nvidia, chips and markets; topics repeat across days ("the IPO is now old news"). See `docs/next-session.md` |
 | D2 | Shared store size (25–30 stories per beat) and the per-user pool cap of 80 | A user following all 3 beats has 80 shared stories plus their own finds; the cap cuts digest stories by shared importance before personal scoring (55 of 80 reached scoring in the smoke run) | Kate, 2026-11-27: leave as is for now |
 | D4 | Statements and commentary ("X says Y") | Kate, 2026-11-27: several pooled stories read as opinion, not something happening. v4 skips "opinion pieces without news" but lets a notable person's remarks through (Amodei calling claims "absurd", Aaronson on unreleased breakthroughs). Proposed general rule: a statement is news only when it announces or reveals something (a decision, a plan, new facts); commentary, reactions and predictions rank low or are skipped | In the blended v5 prompt (2026-11-27), together with one-story-per-saga and variety at the top |
 | D3 | Test Exa for full text | Exa is supported by the `search` tool but has no key here | Decide after the story-notes numbers show how much text the fetcher gets |
