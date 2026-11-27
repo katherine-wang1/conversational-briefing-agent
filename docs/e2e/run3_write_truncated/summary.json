@@ -1,0 +1,27 @@
+{
+ "timings": {
+  "1 collect": 35.5,
+  "2 newsroom": 88.3,
+  "3 story notes": 88.4,
+  "4 per-user run": 86.6,
+  "5 voice": 8.2
+ },
+ "costs": {
+  "2 newsroom": 0.3177,
+  "3 story notes": 0.0567,
+  "4 per-user run": 0.0225,
+  "5 voice": 0.0036
+ },
+ "total": 0.4005,
+ "by_role": {
+  "newsroom.editor": 0.3177,
+  "newsroom.story_note": 0.0567,
+  "cos.plan": 0.0005,
+  "cos.search_loop": 0.0023,
+  "cos.score": 0.0083,
+  "cos.extract_passages": 0.0042,
+  "cos.write_brief": 0.0065,
+  "cos.claim_check": 0.0006,
+  "voice.turn": 0.0036
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "local_date": "2026-11-27",
+ "arm": "full",
+ "stories": [
+  {
+   "story_ref": "ai-d53b121b6704",
+   "slot": "big_news",
+   "headline": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule",
+   "why_tag": "big news",
+   "aliases": [
+    "Nvidia",
+    "Singapore",
+    "Malaysia",
+    "Thailand",
+    "Indonesia",
+    "Gan Kim Yong"
+   ]
+  },
+  {
+   "story_ref": "physical_ai-4486d9df69ba",
+   "slot": "big_news",
+   "headline": "XPeng unveils IRON humanoid, targets mass production from January 2027 at roughly EV-level price",
+   "why_tag": "big news",
+   "aliases": [
+    "XPeng",
+    "IRON",
+    "He Xiaopeng"
+   ]
+  },
+  {
+   "story_ref": "u:5112dcc98dfd",
+   "slot": "for_you",
+   "headline": "Energy Northwest seeks NRC filing exemptions for Cascade SMR",
+   "why_tag": "for you",
+   "aliases": [
+    "Energy Northwest",
+    "NRC"
+   ]
+  },
+  {
+   "story_ref": "ai-b57d153658e5",
+   "slot": "for_you",
+   "headline": "Meta's Muse agent draws UK FCA complaint as AI shopping bots get Black Friday test",
+   "why_tag": "for you",
+   "aliases": [
+    "Meta",
+    "Muse",
+    "FCA",
+    "Google",
+    "Amazon",
+    "OpenAI"
+   ]
+  },
+  {
+   "story_ref": "u:c3a6c974e788",
+   "slot": "for_you",
+   "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions — BigGo Finance",
+   "why_tag": "for you",
+   "aliases": [
+    "NVIDIA"
+   ]
+  },
+  {
+   "story_ref": "ai-a1ca943c2df4",
+   "slot": "outside_usual",
+   "headline": "Anthropic goes public, trading as ANT",
+   "why_tag": "outside your usual",
+   "aliases": [
+    "Anthropic",
+    "Dario Amodei"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "sid": "s000",
+   "text": "Good morning. Here is your brief.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s001",
+   "text": "You have six stories today.",
+   "story_ref": null,
+   "cites": [],
+   "kind": "intro"
+  },
+  {
+   "sid": "s002",
+   "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+   "story_ref": "ai-d53b121b6704",
+   "cites": [
+    "33b3d08d99aeb285e8bea951b21c283a:100-387"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s003",
+   "text": "XPeng plans to bring its IRON humanoid robot to market in 2027.",
+   "story_ref": "physical_ai-4486d9df69ba",
+   "cites": [
+    "617f6b2a7865d2871190e1b2af15d1f6:84-242"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s004",
+   "text": "Energy Northwest New Nuclear asked the NRC for permission to file the Cascade environmental report before other parts of its construction-permit application.",
+   "story_ref": "u:5112dcc98dfd",
+   "cites": [
+    "ec04adce1e4c5c1eeead0970eb134917:0-226"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s005",
+   "text": "Meta launched its Muse AI shopping assistant in the UK this week.",
+   "story_ref": "ai-b57d153658e5",
+   "cites": [
+    "83ff5b5f384b81a71334789afd3260e9:121-272"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s006",
+   "text": "NVIDIA released its image-generation model Nemotron-Labs-Image-30B-A3B as a free open-weight model, which uses the autoregressive mechanism common in large language models rather than diffusion.",
+   "story_ref": "u:c3a6c974e788",
+   "cites": [
+    "cd80b035be375554cf4970bd2c168bc0:101-420"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s007",
+   "text": "GTA VI launched as the highest-rated game of all time on Metacritic.",
+   "story_ref": "ai-a1ca943c2df4",
+   "cites": [
+    "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+   ],
+   "kind": "story"
+  },
+  {
+   "sid": "s008",
+   "text": "That's the brief. What would you like to dig into?",
+   "story_ref": null,
+   "cites": [],
+   "kind": "outro"
+  }
+ ],
+ "est_duration_s": 49
+}

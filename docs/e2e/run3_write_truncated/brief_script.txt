@@ -1,0 +1,9 @@
+Good morning. Here is your brief.
+You have six stories today.
+Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.
+XPeng plans to bring its IRON humanoid robot to market in 2027.
+Energy Northwest New Nuclear asked the NRC for permission to file the Cascade environmental report before other parts of its construction-permit application.
+Meta launched its Muse AI shopping assistant in the UK this week.
+NVIDIA released its image-generation model Nemotron-Labs-Image-30B-A3B as a free open-weight model, which uses the autoregressive mechanism common in large language models rather than diffusion.
+GTA VI launched as the highest-rated game of all time on Metacritic.
+That's the brief. What would you like to dig into?

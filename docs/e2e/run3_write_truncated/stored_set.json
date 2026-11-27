@@ -1,0 +1,408 @@
+{
+ "user_id": "00000000-0000-0000-0000-000000000001",
+ "brief_id": "b_ff2b15fc0b53dad3",
+ "local_date": "2026-11-27",
+ "stories": [
+  {
+   "story_ref": "ai-d53b121b6704",
+   "rank": 1,
+   "headline": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule",
+   "summary": "Nvidia paused shipments to four Southeast Asian countries after Washington closed a remote-access loophole and moved to require licenses for advanced AI chip purchases. Singapore says it is in talks with the US to keep chip access; Nvidia GPU sellers are also restricting neocloud sales over Chinese access.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "https://bloomberg.com/news/articles/2026-11-27/singapore-talking-to-us-to-keep-ai-chip-access-deputy-pm-says",
+    "https://nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+    "https://wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0?mod=rss_Technology",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ydHdQWUpYRU16SjgyRXBibzZ6UFN4RThEMUV3VkRJV0NCNmk1Nm1wTFlvTnpsLS1VVHdmczlIQjZRN0RKZnlBdm5oSmFUY0lCaWV5dTY2bDBiRHcyV0lfMjk3ZS1TQW1oM3F0TTJFRdIBdEFVX3lxTE1hb0dnX1V6U3RzcVduQUhNcHBONFFMMVVaaThOcEc5dy1EOVMwUXBVM1lSMWljNm12aTJXT0FvMWdkaUdyTEZyZGY0dHJ0R3kxQllKQ2RaMl9MYmxIY2pHcTh6TWVDRkhCSkVqUVUtbVFOam81?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.3,
+   "importance": 93.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "physical_ai-4486d9df69ba",
+   "rank": 2,
+   "headline": "XPeng unveils IRON humanoid, targets mass production from January 2027 at roughly EV-level price",
+   "summary": "At its investor day XPeng showed the IRON humanoid and said it is ready for mass production in January 2027, with pricing near the median EV. Coverage differs on whether production starts at end-2026 or January 2027.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVGF3WlpfWS1rTGhwWnotMGFrRXVZeXZnTDNkYm1IeGZ2aDZKTENuUFFyN3EyNzVTRWk5aEFiVHRJWHR4SjhsdklkZUZXZE1UWG5tX3VZbk85dWxtVmRuZFFnOFZqaU1mVTFzMHJUdGd6Yk5zcTkwRm5HclI4RDhOMVZEeFdHOHI5ZHVlUTEtZUhNSVhCcFFmRHo3anQ2T2VvNEVPNVRRZlNpRFdpZ0tMVFpuMEFsSFpCVE5nRkwtQ0N5d25RT3FsMVJTZm5SRnNiZTFXMXktXy1xUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNTUVQQTQwcHRQc21JWGxxQmVQMGRBSXNxdW5QUnQtZGZVbllBeTlaeUdiLThkTUQyQlJqLWdiWGlnczdoMWRDRFdQWE1MeUlTUGFjR0FQTWpsRDNac0dnYmVYNVNEeWVweXRLdmdLdlZEc1VmNlgxR1VHRFVSbnNEbkRWSkM2akVUeElEQVhnS0dJNWdJbUJkM1BweWNRWThORXZqLTF4dl9mZE1FdFlILVh1bEp1eDkzZ2tZVFZkaU9ZcmtSMVlfV0VRTnJvVHRNZFZPMFZZam5iaUM4?oc=5",
+    "https://news.google.com/rss/articles/CBMiO0FVX3lxTE93UnFaWU5KMFV6SERiRGhWVUZ5NDdyeDMxUlRNa2dVcFUxZzhQOFZqUUlLemZTUXB4OFFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUdIBY0FVX3lxTFBXbVRBU2VGUUV0UXhsbmhBRERnYnh6QU5xZmo4ZkFsVlY0bzJzOGR4cGpmN3NEaG0wSmFLZjRXdTVEeTQ2aFlUbDg0bjZFTW5GQl94V29iUkpMT1I0RlIyVEZHUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE8zU0tRWTI0WmNkTDI5ay0zUFFTd09rdldWS05Kd0RVMW4zMUZkUl94LUgtMEs1UEg4R2NzdnFWMjAzdFVoY01OLWpYQThpU2tVUWV6bHM4M2hPSTVDQkJBZTYxVWd1b0xoOG53OGNR?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.15,
+   "importance": 90.0,
+   "why": [
+    "big news"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:5112dcc98dfd",
+   "rank": 3,
+   "headline": "Energy Northwest seeks NRC filing exemptions for Cascade SMR",
+   "summary": "When does Energy Northwest want a decision? The November 17, 2026 letter asks the NRC to approve the exemptions by December 18, 2026, to support submission of the first application part. Would the exemptions remove safety requirements? No. Energy Northwest says the requested exemptions do not see",
+   "beat": "energy",
+   "urls": [
+    "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request"
+   ],
+   "in_brief": true,
+   "relevance": 0.65,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-b57d153658e5",
+   "rank": 4,
+   "headline": "Meta's Muse agent draws UK FCA complaint as AI shopping bots get Black Friday test",
+   "summary": "The FCA complained Meta refused joint testing of Muse; retailers and Bloomberg examine AI shopping agents from Google, Amazon, Meta and OpenAI.",
+   "beat": "ai",
+   "urls": [
+    "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "https://bloomberg.com/news/features/2026-11-26/holidays-to-test-ai-shopping-bots-from-google-amazon-meta-and-openai",
+    "https://wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa1RWUDNfdFhiM242MUZmNTlSajdYeEllVVU0YzFkdmptd1phTjVzYWNBeXduX05iSUNjSVgwUkJwajFETlYteDMtamYxb1liMTJQWFlSbFkxLW9SQXFZWFRNZHhWQlRUNkxEblY2dVF1ZHlnTmhtRHhzOF8wTVJJbV94VVFXZzZ4ZmthNGJPU2pNdFQ2V1JlVjVhNWpYNVlUSnNYM1BvMkhLZTdtdXo5bDBSNzJwTkxEQzNJ?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.6,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:c3a6c974e788",
+   "rank": 5,
+   "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions — BigGo Finance",
+   "summary": "U.S. semiconductor giant NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model. Its biggest distinguishing feature is that it adopts the autoregressive mechanism common in large language models (LLMs) rather than the diffusion models that dominat",
+   "beat": "ai",
+   "urls": [
+    "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572"
+   ],
+   "in_brief": true,
+   "relevance": 0.6,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "i-open",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-a1ca943c2df4",
+   "rank": 6,
+   "headline": "Anthropic goes public, trading as ANT",
+   "summary": "Anthropic entered the public market with ticker ANT; coverage focuses on price, valuation and what investors should do.",
+   "beat": "ai",
+   "urls": [
+    "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxPckx2b2tGYjRHR01ZSjFVN1dzNlFsTHlST1Fidjh2V1ZsVzFwWGl1R3pZUl9Zc2JKOTFvTjA4OGNaQ3VXNFNNZ0JKNXJIWHM4Zk5wcHJQckpzQWtmTVEtUWxjclZ1S0tUSGhJTmZVQkN1ZVRGWGRuVmxLbUpjd1A3RXl3?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2Y3Q21iQmpWbjd1T1hIQjYyaXgySjhyYk5aOU1KWjMzMXpJTmhUYlRLSjNHZGZETVM4V1Z5bGFvZi11a09RUDZGVDFaaHlSZVBnaHBTVzdNTHhZaVlKcy1pY25hcC0xUTNVcGFJRU1XRWZFTEpQNVF3amFGZVkxVExoZ3Fsdkx1bkZ4ZENUbmNEU1FKX184M2V5MG8?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUDFjSVMyZlBQdmhPeE5sRFhfTm1rcUNxd3dZS1hHNjRFR0tIaExIS2huVzdNZzNidGxpV0VyeGhIRy14ckxBRzJ3ZkVma3pOSW51ZHgzazlSNklaNVQybXUybm9RUlpGSS1Oa3UxdzBDd2NtZTI0Wk1iaFBhUjNrVHp0YzFJZUZMNmtNallGVGlHMFlaRXBRY2NNa3M?oc=5"
+   ],
+   "in_brief": true,
+   "relevance": 0.35,
+   "importance": 88.0,
+   "why": [
+    "outside your usual",
+    "i-acme"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:f0feba66efd2",
+   "rank": 7,
+   "headline": "Travis Sachs on Instagram: \"Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Sea…\"",
+   "summary": "Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas. This is the first time factory-produced, modular advanced reactors will serve an industrial facility. The challenge: coordinating prefabricated components across multiple supplier",
+   "beat": "energy",
+   "urls": [
+    "https://www.instagram.com/reel/DgKugT7h3Nj"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 55.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:5b37a50a86ce",
+   "rank": 8,
+   "headline": "AI Research Agent YouRA Beats Sakana’s AI Scientist-V2 on Real Data; Hallucination Edge Unproven",
+   "summary": "Keeping failure lessons in memory is not new: in 2023, Reflexion agents verbally reflect on feedback and keep that text in an episodic memory buffer. The YouRA paper frames its approach as an extension, with failure lessons that persist across stages and are coordinated through the state file. Tool",
+   "beat": "ai",
+   "urls": [
+    "https://www.techtimes.com/articles/331562/20261126/ai-research-agent-youra-beats-sakanas-ai-scientist-v2-real-data-hallucination-edge-unproven.htm"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:adc479907ff7",
+   "rank": 9,
+   "headline": "AI company employees warn internal models are too powerful to safely release: report",
+   "summary": "\"And once you get to that point, many of the schemes that we've had at work up until now sort of go out the window.\" In July, OpenAI, which owns ChatGPT, said that its technology autonomously hacked another AI company called Hugging Face. An OpenAI spokesperson told Axios that the company has adop",
+   "beat": "ai",
+   "urls": [
+    "https://cnycentral.com/news/nation-world/ai-company-employees-warn-internal-models-are-too-powerful-to-safely-release-report-anthropic-openai-rrt"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 60.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:43c22bce363c",
+   "rank": 10,
+   "headline": "BharatGen releases Patram 1.5 to read scanned and handwritten Indian documents",
+   "summary": "The open-weight model combines page reading with targeted information extraction. BharatGen says it flags unreadable fields and marks estimates for human",
+   "beat": "ai",
+   "urls": [
+    "https://www.google.com/url?opi=89978449&q=CAESrAEBxCJF1zUNbRvQVJx_FmPkcV5rlseCgiiRjGWBGFvjZRZRSfqBfMXZGyDaqkBRV0vSyxqVUuIH8PCvbOV6ra99PkDTmk_ioxNpX1qc2jlspEvcXnleZEBv67ueIMRoKRcMIG7QjoNpv14wQ0VsLM4yXrKMB3hgZ6cuMd38_FxMn1JqxgiFJCRkeVqfhyovIiqHj0y2uWb0yEJGXYKn1b0lV3dPuQh2BykLx9gy&sa=U&uoh=3&ved=2ahUKEwjY-4eT0aeYAxVTnWoFHUmUOMsQxfQBegQIBRAC&usg=AOvVaw1Xgh8aoIGX4uXf-9cIlGb5",
+    "https://www.google.com/url?opi=89978449&q=CAESpgEBxCJF14OVtr9UgzqGBZ-kJ9wdpjfk0iobD452KAdbc9W5mc1yPeep3ZU3Mmb57IMNZgi-5VlUqK9RQNCiEZC3t96Wqrm3AqmCHOFtE1qi8iaXdc3wPkzGNZYknvn3Oq59o5w7OwOdpI1NASTFFeLHIBejuQ0QX8-crvpNlIJKIJl1nBuxDTDO1vCxxYu8WaxE7rdctlSk2_wj91of_4JhcokkATH7&sa=U&uoh=3&ved=2ahUKEwjY-4eT0aeYAxVTnWoFHUmUOMsQxfQBegQICBAC&usg=AOvVaw1QGH6qSIlj0xOpuvlLo6Q1",
+    "https://www.google.com/url?opi=89978449&q=CAESugEBxCJF164F8DSiazTXIfRfS0YVLWKOwFKF1JPfucLCG-vqevPwsq5Z2eA6g4UOzF02IXRnXg9VZ3iJ7dkm0p9NkNQiMeNRxwKykOTzl0BQ6QTu5PSx2SCIHpPpEoG1UViPudTHv5NpY6z0EmmkS3DsSmXuBKCmMKZEH0oZwSF7Ns3K42FCGDc9y4JoIcwcQWolcDXxgrtEQ9HDIVg-EvZ7v0HyTavuhPveOJtmAAuqEhS9EzpjNhpJnVU&sa=U&uoh=3&ved=2ahUKEwjY-4eT0aeYAxVTnWoFHUmUOMsQxfQBegQICRAC&usg=AOvVaw1r_ANFXj1hYwtinrX3UOOE",
+    "https://www.google.com/url?opi=89978449&q=CAESUwHEIkXXSt1Qc9tKMnBIgupBrZc_1HXhSS0d6KXQRV_RkgIYMtsn2EW4Lx6pt_Xztg46PFdWF3Wb0Xu7V4ofpVs0xEAnbEiFSiEa-dOOQGbjS0vs&sa=U&uoh=3&ved=2ahUKEwjY-4eT0aeYAxVTnWoFHUmUOMsQxfQBegQIDBAC&usg=AOvVaw3fRKb8i8w_ZEEwhI77HR2P",
+    "https://www.google.com/url?opi=89978449&q=CAESogEBxCJF16JXk-EhdnrtHlXiRM3_OGHSfuIL6n1l1QjAJpInlCObMz1_zvdAdYpRyTeSSKrvLc45uhfq9acDQ_X9u1UVX0vZHNXGS9rHeUq6W6aDCAzieRWne7R9zx91M9FbPXVIa5dGDWvXFWNlzA45PItx0kuU_BshAaa1cpdYiCBQ8QIjs_2uebSPRxWaOiuI3LZM8SQM80b4vDGCThJi8YU&sa=U&uoh=3&ved=2ahUKEwjY-4eT0aeYAxVTnWoFHUmUOMsQxfQBegQIBBAC&usg=AOvVaw0-6qkxt6N3Go7jfmcoxbQ4"
+   ],
+   "in_brief": false,
+   "relevance": 0.55,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-open"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:f81b8ae246e0",
+   "rank": 11,
+   "headline": "Small Modular Reactors Finally Have Real Momentum in the U.S. | OilPrice.com",
+   "summary": "And now, just this week, a new engineering alliance between Sargent & Lundy and ENTRA1 Energy announced that it would be banding together to bring scalable SMR plants to grids around the globe. The initiative will be using NuScale's certified reactors, the first and only proprietary SMR design to re",
+   "beat": "energy",
+   "urls": [
+    "https://oilprice.com/Energy/Energy-General/Small-Modular-Reactors-Finally-Have-Real-Momentum-in-the-US.amp.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.6,
+   "importance": 40.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:66d080264e04",
+   "rank": 12,
+   "headline": "Uranium Market Heats Up as New Fuel Deals Signal a Bigger Nuclear Expansion • Carbon Credits",
+   "summary": "One of the most significant recent developments involves Oklo and Centrus Energy. The companies finalized multiple multi-year agreements to supply high-assay low-enriched uranium (HALEU) for Oklo’s advanced reactor projects. The agreements will secure enough fuel to support up to five Aurora powerh",
+   "beat": "energy",
+   "urls": [
+    "https://carboncredits.com/uranium-market-heats-up-as-new-fuel-deals-signal-a-bigger-nuclear-expansion"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:40c75351f727",
+   "rank": 13,
+   "headline": "AI-agent traffic is forecast to surge 150x during Cyber Week - MarkHub24",
+   "summary": "# AI-agent traffic is forecast to surge 150x during Cyber Week. AI agents are expected to make roughly 150 times more visits to retail websites during this year’s Cyber Week than they did during the same period last year, according to a forecast from cybersecurity and bot-management firm Human Secur",
+   "beat": "ai",
+   "urls": [
+    "https://www.markhub24.com/post/ai-agent-traffic-is-forecast-to-surge-150x-during-cyber-week"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 45.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-agents"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-404c6bdd6fca",
+   "rank": 14,
+   "headline": "Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off",
+   "summary": "The Dutch government will fight further US restrictions on ASML sales to China and ask Washington not to enforce the MATCH Act. ASML's CEO says total cut-off will backfire.",
+   "beat": "ai",
+   "urls": [
+    "https://semafor.com/article/11/25/2026/asml-makes-the-case-for-selling-chips-to-china",
+    "https://bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGdjRUN5YTg3WHZsaVA3dk9EVHB3TzkybFUwc2cyS29EOTBueVZIVjhUOFlqZzl6T2xpNER5aW53a2plOWdIaG1icGNfQWUxd01yVjJ5Vm10dVR4QTNGb1VoQS11SWRhNlJJb3ZoQmtrVGZMcUlxWjhjYXpjNmVBNV9kdGdhZnJMTW9vd3lqV2ZPUnFGN0tUczEtTTk5TVBWbWl3?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.4,
+   "importance": 70.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:a508d798ddf7",
+   "rank": 15,
+   "headline": "US Ready For Key Milestone Towards Producing Haleu For Next-Generation Reactors",
+   "summary": "The milestone builds on the February decision by the DOE’s Office of Environmental Management (EM) to restart uranium recovery operations at H Canyon, supporting federal efforts to reinvigorate the nation’s nuclear industrial base and deploy advanced reactor technologies for national security. SRS",
+   "beat": "energy",
+   "urls": [
+    "https://www.nucnet.org/news/us-ready-for-key-milestone-towards-producing-haleu-for-next-generation-reactors-11-4-2026"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "adjacent",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "u:fae003b37131",
+   "rank": 16,
+   "headline": "NRC draft EIS recommends Orano Tennessee license",
+   "summary": "The project's maximum product assay, 10% uranium-235, places the proposal above the conventional low-enriched uranium threshold used by most operating reactors, but below the 20% boundary for highly enriched uranium. The NRC's EIS describes the output as intended for nuclear fuel applications. It do",
+   "beat": "energy",
+   "urls": [
+    "https://www.nuclearnewsnetwork.com/news/nrc-orano-project-ike-draft-eis-license-recommendation"
+   ],
+   "in_brief": false,
+   "relevance": 0.45,
+   "importance": 50.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "energy-bd308b4c9aa6",
+   "rank": 17,
+   "headline": "SpaceX plans $24 billion gas power plant and data center project in Texas",
+   "summary": "SpaceX is planning a $24 billion gas-fired power plant and data center project in Texas.",
+   "beat": "energy",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV1pFWDRhWTAxOEwtZjVzbWFMaE4ta2hTWktOWlRLTTJNMko5UEVFalFjenZNc3lRZ0RqM2xMaFhOU0RoeFFFeHFITVhGcXZJNGpkNjcwS0FRamVNUUt1Z1RLek9IZ291T3oyTkRZM1JyVUg0Tm5uTGNOVnVQYjk5YW1QbFo1cnFSZ3h3MXBoQk1iX1VNVlVSd3l6UzN3NkxO?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 72.0,
+   "why": [
+    "for you",
+    "digest"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "u:d3aa11d5f12e",
+   "rank": 18,
+   "headline": "NuScale Power (SMR) Draws Fresh Investor Focus As AI Power Demand Lifts SMR Appeal",
+   "summary": "The NRC approved small modular reactor design gives NuScale Power a licensing framework that Oklo does not yet have. This can shorten regulatory steps once projects move toward construction. For data center and AI users, that approval makes NuScale a potential supplier of standardized modules rather",
+   "beat": "energy",
+   "urls": [
+    "https://finance.yahoo.com/energy/articles/nuscale-power-smr-draws-fresh-141122724.html"
+   ],
+   "in_brief": false,
+   "relevance": 0.5,
+   "importance": 35.0,
+   "why": [
+    "for you",
+    "personal",
+    "i-smr"
+   ],
+   "note_status": "per_user"
+  },
+  {
+   "story_ref": "ai-be41885503cc",
+   "rank": 19,
+   "headline": "Z.ai's GLM-5.5 delayed as US chip curbs and distillation crackdown slow Chinese AI models",
+   "summary": "Sources say Z.ai's 3T-parameter flagship missed its November release and may slip to Q1 2027 or later, while Moonshot expects longer gaps between releases.",
+   "beat": "ai",
+   "urls": [
+    "https://bloomberg.com/news/videos/2026-11-27/counterpoint-on-china-s-ai-progress-under-chip-curbs-video",
+    "https://reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE55WG9NdTRrNzlTX21PZ0wyd2YyX0FJRFlIX05sRDZnbG1CMzY1V2gyMmNhZG9hUTVzM0VqRUZsWEE4MDdsMXhRYVhyRnM1QXd5S0pKNzNTSkhNSU13UTNSWkxCbldfNmx4dWtqNlFn?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbzE5amhRY0hVek9NMWNmRy1vRmQ5d0ZSbGtGazZlQS1PRnFhZjF0SlVYUUFlRkFNLXBHemlOY3p1VEZSbnRGSTdEaDNDVjJuaXd6WmduT2pkZjVkZ3ZCbWFETVUxN1JXWUFTZEltTzhvQTlv?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWTVpdEM4eGlIRjJCOTZkaDQzLVFBTV90elY3cm1jeTFjeXVzbzBKWDVGeVRKeXFSVW1sTUVTNVFCVXFkczBnbmxSemtHamMwaWl1YVp1M21rS01sZUJiWXd6b2JwdzVSYWtGTnZKbnM4SU1SV29wb04zOG01dXltZW1sV19XenpNUWp5aFBlN1lFdw?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 76.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-open"
+   ],
+   "note_status": "shared"
+  },
+  {
+   "story_ref": "physical_ai-2da33018627a",
+   "rank": 20,
+   "headline": "Robotera deploys 45 M7 humanoids at China Post's Hangzhou hub",
+   "summary": "45 embodied robots begin fleet operations at China Post.",
+   "beat": "physical_ai",
+   "urls": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOelI4ZEFpNGdWS0Y5LU4zMlVYYlJ3aVlnZUN3QlhxT0dqd2lZT3c1dk9JOXk2aElyWnJ3Y2pjWnd2T05DVmpxWDRuUnI5bjZfS3JYdTJ6ZWU4YjlWTldCdkhBQ2p1VDVHSkx4Z0x0WHRYRTNKS0VSZzExbVh3T2dVLVNxR2t2Vk5TU2tBM1VUc2xrU0t6eDBiUi1OeEZydlVKVlA5Zm5SVklNblpibGxSRWppNl9mbF9sMlRHNzF4UXNxVTM4cmM4R0hXQlJJYnFRM1E?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUnY2b2QtVlR5SWpBbGc3SVR3c1pobTlpTDZiSklWZGdLVWpnY1BFMDJweEVkMUJJRjBqeHBxeUxudFdOQVRoRU96S3N3Wng1aVMxT1NYXzJsTkRVbllnTVFyZm95Ry1ud3BGWnVWZnlpWU02RnZlMDFFenM0NmozVnV4Vy1abmphM05KZENR?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbExxMDBXT3JtdmYwOTZ3SEhFdXVTM3g4dTVJZ3hlTWFUVTQtWW5JOXZtVmNKd1kzaW9MZU51Qm9VbzZRcnBLWkNnalAyb25Cd3JBSk1uUFU2MDNRcHZYU3kxMjd6SDA0bWdVN3l0bENEaDNTLU94RmhzRkRsbThnc0FEZkpqd3cxSjc5bTl0anF1MFd1TkhTamx2eGV3aDBXR29IR0J0SEJmdnkycHMwc0tjN2xHX3k3MjQ1UzZxdmlCSXhHRE83NA?oc=5"
+   ],
+   "in_brief": false,
+   "relevance": 0.35,
+   "importance": 58.0,
+   "why": [
+    "for you",
+    "digest",
+    "i-agents"
+   ],
+   "note_status": "shared"
+  }
+ ],
+ "created_at": "2026-11-27T07:29:30.428086Z"
+}

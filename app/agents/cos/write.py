@@ -309,7 +309,9 @@ async def write_brief(
             _payload(selected, headlines, packs, delivery, answered, target_s, listener),
             BriefDraft,
             step="C7",
-            max_output_tokens=4000,
+            # 6 spoken stories + teasers reached 3.5k output tokens; 4000 truncated a draft
+            # (docs/e2e/run3_write_truncated).
+            max_output_tokens=10000,
         )
     except (BudgetExceeded, StructuredOutputFailure) as e:
         cc.trace.degraded("C7", f"{type(e).__name__}: deterministic fallback brief")

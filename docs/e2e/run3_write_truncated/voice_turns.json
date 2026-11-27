@@ -1,0 +1,252 @@
+[
+ {
+  "utterance": "Tell me more about Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule. Why does it matter?",
+  "answer": [
+   {
+    "text": "On the Nvidia shipments story: Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule"
+     }
+    ]
+   },
+   {
+    "text": "The pause has no set end date.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Nvidia is using it to assess whether its regional partners meet U.S. export requirements.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule"
+     }
+    ]
+   },
+   {
+    "text": "The reason behind it is a loophole.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Chinese companies have been remotely tapping Nvidia chips in data centers in those countries, and the US Commerce Department closed that loophole earlier this month, reportedly grudgingly.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:416-589"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:416-589",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule"
+     }
+    ]
+   },
+   {
+    "text": "It matters because, according to the Institute for Progress, remote data centers like these supply about 24% of China's AI computing power.",
+    "citations": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ],
+    "sources": [
+     {
+      "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+      "source": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+      "title": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule"
+     }
+    ]
+   },
+   {
+    "text": "So this is a big chunk of compute, and the export rules are now reaching it.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want the details on the new license rule, or shall I go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: On the Nvidia shipments story: Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.  [techcrunch.com]",
+   "say #2: The pause has no set end date.",
+   "say #3: Nvidia is using it to assess whether its regional partners meet U.S. export requirements.  [techcrunch.com]",
+   "say #4: The reason behind it is a loophole.",
+   "say #5: Chinese companies have been remotely tapping Nvidia chips in data centers in those countries, and the US Commerce Department closed that loophole earlier this month, reportedly grudgingly.  [techcrunch.com]",
+   "say #6: It matters because, according to the Institute for Progress, remote data centers like these supply about 24% of China's AI computing power.  [techcrunch.com]",
+   "say #7: So this is a big chunk of compute, and the export rules are now reaching it.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 2301 ms (first token 796 ms) \u00b7 18604 in (0 cached) / 383 out \u00b7 $0.0025 (session $0.0025)",
+   "say #8: Want the details on the new license rule, or shall I go back to the brief?"
+  ],
+  "s": 2.3,
+  "signals": []
+ },
+ {
+  "utterance": "What's the story with Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off?",
+  "answer": [
+   {
+    "text": "The Netherlands and ASML story isn't in the brief, so I'll check my stored notes on it.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "On the ASML story: the Dutch government says it will resist new US plans to restrict ASML's sales to China, and it calls the proposed rules a threat to Europe's most valuable company.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Bloomberg reports that the move is widening a rift with Washington.",
+    "citations": [
+     "note:ai-404c6bdd6fca:6",
+     "note:ai-404c6bdd6fca:7",
+     "note:ai-404c6bdd6fca:8"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-404c6bdd6fca:6",
+      "source": "Bloomberg",
+      "url": "https://bloomberg.com/news/articles/2026-11-26/netherlands-plans-to-fight-rollout-of-proposed-us-curbs-on-asml",
+      "title": "Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off"
+     }
+    ]
+   },
+   {
+    "text": "ASML's CEO, Christophe Fouquet, is pushing back on the idea of cutting China off completely.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "He says that would backfire, and that controls that completely frustrate a country may push it to double down on its own development.",
+    "citations": [
+     "note:ai-404c6bdd6fca:1",
+     "note:ai-404c6bdd6fca:2"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-404c6bdd6fca:1",
+      "source": "semafor.com",
+      "url": "https://semafor.com/article/11/25/2026/asml-makes-the-case-for-selling-chips-to-china",
+      "title": "Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off"
+     }
+    ]
+   },
+   {
+    "text": "He also argues that continuing to sell China older equipment keeps a generation gap that leaves Beijing reliant on Western hardware.",
+    "citations": [
+     "note:ai-404c6bdd6fca:3"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-404c6bdd6fca:3",
+      "source": "semafor.com",
+      "url": "https://semafor.com/article/11/25/2026/asml-makes-the-case-for-selling-chips-to-china",
+      "title": "Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off"
+     }
+    ]
+   },
+   {
+    "text": "ASML's shipments to China are more than a decade behind the cutting edge, and the company has held close to 100 percent of the China market for almost 30 years.",
+    "citations": [
+     "note:ai-404c6bdd6fca:4",
+     "note:ai-404c6bdd6fca:5"
+    ],
+    "sources": [
+     {
+      "passage_id": "note:ai-404c6bdd6fca:4",
+      "source": "semafor.com",
+      "url": "https://semafor.com/article/11/25/2026/asml-makes-the-case-for-selling-chips-to-china",
+      "title": "Netherlands resists proposed US curbs on ASML; ASML CEO warns against cutting China off"
+     }
+    ]
+   },
+   {
+    "text": "The reports don't say yet whether the US curbs will take effect, or whether Washington will enforce the MATCH Act, which the Dutch have reportedly asked it not to do.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Want me to look for an update, or go back to the brief?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1404 ms (first token 974 ms) \u00b7 18577 in (18415 cached) / 94 out \u00b7 $0.0002 (session $0.0002) \u00b7 1 tool call(s)",
+   "say #1: The Netherlands and ASML story isn't in the brief, so I'll check my stored notes on it.",
+   "tool call get_story(story_ref='ai-404c6bdd6fca')",
+   "get_story ai-404c6bdd6fca: note with 9 facts",
+   "say #2: On the ASML story: the Dutch government says it will resist new US plans to restrict ASML's sales to China, and it calls the proposed rules a threat to Europe's most valuable company.",
+   "say #3: Bloomberg reports that the move is widening a rift with Washington.  [Bloomberg]",
+   "say #4: ASML's CEO, Christophe Fouquet, is pushing back on the idea of cutting China off completely.",
+   "say #5: He says that would backfire, and that controls that completely frustrate a country may push it to double down on its own development.  [semafor.com]",
+   "say #6: He also argues that continuing to sell China older equipment keeps a generation gap that leaves Beijing reliant on Western hardware.  [semafor.com]",
+   "say #7: ASML's shipments to China are more than a decade behind the cutting edge, and the company has held close to 100 percent of the China market for almost 30 years.  [semafor.com]",
+   "say #8: The reports don't say yet whether the US curbs will take effect, or whether Washington will enforce the MATCH Act, which the Dutch have reportedly asked it not to do.",
+   "voice.turn round 2: anthropic/claude-haiku-5.5 \u00b7 2613 ms (first token 833 ms) \u00b7 19591 in (18415 cached) / 474 out \u00b7 $0.0005 (session $0.0008)",
+   "say #9: Want me to look for an update, or go back to the brief?"
+  ],
+  "s": 4.0,
+  "signals": [
+   {
+    "type": "dive",
+    "story_ref": "ai-404c6bdd6fca",
+    "explicit": false,
+    "strength": 1.0,
+    "turn_id": "t_01m8dytrbfvpbpp30kjbn25bjz",
+    "payload": {}
+   }
+  ]
+ },
+ {
+  "utterance": "What else happened today that I should know about?",
+  "answer": [
+   {
+    "text": "You've got a wider set of stories today beyond the six in the brief.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "A few you might want to know about: Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas, the first approval of its kind.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "The Netherlands says it will resist proposed US curbs on ASML's sales to China, and ASML's CEO is warning against cutting China off entirely.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "And SpaceX is planning a 24 billion dollar gas-fired power plant and data center project in Texas.",
+    "citations": [],
+    "sources": []
+   },
+   {
+    "text": "Which of those would you like me to go into?",
+    "citations": [],
+    "sources": []
+   }
+  ],
+  "debug": [
+   "say #1: You've got a wider set of stories today beyond the six in the brief.",
+   "say #2: A few you might want to know about: Dow and X-energy just received NRC approval to build four Xe-100 small modular reactors at Dow's Seadrift site in Texas, the first approval of its kind.",
+   "say #3: The Netherlands says it will resist proposed US curbs on ASML's sales to China, and ASML's CEO is warning against cutting China off entirely.",
+   "say #4: And SpaceX is planning a 24 billion dollar gas-fired power plant and data center project in Texas.",
+   "voice.turn round 1: anthropic/claude-haiku-5.5 \u00b7 1844 ms (first token 1015 ms) \u00b7 18549 in (18415 cached) / 183 out \u00b7 $0.0003 (session $0.0003)",
+   "say #5: Which of those would you like me to go into?"
+  ],
+  "s": 1.8,
+  "signals": []
+ }
+]

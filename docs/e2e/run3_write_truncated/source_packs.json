@@ -1,0 +1,757 @@
+[
+ {
+  "story_ref": "ai-d53b121b6704",
+  "headline": "Nvidia tells manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia after new US chip-license rule",
+  "facts": [
+   {
+    "text": "Nvidia has told manufacturing partners, including Dell and Super Micro, to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "The pause has no set end date and is meant to assess whether regional partners meet U.S. export requirements.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely using Nvidia chips in data centers in the Southeast Asian countries, a loophole the US Commerce Department closed earlier this month.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:416-589"
+    ]
+   },
+   {
+    "text": "According to the Institute for Progress, remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "33b3d08d99aeb285e8bea951b21c283a:590-739"
+    ]
+   },
+   {
+    "text": "Nvidia told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand, and Indonesia.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387"
+    ]
+   },
+   {
+    "text": "The pause is for an unspecified period while Nvidia assesses whether regional partners meet U.S. export requirements.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387"
+    ]
+   },
+   {
+    "text": "Chinese companies have been remotely accessing Nvidia chips from data centers in those countries, a loophole the US Commerce Department closed earlier this month.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:388-589"
+    ]
+   },
+   {
+    "text": "The Institute for Progress estimates remote data centers like these supply about 24% of China's AI computing power.",
+    "passage_ids": [
+     "372b62ba533ae0bbb5461e4fe9d9f7b5:590-739"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:100-387",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387,
+    "kind": null
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:416-589",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 416,
+    "char_end": 589,
+    "kind": null
+   },
+   {
+    "passage_id": "33b3d08d99aeb285e8bea951b21c283a:590-739",
+    "doc_id": "33b3d08d99aeb285e8bea951b21c283a",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739,
+    "kind": null
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:100-387",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia for an unspecified period as it assesses whether its regional partners are meeting U.S. export requirements.",
+    "char_start": 100,
+    "char_end": 387,
+    "kind": null
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:388-589",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "As for why those countries, Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed \u2014 reportedly grudgingly \u2014 earlier this month.",
+    "char_start": 388,
+    "char_end": 589,
+    "kind": null
+   },
+   {
+    "passage_id": "372b62ba533ae0bbb5461e4fe9d9f7b5:590-739",
+    "doc_id": "372b62ba533ae0bbb5461e4fe9d9f7b5",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3BvSkxTQnd6ZVRTQUJ4RHBUY3l5M0J1aW1yTl9zUVFNaE1tUjlrVG1MeE9lVlNTMTVrOFFPUjA3R0RnWktyNERHcGhnWk9YYlQ3RXRRVXQtUXhCZDg3d3Foa2dxZndDSTU5UW51eU1ZSW91Nk45bFFZVjk2YzU0MGtwal9zbldIVU93NkpDLTFXdw?oc=5",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The Journal notes that the think tank Institute for Progress estimates remote data centers like these supply about 24% of China\u2019s AI computing power.",
+    "char_start": 590,
+    "char_end": 739,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "physical_ai-4486d9df69ba",
+  "headline": "XPeng unveils IRON humanoid, targets mass production from January 2027 at roughly EV-level price",
+  "facts": [
+   {
+    "text": "XPeng plans to bring its IRON humanoid robot to market in 2027.",
+    "passage_ids": [
+     "617f6b2a7865d2871190e1b2af15d1f6:84-242"
+    ]
+   },
+   {
+    "text": "XPeng's IRON robot is expected to start factory production in January and sales in the second quarter.",
+    "passage_ids": [
+     "617f6b2a7865d2871190e1b2af15d1f6:84-242"
+    ]
+   },
+   {
+    "text": "IRON will first serve as a store assistant at XPeng locations in Q1 2027.",
+    "passage_ids": [
+     "617f6b2a7865d2871190e1b2af15d1f6:524-693"
+    ]
+   },
+   {
+    "text": "IRON is powered by three Turing AI chips with 2,250 TOPS of computing performance.",
+    "passage_ids": [
+     "617f6b2a7865d2871190e1b2af15d1f6:811-985"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "617f6b2a7865d2871190e1b2af15d1f6:84-242",
+    "doc_id": "617f6b2a7865d2871190e1b2af15d1f6",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVGF3WlpfWS1rTGhwWnotMGFrRXVZeXZnTDNkYm1IeGZ2aDZKTENuUFFyN3EyNzVTRWk5aEFiVHRJWHR4SjhsdklkZUZXZE1UWG5tX3VZbk85dWxtVmRuZFFnOFZqaU1mVTFzMHJUdGd6Yk5zcTkwRm5HclI4RDhOMVZEeFdHOHI5ZHVlUTEtZUhNSVhCcFFmRHo3anQ2T2VvNEVPNVRRZlNpRFdpZ0tMVFpuMEFsSFpCVE5nRkwtQ0N5d25RT3FsMVJTZm5SRnNiZTFXMXktXy1xUQ?oc=5",
+    "source": "tradingview.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "XPeng XPEV plans to bring its IRON humanoid robot to market in 2027, with factory production due to start in January and sales expected in the second quarter.",
+    "char_start": 84,
+    "char_end": 242,
+    "kind": null
+   },
+   {
+    "passage_id": "617f6b2a7865d2871190e1b2af15d1f6:243-361",
+    "doc_id": "617f6b2a7865d2871190e1b2af15d1f6",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVGF3WlpfWS1rTGhwWnotMGFrRXVZeXZnTDNkYm1IeGZ2aDZKTENuUFFyN3EyNzVTRWk5aEFiVHRJWHR4SjhsdklkZUZXZE1UWG5tX3VZbk85dWxtVmRuZFFnOFZqaU1mVTFzMHJUdGd6Yk5zcTkwRm5HclI4RDhOMVZEeFdHOHI5ZHVlUTEtZUhNSVhCcFFmRHo3anQ2T2VvNEVPNVRRZlNpRFdpZ0tMVFpuMEFsSFpCVE5nRkwtQ0N5d25RT3FsMVJTZm5SRnNiZTFXMXktXy1xUQ?oc=5",
+    "source": "tradingview.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Vice Chairman Brian Gu told Bloomberg TV that pricing may be close to the median selling price of an electric vehicle.",
+    "char_start": 243,
+    "char_end": 361,
+    "kind": null
+   },
+   {
+    "passage_id": "617f6b2a7865d2871190e1b2af15d1f6:524-693",
+    "doc_id": "617f6b2a7865d2871190e1b2af15d1f6",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVGF3WlpfWS1rTGhwWnotMGFrRXVZeXZnTDNkYm1IeGZ2aDZKTENuUFFyN3EyNzVTRWk5aEFiVHRJWHR4SjhsdklkZUZXZE1UWG5tX3VZbk85dWxtVmRuZFFnOFZqaU1mVTFzMHJUdGd6Yk5zcTkwRm5HclI4RDhOMVZEeFdHOHI5ZHVlUTEtZUhNSVhCcFFmRHo3anQ2T2VvNEVPNVRRZlNpRFdpZ0tMVFpuMEFsSFpCVE5nRkwtQ0N5d25RT3FsMVJTZm5SRnNiZTFXMXktXy1xUQ?oc=5",
+    "source": "tradingview.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "IRON will first serve as a store assistant at XPeng locations in the first quarter of 2027, before potential use in reception, education, events and industrial settings.",
+    "char_start": 524,
+    "char_end": 693,
+    "kind": null
+   },
+   {
+    "passage_id": "617f6b2a7865d2871190e1b2af15d1f6:811-985",
+    "doc_id": "617f6b2a7865d2871190e1b2af15d1f6",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVGF3WlpfWS1rTGhwWnotMGFrRXVZeXZnTDNkYm1IeGZ2aDZKTENuUFFyN3EyNzVTRWk5aEFiVHRJWHR4SjhsdklkZUZXZE1UWG5tX3VZbk85dWxtVmRuZFFnOFZqaU1mVTFzMHJUdGd6Yk5zcTkwRm5HclI4RDhOMVZEeFdHOHI5ZHVlUTEtZUhNSVhCcFFmRHo3anQ2T2VvNEVPNVRRZlNpRFdpZ0tMVFpuMEFsSFpCVE5nRkwtQ0N5d25RT3FsMVJTZm5SRnNiZTFXMXktXy1xUQ?oc=5",
+    "source": "tradingview.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "IRON is powered by three Turing AI chips with 2,250 TOPS of computing performance. It features 76 degrees of freedom, more than 1,500 tactile sensors and autonomous charging.",
+    "char_start": 811,
+    "char_end": 985,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "light"
+ },
+ {
+  "story_ref": "u:5112dcc98dfd",
+  "headline": "Energy Northwest seeks NRC filing exemptions for Cascade SMR",
+  "facts": [
+   {
+    "text": "Energy Northwest New Nuclear asked the NRC for permission to file the Cascade environmental report before other parts of its construction-permit application.",
+    "passage_ids": [
+     "ec04adce1e4c5c1eeead0970eb134917:0-226"
+    ]
+   },
+   {
+    "text": "The request does not grant a permit or waive technical requirements.",
+    "passage_ids": [
+     "ec04adce1e4c5c1eeead0970eb134917:227-423",
+     "ec04adce1e4c5c1eeead0970eb134917:2089-2213"
+    ]
+   },
+   {
+    "text": "Energy Northwest is requesting an NRC decision by December 18, 2026, which is the applicant's requested date rather than an NRC deadline.",
+    "passage_ids": [
+     "ec04adce1e4c5c1eeead0970eb134917:227-423",
+     "ec04adce1e4c5c1eeead0970eb134917:1911-2088"
+    ]
+   },
+   {
+    "text": "Under the proposed exemptions, the environmental report would be filed first, followed by the preliminary safety analysis report and financial-qualification information.",
+    "passage_ids": [
+     "ec04adce1e4c5c1eeead0970eb134917:1405-1603"
+    ]
+   },
+   {
+    "text": "The request letter is dated November 17 and concerns provisions of 10 CFR 2.101(a)(5).",
+    "passage_ids": [
+     "ec04adce1e4c5c1eeead0970eb134917:996-1220"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:0-226",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Energy Northwest New Nuclear, LLC has asked the U.S. Nuclear Regulatory Commission (NRC) for permission to file Cascade Advanced Energy Facility's environmental report before other parts of its construction-permit application.",
+    "char_start": 0,
+    "char_end": 226,
+    "kind": null
+   },
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:227-423",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The request could let the regulator start environmental review earlier, but it does not grant a permit or waive technical requirements; Energy Northwest is seeking a decision by December 18, 2026.",
+    "char_start": 227,
+    "char_end": 423,
+    "kind": null
+   },
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:996-1220",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "In a letter dated November 17, Energy Northwest New Nuclear (ENNN) asked the NRC to exempt its proposed two-part construction-permit application for Cascade from two provisions governing what must accompany the first filing.",
+    "char_start": 996,
+    "char_end": 1220,
+    "kind": null
+   },
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:1405-1603",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Under the exemptions sought, ENNN would file its environmental report first. The preliminary safety analysis report, or PSAR, and financial-qualification information would follow in the second part.",
+    "char_start": 1405,
+    "char_end": 1603,
+    "kind": null
+   },
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:1911-2088",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "ENNN asks for NRC approval by December 18, 2026. That is the applicant's requested decision date, not an NRC deadline or a commitment by the agency to finish its review by then.",
+    "char_start": 1911,
+    "char_end": 2088,
+    "kind": null
+   },
+   {
+    "passage_id": "ec04adce1e4c5c1eeead0970eb134917:2089-2213",
+    "doc_id": "ec04adce1e4c5c1eeead0970eb134917",
+    "url": "https://www.nuclearnewsnetwork.com/news/energy-northwest-cascade-nrc-exemption-request",
+    "source": "nuclearnewsnetwork.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The filing also says ENNN seeks no relief from technical requirements that the construction-permit application must address.",
+    "char_start": 2089,
+    "char_end": 2213,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-b57d153658e5",
+  "headline": "Meta's Muse agent draws UK FCA complaint as AI shopping bots get Black Friday test",
+  "facts": [
+   {
+    "text": "Meta launched its Muse AI shopping assistant in the UK in the week of the article.",
+    "passage_ids": [
+     "83ff5b5f384b81a71334789afd3260e9:121-272"
+    ]
+   },
+   {
+    "text": "Meta partnered with Marks & Spencer, Sainsbury\u2019s, JD Sports and Currys for Muse.",
+    "passage_ids": [
+     "83ff5b5f384b81a71334789afd3260e9:273-459"
+    ]
+   },
+   {
+    "text": "AO.com\u2019s chief executive said the impact of AI agents on his business was currently relatively low.",
+    "passage_ids": [
+     "83ff5b5f384b81a71334789afd3260e9:1030-1258"
+    ]
+   },
+   {
+    "text": "Partnering brands with Muse would gain early insight into what shoppers buy through AI agents.",
+    "passage_ids": [
+     "83ff5b5f384b81a71334789afd3260e9:1890-2208"
+    ]
+   },
+   {
+    "text": "Analysts warn that AI agents bypassing retailers\u2019 websites could cause companies to miss impulse purchases and face higher return rates for apparel.",
+    "passage_ids": [
+     "83ff5b5f384b81a71334789afd3260e9:2325-2622"
+    ]
+   },
+   {
+    "text": "Meta has rolled out its Muse AI assistant across countries including the UK, US, Canada, Australia and Japan.",
+    "passage_ids": [
+     "f3904788ec4cdde826d69f2b04541be2:0-211"
+    ]
+   },
+   {
+    "text": "The Muse AI agent needs the customer\u2019s permission before making purchases, connecting to apps, using bank details or sending emails autonomously.",
+    "passage_ids": [
+     "f3904788ec4cdde826d69f2b04541be2:212-349"
+    ]
+   },
+   {
+    "text": "The possibility of employees connecting Muse assistants to work emails and databases is a concern for companies and their clients.",
+    "passage_ids": [
+     "f3904788ec4cdde826d69f2b04541be2:350-500"
+    ]
+   },
+   {
+    "text": "The UK Information Commissioner\u2019s Office says firms using agentic AI must be able to demonstrate ongoing compliance with UK data protection law.",
+    "passage_ids": [
+     "f3904788ec4cdde826d69f2b04541be2:501-754"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "83ff5b5f384b81a71334789afd3260e9:121-272",
+    "doc_id": "83ff5b5f384b81a71334789afd3260e9",
+    "url": "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "source": "theguardian.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "This week\u2019s UK launch of the Muse AI assistant by the owner of Facebook and Instagram promises to transform how we shop \u2013 and how retailers make money.",
+    "char_start": 121,
+    "char_end": 272,
+    "kind": null
+   },
+   {
+    "passage_id": "83ff5b5f384b81a71334789afd3260e9:273-459",
+    "doc_id": "83ff5b5f384b81a71334789afd3260e9",
+    "url": "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "source": "theguardian.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Meta has teamed up with high street names including Marks & Spencer, Sainsbury\u2019s, JD Sports and Currys for what the Silicon Valley firm claims is a seamless, secure and time-saving tool.",
+    "char_start": 273,
+    "char_end": 459,
+    "kind": null
+   },
+   {
+    "passage_id": "83ff5b5f384b81a71334789afd3260e9:1030-1258",
+    "doc_id": "83ff5b5f384b81a71334789afd3260e9",
+    "url": "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "source": "theguardian.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "John Roberts, the founder and chief executive of online electrical goods retailer AO.com, said the impact of AI agents \u2013 at present \u2013 was \u201crelatively low\u201d but their use as shopping assistants was clearly \u201ca direction of travel\u201d.",
+    "char_start": 1030,
+    "char_end": 1258,
+    "kind": null
+   },
+   {
+    "passage_id": "83ff5b5f384b81a71334789afd3260e9:1890-2208",
+    "doc_id": "83ff5b5f384b81a71334789afd3260e9",
+    "url": "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "source": "theguardian.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Sharon Iles, a senior apparel analyst at the analytics and consultancy firm GlobalData, said those brands that have chosen to partner with Muse would get an early view of how people shop, what they bought through an AI agent and which products got recommended, which could help brands make their listings more visible.",
+    "char_start": 1890,
+    "char_end": 2208,
+    "kind": null
+   },
+   {
+    "passage_id": "83ff5b5f384b81a71334789afd3260e9:2325-2622",
+    "doc_id": "83ff5b5f384b81a71334789afd3260e9",
+    "url": "https://theguardian.com/business/2026/nov/27/retailers-ai-shopping-assistants-black-friday-brands-meta-muse",
+    "source": "theguardian.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "If agents bypass retailers\u2019 websites, said Iles, this could mean companies \u201cmiss out on the impulse items that shoppers often add while browsing\u201d, while those selling more complex items such as apparel could find issues with the choice of fit and sizing, \u201cwhich could lead to higher return rates\u201d.",
+    "char_start": 2325,
+    "char_end": 2622,
+    "kind": null
+   },
+   {
+    "passage_id": "f3904788ec4cdde826d69f2b04541be2:0-211",
+    "doc_id": "f3904788ec4cdde826d69f2b04541be2",
+    "url": "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "source": "theguardian.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Meta has rolled out its Muse AI assistant, which can be tasked with shopping, booking tickets and carrying out negotiations on a user\u2019s behalf, across countries including the UK, US, Canada, Australia and Japan.",
+    "char_start": 0,
+    "char_end": 211,
+    "kind": null
+   },
+   {
+    "passage_id": "f3904788ec4cdde826d69f2b04541be2:212-349",
+    "doc_id": "f3904788ec4cdde826d69f2b04541be2",
+    "url": "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "source": "theguardian.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The AI agent needs the customer\u2019s permission to go out and make purchases, connect to apps, use bank details or send emails autonomously.",
+    "char_start": 212,
+    "char_end": 349,
+    "kind": null
+   },
+   {
+    "passage_id": "f3904788ec4cdde826d69f2b04541be2:350-500",
+    "doc_id": "f3904788ec4cdde826d69f2b04541be2",
+    "url": "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "source": "theguardian.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "However, the possibility of employees connecting their Muse assistant to their work emails and databases is a concern for companies and their clients.",
+    "char_start": 350,
+    "char_end": 500,
+    "kind": null
+   },
+   {
+    "passage_id": "f3904788ec4cdde826d69f2b04541be2:501-754",
+    "doc_id": "f3904788ec4cdde826d69f2b04541be2",
+    "url": "https://theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
+    "source": "theguardian.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The UK Information Commissioner\u2019s Office says firms using agentic AI \u201cmust be able to demonstrate how they comply with UK data protection law on an ongoing basis, including by identifying \u2026 steps to mitigate risks of harm to users and the wider public\u201d.",
+    "char_start": 501,
+    "char_end": 754,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "u:c3a6c974e788",
+  "headline": "NVIDIA Releases Autoregressive Image-Generation AI for Free, Challenging Diffusion-Model Assumptions \u2014 BigGo Finance",
+  "facts": [
+   {
+    "text": "NVIDIA released its image-generation model Nemotron-Labs-Image-30B-A3B as a free open-weight model.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:101-420"
+    ]
+   },
+   {
+    "text": "Nemotron-Labs-Image-30B-A3B uses an autoregressive mechanism rather than diffusion.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:101-420",
+     "cd80b035be375554cf4970bd2c168bc0:754-952"
+    ]
+   },
+   {
+    "text": "The model's license is the NVIDIA License, which permits only non-commercial use.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1116-1264"
+    ]
+   },
+   {
+    "text": "NVIDIA claims the overall system scored above OpenAI's GPT-Image-2 and Nano Banana Pro on multiple benchmarks.",
+    "passage_ids": [
+     "cd80b035be375554cf4970bd2c168bc0:1683-1837"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:101-420",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "U.S. semiconductor giant NVIDIA has released its image-generation AI model \"Nemotron-Labs-Image-30B-A3B\" as a free open-weight model. Its biggest distinguishing feature is that it adopts the autoregressive mechanism common in large language models (LLMs) rather than the diffusion models that dominate image generation.",
+    "char_start": 101,
+    "char_end": 420,
+    "kind": null
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:754-952",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "Unlike diffusion models, which paint images by progressively removing noise, Nemotron-Labs-Image-30B-A3B handles pixel information through an autoregressive method that predicts tokens sequentially.",
+    "char_start": 754,
+    "char_end": 952,
+    "kind": null
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1116-1264",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "The runtime environment assumes Linux, Python 3.12, and CUDA 13.0. It uses the \"NVIDIA License,\" which permits use for non-commercial purposes only.",
+    "char_start": 1116,
+    "char_end": 1264,
+    "kind": null
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:1683-1837",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "The system as a whole is said to have recorded scores exceeding OpenAI's GPT-Image-2 and Nano Banana Pro (Gemini 3 Pro Image) on multiple benchmark tests.",
+    "char_start": 1683,
+    "char_end": 1837,
+    "kind": null
+   },
+   {
+    "passage_id": "cd80b035be375554cf4970bd2c168bc0:2009-2248",
+    "doc_id": "cd80b035be375554cf4970bd2c168bc0",
+    "url": "https://finance.biggo.com/news/5b81bf48-0b95-4f94-878e-1510fa82a572",
+    "source": "finance.biggo.com",
+    "published_at": "2026-11-27T00:00:00Z",
+    "text": "In the field of image generation, diffusion models have long held an advantage in terms of quality. If an autoregressive approach can demonstrate equal or better performance with open weights, it would broaden the options for model design.",
+    "char_start": 2009,
+    "char_end": 2248,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ },
+ {
+  "story_ref": "ai-a1ca943c2df4",
+  "headline": "Anthropic goes public, trading as ANT",
+  "facts": [
+   {
+    "text": "GTA VI launched as the highest-rated game of all time on Metacritic.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+    ]
+   },
+   {
+    "text": "GTA VI made $3.79 billion on its release day.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:280-541"
+    ]
+   },
+   {
+    "text": "GTA VI was created entirely without generative AI.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:1368-1433"
+    ]
+   },
+   {
+    "text": "Ben Feder said GTA is likely to be the last game of its kind made this way.",
+    "passage_ids": [
+     "7aa896c7cb490e59f4cc2e461b760cbd:1149-1367"
+    ]
+   },
+   {
+    "text": "Amodei called the claim that he believes humans must hand over free will to AI systems absurd.",
+    "passage_ids": [
+     "578821f701b34dba1c413981057576ee:282-421",
+     "578821f701b34dba1c413981057576ee:422-566"
+    ]
+   },
+   {
+    "text": "Amodei said AI must be controlled by legitimate democratic processes.",
+    "passage_ids": [
+     "578821f701b34dba1c413981057576ee:422-566"
+    ]
+   },
+   {
+    "text": "Roughly 100 protesters gathered outside Anthropic's headquarters on November 19 demanding a ban on RSI.",
+    "passage_ids": [
+     "578821f701b34dba1c413981057576ee:1509-1613"
+    ]
+   },
+   {
+    "text": "Anthropic shares closed at $82.80 on November 25, below their $83 IPO price.",
+    "passage_ids": [
+     "578821f701b34dba1c413981057576ee:2179-2310"
+    ]
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:280-541",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "GTA VI launched as the highest-rated game of all time on Metacritic and made $3.79 billion on release day to mark what could be the biggest entertainment event ever \u2013 more massive than \u201cAvengers: Endgame\u201d ($2.9 billion) or Taylor Swift\u2019s Eras tour ($2 billion).",
+    "char_start": 280,
+    "char_end": 541,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1149-1367",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "\u201cWe do have a view that GTA is likely to be the last game of its kind to be made this way,\u201d Ben Feder, managing partner at TIRTA Ventures and former CEO of Rockstar parent company Take-Two Interactive, told TechCrunch.",
+    "char_start": 1149,
+    "char_end": 1367,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1368-1433",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "That\u2019s because GTA VI was created entirely without generative AI.",
+    "char_start": 1368,
+    "char_end": 1433,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:1434-1633",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "\u201cWe\u2019re kind of at this technological moment where this way of developing has sort of reached its natural frontier,\u201d Feder said. \u201cI don\u2019t think you can say that games like this will always be around.\u201d",
+    "char_start": 1434,
+    "char_end": 1633,
+    "kind": null
+   },
+   {
+    "passage_id": "7aa896c7cb490e59f4cc2e461b760cbd:2244-2504",
+    "doc_id": "7aa896c7cb490e59f4cc2e461b760cbd",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+    "source": "techcrunch.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "The AI industry operates with efficiency as its north star. The promise of this technology is that we will be able to automate so much work that we can expand the capabilities of humanity, avoiding needless time spent tinkering with ultimately fruitless ideas.",
+    "char_start": 2244,
+    "char_end": 2504,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:282-421",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "In a lengthy post on X on November 25, Amodei stated, \u201cThe claim that I believe we must hand over human free will to AI systems is absurd.\u201d",
+    "char_start": 282,
+    "char_end": 421,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:422-566",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "He emphasized that the consistent theme throughout his writings has always been that \u201cAI must be controlled by legitimate democratic processes.\u201d",
+    "char_start": 422,
+    "char_end": 566,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:978-1109",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "He explained that the latter simply means AI driving cars or designing anti-cancer drugs, rather than seizing control of the world.",
+    "char_start": 978,
+    "char_end": 1109,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:1442-1508",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Critics warn that RSI could enable AI to escape developer control.",
+    "char_start": 1442,
+    "char_end": 1508,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:1509-1613",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "On November 19, roughly 100 protesters gathered outside Anthropic\u2019s headquarters demanding a ban on RSI.",
+    "char_start": 1509,
+    "char_end": 1613,
+    "kind": null
+   },
+   {
+    "passage_id": "578821f701b34dba1c413981057576ee:2179-2310",
+    "doc_id": "578821f701b34dba1c413981057576ee",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NeTV0eHp0ZDB5NkxONmFfWGdWTERPdFVSVWhiV1JubjN2MlZGS2M4UjI4T2pyOGVSdVlkRmZJdXJoQmJORzNUZXUyTkVuNmhBcHdZWjVGQjc3OWNwdmRWcXJmMjVkSzNtYWpPbmFzREo?oc=5",
+    "source": "en.koreadaily.com",
+    "published_at": "2026-11-26T00:00:00Z",
+    "text": "Meanwhile, Anthropic shares fell below their initial public offering price of $83 by November 24, closing at $82.80 on November 25.",
+    "char_start": 2179,
+    "char_end": 2310,
+    "kind": null
+   }
+  ],
+  "reaction": null,
+  "reaction_passage_ids": [],
+  "related": [],
+  "depth": "standard"
+ }
+]

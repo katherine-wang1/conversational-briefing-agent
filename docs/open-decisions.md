@@ -46,6 +46,7 @@ the date and outcome.
 | F23 | Wire copies are attributed to the host ("yahoo.com") instead of "Reuters, via Yahoo News"; detect bylines | story notes |
 | F24 | Free-coverage thresholds (title 60/80, 2 entities, 36 h, 25 searches per run) set from one day; low-grade hosts (content farms) may need a quality list | `config/agent.yaml` |
 | F25 | C6 runs its own free-coverage search even when the shared note already found a free source; reuse it from the note store | `app/agents/cos/packs.py` |
+| F26 | Newsroom scope: the Sonnet v4 ai digest included a GTA VI story ("highest-rated game on Metacritic"), which then filled the brief's outside-your-usual slot (`docs/e2e/run3_write_truncated`) | editor prompt / beat scope |
 | F3 | The replay archive on `data/archive-raw` has only Hacker News, arXiv and Hugging Face papers; the Wayback half (outlets, feeds) was never collected | `eval/archive/README.md` |
 
 ## Closed
@@ -58,3 +59,4 @@ the date and outcome.
 | 2026-11-27 | Newsroom default reopened | Kate's first 6 list comparisons preferred Haiku with the old prompt (5 of 6) over Sonnet v4 (worst 3 of 6). Default stays Sonnet v4 until round 2 (Sonnet with the old prompt, Sonnet v5) is rated |
 | 2026-11-27 | Per-user token budget | 150k → 300k (a safety cap, not a model limit; costs ~$0.015 per user at most on Haiku) |
 | 2026-11-27 | Paywalled stories (D9) | Both fixes built: publisher headline and summary as attributed, summary-level sources, and one free-coverage search per blocked story. Stories without note text: 21 → 3 of 80 (`docs/smoke/2026-11-27/paywalls/results.md`) |
+| 2026-11-27 | Brief writer output limit | 4,000 → 10,000 tokens: run 3's draft (6 spoken stories + teasers) was cut off, the repair too, and the brief fell back to one line per story (`docs/e2e/run3_write_truncated`) |
