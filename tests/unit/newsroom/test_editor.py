@@ -190,6 +190,28 @@ async def test_grouping_to_digest():
     assert {e.story_id for e in digest.entries} <= {s.story_id for s in trace.stories}
 
 
+async def test_publisher_urls_before_google_news_even_for_a_primary_outlet():
+    gn_primary = "https://news.google.com/rss/articles/CBMiKESTRELPRIMARY?oc=5"
+    o = day1_observations() + [
+        obs(
+            "gn_openai",
+            gn_primary,
+            "Kestrel-9 system card - OpenAI",
+            published_at=AT - timedelta(hours=2),
+            extra={"outlet": "OpenAI", "outlet_url": "https://openai.com"},
+        )
+    ]
+    digest, _, _ = await run(o)
+    urls = digest.entries[0].urls
+    assert gn_primary in urls
+    gn = [u for u in urls if "news.google.com" in u]
+    first_gn = urls.index(gn[0])
+    # publisher URLs (primary or not) first; redirects / aggregator pages last
+    assert all("news.google.com" not in u for u in urls[:first_gn])
+    assert urls[:3] == [KES_PRIMARY, KES_TC, KES_WSJ]
+    assert set(gn) == {gn_primary, KES_GN}
+
+
 async def test_prompt_lines_show_date_outlet_and_defang_tags():
     o = day1_observations() + [
         obs(

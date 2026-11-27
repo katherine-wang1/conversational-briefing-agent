@@ -33,3 +33,5 @@ Files: `summary.json`, `digest_<beat>.json`, `newsroom_trace_<beat>.json`, `brie
 Item 1 matters most for story notes: without the publisher's URL there's no text to write a note from.
 Fix options: resolve Google News links to the publisher URL at collection time, or find the
 publisher's article from the title (Google News titles end in " - Publisher") through the `search` tool.
+Follow-up: the live `fetch` tool now resolves these links lazily (`app/sources/google_news.py`); see
+`../google_news_resolve/results.md` (166 of 166 links resolved; 37 of the 46 stories get article text).
