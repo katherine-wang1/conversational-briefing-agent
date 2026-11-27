@@ -67,6 +67,7 @@ class AgentPorts(Protocol):
         flags: Any,
         model_client: ModelClient | None,
         tools: dict[str, Any],
+        note_store: Any = None,
     ) -> tuple[BriefScript, list[SourcePack], Any]: ...
 
     async def memory_update(
@@ -124,7 +125,7 @@ class StubAgents:
         return digest, {"stub": True}
 
     async def run_cos_daily(
-        self, user_ctx, digests, memory, history, open_questions, flags, model_client, tools
+        self, user_ctx, digests, memory, history, open_questions, flags, model_client, tools, note_store=None
     ):  # noqa: ANN001,E501
         entries = sorted((e for d in digests for e in d.entries), key=lambda e: -e.importance)[:4]
         local_date: date = user_ctx["local_date"]
@@ -267,7 +268,7 @@ class RealAgents:
         )
 
     async def run_cos_daily(
-        self, user_ctx, digests, memory, history, open_questions, flags, model_client, tools
+        self, user_ctx, digests, memory, history, open_questions, flags, model_client, tools, note_store=None
     ):  # noqa: ANN001
         uc = user_context(user_ctx)
         script, packs, trace = await self.cos.run_cos_daily(
@@ -279,6 +280,7 @@ class RealAgents:
             _experiment(uc.arm, flags),
             self._need(model_client),
             tools,
+            note_store=note_store,
         )
         return script, packs, trace
 

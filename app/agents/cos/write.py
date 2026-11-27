@@ -97,6 +97,7 @@ def _payload(
     answered: list[OpenQuestion],
     target_s: int | None,
     listener: dict[str, list[str]] | None = None,
+    heard: dict[str, str] | None = None,
 ) -> str:
     prefs = {p.key: p.value for p in delivery}
     listener = listener or {}
@@ -109,7 +110,7 @@ def _payload(
         followups = "Answered follow-up questions: none (do not mention follow-ups)."
     lines = [
         f"Delivery preferences: {prefs or 'none stated'}",
-        f"Target length: about {target_s or 180} seconds of speech.",
+        f"Target length: about {target_s or 240} seconds of speech.",
         followups,
         "",
         "## Stories (in listening order)",
@@ -122,6 +123,8 @@ def _payload(
             ", ".join(listener.get(s.story_ref, [])) or "none (don't tie it to the listener's interests)"
         )
         lines.append(f"listener interests it matches: {matched}")
+        if heard and s.story_ref in heard:
+            lines.append(f"what this listener has heard: {heard[s.story_ref]}")
         if pack:
             for f in pack.facts:
                 lines.append(f"fact: {f.text} [cites: {', '.join(f.passage_ids)}]")
@@ -130,8 +133,17 @@ def _payload(
             if any(p.kind == "publisher_summary" for p in pack.passages):
                 # Only when such passages exist (the system prompt stays as it is, and its size with it).
                 lines.append(PUBLISHER_SUMMARY_RULE)
+            if any(p.kind in ("note_fact", "note_context") for p in pack.passages):
+                lines.append(NOTE_RULE)
     return "\n".join(lines)
 
+
+NOTE_RULE = (
+    'note: passages with kind="note_fact" are facts from the shared story note, each checked against the '
+    'outlet in `source`; kind="note_context" is the note\'s background (what the people, companies or terms '
+    "are, what came before, why it matters). Cite note_context for background sentences and never attribute "
+    "it to an outlet."
+)
 
 PUBLISHER_SUMMARY_RULE = (
     'note: passages with kind="publisher_summary" are only the outlet\'s own headline and summary (the '
@@ -300,13 +312,14 @@ async def write_brief(
     answered: list[OpenQuestion],
     target_s: int | None,
     listener: dict[str, list[str]] | None = None,
+    heard: dict[str, str] | None = None,
 ) -> BriefDraft:
     prompt = load_prompt("cos.write_brief")
     try:
         return await call_structured(
             cc,
             prompt,
-            _payload(selected, headlines, packs, delivery, answered, target_s, listener),
+            _payload(selected, headlines, packs, delivery, answered, target_s, listener, heard),
             BriefDraft,
             step="C7",
             # 6 spoken stories + teasers reached 3.5k output tokens; 4000 truncated a draft

@@ -43,14 +43,15 @@ def S(sid: str, text: str, kind: str = "story", ref: str | None = "a", cites=Non
 # ---- prompts and payload ------------------------------------------------------------------------
 
 
-def test_write_prompt_v2_is_for_listening():
+def test_write_prompt_v3_is_a_podcast():
     pr = load_prompt("cos.write_brief")
-    assert pr.version == "2"
+    assert pr.version == "3"
     body = pr.body
-    for must in ("rundown", "Signpost", "Source, aloud", "Context", "Why it matters", "Hook", "no screen"):
+    for must in ("rundown", "Bridges", "Source, aloud", "Background", "Why it matters", "hook", "no screen"):
         assert must in body, must
     assert 'never say "a story picked for you"' in body
-    assert load_prompt("cos.claim_check").version == "2"
+    assert "Never name a section, beat, slot or category" in body
+    assert load_prompt("cos.claim_check").version == "3"
 
 
 def test_payload_hides_slots_and_unasked_followups_and_gives_interests():
@@ -253,7 +254,7 @@ def test_rundown_counts_and_lists_surviving_stories():
     assert r.text == "You have two stories today: Acme shipping X-1 and Bolt's new plant."
     assert r.kind == "intro" and r.cites == ["p1", "p2"]
     three = rundown_sentence([story("a"), story("b"), story("c")], t)
-    assert three.text == "You have three stories today, among them Acme shipping X-1 and Bolt's new plant."
+    assert three.text == "You have three stories today, starting with Acme shipping X-1 and Bolt's new plant."
     assert rundown_sentence([story("c")], t).text == "You have one story today."
     assert rundown_sentence([], t) is None
 
@@ -278,7 +279,7 @@ async def _first_story_ref():
 async def test_spoken_run_has_rundown_signposts_and_hooks():
     script = await _first_story_ref()
     n = len(script.stories)
-    assert script.sentences[1].text.startswith("You have six stories today:")
+    assert script.sentences[1].text.startswith("You have six stories today, starting with")
     assert n == 6
     first = script.stories[0].story_ref
     kinds = [s.kind for s in script.sentences if s.story_ref == first]
@@ -324,6 +325,6 @@ async def test_story_with_dropped_lead_and_failed_teaser_is_removed():
     script, packs, *_ = await run(client=client)
     assert ref not in [s.story_ref for s in script.stories]
     assert all(s.story_ref != ref for s in script.sentences)
-    assert script.sentences[1].text.startswith("You have five stories today:")
+    assert script.sentences[1].text.startswith("You have five stories today, starting with")
     assert f"the {ref} story" not in script.sentences[1].text
     check_grounded(script, packs)

@@ -95,11 +95,14 @@ def resolve_k(k: int | None, cfg: SelectionConfig) -> int:
     return max(cfg.k_min, min(cfg.k_max, k if k is not None else cfg.k_default))
 
 
-def k_from_length(length_s: float | int | None, cfg: SelectionConfig, seconds_per_story: int = 30) -> int:
-    """K from the delivery preference `length_s` (about 30 s per story), clamped to [k_min, k_max]."""
+def k_from_length(
+    length_s: float | int | None, cfg: SelectionConfig, seconds_per_story: int | None = None
+) -> int:
+    """K from the delivery preference `length_s` (`cfg.seconds_per_story` each), clamped to [k_min, k_max]."""
     if length_s is None:
         return resolve_k(None, cfg)
-    return resolve_k(int(round(float(length_s) / seconds_per_story)), cfg)
+    per = seconds_per_story or cfg.seconds_per_story
+    return resolve_k(int(round(float(length_s) / per)), cfg)
 
 
 def allocate_slots(k: int, slots: SlotCounts) -> dict[Slot, int]:

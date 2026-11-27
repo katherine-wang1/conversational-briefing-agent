@@ -16,7 +16,9 @@ Steps C1–C8 (C9 audio render and C10 persistence belong to the job handler). E
 from __future__ import annotations
 
 from dataclasses import replace
+from typing import TYPE_CHECKING
 
+from app.agents.cos.brief_notes import add_notes_to_packs, listener_history
 from app.agents.cos.claim_check import ToCheck, check_claims
 from app.agents.cos.config import CosConfig, cos_config
 from app.agents.cos.llm import CallCtx
@@ -56,6 +58,9 @@ from app.contracts.digest import Digest
 from app.contracts.llm import ModelClient
 from app.contracts.memory import MemorySnapshot
 from app.contracts.tools import Tool
+
+if TYPE_CHECKING:
+    from app.agents.newsroom.note_store import NoteStore
 
 
 def subtopic_beats() -> dict[str, str | None]:
@@ -117,6 +122,7 @@ async def run_cos_daily(
     tools: dict[str, Tool],
     *,
     agent_cfg: dict | None = None,
+    note_store: NoteStore | None = None,
 ) -> tuple[BriefScript, list[SourcePack], RunTrace]:
     cfg = cos_config(flags, agent_cfg)
     arm = user_ctx.arm if cfg.arm == "custom" else cfg.arm
@@ -272,6 +278,15 @@ async def run_cos_daily(
     for sub in subs:
         cc.trace.merge(sub.trace)
     pack_by_ref = {p.story_ref: p for p in packs}
+    # Shared story notes as extra citable passages (facts and background) for the brief's stories.
+    brief_refs = {s.story_ref for s in result.selected}
+    n_noted = await add_notes_to_packs(note_store, [p for p in packs if p.story_ref in brief_refs])
+    heard = listener_history(
+        [s.story_ref for s in result.selected],
+        {ref: it.update_of for ref, it in by_ref.items()},
+        {ref: it.origin for ref, it in by_ref.items()},
+        history,
+    )
 
     answered = [
         q for q in open_questions if q.status == "answered" and q.answer and q.attached_to_brief is None
@@ -300,13 +315,22 @@ async def run_cos_daily(
         answered,
         int(length_s) if length_s else None,
         listener=listener_interests(scores, memory.interests),
+        heard=heard,
     )
     sentences, stories, wnotes = assemble(
         draft, result.selected, headlines, pack_by_ref, followup_sentences(answered), entities
     )
     rundown = teasers(draft, result.selected, pack_by_ref)
     leads = lead_sids(sentences, draft_leads(draft))
-    trace.add("C7", "code", notes=wnotes, n_sentences=len(sentences), teasers=sorted(rundown))
+    trace.add(
+        "C7",
+        "code",
+        notes=wnotes,
+        n_sentences=len(sentences),
+        teasers=sorted(rundown),
+        notes_added=n_noted,
+        listener_history=heard,
+    )
 
     if cfg.flags.claim_check:
         passages = {p.passage_id: p for pk in packs for p in pk.passages}

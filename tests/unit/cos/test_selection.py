@@ -73,7 +73,8 @@ def test_resolve_k_and_length():
     assert resolve_k(None, c) == 6
     assert resolve_k(1, c) == 3
     assert resolve_k(20, c) == 8
-    assert k_from_length(180, c) == 6
+    assert k_from_length(240, c) == 6
+    assert k_from_length(180, c) == 4
     assert k_from_length(60, c) == 3
     assert k_from_length(600, c) == 8
     assert k_from_length(None, c) == 6

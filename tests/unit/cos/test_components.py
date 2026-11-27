@@ -242,14 +242,22 @@ def test_pack_depth_and_offsets():
     assert lead_span("   ") is None
 
 
-async def test_write_reserve_keeps_tokens_for_writing():
+async def test_write_reserve_keeps_tokens_for_writing(monkeypatch):
+    import app.agents.cos.pipeline as pl
+
     c = copy.deepcopy(loader.agent())
-    c["budgets"]["cos_daily"]["input_tokens"] = 9000
+    c["budgets"]["cos_daily"]["input_tokens"] = 11000
+    c["selection"]["seconds_per_story"] = 30  # six stories from the fixture's 180 s, as the test assumes
+    # At this tiny budget the v3 write prompt needs more than the default 25 % (75k of the real 300k).
+    real = pl.cos_config
+    monkeypatch.setattr(
+        pl, "cos_config", lambda *a, **k: real(*a, **k).model_copy(update={"write_reserve": 0.4})
+    )
     script, packs, trace, client, _ = await run(agent_cfg=c)
     assert any(e.step.startswith("C") and e.step in ("C4", "C6") for e in trace.degradations)
     assert not [e for e in trace.degradations if e.step == "C7"]  # the writer still got its reserve
     assert "cos.write_brief" in client.roles()
-    assert trace.of("end")[0].detail["used_input_tokens"] <= 9000
+    assert trace.of("end")[0].detail["used_input_tokens"] <= 11000
 
 
 # ---- C4 scoring --------------------------------------------------------------------------------

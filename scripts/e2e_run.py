@@ -263,7 +263,9 @@ async def main(out: Path, day: str) -> None:
     start = len(ledger_rows(ledger))
     mem = memory()
     ctx = user_ctx(local_date=at.date(), now=at, mode="live", run_id="e2e-user", followed_beats=list(BEATS))
-    script, packs, trace = await run_cos_daily(ctx, digests, mem, [], [], None, client, tools)
+    script, packs, trace = await run_cos_daily(
+        ctx, digests, mem, [], [], None, client, tools, note_store=store
+    )
     timings["4 per-user run"] = round(time.monotonic() - t0, 1)
     costs["4 per-user run"], cos_by_role = cost_since(ledger, start)
     ss = trace.story_set

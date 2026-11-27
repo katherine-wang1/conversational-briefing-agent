@@ -50,6 +50,9 @@ def lead_sids(sentences: list[BriefSentence], leads: dict[str, str]) -> dict[str
     return {k: v for k, v in out.items() if v}
 
 
+RUNDOWN_NAMED = 3
+
+
 def _number(n: int) -> str:
     return NUMBER_WORDS[n] if 0 <= n < len(NUMBER_WORDS) else str(n)
 
@@ -68,13 +71,16 @@ def rundown_sentence(stories: list[BriefStory], teasers: dict[str, Teaser]) -> B
     n = len(stories)
     what = "story" if n == 1 else "stories"
     have = [teasers[st.story_ref] for st in stories if st.story_ref in teasers]
+    # A spoken rundown names at most RUNDOWN_NAMED stories: six teasers in one breath sound like a list
+    # (F16); the rest are heard in the brief itself.
+    have = have[:RUNDOWN_NAMED]
     phrases = [t.text for t in have]
     if not phrases:
         text = f"You have {_number(n)} {what} today."
     elif len(have) == n:
         text = f"You have {_number(n)} {what} today: {_join(phrases)}."
     else:
-        text = f"You have {_number(n)} {what} today, among them {_join(phrases)}."
+        text = f"You have {_number(n)} {what} today, starting with {_join(phrases)}."
     cites = list(dict.fromkeys(c for t in have for c in t.cites))
     return BriefSentence(sid="rundown", text=text, kind="intro", cites=cites)
 

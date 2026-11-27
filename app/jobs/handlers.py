@@ -331,6 +331,15 @@ async def wait_for_news(deps: Deps, uid: UUID) -> None:
         waited += NEWS_POLL_S
 
 
+def _cos_note_store(deps: Deps, uid: Any) -> Any:
+    """Shared story notes for the brief writer (read in the user's scope); None if unavailable."""
+    try:
+        from app.agents.newsroom.note_store import DbNoteStore
+    except ImportError:
+        return None
+    return DbNoteStore(deps.db, uid, run_id="live")
+
+
 @handler("cos_daily")
 async def cos_daily(deps: Deps, job: Job) -> None:
     uid = _need_user(job)
@@ -374,6 +383,7 @@ async def cos_daily(deps: Deps, job: Job) -> None:
         flags_for(arm),
         deps.model_client,
         deps.tools,
+        note_store=_cos_note_store(deps, uid),
     )
     script = script.model_copy(update={"brief_id": brief_id, "user_id": str(uid)})
     story_set = getattr(trace, "story_set", None)  # UserStorySet from the real agent; None from stubs

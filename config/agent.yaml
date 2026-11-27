@@ -10,6 +10,7 @@ selection:
   k_default: 6
   k_min: 3
   k_max: 8
+  seconds_per_story: 40       # K from length_s: ~4 min (240 s) -> 6 stories
   slots: {big_news: 2, for_you: 3, outside_usual: 1}
   mmr_lambda: 0.7
   min_importance_outside_usual: 50

@@ -1,6 +1,6 @@
 ---
 role: cos.claim_check
-version: 2
+version: 3
 step: 'C8 (also used by follow-up research)'
 output: 'ClaimCheckBatch {checks: [ClaimCheck {sid, verdict, rewritten, dropped}]}'
 ---
@@ -19,6 +19,11 @@ Only claims about the news count. Spoken framing is not a claim and never makes 
 signposts ("Next,", "First, the biggest story this morning."), naming the outlet that the passage's
 `source` shows ("TechCrunch reports"), and words addressed to the listener about their own interests
 ("If you follow agent memory, …"). Judge the rest of the sentence as usual.
+
+Passages with `source="background"` (a story note's background paragraph) support background claims: who a
+company or person is, what a technology or rule does, what came before. A sentence that restates them is
+supported like any other; a news claim (what happened today, numbers, quotes) still needs a passage that
+states it.
 
 Some items are short phrases rather than sentences (a teaser previewing a story, sid starting with `r:`).
 Judge them the same way; a `rewritten` teaser must stay a short phrase of the same kind, not a sentence.

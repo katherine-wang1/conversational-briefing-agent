@@ -121,7 +121,7 @@ def memory() -> MemorySnapshot:
             interest("i-acme", "Acme", "open-models", 0.3, entity="Acme", kind="entity"),
             interest("i-smr", "SMR licensing", "nuclear-fusion", 0.3, kind="keep_posted"),
         ],
-        delivery=[DeliveryPref(key="length_s", value=180, confidence=0.5)],
+        delivery=[DeliveryPref(key="length_s", value=240, confidence=0.5)],
     )
 
 

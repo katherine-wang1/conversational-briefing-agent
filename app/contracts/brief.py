@@ -69,7 +69,9 @@ class Passage(Strict):
     # Additive (2026-11-27, paywalls). "publisher_summary": the outlet's own headline and feed summary
     # (the article could not be fetched); writers attribute it to `source` and add no detail. None = text
     # from a fetched document (or an older pack).
-    kind: Literal["publisher_summary"] | None = None
+    # Additive (2026-11-27, podcast brief): "note_fact" / "note_context" come from the shared story note
+    # (`app/agents/cos/brief_notes.py`): a cited fact, or the note's background paragraph.
+    kind: Literal["publisher_summary", "note_fact", "note_context"] | None = None
 
 
 class Fact(Strict):

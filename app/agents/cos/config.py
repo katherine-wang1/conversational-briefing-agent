@@ -24,6 +24,7 @@ class SelectionConfig(_Cfg):
     k_default: int = 6
     k_min: int = 3
     k_max: int = 8
+    seconds_per_story: int = 40  # K from length_s: ~4 min -> 6 stories (Kate, 2026-11-27)
     slots: SlotCounts = SlotCounts()
     mmr_lambda: float = 0.7
     min_importance_outside_usual: int = 50
