@@ -1,0 +1,143 @@
+<title>Newsroom List Comparison</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one beat-day at a time; three unlabelled top-5 lists side by side (stacked on phones); best/worst pickers under each. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #17202b; --muted: #5d6877; --line: #dde2e8;
+  --accent: #2c5ea8; --best: #2f7a4f; --worst: #b4441f;
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #19202a; --fg: #e6eaf0; --muted: #9aa5b3; --line: #2a3340;
+  --accent: #7ea7e6; --best: #6cc08f; --worst: #e7845f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #19202a; --fg: #e6eaf0; --muted: #9aa5b3; --line: #2a3340;
+  --accent: #7ea7e6; --best: #6cc08f; --worst: #e7845f; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 14px/1.5 var(--font); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 16px; }
+h1 { font-size: 1.3rem; font-weight: 600; margin: 0; }
+.lede { color: var(--muted); margin: 0; max-width: 75ch; }
+.top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tab { font: 500 12px var(--mono); padding: 5px 9px; border-radius: 6px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--muted); cursor: pointer; }
+.tab.cur { border-color: var(--accent); color: var(--accent); }
+.tab.done::after { content: " ✓"; color: var(--best); }
+.head { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.head h2 { margin: 0; font-size: 1.1rem; font-weight: 600; text-transform: capitalize; }
+.tag { font: 500 12px var(--mono); color: var(--muted); }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 860px) { .cols { grid-template-columns: 1fr; } }
+.col { background: var(--surface); border: 1.5px solid var(--line); border-radius: 10px; padding: 14px;
+  display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.col.best { border-color: var(--best); } .col.worst { border-color: var(--worst); }
+.col h3 { margin: 0; font: 600 13px var(--mono); letter-spacing: .06em; }
+ol { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 10px; }
+li .h { font-weight: 600; overflow-wrap: anywhere; }
+li .s { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+li a { color: var(--accent); font-size: 12px; }
+.pick { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: auto; }
+button { font: 500 13px var(--font); border-radius: 7px; padding: 8px; cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--fg); }
+button:focus-visible, .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.b { border-color: var(--best); color: var(--best); } button.b.on { background: var(--best); color: var(--surface); }
+button.w { border-color: var(--worst); color: var(--worst); } button.w.on { background: var(--worst); color: var(--surface); }
+textarea { width: 100%; box-sizing: border-box; min-height: 54px; font: 13px var(--font); padding: 8px;
+  border-radius: 7px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); }
+.foot { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.status { color: var(--muted); font-size: 13px; }
+</style>
+
+<div class="wrap">
+  <h1>Newsroom list comparison</h1>
+  <p class="lede">For each beat and day, three newsroom setups' top 5 stories, unlabelled and shuffled. Pick the best list and the worst. Judge what a close follower of the beat should hear first; penalise old news, opinion without news, and bundled stories. Three of the four days are rebuilt from archives, so lists are thinner than live days.</p>
+  <div class="top"><div class="tabs" id="tabs"></div><span class="status" id="count"></span></div>
+  <div class="head"><h2 id="title">Loading…</h2><span class="tag" id="tag"></span></div>
+  <div class="cols" id="cols"></div>
+  <label for="note" class="tag">Note (optional): what made the difference</label>
+  <textarea id="note"></textarea>
+  <div class="foot"><button id="save">Save and next</button><span class="status" id="status"></span></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let sets = [], votes = {}, cur = 0, db = null, draft = {};
+
+function rendTabs() {
+  $("tabs").replaceChildren(...sets.map((s, i) => {
+    const b = document.createElement("button");
+    b.className = "tab" + (i === cur ? " cur" : "") + (votes[s.id]?.best && votes[s.id]?.worst ? " done" : "");
+    b.textContent = `${s.day.slice(5)} ${s.beat.replace("_", " ")}`;
+    b.onclick = () => { cur = i; load(); };
+    return b;
+  }));
+  const done = sets.filter((s) => votes[s.id]?.best && votes[s.id]?.worst).length;
+  $("count").textContent = `${done} / ${sets.length} done`;
+}
+function load() {
+  const s = sets[cur]; if (!s) return;
+  draft = { best: votes[s.id]?.best || null, worst: votes[s.id]?.worst || null };
+  $("note").value = votes[s.id]?.note || "";
+  render();
+}
+function render() {
+  const s = sets[cur];
+  $("title").textContent = s.beat.replace("_", " ");
+  $("tag").textContent = `${s.day}${s.rebuilt ? " · rebuilt day" : " · live collection"}`;
+  $("cols").replaceChildren(...s.lists.map((l) => {
+    const c = document.createElement("div");
+    c.className = "col" + (draft.best === l.label ? " best" : "") + (draft.worst === l.label ? " worst" : "");
+    const h = document.createElement("h3"); h.textContent = "LIST " + l.label;
+    const ol = document.createElement("ol");
+    for (const st of l.stories) {
+      const li = document.createElement("li");
+      const hd = document.createElement("div"); hd.className = "h"; hd.textContent = st.headline;
+      const sm = document.createElement("div"); sm.className = "s";
+      sm.textContent = st.summary + (st.outlets.length ? ` (${st.outlets.join(", ")})` : "");
+      li.append(hd, sm);
+      if (st.link && st.link.startsWith("https://")) {
+        const a = document.createElement("a"); a.href = st.link; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = "source"; li.append(a);
+      }
+      ol.append(li);
+    }
+    const p = document.createElement("div"); p.className = "pick";
+    const b = document.createElement("button"); b.className = "b" + (draft.best === l.label ? " on" : ""); b.textContent = "Best";
+    const w = document.createElement("button"); w.className = "w" + (draft.worst === l.label ? " on" : ""); w.textContent = "Worst";
+    b.onclick = () => { draft.best = l.label; if (draft.worst === l.label) draft.worst = null; render(); };
+    w.onclick = () => { draft.worst = l.label; if (draft.best === l.label) draft.best = null; render(); };
+    p.append(b, w); c.append(h, ol, p); return c;
+  }));
+  rendTabs();
+}
+$("save").onclick = async () => {
+  const s = sets[cur];
+  if (!draft.best || !draft.worst) { $("status").textContent = "Pick a best and a worst list first."; return; }
+  const v = { best: draft.best, worst: draft.worst, note: $("note").value.trim(), at: new Date().toISOString() };
+  votes[s.id] = v; rendTabs();
+  if (!db) { $("status").textContent = "Not saved: sign in to claude.ai to save."; return; }
+  try {
+    await db.collection("list_votes").doc(s.id).set(v);
+    $("status").textContent = "Saved.";
+    const next = sets.findIndex((x) => !(votes[x.id]?.best && votes[x.id]?.worst));
+    if (next >= 0) { cur = next; load(); window.scrollTo({ top: 0 }); } else { $("status").textContent = "All 12 saved. Thank you."; }
+  } catch (e) { $("status").textContent = "Couldn't save (" + (e && e.code || "error") + "). Try again."; }
+};
+(async () => {
+  try { sets = await (await fetch("sets.json")).json(); }
+  catch { $("title").textContent = "Couldn't load the lists. Reload the page."; return; }
+  load();
+  db = await (window.claude?.use ? window.claude.use("db") : null);
+  if (!db) { $("status").textContent = "Choices can't be saved in this view (sign in to claude.ai)."; return; }
+  const t = setTimeout(() => { $("status").textContent = "Still loading saved choices…"; }, 10000);
+  db.collection("list_votes").onSnapshot((snap) => {
+    clearTimeout(t); const nv = {};
+    for (const d of snap.docs) { const x = d.data(); if (x) nv[d.id] = x; }
+    votes = nv; rendTabs();
+  }, (err) => { clearTimeout(t); $("status").textContent = "Couldn't load saved choices (" + (err && err.code || "error") + ")."; });
+})();
+</script>
