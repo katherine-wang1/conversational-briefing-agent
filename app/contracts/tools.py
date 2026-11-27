@@ -78,6 +78,12 @@ class FetchArgs(Strict):
 
 class FetchResult(Strict):
     document: Document | None
+    # Additive. Set when `url` was an aggregator redirect (Google News) that the live backend resolved
+    # before fetching: the publisher's URL and how it was found ("offline" | "batchexecute" | "search"
+    # | "cache"). `document.url` stays the requested URL (the cache / replay key). None otherwise, and
+    # always None in replay (resolution is a live-backend concern).
+    resolved_url: str | None = None
+    resolved_via: str | None = None
 
 
 class HeadlineSourceArgs(Strict):

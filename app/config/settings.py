@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     search_provider: Literal["tavily", "exa", "brave", "anthropic", ""] = ""
     search_api_key: str = ""  # tavily | exa | brave; SEARCH_PROVIDER=anthropic uses ANTHROPIC_API_KEY
     archive_path: str = "eval/data/archive.sqlite"
+    # Google News link -> publisher URL resolutions (app/sources/google_news.py); "" = in memory only
+    google_news_cache_path: str = "var/cache/google_news_urls.json"
 
     # Anthropic (direct SDK, server tools): `anthropic` search provider + Claude news-agent reference arm
     # ANTHROPIC_API_KEY, else CLAUDE_API_KEY (Claude Code cloud sessions don't pass ANTHROPIC_API_KEY through)

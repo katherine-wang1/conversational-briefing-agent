@@ -1,6 +1,7 @@
 """`fetch` tool (TDD §5.2, §5.4).
 
 Live: httpx + hidden-text stripping + trafilatura, cached in the shared `documents` table by url_hash.
+Google News redirect links are resolved to the publisher's URL first (live only; FetchResult.resolved_url).
 Replay: archived text as of ≤ ctx.now.
 """
 
@@ -14,6 +15,7 @@ import httpx
 
 from app.contracts.sources import Document
 from app.contracts.tools import FetchArgs, FetchResult, ToolContext
+from app.sources.google_news import GoogleNewsResolver, is_google_news_url
 from app.tools.archive import ArchiveReader
 from app.tools.base import Backend, CoreTool, ToolError
 from app.tools.untrusted import sanitize_text, strip_hidden_html
@@ -107,6 +109,10 @@ def truncate(doc: Document, max_tokens: int) -> Document:
 
 
 class LiveFetch(Backend):
+    """Live fetch. A Google News redirect link is first resolved to the publisher's URL
+    (`app.sources.google_news`); the document is then cached under both the requested URL's hash (so a
+    repeat fetch, and its `doc_id`, work as before) and the publisher URL's hash."""
+
     def __init__(
         self,
         cache: DocumentCache,
@@ -114,32 +120,66 @@ class LiveFetch(Backend):
         *,
         check_urls: bool = True,
         timeout_s: float = 10.0,
+        resolver: GoogleNewsResolver | None = None,
     ):
         self.cache = cache
         self.client = client or httpx.AsyncClient(
             timeout=timeout_s, follow_redirects=True, headers={"User-Agent": USER_AGENT}
         )
         self.check_urls = check_urls
+        self.resolver = resolver or GoogleNewsResolver(self.client, timeout_s=timeout_s)
 
     async def run(self, ctx: ToolContext, args: FetchArgs) -> FetchResult:
         if args.doc_id and not args.url:
             doc = await self.cache.get(args.doc_id)
             if doc is None:
                 raise ToolError("not_found", f"unknown doc_id {args.doc_id}; fetch by url instead")
-            return FetchResult(document=truncate(doc, args.max_tokens))
+            return self._from_cache(doc, args.max_tokens)
         if not args.url:
             raise ToolError("invalid_args", "pass url or doc_id")
         h = url_hash(args.url)
         cached = await self.cache.get(h)
         if cached is not None:
-            return FetchResult(document=truncate(cached, args.max_tokens))
+            return self._from_cache(cached, args.max_tokens)
+        if not is_google_news_url(args.url):
+            doc = await self._fetch(args.url, h)
+            await self.cache.put(doc)
+            return FetchResult(document=truncate(doc, args.max_tokens))
+        res = await self.resolver.resolve(args.url)
+        if not res.resolved_url:
+            raise ToolError(
+                "unavailable",
+                f"Google News link not resolved to the publisher's URL ({res.detail or 'unknown reason'})",
+            )
+        target = res.resolved_url
+        th = url_hash(target)
+        doc = await self.cache.get(th)
+        if doc is None:
+            doc = await self._fetch(target, th)
+            await self.cache.put(doc)
+        doc = doc.model_copy(update={"url_hash": h, "url": args.url})
+        await self.cache.put(doc)
+        return FetchResult(
+            document=truncate(doc, args.max_tokens), resolved_url=target, resolved_via=res.method
+        )
+
+    @staticmethod
+    def _from_cache(doc: Document, max_tokens: int) -> FetchResult:
+        """A cached Google News document carries the publisher URL as its canonical_url."""
+        if is_google_news_url(doc.url) and doc.canonical_url and not is_google_news_url(doc.canonical_url):
+            return FetchResult(
+                document=truncate(doc, max_tokens), resolved_url=doc.canonical_url, resolved_via="cache"
+            )
+        return FetchResult(document=truncate(doc, max_tokens))
+
+    async def _fetch(self, url: str, h: str) -> Document:
         if self.check_urls:
             try:
-                await asyncio.to_thread(check_public_http_url, args.url)
+                await asyncio.to_thread(check_public_http_url, url)
             except BlockedURL as e:
                 raise ToolError("blocked", str(e)) from e
         try:
-            r = await self.client.get(args.url)
+            r = await self.client.get(url)
         except httpx.HTTPError as e:
             raise ToolError("unavailable", f"fetch failed ({type(e).__name__})") from e
         if r.status_code >= 400:
@@ -154,11 +194,11 @@ class LiveFetch(Backend):
         else:
             raise ToolError("unavailable", f"unsupported content type {ctype.split(';')[0]}")
         now = datetime.now(UTC)
-        doc = Document(
+        return Document(
             url_hash=h,
-            url=args.url,
+            url=url,
             canonical_url=canonical_url(str(r.url)),
-            source=hostname(args.url),
+            source=hostname(url),
             title=title,
             published_at=published,
             available_at=now,
@@ -166,8 +206,6 @@ class LiveFetch(Backend):
             text=text,
             extractor_ver=ver,
         )
-        await self.cache.put(doc)
-        return FetchResult(document=truncate(doc, args.max_tokens))
 
 
 class ReplayFetch(Backend):

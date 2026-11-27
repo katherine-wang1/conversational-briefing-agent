@@ -20,3 +20,6 @@ Real responses saved on 2026-11-05 with the honest User-Agent
 | `article_hf_blog.html` | `https://huggingface.co/blog/allenai/statebench` (body extraction) |
 | `wayback_available_hn.json` | `archive.org/wayback/available?url=news.ycombinator.com&timestamp=20261001060000` |
 | `SYNTHETIC_wayback_cdx_hn_2026-10-01.json` | **SYNTHETIC test fixture.** Hand-written in the documented Wayback CDX `output=json` format (header row + rows). web.archive.org is blocked by this environment's egress policy, so no real CDX response could be saved. The timestamps and digests are invented; it is only used to exercise the parser and collector logic and is never written to the archive DB or shards. |
+| `google_news_article_page_trimmed.html` | `https://news.google.com/rss/articles/CBMiuAFBVV95cUxOelNJ…?hl=en-US&gl=US&ceid=US:en`, saved 2026-11-27. **Trimmed**: scripts and styles dropped from the head, and the 590 KB body cut to the one `c-wiz` element holding `data-n-a-id` / `data-n-a-ts` / `data-n-a-sg` |
+| `google_news_batchexecute_response.txt` | POST `https://news.google.com/_/DotsSplashUi/data/batchexecute` (RPC `Fbv4je`, one id: the article above), 2026-11-27 |
+| `google_news_batchexecute_response_2.txt` | The same endpoint with two ids in one POST (tags "1" and "2"), 2026-11-27 (copied from the console output of the probe) |

@@ -102,6 +102,7 @@ def render_for_model(result: ToolResult) -> str:
             tool=result.tool,
             id=doc.url_hash,
             url=doc.url,
+            publisher_url=d.resolved_url,
             published_at=doc.published_at.isoformat() if doc.published_at else None,
         )
     if isinstance(d, HeadlineSourceResult):

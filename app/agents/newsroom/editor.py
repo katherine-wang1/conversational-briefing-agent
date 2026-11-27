@@ -949,9 +949,14 @@ async def run_editor_newsroom(
                 s in sources.primary_ids for s in it.source_ids
             )
             tier = min((sources.tier(s) or 9) for s in it.source_ids) if it.source_ids else 9
+            # Publisher URLs before Google News redirects / unresolved aggregator pages, even a primary
+            # source's redirect: a direct URL fetches in one request, a redirect needs resolving first.
+            # Redirects are kept (the fetch tool resolves them lazily, app/sources/google_news.py):
+            # resolving all ~600 per run here would cost two Google requests each, mostly for stories
+            # nobody reads, and N2-N6 stay free of network I/O.
             return (
+                is_google_news(it.url) or it.unresolved_aggregator,
                 not primary,
-                is_google_news(it.url) or it.unresolved_aggregator,  # redirects / aggregator pages last
                 it.domain in paywalled,
                 tier,
                 it.first_seen,

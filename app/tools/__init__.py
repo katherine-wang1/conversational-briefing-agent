@@ -13,6 +13,7 @@ from typing import Any
 import httpx
 
 from app.contracts.tools import Tool
+from app.sources.google_news import GoogleNewsResolver, ResolutionCache, search_fn_from_provider
 from app.tools.archive import ArchiveReader
 from app.tools.fetch import (
     DbDocumentCache,
@@ -80,9 +81,19 @@ def build_tools(
         }
     provider = build_provider(provider_name, key, client=http_client, **options)
     cache = doc_cache or (DbDocumentCache(db) if db is not None else InMemoryDocumentCache())
+    # Google News links: decoded / batchexecute; the search fallback uses the same provider (if any).
+    # A caller-supplied http_client (tests) gets an in-memory resolution cache: no file writes.
+    gn_cache_path = None if http_client is not None else getattr(settings, "google_news_cache_path", "")
+    resolver = GoogleNewsResolver(
+        http_client,
+        search=search_fn_from_provider(provider),
+        cache=ResolutionCache(gn_cache_path or None),
+    )
     tools: list[Any] = [
         SearchTool(LiveSearch(provider), ReplaySearch(reader)),
-        FetchTool(LiveFetch(cache, http_client, check_urls=check_urls), ReplayFetch(reader)),
+        FetchTool(
+            LiveFetch(cache, http_client, check_urls=check_urls, resolver=resolver), ReplayFetch(reader)
+        ),
         HeadlineSourceTool(LiveHeadlines(), ReplayHeadlines(reader)),
         HnCommentsTool(LiveHnComments(http_client), ReplayHnComments(reader)),
     ]
